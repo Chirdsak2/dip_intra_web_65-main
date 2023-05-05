@@ -1,0 +1,200 @@
+
+/*
+*
+* ==========================================
+* CUSTOM UTIL CLASSES
+* ==========================================
+*
+*/
+.clearfix::after,
+.calendar ol::after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+
+/* ================
+Calendar Styling */
+.calendar {
+  border-radius: 10px;
+}
+
+.month {
+  font-size: 2rem;
+}
+
+@media (min-width: 992px) {
+  .month {
+    font-size: 3.5rem;
+  }
+}
+
+.calendar ol li {
+  float: left;
+  width: 14.28571%;
+}
+
+.calendar .day-names {
+  border-bottom: 1px solid #eee;
+}
+
+.calendar .day-names li {
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+
+.calendar .days li {
+  border-bottom: 1px solid #eee;
+  min-height: 8rem;
+}
+
+.calendar .days li .date {
+	margin: 0.5rem 0;
+	color: #e4ff01;
+	padding: 0px 3px;
+    font-size: 30px;
+    font-weight: 600;
+    display: inline;
+    vertical-align: top;
+}
+.calendar .days li .dateweekend{
+	margin: 0.5rem 0;
+	color: #d6d4d5;
+	font-size: 30px;
+    font-weight: 600;
+    display: inline;
+    vertical-align: top;
+}
+
+.calendar .days li .event {
+  font-size: 18px;
+    padding: 10px 10px;
+    color: white;
+    overflow: hidden;
+    margin-bottom: 1px;
+    display: inline-block;
+    max-width: 80%;
+  /*
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  border-radius: 4rem;
+  */
+}
+
+.calendar .days li .event.span-2 {
+  width: 200%;
+}
+
+.calendar .days li .event.begin {
+  border-radius: 1rem 0 0 1rem;
+}
+
+.calendar .days li .event.end {
+  border-radius: 0 1rem 1rem 0;
+}
+
+.calendar .days li .event.clear {
+  background: none;
+}
+
+.calendar .days li:nth-child(n+29) {
+  border-bottom: none;
+}
+
+.calendar .days li.outside .date {
+  color: #ddd;
+}
+
+/*
+*
+* ==========================================
+* FOR DEMO PURPOSES
+* ==========================================
+*
+*/
+
+.bg-calendar-table{
+	background-color: #10adae;
+}
+.bg-date-weekend{
+	background-color: #6a6a6a;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 30px;
+	text-align: center;
+}
+.bg-date-work{
+	background-color: #7dcdcd;
+    color: #5e5e5e;
+    padding: 10px 20px;
+    border-radius: 30px;
+	text-align: center;
+}
+
+.list {
+  display: flex;
+  flex-wrap: wrap;
+}
+.list-item {
+  display: flex;
+  /*margin-bottom: 20px;*/
+}
+.list-item-today {
+  display: flex;
+  /*margin-bottom: 20px;*/
+  background-color: #fff;
+}
+.list-item-today > .date{
+	color: #0eabac !important;
+}
+.list-item-today > .event{
+	color: #333 !important;
+    font-weight: 600 !important;
+}
+
+.border-b-calendar{
+	border-bottom: 1px solid #fff;
+    padding-bottom: 10px;
+}
+.border-t-calendar{
+	border-top: 1px solid #fff;
+    padding-top: 10px;
+}
+.bg-calendar-transparent{
+	background-image: url(../img/bg_calendar.png);
+    background-size: cover;
+}
+.calendar{
+	min-height: 1500px;
+}
+.position-pic-list-ceo{
+	border-radius: 50%;
+    max-width: 80px;
+}
+.position-list-carousel-ceo{
+	position: absolute;
+    top: 15px;
+	max-height: 30px;
+}
+.carousel-indicators li{
+	display: inline-table;
+}
+.carousel-indicators .active{
+	border: 2px solid #fff;
+}
+
+.calendar--topic{
+	color: #FFFFFF;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.txt-dark{
+	color: #333;
+}
+
+.txt-dark:hover{
+	color: #662e91;
+}

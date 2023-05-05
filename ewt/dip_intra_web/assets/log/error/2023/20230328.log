@@ -1,0 +1,365 @@
+[Date:2023-03-28 08:47:19] [IP:134.236.242.170]
+[Query:SELECT sv_id FROM stat_visitor WHERE sv_ip = '134.236.242.170' AND sv_new = 'Y' LIMIT 0,1 ]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2023-03-28 08:47:19] [IP:134.236.242.170]
+[Query:SELECT sv_id FROM stat_visitor WHERE sv_ip = '134.236.242.170' AND sv_new = 'Y' LIMIT 0,1 ]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2023-03-28 08:47:20] [IP:134.236.242.170]
+[Query:INSERT INTO stat_visitor (sv_url,sv_visitor,sv_menu,sv_ip,sv_timestamp,sv_date,sv_time,sv_country,sv_language,sv_new,sv_browser,sv_resolution,sv_domain,sv_isp,sv_region,sv_city,sv_latitude,sv_longitude,sv_referer,sv_search,sv_keyword,sv_os,sv_load,sv_member,sv_fullurl,sv_mem_id,sv_w3c,sv_country_code,sv_region_code,sv_device,sv_op,sv_session_id) VALUES ('page','Y','/dip_intranet/index.php','134.236.242.170','20230328084719','2023-03-28','08:47:19','TH','en-US,en;q=0.9','Y','Google Chrome','1280x720','','AS131090 CAT TELECOM Public Company Ltd,CAT','Bangkok','Bangkok','13.7540','100.5014','http://203.151.166.134/dip_intranet/index.php','','','Windows 10','0','Y','https://203.151.166.134/dip_intranet/index.php','1','','TH','20','1','','utmacjmfn153l5osfcb5jeifcp')]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2023-03-28 08:47:23] [IP:134.236.242.170]
+[Query:INSERT INTO stat_visitor (sv_url,sv_visitor,sv_menu,sv_ip,sv_timestamp,sv_date,sv_time,sv_country,sv_language,sv_new,sv_browser,sv_resolution,sv_domain,sv_isp,sv_region,sv_city,sv_latitude,sv_longitude,sv_referer,sv_search,sv_keyword,sv_os,sv_load,sv_member,sv_fullurl,sv_mem_id,sv_w3c,sv_country_code,sv_region_code,sv_device,sv_op,sv_session_id) VALUES ('page','','/dip_intranet/index.php','134.236.242.170','20230328084723','2023-03-28','08:47:23','TH','en-US,en;q=0.9','','Google Chrome','1280x720','','AS131090 CAT TELECOM Public Company Ltd,CAT','Bangkok','Bangkok','13.7540','100.5014','','','','Windows 10','0','Y','https://203.151.166.134/dip_intranet/index.php','1','','TH','20','1','','utmacjmfn153l5osfcb5jeifcp')]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2023-03-28 08:58:08] [IP:134.236.242.170]
+[Query:INSERT INTO stat_visitor (sv_url,sv_visitor,sv_menu,sv_ip,sv_timestamp,sv_date,sv_time,sv_country,sv_language,sv_new,sv_browser,sv_resolution,sv_domain,sv_isp,sv_region,sv_city,sv_latitude,sv_longitude,sv_referer,sv_search,sv_keyword,sv_os,sv_load,sv_member,sv_fullurl,sv_mem_id,sv_w3c,sv_country_code,sv_region_code,sv_device,sv_op,sv_session_id) VALUES ('page','','/dip_intranet/Booking_status.php','134.236.242.170','20230328085807','2023-03-28','08:58:07','TH','en-US,en;q=0.9','','Google Chrome','1280x720','','AS131090 CAT TELECOM Public Company Ltd,CAT','Bangkok','Bangkok','13.7540','100.5014','','','','Windows 10','0','Y','https://203.151.166.134/dip_intranet/Booking_status.php','1','','TH','20','1','','utmacjmfn153l5osfcb5jeifcp')]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2023-03-28 09:18:07] [IP:134.236.242.170]
+[Query:SELECT sv_id FROM stat_visitor WHERE sv_ip = '134.236.242.170' AND sv_new = 'Y' LIMIT 0,1 ]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2023-03-28 09:18:07] [IP:134.236.242.170]
+[Query:SELECT sv_id FROM stat_visitor WHERE sv_ip = '134.236.242.170' AND sv_new = 'Y' LIMIT 0,1 ]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2023-03-28 09:18:08] [IP:134.236.242.170]
+[Query:INSERT INTO stat_visitor (sv_url,sv_visitor,sv_menu,sv_ip,sv_timestamp,sv_date,sv_time,sv_country,sv_language,sv_new,sv_browser,sv_resolution,sv_domain,sv_isp,sv_region,sv_city,sv_latitude,sv_longitude,sv_referer,sv_search,sv_keyword,sv_os,sv_load,sv_member,sv_fullurl,sv_mem_id,sv_w3c,sv_country_code,sv_region_code,sv_device,sv_op,sv_session_id) VALUES ('page','Y','/dip_intranet/index.php','134.236.242.170','20230328091807','2023-03-28','09:18:07','TH','en-US,en;q=0.9','Y','Google Chrome','1280x720','','AS131090 CAT TELECOM Public Company Ltd,CAT','Bangkok','Bangkok','13.7540','100.5014','http://203.151.166.134/dip_intranet/index.php','','','Windows 10','0','Y','https://203.151.166.134/dip_intranet/index.php','1','','TH','20','1','','oedbqcq33e6kebk2sqd0tka2km')]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2023-03-28 09:28:24] [IP:134.236.242.170]
+[Query:INSERT INTO stat_visitor (sv_url,sv_visitor,sv_menu,sv_ip,sv_timestamp,sv_date,sv_time,sv_country,sv_language,sv_new,sv_browser,sv_resolution,sv_domain,sv_isp,sv_region,sv_city,sv_latitude,sv_longitude,sv_referer,sv_search,sv_keyword,sv_os,sv_load,sv_member,sv_fullurl,sv_mem_id,sv_w3c,sv_country_code,sv_region_code,sv_device,sv_op,sv_session_id) VALUES ('page','','/dip_intranet/index.php','134.236.242.170','20230328092824','2023-03-28','09:28:24','TH','en-US,en;q=0.9','','Google Chrome','1280x720','','AS131090 CAT TELECOM Public Company Ltd,CAT','Bangkok','Bangkok','13.7540','100.5014','','','','Windows 10','0','Y','https://203.151.166.134/dip_intranet/index.php','1','','TH','','1','','oedbqcq33e6kebk2sqd0tka2km')]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2023-03-28 09:34:13] [IP:134.236.242.170]
+[Query:INSERT INTO stat_visitor (sv_url,sv_visitor,sv_menu,sv_ip,sv_timestamp,sv_date,sv_time,sv_country,sv_language,sv_new,sv_browser,sv_resolution,sv_domain,sv_isp,sv_region,sv_city,sv_latitude,sv_longitude,sv_referer,sv_search,sv_keyword,sv_os,sv_load,sv_member,sv_fullurl,sv_mem_id,sv_w3c,sv_country_code,sv_region_code,sv_device,sv_op,sv_session_id) VALUES ('page','','/dip_intranet/index.php','134.236.242.170','20230328093413','2023-03-28','09:34:13','TH','en-US,en;q=0.9','','Google Chrome','1280x720','','AS131090 CAT TELECOM Public Company Ltd,CAT','Bangkok','Bangkok','13.7540','100.5014','','','','Windows 10','0','Y','https://203.151.166.134/dip_intranet/index.php','1','','TH','','1','','oedbqcq33e6kebk2sqd0tka2km')]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2023-03-28 09:44:00] [IP:134.236.242.170]
+[Query:INSERT INTO stat_visitor (sv_url,sv_visitor,sv_menu,sv_ip,sv_timestamp,sv_date,sv_time,sv_country,sv_language,sv_new,sv_browser,sv_resolution,sv_domain,sv_isp,sv_region,sv_city,sv_latitude,sv_longitude,sv_referer,sv_search,sv_keyword,sv_os,sv_load,sv_member,sv_fullurl,sv_mem_id,sv_w3c,sv_country_code,sv_region_code,sv_device,sv_op,sv_session_id) VALUES ('page','','/dip_intranet/index.php','134.236.242.170','20230328094400','2023-03-28','09:44:00','TH','en-US,en;q=0.9','','Google Chrome','1280x720','','AS131090 CAT TELECOM Public Company Ltd,CAT','Bangkok','Bangkok','13.7540','100.5014','','','','Windows 10','0','Y','https://203.151.166.134/dip_intranet/index.php','1','','TH','','1','','oedbqcq33e6kebk2sqd0tka2km')]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2023-03-28 09:44:44] [IP:134.236.242.170]
+[Query:INSERT INTO stat_visitor (sv_url,sv_visitor,sv_menu,sv_ip,sv_timestamp,sv_date,sv_time,sv_country,sv_language,sv_new,sv_browser,sv_resolution,sv_domain,sv_isp,sv_region,sv_city,sv_latitude,sv_longitude,sv_referer,sv_search,sv_keyword,sv_os,sv_load,sv_member,sv_fullurl,sv_mem_id,sv_w3c,sv_country_code,sv_region_code,sv_device,sv_op,sv_session_id) VALUES ('page','','/dip_intranet/index.php','134.236.242.170','20230328094443','2023-03-28','09:44:43','TH','en-US,en;q=0.9','','Google Chrome','1280x720','','AS131090 CAT TELECOM Public Company Ltd,CAT','Bangkok','Bangkok','13.7540','100.5014','','','','Windows 10','0','Y','https://203.151.166.134/dip_intranet/index.php','1','','TH','','1','','oedbqcq33e6kebk2sqd0tka2km')]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2023-03-28 09:46:39] [IP:134.236.242.170]
+[Query:INSERT INTO stat_visitor (sv_url,sv_visitor,sv_menu,sv_ip,sv_timestamp,sv_date,sv_time,sv_country,sv_language,sv_new,sv_browser,sv_resolution,sv_domain,sv_isp,sv_region,sv_city,sv_latitude,sv_longitude,sv_referer,sv_search,sv_keyword,sv_os,sv_load,sv_member,sv_fullurl,sv_mem_id,sv_w3c,sv_country_code,sv_region_code,sv_device,sv_op,sv_session_id) VALUES ('page','','/dip_intranet/Calendar_Bookingcar.php','134.236.242.170','20230328094638','2023-03-28','09:46:38','TH','en-US,en;q=0.9','','Google Chrome','1280x720','','AS131090 CAT TELECOM Public Company Ltd,CAT','Bangkok','Bangkok','13.7540','100.5014','','','','Windows 10','0','Y','https://203.151.166.134/dip_intranet/Calendar_Bookingcar.php','1','','TH','','1','','utmacjmfn153l5osfcb5jeifcp')]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2023-03-28 10:19:39] [IP:134.236.242.170]
+[Query:INSERT INTO stat_visitor (sv_url,sv_visitor,sv_menu,sv_ip,sv_timestamp,sv_date,sv_time,sv_country,sv_language,sv_new,sv_browser,sv_resolution,sv_domain,sv_isp,sv_region,sv_city,sv_latitude,sv_longitude,sv_referer,sv_search,sv_keyword,sv_os,sv_load,sv_member,sv_fullurl,sv_mem_id,sv_w3c,sv_country_code,sv_region_code,sv_device,sv_op,sv_session_id) VALUES ('page','','/dip_intranet/index.php','134.236.242.170','20230328101938','2023-03-28','10:19:38','TH','en-US,en;q=0.9','','Google Chrome','1280x720','','AS131090 CAT TELECOM Public Company Ltd,CAT','Bangkok','Bangkok','13.7540','100.5014','','','','Windows 10','0','Y','https://203.151.166.134/dip_intranet/index.php','1','','TH','','1','','oedbqcq33e6kebk2sqd0tka2km')]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2023-03-28 11:04:11] [IP:134.236.242.170]
+[Query:SELECT sv_id FROM stat_visitor WHERE sv_ip = '134.236.242.170' AND sv_new = 'Y' LIMIT 0,1 ]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2023-03-28 11:04:11] [IP:134.236.242.170]
+[Query:SELECT sv_id FROM stat_visitor WHERE sv_ip = '134.236.242.170' AND sv_new = 'Y' LIMIT 0,1 ]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2023-03-28 11:04:11] [IP:134.236.242.170]
+[Query:INSERT INTO stat_visitor (sv_url,sv_visitor,sv_menu,sv_ip,sv_timestamp,sv_date,sv_time,sv_country,sv_language,sv_new,sv_browser,sv_resolution,sv_domain,sv_isp,sv_region,sv_city,sv_latitude,sv_longitude,sv_referer,sv_search,sv_keyword,sv_os,sv_load,sv_member,sv_fullurl,sv_mem_id,sv_w3c,sv_country_code,sv_region_code,sv_device,sv_op,sv_session_id) VALUES ('page','Y','/dip_intranet/index.php','134.236.242.170','20230328110411','2023-03-28','11:04:11','TH','en,th;q=0.9,th-TH;q=0.8,ja-JP;q=0.7,ja;q=0.6,en-US;q=0.5','Y','Google Chrome','2560x1080','','AS131090 CAT TELECOM Public Company Ltd,CAT','Bangkok','Bangkok','13.7540','100.5014','http://203.151.166.134/dip_intranet/index.php','','','Windows 10','0','Y','https://203.151.166.134/dip_intranet/index.php','1','','TH','','1','','i8hd3jdgr2qg1mbjco0ui2urpt')]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2023-03-28 11:04:17] [IP:134.236.242.170]
+[Query:INSERT INTO stat_visitor (sv_url,sv_visitor,sv_menu,sv_ip,sv_timestamp,sv_date,sv_time,sv_country,sv_language,sv_new,sv_browser,sv_resolution,sv_domain,sv_isp,sv_region,sv_city,sv_latitude,sv_longitude,sv_referer,sv_search,sv_keyword,sv_os,sv_load,sv_member,sv_fullurl,sv_mem_id,sv_w3c,sv_country_code,sv_region_code,sv_device,sv_op,sv_session_id) VALUES ('page','','/dip_intranet/more_news.php?c_id=2','134.236.242.170','20230328110416','2023-03-28','11:04:16','TH','en,th;q=0.9,th-TH;q=0.8,ja-JP;q=0.7,ja;q=0.6,en-US;q=0.5','','Google Chrome','2560x1080','','AS131090 CAT TELECOM Public Company Ltd,CAT','Bangkok','Bangkok','13.7540','100.5014','','','','Windows 10','0','Y','https://203.151.166.134/dip_intranet/more_news.php?c_id=2','1','','TH','','1','','i8hd3jdgr2qg1mbjco0ui2urpt')]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2023-03-28 11:04:28] [IP:134.236.242.170]
+[Query:INSERT INTO stat_visitor (sv_url,sv_visitor,sv_menu,sv_ip,sv_timestamp,sv_date,sv_time,sv_country,sv_language,sv_new,sv_browser,sv_resolution,sv_domain,sv_isp,sv_region,sv_city,sv_latitude,sv_longitude,sv_referer,sv_search,sv_keyword,sv_os,sv_load,sv_member,sv_fullurl,sv_mem_id,sv_w3c,sv_country_code,sv_region_code,sv_device,sv_op,sv_session_id) VALUES ('page','','/dip_intranet/index.php','134.236.242.170','20230328110428','2023-03-28','11:04:28','TH','en-US,en;q=0.9','','Google Chrome','1280x720','','AS131090 CAT TELECOM Public Company Ltd,CAT','Bangkok','Bangkok','13.7540','100.5014','','','','Windows 10','0','Y','https://203.151.166.134/dip_intranet/index.php','1','','TH','','1','','oedbqcq33e6kebk2sqd0tka2km')]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2023-03-28 11:25:37] [IP:134.236.242.170]
+[Query:INSERT INTO stat_visitor (sv_url,sv_visitor,sv_menu,sv_ip,sv_timestamp,sv_date,sv_time,sv_country,sv_language,sv_new,sv_browser,sv_resolution,sv_domain,sv_isp,sv_region,sv_city,sv_latitude,sv_longitude,sv_referer,sv_search,sv_keyword,sv_os,sv_load,sv_member,sv_fullurl,sv_mem_id,sv_w3c,sv_country_code,sv_region_code,sv_device,sv_op,sv_session_id) VALUES ('page','','/dip_intranet/index.php','134.236.242.170','20230328112537','2023-03-28','11:25:37','TH','en-US,en;q=0.9','','Google Chrome','1280x720','','AS131090 CAT TELECOM Public Company Ltd,CAT','Bangkok','Bangkok','13.7540','100.5014','','','','Windows 10','0','Y','https://203.151.166.134/dip_intranet/index.php','1','','TH','','1','','oedbqcq33e6kebk2sqd0tka2km')]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2023-03-28 14:18:03] [IP:134.236.242.170]
+[Query:SELECT sv_id FROM stat_visitor WHERE sv_ip = '134.236.242.170' AND sv_new = 'Y' LIMIT 0,1 ]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2023-03-28 14:18:03] [IP:134.236.242.170]
+[Query:SELECT sv_id FROM stat_visitor WHERE sv_ip = '134.236.242.170' AND sv_new = 'Y' LIMIT 0,1 ]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2023-03-28 14:18:03] [IP:134.236.242.170]
+[Query:INSERT INTO stat_visitor (sv_url,sv_visitor,sv_menu,sv_ip,sv_timestamp,sv_date,sv_time,sv_country,sv_language,sv_new,sv_browser,sv_resolution,sv_domain,sv_isp,sv_region,sv_city,sv_latitude,sv_longitude,sv_referer,sv_search,sv_keyword,sv_os,sv_load,sv_member,sv_fullurl,sv_mem_id,sv_w3c,sv_country_code,sv_region_code,sv_device,sv_op,sv_session_id) VALUES ('page','Y','/dip_intranet/index.php','134.236.242.170','20230328141803','2023-03-28','14:18:03','TH','en,th;q=0.9,en-US;q=0.8','Y','Google Chrome','1920x1080','','AS131090 CAT TELECOM Public Company Ltd,CAT','Bangkok','Bangkok','13.7540','100.5014','http://203.151.166.134/dip_intranet/index.php','','','Windows 10','0','Y','https://203.151.166.134/dip_intranet/index.php','1','','TH','','1','','6ts9pnb22cfqqdft48msf0rptr')]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2023-03-28 14:18:08] [IP:134.236.242.170]
+[Query:INSERT INTO stat_visitor (sv_url,sv_visitor,sv_menu,sv_ip,sv_timestamp,sv_date,sv_time,sv_country,sv_language,sv_new,sv_browser,sv_resolution,sv_domain,sv_isp,sv_region,sv_city,sv_latitude,sv_longitude,sv_referer,sv_search,sv_keyword,sv_os,sv_load,sv_member,sv_fullurl,sv_mem_id,sv_w3c,sv_country_code,sv_region_code,sv_device,sv_op,sv_session_id) VALUES ('page','','/dip_intranet/more_form.php','134.236.242.170','20230328141807','2023-03-28','14:18:07','TH','en,th;q=0.9,en-US;q=0.8','','Google Chrome','1920x1080','','AS131090 CAT TELECOM Public Company Ltd,CAT','Bangkok','Bangkok','13.7540','100.5014','','','','Windows 10','0','Y','https://203.151.166.134/dip_intranet/more_form.php','1','','TH','','1','','6ts9pnb22cfqqdft48msf0rptr')]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2023-03-28 14:18:30] [IP:134.236.242.170]
+[Query:INSERT INTO stat_visitor (sv_url,sv_visitor,sv_menu,sv_ip,sv_timestamp,sv_date,sv_time,sv_country,sv_language,sv_new,sv_browser,sv_resolution,sv_domain,sv_isp,sv_region,sv_city,sv_latitude,sv_longitude,sv_referer,sv_search,sv_keyword,sv_os,sv_load,sv_member,sv_fullurl,sv_mem_id,sv_w3c,sv_country_code,sv_region_code,sv_device,sv_op,sv_session_id) VALUES ('page','','/dip_intranet/more_form.php','134.236.242.170','20230328141830','2023-03-28','14:18:30','TH','en,th;q=0.9,en-US;q=0.8','','Google Chrome','1920x1080','','AS131090 CAT TELECOM Public Company Ltd,CAT','Bangkok','Bangkok','13.7540','100.5014','','','','Windows 10','0','Y','https://203.151.166.134/dip_intranet/more_form.php','1','','TH','','1','','6ts9pnb22cfqqdft48msf0rptr')]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2023-03-28 14:18:35] [IP:134.236.242.170]
+[Query:INSERT INTO stat_visitor (sv_url,sv_visitor,sv_menu,sv_ip,sv_timestamp,sv_date,sv_time,sv_country,sv_language,sv_new,sv_browser,sv_resolution,sv_domain,sv_isp,sv_region,sv_city,sv_latitude,sv_longitude,sv_referer,sv_search,sv_keyword,sv_os,sv_load,sv_member,sv_fullurl,sv_mem_id,sv_w3c,sv_country_code,sv_region_code,sv_device,sv_op,sv_session_id) VALUES ('page','','/dip_intranet/index.php','134.236.242.170','20230328141834','2023-03-28','14:18:34','TH','en,th;q=0.9,en-US;q=0.8','','Google Chrome','1920x1080','','AS131090 CAT TELECOM Public Company Ltd,CAT','Bangkok','Bangkok','13.7540','100.5014','','','','Windows 10','0','Y','https://203.151.166.134/dip_intranet/index.php','1','','TH','','1','','6ts9pnb22cfqqdft48msf0rptr')]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2023-03-28 14:20:37] [IP:134.236.242.170]
+[Query:DELETE FROM visitor_online WHERE DATEADD(SECOND,30,vo_onlinelasttime) <= GETDATE() ]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2023-03-28 14:25:18] [IP:134.236.242.170]
+[Query:SELECT sv_id FROM stat_visitor WHERE sv_ip = '134.236.242.170' AND sv_new = 'Y' LIMIT 0,1 ]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2023-03-28 14:25:18] [IP:134.236.242.170]
+[Query:SELECT sv_id FROM stat_visitor WHERE sv_ip = '134.236.242.170' AND sv_new = 'Y' LIMIT 0,1 ]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2023-03-28 14:25:19] [IP:134.236.242.170]
+[Query:INSERT INTO stat_visitor (sv_url,sv_visitor,sv_menu,sv_ip,sv_timestamp,sv_date,sv_time,sv_country,sv_language,sv_new,sv_browser,sv_resolution,sv_domain,sv_isp,sv_region,sv_city,sv_latitude,sv_longitude,sv_referer,sv_search,sv_keyword,sv_os,sv_load,sv_member,sv_fullurl,sv_mem_id,sv_w3c,sv_country_code,sv_region_code,sv_device,sv_op,sv_session_id) VALUES ('page','Y','/dip_intranet/index.php','134.236.242.170','20230328142518','2023-03-28','14:25:18','TH','en,th;q=0.9,en-US;q=0.8','Y','Google Chrome','1920x1080','','AS131090 CAT TELECOM Public Company Ltd,CAT','Bangkok','Bangkok','13.7540','100.5014','http://203.151.166.134/dip_intranet/index.php','','','Windows 10','0','Y','https://203.151.166.134/dip_intranet/index.php','1','','TH','','1','','6ts9pnb22cfqqdft48msf0rptr')]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2023-03-28 14:25:22] [IP:134.236.242.170]
+[Query:INSERT INTO stat_visitor (sv_url,sv_visitor,sv_menu,sv_ip,sv_timestamp,sv_date,sv_time,sv_country,sv_language,sv_new,sv_browser,sv_resolution,sv_domain,sv_isp,sv_region,sv_city,sv_latitude,sv_longitude,sv_referer,sv_search,sv_keyword,sv_os,sv_load,sv_member,sv_fullurl,sv_mem_id,sv_w3c,sv_country_code,sv_region_code,sv_device,sv_op,sv_session_id) VALUES ('page','','/dip_intranet/index.php','134.236.242.170','20230328142521','2023-03-28','14:25:21','TH','en,th;q=0.9,en-US;q=0.8','','Google Chrome','1920x1080','','AS131090 CAT TELECOM Public Company Ltd,CAT','Bangkok','Bangkok','13.7540','100.5014','','','','Windows 10','0','Y','https://203.151.166.134/dip_intranet/index.php','1','','TH','','1','','6ts9pnb22cfqqdft48msf0rptr')]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2023-03-28 14:25:26] [IP:134.236.242.170]
+[Query:INSERT INTO stat_visitor (sv_url,sv_visitor,sv_menu,sv_ip,sv_timestamp,sv_date,sv_time,sv_country,sv_language,sv_new,sv_browser,sv_resolution,sv_domain,sv_isp,sv_region,sv_city,sv_latitude,sv_longitude,sv_referer,sv_search,sv_keyword,sv_os,sv_load,sv_member,sv_fullurl,sv_mem_id,sv_w3c,sv_country_code,sv_region_code,sv_device,sv_op,sv_session_id) VALUES ('page','','/dip_intranet/index.php','134.236.242.170','20230328142525','2023-03-28','14:25:25','TH','en,th;q=0.9,en-US;q=0.8','','Google Chrome','1920x1080','','AS131090 CAT TELECOM Public Company Ltd,CAT','Bangkok','Bangkok','13.7540','100.5014','','','','Windows 10','0','Y','https://203.151.166.134/dip_intranet/index.php','1','','TH','','1','','6ts9pnb22cfqqdft48msf0rptr')]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2023-03-28 14:25:29] [IP:134.236.242.170]
+[Query:INSERT INTO stat_visitor (sv_url,sv_visitor,sv_menu,sv_ip,sv_timestamp,sv_date,sv_time,sv_country,sv_language,sv_new,sv_browser,sv_resolution,sv_domain,sv_isp,sv_region,sv_city,sv_latitude,sv_longitude,sv_referer,sv_search,sv_keyword,sv_os,sv_load,sv_member,sv_fullurl,sv_mem_id,sv_w3c,sv_country_code,sv_region_code,sv_device,sv_op,sv_session_id) VALUES ('page','','/dip_intranet/index.php','134.236.242.170','20230328142529','2023-03-28','14:25:29','TH','en,th;q=0.9,en-US;q=0.8','','Google Chrome','1920x1080','','AS131090 CAT TELECOM Public Company Ltd,CAT','Bangkok','Bangkok','13.7540','100.5014','','','','Windows 10','0','Y','https://203.151.166.134/dip_intranet/index.php','1','','TH','','1','','6ts9pnb22cfqqdft48msf0rptr')]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2023-03-28 14:25:33] [IP:134.236.242.170]
+[Query:INSERT INTO stat_visitor (sv_url,sv_visitor,sv_menu,sv_ip,sv_timestamp,sv_date,sv_time,sv_country,sv_language,sv_new,sv_browser,sv_resolution,sv_domain,sv_isp,sv_region,sv_city,sv_latitude,sv_longitude,sv_referer,sv_search,sv_keyword,sv_os,sv_load,sv_member,sv_fullurl,sv_mem_id,sv_w3c,sv_country_code,sv_region_code,sv_device,sv_op,sv_session_id) VALUES ('page','','/dip_intranet/index.php','134.236.242.170','20230328142532','2023-03-28','14:25:32','TH','en,th;q=0.9,en-US;q=0.8','','Google Chrome','1920x1080','','AS131090 CAT TELECOM Public Company Ltd,CAT','Bangkok','Bangkok','13.7540','100.5014','','','','Windows 10','0','Y','https://203.151.166.134/dip_intranet/index.php','1','','TH','','1','','6ts9pnb22cfqqdft48msf0rptr')]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2023-03-28 14:55:21] [IP:134.236.242.170]
+[Query:INSERT INTO stat_visitor (sv_url,sv_visitor,sv_menu,sv_ip,sv_timestamp,sv_date,sv_time,sv_country,sv_language,sv_new,sv_browser,sv_resolution,sv_domain,sv_isp,sv_region,sv_city,sv_latitude,sv_longitude,sv_referer,sv_search,sv_keyword,sv_os,sv_load,sv_member,sv_fullurl,sv_mem_id,sv_w3c,sv_country_code,sv_region_code,sv_device,sv_op,sv_session_id) VALUES ('page','','/dip_intranet/','134.236.242.170','20230328145520','2023-03-28','14:55:20','TH','en,th;q=0.9,en-US;q=0.8','','Google Chrome','1920x1080','','AS131090 CAT TELECOM Public Company Ltd,CAT','Bangkok','Bangkok','13.7540','100.5014','','','','Windows 10','0','Y','https://203.151.166.134/dip_intranet/','1','','TH','','1','','6ts9pnb22cfqqdft48msf0rptr')]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2023-03-28 14:55:26] [IP:134.236.242.170]
+[Query:DELETE FROM visitor_online WHERE DATEADD(SECOND,30,vo_onlinelasttime) <= GETDATE() ]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2023-03-28 14:55:31] [IP:134.236.242.170]
+[Query:SELECT sv_id FROM stat_visitor WHERE sv_ip = '134.236.242.170' AND sv_new = 'Y' LIMIT 0,1 ]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2023-03-28 14:55:31] [IP:134.236.242.170]
+[Query:SELECT sv_id FROM stat_visitor WHERE sv_ip = '134.236.242.170' AND sv_new = 'Y' LIMIT 0,1 ]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2023-03-28 14:55:31] [IP:134.236.242.170]
+[Query:INSERT INTO stat_visitor (sv_url,sv_visitor,sv_menu,sv_ip,sv_timestamp,sv_date,sv_time,sv_country,sv_language,sv_new,sv_browser,sv_resolution,sv_domain,sv_isp,sv_region,sv_city,sv_latitude,sv_longitude,sv_referer,sv_search,sv_keyword,sv_os,sv_load,sv_member,sv_fullurl,sv_mem_id,sv_w3c,sv_country_code,sv_region_code,sv_device,sv_op,sv_session_id) VALUES ('page','Y','/dip_intranet/index.php','134.236.242.170','20230328145531','2023-03-28','14:55:31','TH','en,th;q=0.9,en-US;q=0.8','Y','Google Chrome','1920x1080','','AS131090 CAT TELECOM Public Company Ltd,CAT','Bangkok','Bangkok','13.7540','100.5014','http://203.151.166.134/dip_intranet/index.php','','','Windows 10','0','Y','https://203.151.166.134/dip_intranet/index.php','1','','TH','','1','','6ts9pnb22cfqqdft48msf0rptr')]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2023-03-28 14:55:34] [IP:134.236.242.170]
+[Query:INSERT INTO stat_visitor (sv_url,sv_visitor,sv_menu,sv_ip,sv_timestamp,sv_date,sv_time,sv_country,sv_language,sv_new,sv_browser,sv_resolution,sv_domain,sv_isp,sv_region,sv_city,sv_latitude,sv_longitude,sv_referer,sv_search,sv_keyword,sv_os,sv_load,sv_member,sv_fullurl,sv_mem_id,sv_w3c,sv_country_code,sv_region_code,sv_device,sv_op,sv_session_id) VALUES ('page','','/dip_intranet/index.php','134.236.242.170','20230328145534','2023-03-28','14:55:34','TH','en,th;q=0.9,en-US;q=0.8','','Google Chrome','1920x1080','','AS131090 CAT TELECOM Public Company Ltd,CAT','Bangkok','Bangkok','13.7540','100.5014','','','','Windows 10','0','Y','https://203.151.166.134/dip_intranet/index.php','1','','TH','','1','','6ts9pnb22cfqqdft48msf0rptr')]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2023-03-28 14:55:37] [IP:134.236.242.170]
+[Query:INSERT INTO stat_visitor (sv_url,sv_visitor,sv_menu,sv_ip,sv_timestamp,sv_date,sv_time,sv_country,sv_language,sv_new,sv_browser,sv_resolution,sv_domain,sv_isp,sv_region,sv_city,sv_latitude,sv_longitude,sv_referer,sv_search,sv_keyword,sv_os,sv_load,sv_member,sv_fullurl,sv_mem_id,sv_w3c,sv_country_code,sv_region_code,sv_device,sv_op,sv_session_id) VALUES ('page','','/dip_intranet/index.php','134.236.242.170','20230328145537','2023-03-28','14:55:37','TH','en,th;q=0.9,en-US;q=0.8','','Google Chrome','1920x1080','','AS131090 CAT TELECOM Public Company Ltd,CAT','Bangkok','Bangkok','13.7540','100.5014','','','','Windows 10','0','Y','https://203.151.166.134/dip_intranet/index.php','1','','TH','','1','','6ts9pnb22cfqqdft48msf0rptr')]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2023-03-28 14:55:40] [IP:134.236.242.170]
+[Query:INSERT INTO stat_visitor (sv_url,sv_visitor,sv_menu,sv_ip,sv_timestamp,sv_date,sv_time,sv_country,sv_language,sv_new,sv_browser,sv_resolution,sv_domain,sv_isp,sv_region,sv_city,sv_latitude,sv_longitude,sv_referer,sv_search,sv_keyword,sv_os,sv_load,sv_member,sv_fullurl,sv_mem_id,sv_w3c,sv_country_code,sv_region_code,sv_device,sv_op,sv_session_id) VALUES ('page','','/dip_intranet/index.php','134.236.242.170','20230328145540','2023-03-28','14:55:40','TH','en,th;q=0.9,en-US;q=0.8','','Google Chrome','1920x1080','','AS131090 CAT TELECOM Public Company Ltd,CAT','Bangkok','Bangkok','13.7540','100.5014','','','','Windows 10','0','Y','https://203.151.166.134/dip_intranet/index.php','1','','TH','','1','','6ts9pnb22cfqqdft48msf0rptr')]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2023-03-28 14:55:43] [IP:134.236.242.170]
+[Query:INSERT INTO stat_visitor (sv_url,sv_visitor,sv_menu,sv_ip,sv_timestamp,sv_date,sv_time,sv_country,sv_language,sv_new,sv_browser,sv_resolution,sv_domain,sv_isp,sv_region,sv_city,sv_latitude,sv_longitude,sv_referer,sv_search,sv_keyword,sv_os,sv_load,sv_member,sv_fullurl,sv_mem_id,sv_w3c,sv_country_code,sv_region_code,sv_device,sv_op,sv_session_id) VALUES ('page','','/dip_intranet/index.php','134.236.242.170','20230328145543','2023-03-28','14:55:43','TH','en,th;q=0.9,en-US;q=0.8','','Google Chrome','1920x1080','','AS131090 CAT TELECOM Public Company Ltd,CAT','Bangkok','Bangkok','13.7540','100.5014','','','','Windows 10','0','Y','https://203.151.166.134/dip_intranet/index.php','1','','TH','','1','','6ts9pnb22cfqqdft48msf0rptr')]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2023-03-28 14:55:54] [IP:134.236.242.170]
+[Query:INSERT INTO stat_visitor (sv_url,sv_visitor,sv_menu,sv_ip,sv_timestamp,sv_date,sv_time,sv_country,sv_language,sv_new,sv_browser,sv_resolution,sv_domain,sv_isp,sv_region,sv_city,sv_latitude,sv_longitude,sv_referer,sv_search,sv_keyword,sv_os,sv_load,sv_member,sv_fullurl,sv_mem_id,sv_w3c,sv_country_code,sv_region_code,sv_device,sv_op,sv_session_id) VALUES ('page','','/dip_intranet/index.php','134.236.242.170','20230328145554','2023-03-28','14:55:54','TH','en,th;q=0.9,en-US;q=0.8','','Google Chrome','1920x1080','','AS131090 CAT TELECOM Public Company Ltd,CAT','Bangkok','Bangkok','13.7540','100.5014','','','','Windows 10','0','Y','https://203.151.166.134/dip_intranet/index.php','1','','TH','','1','','6ts9pnb22cfqqdft48msf0rptr')]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2023-03-28 15:25:22] [IP:134.236.242.170]
+[Query:INSERT INTO stat_visitor (sv_url,sv_visitor,sv_menu,sv_ip,sv_timestamp,sv_date,sv_time,sv_country,sv_language,sv_new,sv_browser,sv_resolution,sv_domain,sv_isp,sv_region,sv_city,sv_latitude,sv_longitude,sv_referer,sv_search,sv_keyword,sv_os,sv_load,sv_member,sv_fullurl,sv_mem_id,sv_w3c,sv_country_code,sv_region_code,sv_device,sv_op,sv_session_id) VALUES ('page','','/dip_intranet/','134.236.242.170','20230328152521','2023-03-28','15:25:21','TH','en,th;q=0.9,en-US;q=0.8','','Google Chrome','1536x864','','AS131090 CAT TELECOM Public Company Ltd,CAT','Bangkok','Bangkok','13.7540','100.5014','','','','Windows 10','0','Y','https://203.151.166.134/dip_intranet/','1','','TH','','1','','6ts9pnb22cfqqdft48msf0rptr')]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2023-03-28 15:25:25] [IP:134.236.242.170]
+[Query:DELETE FROM visitor_online WHERE DATEADD(SECOND,30,vo_onlinelasttime) <= GETDATE() ]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2023-03-28 15:27:01] [IP:134.236.242.170]
+[Query:SELECT sv_id FROM stat_visitor WHERE sv_ip = '134.236.242.170' AND sv_new = 'Y' LIMIT 0,1 ]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2023-03-28 15:27:01] [IP:134.236.242.170]
+[Query:SELECT sv_id FROM stat_visitor WHERE sv_ip = '134.236.242.170' AND sv_new = 'Y' LIMIT 0,1 ]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2023-03-28 15:27:02] [IP:134.236.242.170]
+[Query:INSERT INTO stat_visitor (sv_url,sv_visitor,sv_menu,sv_ip,sv_timestamp,sv_date,sv_time,sv_country,sv_language,sv_new,sv_browser,sv_resolution,sv_domain,sv_isp,sv_region,sv_city,sv_latitude,sv_longitude,sv_referer,sv_search,sv_keyword,sv_os,sv_load,sv_member,sv_fullurl,sv_mem_id,sv_w3c,sv_country_code,sv_region_code,sv_device,sv_op,sv_session_id) VALUES ('page','Y','/dip_intranet/index.php','134.236.242.170','20230328152701','2023-03-28','15:27:01','TH','en-US,en;q=0.9','Y','Edge','1280x720','','AS131090 CAT TELECOM Public Company Ltd,CAT','Bangkok','Bangkok','13.7540','100.5014','http://203.151.166.134/dip_intranet/index.php','','','Windows 10','0','Y','https://203.151.166.134/dip_intranet/index.php','1','','TH','','1','','r80o038cppt8k7dpbdeffgtcj5')]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2023-03-28 15:42:19] [IP:134.236.242.170]
+[Query:INSERT INTO stat_visitor (sv_url,sv_visitor,sv_menu,sv_ip,sv_timestamp,sv_date,sv_time,sv_country,sv_language,sv_new,sv_browser,sv_resolution,sv_domain,sv_isp,sv_region,sv_city,sv_latitude,sv_longitude,sv_referer,sv_search,sv_keyword,sv_os,sv_load,sv_member,sv_fullurl,sv_mem_id,sv_w3c,sv_country_code,sv_region_code,sv_device,sv_op,sv_session_id) VALUES ('page','','/dip_intranet/index.php','134.236.242.170','20230328154218','2023-03-28','15:42:18','TH','en-US,en;q=0.9','','Google Chrome','1280x720','','AS131090 CAT TELECOM Public Company Ltd,CAT','Bangkok','Bangkok','13.7540','100.5014','','','','Windows 10','0','Y','https://203.151.166.134/dip_intranet/index.php','1','','TH','','1','','oedbqcq33e6kebk2sqd0tka2km')]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2023-03-28 15:42:29] [IP:134.236.242.170]
+[Query:INSERT INTO stat_visitor (sv_url,sv_visitor,sv_menu,sv_ip,sv_timestamp,sv_date,sv_time,sv_country,sv_language,sv_new,sv_browser,sv_resolution,sv_domain,sv_isp,sv_region,sv_city,sv_latitude,sv_longitude,sv_referer,sv_search,sv_keyword,sv_os,sv_load,sv_member,sv_fullurl,sv_mem_id,sv_w3c,sv_country_code,sv_region_code,sv_device,sv_op,sv_session_id) VALUES ('page','','/dip_intranet/index.php','134.236.242.170','20230328154229','2023-03-28','15:42:29','TH','en-US,en;q=0.9','','Google Chrome','1280x720','','AS131090 CAT TELECOM Public Company Ltd,CAT','Bangkok','Bangkok','13.7540','100.5014','','','','Windows 10','0','Y','https://203.151.166.134/dip_intranet/index.php','1','','TH','','1','','oedbqcq33e6kebk2sqd0tka2km')]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2023-03-28 16:04:06] [IP:134.236.242.170]
+[Query:INSERT INTO stat_visitor (sv_url,sv_visitor,sv_menu,sv_ip,sv_timestamp,sv_date,sv_time,sv_country,sv_language,sv_new,sv_browser,sv_resolution,sv_domain,sv_isp,sv_region,sv_city,sv_latitude,sv_longitude,sv_referer,sv_search,sv_keyword,sv_os,sv_load,sv_member,sv_fullurl,sv_mem_id,sv_w3c,sv_country_code,sv_region_code,sv_device,sv_op,sv_session_id) VALUES ('page','','/dip_intranet/index.php','134.236.242.170','20230328160405','2023-03-28','16:04:05','TH','en-US,en;q=0.9','','Google Chrome','1280x720','','AS131090 CAT TELECOM Public Company Ltd,CAT','Bangkok','Bangkok','13.7540','100.5014','','','','Windows 10','0','Y','https://203.151.166.134/dip_intranet/index.php','1','','TH','','1','','oedbqcq33e6kebk2sqd0tka2km')]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2023-03-28 16:52:13] [IP:134.236.242.170]
+[Query:INSERT INTO stat_visitor (sv_url,sv_visitor,sv_menu,sv_ip,sv_timestamp,sv_date,sv_time,sv_country,sv_language,sv_new,sv_browser,sv_resolution,sv_domain,sv_isp,sv_region,sv_city,sv_latitude,sv_longitude,sv_referer,sv_search,sv_keyword,sv_os,sv_load,sv_member,sv_fullurl,sv_mem_id,sv_w3c,sv_country_code,sv_region_code,sv_device,sv_op,sv_session_id) VALUES ('page','','/dip_intranet/index.php','134.236.242.170','20230328165213','2023-03-28','16:52:13','TH','en-US,en;q=0.9','','Edge','1280x720','','AS131090 CAT TELECOM Public Company Ltd,CAT','Bangkok','Bangkok','13.7540','100.5014','','','','Windows 10','0','Y','https://203.151.166.134/dip_intranet/index.php','1','','TH','','1','','r80o038cppt8k7dpbdeffgtcj5')]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2023-03-28 17:03:42] [IP:134.236.242.170]
+[Query:INSERT INTO stat_visitor (sv_url,sv_visitor,sv_menu,sv_ip,sv_timestamp,sv_date,sv_time,sv_country,sv_language,sv_new,sv_browser,sv_resolution,sv_domain,sv_isp,sv_region,sv_city,sv_latitude,sv_longitude,sv_referer,sv_search,sv_keyword,sv_os,sv_load,sv_member,sv_fullurl,sv_mem_id,sv_w3c,sv_country_code,sv_region_code,sv_device,sv_op,sv_session_id) VALUES ('page','','/dip_intranet/index.php','134.236.242.170','20230328170341','2023-03-28','17:03:41','TH','en-US,en;q=0.9','','Google Chrome','1280x720','','AS131090 CAT TELECOM Public Company Ltd,CAT','Bangkok','Bangkok','13.7540','100.5014','','','','Windows 10','0','Y','https://203.151.166.134/dip_intranet/index.php','1','','TH','','1','','utmacjmfn153l5osfcb5jeifcp')]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2023-03-28 17:13:43] [IP:134.236.242.170]
+[Query:INSERT INTO stat_visitor (sv_url,sv_visitor,sv_menu,sv_ip,sv_timestamp,sv_date,sv_time,sv_country,sv_language,sv_new,sv_browser,sv_resolution,sv_domain,sv_isp,sv_region,sv_city,sv_latitude,sv_longitude,sv_referer,sv_search,sv_keyword,sv_os,sv_load,sv_member,sv_fullurl,sv_mem_id,sv_w3c,sv_country_code,sv_region_code,sv_device,sv_op,sv_session_id) VALUES ('page','','/dip_intranet/index.php','134.236.242.170','20230328171343','2023-03-28','17:13:43','TH','en-US,en;q=0.9','','Google Chrome','1280x720','','AS131090 CAT TELECOM Public Company Ltd,CAT','Bangkok','Bangkok','13.7540','100.5014','','','','Windows 10','0','Y','https://203.151.166.134/dip_intranet/index.php','1','','TH','','1','','oedbqcq33e6kebk2sqd0tka2km')]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2023-03-28 17:14:04] [IP:134.236.242.170]
+[Query:INSERT INTO stat_visitor (sv_url,sv_visitor,sv_menu,sv_ip,sv_timestamp,sv_date,sv_time,sv_country,sv_language,sv_new,sv_browser,sv_resolution,sv_domain,sv_isp,sv_region,sv_city,sv_latitude,sv_longitude,sv_referer,sv_search,sv_keyword,sv_os,sv_load,sv_member,sv_fullurl,sv_mem_id,sv_w3c,sv_country_code,sv_region_code,sv_device,sv_op,sv_session_id) VALUES ('page','','/dip_intranet/index.php','134.236.242.170','20230328171403','2023-03-28','17:14:03','TH','en-US,en;q=0.9','','Google Chrome','1280x720','','AS131090 CAT TELECOM Public Company Ltd,CAT','Bangkok','Bangkok','13.7540','100.5014','','','','Windows 10','0','Y','https://203.151.166.134/dip_intranet/index.php','1','','TH','','1','','oedbqcq33e6kebk2sqd0tka2km')]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2023-03-28 17:14:56] [IP:134.236.242.170]
+[Query:INSERT INTO stat_visitor (sv_url,sv_visitor,sv_menu,sv_ip,sv_timestamp,sv_date,sv_time,sv_country,sv_language,sv_new,sv_browser,sv_resolution,sv_domain,sv_isp,sv_region,sv_city,sv_latitude,sv_longitude,sv_referer,sv_search,sv_keyword,sv_os,sv_load,sv_member,sv_fullurl,sv_mem_id,sv_w3c,sv_country_code,sv_region_code,sv_device,sv_op,sv_session_id) VALUES ('page','','/dip_intranet/index.php','134.236.242.170','20230328171456','2023-03-28','17:14:56','TH','en-US,en;q=0.9','','Google Chrome','1280x720','','AS131090 CAT TELECOM Public Company Ltd,CAT','Bangkok','Bangkok','13.7540','100.5014','','','','Windows 10','0','Y','https://203.151.166.134/dip_intranet/index.php','1','','TH','','1','','oedbqcq33e6kebk2sqd0tka2km')]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2023-03-28 17:23:03] [IP:134.236.242.170]
+[Query:INSERT INTO stat_visitor (sv_url,sv_visitor,sv_menu,sv_ip,sv_timestamp,sv_date,sv_time,sv_country,sv_language,sv_new,sv_browser,sv_resolution,sv_domain,sv_isp,sv_region,sv_city,sv_latitude,sv_longitude,sv_referer,sv_search,sv_keyword,sv_os,sv_load,sv_member,sv_fullurl,sv_mem_id,sv_w3c,sv_country_code,sv_region_code,sv_device,sv_op,sv_session_id) VALUES ('page','','/dip_intranet/index.php','134.236.242.170','20230328172303','2023-03-28','17:23:03','TH','en-US,en;q=0.9','','Google Chrome','1280x720','','AS131090 CAT TELECOM Public Company Ltd,CAT','Bangkok','Bangkok','13.7540','100.5014','','','','Windows 10','0','Y','https://203.151.166.134/dip_intranet/index.php','1','','TH','','1','','oedbqcq33e6kebk2sqd0tka2km')]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2023-03-28 17:23:12] [IP:134.236.242.170]
+[Query:INSERT INTO stat_visitor (sv_url,sv_visitor,sv_menu,sv_ip,sv_timestamp,sv_date,sv_time,sv_country,sv_language,sv_new,sv_browser,sv_resolution,sv_domain,sv_isp,sv_region,sv_city,sv_latitude,sv_longitude,sv_referer,sv_search,sv_keyword,sv_os,sv_load,sv_member,sv_fullurl,sv_mem_id,sv_w3c,sv_country_code,sv_region_code,sv_device,sv_op,sv_session_id) VALUES ('page','','/dip_intranet/index.php','134.236.242.170','20230328172312','2023-03-28','17:23:12','TH','en-US,en;q=0.9','','Google Chrome','1280x720','','AS131090 CAT TELECOM Public Company Ltd,CAT','Bangkok','Bangkok','13.7540','100.5014','','','','Windows 10','0','Y','https://203.151.166.134/dip_intranet/index.php','1','','TH','','1','','oedbqcq33e6kebk2sqd0tka2km')]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2023-03-28 17:23:33] [IP:134.236.242.170]
+[Query:INSERT INTO stat_visitor (sv_url,sv_visitor,sv_menu,sv_ip,sv_timestamp,sv_date,sv_time,sv_country,sv_language,sv_new,sv_browser,sv_resolution,sv_domain,sv_isp,sv_region,sv_city,sv_latitude,sv_longitude,sv_referer,sv_search,sv_keyword,sv_os,sv_load,sv_member,sv_fullurl,sv_mem_id,sv_w3c,sv_country_code,sv_region_code,sv_device,sv_op,sv_session_id) VALUES ('page','','/dip_intranet/index.php','134.236.242.170','20230328172333','2023-03-28','17:23:33','TH','en-US,en;q=0.9','','Google Chrome','1280x720','','AS131090 CAT TELECOM Public Company Ltd,CAT','Bangkok','Bangkok','13.7540','100.5014','','','','Windows 10','0','Y','https://203.151.166.134/dip_intranet/index.php','1','','TH','','1','','oedbqcq33e6kebk2sqd0tka2km')]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2023-03-28 17:24:30] [IP:134.236.242.170]
+[Query:INSERT INTO stat_visitor (sv_url,sv_visitor,sv_menu,sv_ip,sv_timestamp,sv_date,sv_time,sv_country,sv_language,sv_new,sv_browser,sv_resolution,sv_domain,sv_isp,sv_region,sv_city,sv_latitude,sv_longitude,sv_referer,sv_search,sv_keyword,sv_os,sv_load,sv_member,sv_fullurl,sv_mem_id,sv_w3c,sv_country_code,sv_region_code,sv_device,sv_op,sv_session_id) VALUES ('page','','/dip_intranet/index.php','134.236.242.170','20230328172429','2023-03-28','17:24:29','TH','en-US,en;q=0.9','','Google Chrome','1280x720','','AS131090 CAT TELECOM Public Company Ltd,CAT','Bangkok','Bangkok','13.7540','100.5014','','','','Windows 10','0','Y','https://203.151.166.134/dip_intranet/index.php','1','','TH','','1','','oedbqcq33e6kebk2sqd0tka2km')]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2023-03-28 17:27:10] [IP:134.236.242.170]
+[Query:INSERT INTO stat_visitor (sv_url,sv_visitor,sv_menu,sv_ip,sv_timestamp,sv_date,sv_time,sv_country,sv_language,sv_new,sv_browser,sv_resolution,sv_domain,sv_isp,sv_region,sv_city,sv_latitude,sv_longitude,sv_referer,sv_search,sv_keyword,sv_os,sv_load,sv_member,sv_fullurl,sv_mem_id,sv_w3c,sv_country_code,sv_region_code,sv_device,sv_op,sv_session_id) VALUES ('page','','/dip_intranet/index.php','134.236.242.170','20230328172710','2023-03-28','17:27:10','TH','en-US,en;q=0.9','','Google Chrome','1280x720','','AS131090 CAT TELECOM Public Company Ltd,CAT','Bangkok','Bangkok','13.7540','100.5014','','','','Windows 10','0','Y','https://203.151.166.134/dip_intranet/index.php','1','','TH','','1','','oedbqcq33e6kebk2sqd0tka2km')]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2023-03-28 17:27:36] [IP:134.236.242.170]
+[Query:INSERT INTO stat_visitor (sv_url,sv_visitor,sv_menu,sv_ip,sv_timestamp,sv_date,sv_time,sv_country,sv_language,sv_new,sv_browser,sv_resolution,sv_domain,sv_isp,sv_region,sv_city,sv_latitude,sv_longitude,sv_referer,sv_search,sv_keyword,sv_os,sv_load,sv_member,sv_fullurl,sv_mem_id,sv_w3c,sv_country_code,sv_region_code,sv_device,sv_op,sv_session_id) VALUES ('page','','/dip_intranet/index.php','134.236.242.170','20230328172736','2023-03-28','17:27:36','TH','en-US,en;q=0.9','','Google Chrome','1280x720','','AS131090 CAT TELECOM Public Company Ltd,CAT','Bangkok','Bangkok','13.7540','100.5014','','','','Windows 10','0','Y','https://203.151.166.134/dip_intranet/index.php','1','','TH','','1','','oedbqcq33e6kebk2sqd0tka2km')]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2023-03-28 17:27:39] [IP:134.236.242.170]
+[Query:INSERT INTO stat_visitor (sv_url,sv_visitor,sv_menu,sv_ip,sv_timestamp,sv_date,sv_time,sv_country,sv_language,sv_new,sv_browser,sv_resolution,sv_domain,sv_isp,sv_region,sv_city,sv_latitude,sv_longitude,sv_referer,sv_search,sv_keyword,sv_os,sv_load,sv_member,sv_fullurl,sv_mem_id,sv_w3c,sv_country_code,sv_region_code,sv_device,sv_op,sv_session_id) VALUES ('page','','/dip_intranet/index.php','134.236.242.170','20230328172739','2023-03-28','17:27:39','TH','en-US,en;q=0.9','','Google Chrome','1280x720','','AS131090 CAT TELECOM Public Company Ltd,CAT','Bangkok','Bangkok','13.7540','100.5014','','','','Windows 10','0','Y','https://203.151.166.134/dip_intranet/index.php','1','','TH','','1','','oedbqcq33e6kebk2sqd0tka2km')]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2023-03-28 17:29:20] [IP:134.236.242.170]
+[Query:INSERT INTO stat_visitor (sv_url,sv_visitor,sv_menu,sv_ip,sv_timestamp,sv_date,sv_time,sv_country,sv_language,sv_new,sv_browser,sv_resolution,sv_domain,sv_isp,sv_region,sv_city,sv_latitude,sv_longitude,sv_referer,sv_search,sv_keyword,sv_os,sv_load,sv_member,sv_fullurl,sv_mem_id,sv_w3c,sv_country_code,sv_region_code,sv_device,sv_op,sv_session_id) VALUES ('page','','/dip_intranet/index.php','134.236.242.170','20230328172920','2023-03-28','17:29:20','TH','en-US,en;q=0.9','','Google Chrome','1280x720','','AS131090 CAT TELECOM Public Company Ltd,CAT','Bangkok','Bangkok','13.7540','100.5014','','','','Windows 10','0','Y','https://203.151.166.134/dip_intranet/index.php','1','','TH','','1','','oedbqcq33e6kebk2sqd0tka2km')]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2023-03-28 17:29:39] [IP:134.236.242.170]
+[Query:DELETE FROM visitor_online WHERE DATEADD(SECOND,30,vo_onlinelasttime) <= GETDATE() ]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2023-03-28 17:31:21] [IP:134.236.242.170]
+[Query:SELECT sv_id FROM stat_visitor WHERE sv_ip = '134.236.242.170' AND sv_new = 'Y' LIMIT 0,1 ]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2023-03-28 17:31:21] [IP:134.236.242.170]
+[Query:SELECT sv_id FROM stat_visitor WHERE sv_ip = '134.236.242.170' AND sv_new = 'Y' LIMIT 0,1 ]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2023-03-28 17:31:22] [IP:134.236.242.170]
+[Query:INSERT INTO stat_visitor (sv_url,sv_visitor,sv_menu,sv_ip,sv_timestamp,sv_date,sv_time,sv_country,sv_language,sv_new,sv_browser,sv_resolution,sv_domain,sv_isp,sv_region,sv_city,sv_latitude,sv_longitude,sv_referer,sv_search,sv_keyword,sv_os,sv_load,sv_member,sv_fullurl,sv_mem_id,sv_w3c,sv_country_code,sv_region_code,sv_device,sv_op,sv_session_id) VALUES ('page','Y','/dip_intranet/index.php','134.236.242.170','20230328173121','2023-03-28','17:31:21','TH','en-US,en;q=0.9','Y','Google Chrome','1280x720','','AS131090 CAT TELECOM Public Company Ltd,CAT','Bangkok','Bangkok','13.7540','100.5014','http://203.151.166.134/dip_intranet/index.php','','','Windows 10','0','Y','https://203.151.166.134/dip_intranet/index.php','1','','TH','','1','','oedbqcq33e6kebk2sqd0tka2km')]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2023-03-28 17:33:02] [IP:134.236.242.170]
+[Query:INSERT INTO stat_visitor (sv_url,sv_visitor,sv_menu,sv_ip,sv_timestamp,sv_date,sv_time,sv_country,sv_language,sv_new,sv_browser,sv_resolution,sv_domain,sv_isp,sv_region,sv_city,sv_latitude,sv_longitude,sv_referer,sv_search,sv_keyword,sv_os,sv_load,sv_member,sv_fullurl,sv_mem_id,sv_w3c,sv_country_code,sv_region_code,sv_device,sv_op,sv_session_id) VALUES ('page','','/dip_intranet/index.php','134.236.242.170','20230328173302','2023-03-28','17:33:02','TH','en-US,en;q=0.9','','Google Chrome','1280x720','','AS131090 CAT TELECOM Public Company Ltd,CAT','Bangkok','Bangkok','13.7540','100.5014','','','','Windows 10','0','Y','https://203.151.166.134/dip_intranet/index.php','1','','TH','','1','','oedbqcq33e6kebk2sqd0tka2km')]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2023-03-28 17:33:14] [IP:134.236.242.170]
+[Query:INSERT INTO stat_visitor (sv_url,sv_visitor,sv_menu,sv_ip,sv_timestamp,sv_date,sv_time,sv_country,sv_language,sv_new,sv_browser,sv_resolution,sv_domain,sv_isp,sv_region,sv_city,sv_latitude,sv_longitude,sv_referer,sv_search,sv_keyword,sv_os,sv_load,sv_member,sv_fullurl,sv_mem_id,sv_w3c,sv_country_code,sv_region_code,sv_device,sv_op,sv_session_id) VALUES ('page','','/dip_intranet/index.php','134.236.242.170','20230328173314','2023-03-28','17:33:14','TH','en-US,en;q=0.9','','Google Chrome','1280x720','','AS131090 CAT TELECOM Public Company Ltd,CAT','Bangkok','Bangkok','13.7540','100.5014','','','','Windows 10','0','Y','https://203.151.166.134/dip_intranet/index.php','1','','TH','','1','','oedbqcq33e6kebk2sqd0tka2km')]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2023-03-28 18:00:02] [IP:134.236.242.170]
+[Query:INSERT INTO stat_visitor (sv_url,sv_visitor,sv_menu,sv_ip,sv_timestamp,sv_date,sv_time,sv_country,sv_language,sv_new,sv_browser,sv_resolution,sv_domain,sv_isp,sv_region,sv_city,sv_latitude,sv_longitude,sv_referer,sv_search,sv_keyword,sv_os,sv_load,sv_member,sv_fullurl,sv_mem_id,sv_w3c,sv_country_code,sv_region_code,sv_device,sv_op,sv_session_id) VALUES ('page','','/dip_intranet/','134.236.242.170','20230328180001','2023-03-28','18:00:01','TH','en-US,en;q=0.9','','Google Chrome','1280x720','','AS131090 CAT TELECOM Public Company Ltd,CAT','Bangkok','Bangkok','13.7540','100.5014','','','','Windows 10','0','Y','https://203.151.166.134/dip_intranet/','1','','TH','','1','','oedbqcq33e6kebk2sqd0tka2km')]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2023-03-28 18:01:04] [IP:134.236.242.170]
+[Query:INSERT INTO stat_visitor (sv_url,sv_visitor,sv_menu,sv_ip,sv_timestamp,sv_date,sv_time,sv_country,sv_language,sv_new,sv_browser,sv_resolution,sv_domain,sv_isp,sv_region,sv_city,sv_latitude,sv_longitude,sv_referer,sv_search,sv_keyword,sv_os,sv_load,sv_member,sv_fullurl,sv_mem_id,sv_w3c,sv_country_code,sv_region_code,sv_device,sv_op,sv_session_id) VALUES ('page','','/dip_intranet/','134.236.242.170','20230328180104','2023-03-28','18:01:04','TH','en-US,en;q=0.9','','Google Chrome','1280x720','','AS131090 CAT TELECOM Public Company Ltd,CAT','Bangkok','Bangkok','13.7540','100.5014','','','','Windows 10','0','Y','https://203.151.166.134/dip_intranet/','1','','TH','','1','','oedbqcq33e6kebk2sqd0tka2km')]
+[Error Code:]
+[Error Massage:]
+====================================

@@ -1,0 +1,127 @@
+<?php
+session_start();
+
+include("../lib/permission1.php");
+include("../lib/include.php");
+include("../lib/function.php");
+include("../lib/user_config.php");
+include("../lib/connect.php");
+if(!$db->check_permission("poll","w","")){
+				?>
+				<script >
+				alert("You can not access this section!!");
+				window.history.back();
+				</script>
+				<?php
+}
+$db->write_log("view","poll","เข้าสู่ Module การจัดการแบบสำรวจ");
+	if($_GET[url] != ''){
+	$link = $_GET[url];
+	}else{
+	$link = 'main.php';
+	}
+?>
+	<script>
+			window.location.href = "main.php";
+			</script>
+			<?php
+			exit;
+			?>
+<html>
+<head>
+<title>Vote Administrator</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<style type="text/css">
+<!--
+body {  margin: 0px  0px; padding: 0px  0px}
+a:link { color: #005CA2; text-decoration: none}
+a:visited { color: #005CA2; text-decoration: none}
+a:active { color: #0099FF; text-decoration: underline}
+a:hover { color: #0099FF; text-decoration: underline}
+-->
+</style>
+<link rel="stylesheet" href="onbody.css" type="text/css">
+</head>
+
+<body bgcolor="#FFFFFF">
+<?php
+if($adminlogin == "Y"){
+?>
+<table width="100%" border="0" cellspacing="0" cellpadding="0" height="100%">
+  <tr valign="top"> 
+    <td height="80"> 
+      <?php include ("menu.php"); ?>
+    </td>
+  </tr>
+  <tr valign="top"> 
+    <td height="100%"> 
+	<table width="95%" border="0" cellspacing="0" cellpadding="2" align="center" class="work_title">
+		<?php if($login == "success"){ ?>
+        <tr valign="top" bgcolor="#CCCCCC"> 
+          <td colspan="4"><div align="center">ยินดีต้อนรับ เข้าสู่ระบบ</div></td>
+        </tr>
+		<?php }?>
+      </table>
+    </td>
+  </tr>
+  <tr> 
+    <td height="10"> 
+    </td>
+  </tr>
+</table>
+<?php }else{ ?>
+	<table width="95%" border="0" cellspacing="0" cellpadding="2" align="center" class="work_title">
+		<?php if($error == "password"){ ?>
+		        <tr valign="top" bgcolor="#FF0000"> 
+          <td colspan="4"><div align="center"><font color="#FFFFFF">ชื่อล็อกอิน หรือ รหัสผ่าน ไม่ถูกต้อง กรุณากรอกใหม่</font></div></td>
+        </tr>
+		<?php } ?>
+      </table>
+<table width="100%" border="0" cellspacing="0" cellpadding="0" height="100%">
+  <tr valign="top"> 
+    <td height="100%" align="center"><br>
+<br>
+<br>
+<br>
+<br>
+<form name="formy" method="post" action="login.php" onSubmit="return chkd();">
+	<FIELDSET style="width: 300; text-align: center; ">
+	<LEGEND><span class="grey_heading">เข้าสู่ระบบ</span></LEGEND>
+                  <table width="100%" border="0" cellspacing="0" cellpadding="3" bordercolor="#CCCCCC" bgcolor="#FFFFFF" class="normal_font">
+                   
+                    <tr> 
+                      <td width="45%" height="1" valign="middle">ชื่อ</td>
+                      <td width="55%" valign="top"><input name="user" type="text" class="normal_font" id="user" size="10"></td>
+                    </tr>
+                    <tr> 
+                      <td valign="middle" height="4">รหัสผ่าน</td>
+                      <td valign="top"><input name="pass" type="password" class="normal_font" id="pass" value="" size="10"></td>
+                    </tr>
+                    <tr>
+                      <td valign="middle" height="1" class="normal_font">&nbsp;</td>
+                      <td valign="top" class="normal_font"><input type="submit" name="Submit22" value="เข้าสู่ระบบ" class="normal_font"></td>
+                    </tr>
+                  </table>
+    </FIELDSET></form></td>
+  </tr>
+  <tr> 
+    <td height="10"> 
+    </td>
+  </tr>
+</table>
+ <script language="JavaScript">
+function chkd(){
+if(document.formy.user.value == ""){
+alert("กรุณาใส่ชื่อล็อกอิน");
+document.formy.user.focus();
+return false;
+}
+if(document.formy.pass.value == ""){
+alert("กรุณาใส่รหัสผ่าน");
+document.formy.pass.focus();
+return false;
+}
+}</script>
+<?php } ?>
+</body>
+</html>

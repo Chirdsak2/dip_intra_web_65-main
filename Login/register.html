@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>สมัครสมาชิก</title>
+    <meta name="description" content="DMR">
+    <meta name="keywords" content="DMR">
+    <!-- Bootstrap & Styling-->
+    <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css">
+    <!--link(rel="stylesheet", href="css/bootstrap/bootstrap-grid.min.css")-->
+    <!--link(rel="stylesheet", href="css/bootstrap/bootstrap-reboot.min.css")-->
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/plugin/font-awesome.css">
+    <!--HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries-->
+    <!--[if lt IE 9]
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    [endif]-->
+  </head>
+  <body>
+    <!--Header-->
+    <section class="login">
+      <div class="container">
+        <div class="box-wrapper">
+          <div class="box box-border">
+            <div class="box-body">
+              <h4 class="text-center">สมัครสมาชิก</h4>
+              <form>
+                    <div class="form-group">
+                      <label>รหัสบัตรประชาชน<span class="required"></span></label>
+                      <input class="form-control" type="text" name="idnum">
+                    </div>
+                    <div class="form-group">
+                      <label>คำนำหน้า<span class="required"></span></label>
+                      <select class="form-control">
+                        <option value=" "> </option>
+                        <option value="นาย">นาย</option>
+                        <option value="นางสาว">นางสาว</option>
+                        <option value="นาง">นาง</option>
+                        <option value="ว่าที่ร้อยตรี">ว่าที่ร้อยตรี</option>
+                        <option value="สำนักงาน">สำนักงาน</option>
+                        <option value="กลุ่ม">กลุ่ม</option>
+                        <option value="ส่วนงาน">ส่วนงาน</option>
+                        <option value="จ.ส.อ.">จ.ส.อ.</option>
+                      </select>
+                    </div>
+                    <div class="form-group">
+                      <label>ชื่อ<span class="required"></span></label>
+                      <input class="form-control" type="text" name="name">
+                    </div>
+                    <div class="form-group">
+                      <label>นามสกุล<span class="required"></span></label>
+                      <input class="form-control" type="text" name="surname">
+                    </div>
+                    <div class="form-group">
+                      <label>ชื่อ (ภาษาอังกฤษ)<span></span></label>
+                      <input class="form-control" type="text" name="name_en">
+                    </div>
+                    <div class="form-group">
+                      <label>นามสกุล (ภาษาอังกฤษ)<span></span></label>
+                      <input class="form-control" type="text" name="surname_en">
+                    </div>
+                    <div class="form-group">
+                      <label>รูปภาพ<span></span></label>
+                      <input class="form-control" type="file" name="picture">
+                    </div>
+                <div class="title-line"></div>
+                    <div class="form-group">
+                      <label>หน่วยงาน<span class="required"></span></label>
+                      <select class="form-control">
+                        <option value=" "> </option>
+                        <option value="กรมทรัพยากรธรณี">กรมทรัพยากรธรณี</option>
+                        <option value="สำนักงานทรัพยากรธรณี เขต 4">สำนักงานทรัพยากรธรณี เขต 4</option>
+                        <option value="กองอนุรักษ์และจัดการทรัพยากรธรณี">กองอนุรักษ์และจัดการทรัพยากรธรณี</option>
+                        <option value="สำนักงานเลขานุการกรม">สำนักงานเลขานุการกรม</option>
+                        <option value="ส่วนช่วยอำนวยการ">ส่วนช่วยอำนวยการ</option>
+                        <option value="ฝ่ายสารบรรณ">ฝ่ายสารบรรณ</option>
+                        <option value="ส่วนทรัพยากรบุคคล">ส่วนทรัพยากรบุคคล</option>
+                        <option value="ส่วนการคลัง">ส่วนการคลัง</option>
+                        <option value="ส่วนการพัสดุ">ส่วนการพัสดุ</option>
+                        <option value="ส่วนประชาสัมพันธ์">ส่วนประชาสัมพันธ์</option>
+                        <option value="ส่วนแผนและประเมินผล (สลก.)">ส่วนแผนและประเมินผล (สลก.)</option>
+                        <option value="รองอธิบดี นายนิวัติ มณีขัติย์">รองอธิบดี นายนิวัติ มณีขัติย์</option>
+                        <option value="รองอธิบดี นายสมหมาย เตชวาล">รองอธิบดี นายสมหมาย เตชวาล</option>
+                        <option value="กองธรณีวิทยาสิ่งแวดล้อม">กองธรณีวิทยาสิ่งแวดล้อม</option>
+                        <option value="ฝ่ายบริหารทั่วไป (สธส.)">ฝ่ายบริหารทั่วไป (สธส.)</option>
+                        <option value="ส่วนธรณีพิบัติภัย">ส่วนธรณีพิบัติภัย</option>
+                        <option value="ส่วนวิจัยรอยเลื่อนมีพลัง">ส่วนวิจัยรอยเลื่อนมีพลัง</option>
+                        <option value="ส่วนแผนและประมวลผล (สธส.)">ส่วนแผนและประมวลผล (สธส.)</option>
+                        <option value="ส่วนธรณีวิทยาสิ่งแวดล้อม">ส่วนธรณีวิทยาสิ่งแวดล้อม</option>
+                        <option value="อธิบดี">อธิบดี</option>
+                        <option value="กลุ่มพัฒนาระบบบริหาร">กลุ่มพัฒนาระบบบริหาร</option>
+                        <option value="สำนักงานทรัพยากรธรณี เขต 3">สำนักงานทรัพยากรธรณี เขต 3</option>
+                        <option value="สำนักงานทรัพยากรธรณี เขต 2">สำนักงานทรัพยากรธรณี เขต 2</option>
+                        <option value="สำนักงานทรัพยากรธรณี เขต 1">สำนักงานทรัพยากรธรณี เขต 1</option>
+                        <option value="กองวิเคราะห์และตรวจสอบทรัพยากรธรณี">กองวิเคราะห์และตรวจสอบทรัพยากรธรณี</option>
+                        <option value="ศูนย์เทคโนโลยีสารสนเทศและการสื่อสาร">ศูนย์เทคโนโลยีสารสนเทศและการสื่อสาร</option>
+                        <option value="ฝ่ายบริหารทั่วไป (ศสท.)">ฝ่ายบริหารทั่วไป (ศสท.)</option>
+                        <option value="ส่วนสารสนเทศ">ส่วนสารสนเทศ</option>
+                        <option value="ส่วนเทคโนโลยีสารสนเทศและการสื่อสาร">ส่วนเทคโนโลยีสารสนเทศและการสื่อสาร</option>
+                        <option value="ส่วนห้องสมุด">ส่วนห้องสมุด</option>
+                        <option value="ส่วนแผนที่">ส่วนแผนที่</option>
+                        <option value="กองทรัพยากรแร่">กองทรัพยากรแร่</option>
+                        <option value="ฝ่ายบริหารทั่วไป (สทร.)">ฝ่ายบริหารทั่วไป (สทร.)</option>
+                        <option value="ฝ่ายตรวจสอบแหล่งแร่(ฝ่ายจัดตั้งเป็นการภายใน) ">ฝ่ายตรวจสอบแหล่งแร่(ฝ่ายจัดตั้งเป็นการภายใน) </option>
+                        <option value="ส่วนแร่โลหะ">ส่วนแร่โลหะ</option>
+                        <option value="ส่วนแร่อโลหะ">ส่วนแร่อโลหะ</option>
+                        <option value="ส่วนอนุรักษ์และจัดการทรัพยากรแร่">ส่วนอนุรักษ์และจัดการทรัพยากรแร่</option>
+                        <option value="ส่วนวิจัยและพัฒนาทรัพยากรแร่">ส่วนวิจัยและพัฒนาทรัพยากรแร่</option>
+                        <option value="ส่วนมาตรฐานทรัพยากรแร่">ส่วนมาตรฐานทรัพยากรแร่</option>
+                        <option value="ส่วนแผนและประมวลผล (สทร.)">ส่วนแผนและประมวลผล (สทร.)</option>
+                        <option value="ส่วนส่งเสริมและสนับสนุนทางวิชาการ ">ส่วนส่งเสริมและสนับสนุนทางวิชาการ </option>
+                        <option value="ศูนย์วิจัยแร่-หิน จ.ระยอง(ฝ่ายจัดตั้งเป็นการภายใน) ">ศูนย์วิจัยแร่-หิน จ.ระยอง(ฝ่ายจัดตั้งเป็นการภายใน) </option>
+                        <option value="พิพิธภัณฑ์สิรินธร">พิพิธภัณฑ์สิรินธร</option>
+                        <option value="กลุ่มงานคุ้มครองจริยธรรม">กลุ่มงานคุ้มครองจริยธรรม</option>
+                        <option value="กองคุ้มครองซากดึกดำบรรพ์">กองคุ้มครองซากดึกดำบรรพ์</option>
+                        <option value="ฝ่ายบริหารทั่วไป (กวท.)">ฝ่ายบริหารทั่วไป (กวท.)</option>
+                        <option value="ส่วนแผนและประมวลผล (กวท.)">ส่วนแผนและประมวลผล (กวท.)</option>
+                        <option value="ส่วนประสานและสนับสนุนทางวิชาการ">ส่วนประสานและสนับสนุนทางวิชาการ</option>
+                        <option value="กลุ่มตรวจสอบภายใน">กลุ่มตรวจสอบภายใน</option>
+                        <option value="กลุ่มนิติการ">กลุ่มนิติการ</option>
+                        <option value="ฝ่ายอาคารสถานที่และยานพาหนะ">ฝ่ายอาคารสถานที่และยานพาหนะ</option>
+                        <option value="กองเทคโนโลยีธรณี">กองเทคโนโลยีธรณี</option>
+                        <option value="ฝ่ายบริหารทั่วไป (สทธ.)">ฝ่ายบริหารทั่วไป (สทธ.)</option>
+                        <option value="ส่วนแผนและประมวลผล (สทธ.)">ส่วนแผนและประมวลผล (สทธ.)</option>
+                        <option value="ส่วนธรณีฟิสิกส์">ส่วนธรณีฟิสิกส์</option>
+                        <option value="ส่วนธรณีเทคนิค">ส่วนธรณีเทคนิค</option>
+                        <option value="ส่วนธรณีเคมี">ส่วนธรณีเคมี</option>
+                        <option value="ศูนย์เครื่องจักรกล">ศูนย์เครื่องจักรกล</option>
+                        <option value="ส่วนข้อมูลระยะไกล">ส่วนข้อมูลระยะไกล</option>
+                        <option value="ส่วนธรณีวิทยาทางทะเล">ส่วนธรณีวิทยาทางทะเล</option>
+                        <option value="ส่วนส่งเสริมการวิจัยและพัฒนาทรัพยากรธรณี">ส่วนส่งเสริมการวิจัยและพัฒนาทรัพยากรธรณี</option>
+                        <option value="ส่วนวิเคราะห์ดินและตะกอนธารน้ำ">ส่วนวิเคราะห์ดินและตะกอนธารน้ำ</option>
+                        <option value="ส่วนวิเคราะห์รัตนชาติและธรณีวัตถุ">ส่วนวิเคราะห์รัตนชาติและธรณีวัตถุ</option>
+                        <option value="ส่วนวิเคราะห์แร่และหิน">ส่วนวิเคราะห์แร่และหิน</option>
+                        <option value="ฝ่ายบริหารทั่วไป (กอท.)">ฝ่ายบริหารทั่วไป (กอท.)</option>
+                        <option value="ส่วนนโยบาย">ส่วนนโยบาย</option>
+                        <option value="ส่วนวางแผนเชิงพื้นที่">ส่วนวางแผนเชิงพื้นที่</option>
+                        <option value="ส่วนความร่วมมือระหว่างประเทศ">ส่วนความร่วมมือระหว่างประเทศ</option>
+                        <option value="ส่วนประสานการจัดการ">ส่วนประสานการจัดการ</option>
+                        <option value="ส่วนติดตามและประมวลผล">ส่วนติดตามและประมวลผล</option>
+                        <option value="ฝ่ายบริหารทั่วไป (กคบ.)">ฝ่ายบริหารทั่วไป (กคบ.)</option>
+                        <option value="ส่วนแผนและประมวลผล (กคบ.)">ส่วนแผนและประมวลผล (กคบ.)</option>
+                        <option value="ส่วนวิจัยซากดึกดำบรรพ์">ส่วนวิจัยซากดึกดำบรรพ์</option>
+                        <option value="ส่วนประสานการคุ้มครองซากดึกดำบรรพ์">ส่วนประสานการคุ้มครองซากดึกดำบรรพ์</option>
+                        <option value="ส่วนอนุรักษ์และพัฒนาแหล่งซากดึกดำบรรพ์">ส่วนอนุรักษ์และพัฒนาแหล่งซากดึกดำบรรพ์</option>
+                        <option value="พิพิธภัณฑ์แร่-หิน">พิพิธภัณฑ์แร่-หิน</option>
+                        <option value="ฝ่ายบริหารทั่วไป เขต 1">ฝ่ายบริหารทั่วไป เขต 1</option>
+                        <option value="ส่วนทรัพยากรแร่">ส่วนทรัพยากรแร่</option>
+                        <option value="ส่วนธรณีวิทยา">ส่วนธรณีวิทยา</option>
+                        <option value="ส่วนธรณีวิทยาสิ่งแวดล้อม">ส่วนธรณีวิทยาสิ่งแวดล้อม</option>
+                        <option value="พิพิธภัณฑ์ซากดึกดำบรรพ์ ธรณีวิทยาและธรรมชาติวิทยาจังหวัดลำปาง">พิพิธภัณฑ์ซากดึกดำบรรพ์ ธรณีวิทยาและธรรมชาติวิทยาจังหวัดลำปาง</option>
+                        <option value="ฝ่ายบริหารทั่วไป เขต 2">ฝ่ายบริหารทั่วไป เขต 2</option>
+                        <option value="ส่วนทรัพยากรแร่">ส่วนทรัพยากรแร่</option>
+                        <option value="ส่วนธรณีวิทยา">ส่วนธรณีวิทยา</option>
+                        <option value="ส่วนธรณีวิทยาสิ่งแวดล้อม">ส่วนธรณีวิทยาสิ่งแวดล้อม</option>
+                        <option value="ศูนย์ศึกษาและวิจัยพิพิธภัณฑ์ไดโนเสาร์ จังหวัดขอนแก่น">ศูนย์ศึกษาและวิจัยพิพิธภัณฑ์ไดโนเสาร์ จังหวัดขอนแก่น</option>
+                        <option value="ฝ่ายบริหารทั่วไป เขต 3">ฝ่ายบริหารทั่วไป เขต 3</option>
+                        <option value="ส่วนทรัพยากรแร่">ส่วนทรัพยากรแร่</option>
+                        <option value="ส่วนธรณีวิทยา">ส่วนธรณีวิทยา</option>
+                        <option value="ส่วนธรณีวิทยาสิ่งแวดล้อม">ส่วนธรณีวิทยาสิ่งแวดล้อม</option>
+                        <option value="พิพิธภัณฑสถานแห่งชาติธรณีวิทยาเฉลิมพระเกียรติ จังหวัดปทุมธานี">พิพิธภัณฑสถานแห่งชาติธรณีวิทยาเฉลิมพระเกียรติ จังหวัดปทุมธานี</option>
+                        <option value="ศูนย์วิจัยทรัพยากรแร่และหิน จังหวัดระยอง">ศูนย์วิจัยทรัพยากรแร่และหิน จังหวัดระยอง</option>
+                        <option value="ฝ่ายบริหารทั่วไป เขต 4">ฝ่ายบริหารทั่วไป เขต 4</option>
+                        <option value="ส่วนทรัพยากรแร่">ส่วนทรัพยากรแร่</option>
+                        <option value="ส่วนธรณีวิทยา">ส่วนธรณีวิทยา</option>
+                        <option value="ส่วนธรณีวิทยาสิ่งแวดล้อม">ส่วนธรณีวิทยาสิ่งแวดล้อม</option>
+                        <option value="พิพิธภัณฑ์ซากดึกดำบรรพ์ธรณีวิทยาและธรรมชาติวิทยาจังหวัดสุราษฎร์ธานี">พิพิธภัณฑ์ซากดึกดำบรรพ์ธรณีวิทยาและธรรมชาติวิทยาจังหวัดสุราษฎร์ธานี</option>
+                        <option value="ผู้ตรวจราชการกรม">ผู้ตรวจราชการกรม</option>
+                        <option value="กองธรณีวิทยา">กองธรณีวิทยา</option>
+                        <option value="ฝ่ายบริหารทั่วไป (สธว.)">ฝ่ายบริหารทั่วไป (สธว.)</option>
+                        <option value="ส่วนข้อมูลธรณีวิทยา">ส่วนข้อมูลธรณีวิทยา</option>
+                        <option value="ส่วนพัฒนาและเผยแพร่องค์ความรู้ธรณีวิทยา">ส่วนพัฒนาและเผยแพร่องค์ความรู้ธรณีวิทยา</option>
+                        <option value="ส่วนมาตรฐานธรณีวิทยา">ส่วนมาตรฐานธรณีวิทยา</option>
+                        <option value="ส่วนอนุรักษ์ธรณีวิทยา">ส่วนอนุรักษ์ธรณีวิทยา</option>
+                        <option value="ส่วนแผนและประมวลผล (สธว.)">ส่วนแผนและประมวลผล (สธว.)</option>
+                        <option value="ส่วนคุ้มครองซากดึกดำบรรพ์">ส่วนคุ้มครองซากดึกดำบรรพ์</option>
+                        <option value="ศูนย์ปฏิบัติการธรณีพิบัติภัย">ศูนย์ปฏิบัติการธรณีพิบัติภัย</option>
+                        <option value="ส่วนพิพิธภัณฑ์ซากดึกดำบรรพ์ธรณีวิทยาและธรรมชาติวิทยา ">ส่วนพิพิธภัณฑ์ซากดึกดำบรรพ์ธรณีวิทยาและธรรมชาติวิทยา </option>
+                        <option value="ผู้เชี่ยวชาญเฉพาะด้านวิจัยและพัฒนาธรณีวิทยา">ผู้เชี่ยวชาญเฉพาะด้านวิจัยและพัฒนาธรณีวิทยา</option>
+                        <option value="ผู้เชี่ยวชาญเฉพาะด้านที่ปรึกษาทางการบริหารจัดการทรัพยากรธรณี">ผู้เชี่ยวชาญเฉพาะด้านที่ปรึกษาทางการบริหารจัดการทรัพยากรธรณี</option>
+                        <option value="คณะกรรมการนโยบายบริหารจัดการแร่แห่งชาติ (คนร.)">คณะกรรมการนโยบายบริหารจัดการแร่แห่งชาติ (คนร.)</option>
+                      </select>
+                    </div>
+                    <div class="form-group">
+                      <label>ตำแหน่งภายในหน่วยงาน<span></span></label>
+                      <select class="form-control">
+                        <option value=" "> </option>
+                        <option value="อธิบดี">อธิบดี</option>
+                        <option value="รองอธิบดี 1">รองอธิบดี 1</option>
+                        <option value="รองอธิบดี 2">รองอธิบดี 2</option>
+                        <option value="ขึ้นตรงกับอธิบดี">ขึ้นตรงกับอธิบดี</option>
+                        <option value="ที่ปรึกษาด้านความร่วมมือระหว่างประเทศ">ที่ปรึกษาด้านความร่วมมือระหว่างประเทศ</option>
+                        <option value="ผู้เชี่ยวชาญเฉพาะด้านวิจัยและพัฒนาธรณีวิทยา">ผู้เชี่ยวชาญเฉพาะด้านวิจัยและพัฒนาธรณีวิทยา</option>
+                        <option value="ผู้เชี่ยวชาญเฉพาะด้านที่ปรึกษาทางการบริหารจัดการทรัพยากรธรณี">ผู้เชี่ยวชาญเฉพาะด้านที่ปรึกษาทางการบริหารจัดการทรัพยากรธรณี</option>
+                        <option value="เลขานุการกรม">เลขานุการกรม</option>
+                        <option value="ส่วนภูมิภาค">ส่วนภูมิภาค</option>
+                        <option value="ส่วนกลาง">ส่วนกลาง</option>
+                        <option value="ผู้อำนวยการสำนักเทคโนโลยีธรณี">ผู้อำนวยการสำนักเทคโนโลยีธรณี</option>
+                        <option value="ผู้อำนวยการสำนักทรัพยากรแร่">ผู้อำนวยการสำนักทรัพยากรแร่</option>
+                        <option value="ผู้อำนวยการสำนักธรณีวิทยา">ผู้อำนวยการสำนักธรณีวิทยา</option>
+                        <option value="ผู้อำนวยการสำนักธรณีวิทยาสิ่งแวดล้อม">ผู้อำนวยการสำนักธรณีวิทยาสิ่งแวดล้อม</option>
+                        <option value="ผู้อำนวยการศูนย์สารสนเทศทรัพยากรธรณี">ผู้อำนวยการศูนย์สารสนเทศทรัพยากรธรณี</option>
+                        <option value="ผู้อำนวยการกองวิเคราะห์และตรวจสอบทรัพยากรธรณี">ผู้อำนวยการกองวิเคราะห์และตรวจสอบทรัพยากรธรณี</option>
+                        <option value="ผู้อำนวยการกองอนุรักษ์และจัดการทรัพยากรธรณี">ผู้อำนวยการกองอนุรักษ์และจัดการทรัพยากรธรณี</option>
+                        <option value="ผู้อำนวยการกองคุ้มครองซากดึกดำบรรพ์">ผู้อำนวยการกองคุ้มครองซากดึกดำบรรพ์</option>
+                        <option value="ผู้อำนวยการกลุ่มพัฒนาระบบบริหาร">ผู้อำนวยการกลุ่มพัฒนาระบบบริหาร</option>
+                        <option value="ผู้ตรวจราชการกรม ">ผู้ตรวจราชการกรม </option>
+                        <option value="หัวหน้ากลุ่มงานคุ้มครองจริยธรรม">หัวหน้ากลุ่มงานคุ้มครองจริยธรรม</option>
+                        <option value="ผู้อำนวยการสำนักงานทรัพยากรธรณี เขต 1">ผู้อำนวยการสำนักงานทรัพยากรธรณี เขต 1</option>
+                        <option value="ผู้อำนวยการสำนักงานทรัพยากรธรณี เขต 2">ผู้อำนวยการสำนักงานทรัพยากรธรณี เขต 2</option>
+                        <option value="ผู้อำนวยการสำนักงานทรัพยากรธรณี เขต 3">ผู้อำนวยการสำนักงานทรัพยากรธรณี เขต 3</option>
+                        <option value="ผู้อำนวยการสำนักงานทรัพยากรธรณี เขต 4">ผู้อำนวยการสำนักงานทรัพยากรธรณี เขต 4</option>
+                        <option value="ผู้อำนวยการกลุ่มตรวจสอบภายใน">ผู้อำนวยการกลุ่มตรวจสอบภายใน</option>
+                        <option value="ผู้อำนวยการกลุ่มนิติการ">ผู้อำนวยการกลุ่มนิติการ</option>
+                        <option value="ผู้อำนวยการพิพิธภัณฑ์สิรินธร">ผู้อำนวยการพิพิธภัณฑ์สิรินธร</option>
+                        <option value="ผอ. ส่วน">ผอ. ส่วน</option>
+                        <option value="ผอ.พิพิธภัณฑ์">ผอ.พิพิธภัณฑ์</option>
+                        <option value="รก. หัวหน้าฝ่าย">รก. หัวหน้าฝ่าย</option>
+                        <option value="หัวหน้าศูนย์">หัวหน้าศูนย์</option>
+                        <option value="หัวหน้ากลุ่ม">หัวหน้ากลุ่ม</option>
+                        <option value="หัวหน้างาน">หัวหน้างาน</option>
+                        <option value="หัวหน้าฝ่าย">หัวหน้าฝ่าย</option>
+                        <option value="ข้าราชการ">ข้าราชการ</option>
+                        <option value="พนักงานราชการ">พนักงานราชการ</option>
+                        <option value="ลูกจ้างประจำ">ลูกจ้างประจำ</option>
+                        <option value="1ผู้อำนวยการสำนักงานทรัพยากรธรณี เขต 1">1ผู้อำนวยการสำนักงานทรัพยากรธรณี เขต 1</option>
+                        <option value="ปฏิบัติหน้าที่ผู้อำนวยการกลุ่มพัฒนาระบบบริหาร">ปฏิบัติหน้าที่ผู้อำนวยการกลุ่มพัฒนาระบบบริหาร</option>
+                        <option value="ปฏิบัติหน้าที่ผู้อำนวยการกลุ่มนิติการ">ปฏิบัติหน้าที่ผู้อำนวยการกลุ่มนิติการ</option>
+                      </select>
+                    </div>
+                    <div class="form-group">
+                      <label>ตำแหน่งทางวิชาการ<span></span></label>
+                      <input class="form-control" type="text" name="position">
+                    </div>
+                    <div class="form-group">
+                      <label>E-mail<span class="required"></span></label>
+                      <input class="form-control" type="E-mail" name="email">
+                    </div>
+                    <div class="form-group">
+                      <label>เบอร์โทรติดต่อ<span></span></label>
+                      <input class="form-control" type="text" name="tel">
+                    </div>
+                <div class="form-group">
+                  <label>สถานที่ทำงาน</label>
+                  <textarea class="form-control" rows="4" cols=""></textarea>
+                </div>
+                    <div class="form-group">
+                      <label>กลุ่ม<span class="required"></span></label>
+                      <select class="form-control">
+                        <option value=" "> </option>
+                        <option value="เจ้าหน้าที่">เจ้าหน้าที่</option>
+                        <option value="พนักงานราชการ">พนักงานราชการ</option>
+                        <option value="ลูกจ้างประจำ">ลูกจ้างประจำ</option>
+                        <option value="กลุ่มงานวิชาการ">กลุ่มงานวิชาการ</option>
+                        <option value="ผู้เชี่ยวชาญด้านวิจัย">ผู้เชี่ยวชาญด้านวิจัย</option>
+                        <option value="ผู้บริหารกลาง">ผู้บริหารกลาง</option>
+                        <option value="ข้าราชการ">ข้าราชการ</option>
+                        <option value="ผู้บริหารระดับสูง">ผู้บริหารระดับสูง</option>
+                        <option value="ผู้บริหารระดับต้น">ผู้บริหารระดับต้น</option>
+                        <option value="ผู้อำนวยการส่วน">ผู้อำนวยการส่วน</option>
+                        <option value="ผูู้อำนวยการศูนย์">ผูู้อำนวยการศูนย์</option>
+                        <option value="หัวหน้าฝ่าย">หัวหน้าฝ่าย</option>
+                        <option value="ผู้เชี่ยวชาญด้านบริหาร">ผู้เชี่ยวชาญด้านบริหาร</option>
+                      </select>
+                    </div>
+                <div class="title-line"></div>
+                    <div class="form-group">
+                      <label>ชื่อผู้ใช้งาน<span class="required"></span></label>
+                      <input class="form-control" type="text" name="user">
+                    </div>
+                    <div class="form-group">
+                      <label>รหัสผ่าน<span class="required"></span></label>
+                      <input class="form-control" type="password" name="pass1">
+                    </div>
+                    <div class="form-group">
+                      <label>ยืนยันรหัสผ่าน<span class="required"></span></label>
+                      <input class="form-control" type="password" name="pass2">
+                    </div>
+                <div class="form-group text-right">
+                  <button class="btn btn-primary btn-block">Register</button>
+                </div>
+                <div class="form-group text-center"><a href="login.html">กลับสู่หน้าหลัก</a></div>
+                <p class="text-center">กรุณาติดต่อ admin เพื่ออนุมัติการใช้งานได้ที่หมายเลข <span class="fw-700">9694&nbsp;</span><span>และ&nbsp;</span><span class="fw-700">9695</span></p>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--Footer-->
+  </body>
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins)-->
+  <script src="js/jquery-3.3.1.min.js"></script>
+  <!--Include all compiled plugins (below), or include individual files as needed-->
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/moment.min.js"></script>
+  <script src="js/custom.js"></script>
+</html>

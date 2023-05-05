@@ -1,0 +1,36 @@
+BODY {
+	FONT-SIZE: 11px; MARGIN: 0px; COLOR: #000000; FONT-FAMILY: "Tahoma"
+}
+.copyright {
+	COLOR: #e1e1e1
+}
+A:link {
+	COLOR: #2222bb; TEXT-DECORATION: none
+}
+A:visited {
+	COLOR: #2222bb; TEXT-DECORATION: none
+}
+A:active {
+	COLOR: #ff6600; TEXT-DECORATION: none
+}
+A:hover {
+	COLOR: #ff6600; TEXT-DECORATION: none
+}
+.mytext_normal {
+	FONT: 11px "Tahoma"
+}
+.myhead {
+	FONT: 23px "Tahoma"
+}
+INPUT {
+	FONT-WEIGHT: normal; FONT-SIZE: 11px; COLOR: #000000; FONT-FAMILY: "Tahoma"
+}
+TEXTAREA {
+	FONT-WEIGHT: normal; FONT-SIZE: 11px; COLOR: #000000; FONT-FAMILY: "Tahoma"
+}
+TABLE {
+	FONT: 11px "Tahoma"
+}
+SELECT {
+	FONT: 11px "Tahoma"
+}

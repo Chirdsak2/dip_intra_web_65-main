@@ -1,0 +1,1954 @@
+[Date:2022-12-29 10:32:56] [IP:171.101.109.178]
+[Query:SELECT * FROM article_list WHERE n_approve = 'Y' 
+        AND ((n_date_start = '' AND n_date_end = '')
+        OR (n_date_start != '' AND n_date_end = '')
+        OR ('2022-12-29 10:32' between n_date_start AND n_date_end))  AND n_id = '4360']
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 10:32:56] [IP:171.101.109.178]
+[Query:SELECT * FROM article_list WHERE n_approve = 'Y' 
+        AND ((n_date_start = '' AND n_date_end = '')
+        OR (n_date_start != '' AND n_date_end = '')
+        OR ('2022-12-29 10:32' between n_date_start AND n_date_end))  AND n_id = '4360']
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 10:32:56] [IP:171.101.109.178]
+[Query:SELECT * FROM article_detail WHERE n_id = '4360' ORDER BY at_type_row ASC ]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 10:32:56] [IP:171.101.109.178]
+[Query:SELECT * FROM article_detail WHERE n_id = '4360' ORDER BY at_type_row ASC ]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 10:32:56] [IP:171.101.109.178]
+[Query:SELECT * FROM article_attach WHERE n_id = '4360' ]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 10:32:56] [IP:171.101.109.178]
+[Query:SELECT * FROM article_attach WHERE n_id = '4360' ]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 10:32:56] [IP:171.101.109.178]
+[Query:SELECT * FROM news_comment WHERE 1=1  AND news_id = '4360'  ORDER BY id_comment DESC]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 10:32:56] [IP:171.101.109.178]
+[Query:SELECT * FROM news_comment WHERE 1=1  AND news_id = '4360'  ORDER BY id_comment DESC]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 10:32:56] [IP:171.101.109.178]
+[Query:SELECT * FROM article_taglist WHERE  1=1 AND n_id = '4360'  ORDER BY taglist_id DESC]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 10:32:56] [IP:171.101.109.178]
+[Query:SELECT * FROM article_taglist WHERE  1=1 AND n_id = '4360'  ORDER BY taglist_id DESC]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 10:32:56] [IP:171.101.109.178]
+[Query:SELECT c_id,c_parent,c_name FROM db_1_bizpotential_web.article_group WHERE c_show_document = 'Y'  AND c_id = :c_id]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 10:33:17] [IP:171.101.109.178]
+[Query:SELECT sv_id FROM stat_visitor WHERE sv_ip = '171.101.109.178' AND sv_new = 'Y' LIMIT 0,1 ]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 10:33:17] [IP:171.101.109.178]
+[Query:SELECT sv_id FROM stat_visitor WHERE sv_ip = '171.101.109.178' AND sv_new = 'Y' LIMIT 0,1 ]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 10:33:18] [IP:171.101.109.178]
+[Query:INSERT INTO stat_visitor (sv_url,sv_visitor,sv_menu,sv_ip,sv_timestamp,sv_date,sv_time,sv_country,sv_language,sv_new,sv_browser,sv_resolution,sv_domain,sv_isp,sv_region,sv_city,sv_latitude,sv_longitude,sv_referer,sv_search,sv_keyword,sv_os,sv_load,sv_member,sv_fullurl,sv_mem_id,sv_w3c,sv_country_code,sv_region_code,sv_device,sv_op,sv_session_id) VALUES ('page','Y','/dip_intranet/index.php','171.101.109.178','20221229103317','2022-12-29','10:33:17','TH','th,en;q=0.9,en-US;q=0.8,th-TH;q=0.7,fr;q=0.6,pt;q=0.5','Y','Google Chrome','1920x1080','cm-171-101-109-178.revip11.asianet.co.th','AS17552 True Online','Bangkok','Bangkok','13.7540','100.5014','http://203.151.166.134/dip_intranet/index.php','','','Windows 10','0','Y','https://203.151.166.134/dip_intranet/index.php','1','','TH','10','1','','vrtpnps8jq88kakrpl90nhjsjf')]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 10:34:57] [IP:171.101.109.178]
+[Query:SELECT * FROM article_list WHERE n_approve = 'Y' 
+        AND ((n_date_start = '' AND n_date_end = '')
+        OR (n_date_start != '' AND n_date_end = '')
+        OR ('2022-12-29 10:34' between n_date_start AND n_date_end))  AND n_id = '4361']
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 10:34:57] [IP:171.101.109.178]
+[Query:SELECT * FROM article_list WHERE n_approve = 'Y' 
+        AND ((n_date_start = '' AND n_date_end = '')
+        OR (n_date_start != '' AND n_date_end = '')
+        OR ('2022-12-29 10:34' between n_date_start AND n_date_end))  AND n_id = '4361']
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 10:34:57] [IP:171.101.109.178]
+[Query:SELECT * FROM article_detail WHERE n_id = '4361' ORDER BY at_type_row ASC ]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 10:34:57] [IP:171.101.109.178]
+[Query:SELECT * FROM article_detail WHERE n_id = '4361' ORDER BY at_type_row ASC ]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 10:34:57] [IP:171.101.109.178]
+[Query:SELECT * FROM article_attach WHERE n_id = '4361' ]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 10:34:57] [IP:171.101.109.178]
+[Query:SELECT * FROM article_attach WHERE n_id = '4361' ]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 10:34:57] [IP:171.101.109.178]
+[Query:SELECT * FROM news_comment WHERE 1=1  AND news_id = '4361'  ORDER BY id_comment DESC]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 10:34:57] [IP:171.101.109.178]
+[Query:SELECT * FROM news_comment WHERE 1=1  AND news_id = '4361'  ORDER BY id_comment DESC]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 10:34:57] [IP:171.101.109.178]
+[Query:SELECT * FROM article_taglist WHERE  1=1 AND n_id = '4361'  ORDER BY taglist_id DESC]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 10:34:57] [IP:171.101.109.178]
+[Query:SELECT * FROM article_taglist WHERE  1=1 AND n_id = '4361'  ORDER BY taglist_id DESC]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 10:34:57] [IP:171.101.109.178]
+[Query:SELECT c_id,c_parent,c_name FROM db_1_bizpotential_web.article_group WHERE c_show_document = 'Y'  AND c_id = :c_id]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 10:37:55] [IP:171.101.109.178]
+[Query:SELECT article_group.c_id FROM db_1_bizpotential_web.article_group
+		INNER JOIN article_list ON (article_group.c_id = article_list.c_id)
+		WHERE article_group.c_parent = '2' AND article_group.c_show_document = 'Y'
+        AND ((article_list.n_date_start = '' AND article_list.n_date_end = '')
+        OR (article_list.n_date_start != '' AND article_list.n_date_end = '')
+        OR ('2022-12-29 10:37' between article_list.n_date_start AND article_list.n_date_end))]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 10:37:55] [IP:171.101.109.178]
+[Query:SELECT c_id,c_parent,c_name FROM db_1_bizpotential_web.article_group WHERE c_show_document = 'Y'  AND c_id = :c_id]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 10:37:56] [IP:134.236.242.170]
+[Query:INSERT INTO stat_visitor (sv_url,sv_visitor,sv_menu,sv_ip,sv_timestamp,sv_date,sv_time,sv_country,sv_language,sv_new,sv_browser,sv_resolution,sv_domain,sv_isp,sv_region,sv_city,sv_latitude,sv_longitude,sv_referer,sv_search,sv_keyword,sv_os,sv_load,sv_member,sv_fullurl,sv_mem_id,sv_w3c,sv_country_code,sv_region_code,sv_device,sv_op,sv_session_id) VALUES ('page','','/dip_intranet/','134.236.242.170','20221229103755','2022-12-29','10:37:55','TH','th,en;q=0.9,en-US;q=0.8,th-TH;q=0.7,fr;q=0.6,pt;q=0.5','','Google Chrome','1920x1080','','AS131090 CAT TELECOM Public Company Ltd,CAT','Samut Prakan','Phra Pradaeng','13.6585','100.5336','','','','Windows 10','0','Y','https://203.151.166.134/dip_intranet/','1','','TH','20','1','','vrtpnps8jq88kakrpl90nhjsjf')]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 10:37:57] [IP:134.236.242.170]
+[Query:SELECT c_id,c_parent,c_name FROM db_1_bizpotential_web.article_group WHERE c_show_document = 'Y'  AND c_id = :c_id]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 10:37:57] [IP:134.236.242.170]
+[Query:SELECT c_id,c_parent,c_name FROM db_1_bizpotential_web.article_group WHERE c_show_document = 'Y'  AND c_id = :c_id]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 10:37:57] [IP:134.236.242.170]
+[Query:SELECT c_id,c_parent,c_name FROM db_1_bizpotential_web.article_group WHERE c_show_document = 'Y'  AND c_id = :c_id]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 10:37:57] [IP:134.236.242.170]
+[Query:SELECT c_id,c_parent,c_name FROM db_1_bizpotential_web.article_group WHERE c_show_document = 'Y'  AND c_id = :c_id]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 10:37:57] [IP:134.236.242.170]
+[Query:SELECT c_id,c_parent,c_name FROM db_1_bizpotential_web.article_group WHERE c_show_document = 'Y'  AND c_id = :c_id]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 10:37:57] [IP:134.236.242.170]
+[Query:SELECT c_id,c_parent,c_name FROM db_1_bizpotential_web.article_group WHERE c_show_document = 'Y'  AND c_id = :c_id]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 10:37:57] [IP:134.236.242.170]
+[Query:SELECT c_id,c_parent,c_name FROM db_1_bizpotential_web.article_group WHERE c_show_document = 'Y'  AND c_id = :c_id]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 10:37:57] [IP:134.236.242.170]
+[Query:SELECT c_id,c_parent,c_name FROM db_1_bizpotential_web.article_group WHERE c_show_document = 'Y'  AND c_id = :c_id]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 10:37:57] [IP:134.236.242.170]
+[Query:SELECT c_id,c_parent,c_name FROM db_1_bizpotential_web.article_group WHERE c_show_document = 'Y'  AND c_id = :c_id]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 10:37:57] [IP:134.236.242.170]
+[Query:SELECT c_id,c_parent,c_name FROM db_1_bizpotential_web.article_group WHERE c_show_document = 'Y'  AND c_id = :c_id]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 10:37:57] [IP:134.236.242.170]
+[Query:SELECT c_id,c_parent,c_name FROM db_1_bizpotential_web.article_group WHERE c_show_document = 'Y'  AND c_id = :c_id]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 10:37:57] [IP:134.236.242.170]
+[Query:SELECT c_id,c_parent,c_name FROM db_1_bizpotential_web.article_group WHERE c_show_document = 'Y'  AND c_id = :c_id]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 10:37:57] [IP:134.236.242.170]
+[Query:SELECT c_id,c_parent,c_name FROM db_1_bizpotential_web.article_group WHERE c_show_document = 'Y'  AND c_id = :c_id]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 10:37:57] [IP:134.236.242.170]
+[Query:SELECT c_id,c_parent,c_name FROM db_1_bizpotential_web.article_group WHERE c_show_document = 'Y'  AND c_id = :c_id]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 10:37:57] [IP:134.236.242.170]
+[Query:SELECT c_id,c_parent,c_name FROM db_1_bizpotential_web.article_group WHERE c_show_document = 'Y'  AND c_id = :c_id]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 10:37:57] [IP:134.236.242.170]
+[Query:SELECT c_id,c_parent,c_name FROM db_1_bizpotential_web.article_group WHERE c_show_document = 'Y'  AND c_id = :c_id]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 10:37:57] [IP:134.236.242.170]
+[Query:SELECT c_id,c_parent,c_name FROM db_1_bizpotential_web.article_group WHERE c_show_document = 'Y'  AND c_id = :c_id]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 10:37:57] [IP:134.236.242.170]
+[Query:SELECT c_id,c_parent,c_name FROM db_1_bizpotential_web.article_group WHERE c_show_document = 'Y'  AND c_id = :c_id]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 10:37:57] [IP:134.236.242.170]
+[Query:SELECT c_id,c_parent,c_name FROM db_1_bizpotential_web.article_group WHERE c_show_document = 'Y'  AND c_id = :c_id]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 10:37:57] [IP:134.236.242.170]
+[Query:SELECT c_id,c_parent,c_name FROM db_1_bizpotential_web.article_group WHERE c_show_document = 'Y'  AND c_id = :c_id]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 10:37:57] [IP:134.236.242.170]
+[Query:SELECT c_id,c_parent,c_name FROM db_1_bizpotential_web.article_group WHERE c_show_document = 'Y'  AND c_id = :c_id]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 10:37:57] [IP:134.236.242.170]
+[Query:SELECT c_id,c_parent,c_name FROM db_1_bizpotential_web.article_group WHERE c_show_document = 'Y'  AND c_id = :c_id]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 10:37:57] [IP:134.236.242.170]
+[Query:SELECT c_id,c_parent,c_name FROM db_1_bizpotential_web.article_group WHERE c_show_document = 'Y'  AND c_id = :c_id]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 10:37:57] [IP:134.236.242.170]
+[Query:SELECT c_id,c_parent,c_name FROM db_1_bizpotential_web.article_group WHERE c_show_document = 'Y'  AND c_id = :c_id]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 10:37:57] [IP:134.236.242.170]
+[Query:SELECT c_id,c_parent,c_name FROM db_1_bizpotential_web.article_group WHERE c_show_document = 'Y'  AND c_id = :c_id]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 10:37:57] [IP:134.236.242.170]
+[Query:SELECT c_id,c_parent,c_name FROM db_1_bizpotential_web.article_group WHERE c_show_document = 'Y'  AND c_id = :c_id]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 10:37:57] [IP:134.236.242.170]
+[Query:SELECT c_id,c_parent,c_name FROM db_1_bizpotential_web.article_group WHERE c_show_document = 'Y'  AND c_id = :c_id]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 10:37:58] [IP:134.236.242.170]
+[Query:SELECT c_id,c_parent,c_name FROM db_1_bizpotential_web.article_group WHERE c_show_document = 'Y'  AND c_id = :c_id]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 10:37:58] [IP:134.236.242.170]
+[Query:SELECT c_id,c_parent,c_name FROM db_1_bizpotential_web.article_group WHERE c_show_document = 'Y'  AND c_id = :c_id]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 10:37:58] [IP:134.236.242.170]
+[Query:SELECT c_id,c_parent,c_name FROM db_1_bizpotential_web.article_group WHERE c_show_document = 'Y'  AND c_id = :c_id]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 10:37:58] [IP:134.236.242.170]
+[Query:SELECT c_id,c_parent,c_name FROM db_1_bizpotential_web.article_group WHERE c_show_document = 'Y'  AND c_id = :c_id]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 10:37:58] [IP:134.236.242.170]
+[Query:SELECT c_id,c_parent,c_name FROM db_1_bizpotential_web.article_group WHERE c_show_document = 'Y'  AND c_id = :c_id]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 10:37:58] [IP:134.236.242.170]
+[Query:SELECT c_id,c_parent,c_name FROM db_1_bizpotential_web.article_group WHERE c_show_document = 'Y'  AND c_id = :c_id]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 10:37:58] [IP:134.236.242.170]
+[Query:SELECT c_id,c_parent,c_name FROM db_1_bizpotential_web.article_group WHERE c_show_document = 'Y'  AND c_id = :c_id]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 10:37:58] [IP:134.236.242.170]
+[Query:SELECT c_id,c_parent,c_name FROM db_1_bizpotential_web.article_group WHERE c_show_document = 'Y'  AND c_id = :c_id]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 10:37:58] [IP:134.236.242.170]
+[Query:SELECT c_id,c_parent,c_name FROM db_1_bizpotential_web.article_group WHERE c_show_document = 'Y'  AND c_id = :c_id]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 10:37:58] [IP:134.236.242.170]
+[Query:SELECT c_id,c_parent,c_name FROM db_1_bizpotential_web.article_group WHERE c_show_document = 'Y'  AND c_id = :c_id]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 10:37:58] [IP:134.236.242.170]
+[Query:SELECT c_id,c_parent,c_name FROM db_1_bizpotential_web.article_group WHERE c_show_document = 'Y'  AND c_id = :c_id]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 10:37:58] [IP:134.236.242.170]
+[Query:SELECT c_id,c_parent,c_name FROM db_1_bizpotential_web.article_group WHERE c_show_document = 'Y'  AND c_id = :c_id]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 10:37:58] [IP:134.236.242.170]
+[Query:SELECT c_id,c_parent,c_name FROM db_1_bizpotential_web.article_group WHERE c_show_document = 'Y'  AND c_id = :c_id]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 10:37:58] [IP:134.236.242.170]
+[Query:SELECT c_id,c_parent,c_name FROM db_1_bizpotential_web.article_group WHERE c_show_document = 'Y'  AND c_id = :c_id]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 10:37:58] [IP:134.236.242.170]
+[Query:SELECT c_id,c_parent,c_name FROM db_1_bizpotential_web.article_group WHERE c_show_document = 'Y'  AND c_id = :c_id]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 10:37:58] [IP:134.236.242.170]
+[Query:SELECT c_id,c_parent,c_name FROM db_1_bizpotential_web.article_group WHERE c_show_document = 'Y'  AND c_id = :c_id]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 10:37:58] [IP:134.236.242.170]
+[Query:SELECT c_id,c_parent,c_name FROM db_1_bizpotential_web.article_group WHERE c_show_document = 'Y'  AND c_id = :c_id]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 10:37:58] [IP:134.236.242.170]
+[Query:SELECT c_id,c_parent,c_name FROM db_1_bizpotential_web.article_group WHERE c_show_document = 'Y'  AND c_id = :c_id]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 10:37:58] [IP:134.236.242.170]
+[Query:SELECT c_id,c_parent,c_name FROM db_1_bizpotential_web.article_group WHERE c_show_document = 'Y'  AND c_id = :c_id]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 10:37:58] [IP:134.236.242.170]
+[Query:SELECT c_id,c_parent,c_name FROM db_1_bizpotential_web.article_group WHERE c_show_document = 'Y'  AND c_id = :c_id]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 10:37:58] [IP:134.236.242.170]
+[Query:SELECT c_id,c_parent,c_name FROM db_1_bizpotential_web.article_group WHERE c_show_document = 'Y'  AND c_id = :c_id]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 10:37:58] [IP:134.236.242.170]
+[Query:SELECT c_id,c_parent,c_name FROM db_1_bizpotential_web.article_group WHERE c_show_document = 'Y'  AND c_id = :c_id]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 10:37:58] [IP:134.236.242.170]
+[Query:SELECT c_id,c_parent,c_name FROM db_1_bizpotential_web.article_group WHERE c_show_document = 'Y'  AND c_id = :c_id]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 10:37:59] [IP:134.236.242.170]
+[Query:INSERT INTO stat_visitor (sv_url,sv_visitor,sv_menu,sv_ip,sv_timestamp,sv_date,sv_time,sv_country,sv_language,sv_new,sv_browser,sv_resolution,sv_domain,sv_isp,sv_region,sv_city,sv_latitude,sv_longitude,sv_referer,sv_search,sv_keyword,sv_os,sv_load,sv_member,sv_fullurl,sv_mem_id,sv_w3c,sv_country_code,sv_region_code,sv_device,sv_op,sv_session_id) VALUES ('page','','/dip_intranet/search.php','134.236.242.170','20221229103759','2022-12-29','10:37:59','TH','th,en;q=0.9,en-US;q=0.8,th-TH;q=0.7,fr;q=0.6,pt;q=0.5','','Google Chrome','1920x1080','','AS131090 CAT TELECOM Public Company Ltd,CAT','Samut Prakan','Phra Pradaeng','13.6585','100.5336','','','','Windows 10','0','Y','https://203.151.166.134/dip_intranet/search.php','1','','TH','20','1','','vrtpnps8jq88kakrpl90nhjsjf')]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 10:38:30] [IP:134.236.242.170]
+[Query:INSERT INTO stat_visitor (sv_url,sv_visitor,sv_menu,sv_ip,sv_timestamp,sv_date,sv_time,sv_country,sv_language,sv_new,sv_browser,sv_resolution,sv_domain,sv_isp,sv_region,sv_city,sv_latitude,sv_longitude,sv_referer,sv_search,sv_keyword,sv_os,sv_load,sv_member,sv_fullurl,sv_mem_id,sv_w3c,sv_country_code,sv_region_code,sv_device,sv_op,sv_session_id) VALUES ('page','','/dip_intranet/index.php','134.236.242.170','20221229103829','2022-12-29','10:38:29','TH','th,en;q=0.9,en-US;q=0.8,th-TH;q=0.7,fr;q=0.6,pt;q=0.5','','Google Chrome','1920x1080','','AS131090 CAT TELECOM Public Company Ltd,CAT','Samut Prakan','Phra Pradaeng','13.6585','100.5336','','','','Windows 10','0','Y','https://203.151.166.134/dip_intranet/index.php','1','','TH','20','1','','vrtpnps8jq88kakrpl90nhjsjf')]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 10:46:31] [IP:171.101.109.178]
+[Query:INSERT INTO stat_visitor (sv_url,sv_visitor,sv_menu,sv_ip,sv_timestamp,sv_date,sv_time,sv_country,sv_language,sv_new,sv_browser,sv_resolution,sv_domain,sv_isp,sv_region,sv_city,sv_latitude,sv_longitude,sv_referer,sv_search,sv_keyword,sv_os,sv_load,sv_member,sv_fullurl,sv_mem_id,sv_w3c,sv_country_code,sv_region_code,sv_device,sv_op,sv_session_id) VALUES ('page','','/dip_intranet/index.php','171.101.109.178','20221229104629','2022-12-29','10:46:29','TH','th,en;q=0.9,en-US;q=0.8,th-TH;q=0.7,fr;q=0.6,pt;q=0.5','','Google Chrome','1920x1080','cm-171-101-109-178.revip11.asianet.co.th','AS17552 True Online','Bangkok','Bangkok','13.7540','100.5014','','','','Windows 10','0','Y','https://203.151.166.134/dip_intranet/index.php','1','','TH','10','1','','vrtpnps8jq88kakrpl90nhjsjf')]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 10:48:01] [IP:171.101.109.178]
+[Query:INSERT INTO stat_visitor (sv_url,sv_visitor,sv_menu,sv_ip,sv_timestamp,sv_date,sv_time,sv_country,sv_language,sv_new,sv_browser,sv_resolution,sv_domain,sv_isp,sv_region,sv_city,sv_latitude,sv_longitude,sv_referer,sv_search,sv_keyword,sv_os,sv_load,sv_member,sv_fullurl,sv_mem_id,sv_w3c,sv_country_code,sv_region_code,sv_device,sv_op,sv_session_id) VALUES ('page','','/dip_intranet/news_view.php?n_id=4361','171.101.109.178','20221229104800','2022-12-29','10:48:00','TH','th,en;q=0.9,en-US;q=0.8,th-TH;q=0.7,fr;q=0.6,pt;q=0.5','','Google Chrome','1920x1080','cm-171-101-109-178.revip11.asianet.co.th','AS17552 True Online','Bangkok','Bangkok','13.7540','100.5014','','','','Windows 10','0','Y','https://203.151.166.134/dip_intranet/news_view.php?n_id=4361','1','','TH','10','1','','vrtpnps8jq88kakrpl90nhjsjf')]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 10:48:46] [IP:171.101.109.178]
+[Query:INSERT INTO stat_visitor (sv_url,sv_visitor,sv_menu,sv_ip,sv_timestamp,sv_date,sv_time,sv_country,sv_language,sv_new,sv_browser,sv_resolution,sv_domain,sv_isp,sv_region,sv_city,sv_latitude,sv_longitude,sv_referer,sv_search,sv_keyword,sv_os,sv_load,sv_member,sv_fullurl,sv_mem_id,sv_w3c,sv_country_code,sv_region_code,sv_device,sv_op,sv_session_id) VALUES ('page','','/dip_intranet/news_view.php?n_id=4361','171.101.109.178','20221229104845','2022-12-29','10:48:45','TH','th,en;q=0.9,en-US;q=0.8,th-TH;q=0.7,fr;q=0.6,pt;q=0.5','','Google Chrome','1920x1080','cm-171-101-109-178.revip11.asianet.co.th','AS17552 True Online','Bangkok','Bangkok','13.7540','100.5014','','','','Windows 10','0','Y','https://203.151.166.134/dip_intranet/news_view.php?n_id=4361','1','','TH','10','1','','vrtpnps8jq88kakrpl90nhjsjf')]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 10:49:26] [IP:171.101.109.178]
+[Query:INSERT INTO stat_visitor (sv_url,sv_visitor,sv_menu,sv_ip,sv_timestamp,sv_date,sv_time,sv_country,sv_language,sv_new,sv_browser,sv_resolution,sv_domain,sv_isp,sv_region,sv_city,sv_latitude,sv_longitude,sv_referer,sv_search,sv_keyword,sv_os,sv_load,sv_member,sv_fullurl,sv_mem_id,sv_w3c,sv_country_code,sv_region_code,sv_device,sv_op,sv_session_id) VALUES ('page','','/dip_intranet/news_view.php?n_id=4361','171.101.109.178','20221229104925','2022-12-29','10:49:25','TH','th,en;q=0.9,en-US;q=0.8,th-TH;q=0.7,fr;q=0.6,pt;q=0.5','','Google Chrome','1920x1080','cm-171-101-109-178.revip11.asianet.co.th','AS17552 True Online','Bangkok','Bangkok','13.7540','100.5014','','','','Windows 10','0','Y','https://203.151.166.134/dip_intranet/news_view.php?n_id=4361','1','','TH','10','1','','vrtpnps8jq88kakrpl90nhjsjf')]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 10:51:31] [IP:134.236.242.170]
+[Query:INSERT INTO stat_visitor (sv_url,sv_visitor,sv_menu,sv_ip,sv_timestamp,sv_date,sv_time,sv_country,sv_language,sv_new,sv_browser,sv_resolution,sv_domain,sv_isp,sv_region,sv_city,sv_latitude,sv_longitude,sv_referer,sv_search,sv_keyword,sv_os,sv_load,sv_member,sv_fullurl,sv_mem_id,sv_w3c,sv_country_code,sv_region_code,sv_device,sv_op,sv_session_id) VALUES ('page','','/dip_intranet/index.php','134.236.242.170','20221229105131','2022-12-29','10:51:31','TH','th,en;q=0.9,en-US;q=0.8,th-TH;q=0.7,fr;q=0.6,pt;q=0.5','','Google Chrome','1920x1080','','AS131090 CAT TELECOM Public Company Ltd,CAT','Samut Prakan','Phra Pradaeng','13.6585','100.5336','','','','Windows 10','0','Y','https://203.151.166.134/dip_intranet/index.php','1','','TH','20','1','','vrtpnps8jq88kakrpl90nhjsjf')]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 10:52:37] [IP:171.101.109.178]
+[Query:INSERT INTO stat_visitor (sv_url,sv_visitor,sv_menu,sv_ip,sv_timestamp,sv_date,sv_time,sv_country,sv_language,sv_new,sv_browser,sv_resolution,sv_domain,sv_isp,sv_region,sv_city,sv_latitude,sv_longitude,sv_referer,sv_search,sv_keyword,sv_os,sv_load,sv_member,sv_fullurl,sv_mem_id,sv_w3c,sv_country_code,sv_region_code,sv_device,sv_op,sv_session_id) VALUES ('page','','/dip_intranet/index.php','171.101.109.178','20221229105237','2022-12-29','10:52:37','TH','th,en;q=0.9,en-US;q=0.8,th-TH;q=0.7,fr;q=0.6,pt;q=0.5','','Google Chrome','1920x1080','cm-171-101-109-178.revip11.asianet.co.th','AS17552 True Online','Bangkok','Bangkok','13.7540','100.5014','','','','Windows 10','0','Y','https://203.151.166.134/dip_intranet/index.php','1','','TH','10','1','','vrtpnps8jq88kakrpl90nhjsjf')]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 10:54:08] [IP:134.236.242.170]
+[Query:INSERT INTO stat_visitor (sv_url,sv_visitor,sv_menu,sv_ip,sv_timestamp,sv_date,sv_time,sv_country,sv_language,sv_new,sv_browser,sv_resolution,sv_domain,sv_isp,sv_region,sv_city,sv_latitude,sv_longitude,sv_referer,sv_search,sv_keyword,sv_os,sv_load,sv_member,sv_fullurl,sv_mem_id,sv_w3c,sv_country_code,sv_region_code,sv_device,sv_op,sv_session_id) VALUES ('page','','/dip_intranet/index.php','134.236.242.170','20221229105408','2022-12-29','10:54:08','TH','th,en;q=0.9,en-US;q=0.8,th-TH;q=0.7,fr;q=0.6,pt;q=0.5','','Google Chrome','1920x1080','','AS131090 CAT TELECOM Public Company Ltd,CAT','Samut Prakan','Phra Pradaeng','13.6585','100.5336','','','','Windows 10','0','Y','https://203.151.166.134/dip_intranet/index.php','1','','TH','20','1','','vrtpnps8jq88kakrpl90nhjsjf')]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 10:54:39] [IP:134.236.242.170]
+[Query:INSERT INTO stat_visitor (sv_url,sv_visitor,sv_menu,sv_ip,sv_timestamp,sv_date,sv_time,sv_country,sv_language,sv_new,sv_browser,sv_resolution,sv_domain,sv_isp,sv_region,sv_city,sv_latitude,sv_longitude,sv_referer,sv_search,sv_keyword,sv_os,sv_load,sv_member,sv_fullurl,sv_mem_id,sv_w3c,sv_country_code,sv_region_code,sv_device,sv_op,sv_session_id) VALUES ('page','','/dip_intranet/index.php','134.236.242.170','20221229105438','2022-12-29','10:54:38','TH','th,en;q=0.9,en-US;q=0.8,th-TH;q=0.7,fr;q=0.6,pt;q=0.5','','Google Chrome','1920x1080','','AS131090 CAT TELECOM Public Company Ltd,CAT','Samut Prakan','Phra Pradaeng','13.6585','100.5336','','','','Windows 10','0','Y','https://203.151.166.134/dip_intranet/index.php','1','','TH','20','1','','vrtpnps8jq88kakrpl90nhjsjf')]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 10:57:09] [IP:171.101.109.178]
+[Query:INSERT INTO stat_visitor (sv_url,sv_visitor,sv_menu,sv_ip,sv_timestamp,sv_date,sv_time,sv_country,sv_language,sv_new,sv_browser,sv_resolution,sv_domain,sv_isp,sv_region,sv_city,sv_latitude,sv_longitude,sv_referer,sv_search,sv_keyword,sv_os,sv_load,sv_member,sv_fullurl,sv_mem_id,sv_w3c,sv_country_code,sv_region_code,sv_device,sv_op,sv_session_id) VALUES ('page','','/dip_intranet/index.php','171.101.109.178','20221229105709','2022-12-29','10:57:09','TH','th,en;q=0.9,en-US;q=0.8,th-TH;q=0.7,fr;q=0.6,pt;q=0.5','','Google Chrome','1920x1080','cm-171-101-109-178.revip11.asianet.co.th','AS17552 True Online','Bangkok','Bangkok','13.7540','100.5014','','','','Windows 10','0','Y','https://203.151.166.134/dip_intranet/index.php','1','','TH','10','1','','vrtpnps8jq88kakrpl90nhjsjf')]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 11:03:35] [IP:134.236.242.170]
+[Query:INSERT INTO stat_visitor (sv_url,sv_visitor,sv_menu,sv_ip,sv_timestamp,sv_date,sv_time,sv_country,sv_language,sv_new,sv_browser,sv_resolution,sv_domain,sv_isp,sv_region,sv_city,sv_latitude,sv_longitude,sv_referer,sv_search,sv_keyword,sv_os,sv_load,sv_member,sv_fullurl,sv_mem_id,sv_w3c,sv_country_code,sv_region_code,sv_device,sv_op,sv_session_id) VALUES ('page','','/dip_intranet/news_view.php?n_id=4361','134.236.242.170','20221229110335','2022-12-29','11:03:35','TH','th,en;q=0.9,en-US;q=0.8,th-TH;q=0.7,fr;q=0.6,pt;q=0.5','','Google Chrome','1920x1080','','AS131090 CAT TELECOM Public Company Ltd,CAT','Samut Prakan','Phra Pradaeng','13.6585','100.5336','','','','Windows 10','0','Y','https://203.151.166.134/dip_intranet/news_view.php?n_id=4361','1','','TH','20','1','','vrtpnps8jq88kakrpl90nhjsjf')]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 11:08:15] [IP:171.101.109.178]
+[Query:INSERT INTO stat_visitor (sv_url,sv_visitor,sv_menu,sv_ip,sv_timestamp,sv_date,sv_time,sv_country,sv_language,sv_new,sv_browser,sv_resolution,sv_domain,sv_isp,sv_region,sv_city,sv_latitude,sv_longitude,sv_referer,sv_search,sv_keyword,sv_os,sv_load,sv_member,sv_fullurl,sv_mem_id,sv_w3c,sv_country_code,sv_region_code,sv_device,sv_op,sv_session_id) VALUES ('page','','/dip_intranet/news_view.php?n_id=4361','171.101.109.178','20221229110814','2022-12-29','11:08:14','TH','th,en;q=0.9,en-US;q=0.8,th-TH;q=0.7,fr;q=0.6,pt;q=0.5','','Google Chrome','1920x1080','cm-171-101-109-178.revip11.asianet.co.th','AS17552 True Online','Bangkok','Bangkok','13.7540','100.5014','','','','Windows 10','0','Y','https://203.151.166.134/dip_intranet/news_view.php?n_id=4361','1','','TH','10','1','','vrtpnps8jq88kakrpl90nhjsjf')]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 11:08:22] [IP:171.101.109.178]
+[Query:INSERT INTO stat_visitor (sv_url,sv_visitor,sv_menu,sv_ip,sv_timestamp,sv_date,sv_time,sv_country,sv_language,sv_new,sv_browser,sv_resolution,sv_domain,sv_isp,sv_region,sv_city,sv_latitude,sv_longitude,sv_referer,sv_search,sv_keyword,sv_os,sv_load,sv_member,sv_fullurl,sv_mem_id,sv_w3c,sv_country_code,sv_region_code,sv_device,sv_op,sv_session_id) VALUES ('page','','/dip_intranet/news_view.php?n_id=4360','171.101.109.178','20221229110822','2022-12-29','11:08:22','TH','th,en;q=0.9,en-US;q=0.8,th-TH;q=0.7,fr;q=0.6,pt;q=0.5','','Google Chrome','1920x1080','cm-171-101-109-178.revip11.asianet.co.th','AS17552 True Online','Bangkok','Bangkok','13.7540','100.5014','','','','Windows 10','0','Y','https://203.151.166.134/dip_intranet/news_view.php?n_id=4360','1','','TH','10','1','','vrtpnps8jq88kakrpl90nhjsjf')]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 11:08:29] [IP:171.101.109.178]
+[Query:INSERT INTO stat_visitor (sv_url,sv_visitor,sv_menu,sv_ip,sv_timestamp,sv_date,sv_time,sv_country,sv_language,sv_new,sv_browser,sv_resolution,sv_domain,sv_isp,sv_region,sv_city,sv_latitude,sv_longitude,sv_referer,sv_search,sv_keyword,sv_os,sv_load,sv_member,sv_fullurl,sv_mem_id,sv_w3c,sv_country_code,sv_region_code,sv_device,sv_op,sv_session_id) VALUES ('page','','/dip_intranet/index.php','171.101.109.178','20221229110829','2022-12-29','11:08:29','TH','th,en;q=0.9,en-US;q=0.8,th-TH;q=0.7,fr;q=0.6,pt;q=0.5','','Google Chrome','1920x1080','cm-171-101-109-178.revip11.asianet.co.th','AS17552 True Online','Bangkok','Bangkok','13.7540','100.5014','','','','Windows 10','0','Y','https://203.151.166.134/dip_intranet/index.php','1','','TH','10','1','','vrtpnps8jq88kakrpl90nhjsjf')]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 11:08:41] [IP:171.101.109.178]
+[Query:INSERT INTO stat_visitor (sv_url,sv_visitor,sv_menu,sv_ip,sv_timestamp,sv_date,sv_time,sv_country,sv_language,sv_new,sv_browser,sv_resolution,sv_domain,sv_isp,sv_region,sv_city,sv_latitude,sv_longitude,sv_referer,sv_search,sv_keyword,sv_os,sv_load,sv_member,sv_fullurl,sv_mem_id,sv_w3c,sv_country_code,sv_region_code,sv_device,sv_op,sv_session_id) VALUES ('page','','/dip_intranet/index.php','171.101.109.178','20221229110840','2022-12-29','11:08:40','TH','th,en;q=0.9,en-US;q=0.8,th-TH;q=0.7,fr;q=0.6,pt;q=0.5','','Google Chrome','1920x1080','cm-171-101-109-178.revip11.asianet.co.th','AS17552 True Online','Bangkok','Bangkok','13.7540','100.5014','','','','Windows 10','0','Y','https://203.151.166.134/dip_intranet/index.php','1','','TH','10','1','','vrtpnps8jq88kakrpl90nhjsjf')]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 11:11:41] [IP:171.101.109.178]
+[Query:INSERT INTO stat_visitor (sv_url,sv_visitor,sv_menu,sv_ip,sv_timestamp,sv_date,sv_time,sv_country,sv_language,sv_new,sv_browser,sv_resolution,sv_domain,sv_isp,sv_region,sv_city,sv_latitude,sv_longitude,sv_referer,sv_search,sv_keyword,sv_os,sv_load,sv_member,sv_fullurl,sv_mem_id,sv_w3c,sv_country_code,sv_region_code,sv_device,sv_op,sv_session_id) VALUES ('page','','/dip_intranet/news_view.php?n_id=4354','171.101.109.178','20221229111140','2022-12-29','11:11:40','TH','th,en;q=0.9,en-US;q=0.8,th-TH;q=0.7,fr;q=0.6,pt;q=0.5','','Google Chrome','1920x1080','cm-171-101-109-178.revip11.asianet.co.th','AS17552 True Online','Bangkok','Bangkok','13.7540','100.5014','','','','Windows 10','0','Y','https://203.151.166.134/dip_intranet/news_view.php?n_id=4354','1','','TH','10','1','','vrtpnps8jq88kakrpl90nhjsjf')]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 11:11:42] [IP:171.101.109.178]
+[Query:INSERT INTO stat_visitor (sv_url,sv_visitor,sv_menu,sv_ip,sv_timestamp,sv_date,sv_time,sv_country,sv_language,sv_new,sv_browser,sv_resolution,sv_domain,sv_isp,sv_region,sv_city,sv_latitude,sv_longitude,sv_referer,sv_search,sv_keyword,sv_os,sv_load,sv_member,sv_fullurl,sv_mem_id,sv_w3c,sv_country_code,sv_region_code,sv_device,sv_op,sv_session_id) VALUES ('page','','/dip_intranet/news_view.php?n_id=4354','171.101.109.178','20221229111141','2022-12-29','11:11:41','TH','th,en;q=0.9,en-US;q=0.8,th-TH;q=0.7,fr;q=0.6,pt;q=0.5','','Google Chrome','1920x1080','cm-171-101-109-178.revip11.asianet.co.th','AS17552 True Online','Bangkok','Bangkok','13.7540','100.5014','','','','Windows 10','0','Y','https://203.151.166.134/dip_intranet/news_view.php?n_id=4354','1','','TH','10','1','','vrtpnps8jq88kakrpl90nhjsjf')]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 11:13:01] [IP:171.101.109.178]
+[Query:SELECT * FROM article_list WHERE n_approve = 'Y' 
+        AND ((n_date_start = '' AND n_date_end = '')
+        OR (n_date_start != '' AND n_date_end = '')
+        OR ('2022-12-29 11:13' between n_date_start AND n_date_end))  AND n_id = '4360']
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 11:13:01] [IP:171.101.109.178]
+[Query:SELECT * FROM article_list WHERE n_approve = 'Y' 
+        AND ((n_date_start = '' AND n_date_end = '')
+        OR (n_date_start != '' AND n_date_end = '')
+        OR ('2022-12-29 11:13' between n_date_start AND n_date_end))  AND n_id = '4360']
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 11:13:01] [IP:171.101.109.178]
+[Query:SELECT * FROM article_detail WHERE n_id = '4360' ORDER BY at_type_row ASC ]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 11:13:01] [IP:171.101.109.178]
+[Query:SELECT * FROM article_detail WHERE n_id = '4360' ORDER BY at_type_row ASC ]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 11:13:01] [IP:171.101.109.178]
+[Query:SELECT * FROM article_attach WHERE n_id = '4360' ]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 11:13:01] [IP:171.101.109.178]
+[Query:SELECT * FROM article_attach WHERE n_id = '4360' ]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 11:13:01] [IP:171.101.109.178]
+[Query:SELECT * FROM news_comment WHERE 1=1  AND news_id = '4360'  ORDER BY id_comment DESC]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 11:13:01] [IP:171.101.109.178]
+[Query:SELECT * FROM news_comment WHERE 1=1  AND news_id = '4360'  ORDER BY id_comment DESC]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 11:13:01] [IP:171.101.109.178]
+[Query:SELECT * FROM article_taglist WHERE  1=1 AND n_id = '4360'  ORDER BY taglist_id DESC]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 11:13:01] [IP:171.101.109.178]
+[Query:SELECT * FROM article_taglist WHERE  1=1 AND n_id = '4360'  ORDER BY taglist_id DESC]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 11:13:12] [IP:171.101.109.178]
+[Query:SELECT sv_id FROM stat_visitor WHERE sv_ip = '171.101.109.178' AND sv_new = 'Y' LIMIT 0,1 ]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 11:13:12] [IP:171.101.109.178]
+[Query:SELECT sv_id FROM stat_visitor WHERE sv_ip = '171.101.109.178' AND sv_new = 'Y' LIMIT 0,1 ]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 11:13:12] [IP:171.101.109.178]
+[Query:INSERT INTO stat_visitor (sv_url,sv_visitor,sv_menu,sv_ip,sv_timestamp,sv_date,sv_time,sv_country,sv_language,sv_new,sv_browser,sv_resolution,sv_domain,sv_isp,sv_region,sv_city,sv_latitude,sv_longitude,sv_referer,sv_search,sv_keyword,sv_os,sv_load,sv_member,sv_fullurl,sv_mem_id,sv_w3c,sv_country_code,sv_region_code,sv_device,sv_op,sv_session_id) VALUES ('page','Y','/dip_intranet/index.php','171.101.109.178','20221229111312','2022-12-29','11:13:12','TH','en-US,en;q=0.9','Y','Edge','1920x1080','cm-171-101-109-178.revip11.asianet.co.th','AS17552 True Online','Bangkok','Bangkok','13.7540','100.5014','http://203.151.166.134/dip_intranet/index.php','','','Windows 10','0','Y','https://203.151.166.134/dip_intranet/index.php','1','','TH','10','1','','i3gcqo4na4g9o118rg1q1qg08q')]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 11:14:45] [IP:171.101.109.178]
+[Query:SELECT * FROM article_list WHERE n_approve = 'Y' 
+        AND ((n_date_start = '' AND n_date_end = '')
+        OR (n_date_start != '' AND n_date_end = '')
+        OR ('2022-12-29 11:14' between n_date_start AND n_date_end))  AND n_id = '4354']
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 11:14:45] [IP:171.101.109.178]
+[Query:SELECT * FROM article_list WHERE n_approve = 'Y' 
+        AND ((n_date_start = '' AND n_date_end = '')
+        OR (n_date_start != '' AND n_date_end = '')
+        OR ('2022-12-29 11:14' between n_date_start AND n_date_end))  AND n_id = '4354']
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 11:14:45] [IP:171.101.109.178]
+[Query:SELECT * FROM article_detail WHERE n_id = '4354' ORDER BY at_type_row ASC ]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 11:14:45] [IP:171.101.109.178]
+[Query:SELECT * FROM article_detail WHERE n_id = '4354' ORDER BY at_type_row ASC ]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 11:14:45] [IP:171.101.109.178]
+[Query:SELECT * FROM article_attach WHERE n_id = '4354' ]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 11:14:45] [IP:171.101.109.178]
+[Query:SELECT * FROM article_attach WHERE n_id = '4354' ]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 11:14:45] [IP:171.101.109.178]
+[Query:SELECT * FROM news_comment WHERE 1=1  AND news_id = '4354'  ORDER BY id_comment DESC]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 11:14:45] [IP:171.101.109.178]
+[Query:SELECT * FROM news_comment WHERE 1=1  AND news_id = '4354'  ORDER BY id_comment DESC]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 11:14:45] [IP:171.101.109.178]
+[Query:SELECT * FROM article_taglist WHERE  1=1 AND n_id = '4354'  ORDER BY taglist_id DESC]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 11:14:45] [IP:171.101.109.178]
+[Query:SELECT * FROM article_taglist WHERE  1=1 AND n_id = '4354'  ORDER BY taglist_id DESC]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 11:14:46] [IP:171.101.109.178]
+[Query:INSERT INTO stat_visitor (sv_url,sv_visitor,sv_menu,sv_ip,sv_timestamp,sv_date,sv_time,sv_country,sv_language,sv_new,sv_browser,sv_resolution,sv_domain,sv_isp,sv_region,sv_city,sv_latitude,sv_longitude,sv_referer,sv_search,sv_keyword,sv_os,sv_load,sv_member,sv_fullurl,sv_mem_id,sv_w3c,sv_country_code,sv_region_code,sv_device,sv_op,sv_session_id) VALUES ('page','','/dip_intranet/news_view.php?n_id=4354','171.101.109.178','20221229111445','2022-12-29','11:14:45','TH','en-US,en;q=0.9','','Edge','1920x1080','cm-171-101-109-178.revip11.asianet.co.th','AS17552 True Online','Bangkok','Bangkok','13.7540','100.5014','','','','Windows 10','0','Y','https://203.151.166.134/dip_intranet/news_view.php?n_id=4354','1','','TH','10','1','','i3gcqo4na4g9o118rg1q1qg08q')]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 11:21:56] [IP:134.236.242.170]
+[Query:INSERT INTO stat_visitor (sv_url,sv_visitor,sv_menu,sv_ip,sv_timestamp,sv_date,sv_time,sv_country,sv_language,sv_new,sv_browser,sv_resolution,sv_domain,sv_isp,sv_region,sv_city,sv_latitude,sv_longitude,sv_referer,sv_search,sv_keyword,sv_os,sv_load,sv_member,sv_fullurl,sv_mem_id,sv_w3c,sv_country_code,sv_region_code,sv_device,sv_op,sv_session_id) VALUES ('page','','/dip_intranet/','134.236.242.170','20221229112156','2022-12-29','11:21:56','TH','th,en;q=0.9,en-US;q=0.8,th-TH;q=0.7,fr;q=0.6,pt;q=0.5','','Google Chrome','1920x1080','','AS131090 CAT TELECOM Public Company Ltd,CAT','Samut Prakan','Phra Pradaeng','13.6585','100.5336','','','','Windows 10','0','Y','https://203.151.166.134/dip_intranet/','1','','TH','20','1','','vrtpnps8jq88kakrpl90nhjsjf')]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 11:24:14] [IP:134.236.242.170]
+[Query:SELECT * FROM article_list WHERE n_approve = 'Y' 
+        AND ((n_date_start = '' AND n_date_end = '')
+        OR (n_date_start != '' AND n_date_end = '')
+        OR ('2022-12-29 11:24' between n_date_start AND n_date_end))  AND n_id = '4354']
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 11:24:14] [IP:134.236.242.170]
+[Query:SELECT * FROM article_list WHERE n_approve = 'Y' 
+        AND ((n_date_start = '' AND n_date_end = '')
+        OR (n_date_start != '' AND n_date_end = '')
+        OR ('2022-12-29 11:24' between n_date_start AND n_date_end))  AND n_id = '4354']
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 11:24:14] [IP:134.236.242.170]
+[Query:SELECT * FROM article_detail WHERE n_id = '4354' ORDER BY at_type_row ASC ]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 11:24:14] [IP:134.236.242.170]
+[Query:SELECT * FROM article_detail WHERE n_id = '4354' ORDER BY at_type_row ASC ]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 11:24:14] [IP:134.236.242.170]
+[Query:SELECT * FROM article_attach WHERE n_id = '4354' ]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 11:24:14] [IP:134.236.242.170]
+[Query:SELECT * FROM article_attach WHERE n_id = '4354' ]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 11:24:14] [IP:134.236.242.170]
+[Query:SELECT * FROM news_comment WHERE 1=1  AND news_id = '4354'  ORDER BY id_comment DESC]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 11:24:14] [IP:134.236.242.170]
+[Query:SELECT * FROM news_comment WHERE 1=1  AND news_id = '4354'  ORDER BY id_comment DESC]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 11:24:14] [IP:134.236.242.170]
+[Query:SELECT * FROM article_taglist WHERE  1=1 AND n_id = '4354'  ORDER BY taglist_id DESC]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 11:24:14] [IP:134.236.242.170]
+[Query:SELECT * FROM article_taglist WHERE  1=1 AND n_id = '4354'  ORDER BY taglist_id DESC]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 11:24:15] [IP:134.236.242.170]
+[Query:INSERT INTO stat_visitor (sv_url,sv_visitor,sv_menu,sv_ip,sv_timestamp,sv_date,sv_time,sv_country,sv_language,sv_new,sv_browser,sv_resolution,sv_domain,sv_isp,sv_region,sv_city,sv_latitude,sv_longitude,sv_referer,sv_search,sv_keyword,sv_os,sv_load,sv_member,sv_fullurl,sv_mem_id,sv_w3c,sv_country_code,sv_region_code,sv_device,sv_op,sv_session_id) VALUES ('page','','/dip_intranet/news_view.php?n_id=4354','134.236.242.170','20221229112415','2022-12-29','11:24:15','TH','th,en;q=0.9,en-US;q=0.8,th-TH;q=0.7,fr;q=0.6,pt;q=0.5','','Google Chrome','1920x1080','','AS131090 CAT TELECOM Public Company Ltd,CAT','Samut Prakan','Phra Pradaeng','13.6585','100.5336','','','','Windows 10','0','Y','https://203.151.166.134/dip_intranet/news_view.php?n_id=4354','1','','TH','20','1','','vrtpnps8jq88kakrpl90nhjsjf')]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 11:35:00] [IP:134.236.242.170]
+[Query:SELECT * FROM article_list WHERE n_approve = 'Y' 
+        AND ((n_date_start = '' AND n_date_end = '')
+        OR (n_date_start != '' AND n_date_end = '')
+        OR ('2022-12-29 11:35' between n_date_start AND n_date_end))  AND n_id = '4354']
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 11:35:00] [IP:134.236.242.170]
+[Query:SELECT * FROM article_list WHERE n_approve = 'Y' 
+        AND ((n_date_start = '' AND n_date_end = '')
+        OR (n_date_start != '' AND n_date_end = '')
+        OR ('2022-12-29 11:35' between n_date_start AND n_date_end))  AND n_id = '4354']
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 11:35:00] [IP:134.236.242.170]
+[Query:SELECT * FROM article_detail WHERE n_id = '4354' ORDER BY at_type_row ASC ]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 11:35:00] [IP:134.236.242.170]
+[Query:SELECT * FROM article_detail WHERE n_id = '4354' ORDER BY at_type_row ASC ]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 11:35:00] [IP:134.236.242.170]
+[Query:SELECT * FROM article_attach WHERE n_id = '4354' ]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 11:35:00] [IP:134.236.242.170]
+[Query:SELECT * FROM article_attach WHERE n_id = '4354' ]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 11:35:00] [IP:134.236.242.170]
+[Query:SELECT * FROM news_comment WHERE 1=1  AND news_id = '4354'  ORDER BY id_comment DESC]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 11:35:00] [IP:134.236.242.170]
+[Query:SELECT * FROM news_comment WHERE 1=1  AND news_id = '4354'  ORDER BY id_comment DESC]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 11:35:00] [IP:134.236.242.170]
+[Query:SELECT * FROM article_taglist WHERE  1=1 AND n_id = '4354'  ORDER BY taglist_id DESC]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 11:35:00] [IP:134.236.242.170]
+[Query:SELECT * FROM article_taglist WHERE  1=1 AND n_id = '4354'  ORDER BY taglist_id DESC]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 11:35:01] [IP:134.236.242.170]
+[Query:INSERT INTO stat_visitor (sv_url,sv_visitor,sv_menu,sv_ip,sv_timestamp,sv_date,sv_time,sv_country,sv_language,sv_new,sv_browser,sv_resolution,sv_domain,sv_isp,sv_region,sv_city,sv_latitude,sv_longitude,sv_referer,sv_search,sv_keyword,sv_os,sv_load,sv_member,sv_fullurl,sv_mem_id,sv_w3c,sv_country_code,sv_region_code,sv_device,sv_op,sv_session_id) VALUES ('page','','/dip_intranet/news_view.php?n_id=4354','134.236.242.170','20221229113501','2022-12-29','11:35:01','TH','th,en;q=0.9,en-US;q=0.8,th-TH;q=0.7,fr;q=0.6,pt;q=0.5','','Google Chrome','1920x1080','','AS131090 CAT TELECOM Public Company Ltd,CAT','Samut Prakan','Phra Pradaeng','13.6585','100.5336','','','','Windows 10','0','Y','https://203.151.166.134/dip_intranet/news_view.php?n_id=4354','1','','TH','20','1','','vrtpnps8jq88kakrpl90nhjsjf')]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 11:35:33] [IP:134.236.242.170]
+[Query:SELECT * FROM article_list WHERE n_approve = 'Y' 
+        AND ((n_date_start = '' AND n_date_end = '')
+        OR (n_date_start != '' AND n_date_end = '')
+        OR ('2022-12-29 11:35' between n_date_start AND n_date_end))  AND n_id = '4354']
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 11:35:33] [IP:134.236.242.170]
+[Query:SELECT * FROM article_list WHERE n_approve = 'Y' 
+        AND ((n_date_start = '' AND n_date_end = '')
+        OR (n_date_start != '' AND n_date_end = '')
+        OR ('2022-12-29 11:35' between n_date_start AND n_date_end))  AND n_id = '4354']
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 11:35:33] [IP:134.236.242.170]
+[Query:SELECT * FROM article_detail WHERE n_id = '4354' ORDER BY at_type_row ASC ]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 11:35:33] [IP:134.236.242.170]
+[Query:SELECT * FROM article_detail WHERE n_id = '4354' ORDER BY at_type_row ASC ]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 11:35:33] [IP:134.236.242.170]
+[Query:SELECT * FROM article_attach WHERE n_id = '4354' ]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 11:35:33] [IP:134.236.242.170]
+[Query:SELECT * FROM article_attach WHERE n_id = '4354' ]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 11:35:33] [IP:134.236.242.170]
+[Query:SELECT * FROM news_comment WHERE 1=1  AND news_id = '4354'  ORDER BY id_comment DESC]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 11:35:33] [IP:134.236.242.170]
+[Query:SELECT * FROM news_comment WHERE 1=1  AND news_id = '4354'  ORDER BY id_comment DESC]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 11:35:33] [IP:134.236.242.170]
+[Query:SELECT * FROM article_taglist WHERE  1=1 AND n_id = '4354'  ORDER BY taglist_id DESC]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 11:35:33] [IP:134.236.242.170]
+[Query:SELECT * FROM article_taglist WHERE  1=1 AND n_id = '4354'  ORDER BY taglist_id DESC]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 11:35:34] [IP:134.236.242.170]
+[Query:INSERT INTO stat_visitor (sv_url,sv_visitor,sv_menu,sv_ip,sv_timestamp,sv_date,sv_time,sv_country,sv_language,sv_new,sv_browser,sv_resolution,sv_domain,sv_isp,sv_region,sv_city,sv_latitude,sv_longitude,sv_referer,sv_search,sv_keyword,sv_os,sv_load,sv_member,sv_fullurl,sv_mem_id,sv_w3c,sv_country_code,sv_region_code,sv_device,sv_op,sv_session_id) VALUES ('page','','/dip_intranet/news_view.php?n_id=4354','134.236.242.170','20221229113533','2022-12-29','11:35:33','TH','th,en;q=0.9,en-US;q=0.8,th-TH;q=0.7,fr;q=0.6,pt;q=0.5','','Google Chrome','1920x1080','','AS131090 CAT TELECOM Public Company Ltd,CAT','Samut Prakan','Phra Pradaeng','13.6585','100.5336','','','','Windows 10','0','Y','https://203.151.166.134/dip_intranet/news_view.php?n_id=4354','1','','TH','20','1','','vrtpnps8jq88kakrpl90nhjsjf')]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 11:39:33] [IP:171.101.109.178]
+[Query:SELECT * FROM article_list WHERE n_approve = 'Y' 
+        AND ((n_date_start = '' AND n_date_end = '')
+        OR (n_date_start != '' AND n_date_end = '')
+        OR ('2022-12-29 11:39' between n_date_start AND n_date_end))  AND n_id = '4354']
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 11:39:33] [IP:171.101.109.178]
+[Query:SELECT * FROM article_list WHERE n_approve = 'Y' 
+        AND ((n_date_start = '' AND n_date_end = '')
+        OR (n_date_start != '' AND n_date_end = '')
+        OR ('2022-12-29 11:39' between n_date_start AND n_date_end))  AND n_id = '4354']
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 11:39:33] [IP:171.101.109.178]
+[Query:SELECT * FROM article_detail WHERE n_id = '4354' ORDER BY at_type_row ASC ]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 11:39:33] [IP:171.101.109.178]
+[Query:SELECT * FROM article_detail WHERE n_id = '4354' ORDER BY at_type_row ASC ]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 11:39:33] [IP:171.101.109.178]
+[Query:SELECT * FROM article_attach WHERE n_id = '4354' ]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 11:39:33] [IP:171.101.109.178]
+[Query:SELECT * FROM article_attach WHERE n_id = '4354' ]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 11:39:33] [IP:171.101.109.178]
+[Query:SELECT * FROM news_comment WHERE 1=1  AND news_id = '4354'  ORDER BY id_comment DESC]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 11:39:33] [IP:171.101.109.178]
+[Query:SELECT * FROM news_comment WHERE 1=1  AND news_id = '4354'  ORDER BY id_comment DESC]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 11:39:33] [IP:171.101.109.178]
+[Query:SELECT * FROM article_taglist WHERE  1=1 AND n_id = '4354'  ORDER BY taglist_id DESC]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 11:39:33] [IP:171.101.109.178]
+[Query:SELECT * FROM article_taglist WHERE  1=1 AND n_id = '4354'  ORDER BY taglist_id DESC]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 11:39:34] [IP:171.101.109.178]
+[Query:INSERT INTO stat_visitor (sv_url,sv_visitor,sv_menu,sv_ip,sv_timestamp,sv_date,sv_time,sv_country,sv_language,sv_new,sv_browser,sv_resolution,sv_domain,sv_isp,sv_region,sv_city,sv_latitude,sv_longitude,sv_referer,sv_search,sv_keyword,sv_os,sv_load,sv_member,sv_fullurl,sv_mem_id,sv_w3c,sv_country_code,sv_region_code,sv_device,sv_op,sv_session_id) VALUES ('page','','/dip_intranet/news_view.php?n_id=4354','171.101.109.178','20221229113933','2022-12-29','11:39:33','TH','th,en;q=0.9,en-US;q=0.8,th-TH;q=0.7,fr;q=0.6,pt;q=0.5','','Google Chrome','1920x1080','cm-171-101-109-178.revip11.asianet.co.th','AS17552 True Online','Bangkok','Bangkok','13.7540','100.5014','','','','Windows 10','0','Y','https://203.151.166.134/dip_intranet/news_view.php?n_id=4354','1','','TH','10','1','','vrtpnps8jq88kakrpl90nhjsjf')]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 11:39:35] [IP:171.101.109.178]
+[Query:SELECT * FROM article_list WHERE n_approve = 'Y' 
+        AND ((n_date_start = '' AND n_date_end = '')
+        OR (n_date_start != '' AND n_date_end = '')
+        OR ('2022-12-29 11:39' between n_date_start AND n_date_end))  AND n_id = '4354']
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 11:39:35] [IP:171.101.109.178]
+[Query:SELECT * FROM article_list WHERE n_approve = 'Y' 
+        AND ((n_date_start = '' AND n_date_end = '')
+        OR (n_date_start != '' AND n_date_end = '')
+        OR ('2022-12-29 11:39' between n_date_start AND n_date_end))  AND n_id = '4354']
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 11:39:35] [IP:171.101.109.178]
+[Query:SELECT * FROM article_detail WHERE n_id = '4354' ORDER BY at_type_row ASC ]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 11:39:35] [IP:171.101.109.178]
+[Query:SELECT * FROM article_detail WHERE n_id = '4354' ORDER BY at_type_row ASC ]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 11:39:35] [IP:171.101.109.178]
+[Query:SELECT * FROM article_attach WHERE n_id = '4354' ]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 11:39:35] [IP:171.101.109.178]
+[Query:SELECT * FROM article_attach WHERE n_id = '4354' ]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 11:39:35] [IP:171.101.109.178]
+[Query:SELECT * FROM news_comment WHERE 1=1  AND news_id = '4354'  ORDER BY id_comment DESC]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 11:39:35] [IP:171.101.109.178]
+[Query:SELECT * FROM news_comment WHERE 1=1  AND news_id = '4354'  ORDER BY id_comment DESC]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 11:39:35] [IP:171.101.109.178]
+[Query:SELECT * FROM article_taglist WHERE  1=1 AND n_id = '4354'  ORDER BY taglist_id DESC]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 11:39:35] [IP:171.101.109.178]
+[Query:SELECT * FROM article_taglist WHERE  1=1 AND n_id = '4354'  ORDER BY taglist_id DESC]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 11:39:36] [IP:171.101.109.178]
+[Query:INSERT INTO stat_visitor (sv_url,sv_visitor,sv_menu,sv_ip,sv_timestamp,sv_date,sv_time,sv_country,sv_language,sv_new,sv_browser,sv_resolution,sv_domain,sv_isp,sv_region,sv_city,sv_latitude,sv_longitude,sv_referer,sv_search,sv_keyword,sv_os,sv_load,sv_member,sv_fullurl,sv_mem_id,sv_w3c,sv_country_code,sv_region_code,sv_device,sv_op,sv_session_id) VALUES ('page','','/dip_intranet/news_view.php?n_id=4354','171.101.109.178','20221229113935','2022-12-29','11:39:35','TH','th,en;q=0.9,en-US;q=0.8,th-TH;q=0.7,fr;q=0.6,pt;q=0.5','','Google Chrome','1920x1080','cm-171-101-109-178.revip11.asianet.co.th','AS17552 True Online','Bangkok','Bangkok','13.7540','100.5014','','','','Windows 10','0','Y','https://203.151.166.134/dip_intranet/news_view.php?n_id=4354','1','','TH','10','1','','vrtpnps8jq88kakrpl90nhjsjf')]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 11:39:45] [IP:134.236.242.170]
+[Query:SELECT * FROM article_list WHERE n_approve = 'Y' 
+        AND ((n_date_start = '' AND n_date_end = '')
+        OR (n_date_start != '' AND n_date_end = '')
+        OR ('2022-12-29 11:39' between n_date_start AND n_date_end))  AND n_id = '4354']
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 11:39:45] [IP:134.236.242.170]
+[Query:SELECT * FROM article_list WHERE n_approve = 'Y' 
+        AND ((n_date_start = '' AND n_date_end = '')
+        OR (n_date_start != '' AND n_date_end = '')
+        OR ('2022-12-29 11:39' between n_date_start AND n_date_end))  AND n_id = '4354']
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 11:39:45] [IP:134.236.242.170]
+[Query:SELECT * FROM article_detail WHERE n_id = '4354' ORDER BY at_type_row ASC ]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 11:39:45] [IP:134.236.242.170]
+[Query:SELECT * FROM article_detail WHERE n_id = '4354' ORDER BY at_type_row ASC ]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 11:39:45] [IP:134.236.242.170]
+[Query:SELECT * FROM article_attach WHERE n_id = '4354' ]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 11:39:45] [IP:134.236.242.170]
+[Query:SELECT * FROM article_attach WHERE n_id = '4354' ]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 11:39:45] [IP:134.236.242.170]
+[Query:SELECT * FROM news_comment WHERE 1=1  AND news_id = '4354'  ORDER BY id_comment DESC]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 11:39:45] [IP:134.236.242.170]
+[Query:SELECT * FROM news_comment WHERE 1=1  AND news_id = '4354'  ORDER BY id_comment DESC]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 11:39:45] [IP:134.236.242.170]
+[Query:SELECT * FROM article_taglist WHERE  1=1 AND n_id = '4354'  ORDER BY taglist_id DESC]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 11:39:45] [IP:134.236.242.170]
+[Query:SELECT * FROM article_taglist WHERE  1=1 AND n_id = '4354'  ORDER BY taglist_id DESC]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 11:42:18] [IP:134.236.242.170]
+[Query:SELECT * FROM article_list WHERE n_approve = 'Y' 
+        AND ((n_date_start = '' AND n_date_end = '')
+        OR (n_date_start != '' AND n_date_end = '')
+        OR ('2022-12-29 11:42' between n_date_start AND n_date_end))  AND n_id = '4354']
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 11:42:18] [IP:134.236.242.170]
+[Query:SELECT * FROM article_list WHERE n_approve = 'Y' 
+        AND ((n_date_start = '' AND n_date_end = '')
+        OR (n_date_start != '' AND n_date_end = '')
+        OR ('2022-12-29 11:42' between n_date_start AND n_date_end))  AND n_id = '4354']
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 11:42:18] [IP:134.236.242.170]
+[Query:SELECT * FROM article_detail WHERE n_id = '4354' ORDER BY at_type_row ASC ]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 11:42:18] [IP:134.236.242.170]
+[Query:SELECT * FROM article_detail WHERE n_id = '4354' ORDER BY at_type_row ASC ]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 11:42:18] [IP:134.236.242.170]
+[Query:SELECT * FROM article_attach WHERE n_id = '4354' ]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 11:42:18] [IP:134.236.242.170]
+[Query:SELECT * FROM article_attach WHERE n_id = '4354' ]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 11:42:18] [IP:134.236.242.170]
+[Query:SELECT * FROM news_comment WHERE 1=1  AND news_id = '4354'  ORDER BY id_comment DESC]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 11:42:18] [IP:134.236.242.170]
+[Query:SELECT * FROM news_comment WHERE 1=1  AND news_id = '4354'  ORDER BY id_comment DESC]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 11:42:18] [IP:134.236.242.170]
+[Query:SELECT * FROM article_taglist WHERE  1=1 AND n_id = '4354'  ORDER BY taglist_id DESC]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 11:42:18] [IP:134.236.242.170]
+[Query:SELECT * FROM article_taglist WHERE  1=1 AND n_id = '4354'  ORDER BY taglist_id DESC]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 11:42:20] [IP:134.236.242.170]
+[Query:INSERT INTO stat_visitor (sv_url,sv_visitor,sv_menu,sv_ip,sv_timestamp,sv_date,sv_time,sv_country,sv_language,sv_new,sv_browser,sv_resolution,sv_domain,sv_isp,sv_region,sv_city,sv_latitude,sv_longitude,sv_referer,sv_search,sv_keyword,sv_os,sv_load,sv_member,sv_fullurl,sv_mem_id,sv_w3c,sv_country_code,sv_region_code,sv_device,sv_op,sv_session_id) VALUES ('page','','/dip_intranet/news_view.php?n_id=4354','134.236.242.170','20221229114219','2022-12-29','11:42:19','TH','th,en;q=0.9,en-US;q=0.8,th-TH;q=0.7,fr;q=0.6,pt;q=0.5','','Google Chrome','1920x1080','','AS131090 CAT TELECOM Public Company Ltd,CAT','Samut Prakan','Phra Pradaeng','13.6585','100.5336','','','','Windows 10','0','Y','https://203.151.166.134/dip_intranet/news_view.php?n_id=4354','1','','TH','20','1','','vrtpnps8jq88kakrpl90nhjsjf')]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 11:43:13] [IP:134.236.242.170]
+[Query:SELECT * FROM article_list WHERE n_approve = 'Y' 
+        AND ((n_date_start = '' AND n_date_end = '')
+        OR (n_date_start != '' AND n_date_end = '')
+        OR ('2022-12-29 11:43' between n_date_start AND n_date_end))  AND n_id = '4354']
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 11:43:13] [IP:134.236.242.170]
+[Query:SELECT * FROM article_list WHERE n_approve = 'Y' 
+        AND ((n_date_start = '' AND n_date_end = '')
+        OR (n_date_start != '' AND n_date_end = '')
+        OR ('2022-12-29 11:43' between n_date_start AND n_date_end))  AND n_id = '4354']
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 11:43:13] [IP:134.236.242.170]
+[Query:SELECT * FROM article_detail WHERE n_id = '4354' ORDER BY at_type_row ASC ]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 11:43:13] [IP:134.236.242.170]
+[Query:SELECT * FROM article_detail WHERE n_id = '4354' ORDER BY at_type_row ASC ]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 11:43:13] [IP:134.236.242.170]
+[Query:SELECT * FROM article_attach WHERE n_id = '4354' ]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 11:43:13] [IP:134.236.242.170]
+[Query:SELECT * FROM article_attach WHERE n_id = '4354' ]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 11:43:13] [IP:134.236.242.170]
+[Query:SELECT * FROM news_comment WHERE 1=1  AND news_id = '4354'  ORDER BY id_comment DESC]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 11:43:13] [IP:134.236.242.170]
+[Query:SELECT * FROM news_comment WHERE 1=1  AND news_id = '4354'  ORDER BY id_comment DESC]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 11:43:13] [IP:134.236.242.170]
+[Query:SELECT * FROM article_taglist WHERE  1=1 AND n_id = '4354'  ORDER BY taglist_id DESC]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 11:43:13] [IP:134.236.242.170]
+[Query:SELECT * FROM article_taglist WHERE  1=1 AND n_id = '4354'  ORDER BY taglist_id DESC]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 11:43:14] [IP:171.101.109.178]
+[Query:INSERT INTO stat_visitor (sv_url,sv_visitor,sv_menu,sv_ip,sv_timestamp,sv_date,sv_time,sv_country,sv_language,sv_new,sv_browser,sv_resolution,sv_domain,sv_isp,sv_region,sv_city,sv_latitude,sv_longitude,sv_referer,sv_search,sv_keyword,sv_os,sv_load,sv_member,sv_fullurl,sv_mem_id,sv_w3c,sv_country_code,sv_region_code,sv_device,sv_op,sv_session_id) VALUES ('page','','/dip_intranet/news_view.php?n_id=4354','171.101.109.178','20221229114314','2022-12-29','11:43:14','TH','th,en;q=0.9,en-US;q=0.8,th-TH;q=0.7,fr;q=0.6,pt;q=0.5','','Google Chrome','1920x1080','cm-171-101-109-178.revip11.asianet.co.th','AS17552 True Online','Bangkok','Bangkok','13.7540','100.5014','','','','Windows 10','0','Y','https://203.151.166.134/dip_intranet/news_view.php?n_id=4354','1','','TH','10','1','','vrtpnps8jq88kakrpl90nhjsjf')]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 11:44:47] [IP:134.236.242.170]
+[Query:SELECT * FROM article_list WHERE n_approve = 'Y' 
+        AND ((n_date_start = '' AND n_date_end = '')
+        OR (n_date_start != '' AND n_date_end = '')
+        OR ('2022-12-29 11:44' between n_date_start AND n_date_end))  AND n_id = '4354']
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 11:44:47] [IP:134.236.242.170]
+[Query:SELECT * FROM article_list WHERE n_approve = 'Y' 
+        AND ((n_date_start = '' AND n_date_end = '')
+        OR (n_date_start != '' AND n_date_end = '')
+        OR ('2022-12-29 11:44' between n_date_start AND n_date_end))  AND n_id = '4354']
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 11:44:47] [IP:134.236.242.170]
+[Query:SELECT * FROM article_detail WHERE n_id = '4354' ORDER BY at_type_row ASC ]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 11:44:47] [IP:134.236.242.170]
+[Query:SELECT * FROM article_detail WHERE n_id = '4354' ORDER BY at_type_row ASC ]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 11:44:47] [IP:134.236.242.170]
+[Query:SELECT * FROM article_attach WHERE n_id = '4354' ]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 11:44:47] [IP:134.236.242.170]
+[Query:SELECT * FROM article_attach WHERE n_id = '4354' ]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 11:44:47] [IP:134.236.242.170]
+[Query:SELECT * FROM news_comment WHERE 1=1  AND news_id = '4354'  ORDER BY id_comment DESC]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 11:44:47] [IP:134.236.242.170]
+[Query:SELECT * FROM news_comment WHERE 1=1  AND news_id = '4354'  ORDER BY id_comment DESC]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 11:44:47] [IP:134.236.242.170]
+[Query:SELECT * FROM article_taglist WHERE  1=1 AND n_id = '4354'  ORDER BY taglist_id DESC]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 11:44:48] [IP:134.236.242.170]
+[Query:SELECT * FROM article_taglist WHERE  1=1 AND n_id = '4354'  ORDER BY taglist_id DESC]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 11:44:48] [IP:134.236.242.170]
+[Query:INSERT INTO stat_visitor (sv_url,sv_visitor,sv_menu,sv_ip,sv_timestamp,sv_date,sv_time,sv_country,sv_language,sv_new,sv_browser,sv_resolution,sv_domain,sv_isp,sv_region,sv_city,sv_latitude,sv_longitude,sv_referer,sv_search,sv_keyword,sv_os,sv_load,sv_member,sv_fullurl,sv_mem_id,sv_w3c,sv_country_code,sv_region_code,sv_device,sv_op,sv_session_id) VALUES ('page','','/dip_intranet/news_view.php?n_id=4354','134.236.242.170','20221229114448','2022-12-29','11:44:48','TH','th,en;q=0.9,en-US;q=0.8,th-TH;q=0.7,fr;q=0.6,pt;q=0.5','','Google Chrome','1920x1080','','AS131090 CAT TELECOM Public Company Ltd,CAT','Samut Prakan','Phra Pradaeng','13.6585','100.5336','','','','Windows 10','0','Y','https://203.151.166.134/dip_intranet/news_view.php?n_id=4354','1','','TH','20','1','','vrtpnps8jq88kakrpl90nhjsjf')]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 11:45:12] [IP:134.236.242.170]
+[Query:SELECT * FROM article_list WHERE n_approve = 'Y' 
+        AND ((n_date_start = '' AND n_date_end = '')
+        OR (n_date_start != '' AND n_date_end = '')
+        OR ('2022-12-29 11:45' between n_date_start AND n_date_end))  AND n_id = '4354']
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 11:45:12] [IP:134.236.242.170]
+[Query:SELECT * FROM article_list WHERE n_approve = 'Y' 
+        AND ((n_date_start = '' AND n_date_end = '')
+        OR (n_date_start != '' AND n_date_end = '')
+        OR ('2022-12-29 11:45' between n_date_start AND n_date_end))  AND n_id = '4354']
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 11:45:12] [IP:134.236.242.170]
+[Query:SELECT * FROM article_detail WHERE n_id = '4354' ORDER BY at_type_row ASC ]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 11:45:12] [IP:134.236.242.170]
+[Query:SELECT * FROM article_detail WHERE n_id = '4354' ORDER BY at_type_row ASC ]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 11:45:12] [IP:134.236.242.170]
+[Query:SELECT * FROM article_attach WHERE n_id = '4354' ]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 11:45:12] [IP:134.236.242.170]
+[Query:SELECT * FROM article_attach WHERE n_id = '4354' ]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 11:45:12] [IP:134.236.242.170]
+[Query:SELECT * FROM news_comment WHERE 1=1  AND news_id = '4354'  ORDER BY id_comment DESC]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 11:45:12] [IP:134.236.242.170]
+[Query:SELECT * FROM news_comment WHERE 1=1  AND news_id = '4354'  ORDER BY id_comment DESC]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 11:45:12] [IP:134.236.242.170]
+[Query:SELECT * FROM article_taglist WHERE  1=1 AND n_id = '4354'  ORDER BY taglist_id DESC]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 11:45:12] [IP:134.236.242.170]
+[Query:SELECT * FROM article_taglist WHERE  1=1 AND n_id = '4354'  ORDER BY taglist_id DESC]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 11:45:13] [IP:134.236.242.170]
+[Query:INSERT INTO stat_visitor (sv_url,sv_visitor,sv_menu,sv_ip,sv_timestamp,sv_date,sv_time,sv_country,sv_language,sv_new,sv_browser,sv_resolution,sv_domain,sv_isp,sv_region,sv_city,sv_latitude,sv_longitude,sv_referer,sv_search,sv_keyword,sv_os,sv_load,sv_member,sv_fullurl,sv_mem_id,sv_w3c,sv_country_code,sv_region_code,sv_device,sv_op,sv_session_id) VALUES ('page','','/dip_intranet/news_view.php?n_id=4354','134.236.242.170','20221229114512','2022-12-29','11:45:12','TH','th,en;q=0.9,en-US;q=0.8,th-TH;q=0.7,fr;q=0.6,pt;q=0.5','','Google Chrome','1920x1080','','AS131090 CAT TELECOM Public Company Ltd,CAT','Samut Prakan','Phra Pradaeng','13.6585','100.5336','','','','Windows 10','0','Y','https://203.151.166.134/dip_intranet/news_view.php?n_id=4354','1','','TH','20','1','','vrtpnps8jq88kakrpl90nhjsjf')]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 11:45:50] [IP:134.236.242.170]
+[Query:INSERT INTO stat_visitor (sv_url,sv_visitor,sv_menu,sv_ip,sv_timestamp,sv_date,sv_time,sv_country,sv_language,sv_new,sv_browser,sv_resolution,sv_domain,sv_isp,sv_region,sv_city,sv_latitude,sv_longitude,sv_referer,sv_search,sv_keyword,sv_os,sv_load,sv_member,sv_fullurl,sv_mem_id,sv_w3c,sv_country_code,sv_region_code,sv_device,sv_op,sv_session_id) VALUES ('page','','/dip_intranet/','134.236.242.170','20221229114550','2022-12-29','11:45:50','TH','th,en;q=0.9,en-US;q=0.8,th-TH;q=0.7,fr;q=0.6,pt;q=0.5','','Google Chrome','1920x1080','','AS131090 CAT TELECOM Public Company Ltd,CAT','Samut Prakan','Phra Pradaeng','13.6585','100.5336','','','','Windows 10','0','Y','https://203.151.166.134/dip_intranet/','1','','TH','20','1','','vrtpnps8jq88kakrpl90nhjsjf')]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 11:47:32] [IP:134.236.242.170]
+[Query:SELECT * FROM article_list WHERE n_approve = 'Y' 
+        AND ((n_date_start = '' AND n_date_end = '')
+        OR (n_date_start != '' AND n_date_end = '')
+        OR ('2022-12-29 11:47' between n_date_start AND n_date_end))  AND n_id = '4361']
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 11:47:32] [IP:134.236.242.170]
+[Query:SELECT * FROM article_list WHERE n_approve = 'Y' 
+        AND ((n_date_start = '' AND n_date_end = '')
+        OR (n_date_start != '' AND n_date_end = '')
+        OR ('2022-12-29 11:47' between n_date_start AND n_date_end))  AND n_id = '4361']
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 11:47:32] [IP:134.236.242.170]
+[Query:SELECT * FROM article_detail WHERE n_id = '4361' ORDER BY at_type_row ASC ]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 11:47:32] [IP:134.236.242.170]
+[Query:SELECT * FROM article_detail WHERE n_id = '4361' ORDER BY at_type_row ASC ]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 11:47:32] [IP:134.236.242.170]
+[Query:SELECT * FROM article_attach WHERE n_id = '4361' ]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 11:47:32] [IP:134.236.242.170]
+[Query:SELECT * FROM article_attach WHERE n_id = '4361' ]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 11:47:32] [IP:134.236.242.170]
+[Query:SELECT * FROM article_taglist WHERE  1=1 AND n_id = '4361'  ORDER BY taglist_id DESC]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 11:47:32] [IP:134.236.242.170]
+[Query:SELECT * FROM article_taglist WHERE  1=1 AND n_id = '4361'  ORDER BY taglist_id DESC]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 11:47:32] [IP:134.236.242.170]
+[Query:SELECT * FROM news_comment WHERE 1=1  AND news_id = '4361'  ORDER BY id_comment DESC]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 11:47:32] [IP:134.236.242.170]
+[Query:SELECT * FROM news_comment WHERE 1=1  AND news_id = '4361'  ORDER BY id_comment DESC]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 11:48:23] [IP:134.236.242.170]
+[Query:SELECT * FROM article_list WHERE n_approve = 'Y' 
+        AND ((n_date_start = '' AND n_date_end = '')
+        OR (n_date_start != '' AND n_date_end = '')
+        OR ('2022-12-29 11:48' between n_date_start AND n_date_end))  AND n_id = '4361']
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 11:48:23] [IP:134.236.242.170]
+[Query:SELECT * FROM article_list WHERE n_approve = 'Y' 
+        AND ((n_date_start = '' AND n_date_end = '')
+        OR (n_date_start != '' AND n_date_end = '')
+        OR ('2022-12-29 11:48' between n_date_start AND n_date_end))  AND n_id = '4361']
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 11:48:23] [IP:134.236.242.170]
+[Query:SELECT * FROM article_detail WHERE n_id = '4361' ORDER BY at_type_row ASC ]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 11:48:23] [IP:134.236.242.170]
+[Query:SELECT * FROM article_detail WHERE n_id = '4361' ORDER BY at_type_row ASC ]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 11:48:23] [IP:134.236.242.170]
+[Query:SELECT * FROM article_attach WHERE n_id = '4361' ]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 11:48:23] [IP:134.236.242.170]
+[Query:SELECT * FROM article_attach WHERE n_id = '4361' ]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 11:48:23] [IP:134.236.242.170]
+[Query:SELECT * FROM news_comment WHERE 1=1  AND news_id = '4361'  ORDER BY id_comment DESC]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 11:48:23] [IP:134.236.242.170]
+[Query:SELECT * FROM news_comment WHERE 1=1  AND news_id = '4361'  ORDER BY id_comment DESC]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 11:48:23] [IP:134.236.242.170]
+[Query:SELECT * FROM article_taglist WHERE  1=1 AND n_id = '4361'  ORDER BY taglist_id DESC]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 11:48:23] [IP:134.236.242.170]
+[Query:SELECT * FROM article_taglist WHERE  1=1 AND n_id = '4361'  ORDER BY taglist_id DESC]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 11:48:24] [IP:134.236.242.170]
+[Query:INSERT INTO stat_visitor (sv_url,sv_visitor,sv_menu,sv_ip,sv_timestamp,sv_date,sv_time,sv_country,sv_language,sv_new,sv_browser,sv_resolution,sv_domain,sv_isp,sv_region,sv_city,sv_latitude,sv_longitude,sv_referer,sv_search,sv_keyword,sv_os,sv_load,sv_member,sv_fullurl,sv_mem_id,sv_w3c,sv_country_code,sv_region_code,sv_device,sv_op,sv_session_id) VALUES ('page','','/dip_intranet/news_view.php?n_id=4361','134.236.242.170','20221229114823','2022-12-29','11:48:23','TH','th,en;q=0.9,en-US;q=0.8,th-TH;q=0.7,fr;q=0.6,pt;q=0.5','','Google Chrome','1920x1080','','AS131090 CAT TELECOM Public Company Ltd,CAT','Samut Prakan','Phra Pradaeng','13.6585','100.5336','','','','Windows 10','0','Y','https://203.151.166.134/dip_intranet/news_view.php?n_id=4361','1','','TH','20','1','','vrtpnps8jq88kakrpl90nhjsjf')]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 11:48:30] [IP:134.236.242.170]
+[Query:SELECT * FROM article_list WHERE n_approve = 'Y' 
+        AND ((n_date_start = '' AND n_date_end = '')
+        OR (n_date_start != '' AND n_date_end = '')
+        OR ('2022-12-29 11:48' between n_date_start AND n_date_end))  AND n_id = '4361']
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 11:48:30] [IP:134.236.242.170]
+[Query:SELECT * FROM article_list WHERE n_approve = 'Y' 
+        AND ((n_date_start = '' AND n_date_end = '')
+        OR (n_date_start != '' AND n_date_end = '')
+        OR ('2022-12-29 11:48' between n_date_start AND n_date_end))  AND n_id = '4361']
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 11:48:30] [IP:134.236.242.170]
+[Query:SELECT * FROM article_detail WHERE n_id = '4361' ORDER BY at_type_row ASC ]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 11:48:30] [IP:134.236.242.170]
+[Query:SELECT * FROM article_detail WHERE n_id = '4361' ORDER BY at_type_row ASC ]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 11:48:30] [IP:134.236.242.170]
+[Query:SELECT * FROM article_attach WHERE n_id = '4361' ]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 11:48:30] [IP:134.236.242.170]
+[Query:SELECT * FROM article_attach WHERE n_id = '4361' ]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 11:48:30] [IP:134.236.242.170]
+[Query:SELECT * FROM news_comment WHERE 1=1  AND news_id = '4361'  ORDER BY id_comment DESC]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 11:48:30] [IP:134.236.242.170]
+[Query:SELECT * FROM news_comment WHERE 1=1  AND news_id = '4361'  ORDER BY id_comment DESC]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 11:48:30] [IP:134.236.242.170]
+[Query:SELECT * FROM article_taglist WHERE  1=1 AND n_id = '4361'  ORDER BY taglist_id DESC]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 11:48:30] [IP:134.236.242.170]
+[Query:SELECT * FROM article_taglist WHERE  1=1 AND n_id = '4361'  ORDER BY taglist_id DESC]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 11:49:28] [IP:134.236.242.170]
+[Query:SELECT * FROM article_list WHERE n_approve = 'Y' 
+        AND ((n_date_start = '' AND n_date_end = '')
+        OR (n_date_start != '' AND n_date_end = '')
+        OR ('2022-12-29 11:49' between n_date_start AND n_date_end))  AND n_id = '4361']
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 11:49:28] [IP:134.236.242.170]
+[Query:SELECT * FROM article_list WHERE n_approve = 'Y' 
+        AND ((n_date_start = '' AND n_date_end = '')
+        OR (n_date_start != '' AND n_date_end = '')
+        OR ('2022-12-29 11:49' between n_date_start AND n_date_end))  AND n_id = '4361']
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 11:49:28] [IP:134.236.242.170]
+[Query:SELECT * FROM article_detail WHERE n_id = '4361' ORDER BY at_type_row ASC ]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 11:49:28] [IP:134.236.242.170]
+[Query:SELECT * FROM article_detail WHERE n_id = '4361' ORDER BY at_type_row ASC ]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 11:49:28] [IP:134.236.242.170]
+[Query:SELECT * FROM article_attach WHERE n_id = '4361' ]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 11:49:28] [IP:134.236.242.170]
+[Query:SELECT * FROM article_attach WHERE n_id = '4361' ]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 11:49:28] [IP:134.236.242.170]
+[Query:SELECT * FROM news_comment WHERE 1=1  AND news_id = '4361'  ORDER BY id_comment DESC]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 11:49:28] [IP:134.236.242.170]
+[Query:SELECT * FROM news_comment WHERE 1=1  AND news_id = '4361'  ORDER BY id_comment DESC]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 11:49:28] [IP:134.236.242.170]
+[Query:SELECT * FROM article_taglist WHERE  1=1 AND n_id = '4361'  ORDER BY taglist_id DESC]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 11:49:28] [IP:134.236.242.170]
+[Query:SELECT * FROM article_taglist WHERE  1=1 AND n_id = '4361'  ORDER BY taglist_id DESC]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 11:49:33] [IP:134.236.242.170]
+[Query:SELECT * FROM article_list WHERE n_approve = 'Y' 
+        AND ((n_date_start = '' AND n_date_end = '')
+        OR (n_date_start != '' AND n_date_end = '')
+        OR ('2022-12-29 11:49' between n_date_start AND n_date_end))  AND n_id = '4361']
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 11:49:33] [IP:134.236.242.170]
+[Query:SELECT * FROM article_list WHERE n_approve = 'Y' 
+        AND ((n_date_start = '' AND n_date_end = '')
+        OR (n_date_start != '' AND n_date_end = '')
+        OR ('2022-12-29 11:49' between n_date_start AND n_date_end))  AND n_id = '4361']
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 11:49:33] [IP:134.236.242.170]
+[Query:SELECT * FROM article_detail WHERE n_id = '4361' ORDER BY at_type_row ASC ]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 11:49:33] [IP:134.236.242.170]
+[Query:SELECT * FROM article_detail WHERE n_id = '4361' ORDER BY at_type_row ASC ]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 11:49:33] [IP:134.236.242.170]
+[Query:SELECT * FROM article_attach WHERE n_id = '4361' ]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 11:49:33] [IP:134.236.242.170]
+[Query:SELECT * FROM article_attach WHERE n_id = '4361' ]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 11:49:33] [IP:134.236.242.170]
+[Query:SELECT * FROM news_comment WHERE 1=1  AND news_id = '4361'  ORDER BY id_comment DESC]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 11:49:33] [IP:134.236.242.170]
+[Query:SELECT * FROM news_comment WHERE 1=1  AND news_id = '4361'  ORDER BY id_comment DESC]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 11:49:33] [IP:134.236.242.170]
+[Query:SELECT * FROM article_taglist WHERE  1=1 AND n_id = '4361'  ORDER BY taglist_id DESC]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 11:49:33] [IP:134.236.242.170]
+[Query:SELECT * FROM article_taglist WHERE  1=1 AND n_id = '4361'  ORDER BY taglist_id DESC]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 11:49:34] [IP:134.236.242.170]
+[Query:INSERT INTO stat_visitor (sv_url,sv_visitor,sv_menu,sv_ip,sv_timestamp,sv_date,sv_time,sv_country,sv_language,sv_new,sv_browser,sv_resolution,sv_domain,sv_isp,sv_region,sv_city,sv_latitude,sv_longitude,sv_referer,sv_search,sv_keyword,sv_os,sv_load,sv_member,sv_fullurl,sv_mem_id,sv_w3c,sv_country_code,sv_region_code,sv_device,sv_op,sv_session_id) VALUES ('page','','/dip_intranet/news_view.php?n_id=4361','134.236.242.170','20221229114934','2022-12-29','11:49:34','TH','th,en;q=0.9,en-US;q=0.8,th-TH;q=0.7,fr;q=0.6,pt;q=0.5','','Google Chrome','1920x1080','','AS131090 CAT TELECOM Public Company Ltd,CAT','Samut Prakan','Phra Pradaeng','13.6585','100.5336','','','','Windows 10','0','Y','https://203.151.166.134/dip_intranet/news_view.php?n_id=4361','1','','TH','20','1','','vrtpnps8jq88kakrpl90nhjsjf')]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 11:50:21] [IP:134.236.242.170]
+[Query:SELECT * FROM article_list WHERE n_approve = 'Y' 
+        AND ((n_date_start = '' AND n_date_end = '')
+        OR (n_date_start != '' AND n_date_end = '')
+        OR ('2022-12-29 11:50' between n_date_start AND n_date_end))  AND n_id = '4361']
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 11:50:21] [IP:134.236.242.170]
+[Query:SELECT * FROM article_list WHERE n_approve = 'Y' 
+        AND ((n_date_start = '' AND n_date_end = '')
+        OR (n_date_start != '' AND n_date_end = '')
+        OR ('2022-12-29 11:50' between n_date_start AND n_date_end))  AND n_id = '4361']
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 11:50:21] [IP:134.236.242.170]
+[Query:SELECT * FROM article_detail WHERE n_id = '4361' ORDER BY at_type_row ASC ]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 11:50:21] [IP:134.236.242.170]
+[Query:SELECT * FROM article_detail WHERE n_id = '4361' ORDER BY at_type_row ASC ]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 11:50:21] [IP:134.236.242.170]
+[Query:SELECT * FROM article_attach WHERE n_id = '4361' ]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 11:50:21] [IP:134.236.242.170]
+[Query:SELECT * FROM article_attach WHERE n_id = '4361' ]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 11:50:21] [IP:134.236.242.170]
+[Query:SELECT * FROM news_comment WHERE 1=1  AND news_id = '4361'  ORDER BY id_comment DESC]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 11:50:21] [IP:134.236.242.170]
+[Query:SELECT * FROM news_comment WHERE 1=1  AND news_id = '4361'  ORDER BY id_comment DESC]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 11:50:21] [IP:134.236.242.170]
+[Query:SELECT * FROM article_taglist WHERE  1=1 AND n_id = '4361'  ORDER BY taglist_id DESC]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 11:50:21] [IP:134.236.242.170]
+[Query:SELECT * FROM article_taglist WHERE  1=1 AND n_id = '4361'  ORDER BY taglist_id DESC]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 11:51:12] [IP:134.236.242.170]
+[Query:SELECT * FROM article_list WHERE n_approve = 'Y' 
+        AND ((n_date_start = '' AND n_date_end = '')
+        OR (n_date_start != '' AND n_date_end = '')
+        OR ('2022-12-29 11:51' between n_date_start AND n_date_end))  AND n_id = '4361']
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 11:51:12] [IP:134.236.242.170]
+[Query:SELECT * FROM article_list WHERE n_approve = 'Y' 
+        AND ((n_date_start = '' AND n_date_end = '')
+        OR (n_date_start != '' AND n_date_end = '')
+        OR ('2022-12-29 11:51' between n_date_start AND n_date_end))  AND n_id = '4361']
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 11:51:12] [IP:134.236.242.170]
+[Query:SELECT * FROM article_detail WHERE n_id = '4361' ORDER BY at_type_row ASC ]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 11:51:12] [IP:134.236.242.170]
+[Query:SELECT * FROM article_detail WHERE n_id = '4361' ORDER BY at_type_row ASC ]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 11:51:12] [IP:134.236.242.170]
+[Query:SELECT * FROM article_attach WHERE n_id = '4361' ]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 11:51:12] [IP:134.236.242.170]
+[Query:SELECT * FROM article_attach WHERE n_id = '4361' ]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 11:51:12] [IP:134.236.242.170]
+[Query:SELECT * FROM news_comment WHERE 1=1  AND news_id = '4361'  ORDER BY id_comment DESC]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 11:51:12] [IP:134.236.242.170]
+[Query:SELECT * FROM news_comment WHERE 1=1  AND news_id = '4361'  ORDER BY id_comment DESC]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 11:51:12] [IP:134.236.242.170]
+[Query:SELECT * FROM article_taglist WHERE  1=1 AND n_id = '4361'  ORDER BY taglist_id DESC]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 11:51:12] [IP:134.236.242.170]
+[Query:SELECT * FROM article_taglist WHERE  1=1 AND n_id = '4361'  ORDER BY taglist_id DESC]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 11:51:44] [IP:134.236.242.170]
+[Query:SELECT * FROM article_list WHERE n_approve = 'Y' 
+        AND ((n_date_start = '' AND n_date_end = '')
+        OR (n_date_start != '' AND n_date_end = '')
+        OR ('2022-12-29 11:51' between n_date_start AND n_date_end))  AND n_id = '4361']
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 11:51:44] [IP:134.236.242.170]
+[Query:SELECT * FROM article_list WHERE n_approve = 'Y' 
+        AND ((n_date_start = '' AND n_date_end = '')
+        OR (n_date_start != '' AND n_date_end = '')
+        OR ('2022-12-29 11:51' between n_date_start AND n_date_end))  AND n_id = '4361']
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 11:51:44] [IP:134.236.242.170]
+[Query:SELECT * FROM article_detail WHERE n_id = '4361' ORDER BY at_type_row ASC ]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 11:51:44] [IP:134.236.242.170]
+[Query:SELECT * FROM article_detail WHERE n_id = '4361' ORDER BY at_type_row ASC ]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 11:51:44] [IP:134.236.242.170]
+[Query:SELECT * FROM article_attach WHERE n_id = '4361' ]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 11:51:44] [IP:134.236.242.170]
+[Query:SELECT * FROM article_attach WHERE n_id = '4361' ]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 11:51:44] [IP:134.236.242.170]
+[Query:SELECT * FROM news_comment WHERE 1=1  AND news_id = '4361'  ORDER BY id_comment DESC]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 11:51:44] [IP:134.236.242.170]
+[Query:SELECT * FROM news_comment WHERE 1=1  AND news_id = '4361'  ORDER BY id_comment DESC]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 11:51:44] [IP:134.236.242.170]
+[Query:SELECT * FROM article_taglist WHERE  1=1 AND n_id = '4361'  ORDER BY taglist_id DESC]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 11:51:44] [IP:134.236.242.170]
+[Query:SELECT * FROM article_taglist WHERE  1=1 AND n_id = '4361'  ORDER BY taglist_id DESC]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 11:52:25] [IP:171.101.109.178]
+[Query:SELECT * FROM article_list WHERE n_approve = 'Y' 
+        AND ((n_date_start = '' AND n_date_end = '')
+        OR (n_date_start != '' AND n_date_end = '')
+        OR ('2022-12-29 11:52' between n_date_start AND n_date_end))  AND n_id = '4361']
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 11:52:25] [IP:171.101.109.178]
+[Query:SELECT * FROM article_list WHERE n_approve = 'Y' 
+        AND ((n_date_start = '' AND n_date_end = '')
+        OR (n_date_start != '' AND n_date_end = '')
+        OR ('2022-12-29 11:52' between n_date_start AND n_date_end))  AND n_id = '4361']
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 11:52:25] [IP:171.101.109.178]
+[Query:SELECT * FROM article_detail WHERE n_id = '4361' ORDER BY at_type_row ASC ]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 11:52:25] [IP:171.101.109.178]
+[Query:SELECT * FROM article_detail WHERE n_id = '4361' ORDER BY at_type_row ASC ]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 11:52:25] [IP:171.101.109.178]
+[Query:SELECT * FROM article_attach WHERE n_id = '4361' ]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 11:52:25] [IP:171.101.109.178]
+[Query:SELECT * FROM article_attach WHERE n_id = '4361' ]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 11:52:25] [IP:171.101.109.178]
+[Query:SELECT * FROM news_comment WHERE 1=1  AND news_id = '4361'  ORDER BY id_comment DESC]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 11:52:25] [IP:171.101.109.178]
+[Query:SELECT * FROM news_comment WHERE 1=1  AND news_id = '4361'  ORDER BY id_comment DESC]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 11:52:25] [IP:171.101.109.178]
+[Query:SELECT * FROM article_taglist WHERE  1=1 AND n_id = '4361'  ORDER BY taglist_id DESC]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 11:52:25] [IP:171.101.109.178]
+[Query:SELECT * FROM article_taglist WHERE  1=1 AND n_id = '4361'  ORDER BY taglist_id DESC]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 11:52:49] [IP:134.236.242.170]
+[Query:SELECT * FROM article_list WHERE n_approve = 'Y' 
+        AND ((n_date_start = '' AND n_date_end = '')
+        OR (n_date_start != '' AND n_date_end = '')
+        OR ('2022-12-29 11:52' between n_date_start AND n_date_end))  AND n_id = '4361']
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 11:52:49] [IP:134.236.242.170]
+[Query:SELECT * FROM article_list WHERE n_approve = 'Y' 
+        AND ((n_date_start = '' AND n_date_end = '')
+        OR (n_date_start != '' AND n_date_end = '')
+        OR ('2022-12-29 11:52' between n_date_start AND n_date_end))  AND n_id = '4361']
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 11:52:49] [IP:134.236.242.170]
+[Query:SELECT * FROM article_detail WHERE n_id = '4361' ORDER BY at_type_row ASC ]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 11:52:49] [IP:134.236.242.170]
+[Query:SELECT * FROM article_detail WHERE n_id = '4361' ORDER BY at_type_row ASC ]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 11:52:49] [IP:134.236.242.170]
+[Query:SELECT * FROM article_attach WHERE n_id = '4361' ]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 11:52:49] [IP:134.236.242.170]
+[Query:SELECT * FROM article_attach WHERE n_id = '4361' ]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 11:52:49] [IP:134.236.242.170]
+[Query:SELECT * FROM news_comment WHERE 1=1  AND news_id = '4361'  ORDER BY id_comment DESC]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 11:52:49] [IP:134.236.242.170]
+[Query:SELECT * FROM news_comment WHERE 1=1  AND news_id = '4361'  ORDER BY id_comment DESC]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 11:52:49] [IP:134.236.242.170]
+[Query:SELECT * FROM article_taglist WHERE  1=1 AND n_id = '4361'  ORDER BY taglist_id DESC]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 11:52:49] [IP:134.236.242.170]
+[Query:SELECT * FROM article_taglist WHERE  1=1 AND n_id = '4361'  ORDER BY taglist_id DESC]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 11:54:05] [IP:134.236.242.170]
+[Query:SELECT * FROM article_detail WHERE n_id = '4361' ORDER BY at_type_row ASC ]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 11:54:05] [IP:134.236.242.170]
+[Query:SELECT * FROM article_detail WHERE n_id = '4361' ORDER BY at_type_row ASC ]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 11:54:05] [IP:134.236.242.170]
+[Query:SELECT * FROM article_attach WHERE n_id = '4361' ]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 11:54:05] [IP:134.236.242.170]
+[Query:SELECT * FROM article_attach WHERE n_id = '4361' ]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 11:54:05] [IP:134.236.242.170]
+[Query:SELECT * FROM news_comment WHERE 1=1  AND news_id = '4361'  ORDER BY id_comment DESC]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 11:54:05] [IP:134.236.242.170]
+[Query:SELECT * FROM news_comment WHERE 1=1  AND news_id = '4361'  ORDER BY id_comment DESC]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 11:54:05] [IP:134.236.242.170]
+[Query:SELECT * FROM article_taglist WHERE  1=1 AND n_id = '4361'  ORDER BY taglist_id DESC]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 11:54:05] [IP:134.236.242.170]
+[Query:SELECT * FROM article_taglist WHERE  1=1 AND n_id = '4361'  ORDER BY taglist_id DESC]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 11:57:49] [IP:134.236.242.170]
+[Query:INSERT INTO stat_visitor (sv_url,sv_visitor,sv_menu,sv_ip,sv_timestamp,sv_date,sv_time,sv_country,sv_language,sv_new,sv_browser,sv_resolution,sv_domain,sv_isp,sv_region,sv_city,sv_latitude,sv_longitude,sv_referer,sv_search,sv_keyword,sv_os,sv_load,sv_member,sv_fullurl,sv_mem_id,sv_w3c,sv_country_code,sv_region_code,sv_device,sv_op,sv_session_id) VALUES ('page','','/dip_intranet/news_view.php?n_id=4361','134.236.242.170','20221229115749','2022-12-29','11:57:49','TH','th,en;q=0.9,en-US;q=0.8,th-TH;q=0.7,fr;q=0.6,pt;q=0.5','','Google Chrome','1920x1080','','AS131090 CAT TELECOM Public Company Ltd,CAT','Samut Prakan','Phra Pradaeng','13.6585','100.5336','','','','Windows 10','0','Y','https://203.151.166.134/dip_intranet/news_view.php?n_id=4361','1','','TH','20','1','','vrtpnps8jq88kakrpl90nhjsjf')]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 11:58:03] [IP:134.236.242.170]
+[Query:INSERT INTO stat_visitor (sv_url,sv_visitor,sv_menu,sv_ip,sv_timestamp,sv_date,sv_time,sv_country,sv_language,sv_new,sv_browser,sv_resolution,sv_domain,sv_isp,sv_region,sv_city,sv_latitude,sv_longitude,sv_referer,sv_search,sv_keyword,sv_os,sv_load,sv_member,sv_fullurl,sv_mem_id,sv_w3c,sv_country_code,sv_region_code,sv_device,sv_op,sv_session_id) VALUES ('page','','/dip_intranet/news_view.php?n_id=4361','134.236.242.170','20221229115802','2022-12-29','11:58:02','TH','th,en;q=0.9,en-US;q=0.8,th-TH;q=0.7,fr;q=0.6,pt;q=0.5','','Google Chrome','1920x1080','','AS131090 CAT TELECOM Public Company Ltd,CAT','Samut Prakan','Phra Pradaeng','13.6585','100.5336','','','','Windows 10','0','Y','https://203.151.166.134/dip_intranet/news_view.php?n_id=4361','1','','TH','20','1','','vrtpnps8jq88kakrpl90nhjsjf')]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 11:59:39] [IP:134.236.242.170]
+[Query:INSERT INTO stat_visitor (sv_url,sv_visitor,sv_menu,sv_ip,sv_timestamp,sv_date,sv_time,sv_country,sv_language,sv_new,sv_browser,sv_resolution,sv_domain,sv_isp,sv_region,sv_city,sv_latitude,sv_longitude,sv_referer,sv_search,sv_keyword,sv_os,sv_load,sv_member,sv_fullurl,sv_mem_id,sv_w3c,sv_country_code,sv_region_code,sv_device,sv_op,sv_session_id) VALUES ('page','','/dip_intranet/news_view.php?n_id=4361','134.236.242.170','20221229115939','2022-12-29','11:59:39','TH','th,en;q=0.9,en-US;q=0.8,th-TH;q=0.7,fr;q=0.6,pt;q=0.5','','Google Chrome','1920x1080','','AS131090 CAT TELECOM Public Company Ltd,CAT','Samut Prakan','Phra Pradaeng','13.6585','100.5336','','','','Windows 10','0','Y','https://203.151.166.134/dip_intranet/news_view.php?n_id=4361','1','','TH','20','1','','vrtpnps8jq88kakrpl90nhjsjf')]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 12:01:13] [IP:134.236.242.170]
+[Query:INSERT INTO stat_visitor (sv_url,sv_visitor,sv_menu,sv_ip,sv_timestamp,sv_date,sv_time,sv_country,sv_language,sv_new,sv_browser,sv_resolution,sv_domain,sv_isp,sv_region,sv_city,sv_latitude,sv_longitude,sv_referer,sv_search,sv_keyword,sv_os,sv_load,sv_member,sv_fullurl,sv_mem_id,sv_w3c,sv_country_code,sv_region_code,sv_device,sv_op,sv_session_id) VALUES ('page','','/dip_intranet/news_view.php?n_id=4354','134.236.242.170','20221229120112','2022-12-29','12:01:12','TH','th,en;q=0.9,en-US;q=0.8,th-TH;q=0.7,fr;q=0.6,pt;q=0.5','','Google Chrome','1920x1080','','AS131090 CAT TELECOM Public Company Ltd,CAT','Samut Prakan','Phra Pradaeng','13.6585','100.5336','','','','Windows 10','0','Y','https://203.151.166.134/dip_intranet/news_view.php?n_id=4354','1','','TH','20','1','','vrtpnps8jq88kakrpl90nhjsjf')]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 12:03:06] [IP:134.236.242.170]
+[Query:INSERT INTO stat_visitor (sv_url,sv_visitor,sv_menu,sv_ip,sv_timestamp,sv_date,sv_time,sv_country,sv_language,sv_new,sv_browser,sv_resolution,sv_domain,sv_isp,sv_region,sv_city,sv_latitude,sv_longitude,sv_referer,sv_search,sv_keyword,sv_os,sv_load,sv_member,sv_fullurl,sv_mem_id,sv_w3c,sv_country_code,sv_region_code,sv_device,sv_op,sv_session_id) VALUES ('page','','/dip_intranet/news_view.php?n_id=4354','134.236.242.170','20221229120305','2022-12-29','12:03:05','TH','th,en;q=0.9,en-US;q=0.8,th-TH;q=0.7,fr;q=0.6,pt;q=0.5','','Google Chrome','1920x1080','','AS131090 CAT TELECOM Public Company Ltd,CAT','Samut Prakan','Phra Pradaeng','13.6585','100.5336','','','','Windows 10','0','Y','https://203.151.166.134/dip_intranet/news_view.php?n_id=4354','1','','TH','20','1','','vrtpnps8jq88kakrpl90nhjsjf')]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 12:05:01] [IP:134.236.242.170]
+[Query:INSERT INTO stat_visitor (sv_url,sv_visitor,sv_menu,sv_ip,sv_timestamp,sv_date,sv_time,sv_country,sv_language,sv_new,sv_browser,sv_resolution,sv_domain,sv_isp,sv_region,sv_city,sv_latitude,sv_longitude,sv_referer,sv_search,sv_keyword,sv_os,sv_load,sv_member,sv_fullurl,sv_mem_id,sv_w3c,sv_country_code,sv_region_code,sv_device,sv_op,sv_session_id) VALUES ('page','','/dip_intranet/news_view.php?n_id=4354','134.236.242.170','20221229120500','2022-12-29','12:05:00','TH','th,en;q=0.9,en-US;q=0.8,th-TH;q=0.7,fr;q=0.6,pt;q=0.5','','Google Chrome','1920x1080','','AS131090 CAT TELECOM Public Company Ltd,CAT','Samut Prakan','Phra Pradaeng','13.6585','100.5336','','','','Windows 10','0','Y','https://203.151.166.134/dip_intranet/news_view.php?n_id=4354','1','','TH','20','1','','vrtpnps8jq88kakrpl90nhjsjf')]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 13:13:16] [IP:134.236.242.170]
+[Query:INSERT INTO stat_visitor (sv_url,sv_visitor,sv_menu,sv_ip,sv_timestamp,sv_date,sv_time,sv_country,sv_language,sv_new,sv_browser,sv_resolution,sv_domain,sv_isp,sv_region,sv_city,sv_latitude,sv_longitude,sv_referer,sv_search,sv_keyword,sv_os,sv_load,sv_member,sv_fullurl,sv_mem_id,sv_w3c,sv_country_code,sv_region_code,sv_device,sv_op,sv_session_id) VALUES ('page','','/dip_intranet/','134.236.242.170','20221229131315','2022-12-29','13:13:15','TH','th,en;q=0.9,en-US;q=0.8,th-TH;q=0.7,fr;q=0.6,pt;q=0.5','','Google Chrome','1920x1080','','AS131090 CAT TELECOM Public Company Ltd,CAT','Samut Prakan','Phra Pradaeng','13.6585','100.5336','','','','Windows 10','0','Y','https://203.151.166.134/dip_intranet/','1','','TH','20','1','','vrtpnps8jq88kakrpl90nhjsjf')]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 13:14:42] [IP:171.101.109.178]
+[Query:INSERT INTO stat_visitor (sv_url,sv_visitor,sv_menu,sv_ip,sv_timestamp,sv_date,sv_time,sv_country,sv_language,sv_new,sv_browser,sv_resolution,sv_domain,sv_isp,sv_region,sv_city,sv_latitude,sv_longitude,sv_referer,sv_search,sv_keyword,sv_os,sv_load,sv_member,sv_fullurl,sv_mem_id,sv_w3c,sv_country_code,sv_region_code,sv_device,sv_op,sv_session_id) VALUES ('page','','/dip_intranet/news_view.php?n_id=4354','171.101.109.178','20221229131442','2022-12-29','13:14:42','TH','th,en;q=0.9,en-US;q=0.8,th-TH;q=0.7,fr;q=0.6,pt;q=0.5','','Google Chrome','1920x1080','cm-171-101-109-178.revip11.asianet.co.th','AS17552 True Online','Bangkok','Bangkok','13.7540','100.5014','','','','Windows 10','0','Y','https://203.151.166.134/dip_intranet/news_view.php?n_id=4354','1','','TH','10','1','','vrtpnps8jq88kakrpl90nhjsjf')]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 13:35:52] [IP:171.101.109.178]
+[Query:INSERT INTO stat_visitor (sv_url,sv_visitor,sv_menu,sv_ip,sv_timestamp,sv_date,sv_time,sv_country,sv_language,sv_new,sv_browser,sv_resolution,sv_domain,sv_isp,sv_region,sv_city,sv_latitude,sv_longitude,sv_referer,sv_search,sv_keyword,sv_os,sv_load,sv_member,sv_fullurl,sv_mem_id,sv_w3c,sv_country_code,sv_region_code,sv_device,sv_op,sv_session_id) VALUES ('page','','/dip_intranet/news_view.php?n_id=4354','171.101.109.178','20221229133552','2022-12-29','13:35:52','TH','th,en;q=0.9,en-US;q=0.8,th-TH;q=0.7,fr;q=0.6,pt;q=0.5','','Google Chrome','1920x1080','cm-171-101-109-178.revip11.asianet.co.th','AS17552 True Online','Bangkok','Bangkok','13.7540','100.5014','','','','Windows 10','0','Y','https://203.151.166.134/dip_intranet/news_view.php?n_id=4354','1','','TH','10','1','','vrtpnps8jq88kakrpl90nhjsjf')]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 13:36:54] [IP:134.236.242.170]
+[Query:INSERT INTO stat_visitor (sv_url,sv_visitor,sv_menu,sv_ip,sv_timestamp,sv_date,sv_time,sv_country,sv_language,sv_new,sv_browser,sv_resolution,sv_domain,sv_isp,sv_region,sv_city,sv_latitude,sv_longitude,sv_referer,sv_search,sv_keyword,sv_os,sv_load,sv_member,sv_fullurl,sv_mem_id,sv_w3c,sv_country_code,sv_region_code,sv_device,sv_op,sv_session_id) VALUES ('page','','/dip_intranet/news_view.php?n_id=4354','134.236.242.170','20221229133653','2022-12-29','13:36:53','TH','th,en;q=0.9,en-US;q=0.8,th-TH;q=0.7,fr;q=0.6,pt;q=0.5','','Google Chrome','1920x1080','','AS131090 CAT TELECOM Public Company Ltd,CAT','Samut Prakan','Phra Pradaeng','13.6585','100.5336','','','','Windows 10','0','Y','https://203.151.166.134/dip_intranet/news_view.php?n_id=4354','1','','TH','20','1','','vrtpnps8jq88kakrpl90nhjsjf')]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 13:44:06] [IP:134.236.242.170]
+[Query:INSERT INTO stat_visitor (sv_url,sv_visitor,sv_menu,sv_ip,sv_timestamp,sv_date,sv_time,sv_country,sv_language,sv_new,sv_browser,sv_resolution,sv_domain,sv_isp,sv_region,sv_city,sv_latitude,sv_longitude,sv_referer,sv_search,sv_keyword,sv_os,sv_load,sv_member,sv_fullurl,sv_mem_id,sv_w3c,sv_country_code,sv_region_code,sv_device,sv_op,sv_session_id) VALUES ('page','','/dip_intranet/','134.236.242.170','20221229134405','2022-12-29','13:44:05','TH','th,en;q=0.9,en-US;q=0.8,th-TH;q=0.7,fr;q=0.6,pt;q=0.5','','Google Chrome','1920x1080','','AS131090 CAT TELECOM Public Company Ltd,CAT','Samut Prakan','Phra Pradaeng','13.6585','100.5336','','','','Windows 10','0','Y','https://203.151.166.134/dip_intranet/','1','','TH','20','1','','vrtpnps8jq88kakrpl90nhjsjf')]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 13:44:56] [IP:134.236.242.170]
+[Query:INSERT INTO stat_visitor (sv_url,sv_visitor,sv_menu,sv_ip,sv_timestamp,sv_date,sv_time,sv_country,sv_language,sv_new,sv_browser,sv_resolution,sv_domain,sv_isp,sv_region,sv_city,sv_latitude,sv_longitude,sv_referer,sv_search,sv_keyword,sv_os,sv_load,sv_member,sv_fullurl,sv_mem_id,sv_w3c,sv_country_code,sv_region_code,sv_device,sv_op,sv_session_id) VALUES ('page','','/dip_intranet/','134.236.242.170','20221229134456','2022-12-29','13:44:56','TH','th,en;q=0.9,en-US;q=0.8,th-TH;q=0.7,fr;q=0.6,pt;q=0.5','','Google Chrome','1920x1080','','AS131090 CAT TELECOM Public Company Ltd,CAT','Samut Prakan','Phra Pradaeng','13.6585','100.5336','','','','Windows 10','0','Y','https://203.151.166.134/dip_intranet/','1','','TH','20','1','','vrtpnps8jq88kakrpl90nhjsjf')]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 13:45:43] [IP:134.236.242.170]
+[Query:INSERT INTO stat_visitor (sv_url,sv_visitor,sv_menu,sv_ip,sv_timestamp,sv_date,sv_time,sv_country,sv_language,sv_new,sv_browser,sv_resolution,sv_domain,sv_isp,sv_region,sv_city,sv_latitude,sv_longitude,sv_referer,sv_search,sv_keyword,sv_os,sv_load,sv_member,sv_fullurl,sv_mem_id,sv_w3c,sv_country_code,sv_region_code,sv_device,sv_op,sv_session_id) VALUES ('page','','/dip_intranet/','134.236.242.170','20221229134543','2022-12-29','13:45:43','TH','th,en;q=0.9,en-US;q=0.8,th-TH;q=0.7,fr;q=0.6,pt;q=0.5','','Google Chrome','1920x1080','','AS131090 CAT TELECOM Public Company Ltd,CAT','Samut Prakan','Phra Pradaeng','13.6585','100.5336','','','','Windows 10','0','Y','https://203.151.166.134/dip_intranet/','1','','TH','20','1','','vrtpnps8jq88kakrpl90nhjsjf')]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 13:48:20] [IP:134.236.242.170]
+[Query:INSERT INTO stat_visitor (sv_url,sv_visitor,sv_menu,sv_ip,sv_timestamp,sv_date,sv_time,sv_country,sv_language,sv_new,sv_browser,sv_resolution,sv_domain,sv_isp,sv_region,sv_city,sv_latitude,sv_longitude,sv_referer,sv_search,sv_keyword,sv_os,sv_load,sv_member,sv_fullurl,sv_mem_id,sv_w3c,sv_country_code,sv_region_code,sv_device,sv_op,sv_session_id) VALUES ('page','','/dip_intranet/','134.236.242.170','20221229134820','2022-12-29','13:48:20','TH','th,en;q=0.9,en-US;q=0.8,th-TH;q=0.7,fr;q=0.6,pt;q=0.5','','Google Chrome','1920x1080','','AS131090 CAT TELECOM Public Company Ltd,CAT','Samut Prakan','Phra Pradaeng','13.6585','100.5336','','','','Windows 10','0','Y','https://203.151.166.134/dip_intranet/','1','','TH','20','1','','vrtpnps8jq88kakrpl90nhjsjf')]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 13:48:30] [IP:134.236.242.170]
+[Query:INSERT INTO stat_visitor (sv_url,sv_visitor,sv_menu,sv_ip,sv_timestamp,sv_date,sv_time,sv_country,sv_language,sv_new,sv_browser,sv_resolution,sv_domain,sv_isp,sv_region,sv_city,sv_latitude,sv_longitude,sv_referer,sv_search,sv_keyword,sv_os,sv_load,sv_member,sv_fullurl,sv_mem_id,sv_w3c,sv_country_code,sv_region_code,sv_device,sv_op,sv_session_id) VALUES ('page','','/dip_intranet/','134.236.242.170','20221229134830','2022-12-29','13:48:30','TH','th,en;q=0.9,en-US;q=0.8,th-TH;q=0.7,fr;q=0.6,pt;q=0.5','','Google Chrome','1920x1080','','AS131090 CAT TELECOM Public Company Ltd,CAT','Samut Prakan','Phra Pradaeng','13.6585','100.5336','','','','Windows 10','0','Y','https://203.151.166.134/dip_intranet/','1','','TH','20','1','','vrtpnps8jq88kakrpl90nhjsjf')]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 13:50:54] [IP:134.236.242.170]
+[Query:INSERT INTO stat_visitor (sv_url,sv_visitor,sv_menu,sv_ip,sv_timestamp,sv_date,sv_time,sv_country,sv_language,sv_new,sv_browser,sv_resolution,sv_domain,sv_isp,sv_region,sv_city,sv_latitude,sv_longitude,sv_referer,sv_search,sv_keyword,sv_os,sv_load,sv_member,sv_fullurl,sv_mem_id,sv_w3c,sv_country_code,sv_region_code,sv_device,sv_op,sv_session_id) VALUES ('page','','/dip_intranet/','134.236.242.170','20221229135054','2022-12-29','13:50:54','TH','th,en;q=0.9,en-US;q=0.8,th-TH;q=0.7,fr;q=0.6,pt;q=0.5','','Google Chrome','1920x1080','','AS131090 CAT TELECOM Public Company Ltd,CAT','Samut Prakan','Phra Pradaeng','13.6585','100.5336','','','','Windows 10','0','Y','https://203.151.166.134/dip_intranet/','1','','TH','20','1','','vrtpnps8jq88kakrpl90nhjsjf')]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 13:52:48] [IP:171.101.109.178]
+[Query:INSERT INTO stat_visitor (sv_url,sv_visitor,sv_menu,sv_ip,sv_timestamp,sv_date,sv_time,sv_country,sv_language,sv_new,sv_browser,sv_resolution,sv_domain,sv_isp,sv_region,sv_city,sv_latitude,sv_longitude,sv_referer,sv_search,sv_keyword,sv_os,sv_load,sv_member,sv_fullurl,sv_mem_id,sv_w3c,sv_country_code,sv_region_code,sv_device,sv_op,sv_session_id) VALUES ('page','','/dip_intranet/news_view.php?n_id=4354','171.101.109.178','20221229135248','2022-12-29','13:52:48','TH','th,en;q=0.9,en-US;q=0.8,th-TH;q=0.7,fr;q=0.6,pt;q=0.5','','Google Chrome','1920x1080','cm-171-101-109-178.revip11.asianet.co.th','AS17552 True Online','Bangkok','Bangkok','13.7540','100.5014','','','','Windows 10','0','Y','https://203.151.166.134/dip_intranet/news_view.php?n_id=4354','1','','TH','10','1','','vrtpnps8jq88kakrpl90nhjsjf')]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 13:53:03] [IP:171.101.109.178]
+[Query:INSERT INTO stat_visitor (sv_url,sv_visitor,sv_menu,sv_ip,sv_timestamp,sv_date,sv_time,sv_country,sv_language,sv_new,sv_browser,sv_resolution,sv_domain,sv_isp,sv_region,sv_city,sv_latitude,sv_longitude,sv_referer,sv_search,sv_keyword,sv_os,sv_load,sv_member,sv_fullurl,sv_mem_id,sv_w3c,sv_country_code,sv_region_code,sv_device,sv_op,sv_session_id) VALUES ('page','','/dip_intranet/news_view.php?n_id=4354','171.101.109.178','20221229135303','2022-12-29','13:53:03','TH','th,en;q=0.9,en-US;q=0.8,th-TH;q=0.7,fr;q=0.6,pt;q=0.5','','Google Chrome','1920x1080','cm-171-101-109-178.revip11.asianet.co.th','AS17552 True Online','Bangkok','Bangkok','13.7540','100.5014','','','','Windows 10','0','Y','https://203.151.166.134/dip_intranet/news_view.php?n_id=4354','1','','TH','10','1','','vrtpnps8jq88kakrpl90nhjsjf')]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 13:54:00] [IP:171.101.109.178]
+[Query:INSERT INTO stat_visitor (sv_url,sv_visitor,sv_menu,sv_ip,sv_timestamp,sv_date,sv_time,sv_country,sv_language,sv_new,sv_browser,sv_resolution,sv_domain,sv_isp,sv_region,sv_city,sv_latitude,sv_longitude,sv_referer,sv_search,sv_keyword,sv_os,sv_load,sv_member,sv_fullurl,sv_mem_id,sv_w3c,sv_country_code,sv_region_code,sv_device,sv_op,sv_session_id) VALUES ('page','','/dip_intranet/news_view.php?n_id=4354','171.101.109.178','20221229135359','2022-12-29','13:53:59','TH','th,en;q=0.9,en-US;q=0.8,th-TH;q=0.7,fr;q=0.6,pt;q=0.5','','Google Chrome','1920x1080','cm-171-101-109-178.revip11.asianet.co.th','AS17552 True Online','Bangkok','Bangkok','13.7540','100.5014','','','','Windows 10','0','Y','https://203.151.166.134/dip_intranet/news_view.php?n_id=4354','1','','TH','10','1','','vrtpnps8jq88kakrpl90nhjsjf')]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-29 14:00:27] [IP:134.236.242.170]
+[Query:INSERT INTO stat_visitor (sv_url,sv_visitor,sv_menu,sv_ip,sv_timestamp,sv_date,sv_time,sv_country,sv_language,sv_new,sv_browser,sv_resolution,sv_domain,sv_isp,sv_region,sv_city,sv_latitude,sv_longitude,sv_referer,sv_search,sv_keyword,sv_os,sv_load,sv_member,sv_fullurl,sv_mem_id,sv_w3c,sv_country_code,sv_region_code,sv_device,sv_op,sv_session_id) VALUES ('page','','/dip_intranet/','134.236.242.170','20221229140027','2022-12-29','14:00:27','TH','th,en;q=0.9,en-US;q=0.8,th-TH;q=0.7,fr;q=0.6,pt;q=0.5','','Google Chrome','1920x1080','','AS131090 CAT TELECOM Public Company Ltd,CAT','Samut Prakan','Phra Pradaeng','13.6585','100.5336','','','','Windows 10','0','Y','https://203.151.166.134/dip_intranet/','1','','TH','20','1','','vrtpnps8jq88kakrpl90nhjsjf')]
+[Error Code:]
+[Error Massage:]
+====================================

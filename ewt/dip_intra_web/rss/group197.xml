@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+	<rss version="2.0">
+	<channel>
+		  <title>การวิจัยและให้คำปรึกษา</title> 
+		  <link>http://203.150.224.57/ewtadmin86_gistda/ewt/gistda_web/</link> 
+		  <description>สำนักงานพัฒนาเทคโนโลยีอวกาศและภูมิสารสนเทศ (องค์การมหาชน) </description> 
+		  <language>th-TH</language> 
+		  <lastBuildDate>Fri,06 Aug 2021 17:23:03 Asia/Bangkok</lastBuildDate> 
+		  <copyright>Copyright ? 2008 All rights reserved. http://203.150.224.57/ewtadmin86_gistda/ewt/gistda_web/</copyright> 
+	<item>
+					<title>Business Incubation</title>
+					<link>http://203.150.224.57/ewtadmin86_gistda/ewt/gistda_web/news_view.php?n_id=2339</link>
+					<enclosure url="http://203.150.224.57/ewtadmin86_gistda/ewt/gistda_web/images/article/news2339/n20210806_2339.jpg" />
+					<description></description>
+					<pubDate>2021-08-06 17:04:33</pubDate>
+					<guid>http://203.150.224.57/ewtadmin86_gistda/ewt/gistda_web/</guid>
+	            </item>
+				<item>
+					<title>GIS</title>
+					<link>http://203.150.224.57/ewtadmin86_gistda/ewt/gistda_web/news_view.php?n_id=2338</link>
+					<enclosure url="http://203.150.224.57/ewtadmin86_gistda/ewt/gistda_web/images/article/news2338/n20210806_2338.jpg" />
+					<description></description>
+					<pubDate>2021-08-06 17:23:03</pubDate>
+					<guid>http://203.150.224.57/ewtadmin86_gistda/ewt/gistda_web/</guid>
+	            </item>
+				<item>
+					<title>Innovation in Space</title>
+					<link>http://203.150.224.57/ewtadmin86_gistda/ewt/gistda_web/news_view.php?n_id=2337</link>
+					<enclosure url="http://203.150.224.57/ewtadmin86_gistda/ewt/gistda_web/images/article/news2337/n20210806_2337.jpg" />
+					<description></description>
+					<pubDate>2021-08-06 13:29:30</pubDate>
+					<guid>http://203.150.224.57/ewtadmin86_gistda/ewt/gistda_web/</guid>
+	            </item>
+				<item>
+					<title>Astrolab</title>
+					<link>http://203.150.224.57/ewtadmin86_gistda/ewt/gistda_web/news_view.php?n_id=2325</link>
+					<enclosure url="http://203.150.224.57/ewtadmin86_gistda/ewt/gistda_web/images/article/news2325/n20210805_2325.jpg" />
+					<description></description>
+					<pubDate>2021-08-05 16:45:13</pubDate>
+					<guid>http://203.150.224.57/ewtadmin86_gistda/ewt/gistda_web/</guid>
+	            </item>
+				<item>
+					<title>National Space Experiment</title>
+					<link>http://203.150.224.57/ewtadmin86_gistda/ewt/gistda_web/news_view.php?n_id=2324</link>
+					<enclosure url="http://203.150.224.57/ewtadmin86_gistda/ewt/gistda_web/images/article/news2324/n20210805_2324.jpg" />
+					<description></description>
+					<pubDate>2021-08-05 16:45:32</pubDate>
+					<guid>http://203.150.224.57/ewtadmin86_gistda/ewt/gistda_web/</guid>
+	            </item>
+				</channel>
+	</rss>
+	

@@ -1,0 +1,55 @@
+<?php
+function getIP(){
+  $ipaddress = '';
+  if (getenv('HTTP_CLIENT_IP'))
+      $ipaddress = getenv('HTTP_CLIENT_IP');
+  else if(getenv('HTTP_X_FORWARDED_FOR'))
+      $ipaddress = getenv('HTTP_X_FORWARDED_FOR');
+  else if(getenv('HTTP_X_FORWARDED'))
+      $ipaddress = getenv('HTTP_X_FORWARDED');
+  else if(getenv('HTTP_FORWARDED_FOR'))
+      $ipaddress = getenv('HTTP_FORWARDED_FOR');
+  else if(getenv('HTTP_FORWARDED'))
+      $ipaddress = getenv('HTTP_FORWARDED');
+  else if(getenv('REMOTE_ADDR'))
+      $ipaddress = getenv('REMOTE_ADDR');
+  else
+      $ipaddress = 'UNKNOWN';
+  return $ipaddress;
+}
+
+
+function ip_hostname($ip) {
+    $json = file_get_contents("http://ipinfo.io/{$ip}");
+    $details = json_decode($json); // HERE!!!
+    return $details;
+}
+
+
+function ip_detail($ip) {
+	
+$url = "https://api.ipdata.co/{$ip}?api-key=4a1c949c4318dd2a0293a95d9e9d383d3576ee46fe3ceaea8cd16960";
+//  Initiate curl
+$ch = curl_init();
+// Disable SSL verification
+curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+// Will return the response, if false it print the response
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+// Set the url
+curl_setopt($ch, CURLOPT_URL,$url);
+// Execute
+$result = curl_exec($ch); 
+
+if(!$result){
+	die("Connection Failure");
+	}
+// Closing
+curl_close($ch);
+// Will dump a beauty json :3
+//var_dump(json_decode($result, true));
+$array = json_decode($result, true);
+
+ return $array;
+}
+
+?>

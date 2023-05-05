@@ -1,0 +1,78 @@
+<playlist version="1" xmlns="http://xspf.org/ns/0/">
+	<title>Sample XSPF Playlist</title>
+	<info>http://www.jeroenwijering.com/?item=Flash_Media_Player</info>
+	<annotation>Sample playlist for the media player in XSPF format</annotation>
+	<trackList>
+
+		<track>
+			<title>9 เธเธงเธฒเธกเธชเธธเธเน€เธเธทเนเธญเนเธเนเธเธ”เธดเธ</title>
+			<creator>เธเธฃเธฃเธเน€เธเธทเนเธญเนเธเนเธเธ”เธดเธ</creator>
+			<location>http://www.ppd.or.th/images/flv/p_title.jpg</location>
+			<info>http://www.ppd.or.th</info>
+		</track>
+
+		<track>
+			<title>เธเธฃเธฐเธเธฒเธจเน€เธเธ•เธเธฒเธฃเธกเธ“เนเน€เธเธทเนเธญเนเธเนเธเธ”เธดเธ เธ•เธญเธเธ—เธตเน 1</title>
+			<location>http://www.ppd.or.th/images/flv/concept_01.swf</location>
+			<creator>เธเธฃเธฃเธเน€เธเธทเนเธญเนเธเนเธเธ”เธดเธ</creator>
+			<info>http://www.ppd.or.th/main.php?filename=infomation_11_9_2550</info>
+		</track>
+		
+		<track>
+			<title>เธเธฃเธฐเธเธฒเธจเน€เธเธ•เธเธฒเธฃเธกเธ“เนเน€เธเธทเนเธญเนเธเนเธเธ”เธดเธ เธ•เธญเธเธ—เธตเน 2</title>
+			<location>http://www.ppd.or.th/images/flv/concept_02.swf</location>
+			<creator>เธเธฃเธฃเธเน€เธเธทเนเธญเนเธเนเธเธ”เธดเธ</creator>
+			<info>http://www.ppd.or.th/main.php?filename=infomation_11_9_2550</info>
+		</track>
+		
+		<track>
+			<title>เธเธฃเธฐเธเธฒเธจเน€เธเธ•เธเธฒเธฃเธกเธ“เนเน€เธเธทเนเธญเนเธเนเธเธ”เธดเธ เธ•เธญเธเธ—เธตเน 3</title>
+			<location>http://www.ppd.or.th/images/flv/concept_03.swf</location>
+			<creator>เธเธฃเธฃเธเน€เธเธทเนเธญเนเธเนเธเธ”เธดเธ</creator>
+			<info>http://www.ppd.or.th/main.php?filename=infomation_11_9_2550</info>
+		</track>
+
+		<track>
+			<title>เธเธฃเธฐเธเธฒเธจเน€เธเธ•เธเธฒเธฃเธกเธ“เนเน€เธเธทเนเธญเนเธเนเธเธ”เธดเธ เธ•เธญเธเธ—เธตเน 4</title>
+			<location>http://www.ppd.or.th/images/flv/concept_04.swf</location>
+			<creator>เธเธฃเธฃเธเน€เธเธทเนเธญเนเธเนเธเธ”เธดเธ</creator>
+			<info>http://www.ppd.or.th/main.php?filename=infomation_11_9_2550</info>
+		</track>
+
+		<track>
+			<title>เน€เธเธดเธ”เธ—เธตเนเธ—เธณเธเธฒเธฃเธเธฃเธฃเธเน€เธเธทเนเธญเนเธเนเธเธ”เธดเธ</title>
+			<location>http://www.ppd.or.th/images/flv/openning.swf</location>
+			<creator>เธเธฃเธฃเธเน€เธเธทเนเธญเนเธเนเธเธ”เธดเธ</creator>
+			<info>http://www.ppd.or.th/main.php?filename=infomation_9_10_2550</info>
+		</track>
+
+		<track>
+			<title>เน€เธเธดเธ”เธ•เธฑเธงเธเธนเนเธชเธกเธฑเธเธฃ เธช.เธช. เธเธญเธเธเธฃเธฃเธเธฏ เธ•เธญเธเธ—เธต 1</title>
+			<location>http://www.ppd.or.th/images/flv/conferance_01.swf</location>
+			<creator>เธเธฃเธฃเธเน€เธเธทเนเธญเนเธเนเธเธ”เธดเธ</creator>
+			<info>http://www.ppd.or.th/main.php?filename=infomation_18_10_2550</info>
+		</track>
+
+		<track>
+			<title>เน€เธเธดเธ”เธ•เธฑเธงเธเธนเนเธชเธกเธฑเธเธฃ เธช.เธช. เธเธญเธเธเธฃเธฃเธเธฏ เธ•เธญเธเธ—เธต 2</title>
+			<location>http://www.ppd.or.th/images/flv/conferance_02.swf</location>
+			<creator>เธเธฃเธฃเธเน€เธเธทเนเธญเนเธเนเธเธ”เธดเธ</creator>
+			<info>http://www.ppd.or.th/main.php?filename=infomation_18_10_2550</info>
+		</track>
+
+		<track>
+			<title>เน€เธเธดเธ”เธ•เธฑเธงเธเธนเนเธชเธกเธฑเธเธฃ เธช.เธช. เธเธญเธเธเธฃเธฃเธเธฏ เธ•เธญเธเธ—เธต 3</title>
+			<location>http://www.ppd.or.th/images/flv/conferance_03.swf</location>
+			<creator>เธเธฃเธฃเธเน€เธเธทเนเธญเนเธเนเธเธ”เธดเธ</creator>
+			<info>http://www.ppd.or.th/main.php?filename=infomation_18_10_2550</info>
+		</track>
+
+		<track>
+			<title>เน€เธเธดเธ”เธ•เธฑเธงเธเธนเนเธชเธกเธฑเธเธฃ เธช.เธช. เธเธญเธเธเธฃเธฃเธเธฏ เธ•เธญเธเธ—เธต 4</title>
+			<location>http://www.ppd.or.th/images/flv/conferance_04.swf</location>
+			<creator>เธเธฃเธฃเธเน€เธเธทเนเธญเนเธเนเธเธ”เธดเธ</creator>
+			<info>http://www.ppd.or.th/main.php?filename=infomation_18_10_2550</info>
+		</track>
+
+	</trackList>
+</playlist>

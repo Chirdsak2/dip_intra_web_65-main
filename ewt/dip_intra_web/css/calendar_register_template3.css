@@ -1,0 +1,30 @@
+h1,h2,h3,h4,h5,h6{
+	color:#FFF;
+}
+.nonselect_date{
+  color: #F2F2F2 !important;
+}
+.selectable_date{
+  color: #000000 !important;
+}
+.input-group-addon {
+  padding: 6px 12px;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 1;
+  color: #555;
+  text-align: center;
+  background-color: #ab9c9c;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+/*.table-condensed {
+  width: 100%;
+}
+.datepicker-switch{
+  text-align:center !important;
+}*/
+
+.headq, .txtq , .checkbox, .marginbottom15{
+	font-size: 22px;
+}

@@ -1,0 +1,238 @@
+
+
+body{
+    font-family: 'Prompt-light', sans-serif;
+    font-size: 16px;
+    background: url(../../assets/img/bg1.jpg);
+    height:100vh;
+    background-size:cover;
+    position:relative;
+}
+
+a{
+    color: #6f7a85;
+    text-decoration: none;
+    background-color: transparent;
+}
+.login-dark form {
+  max-width: 317px;
+  width:100%;
+  background-color:#ffffff; /* #1e2833 */
+  padding: 6px;
+  border-radius:10px;
+  transform:translate(-50%, -50%);
+  position:absolute;
+  top: 45%;
+  left: 52%;
+  color:#FFF;
+  font-weight: 600;
+  box-shadow:0px 1px 4px rgba(0,0,0,0.2);
+}   
+
+@media (min-width: 768px) { 
+  .login-dark form {
+    max-width:400px;
+  }   
+ }
+
+.welcome{
+  font-size: 22px;
+  color: #f9bc0e;
+  margin-bottom: -10px;
+}
+.diprom{
+  font-size: 53px;
+  font-weight: 600;
+  letter-spacing: 3px;
+  color: #3a1072;
+}
+.diprom-fullname{
+  font-size: 12px;
+  color: #3a1072;
+  margin-top: -10px;
+  letter-spacing: -1px;
+}
+
+.login-dark .illustration {
+  text-align:center;
+  padding:15px 0 20px;
+
+}
+
+.login-dark form .form-control {
+  background:none;
+  border:none;
+  /*border-bottom:1px solid #434a52;
+  border-radius:0;*/
+  border: 1px solid #981c9d;
+  border-radius: 5px;
+  box-shadow:none;
+  outline:none;
+  /*color:inherit;*/
+  color: #891c9d;
+  padding: 20px;
+}
+
+.login-dark form .btn-primary {
+  /*background:#214a80;*/
+  background: -webkit-linear-gradient(90deg, #82288c 0%, #ff54ff 100%);
+  border:none;
+  border-radius:4px;
+  padding:11px;
+  box-shadow:none;
+  margin-top:26px;
+  text-shadow:none;
+  outline:none;
+}
+
+.login-dark form .btn-primary:hover, .login-dark form .btn-primary:active {
+  /*background:#214a80;*/
+  background: -webkit-linear-gradient(90deg,#ff54ff 0%, #82288c 100%);
+  transition: ease-in-out 0.3s;
+  outline:none;
+}
+
+.login-dark form .forgot {
+  text-align:center;
+  color:#3a1072; /*#6f7a85*/
+  opacity:0.9;
+  text-decoration:none;
+}
+
+.login-dark form .forgot:hover, .login-dark form .forgot:active {
+  opacity:1;
+  text-decoration:none;
+}
+
+.login-dark form .btn-primary:active {
+  transform:translateY(1px);
+}
+
+.red-text{
+    color: red;
+}
+
+.modal-footer {
+    justify-content: center!important;
+}
+
+.btn--submit{
+    border:2px solid #8C517D;
+    border-radius: 50px;
+    color: #8C517D;
+    padding: 3px 15px;
+}
+
+.btn--cancel{
+    border:2px solid #cccccc;
+    border-radius: 50px;
+    color: #837575;
+    padding: 3px 15px;
+}
+
+
+.btn--submit:hover{
+    background: #8C517D;
+    border-radius: 50px;
+    color: #FFF;
+    padding: 3px 15px;
+}
+
+.btn--cancel:hover{
+    background: #cccccc;
+    border-radius: 50px;
+    color: #FFF;
+    padding: 3px 15px;
+}
+
+.feild--form{
+    width: 100%;
+    border: 1px solid #ede8e8;
+    border-radius: 0px;
+    font-size: 14px;
+    display: block;
+    padding: 10px 15px;
+}
+label {
+    display: inline-block;
+    margin-bottom: 0.5rem;
+    font-size: 13px;
+    color: #8C517D;
+
+    font-weight: 600;
+}
+
+.modal-title{
+    font-weight: 600;
+}
+
+.alert-success {
+    color: #194031;
+     background-color: #FFF; 
+    border-color: #194031;
+
+}
+
+.alert-danger {
+    color: #8C1F1F;
+    background-color: #FFF; 
+    border-color: #8C1F1F;
+}
+
+.re-captcha{
+	background-color: #f0ad4e;
+	color: #fff;
+	text-align: center;
+    padding: 5px 10px;
+    border-radius: 0px 0px 15px 15px;
+}
+.bg-captcha{
+	background-color: #e1fffe;
+	
+}
+.gray-color{
+	color: #5e6974;
+}
+
+/****************** Position Contact *******************/
+/* Fixed/sticky icon bar (vertically aligned 50% from the top of the screen) */
+.icon-bar {
+    right: 85px;
+  position: fixed;
+    z-index: 200;
+  /*top: 50%;*/
+  bottom: -18px;
+    display: flex;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+/* Style the icon bar links */
+.icon-bar a {
+  display: block;
+  text-align: center;
+  padding: 11px 21px;
+  transition: all 0.3s ease;
+  color: white;
+  font-size: 9px;
+    margin-right: 10px;
+}
+
+/* Style the social media icons with color, if you want */
+.icon-bar a:hover {
+  background-color: #000;
+}
+
+.contact--bg {
+    background: #260273;
+    color: white;
+    border-radius: 5px;
+    margin-top: 10px;
+	border-radius: 50%;
+    box-shadow: 2px 0px 20px 0px #110628;
+}
+
+.filter-white{
+        filter: invert(100%) brightness(118%);
+    }

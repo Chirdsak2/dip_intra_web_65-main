@@ -1,0 +1,30 @@
+// solution 1:
+        .datepicker {
+            font-size: 0.875em;
+        }
+        /* solution 2: the original datepicker use 20px so replace with the following:*/
+        
+        .datepicker td, .datepicker th {
+            width: 1.5em;
+            height: 1.5em;
+        }
+
+
+.badge-search{
+    padding: 5px 15px;
+    font-size: 12px;
+    border: 1px solid #5b5aa8;
+    color: #5b5aa8;
+    box-shadow: 0px 0px 20px 2px #cccccc;
+    margin-bottom: 10px;
+}
+.block-search{
+    padding: 10px 15px;
+    box-shadow: 0px 0px 15px 4px #eeeeee;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+.search-tag{
+    background: #ffe944;
+    font-style: italic;
+}

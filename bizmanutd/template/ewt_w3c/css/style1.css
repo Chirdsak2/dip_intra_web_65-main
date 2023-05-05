@@ -1,0 +1,22 @@
+body, table, th, td, p, div, span {
+	font-family: "MS Sans Serif";
+	font-size:14px;
+}
+
+h2 {
+	font-family: "Times New Roman";
+}
+a {
+	font-family: "MS Sans Serif";
+	font-size: 14px;
+	text-decoration:blink;
+}
+a:link {
+	color: #0000FF;
+} 
+a:vlink {
+	color: #0000FF;
+} 
+a:hover {
+	color: #FF6600;
+} 

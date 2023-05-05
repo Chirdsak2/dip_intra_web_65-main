@@ -1,0 +1,20 @@
+[Date:2023-03-12 10:39:47] [IP:49.229.175.95]
+[Query:SELECT sv_id FROM stat_visitor WHERE sv_ip = '49.229.175.95' AND sv_new = 'Y' LIMIT 0,1 ]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2023-03-12 10:39:47] [IP:49.229.175.95]
+[Query:SELECT sv_id FROM stat_visitor WHERE sv_ip = '49.229.175.95' AND sv_new = 'Y' LIMIT 0,1 ]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2023-03-12 10:39:47] [IP:49.229.175.95]
+[Query:INSERT INTO stat_visitor (sv_url,sv_visitor,sv_menu,sv_ip,sv_timestamp,sv_date,sv_time,sv_country,sv_language,sv_new,sv_browser,sv_resolution,sv_domain,sv_isp,sv_region,sv_city,sv_latitude,sv_longitude,sv_referer,sv_search,sv_keyword,sv_os,sv_load,sv_member,sv_fullurl,sv_mem_id,sv_w3c,sv_country_code,sv_region_code,sv_device,sv_op,sv_session_id) VALUES ('page','Y','/dip_intranet/index.php','49.229.175.95','20230312103947','2023-03-12','10:39:47','TH','en,th;q=0.9,en-US;q=0.8','Y','Google Chrome','1536x864','','AS131445 Advance Wireless Network','Bangkok','Bangkok','13.7540','100.5014','http://203.151.166.134/dip_intranet/index.php','','','Windows 10','0','Y','https://203.151.166.134/dip_intranet/index.php','1','','TH','10','1','','p5i6cbmnoeqd6h7gjae0sk7phc')]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2023-03-12 10:39:56] [IP:49.229.175.95]
+[Query:INSERT INTO stat_visitor (sv_url,sv_visitor,sv_menu,sv_ip,sv_timestamp,sv_date,sv_time,sv_country,sv_language,sv_new,sv_browser,sv_resolution,sv_domain,sv_isp,sv_region,sv_city,sv_latitude,sv_longitude,sv_referer,sv_search,sv_keyword,sv_os,sv_load,sv_member,sv_fullurl,sv_mem_id,sv_w3c,sv_country_code,sv_region_code,sv_device,sv_op,sv_session_id) VALUES ('page','','/dip_intranet/more_form.php','49.229.175.95','20230312103956','2023-03-12','10:39:56','TH','en,th;q=0.9,en-US;q=0.8','','Google Chrome','1536x864','','AS131445 Advance Wireless Network','Bangkok','Bangkok','13.7540','100.5014','','','','Windows 10','0','Y','https://203.151.166.134/dip_intranet/more_form.php','1','','TH','10','1','','p5i6cbmnoeqd6h7gjae0sk7phc')]
+[Error Code:]
+[Error Massage:]
+====================================

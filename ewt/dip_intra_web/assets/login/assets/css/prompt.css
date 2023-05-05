@@ -1,0 +1,33 @@
+@font-face {
+	font-family: 'Prompt-regular';
+	src: url('../fonts/Prompt/Prompt-Regular.eot');
+	src: local('☺'), 
+        url('../fonts/Prompt/Prompt-Regular.woff') format('woff'), 
+        url('../fonts/Prompt/Prompt-Regular.ttf') format('truetype'), 
+        url('../fonts/Prompt/Prompt-Regular.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+
+@font-face {
+	font-family: 'Prompt-light';
+	src: url('../fonts/Prompt/Prompt-Light.eot');
+	src: local('☺'), 
+        url('../fonts/Prompt/Prompt-Light.woff') format('woff'), 
+        url('../fonts/Prompt/Prompt-Light.ttf') format('truetype'), 
+        url('../fonts/Prompt/Prompt-Light.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Prompt-bold';
+	src: url('../fonts/Prompt/Prompt-Bold.eot');
+	src: local('☺'), 
+        url('../fonts/Prompt/Prompt-Bold.woff') format('woff'), 
+        url('../fonts/Prompt/Prompt-Bold.ttf') format('truetype'), 
+        url('../fonts/Prompt/Prompt-Bold.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}

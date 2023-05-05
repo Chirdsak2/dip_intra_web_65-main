@@ -1,0 +1,85 @@
+[Date:2023-04-01 15:04:27] [IP:27.55.78.161]
+[Query:SELECT sv_id FROM stat_visitor WHERE sv_ip = '27.55.78.161' AND sv_new = 'Y' LIMIT 0,1 ]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2023-04-01 15:04:27] [IP:27.55.78.161]
+[Query:SELECT sv_id FROM stat_visitor WHERE sv_ip = '27.55.78.161' AND sv_new = 'Y' LIMIT 0,1 ]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2023-04-01 15:04:27] [IP:27.55.78.161]
+[Query:INSERT INTO stat_visitor (sv_url,sv_visitor,sv_menu,sv_ip,sv_timestamp,sv_date,sv_time,sv_country,sv_language,sv_new,sv_browser,sv_resolution,sv_domain,sv_isp,sv_region,sv_city,sv_latitude,sv_longitude,sv_referer,sv_search,sv_keyword,sv_os,sv_load,sv_member,sv_fullurl,sv_mem_id,sv_w3c,sv_country_code,sv_region_code,sv_device,sv_op,sv_session_id) VALUES ('page','Y','/dip_intranet/index.php','27.55.78.161','20230401150427','2023-04-01','15:04:27','TH','en-US,en;q=0.9','Y','Edge','1920x1080','ppp-27-55-78-161.revip3.asianet.co.th','AS132061 Realmove Company Limited','Bangkok','Bangkok','13.7540','100.5014','http://203.151.166.134/dip_intranet/index.php','','','Windows 10','0','Y','https://203.151.166.134/dip_intranet/index.php','18','','TH','','1','','qbj4dtahjcn2cvoqj3ipecbgqb')]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2023-04-01 15:04:37] [IP:27.55.78.161]
+[Query:INSERT INTO stat_visitor (sv_url,sv_visitor,sv_menu,sv_ip,sv_timestamp,sv_date,sv_time,sv_country,sv_language,sv_new,sv_browser,sv_resolution,sv_domain,sv_isp,sv_region,sv_city,sv_latitude,sv_longitude,sv_referer,sv_search,sv_keyword,sv_os,sv_load,sv_member,sv_fullurl,sv_mem_id,sv_w3c,sv_country_code,sv_region_code,sv_device,sv_op,sv_session_id) VALUES ('page','','/dip_intranet/profile.php','27.55.78.161','20230401150436','2023-04-01','15:04:36','TH','en-US,en;q=0.9','','Edge','1920x1080','ppp-27-55-78-161.revip3.asianet.co.th','AS132061 Realmove Company Limited','Bangkok','Bangkok','13.7540','100.5014','','','','Windows 10','0','Y','https://203.151.166.134/dip_intranet/profile.php','18','','TH','','1','','qbj4dtahjcn2cvoqj3ipecbgqb')]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2023-04-01 15:37:18] [IP:27.55.78.161]
+[Query:INSERT INTO stat_visitor (sv_url,sv_visitor,sv_menu,sv_ip,sv_timestamp,sv_date,sv_time,sv_country,sv_language,sv_new,sv_browser,sv_resolution,sv_domain,sv_isp,sv_region,sv_city,sv_latitude,sv_longitude,sv_referer,sv_search,sv_keyword,sv_os,sv_load,sv_member,sv_fullurl,sv_mem_id,sv_w3c,sv_country_code,sv_region_code,sv_device,sv_op,sv_session_id) VALUES ('page','','/dip_intranet/finance_information.php','27.55.78.161','20230401153717','2023-04-01','15:37:17','TH','en-US,en;q=0.9','','Edge','1920x1080','ppp-27-55-78-161.revip3.asianet.co.th','AS132061 Realmove Company Limited','Bangkok','Bangkok','13.7540','100.5014','','','','Windows 10','0','Y','https://203.151.166.134/dip_intranet/finance_information.php','18','','TH','','1','','qbj4dtahjcn2cvoqj3ipecbgqb')]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2023-04-01 15:39:33] [IP:27.55.78.161]
+[Query:DELETE FROM visitor_online WHERE DATEADD(SECOND,30,vo_onlinelasttime) <= GETDATE() ]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2023-04-01 15:50:39] [IP:27.55.78.161]
+[Query:SELECT sv_id FROM stat_visitor WHERE sv_ip = '27.55.78.161' AND sv_new = 'Y' LIMIT 0,1 ]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2023-04-01 15:50:39] [IP:27.55.78.161]
+[Query:SELECT sv_id FROM stat_visitor WHERE sv_ip = '27.55.78.161' AND sv_new = 'Y' LIMIT 0,1 ]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2023-04-01 15:50:39] [IP:27.55.78.161]
+[Query:INSERT INTO stat_visitor (sv_url,sv_visitor,sv_menu,sv_ip,sv_timestamp,sv_date,sv_time,sv_country,sv_language,sv_new,sv_browser,sv_resolution,sv_domain,sv_isp,sv_region,sv_city,sv_latitude,sv_longitude,sv_referer,sv_search,sv_keyword,sv_os,sv_load,sv_member,sv_fullurl,sv_mem_id,sv_w3c,sv_country_code,sv_region_code,sv_device,sv_op,sv_session_id) VALUES ('page','Y','/dip_intranet/index.php','27.55.78.161','20230401155039','2023-04-01','15:50:39','TH','en-US,en;q=0.9','Y','Edge','1920x1080','ppp-27-55-78-161.revip3.asianet.co.th','AS132061 Realmove Company Limited','Bangkok','Bangkok','13.7540','100.5014','http://203.151.166.134/dip_intranet/index.php','','','Windows 10','0','Y','https://203.151.166.134/dip_intranet/index.php','14','','TH','','1','','qbj4dtahjcn2cvoqj3ipecbgqb')]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2023-04-01 15:51:14] [IP:27.55.78.161]
+[Query:INSERT INTO stat_visitor (sv_url,sv_visitor,sv_menu,sv_ip,sv_timestamp,sv_date,sv_time,sv_country,sv_language,sv_new,sv_browser,sv_resolution,sv_domain,sv_isp,sv_region,sv_city,sv_latitude,sv_longitude,sv_referer,sv_search,sv_keyword,sv_os,sv_load,sv_member,sv_fullurl,sv_mem_id,sv_w3c,sv_country_code,sv_region_code,sv_device,sv_op,sv_session_id) VALUES ('page','','/dip_intranet/profile.php','27.55.78.161','20230401155113','2023-04-01','15:51:13','TH','en-US,en;q=0.9','','Edge','1920x1080','ppp-27-55-78-161.revip3.asianet.co.th','AS132061 Realmove Company Limited','Bangkok','Bangkok','13.7540','100.5014','','','','Windows 10','0','Y','https://203.151.166.134/dip_intranet/profile.php','14','','TH','','1','','qbj4dtahjcn2cvoqj3ipecbgqb')]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2023-04-01 15:51:23] [IP:27.55.78.161]
+[Query:INSERT INTO stat_visitor (sv_url,sv_visitor,sv_menu,sv_ip,sv_timestamp,sv_date,sv_time,sv_country,sv_language,sv_new,sv_browser,sv_resolution,sv_domain,sv_isp,sv_region,sv_city,sv_latitude,sv_longitude,sv_referer,sv_search,sv_keyword,sv_os,sv_load,sv_member,sv_fullurl,sv_mem_id,sv_w3c,sv_country_code,sv_region_code,sv_device,sv_op,sv_session_id) VALUES ('page','','/dip_intranet/profile.php','27.55.78.161','20230401155122','2023-04-01','15:51:22','TH','en-US,en;q=0.9','','Edge','1920x1080','ppp-27-55-78-161.revip3.asianet.co.th','AS132061 Realmove Company Limited','Bangkok','Bangkok','13.7540','100.5014','','','','Windows 10','0','Y','https://203.151.166.134/dip_intranet/profile.php','14','','TH','','1','','qbj4dtahjcn2cvoqj3ipecbgqb')]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2023-04-01 16:12:21] [IP:27.55.78.161]
+[Query:INSERT INTO stat_visitor (sv_url,sv_visitor,sv_menu,sv_ip,sv_timestamp,sv_date,sv_time,sv_country,sv_language,sv_new,sv_browser,sv_resolution,sv_domain,sv_isp,sv_region,sv_city,sv_latitude,sv_longitude,sv_referer,sv_search,sv_keyword,sv_os,sv_load,sv_member,sv_fullurl,sv_mem_id,sv_w3c,sv_country_code,sv_region_code,sv_device,sv_op,sv_session_id) VALUES ('page','','/dip_intranet/finance_information.php','27.55.78.161','20230401161220','2023-04-01','16:12:20','TH','en-US,en;q=0.9','','Edge','1920x1080','ppp-27-55-78-161.revip3.asianet.co.th','AS132061 Realmove Company Limited','Bangkok','Bangkok','13.7540','100.5014','','','','Windows 10','0','Y','https://203.151.166.134/dip_intranet/finance_information.php','14','','TH','','1','','qbj4dtahjcn2cvoqj3ipecbgqb')]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2023-04-01 16:12:30] [IP:27.55.78.161]
+[Query:INSERT INTO stat_visitor (sv_url,sv_visitor,sv_menu,sv_ip,sv_timestamp,sv_date,sv_time,sv_country,sv_language,sv_new,sv_browser,sv_resolution,sv_domain,sv_isp,sv_region,sv_city,sv_latitude,sv_longitude,sv_referer,sv_search,sv_keyword,sv_os,sv_load,sv_member,sv_fullurl,sv_mem_id,sv_w3c,sv_country_code,sv_region_code,sv_device,sv_op,sv_session_id) VALUES ('page','','/dip_intranet/finance_information.php','27.55.78.161','20230401161229','2023-04-01','16:12:29','TH','en-US,en;q=0.9','','Edge','1920x1080','ppp-27-55-78-161.revip3.asianet.co.th','AS132061 Realmove Company Limited','Bangkok','Bangkok','13.7540','100.5014','','','','Windows 10','0','Y','https://203.151.166.134/dip_intranet/finance_information.php','14','','TH','','1','','qbj4dtahjcn2cvoqj3ipecbgqb')]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2023-04-01 16:18:46] [IP:27.55.78.161]
+[Query:INSERT INTO stat_visitor (sv_url,sv_visitor,sv_menu,sv_ip,sv_timestamp,sv_date,sv_time,sv_country,sv_language,sv_new,sv_browser,sv_resolution,sv_domain,sv_isp,sv_region,sv_city,sv_latitude,sv_longitude,sv_referer,sv_search,sv_keyword,sv_os,sv_load,sv_member,sv_fullurl,sv_mem_id,sv_w3c,sv_country_code,sv_region_code,sv_device,sv_op,sv_session_id) VALUES ('page','','/dip_intranet/finance_information.php','27.55.78.161','20230401161845','2023-04-01','16:18:45','TH','en-US,en;q=0.9','','Edge','1920x1080','ppp-27-55-78-161.revip3.asianet.co.th','AS132061 Realmove Company Limited','Bangkok','Bangkok','13.7540','100.5014','','','','Windows 10','0','Y','https://203.151.166.134/dip_intranet/finance_information.php','14','','TH','','1','','qbj4dtahjcn2cvoqj3ipecbgqb')]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2023-04-01 17:11:39] [IP:27.55.78.161]
+[Query:INSERT INTO stat_visitor (sv_url,sv_visitor,sv_menu,sv_ip,sv_timestamp,sv_date,sv_time,sv_country,sv_language,sv_new,sv_browser,sv_resolution,sv_domain,sv_isp,sv_region,sv_city,sv_latitude,sv_longitude,sv_referer,sv_search,sv_keyword,sv_os,sv_load,sv_member,sv_fullurl,sv_mem_id,sv_w3c,sv_country_code,sv_region_code,sv_device,sv_op,sv_session_id) VALUES ('page','','/dip_intranet/finance_information.php','27.55.78.161','20230401171138','2023-04-01','17:11:38','TH','en-US,en;q=0.9','','Edge','1920x1080','ppp-27-55-78-161.revip3.asianet.co.th','AS132061 Realmove Company Limited','Bangkok','Bangkok','13.7540','100.5014','','','','Windows 10','0','Y','https://203.151.166.134/dip_intranet/finance_information.php','14','','TH','','1','','qbj4dtahjcn2cvoqj3ipecbgqb')]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2023-04-01 17:25:38] [IP:27.55.78.161]
+[Query:INSERT INTO stat_visitor (sv_url,sv_visitor,sv_menu,sv_ip,sv_timestamp,sv_date,sv_time,sv_country,sv_language,sv_new,sv_browser,sv_resolution,sv_domain,sv_isp,sv_region,sv_city,sv_latitude,sv_longitude,sv_referer,sv_search,sv_keyword,sv_os,sv_load,sv_member,sv_fullurl,sv_mem_id,sv_w3c,sv_country_code,sv_region_code,sv_device,sv_op,sv_session_id) VALUES ('page','','/dip_intranet/finance_information.php','27.55.78.161','20230401172538','2023-04-01','17:25:38','TH','en-US,en;q=0.9','','Edge','1920x1080','ppp-27-55-78-161.revip3.asianet.co.th','AS132061 Realmove Company Limited','Bangkok','Bangkok','13.7540','100.5014','','','','Windows 10','0','Y','https://203.151.166.134/dip_intranet/finance_information.php','14','','TH','','1','','qbj4dtahjcn2cvoqj3ipecbgqb')]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2023-04-01 17:35:46] [IP:27.55.78.161]
+[Query:INSERT INTO stat_visitor (sv_url,sv_visitor,sv_menu,sv_ip,sv_timestamp,sv_date,sv_time,sv_country,sv_language,sv_new,sv_browser,sv_resolution,sv_domain,sv_isp,sv_region,sv_city,sv_latitude,sv_longitude,sv_referer,sv_search,sv_keyword,sv_os,sv_load,sv_member,sv_fullurl,sv_mem_id,sv_w3c,sv_country_code,sv_region_code,sv_device,sv_op,sv_session_id) VALUES ('page','','/dip_intranet/finance_information.php','27.55.78.161','20230401173545','2023-04-01','17:35:45','TH','en-US,en;q=0.9','','Edge','1920x1080','ppp-27-55-78-161.revip3.asianet.co.th','AS132061 Realmove Company Limited','Bangkok','Bangkok','13.7540','100.5014','','','','Windows 10','0','Y','https://203.151.166.134/dip_intranet/finance_information.php','14','','TH','','1','','qbj4dtahjcn2cvoqj3ipecbgqb')]
+[Error Code:]
+[Error Massage:]
+====================================

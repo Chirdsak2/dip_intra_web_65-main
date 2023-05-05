@@ -1,0 +1,115 @@
+label{font-weight:normal;cursor:pointer;cursor:hand}
+.concatid{cursor:help}
+a{color:#053799;text-decoration:none}
+a:hover{text-decoration:underline}
+.yregclb:after{content:".";display:block;font-size:0px;line-height:0;height:0;clear:both;visibility:hidden}
+body{text-align:center;color:#333;margin:0px 0 0;padding:0}
+#yregwp{text-align:left;margin:0 auto;width:200px}
+#yregwp_2{text-align:left;margin:0 auto;width:200px}
+#yregmst{position:relative;width:750px;margin:0 0 12px}
+#yregmst .yregmstl{position:absolute;top:0;right:0}
+#yregct{padding:0 0 10px}
+#yreglg{float:right;width:240px;margin:0 0 20px} 
+#yregtxt{margin:0 270px 0 20px}
+#yregtctx #yregtxt {width:490px;margin:0 0 10px;} /* ctx template */
+#yregft{text-align:center;font-size:77%;padding:10px 0 0;border-top:1px solid #777}
+.yregbx_mini{border:1px solid #656565;margin:0 0 10px;background-color:#f9f9f9} 
+.yregbx{border:1px solid #656565;margin:0 0 10px;background-color:#f9f9f9} 
+.yregbxi{margin:5px}
+.top .yregbxi{margin-top:10px}
+.ct, .ct .cl, .cb, .cb .cl{display:block;font-size:0;line-height:0;margin:0;height:4px;position:relative}
+.ct, .cb{width:100%;right:-1px}
+.ct .cl, .cb .cl{width:4px;left:-2px}
+.ct{background:transparent url(images/cr_gg_ne.gif) no-repeat top right;top:-1px}
+.ct .cl{background:transparent url(images/cr_gg_nw.gif) no-repeat top left}
+.cb{background:transparent url(images/cr_gg_se.gif) no-repeat bottom right;bottom:-1px}
+.cb .cl{background:transparent url(images/cr_gg_sw.gif) no-repeat bottom left}
+#yregtxt .yregbx{background-color:#e9f2d7;border-color:#87bb69}
+#yregtxt .yregbx h2{font-size:109%}
+#yregtxt .ct{background-image:url(images/cr_grn_ne.gif)}
+#yregtxt .ct .cl{background-image:url(images/cr_grn_nw.gif)}
+#yregtxt .cb{background-image:url(images/cr_grn_se.gif)}
+#yregtxt .cb .cl{background-image:url(images/cr_grn_sw.gif)}
+.flicker #yregtxt .yregbx {background-color:#e3f0ff;border-color:#bbdbfe} /*flicker blue */
+.flicker #yregtxt .ct {background-image:url(images/cr_flk_ne.gif)}
+.flicker #yregtxt .ct .cl {background-image:url(images/cr_flk_nw.gif)}
+.flicker #yregtxt .cb {background-image:url(images/cr_flk_se.gif)}
+.flicker #yregtxt .cb .cl {background-image:url(images/cr_flk_sw.gif)}
+.flicker #yregtxt li h3 {color:#303030}
+.smallbz #yregtxt li h3{color:#39c}
+#yreglg h1, #yreglg h2, #yreglg h3{font-size:114%;color:#333}
+#yreglg h3{margin:0 0 4px}
+#yreglg .yreglgmd{font-size:85%}
+#yreglg select, #yreglg input, #yreglg p, #yreglgtb td, #yreglgtb th{font-size:91%}
+#yreglg p.yreglgsb input{font-size:107%}
+#yreglg .yregnewssl {color:#333;font:77%/114% verdana;margin:-4px 0 10px;text-align:right;}
+#yreglg .yregnewssl span {color:#c00}
+#yreglgtb, #yreglgtb td, #yreglgtb th, #yreglg .yreglgmd, .yreglgsu, .yreglgsb, .yreglgsut{text-align:right}
+#yreglgtb {margin:0 0 8px;padding:0;width:215px}
+#yreglgtb td, #yreglgtb th{width:215px}
+#yreglgtb td select{width:124px}
+#yreglgtb td{width:130px}
+#yreglgtb td input{width:120px}
+.yreglgsb{margin:12px 0 0}
+.yreglgsut{margin:0 0 3px}
+.yreglgsub{margin:15px 0 0 30px} /*image sign up*/
+.yreglgsu a, .yreglgsut a{color:#039;font:bold 114%/114% arial;text-decoration:underline}
+.yreglgsut a{font-size:122%;}
+h2.yregdnt{margin:14px 0 0}
+.yregdsilu{border-bottom:1px solid #999;margin:0 0 15px;padding:0 0 8px}
+.yregdlisu, .yreglvpnu{border-top:1px solid #999;margin:15px 0 0;padding:14px 0 10px}
+#yreglg .second h3{ font:bold 100% Arial;color:#333}
+#yreglg .second p{font:77%/140% verdana}
+#yregtxt ul{margin:0 0 10px;padding:0}
+#yregtxt li{margin:18px 0 0;padding:0;list-style:none}
+#yregtxt li h3{font:normal 122%/152% verdana;color:#496e03}
+#yregtxt li cite{font-style:normal;line-height:129%}
+.frontpage #yregtxt li{margin-top:15px}
+.frontpage #yregtxt li h3{color:#666}
+#yregtgen #yregct {margin-right:15px}
+#yreglgtb td.yregyid {text-align:left;font-size:100%}
+.yreglgdu {margin:0 0 5px}
+.yreglgdu a {font:bold 107%/136% verdana;color:#039;text-decoration:underline}
+#yregtgen #yregtxt h2, #yregpmtxt h3{font:bold 152%/152% arial;color:#333;margin:0} 
+#yregpmtxt h3{margin:0 0 10px}
+#yregptxt {padding:12px 0 0}
+#yregtgen #yregtxt p.yregpti {color:#666;margin:0 0 2px;font:bold 100%/100% arial}
+#yregptxt ul {margin:15px 0 0;padding:0;}
+#yregptxt li {margin:0 0 1em 18px;list-style-type:disc;font:normal 100%/122% arial}
+#yregpmtxt {margin:25px 0 0;padding:20px 0 0;border-top:1px solid #ccc}
+#yregtgen #yregtxt{margin-bottom:20px}
+#yregtgen #yregtxt #yreghtxt h3{margin:0;font:bold 107%/114% arial;color:#8C57A1}
+#yregtgen #yregtxt li h3{font:bold 114%/122% arial}
+#yregtgen #yregtxt p{margin:0 0 0.8em;line-height:129%}
+#yregtgen #yregtxt .yregbpt li{margin:0 0 10px 4px;padding:0 0 10px 22px;background:url(images/purple_arrow.gif) no-repeat 1px 4px}
+.yregertxt{margin:15px 0 5px}
+.yregertxt, #yreglg .yregertxt h2{color:#c00}
+#yreglg .yregertxt h2{font-size:107%}
+.yregertxt p{font:normal 92%/107% arial}
+.yregab #yreglg {width:320px}
+.yregab #yreglgtb {width:auto}
+html>body #yreglgtb th {width:180px}
+.yregab #yregabimg {padding:10px 0 0}
+.yregab .yregrid {text-align:right}
+#yregtgen.yregab #yregtxt {width:380px}
+#yregtgen #yregtxt #yreghtxt h2{color:#7A067F}
+.yregertxt{margin:15px 0 5px}
+.yregertxt, #yreglg .yregertxt h2{color:#c00}
+#yreglg .yregertxt h2{font-size:107%}
+.yregertxt p{font:normal 92%/107% arial}
+.yreglvpnu p{font:normal 92%/136% arial}
+.yreglvpnu p a{font:bold 107%/139% arial;text-decoration:underline}
+#yreglgtb td.yreglvid {text-align:left}
+#yregfl {margin:0 20px 20px}
+#yregfl h1{font-size:136%;line-height:167%}
+#yregfl h2{font-size:107%}
+#yregfl p{margin:0 0 1em;}
+#yregfl li {margin-bottom:10px}
+.appuser #yregtxt h2 {font:normal 122%/122% verdana, sans-serif;color:#5B9B0F;margin-top:10px}
+.appuser #yregtxt li {padding:0 20px 0}
+.appuser #yregtxt h3 {font-weight:bold;font-size:92%}
+.appuser #yregtxt li.greenarrow h3 {color:#548F0D;}
+.appuser #yregtxt li.grayarrow h3 {color:#969696;}
+.appuser #yregtxt li.greenarrow {background: url(images/green_arrow.gif) no-repeat 0 2px}
+.appuser #yregtxt li.grayarrow {background: url(images/gray_arrow.gif) no-repeat 0 2px}
+.appuser #yregtxt ul li cite {color:#666}

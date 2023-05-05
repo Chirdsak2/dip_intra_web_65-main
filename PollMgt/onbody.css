@@ -1,0 +1,8 @@
+h1 {  font-family: "MS Sans Serif"; font-size: 24px; font-style: normal; font-weight: bold}
+h3 {  font-family: "MS Sans Serif"; font-size: 14px; font-style: normal; color: #999999}
+h6 {  font-family: "MS Sans Serif"; font-size: 10px; font-style: normal; font-weight: normal; font-variant: normal}
+.grey_heading { font-family: "MS Sans Serif"; font-size: 16px; font-style: normal; font-weight: bold; color: #999999 }
+.normal_font {  font-family: "MS Sans Serif"; font-size: 12px; font-weight: normal; color: #000000}
+select {  font-family: "MS Sans Serif"; font-size: 9px; font-style: normal; font-weight: normal; float: left; border-style: none; border-top-width: thin; border-right-width: thin; border-bottom-width: thin; border-left-width: thin}
+.head_table {  font-family: "MS Sans Serif"; font-size: 12px; font-weight: bold; color: #FFFFFF; background-color: #CCCCCC; border-top-width: thin; border-right-width: thin; border-bottom-width: thin; border-left-width: thin}
+.work_title { font-family: "MS Sans Serif"; font-size: 14px; font-style: normal; font-weight: bold; color: #000000}

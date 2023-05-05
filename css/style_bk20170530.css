@@ -1,0 +1,60 @@
+BODY {
+	FONT-SIZE: 11px; MARGIN: 0px; COLOR: #000000; FONT-FAMILY: "Tahoma"
+}
+.copyright {
+	COLOR: #e1e1e1
+}
+A:link {
+	COLOR: #000000; TEXT-DECORATION: none
+}
+A:visited {
+	COLOR: #000000; TEXT-DECORATION: none
+}
+A:active {
+	COLOR: #000000; TEXT-DECORATION: none
+}
+A:hover {
+	COLOR: #000000; TEXT-DECORATION: none
+}
+.mytext_normal {
+	FONT: 11px "Tahoma"
+}
+.myhead {
+	FONT: 23px "Tahoma"
+}
+INPUT {
+	FONT-WEIGHT: normal; FONT-SIZE: 11px; COLOR: #000000; FONT-FAMILY: "Tahoma"
+}
+TEXTAREA {
+	FONT-WEIGHT: normal; FONT-SIZE: 11px; COLOR: #000000; FONT-FAMILY: "Tahoma"
+}
+TABLE {
+	FONT: 11px "Tahoma"
+}
+SELECT {
+	FONT: 11px "Tahoma"
+}.MemberHead {
+	font-family: "MS Sans Serif";
+	font-size: 12px;
+	font-style: normal;
+	font-weight: bold;
+}
+.MemberTitle {
+	font-family: "MS Sans Serif";
+	font-size: 18px;
+	font-style: normal;
+	font-weight: bold;
+}
+.MemberNormal {
+	font-family: "MS Sans Serif";
+	font-size: 12px;
+	font-style: normal;
+	font-weight: normal;
+}
+.MemberNormalRed {
+	font-family: "MS Sans Serif";
+	font-size: 12px;
+	font-style: normal;
+	font-weight: bold;
+	COLOR: Red;
+}

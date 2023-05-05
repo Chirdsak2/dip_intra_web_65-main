@@ -1,0 +1,380 @@
+[Date:2023-04-02 10:35:20] [IP:125.26.202.247]
+[Query:INSERT INTO stat_visitor (sv_url,sv_visitor,sv_menu,sv_ip,sv_timestamp,sv_date,sv_time,sv_country,sv_language,sv_new,sv_browser,sv_resolution,sv_domain,sv_isp,sv_region,sv_city,sv_latitude,sv_longitude,sv_referer,sv_search,sv_keyword,sv_os,sv_load,sv_member,sv_fullurl,sv_mem_id,sv_w3c,sv_country_code,sv_region_code,sv_device,sv_op,sv_session_id) VALUES ('page','','/dip_intranet/index.php','10.0.1.186','20230402103519','2023-04-02','10:35:19','','en-US,en;q=0.9','','Edge','1536x864','','','','','','','','','','Windows 10','0','Y','https://203.151.166.134/dip_intranet/index.php','14','','','','1','','qbj4dtahjcn2cvoqj3ipecbgqb')]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2023-04-02 11:29:13] [IP:125.26.202.247]
+[Query:INSERT INTO stat_visitor (sv_url,sv_visitor,sv_menu,sv_ip,sv_timestamp,sv_date,sv_time,sv_country,sv_language,sv_new,sv_browser,sv_resolution,sv_domain,sv_isp,sv_region,sv_city,sv_latitude,sv_longitude,sv_referer,sv_search,sv_keyword,sv_os,sv_load,sv_member,sv_fullurl,sv_mem_id,sv_w3c,sv_country_code,sv_region_code,sv_device,sv_op,sv_session_id) VALUES ('page','','/dip_intranet/profile.php','10.0.1.186','20230402112913','2023-04-02','11:29:13','','en-US,en;q=0.9','','Edge','1920x1080','','','','','','','','','','Windows 10','0','Y','https://203.151.166.134/dip_intranet/profile.php','14','','','','1','','qbj4dtahjcn2cvoqj3ipecbgqb')]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2023-04-02 11:29:16] [IP:125.26.202.247]
+[Query:INSERT INTO stat_visitor (sv_url,sv_visitor,sv_menu,sv_ip,sv_timestamp,sv_date,sv_time,sv_country,sv_language,sv_new,sv_browser,sv_resolution,sv_domain,sv_isp,sv_region,sv_city,sv_latitude,sv_longitude,sv_referer,sv_search,sv_keyword,sv_os,sv_load,sv_member,sv_fullurl,sv_mem_id,sv_w3c,sv_country_code,sv_region_code,sv_device,sv_op,sv_session_id) VALUES ('page','','/dip_intranet/finance_information.php','10.0.1.186','20230402112916','2023-04-02','11:29:16','','en-US,en;q=0.9','','Edge','1920x1080','','','','','','','','','','Windows 10','0','Y','https://203.151.166.134/dip_intranet/finance_information.php','14','','','','1','','qbj4dtahjcn2cvoqj3ipecbgqb')]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2023-04-02 11:29:22] [IP:125.26.202.247]
+[Query:INSERT INTO stat_visitor (sv_url,sv_visitor,sv_menu,sv_ip,sv_timestamp,sv_date,sv_time,sv_country,sv_language,sv_new,sv_browser,sv_resolution,sv_domain,sv_isp,sv_region,sv_city,sv_latitude,sv_longitude,sv_referer,sv_search,sv_keyword,sv_os,sv_load,sv_member,sv_fullurl,sv_mem_id,sv_w3c,sv_country_code,sv_region_code,sv_device,sv_op,sv_session_id) VALUES ('page','','/dip_intranet/finance_information.php','10.0.1.186','20230402112922','2023-04-02','11:29:22','','en-US,en;q=0.9','','Edge','1920x1080','','','','','','','','','','Windows 10','0','Y','https://203.151.166.134/dip_intranet/finance_information.php','14','','','','1','','qbj4dtahjcn2cvoqj3ipecbgqb')]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2023-04-02 12:30:07] [IP:125.26.202.247]
+[Query:INSERT INTO stat_visitor (sv_url,sv_visitor,sv_menu,sv_ip,sv_timestamp,sv_date,sv_time,sv_country,sv_language,sv_new,sv_browser,sv_resolution,sv_domain,sv_isp,sv_region,sv_city,sv_latitude,sv_longitude,sv_referer,sv_search,sv_keyword,sv_os,sv_load,sv_member,sv_fullurl,sv_mem_id,sv_w3c,sv_country_code,sv_region_code,sv_device,sv_op,sv_session_id) VALUES ('page','','/dip_intranet/finance_information.php','10.0.1.186','20230402123007','2023-04-02','12:30:07','','en-US,en;q=0.9','','Edge','1920x1080','','','','','','','','','','Windows 10','0','Y','https://203.151.166.134/dip_intranet/finance_information.php','14','','','','1','','qbj4dtahjcn2cvoqj3ipecbgqb')]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2023-04-02 12:30:59] [IP:125.26.202.236]
+[Query:INSERT INTO stat_visitor (sv_url,sv_visitor,sv_menu,sv_ip,sv_timestamp,sv_date,sv_time,sv_country,sv_language,sv_new,sv_browser,sv_resolution,sv_domain,sv_isp,sv_region,sv_city,sv_latitude,sv_longitude,sv_referer,sv_search,sv_keyword,sv_os,sv_load,sv_member,sv_fullurl,sv_mem_id,sv_w3c,sv_country_code,sv_region_code,sv_device,sv_op,sv_session_id) VALUES ('page','','/dip_intranet/finance_information.php','10.0.1.186','20230402123058','2023-04-02','12:30:58','','en-US,en;q=0.9','','Edge','1920x1080','','','','','','','','','','Windows 10','0','Y','https://203.151.166.134/dip_intranet/finance_information.php','14','','','','1','','qbj4dtahjcn2cvoqj3ipecbgqb')]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2023-04-02 12:35:08] [IP:125.26.202.236]
+[Query:INSERT INTO stat_visitor (sv_url,sv_visitor,sv_menu,sv_ip,sv_timestamp,sv_date,sv_time,sv_country,sv_language,sv_new,sv_browser,sv_resolution,sv_domain,sv_isp,sv_region,sv_city,sv_latitude,sv_longitude,sv_referer,sv_search,sv_keyword,sv_os,sv_load,sv_member,sv_fullurl,sv_mem_id,sv_w3c,sv_country_code,sv_region_code,sv_device,sv_op,sv_session_id) VALUES ('page','','/dip_intranet/finance_information.php','10.0.1.186','20230402123507','2023-04-02','12:35:07','','en-US,en;q=0.9','','Edge','1920x1080','','','','','','','','','','Windows 10','0','Y','https://203.151.166.134/dip_intranet/finance_information.php','14','','','','1','','qbj4dtahjcn2cvoqj3ipecbgqb')]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2023-04-02 12:37:31] [IP:125.26.202.236]
+[Query:INSERT INTO stat_visitor (sv_url,sv_visitor,sv_menu,sv_ip,sv_timestamp,sv_date,sv_time,sv_country,sv_language,sv_new,sv_browser,sv_resolution,sv_domain,sv_isp,sv_region,sv_city,sv_latitude,sv_longitude,sv_referer,sv_search,sv_keyword,sv_os,sv_load,sv_member,sv_fullurl,sv_mem_id,sv_w3c,sv_country_code,sv_region_code,sv_device,sv_op,sv_session_id) VALUES ('page','','/dip_intranet/finance_information.php','10.0.1.186','20230402123730','2023-04-02','12:37:30','','en-US,en;q=0.9','','Edge','1920x1080','','','','','','','','','','Windows 10','0','Y','https://203.151.166.134/dip_intranet/finance_information.php','14','','','','1','','qbj4dtahjcn2cvoqj3ipecbgqb')]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2023-04-02 12:41:43] [IP:125.26.202.247]
+[Query:INSERT INTO stat_visitor (sv_url,sv_visitor,sv_menu,sv_ip,sv_timestamp,sv_date,sv_time,sv_country,sv_language,sv_new,sv_browser,sv_resolution,sv_domain,sv_isp,sv_region,sv_city,sv_latitude,sv_longitude,sv_referer,sv_search,sv_keyword,sv_os,sv_load,sv_member,sv_fullurl,sv_mem_id,sv_w3c,sv_country_code,sv_region_code,sv_device,sv_op,sv_session_id) VALUES ('page','','/dip_intranet/finance_information.php','10.0.1.186','20230402124142','2023-04-02','12:41:42','','en-US,en;q=0.9','','Edge','1920x1080','','','','','','','','','','Windows 10','0','Y','https://203.151.166.134/dip_intranet/finance_information.php','14','','','','1','','qbj4dtahjcn2cvoqj3ipecbgqb')]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2023-04-02 12:43:36] [IP:125.26.202.247]
+[Query:INSERT INTO stat_visitor (sv_url,sv_visitor,sv_menu,sv_ip,sv_timestamp,sv_date,sv_time,sv_country,sv_language,sv_new,sv_browser,sv_resolution,sv_domain,sv_isp,sv_region,sv_city,sv_latitude,sv_longitude,sv_referer,sv_search,sv_keyword,sv_os,sv_load,sv_member,sv_fullurl,sv_mem_id,sv_w3c,sv_country_code,sv_region_code,sv_device,sv_op,sv_session_id) VALUES ('page','','/dip_intranet/finance_information.php','10.0.1.186','20230402124335','2023-04-02','12:43:35','','en-US,en;q=0.9','','Edge','1920x1080','','','','','','','','','','Windows 10','0','Y','https://203.151.166.134/dip_intranet/finance_information.php','14','','','','1','','qbj4dtahjcn2cvoqj3ipecbgqb')]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2023-04-02 12:45:25] [IP:125.26.202.247]
+[Query:INSERT INTO stat_visitor (sv_url,sv_visitor,sv_menu,sv_ip,sv_timestamp,sv_date,sv_time,sv_country,sv_language,sv_new,sv_browser,sv_resolution,sv_domain,sv_isp,sv_region,sv_city,sv_latitude,sv_longitude,sv_referer,sv_search,sv_keyword,sv_os,sv_load,sv_member,sv_fullurl,sv_mem_id,sv_w3c,sv_country_code,sv_region_code,sv_device,sv_op,sv_session_id) VALUES ('page','','/dip_intranet/finance_information.php','10.0.1.186','20230402124524','2023-04-02','12:45:24','','en-US,en;q=0.9','','Edge','1920x1080','','','','','','','','','','Windows 10','0','Y','https://203.151.166.134/dip_intranet/finance_information.php','14','','','','1','','qbj4dtahjcn2cvoqj3ipecbgqb')]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2023-04-02 12:47:31] [IP:125.26.202.247]
+[Query:INSERT INTO stat_visitor (sv_url,sv_visitor,sv_menu,sv_ip,sv_timestamp,sv_date,sv_time,sv_country,sv_language,sv_new,sv_browser,sv_resolution,sv_domain,sv_isp,sv_region,sv_city,sv_latitude,sv_longitude,sv_referer,sv_search,sv_keyword,sv_os,sv_load,sv_member,sv_fullurl,sv_mem_id,sv_w3c,sv_country_code,sv_region_code,sv_device,sv_op,sv_session_id) VALUES ('page','','/dip_intranet/finance_information.php','10.0.1.186','20230402124730','2023-04-02','12:47:30','','en-US,en;q=0.9','','Edge','1920x1080','','','','','','','','','','Windows 10','0','Y','https://203.151.166.134/dip_intranet/finance_information.php','14','','','','1','','qbj4dtahjcn2cvoqj3ipecbgqb')]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2023-04-02 12:48:08] [IP:125.26.202.247]
+[Query:INSERT INTO stat_visitor (sv_url,sv_visitor,sv_menu,sv_ip,sv_timestamp,sv_date,sv_time,sv_country,sv_language,sv_new,sv_browser,sv_resolution,sv_domain,sv_isp,sv_region,sv_city,sv_latitude,sv_longitude,sv_referer,sv_search,sv_keyword,sv_os,sv_load,sv_member,sv_fullurl,sv_mem_id,sv_w3c,sv_country_code,sv_region_code,sv_device,sv_op,sv_session_id) VALUES ('page','','/dip_intranet/finance_information.php','10.0.1.186','20230402124808','2023-04-02','12:48:08','','en-US,en;q=0.9','','Edge','1920x1080','','','','','','','','','','Windows 10','0','Y','https://203.151.166.134/dip_intranet/finance_information.php','14','','','','1','','qbj4dtahjcn2cvoqj3ipecbgqb')]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2023-04-02 12:48:36] [IP:125.26.202.247]
+[Query:INSERT INTO stat_visitor (sv_url,sv_visitor,sv_menu,sv_ip,sv_timestamp,sv_date,sv_time,sv_country,sv_language,sv_new,sv_browser,sv_resolution,sv_domain,sv_isp,sv_region,sv_city,sv_latitude,sv_longitude,sv_referer,sv_search,sv_keyword,sv_os,sv_load,sv_member,sv_fullurl,sv_mem_id,sv_w3c,sv_country_code,sv_region_code,sv_device,sv_op,sv_session_id) VALUES ('page','','/dip_intranet/finance_information.php','10.0.1.186','20230402124836','2023-04-02','12:48:36','','en-US,en;q=0.9','','Edge','1920x1080','','','','','','','','','','Windows 10','0','Y','https://203.151.166.134/dip_intranet/finance_information.php','14','','','','1','','qbj4dtahjcn2cvoqj3ipecbgqb')]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2023-04-02 12:48:55] [IP:125.26.202.247]
+[Query:INSERT INTO stat_visitor (sv_url,sv_visitor,sv_menu,sv_ip,sv_timestamp,sv_date,sv_time,sv_country,sv_language,sv_new,sv_browser,sv_resolution,sv_domain,sv_isp,sv_region,sv_city,sv_latitude,sv_longitude,sv_referer,sv_search,sv_keyword,sv_os,sv_load,sv_member,sv_fullurl,sv_mem_id,sv_w3c,sv_country_code,sv_region_code,sv_device,sv_op,sv_session_id) VALUES ('page','','/dip_intranet/finance_information.php','10.0.1.186','20230402124854','2023-04-02','12:48:54','','en-US,en;q=0.9','','Edge','1920x1080','','','','','','','','','','Windows 10','0','Y','https://203.151.166.134/dip_intranet/finance_information.php','14','','','','1','','qbj4dtahjcn2cvoqj3ipecbgqb')]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2023-04-02 12:49:26] [IP:125.26.202.247]
+[Query:INSERT INTO stat_visitor (sv_url,sv_visitor,sv_menu,sv_ip,sv_timestamp,sv_date,sv_time,sv_country,sv_language,sv_new,sv_browser,sv_resolution,sv_domain,sv_isp,sv_region,sv_city,sv_latitude,sv_longitude,sv_referer,sv_search,sv_keyword,sv_os,sv_load,sv_member,sv_fullurl,sv_mem_id,sv_w3c,sv_country_code,sv_region_code,sv_device,sv_op,sv_session_id) VALUES ('page','','/dip_intranet/finance_information.php','10.0.1.186','20230402124926','2023-04-02','12:49:26','','en-US,en;q=0.9','','Edge','1920x1080','','','','','','','','','','Windows 10','0','Y','https://203.151.166.134/dip_intranet/finance_information.php','14','','','','1','','qbj4dtahjcn2cvoqj3ipecbgqb')]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2023-04-02 12:51:36] [IP:125.26.202.197]
+[Query:INSERT INTO stat_visitor (sv_url,sv_visitor,sv_menu,sv_ip,sv_timestamp,sv_date,sv_time,sv_country,sv_language,sv_new,sv_browser,sv_resolution,sv_domain,sv_isp,sv_region,sv_city,sv_latitude,sv_longitude,sv_referer,sv_search,sv_keyword,sv_os,sv_load,sv_member,sv_fullurl,sv_mem_id,sv_w3c,sv_country_code,sv_region_code,sv_device,sv_op,sv_session_id) VALUES ('page','','/dip_intranet/profile.php','10.0.1.186','20230402125135','2023-04-02','12:51:35','','en-US,en;q=0.9','','Edge','1920x1080','','','','','','','','','','Windows 10','0','Y','https://203.151.166.134/dip_intranet/profile.php','14','','','','1','','qbj4dtahjcn2cvoqj3ipecbgqb')]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2023-04-02 12:52:41] [IP:125.26.202.197]
+[Query:INSERT INTO stat_visitor (sv_url,sv_visitor,sv_menu,sv_ip,sv_timestamp,sv_date,sv_time,sv_country,sv_language,sv_new,sv_browser,sv_resolution,sv_domain,sv_isp,sv_region,sv_city,sv_latitude,sv_longitude,sv_referer,sv_search,sv_keyword,sv_os,sv_load,sv_member,sv_fullurl,sv_mem_id,sv_w3c,sv_country_code,sv_region_code,sv_device,sv_op,sv_session_id) VALUES ('page','','/dip_intranet/finance_information.php','10.0.1.186','20230402125241','2023-04-02','12:52:41','','en-US,en;q=0.9','','Edge','1920x1080','','','','','','','','','','Windows 10','0','Y','https://203.151.166.134/dip_intranet/finance_information.php','14','','','','1','','qbj4dtahjcn2cvoqj3ipecbgqb')]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2023-04-02 12:54:10] [IP:125.26.202.197]
+[Query:INSERT INTO stat_visitor (sv_url,sv_visitor,sv_menu,sv_ip,sv_timestamp,sv_date,sv_time,sv_country,sv_language,sv_new,sv_browser,sv_resolution,sv_domain,sv_isp,sv_region,sv_city,sv_latitude,sv_longitude,sv_referer,sv_search,sv_keyword,sv_os,sv_load,sv_member,sv_fullurl,sv_mem_id,sv_w3c,sv_country_code,sv_region_code,sv_device,sv_op,sv_session_id) VALUES ('page','','/dip_intranet/finance_information.php','10.0.1.186','20230402125409','2023-04-02','12:54:09','','en-US,en;q=0.9','','Edge','1920x1080','','','','','','','','','','Windows 10','0','Y','https://203.151.166.134/dip_intranet/finance_information.php','14','','','','1','','qbj4dtahjcn2cvoqj3ipecbgqb')]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2023-04-02 12:57:33] [IP:125.26.202.247]
+[Query:INSERT INTO stat_visitor (sv_url,sv_visitor,sv_menu,sv_ip,sv_timestamp,sv_date,sv_time,sv_country,sv_language,sv_new,sv_browser,sv_resolution,sv_domain,sv_isp,sv_region,sv_city,sv_latitude,sv_longitude,sv_referer,sv_search,sv_keyword,sv_os,sv_load,sv_member,sv_fullurl,sv_mem_id,sv_w3c,sv_country_code,sv_region_code,sv_device,sv_op,sv_session_id) VALUES ('page','','/dip_intranet/finance_information.php','10.0.1.186','20230402125733','2023-04-02','12:57:33','','en-US,en;q=0.9','','Edge','1920x1080','','','','','','','','','','Windows 10','0','Y','https://203.151.166.134/dip_intranet/finance_information.php','14','','','','1','','qbj4dtahjcn2cvoqj3ipecbgqb')]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2023-04-02 13:11:07] [IP:125.26.202.236]
+[Query:INSERT INTO stat_visitor (sv_url,sv_visitor,sv_menu,sv_ip,sv_timestamp,sv_date,sv_time,sv_country,sv_language,sv_new,sv_browser,sv_resolution,sv_domain,sv_isp,sv_region,sv_city,sv_latitude,sv_longitude,sv_referer,sv_search,sv_keyword,sv_os,sv_load,sv_member,sv_fullurl,sv_mem_id,sv_w3c,sv_country_code,sv_region_code,sv_device,sv_op,sv_session_id) VALUES ('page','','/dip_intranet/finance_information.php','10.0.1.186','20230402131106','2023-04-02','13:11:06','','en-US,en;q=0.9','','Edge','1920x1080','','','','','','','','','','Windows 10','0','Y','https://203.151.166.134/dip_intranet/finance_information.php','14','','','','1','','qbj4dtahjcn2cvoqj3ipecbgqb')]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2023-04-02 13:11:34] [IP:125.26.202.236]
+[Query:INSERT INTO stat_visitor (sv_url,sv_visitor,sv_menu,sv_ip,sv_timestamp,sv_date,sv_time,sv_country,sv_language,sv_new,sv_browser,sv_resolution,sv_domain,sv_isp,sv_region,sv_city,sv_latitude,sv_longitude,sv_referer,sv_search,sv_keyword,sv_os,sv_load,sv_member,sv_fullurl,sv_mem_id,sv_w3c,sv_country_code,sv_region_code,sv_device,sv_op,sv_session_id) VALUES ('page','','/dip_intranet/finance_information.php','10.0.1.186','20230402131133','2023-04-02','13:11:33','','en-US,en;q=0.9','','Edge','1920x1080','','','','','','','','','','Windows 10','0','Y','https://203.151.166.134/dip_intranet/finance_information.php','14','','','','1','','qbj4dtahjcn2cvoqj3ipecbgqb')]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2023-04-02 13:11:56] [IP:125.26.202.236]
+[Query:INSERT INTO stat_visitor (sv_url,sv_visitor,sv_menu,sv_ip,sv_timestamp,sv_date,sv_time,sv_country,sv_language,sv_new,sv_browser,sv_resolution,sv_domain,sv_isp,sv_region,sv_city,sv_latitude,sv_longitude,sv_referer,sv_search,sv_keyword,sv_os,sv_load,sv_member,sv_fullurl,sv_mem_id,sv_w3c,sv_country_code,sv_region_code,sv_device,sv_op,sv_session_id) VALUES ('page','','/dip_intranet/finance_information.php','10.0.1.186','20230402131156','2023-04-02','13:11:56','','en-US,en;q=0.9','','Edge','1920x1080','','','','','','','','','','Windows 10','0','Y','https://203.151.166.134/dip_intranet/finance_information.php','14','','','','1','','qbj4dtahjcn2cvoqj3ipecbgqb')]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2023-04-02 13:14:14] [IP:125.26.202.236]
+[Query:INSERT INTO stat_visitor (sv_url,sv_visitor,sv_menu,sv_ip,sv_timestamp,sv_date,sv_time,sv_country,sv_language,sv_new,sv_browser,sv_resolution,sv_domain,sv_isp,sv_region,sv_city,sv_latitude,sv_longitude,sv_referer,sv_search,sv_keyword,sv_os,sv_load,sv_member,sv_fullurl,sv_mem_id,sv_w3c,sv_country_code,sv_region_code,sv_device,sv_op,sv_session_id) VALUES ('page','','/dip_intranet/finance_information.php','10.0.1.186','20230402131414','2023-04-02','13:14:14','','en-US,en;q=0.9','','Edge','1920x1080','','','','','','','','','','Windows 10','0','Y','https://203.151.166.134/dip_intranet/finance_information.php','14','','','','1','','qbj4dtahjcn2cvoqj3ipecbgqb')]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2023-04-02 13:16:13] [IP:125.26.202.236]
+[Query:INSERT INTO stat_visitor (sv_url,sv_visitor,sv_menu,sv_ip,sv_timestamp,sv_date,sv_time,sv_country,sv_language,sv_new,sv_browser,sv_resolution,sv_domain,sv_isp,sv_region,sv_city,sv_latitude,sv_longitude,sv_referer,sv_search,sv_keyword,sv_os,sv_load,sv_member,sv_fullurl,sv_mem_id,sv_w3c,sv_country_code,sv_region_code,sv_device,sv_op,sv_session_id) VALUES ('page','','/dip_intranet/finance_information.php','10.0.1.186','20230402131612','2023-04-02','13:16:12','','en-US,en;q=0.9','','Edge','1920x1080','','','','','','','','','','Windows 10','0','Y','https://203.151.166.134/dip_intranet/finance_information.php','14','','','','1','','qbj4dtahjcn2cvoqj3ipecbgqb')]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2023-04-02 13:16:39] [IP:125.26.202.236]
+[Query:INSERT INTO stat_visitor (sv_url,sv_visitor,sv_menu,sv_ip,sv_timestamp,sv_date,sv_time,sv_country,sv_language,sv_new,sv_browser,sv_resolution,sv_domain,sv_isp,sv_region,sv_city,sv_latitude,sv_longitude,sv_referer,sv_search,sv_keyword,sv_os,sv_load,sv_member,sv_fullurl,sv_mem_id,sv_w3c,sv_country_code,sv_region_code,sv_device,sv_op,sv_session_id) VALUES ('page','','/dip_intranet/finance_information.php','10.0.1.186','20230402131639','2023-04-02','13:16:39','','en-US,en;q=0.9','','Edge','1920x1080','','','','','','','','','','Windows 10','0','Y','https://203.151.166.134/dip_intranet/finance_information.php','14','','','','1','','qbj4dtahjcn2cvoqj3ipecbgqb')]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2023-04-02 13:19:04] [IP:125.26.202.236]
+[Query:INSERT INTO stat_visitor (sv_url,sv_visitor,sv_menu,sv_ip,sv_timestamp,sv_date,sv_time,sv_country,sv_language,sv_new,sv_browser,sv_resolution,sv_domain,sv_isp,sv_region,sv_city,sv_latitude,sv_longitude,sv_referer,sv_search,sv_keyword,sv_os,sv_load,sv_member,sv_fullurl,sv_mem_id,sv_w3c,sv_country_code,sv_region_code,sv_device,sv_op,sv_session_id) VALUES ('page','','/dip_intranet/finance_information.php','10.0.1.186','20230402131904','2023-04-02','13:19:04','','en-US,en;q=0.9','','Edge','1920x1080','','','','','','','','','','Windows 10','0','Y','https://203.151.166.134/dip_intranet/finance_information.php','14','','','','1','','qbj4dtahjcn2cvoqj3ipecbgqb')]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2023-04-02 13:22:03] [IP:125.26.202.197]
+[Query:INSERT INTO stat_visitor (sv_url,sv_visitor,sv_menu,sv_ip,sv_timestamp,sv_date,sv_time,sv_country,sv_language,sv_new,sv_browser,sv_resolution,sv_domain,sv_isp,sv_region,sv_city,sv_latitude,sv_longitude,sv_referer,sv_search,sv_keyword,sv_os,sv_load,sv_member,sv_fullurl,sv_mem_id,sv_w3c,sv_country_code,sv_region_code,sv_device,sv_op,sv_session_id) VALUES ('page','','/dip_intranet/finance_information.php','10.0.1.186','20230402132202','2023-04-02','13:22:02','','en-US,en;q=0.9','','Edge','1920x1080','','','','','','','','','','Windows 10','0','Y','https://203.151.166.134/dip_intranet/finance_information.php','14','','','','1','','qbj4dtahjcn2cvoqj3ipecbgqb')]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2023-04-02 13:23:29] [IP:125.26.202.197]
+[Query:INSERT INTO stat_visitor (sv_url,sv_visitor,sv_menu,sv_ip,sv_timestamp,sv_date,sv_time,sv_country,sv_language,sv_new,sv_browser,sv_resolution,sv_domain,sv_isp,sv_region,sv_city,sv_latitude,sv_longitude,sv_referer,sv_search,sv_keyword,sv_os,sv_load,sv_member,sv_fullurl,sv_mem_id,sv_w3c,sv_country_code,sv_region_code,sv_device,sv_op,sv_session_id) VALUES ('page','','/dip_intranet/finance_information.php','10.0.1.186','20230402132329','2023-04-02','13:23:29','','en-US,en;q=0.9','','Edge','1920x1080','','','','','','','','','','Windows 10','0','Y','https://203.151.166.134/dip_intranet/finance_information.php','14','','','','1','','qbj4dtahjcn2cvoqj3ipecbgqb')]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2023-04-02 13:24:55] [IP:125.26.202.197]
+[Query:INSERT INTO stat_visitor (sv_url,sv_visitor,sv_menu,sv_ip,sv_timestamp,sv_date,sv_time,sv_country,sv_language,sv_new,sv_browser,sv_resolution,sv_domain,sv_isp,sv_region,sv_city,sv_latitude,sv_longitude,sv_referer,sv_search,sv_keyword,sv_os,sv_load,sv_member,sv_fullurl,sv_mem_id,sv_w3c,sv_country_code,sv_region_code,sv_device,sv_op,sv_session_id) VALUES ('page','','/dip_intranet/finance_information.php','10.0.1.186','20230402132454','2023-04-02','13:24:54','','en-US,en;q=0.9','','Edge','1920x1080','','','','','','','','','','Windows 10','0','Y','https://203.151.166.134/dip_intranet/finance_information.php','14','','','','1','','qbj4dtahjcn2cvoqj3ipecbgqb')]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2023-04-02 13:26:10] [IP:125.26.202.197]
+[Query:INSERT INTO stat_visitor (sv_url,sv_visitor,sv_menu,sv_ip,sv_timestamp,sv_date,sv_time,sv_country,sv_language,sv_new,sv_browser,sv_resolution,sv_domain,sv_isp,sv_region,sv_city,sv_latitude,sv_longitude,sv_referer,sv_search,sv_keyword,sv_os,sv_load,sv_member,sv_fullurl,sv_mem_id,sv_w3c,sv_country_code,sv_region_code,sv_device,sv_op,sv_session_id) VALUES ('page','','/dip_intranet/finance_information.php','10.0.1.186','20230402132610','2023-04-02','13:26:10','','en-US,en;q=0.9','','Edge','1920x1080','','','','','','','','','','Windows 10','0','Y','https://203.151.166.134/dip_intranet/finance_information.php','14','','','','1','','qbj4dtahjcn2cvoqj3ipecbgqb')]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2023-04-02 13:26:34] [IP:125.26.202.197]
+[Query:INSERT INTO stat_visitor (sv_url,sv_visitor,sv_menu,sv_ip,sv_timestamp,sv_date,sv_time,sv_country,sv_language,sv_new,sv_browser,sv_resolution,sv_domain,sv_isp,sv_region,sv_city,sv_latitude,sv_longitude,sv_referer,sv_search,sv_keyword,sv_os,sv_load,sv_member,sv_fullurl,sv_mem_id,sv_w3c,sv_country_code,sv_region_code,sv_device,sv_op,sv_session_id) VALUES ('page','','/dip_intranet/finance_information.php','10.0.1.186','20230402132634','2023-04-02','13:26:34','','en-US,en;q=0.9','','Edge','1920x1080','','','','','','','','','','Windows 10','0','Y','https://203.151.166.134/dip_intranet/finance_information.php','14','','','','1','','qbj4dtahjcn2cvoqj3ipecbgqb')]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2023-04-02 13:31:56] [IP:125.26.202.247]
+[Query:INSERT INTO stat_visitor (sv_url,sv_visitor,sv_menu,sv_ip,sv_timestamp,sv_date,sv_time,sv_country,sv_language,sv_new,sv_browser,sv_resolution,sv_domain,sv_isp,sv_region,sv_city,sv_latitude,sv_longitude,sv_referer,sv_search,sv_keyword,sv_os,sv_load,sv_member,sv_fullurl,sv_mem_id,sv_w3c,sv_country_code,sv_region_code,sv_device,sv_op,sv_session_id) VALUES ('page','','/dip_intranet/payroll_display.php?PER_ID=32&LOG_ID=6','10.0.1.186','20230402133156','2023-04-02','13:31:56','','en-US,en;q=0.9','','Edge','1920x1080','','','','','','','','','','Windows 10','0','Y','https://203.151.166.134/dip_intranet/payroll_display.php?PER_ID=32&LOG_ID=6','14','','','','1','','qbj4dtahjcn2cvoqj3ipecbgqb')]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2023-04-02 13:33:49] [IP:125.26.202.247]
+[Query:INSERT INTO stat_visitor (sv_url,sv_visitor,sv_menu,sv_ip,sv_timestamp,sv_date,sv_time,sv_country,sv_language,sv_new,sv_browser,sv_resolution,sv_domain,sv_isp,sv_region,sv_city,sv_latitude,sv_longitude,sv_referer,sv_search,sv_keyword,sv_os,sv_load,sv_member,sv_fullurl,sv_mem_id,sv_w3c,sv_country_code,sv_region_code,sv_device,sv_op,sv_session_id) VALUES ('page','','/dip_intranet/payroll_display.php?PER_ID=32&LOG_ID=6','10.0.1.186','20230402133349','2023-04-02','13:33:49','','en-US,en;q=0.9','','Edge','1920x1080','','','','','','','','','','Windows 10','0','Y','https://203.151.166.134/dip_intranet/payroll_display.php?PER_ID=32&LOG_ID=6','14','','','','1','','qbj4dtahjcn2cvoqj3ipecbgqb')]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2023-04-02 13:34:37] [IP:125.26.202.247]
+[Query:INSERT INTO stat_visitor (sv_url,sv_visitor,sv_menu,sv_ip,sv_timestamp,sv_date,sv_time,sv_country,sv_language,sv_new,sv_browser,sv_resolution,sv_domain,sv_isp,sv_region,sv_city,sv_latitude,sv_longitude,sv_referer,sv_search,sv_keyword,sv_os,sv_load,sv_member,sv_fullurl,sv_mem_id,sv_w3c,sv_country_code,sv_region_code,sv_device,sv_op,sv_session_id) VALUES ('page','','/dip_intranet/payroll_display.php?PER_ID=32&LOG_ID=6','10.0.1.186','20230402133437','2023-04-02','13:34:37','','en-US,en;q=0.9','','Edge','1920x1080','','','','','','','','','','Windows 10','0','Y','https://203.151.166.134/dip_intranet/payroll_display.php?PER_ID=32&LOG_ID=6','14','','','','1','','qbj4dtahjcn2cvoqj3ipecbgqb')]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2023-04-02 13:35:18] [IP:125.26.202.247]
+[Query:INSERT INTO stat_visitor (sv_url,sv_visitor,sv_menu,sv_ip,sv_timestamp,sv_date,sv_time,sv_country,sv_language,sv_new,sv_browser,sv_resolution,sv_domain,sv_isp,sv_region,sv_city,sv_latitude,sv_longitude,sv_referer,sv_search,sv_keyword,sv_os,sv_load,sv_member,sv_fullurl,sv_mem_id,sv_w3c,sv_country_code,sv_region_code,sv_device,sv_op,sv_session_id) VALUES ('page','','/dip_intranet/payroll_display.php?PER_ID=32&LOG_ID=6','10.0.1.186','20230402133518','2023-04-02','13:35:18','','en-US,en;q=0.9','','Edge','1920x1080','','','','','','','','','','Windows 10','0','Y','https://203.151.166.134/dip_intranet/payroll_display.php?PER_ID=32&LOG_ID=6','14','','','','1','','qbj4dtahjcn2cvoqj3ipecbgqb')]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2023-04-02 13:36:30] [IP:125.26.202.247]
+[Query:INSERT INTO stat_visitor (sv_url,sv_visitor,sv_menu,sv_ip,sv_timestamp,sv_date,sv_time,sv_country,sv_language,sv_new,sv_browser,sv_resolution,sv_domain,sv_isp,sv_region,sv_city,sv_latitude,sv_longitude,sv_referer,sv_search,sv_keyword,sv_os,sv_load,sv_member,sv_fullurl,sv_mem_id,sv_w3c,sv_country_code,sv_region_code,sv_device,sv_op,sv_session_id) VALUES ('page','','/dip_intranet/payroll_display.php?PER_ID=32&LOG_ID=6','10.0.1.186','20230402133630','2023-04-02','13:36:30','','en-US,en;q=0.9','','Edge','1920x1080','','','','','','','','','','Windows 10','0','Y','https://203.151.166.134/dip_intranet/payroll_display.php?PER_ID=32&LOG_ID=6','14','','','','1','','qbj4dtahjcn2cvoqj3ipecbgqb')]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2023-04-02 13:37:24] [IP:125.26.202.247]
+[Query:INSERT INTO stat_visitor (sv_url,sv_visitor,sv_menu,sv_ip,sv_timestamp,sv_date,sv_time,sv_country,sv_language,sv_new,sv_browser,sv_resolution,sv_domain,sv_isp,sv_region,sv_city,sv_latitude,sv_longitude,sv_referer,sv_search,sv_keyword,sv_os,sv_load,sv_member,sv_fullurl,sv_mem_id,sv_w3c,sv_country_code,sv_region_code,sv_device,sv_op,sv_session_id) VALUES ('page','','/dip_intranet/payroll_display.php?PER_ID=32&LOG_ID=6','10.0.1.186','20230402133724','2023-04-02','13:37:24','','en-US,en;q=0.9','','Edge','1920x1080','','','','','','','','','','Windows 10','0','Y','https://203.151.166.134/dip_intranet/payroll_display.php?PER_ID=32&LOG_ID=6','14','','','','1','','qbj4dtahjcn2cvoqj3ipecbgqb')]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2023-04-02 13:37:47] [IP:125.26.202.247]
+[Query:INSERT INTO stat_visitor (sv_url,sv_visitor,sv_menu,sv_ip,sv_timestamp,sv_date,sv_time,sv_country,sv_language,sv_new,sv_browser,sv_resolution,sv_domain,sv_isp,sv_region,sv_city,sv_latitude,sv_longitude,sv_referer,sv_search,sv_keyword,sv_os,sv_load,sv_member,sv_fullurl,sv_mem_id,sv_w3c,sv_country_code,sv_region_code,sv_device,sv_op,sv_session_id) VALUES ('page','','/dip_intranet/payroll_display.php?PER_ID=32&LOG_ID=6','10.0.1.186','20230402133747','2023-04-02','13:37:47','','en-US,en;q=0.9','','Edge','1920x1080','','','','','','','','','','Windows 10','0','Y','https://203.151.166.134/dip_intranet/payroll_display.php?PER_ID=32&LOG_ID=6','14','','','','1','','qbj4dtahjcn2cvoqj3ipecbgqb')]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2023-04-02 13:38:12] [IP:125.26.202.247]
+[Query:INSERT INTO stat_visitor (sv_url,sv_visitor,sv_menu,sv_ip,sv_timestamp,sv_date,sv_time,sv_country,sv_language,sv_new,sv_browser,sv_resolution,sv_domain,sv_isp,sv_region,sv_city,sv_latitude,sv_longitude,sv_referer,sv_search,sv_keyword,sv_os,sv_load,sv_member,sv_fullurl,sv_mem_id,sv_w3c,sv_country_code,sv_region_code,sv_device,sv_op,sv_session_id) VALUES ('page','','/dip_intranet/payroll_display.php?PER_ID=32&LOG_ID=6','10.0.1.186','20230402133811','2023-04-02','13:38:11','','en-US,en;q=0.9','','Edge','1920x1080','','','','','','','','','','Windows 10','0','Y','https://203.151.166.134/dip_intranet/payroll_display.php?PER_ID=32&LOG_ID=6','14','','','','1','','qbj4dtahjcn2cvoqj3ipecbgqb')]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2023-04-02 13:39:08] [IP:125.26.202.247]
+[Query:INSERT INTO stat_visitor (sv_url,sv_visitor,sv_menu,sv_ip,sv_timestamp,sv_date,sv_time,sv_country,sv_language,sv_new,sv_browser,sv_resolution,sv_domain,sv_isp,sv_region,sv_city,sv_latitude,sv_longitude,sv_referer,sv_search,sv_keyword,sv_os,sv_load,sv_member,sv_fullurl,sv_mem_id,sv_w3c,sv_country_code,sv_region_code,sv_device,sv_op,sv_session_id) VALUES ('page','','/dip_intranet/payroll_display.php?PER_ID=32&LOG_ID=6','10.0.1.186','20230402133908','2023-04-02','13:39:08','','en-US,en;q=0.9','','Edge','1920x1080','','','','','','','','','','Windows 10','0','Y','https://203.151.166.134/dip_intranet/payroll_display.php?PER_ID=32&LOG_ID=6','14','','','','1','','qbj4dtahjcn2cvoqj3ipecbgqb')]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2023-04-02 13:40:35] [IP:125.26.202.247]
+[Query:INSERT INTO stat_visitor (sv_url,sv_visitor,sv_menu,sv_ip,sv_timestamp,sv_date,sv_time,sv_country,sv_language,sv_new,sv_browser,sv_resolution,sv_domain,sv_isp,sv_region,sv_city,sv_latitude,sv_longitude,sv_referer,sv_search,sv_keyword,sv_os,sv_load,sv_member,sv_fullurl,sv_mem_id,sv_w3c,sv_country_code,sv_region_code,sv_device,sv_op,sv_session_id) VALUES ('page','','/dip_intranet/payroll_display.php?PER_ID=32&LOG_ID=6','10.0.1.186','20230402134034','2023-04-02','13:40:34','','en-US,en;q=0.9','','Edge','1920x1080','','','','','','','','','','Windows 10','0','Y','https://203.151.166.134/dip_intranet/payroll_display.php?PER_ID=32&LOG_ID=6','14','','','','1','','qbj4dtahjcn2cvoqj3ipecbgqb')]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2023-04-02 13:42:03] [IP:125.26.202.236]
+[Query:INSERT INTO stat_visitor (sv_url,sv_visitor,sv_menu,sv_ip,sv_timestamp,sv_date,sv_time,sv_country,sv_language,sv_new,sv_browser,sv_resolution,sv_domain,sv_isp,sv_region,sv_city,sv_latitude,sv_longitude,sv_referer,sv_search,sv_keyword,sv_os,sv_load,sv_member,sv_fullurl,sv_mem_id,sv_w3c,sv_country_code,sv_region_code,sv_device,sv_op,sv_session_id) VALUES ('page','','/dip_intranet/payroll_display.php?PER_ID=32&LOG_ID=6','10.0.1.186','20230402134202','2023-04-02','13:42:02','','en-US,en;q=0.9','','Edge','1920x1080','','','','','','','','','','Windows 10','0','Y','https://203.151.166.134/dip_intranet/payroll_display.php?PER_ID=32&LOG_ID=6','14','','','','1','','qbj4dtahjcn2cvoqj3ipecbgqb')]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2023-04-02 13:42:31] [IP:125.26.202.236]
+[Query:INSERT INTO stat_visitor (sv_url,sv_visitor,sv_menu,sv_ip,sv_timestamp,sv_date,sv_time,sv_country,sv_language,sv_new,sv_browser,sv_resolution,sv_domain,sv_isp,sv_region,sv_city,sv_latitude,sv_longitude,sv_referer,sv_search,sv_keyword,sv_os,sv_load,sv_member,sv_fullurl,sv_mem_id,sv_w3c,sv_country_code,sv_region_code,sv_device,sv_op,sv_session_id) VALUES ('page','','/dip_intranet/payroll_display.php?PER_ID=32&LOG_ID=6','10.0.1.186','20230402134230','2023-04-02','13:42:30','','en-US,en;q=0.9','','Edge','1920x1080','','','','','','','','','','Windows 10','0','Y','https://203.151.166.134/dip_intranet/payroll_display.php?PER_ID=32&LOG_ID=6','14','','','','1','','qbj4dtahjcn2cvoqj3ipecbgqb')]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2023-04-02 13:43:59] [IP:125.26.202.236]
+[Query:INSERT INTO stat_visitor (sv_url,sv_visitor,sv_menu,sv_ip,sv_timestamp,sv_date,sv_time,sv_country,sv_language,sv_new,sv_browser,sv_resolution,sv_domain,sv_isp,sv_region,sv_city,sv_latitude,sv_longitude,sv_referer,sv_search,sv_keyword,sv_os,sv_load,sv_member,sv_fullurl,sv_mem_id,sv_w3c,sv_country_code,sv_region_code,sv_device,sv_op,sv_session_id) VALUES ('page','','/dip_intranet/payroll_display.php?PER_ID=32&LOG_ID=6','10.0.1.186','20230402134358','2023-04-02','13:43:58','','en-US,en;q=0.9','','Edge','1920x1080','','','','','','','','','','Windows 10','0','Y','https://203.151.166.134/dip_intranet/payroll_display.php?PER_ID=32&LOG_ID=6','14','','','','1','','qbj4dtahjcn2cvoqj3ipecbgqb')]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2023-04-02 13:45:29] [IP:125.26.202.236]
+[Query:INSERT INTO stat_visitor (sv_url,sv_visitor,sv_menu,sv_ip,sv_timestamp,sv_date,sv_time,sv_country,sv_language,sv_new,sv_browser,sv_resolution,sv_domain,sv_isp,sv_region,sv_city,sv_latitude,sv_longitude,sv_referer,sv_search,sv_keyword,sv_os,sv_load,sv_member,sv_fullurl,sv_mem_id,sv_w3c,sv_country_code,sv_region_code,sv_device,sv_op,sv_session_id) VALUES ('page','','/dip_intranet/payroll_display.php?PER_ID=32&LOG_ID=6','10.0.1.186','20230402134529','2023-04-02','13:45:29','','en-US,en;q=0.9','','Edge','1920x1080','','','','','','','','','','Windows 10','0','Y','https://203.151.166.134/dip_intranet/payroll_display.php?PER_ID=32&LOG_ID=6','14','','','','1','','qbj4dtahjcn2cvoqj3ipecbgqb')]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2023-04-02 13:46:22] [IP:125.26.202.236]
+[Query:INSERT INTO stat_visitor (sv_url,sv_visitor,sv_menu,sv_ip,sv_timestamp,sv_date,sv_time,sv_country,sv_language,sv_new,sv_browser,sv_resolution,sv_domain,sv_isp,sv_region,sv_city,sv_latitude,sv_longitude,sv_referer,sv_search,sv_keyword,sv_os,sv_load,sv_member,sv_fullurl,sv_mem_id,sv_w3c,sv_country_code,sv_region_code,sv_device,sv_op,sv_session_id) VALUES ('page','','/dip_intranet/payroll_display.php?PER_ID=32&LOG_ID=6','10.0.1.186','20230402134622','2023-04-02','13:46:22','','en-US,en;q=0.9','','Edge','1920x1080','','','','','','','','','','Windows 10','0','Y','https://203.151.166.134/dip_intranet/payroll_display.php?PER_ID=32&LOG_ID=6','14','','','','1','','qbj4dtahjcn2cvoqj3ipecbgqb')]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2023-04-02 13:47:07] [IP:125.26.202.236]
+[Query:INSERT INTO stat_visitor (sv_url,sv_visitor,sv_menu,sv_ip,sv_timestamp,sv_date,sv_time,sv_country,sv_language,sv_new,sv_browser,sv_resolution,sv_domain,sv_isp,sv_region,sv_city,sv_latitude,sv_longitude,sv_referer,sv_search,sv_keyword,sv_os,sv_load,sv_member,sv_fullurl,sv_mem_id,sv_w3c,sv_country_code,sv_region_code,sv_device,sv_op,sv_session_id) VALUES ('page','','/dip_intranet/payroll_display.php?PER_ID=32&LOG_ID=6','10.0.1.186','20230402134706','2023-04-02','13:47:06','','en-US,en;q=0.9','','Edge','1920x1080','','','','','','','','','','Windows 10','0','Y','https://203.151.166.134/dip_intranet/payroll_display.php?PER_ID=32&LOG_ID=6','14','','','','1','','qbj4dtahjcn2cvoqj3ipecbgqb')]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2023-04-02 13:48:25] [IP:125.26.202.236]
+[Query:INSERT INTO stat_visitor (sv_url,sv_visitor,sv_menu,sv_ip,sv_timestamp,sv_date,sv_time,sv_country,sv_language,sv_new,sv_browser,sv_resolution,sv_domain,sv_isp,sv_region,sv_city,sv_latitude,sv_longitude,sv_referer,sv_search,sv_keyword,sv_os,sv_load,sv_member,sv_fullurl,sv_mem_id,sv_w3c,sv_country_code,sv_region_code,sv_device,sv_op,sv_session_id) VALUES ('page','','/dip_intranet/payroll_display.php?PER_ID=32&LOG_ID=6','10.0.1.186','20230402134824','2023-04-02','13:48:24','','en-US,en;q=0.9','','Edge','1920x1080','','','','','','','','','','Windows 10','0','Y','https://203.151.166.134/dip_intranet/payroll_display.php?PER_ID=32&LOG_ID=6','14','','','','1','','qbj4dtahjcn2cvoqj3ipecbgqb')]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2023-04-02 13:49:01] [IP:125.26.202.236]
+[Query:INSERT INTO stat_visitor (sv_url,sv_visitor,sv_menu,sv_ip,sv_timestamp,sv_date,sv_time,sv_country,sv_language,sv_new,sv_browser,sv_resolution,sv_domain,sv_isp,sv_region,sv_city,sv_latitude,sv_longitude,sv_referer,sv_search,sv_keyword,sv_os,sv_load,sv_member,sv_fullurl,sv_mem_id,sv_w3c,sv_country_code,sv_region_code,sv_device,sv_op,sv_session_id) VALUES ('page','','/dip_intranet/payroll_display.php?PER_ID=32&LOG_ID=6','10.0.1.186','20230402134901','2023-04-02','13:49:01','','en-US,en;q=0.9','','Edge','1920x1080','','','','','','','','','','Windows 10','0','Y','https://203.151.166.134/dip_intranet/payroll_display.php?PER_ID=32&LOG_ID=6','14','','','','1','','qbj4dtahjcn2cvoqj3ipecbgqb')]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2023-04-02 13:56:39] [IP:125.26.202.197]
+[Query:DELETE FROM visitor_online WHERE DATEADD(SECOND,30,vo_onlinelasttime) <= GETDATE() ]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2023-04-02 13:56:45] [IP:125.26.202.197]
+[Query:SELECT sv_id FROM stat_visitor WHERE sv_ip = '10.0.1.186' AND sv_new = 'Y' LIMIT 0,1 ]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2023-04-02 13:56:45] [IP:125.26.202.197]
+[Query:SELECT sv_id FROM stat_visitor WHERE sv_ip = '10.0.1.186' AND sv_new = 'Y' LIMIT 0,1 ]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2023-04-02 13:56:46] [IP:125.26.202.197]
+[Query:INSERT INTO stat_visitor (sv_url,sv_visitor,sv_menu,sv_ip,sv_timestamp,sv_date,sv_time,sv_country,sv_language,sv_new,sv_browser,sv_resolution,sv_domain,sv_isp,sv_region,sv_city,sv_latitude,sv_longitude,sv_referer,sv_search,sv_keyword,sv_os,sv_load,sv_member,sv_fullurl,sv_mem_id,sv_w3c,sv_country_code,sv_region_code,sv_device,sv_op,sv_session_id) VALUES ('page','Y','/dip_intranet/index.php','10.0.1.186','20230402135645','2023-04-02','13:56:45','','en-US,en;q=0.9','Y','Edge','1920x1080','','','','','','','http://203.151.166.134/dip_intranet/index.php','','','Windows 10','0','Y','https://203.151.166.134/dip_intranet/index.php','19','','','','1','','qbj4dtahjcn2cvoqj3ipecbgqb')]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2023-04-02 13:56:51] [IP:125.26.202.197]
+[Query:INSERT INTO stat_visitor (sv_url,sv_visitor,sv_menu,sv_ip,sv_timestamp,sv_date,sv_time,sv_country,sv_language,sv_new,sv_browser,sv_resolution,sv_domain,sv_isp,sv_region,sv_city,sv_latitude,sv_longitude,sv_referer,sv_search,sv_keyword,sv_os,sv_load,sv_member,sv_fullurl,sv_mem_id,sv_w3c,sv_country_code,sv_region_code,sv_device,sv_op,sv_session_id) VALUES ('page','','/dip_intranet/profile.php','10.0.1.186','20230402135650','2023-04-02','13:56:50','','en-US,en;q=0.9','','Edge','1920x1080','','','','','','','','','','Windows 10','0','Y','https://203.151.166.134/dip_intranet/profile.php','19','','','','1','','qbj4dtahjcn2cvoqj3ipecbgqb')]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2023-04-02 13:56:52] [IP:125.26.202.197]
+[Query:INSERT INTO stat_visitor (sv_url,sv_visitor,sv_menu,sv_ip,sv_timestamp,sv_date,sv_time,sv_country,sv_language,sv_new,sv_browser,sv_resolution,sv_domain,sv_isp,sv_region,sv_city,sv_latitude,sv_longitude,sv_referer,sv_search,sv_keyword,sv_os,sv_load,sv_member,sv_fullurl,sv_mem_id,sv_w3c,sv_country_code,sv_region_code,sv_device,sv_op,sv_session_id) VALUES ('page','','/dip_intranet/finance_information.php','10.0.1.186','20230402135652','2023-04-02','13:56:52','','en-US,en;q=0.9','','Edge','1920x1080','','','','','','','','','','Windows 10','0','Y','https://203.151.166.134/dip_intranet/finance_information.php','19','','','','1','','qbj4dtahjcn2cvoqj3ipecbgqb')]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2023-04-02 13:58:35] [IP:125.26.202.197]
+[Query:INSERT INTO stat_visitor (sv_url,sv_visitor,sv_menu,sv_ip,sv_timestamp,sv_date,sv_time,sv_country,sv_language,sv_new,sv_browser,sv_resolution,sv_domain,sv_isp,sv_region,sv_city,sv_latitude,sv_longitude,sv_referer,sv_search,sv_keyword,sv_os,sv_load,sv_member,sv_fullurl,sv_mem_id,sv_w3c,sv_country_code,sv_region_code,sv_device,sv_op,sv_session_id) VALUES ('page','','/dip_intranet/finance_information.php','10.0.1.186','20230402135834','2023-04-02','13:58:34','','en-US,en;q=0.9','','Edge','1920x1080','','','','','','','','','','Windows 10','0','Y','https://203.151.166.134/dip_intranet/finance_information.php','19','','','','1','','qbj4dtahjcn2cvoqj3ipecbgqb')]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2023-04-02 13:58:47] [IP:125.26.202.197]
+[Query:INSERT INTO stat_visitor (sv_url,sv_visitor,sv_menu,sv_ip,sv_timestamp,sv_date,sv_time,sv_country,sv_language,sv_new,sv_browser,sv_resolution,sv_domain,sv_isp,sv_region,sv_city,sv_latitude,sv_longitude,sv_referer,sv_search,sv_keyword,sv_os,sv_load,sv_member,sv_fullurl,sv_mem_id,sv_w3c,sv_country_code,sv_region_code,sv_device,sv_op,sv_session_id) VALUES ('page','','/dip_intranet/finance_information.php','10.0.1.186','20230402135847','2023-04-02','13:58:47','','en-US,en;q=0.9','','Edge','1920x1080','','','','','','','','','','Windows 10','0','Y','https://203.151.166.134/dip_intranet/finance_information.php','19','','','','1','','qbj4dtahjcn2cvoqj3ipecbgqb')]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2023-04-02 13:58:49] [IP:125.26.202.197]
+[Query:INSERT INTO stat_visitor (sv_url,sv_visitor,sv_menu,sv_ip,sv_timestamp,sv_date,sv_time,sv_country,sv_language,sv_new,sv_browser,sv_resolution,sv_domain,sv_isp,sv_region,sv_city,sv_latitude,sv_longitude,sv_referer,sv_search,sv_keyword,sv_os,sv_load,sv_member,sv_fullurl,sv_mem_id,sv_w3c,sv_country_code,sv_region_code,sv_device,sv_op,sv_session_id) VALUES ('page','','/dip_intranet/payroll_display.php?PER_ID=501&LOG_ID=7','10.0.1.186','20230402135848','2023-04-02','13:58:48','','en-US,en;q=0.9','','Edge','1920x1080','','','','','','','','','','Windows 10','0','Y','https://203.151.166.134/dip_intranet/payroll_display.php?PER_ID=501&LOG_ID=7','19','','','','1','','qbj4dtahjcn2cvoqj3ipecbgqb')]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2023-04-02 14:00:54] [IP:125.26.202.197]
+[Query:INSERT INTO stat_visitor (sv_url,sv_visitor,sv_menu,sv_ip,sv_timestamp,sv_date,sv_time,sv_country,sv_language,sv_new,sv_browser,sv_resolution,sv_domain,sv_isp,sv_region,sv_city,sv_latitude,sv_longitude,sv_referer,sv_search,sv_keyword,sv_os,sv_load,sv_member,sv_fullurl,sv_mem_id,sv_w3c,sv_country_code,sv_region_code,sv_device,sv_op,sv_session_id) VALUES ('page','','/dip_intranet/payroll_display.php?PER_ID=501&LOG_ID=7','10.0.1.186','20230402140054','2023-04-02','14:00:54','','en-US,en;q=0.9','','Edge','1920x1080','','','','','','','','','','Windows 10','0','Y','https://203.151.166.134/dip_intranet/payroll_display.php?PER_ID=501&LOG_ID=7','19','','','','1','','qbj4dtahjcn2cvoqj3ipecbgqb')]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2023-04-02 14:29:01] [IP:125.26.202.236]
+[Query:INSERT INTO stat_visitor (sv_url,sv_visitor,sv_menu,sv_ip,sv_timestamp,sv_date,sv_time,sv_country,sv_language,sv_new,sv_browser,sv_resolution,sv_domain,sv_isp,sv_region,sv_city,sv_latitude,sv_longitude,sv_referer,sv_search,sv_keyword,sv_os,sv_load,sv_member,sv_fullurl,sv_mem_id,sv_w3c,sv_country_code,sv_region_code,sv_device,sv_op,sv_session_id) VALUES ('page','','/dip_intranet/finance_information.php','10.0.1.186','20230402142900','2023-04-02','14:29:00','','en-US,en;q=0.9','','Edge','1920x1080','','','','','','','','','','Windows 10','0','Y','https://203.151.166.134/dip_intranet/finance_information.php','19','','','','1','','qbj4dtahjcn2cvoqj3ipecbgqb')]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2023-04-02 21:08:07] [IP:171.101.113.106]
+[Query:SELECT sv_id FROM stat_visitor WHERE sv_ip = '171.101.113.106' AND sv_new = 'Y' LIMIT 0,1 ]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2023-04-02 21:08:07] [IP:171.101.113.106]
+[Query:SELECT sv_id FROM stat_visitor WHERE sv_ip = '171.101.113.106' AND sv_new = 'Y' LIMIT 0,1 ]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2023-04-02 21:08:07] [IP:171.101.113.106]
+[Query:INSERT INTO stat_visitor (sv_url,sv_visitor,sv_menu,sv_ip,sv_timestamp,sv_date,sv_time,sv_country,sv_language,sv_new,sv_browser,sv_resolution,sv_domain,sv_isp,sv_region,sv_city,sv_latitude,sv_longitude,sv_referer,sv_search,sv_keyword,sv_os,sv_load,sv_member,sv_fullurl,sv_mem_id,sv_w3c,sv_country_code,sv_region_code,sv_device,sv_op,sv_session_id) VALUES ('page','Y','/dip_intranet/index.php','171.101.113.106','20230402210807','2023-04-02','21:08:07','TH','th-TH,th;q=0.9,en;q=0.8','Y','Google Chrome','1366x768','cm-171-101-113-106.revip11.asianet.co.th','AS17552 True Online','Bangkok','Bangkok','13.7540','100.5014','http://203.151.166.134/dip_intranet/index.php','','','Windows 10','0','Y','https://203.151.166.134/dip_intranet/index.php','1','','TH','','1','','od7i4ieu9c8c46v4bsk5et7mdn')]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2023-04-02 21:13:28] [IP:171.101.113.106]
+[Query:INSERT INTO stat_visitor (sv_url,sv_visitor,sv_menu,sv_ip,sv_timestamp,sv_date,sv_time,sv_country,sv_language,sv_new,sv_browser,sv_resolution,sv_domain,sv_isp,sv_region,sv_city,sv_latitude,sv_longitude,sv_referer,sv_search,sv_keyword,sv_os,sv_load,sv_member,sv_fullurl,sv_mem_id,sv_w3c,sv_country_code,sv_region_code,sv_device,sv_op,sv_session_id) VALUES ('page','','/dip_intranet/profile.php','171.101.113.106','20230402211328','2023-04-02','21:13:28','TH','th-TH,th;q=0.9,en;q=0.8','','Google Chrome','1366x768','cm-171-101-113-106.revip11.asianet.co.th','AS17552 True Online','Bangkok','Bangkok','13.7540','100.5014','','','','Windows 10','0','Y','https://203.151.166.134/dip_intranet/profile.php','1','','TH','','1','','od7i4ieu9c8c46v4bsk5et7mdn')]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2023-04-02 21:13:30] [IP:171.101.113.106]
+[Query:INSERT INTO stat_visitor (sv_url,sv_visitor,sv_menu,sv_ip,sv_timestamp,sv_date,sv_time,sv_country,sv_language,sv_new,sv_browser,sv_resolution,sv_domain,sv_isp,sv_region,sv_city,sv_latitude,sv_longitude,sv_referer,sv_search,sv_keyword,sv_os,sv_load,sv_member,sv_fullurl,sv_mem_id,sv_w3c,sv_country_code,sv_region_code,sv_device,sv_op,sv_session_id) VALUES ('page','','/dip_intranet/finance_information.php','171.101.113.106','20230402211330','2023-04-02','21:13:30','TH','th-TH,th;q=0.9,en;q=0.8','','Google Chrome','1366x768','cm-171-101-113-106.revip11.asianet.co.th','AS17552 True Online','Bangkok','Bangkok','13.7540','100.5014','','','','Windows 10','0','Y','https://203.151.166.134/dip_intranet/finance_information.php','1','','TH','','1','','od7i4ieu9c8c46v4bsk5et7mdn')]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2023-04-02 21:13:36] [IP:171.101.113.106]
+[Query:DELETE FROM visitor_online WHERE DATEADD(SECOND,30,vo_onlinelasttime) <= GETDATE() ]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2023-04-02 21:21:46] [IP:171.101.113.106]
+[Query:SELECT sv_id FROM stat_visitor WHERE sv_ip = '171.101.113.106' AND sv_new = 'Y' LIMIT 0,1 ]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2023-04-02 21:21:46] [IP:171.101.113.106]
+[Query:SELECT sv_id FROM stat_visitor WHERE sv_ip = '171.101.113.106' AND sv_new = 'Y' LIMIT 0,1 ]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2023-04-02 21:21:47] [IP:171.101.113.106]
+[Query:INSERT INTO stat_visitor (sv_url,sv_visitor,sv_menu,sv_ip,sv_timestamp,sv_date,sv_time,sv_country,sv_language,sv_new,sv_browser,sv_resolution,sv_domain,sv_isp,sv_region,sv_city,sv_latitude,sv_longitude,sv_referer,sv_search,sv_keyword,sv_os,sv_load,sv_member,sv_fullurl,sv_mem_id,sv_w3c,sv_country_code,sv_region_code,sv_device,sv_op,sv_session_id) VALUES ('page','Y','/dip_intranet/index.php','171.101.113.106','20230402212146','2023-04-02','21:21:46','TH','th-TH,th;q=0.9,en;q=0.8','Y','Google Chrome','1366x768','cm-171-101-113-106.revip11.asianet.co.th','AS17552 True Online','Bangkok','Bangkok','13.7540','100.5014','http://203.151.166.134/dip_intranet/index.php','','','Windows 10','0','Y','https://203.151.166.134/dip_intranet/index.php','1','','TH','','1','','od7i4ieu9c8c46v4bsk5et7mdn')]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2023-04-02 21:21:50] [IP:171.101.113.106]
+[Query:INSERT INTO stat_visitor (sv_url,sv_visitor,sv_menu,sv_ip,sv_timestamp,sv_date,sv_time,sv_country,sv_language,sv_new,sv_browser,sv_resolution,sv_domain,sv_isp,sv_region,sv_city,sv_latitude,sv_longitude,sv_referer,sv_search,sv_keyword,sv_os,sv_load,sv_member,sv_fullurl,sv_mem_id,sv_w3c,sv_country_code,sv_region_code,sv_device,sv_op,sv_session_id) VALUES ('page','','/dip_intranet/index.php','171.101.113.106','20230402212150','2023-04-02','21:21:50','TH','th-TH,th;q=0.9,en;q=0.8','','Google Chrome','1366x768','cm-171-101-113-106.revip11.asianet.co.th','AS17552 True Online','Bangkok','Bangkok','13.7540','100.5014','','','','Windows 10','0','Y','https://203.151.166.134/dip_intranet/index.php','1','','TH','','1','','od7i4ieu9c8c46v4bsk5et7mdn')]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2023-04-02 21:22:32] [IP:171.101.113.106]
+[Query:INSERT INTO stat_visitor (sv_url,sv_visitor,sv_menu,sv_ip,sv_timestamp,sv_date,sv_time,sv_country,sv_language,sv_new,sv_browser,sv_resolution,sv_domain,sv_isp,sv_region,sv_city,sv_latitude,sv_longitude,sv_referer,sv_search,sv_keyword,sv_os,sv_load,sv_member,sv_fullurl,sv_mem_id,sv_w3c,sv_country_code,sv_region_code,sv_device,sv_op,sv_session_id) VALUES ('page','','/dip_intranet/index.php','171.101.113.106','20230402212232','2023-04-02','21:22:32','TH','th-TH,th;q=0.9,en;q=0.8','','Google Chrome','1920x1080','cm-171-101-113-106.revip11.asianet.co.th','AS17552 True Online','Bangkok','Bangkok','13.7540','100.5014','','','','Windows 10','0','Y','https://203.151.166.134/dip_intranet/index.php','1','','TH','','1','','od7i4ieu9c8c46v4bsk5et7mdn')]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2023-04-02 21:45:42] [IP:171.101.113.106]
+[Query:DELETE FROM visitor_online WHERE DATEADD(SECOND,30,vo_onlinelasttime) <= GETDATE() ]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2023-04-02 21:58:21] [IP:171.101.113.106]
+[Query:SELECT sv_id FROM stat_visitor WHERE sv_ip = '171.101.113.106' AND sv_new = 'Y' LIMIT 0,1 ]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2023-04-02 21:58:21] [IP:171.101.113.106]
+[Query:SELECT sv_id FROM stat_visitor WHERE sv_ip = '171.101.113.106' AND sv_new = 'Y' LIMIT 0,1 ]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2023-04-02 21:58:22] [IP:171.101.113.106]
+[Query:INSERT INTO stat_visitor (sv_url,sv_visitor,sv_menu,sv_ip,sv_timestamp,sv_date,sv_time,sv_country,sv_language,sv_new,sv_browser,sv_resolution,sv_domain,sv_isp,sv_region,sv_city,sv_latitude,sv_longitude,sv_referer,sv_search,sv_keyword,sv_os,sv_load,sv_member,sv_fullurl,sv_mem_id,sv_w3c,sv_country_code,sv_region_code,sv_device,sv_op,sv_session_id) VALUES ('page','Y','/dip_intranet/index.php','171.101.113.106','20230402215821','2023-04-02','21:58:21','TH','th-TH,th;q=0.9,en;q=0.8','Y','Google Chrome','1366x768','cm-171-101-113-106.revip11.asianet.co.th','AS17552 True Online','Bangkok','Bangkok','13.7540','100.5014','http://203.151.166.134/dip_intranet/index.php','','','Windows 10','0','Y','https://203.151.166.134/dip_intranet/index.php','1','','TH','','1','','od7i4ieu9c8c46v4bsk5et7mdn')]
+[Error Code:]
+[Error Massage:]
+====================================

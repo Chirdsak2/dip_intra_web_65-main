@@ -1,0 +1,11 @@
+@font-face {
+	font-family: 'Kanit';
+	src: url('../fonts/kanit/Kanit-Regular.eot');
+	src: local('☺'), 
+        url('../fonts/kanit/Kanit-Regular.woff') format('woff'), 
+        url('../fonts/kanit/Kanit-Regular.ttf') format('truetype'), 
+        url('../fonts/kanit/Kanit-Regular.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+

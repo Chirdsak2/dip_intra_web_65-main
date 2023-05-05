@@ -1,0 +1,40 @@
+<script>
+	function button_over(eButton){
+		eButton.style.borderBottom = "buttonshadow solid 1px";
+		eButton.style.borderLeft = "buttonhighlight solid 1px";
+		eButton.style.borderRight = "buttonshadow solid 1px";
+		eButton.style.borderTop = "buttonhighlight solid 1px";
+	}
+				
+	function button_out(eButton){
+		eButton.style.borderColor = "threedface";
+	}
+
+	function button_down(eButton){
+		eButton.style.borderBottom = "buttonhighlight solid 1px";
+		eButton.style.borderLeft = "buttonshadow solid 1px";
+		eButton.style.borderRight = "buttonhighlight solid 1px";
+		eButton.style.borderTop = "buttonshadow solid 1px";
+	}
+
+	function button_up(eButton){
+		eButton.style.borderBottom = "buttonshadow solid 1px";
+		eButton.style.borderLeft = "buttonhighlight solid 1px";
+		eButton.style.borderRight = "buttonshadow solid 1px";
+		eButton.style.borderTop = "buttonhighlight solid 1px";
+		eButton = null; 
+	}
+	</script>
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+	<td>
+	  <input unselectable="on" type="image" border="0" src="button_align_left.gif" width="21" height="20" onMouseOver="button_over(this);" onMouseOut="button_out(this);" onMouseDown="button_down(this);" onClick="foo.execCommand('bold')" title="Align Left" class=toolbutton>
+	</td>
+	<td>
+	  <input unselectable="on" type="image" border="0" src="button_align_center.gif" width="21" height="20" onMouseOver="button_over(this);" onMouseOut="button_out(this);" onMouseDown="button_down(this);" onClick='doCommand("JustifyCenter");foo.focus();' title="Align Center" class=toolbutton>
+	</td>
+	<td>
+	  <input unselectable="on" type="image" border="0" src="button_align_right.gif" width="21" height="20" onMouseOver="button_over(this);" onMouseOut="button_out(this);" onMouseDown="button_down(this);" onClick='doCommand("JustifyRight");foo.focus();' title="Align Right" class=toolbutton>
+	</td>
+  </tr>
+</table>

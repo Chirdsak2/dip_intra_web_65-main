@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+	<rss version="2.0">
+	<channel>
+		  <title>โครงสร้างพื้นฐานด้านอวกาศ</title> 
+		  <link>http://203.150.224.57/ewtadmin86_gistda/ewt/gistda_web/</link> 
+		  <description>สำนักงานพัฒนาเทคโนโลยีอวกาศและภูมิสารสนเทศ (องค์การมหาชน)</description> 
+		  <language>th-TH</language> 
+		  <lastBuildDate>Thu,26 Aug 2021 02:28:28 Asia/Bangkok</lastBuildDate> 
+		  <copyright>Copyright ? 2008 All rights reserved. http://203.150.224.57/ewtadmin86_gistda/ewt/gistda_web/</copyright> 
+	<item>
+					<title>Telemetry Service</title>
+					<link>http://203.150.224.57/ewtadmin86_gistda/ewt/gistda_web/news_view.php?n_id=2459</link>
+					
+					<description></description>
+					<pubDate>2021-08-26 02:28:28</pubDate>
+					<guid>http://203.150.224.57/ewtadmin86_gistda/ewt/gistda_web/</guid>
+	            </item>
+				</channel>
+	</rss>
+	

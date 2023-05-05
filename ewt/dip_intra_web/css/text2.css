@@ -1,0 +1,351 @@
+.Doae_Style {
+	font-family: "MS Sans Serif";
+	font-size: 9px;
+	font-weight: normal;
+	color: #FFFFFF;
+}
+.Doae_Style_R {
+	font-family: "MS Sans Serif";
+	font-size: 8px;
+	font-weight: normal;
+	color: #000000;
+}
+.NormalT {
+	font-family: "Trebuchet MS";
+	font-size: 11px;
+	font-weight: bold;
+	color: #000000;
+	text-decoration: none;
+}
+.NormalT a:link {
+	font-family: "Trebuchet MS";
+	font-size: 11px;
+	font-weight: bold;
+	color: #000000;
+	text-decoration: none;
+}
+.NormalT a:visited {
+	font-family: "Trebuchet MS";
+	font-size: 11px;
+	font-weight: bold;
+	color: #000000;
+	text-decoration: none;
+}
+.NormalT a:hover {
+	font-family: "Trebuchet MS";
+	font-size: 11px;
+	font-weight: bold;
+	color: #FF5301;
+	text-decoration: none;
+}
+.NormalT a:active {
+	font-family: "Trebuchet MS";
+	font-size: 11px;
+	font-weight: bold;
+	color: #000000;
+	text-decoration: none;
+}
+.fieldDoteNews {
+	font-family: "MS Sans Serif";
+	font-size: 12px;
+	font-weight: normal;
+	color: #333333;
+	border-top-width: 0px;
+	border-right-width: 0px;
+	border-bottom-width: 1px;
+	border-left-width: 0px;
+	border-top-style: dotted;
+	border-right-style: dotted;
+	border-bottom-style: dotted;
+	border-left-style: dotted;
+	border-top-color: #FFCC66;
+	border-right-color: #FFCC66;
+	border-bottom-color: #FFCC66;
+	border-left-color: #FFCC66;
+}
+.fieldLogin {
+	font-family: "MS Sans Serif";
+	font-size: 12px;
+	font-weight: normal;
+	color: #ffffff;
+	background-color: #FF9933;
+	border: 1px solid #B17431;
+}
+.fieldLogin2 {
+
+	font-family: "MS Sans Serif";
+	font-size: 12px;
+	font-weight: normal;
+	color: #000000;
+	background-color: #FFFFFF;
+	border: 1px solid #823C01;
+}
+.menu {
+
+	font-family: "Trebuchet MS";
+	font-size: 11px;
+	font-weight: normal;
+	color: #FF6600;
+	text-decoration: none;
+}
+.menu a:link {
+
+	font-family: "Trebuchet MS";
+	font-size: 11px;
+	font-weight: normal;
+	color: #FF6600;
+	text-decoration: none;
+}
+.menu a:visited {
+
+	font-family: "Trebuchet MS";
+	font-size: 11px;
+	font-weight: normal;
+	color: #FF6600;
+	text-decoration: none;
+}
+.menu a:hover {
+
+	font-family: "Trebuchet MS";
+	font-size: 11px;
+	font-weight: normal;
+	color: #FF0000;
+	text-decoration: none;
+}
+.menu a:active {
+
+	font-family: "Trebuchet MS";
+	font-size: 11px;
+	font-weight: normal;
+	color: #FF6600;
+	text-decoration: none;
+}
+.sport {
+
+	font-family: "Trebuchet MS";
+	font-size: 11px;
+	font-weight: normal;
+	color: #000000;
+	text-decoration: none;
+}
+.sport a:link {
+
+	font-family: "Trebuchet MS";
+	font-size: 11px;
+	font-weight: normal;
+	color: #000000;
+	text-decoration: none;
+}
+.sport a:visited {
+
+	font-family: "Trebuchet MS";
+	font-size: 11px;
+	font-weight: normal;
+	color: #000000;
+	text-decoration: none;
+}
+.sport a:hover {
+
+	font-family: "Trebuchet MS";
+	font-size: 11px;
+	font-weight: normal;
+	color: #009900;
+	text-decoration: none;
+}
+.sport a:active {
+
+	font-family: "Trebuchet MS";
+	font-size: 11px;
+	font-weight: normal;
+	color: #000000;
+	text-decoration: none;
+}
+.other {
+
+
+	font-family: "MS Sans Serif";
+	font-size: 11px;
+	font-weight: normal;
+	color: #669900;
+	text-decoration: none;
+}
+.menu1 {
+
+
+	font-family: "Trebuchet MS";
+	font-size: 11px;
+	font-weight: bold;
+	color: #00568f;
+	text-decoration: none;
+}
+.menu1 a:link {
+
+
+	font-family: "Trebuchet MS";
+	font-size: 11px;
+	font-weight: bold;
+	color: #00568F;
+	text-decoration: none;
+}
+.menu1 a:visited {
+
+
+	font-family: "Trebuchet MS";
+	font-size: 11px;
+	font-weight: bold;
+	color: #00568F;
+	text-decoration: none;
+}
+.menu1 a:hover {
+
+
+	font-family: "Trebuchet MS";
+	font-size: 11px;
+	font-weight: bold;
+	color: #0099FF;
+	text-decoration: none;
+}
+.menu1 a:active {
+
+
+	font-family: "Trebuchet MS";
+	font-size: 11px;
+	font-weight: bold;
+	color: #00568F;
+	text-decoration: none;
+}
+.menu2 {
+
+
+	font-family: "Trebuchet MS";
+	font-size: 11px;
+	font-weight: normal;
+	color: #FFFFFF;
+	text-decoration: none;
+}
+.menu2 a:link {
+
+
+	font-family: "Trebuchet MS";
+	font-size: 11px;
+	font-weight: normal;
+	color: #FFFFFF;
+	text-decoration: none;
+}
+.menu2 a:visited {
+
+
+	font-family: "Trebuchet MS";
+	font-size: 11px;
+	font-weight: normal;
+	color: #FFFFFF;
+	text-decoration: none;
+}
+.menu2 a:hover {
+
+
+	font-family: "Trebuchet MS";
+	font-size: 11px;
+	font-weight: normal;
+	color: #000000;
+	text-decoration: none;
+}
+.menu2 a:active {
+
+
+	font-family: "Trebuchet MS";
+	font-size: 11px;
+	font-weight: normal;
+	color: #FFFFFF;
+	text-decoration: none;
+}
+.menu3 {
+
+
+
+	font-family: "Trebuchet MS";
+	font-size: 11px;
+	font-weight: bolder;
+	color: #FF6600;
+	text-decoration: none;
+}
+.menu3 a:link {
+
+
+
+	font-family: "Trebuchet MS";
+	font-size: 11px;
+	font-weight: bolder;
+	color: #FF6600;
+	text-decoration: none;
+}
+.menu3 a:visited {
+
+
+
+	font-family: "Trebuchet MS";
+	font-size: 11px;
+	font-weight: bolder;
+	color: #FF6600;
+	text-decoration: none;
+}
+.menu3 a:hover {
+
+
+
+	font-family: "Trebuchet MS";
+	font-size: 11px;
+	font-weight: bolder;
+	color: #000000;
+	text-decoration: none;
+}
+.menu3 a:active {
+
+
+
+	font-family: "Trebuchet MS";
+	font-size: 11px;
+	font-weight: bolder;
+	color: #FF6600;
+	text-decoration: none;
+}
+.NormalT7 {
+
+	font-family: "Trebuchet MS";
+	font-size: 11px;
+	font-weight: bold;
+	color: #000000;
+	text-decoration: none;
+}
+.NormalT7 a:link {
+
+	font-family: "Trebuchet MS";
+	font-size: 11px;
+	font-weight: bold;
+	color: #000000;
+	text-decoration: none;
+}
+.NormalT7 a:visited {
+
+	font-family: "Trebuchet MS";
+	font-size: 11px;
+	font-weight: bold;
+	color: #000000;
+	text-decoration: none;
+}
+.NormalT7 a:hover {
+
+	font-family: "Trebuchet MS";
+	font-size: 11px;
+	font-weight: bold;
+	color: #FFFFFF;
+	text-decoration: none;
+}
+.NormalT7 a:active {
+
+	font-family: "Trebuchet MS";
+	font-size: 11px;
+	font-weight: bold;
+	color: #000000;
+	text-decoration: none;
+}

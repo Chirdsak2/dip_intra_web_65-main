@@ -1,0 +1,74 @@
+/* phone book */
+
+/* ********************** */
+.symbolgrov {
+    height: 25px;
+    width: 25px;
+  }
+  
+  .posi-symbolgrov {
+    position: absolute;
+    top: 5%;
+    left: 4%;
+  
+    border-radius: 50%;
+    background-color: #fff;
+  }
+  
+  
+  @media (min-width: 1200px) {
+    .posi-symbolgrov {
+      position: absolute;
+      top: 10%;
+      left: 2%;
+  
+      border-radius: 50%;
+      background-color: #fff;
+    }
+  }
+  
+  @media (min-width: 768px) and (max-width: 991.98px) {
+    .posi-symbolgrov {
+      position: absolute;
+      top: 10%;
+      left: 2%;
+  
+      border-radius: 50%;
+      background-color: #fff;
+    }
+  }
+  
+  @media (min-width: 576px) and (max-width: 767.98px) {
+    .posi-symbolgrov {
+      position: absolute;
+      top: 10%;
+      left: 2%;
+  
+      border-radius: 50%;
+      background-color: #fff;
+    }
+  }
+  
+  @media (max-width: 575.98px) {
+    .posi-symbolgrov {
+      position: absolute;
+      top: 3%;
+      left: 3%;
+  
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background-color: #fff;
+    }
+  }
+  
+  .posi-symbolgrov-modal {
+    position: absolute;
+    /* top: 5%; */
+    left: 4%;
+  
+    border-radius: 50%;
+    background-color: #fff;
+  }
+
+  

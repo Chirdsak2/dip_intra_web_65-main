@@ -1,0 +1,274 @@
+a:link {
+ text-decoration: none;
+ color: #666666;
+}
+a:visited {
+ text-decoration: none;
+ color: #666666;
+}
+a:hover {
+ text-decoration: none;
+ color: #CC9900;
+}
+a:active {
+ text-decoration: none;
+ color: #666666;
+}
+a {
+  font-family: Tahoma;font-size: 12px;
+}
+abbr {
+  font-family: Tahoma;font-size: 12px;
+}
+acronym {
+  font-family: Tahoma;font-size: 12px;
+}
+address {
+  font-family: Tahoma;font-size: 12px;
+}
+applet {
+  font-family: Tahoma;font-size: 12px;
+}
+area {
+  font-family: Tahoma;font-size: 12px;
+}
+b {
+  font-family: Tahoma;font-size: 12px;
+}
+base {
+  font-family: Tahoma;font-size: 12px;
+}
+basefont {
+  font-family: Tahoma;font-size: 12px;
+}
+bdo {
+  font-family: Tahoma;font-size: 12px;
+}
+big {
+  font-family: Tahoma;font-size: 12px;
+}
+blockquote {
+  font-family: Tahoma;font-size: 12px;
+}
+body {
+  font-family: Tahoma;font-size: 12px;
+}
+br {
+  font-family: Tahoma;font-size: 12px;
+}
+button {
+  font-family: Tahoma;font-size: 12px;
+}
+caption {
+  font-family: Tahoma;font-size: 12px;
+}
+center {
+  font-family: Tahoma;font-size: 12px;
+}
+cite {
+  font-family: Tahoma;font-size: 12px;
+}
+code {
+  font-family: Tahoma;font-size: 12px;
+}
+col {
+  font-family: Tahoma;font-size: 12px;
+}
+colgroup {
+  font-family: Tahoma;font-size: 12px;
+}
+dd {
+  font-family: Tahoma;font-size: 12px;
+}
+del {
+  font-family: Tahoma;font-size: 12px;
+}
+dir {
+  font-family: Tahoma;font-size: 12px;
+}
+div {
+  font-family: Tahoma;font-size: 12px;
+}
+dfn {
+  font-family: Tahoma;font-size: 12px;
+}
+dl {
+  font-family: Tahoma;font-size: 12px;
+}
+dt {
+  font-family: Tahoma;font-size: 12px;
+}
+em {
+  font-family: Tahoma;font-size: 12px;
+}
+fieldset {
+  font-family: Tahoma;font-size: 12px;
+}
+font {
+  font-family: Tahoma;font-size: 12px;
+}
+form {
+  font-family: Tahoma;font-size: 12px;
+}
+frame {
+  font-family: Tahoma;font-size: 12px;
+}
+frameset {
+  font-family: Tahoma;font-size: 12px;
+}
+h1 to h6 {
+  font-family: Tahoma;font-size: 12px;
+}
+head {
+  font-family: Tahoma;font-size: 12px;
+}
+hr {
+  font-family: Tahoma;font-size: 12px;
+}
+html {
+  font-family: Tahoma;font-size: 12px;
+}
+i {
+  font-family: Tahoma;font-size: 12px;
+}
+iframe {
+  font-family: Tahoma;font-size: 12px;
+}
+img {
+  font-family: Tahoma;font-size: 12px;
+}
+input {
+  font-family: Tahoma;font-size: 12px;
+}
+ins {
+  font-family: Tahoma;font-size: 12px;
+}
+isindex {
+  font-family: Tahoma;font-size: 12px;
+}
+kbd {
+  font-family: Tahoma;font-size: 12px;
+}
+label {
+  font-family: Tahoma;font-size: 12px;
+}
+legend {
+  font-family: Tahoma;font-size: 12px;
+}
+li {
+  font-family: Tahoma;font-size: 12px;
+}
+link {
+  font-family: Tahoma;font-size: 12px;
+}
+map {
+  font-family: Tahoma;font-size: 12px;
+}
+menu {
+  font-family: Tahoma;font-size: 12px;
+}
+meta {
+  font-family: Tahoma;font-size: 12px;
+}
+noframes {
+  font-family: Tahoma;font-size: 12px;
+}
+noscript {
+  font-family: Tahoma;font-size: 12px;
+}
+object {
+  font-family: Tahoma;font-size: 12px;
+}
+ol {
+  font-family: Tahoma;font-size: 12px;
+}
+optgroup {
+  font-family: Tahoma;font-size: 12px;
+}
+option {
+  font-family: Tahoma;font-size: 12px;
+}
+p {
+  font-family: Tahoma;font-size: 12px;
+}
+param {
+  font-family: Tahoma;font-size: 12px;
+}
+pre {
+  font-family: Tahoma;font-size: 12px;
+}
+q {
+  font-family: Tahoma;font-size: 12px;
+}
+s {
+  font-family: Tahoma;font-size: 12px;
+}
+samp {
+  font-family: Tahoma;font-size: 12px;
+}
+select {
+  font-family: Tahoma;font-size: 12px;
+}
+small {
+  font-family: Tahoma;font-size: 12px;
+}
+span {
+  font-family: Tahoma;font-size: 12px;
+}
+strike {
+  font-family: Tahoma;font-size: 12px;
+}
+strong {
+  font-family: Tahoma;font-size: 12px;
+}
+style {
+  font-family: Tahoma;font-size: 12px;
+}
+sub {
+  font-family: Tahoma;font-size: 12px;
+}
+sup {
+  font-family: Tahoma;font-size: 12px;
+}
+table {
+  font-family: Tahoma;font-size: 12px;
+}
+tbody {
+  font-family: Tahoma;font-size: 12px;
+}
+td {
+  font-family: Tahoma;font-size: 12px;
+}
+textarea {
+  font-family: Tahoma;font-size: 12px;
+}
+tfoot {
+  font-family: Tahoma;font-size: 12px;
+}
+th {
+  font-family: Tahoma;font-size: 12px;
+}
+thead {
+  font-family: Tahoma;font-size: 12px;
+}
+title {
+  font-family: Tahoma;font-size: 12px;
+}
+tr {
+  font-family: Tahoma;font-size: 12px;
+}
+tt {
+  font-family: Tahoma;font-size: 12px;
+}
+u {
+  font-family: Tahoma;font-size: 12px;
+}
+ul {
+  font-family: Tahoma;font-size: 12px;
+}
+var {
+  font-family: Tahoma;font-size: 12px;
+}
+xmp {
+  font-family: Tahoma;font-size: 12px;
+}

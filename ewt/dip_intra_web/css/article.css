@@ -1,0 +1,130 @@
+h1,h2,h3,h4,h5{
+	color:#fff;
+}
+.article--title{
+    font-size: 30px;
+    color: #FFF;
+}
+
+.article--block{
+    padding: 20px;
+	font-size: 20px;
+/*    border: 1px solid #FFF;*/
+    margin-bottom: 10px;
+/*    background: #033a5f;*/
+}
+.article--block p, .article--block div{
+	/*font-size: 20px;*/
+}
+
+.icon--social{
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    color: #FFF;
+
+}
+.article--pic{
+/*    border: 1px solid #FFF;*/
+    margin-bottom: 10px;
+}
+.article--attachfile {
+    padding: 20px;
+    margin-bottom: 10px 10px;
+    border-top: 1px solid #43455c;
+
+}
+.article--attachfile--title {
+    color: #95b0dd;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.aritcle--tag {
+    padding: 20px;
+	font-size: 22px;
+    background: #000;
+/*    border-top: 1px solid #FFF;*/
+}
+.badge-tag{
+    padding: 5px 20px;
+    background: transparent;
+    border: 1px solid #eee;
+    font-size: 14px;
+/*    background: #033a5f;*/
+}
+
+
+#artcile--relese-section {
+    width: 100%;
+    background: #033a5f;
+    padding: 20px;
+}
+.article--release {
+    padding: 20px;
+
+}
+.article--release--title {
+    font-size: 30px;
+    font-weight: 600;
+}
+.card{
+    background: #033a5f; 
+}
+.card-title{
+    color: #FFF;
+}
+@media (min-width:1px) and (max-width: 991px){
+	.w-100-sm{
+		width: 100%;
+	}
+}
+
+
+
+/* Article Theme */
+
+table thead tr{
+	color: #fff;
+    background-color: #13131a;
+}
+
+
+/*===================================================================================*/
+
+
+/* table content */
+table{
+	border-collapse: collapse;
+	width: 100%;
+}
+table thead tr{
+	color: #fff;
+    background-color: #13131a;
+}
+table tbody tr{
+	color: #fff;
+    background-color: #212529;
+}
+table th, table td{
+	padding: 0.75rem;
+    vertical-align: top;
+    border-top: 1px solid #32383e;
+}
+tbody tr:hover{
+	color: #fff;
+    background: #323539;
+}
+
+.article--block > div.col-lg-6{
+	font-size: 20px;
+}
+ul.list-service li{
+	font-size: 20px;
+}
+ul li{
+	font-size: 20px;
+}
+h2{
+	font-size: 32px;
+}

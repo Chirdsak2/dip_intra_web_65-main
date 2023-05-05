@@ -1,0 +1,12 @@
+<?php
+include("language/faq_language.php");
+include("language/vertual_language.php");
+include("language/calendar_language.php");
+include("language/gallery_language.php");
+include("language/poll_language.php");
+include("language/sharecontent_language.php");
+include("language/enew_language.php");
+include("language/general_language.php");
+include("language/webboard_language.php");
+include("language/sitemap_language.php");
+?>

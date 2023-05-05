@@ -1,0 +1,74 @@
+@font-face {
+	font-family: 'DB_Heavent';
+	src: url('../fonts/DBHeavent/DB_Heavent.eot');
+	src: local('☺'), url('../fonts/DBHeavent/DB_Heavent.woff') format('woff'),
+	url('../fonts/DBHeavent/DB_Heavent.ttf') format('truetype'),
+	url('../fonts/DBHeavent/DB_Heavent.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'DBHeaventBd';
+	src: url('../fonts/DBHeavent/DBHeaventBd.eot');
+	src: local('☺'), url('../fonts/DBHeavent/DBHeaventBd.woff') format('woff'),
+	url('../fonts/DBHeavent/DBHeaventBd.ttf') format('truetype'),
+	url('../fonts/DBHeavent/DBHeaventBd.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+
+@font-face {
+	font-family: 'DBHeaventCond';
+	src: url('../fonts/DBHeavent/DBHeaventCond.eot');
+	src: local('☺'), url('../fonts/DBHeavent/DBHeaventCond.woff') format('woff'),
+	url('../fonts/DBHeavent/DBHeaventCond.ttf') format('truetype'),
+	url('../fonts/DBHeavent/DBHeaventCond.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+
+@font-face {
+	font-family: 'DBHeaventli';
+	src: url('../fonts/DBHeavent/DBHeaventli.eot');
+	src: local('☺'), url('../fonts/DBHeavent/DBHeaventli.woff') format('woff'),
+	url('../fonts/DBHeavent/DBHeaventli.ttf') format('truetype'),
+	url('../fonts/DBHeavent/DBHeaventli.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+/*------------  FC iconic font ----------*/
+
+@font-face {
+	font-family: 'FCRegular';
+	src: url('../fonts/FCiconic/FC Iconic Regular.eot');
+	src: local('☺'), url('../fonts/FCiconic/FC Iconic Regular.woff') format('woff'),
+	url('../fonts/FCiconic/FC Iconic Regular.ttf') format('truetype'),
+	url('../fonts/FCiconic/FC Iconic Regular.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'FCBold';
+	src: url('../fonts/FCiconic/FC Iconic Bold.eot');
+	src: local('☺'), url('../fonts/FCiconic/FC Iconic Bold.woff') format('woff'),
+	url('../fonts/FCiconic/FC Iconic Bold.ttf') format('truetype'),
+	url('../fonts/FCiconic/FC Iconic Bold.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+/*------------  sarabun font ----------*/
+@font-face {
+	font-family: 'sarabun';
+	src: url('../fonts/Sarabun/Sarabun-Regular.eot');
+	src: local('☺'), url('../fonts/Sarabun/Sarabun-Regular.woff') format('woff'),
+	url('../fonts/Sarabun/Sarabun-Regular.ttf') format('truetype'),
+	url('../fonts/Sarabun/Sarabun-Regular.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}

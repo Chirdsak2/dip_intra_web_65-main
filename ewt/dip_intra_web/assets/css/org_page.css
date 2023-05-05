@@ -1,0 +1,22 @@
+.text-white{
+    color: #FFFFFF;
+}
+/*.bg-org-page{
+    background: url(../img/bg_org_page.jpg) center;
+    background-size: cover;
+}*/
+.more-news {
+    background-color: #189b8c;
+    color: #FFF;
+    border: 1px solid #189b8c;
+    border-radius: 50px;
+    width: fit-content;
+    padding: 5px 25px;
+    font-size: 15px;
+    transition: ease-in-out 0.3s;
+}
+.tab-org{
+    background: #652d91 !important;
+    border:1px solid #652d91 !important;
+    font-size: 14px;
+}

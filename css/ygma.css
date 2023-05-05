@@ -1,0 +1,22 @@
+#ygma td{margin:0;text-align:left;font-family:Verdana,Arial,sans-serif;line-height:14px;}
+#ygma .ygmabk{background:#efefef url(http://us.i1.yimg.com/us.yimg.com/i/us/hdr/el/uh_bk.gif) bottom repeat-x;}
+#ygma .ygmatcrn{background:#efefef url(http://us.i1.yimg.com/us.yimg.com/i/us/hdr/el/uh_tcrn.gif) bottom left no-repeat;}
+#ygma .ygmatcrnb{background:#efefef url(http://us.i1.yimg.com/us.yimg.com/i/us/hdr/el/uh_tcrn_b.gif) bottom right no-repeat;}
+#ygma .ygmacrn{background:url(http://us.i1.yimg.com/us.yimg.com/i/us/hdr/el/uh_crn2.gif) repeat-x;}
+#ygma .ygmacrnb{background:#fff url(http://us.i1.yimg.com/us.yimg.com/i/us/hdr/el/uh_crn_b.gif) repeat-x;}
+#ygma .ygmabk input{font:110% verdana,geneva,sans-serif;}
+#ygma .ygbt{background:#dcdcdc;}
+#ygma #ygmalinks{padding:4px 10px 4px 15px;font-family:Arial,sans-serif;line-height:77%;}
+#ygma #ygmalinks a{color:#000;}
+#ygma #ygmalinks a:link{color:#000;}
+#ygma #ygmalinks a:hover{color:#33f;}
+#ygma #ygmalinks b{color:#cecece;padding:0 2px;}
+#ygma #ygmalinks span{padding:0 6px;}
+#ygma #ygmasearch{padding-right:4px;}
+#ygma #ygmalogo{margin:8px 12px 3px 3px;}
+#ygma #ygmagreet{padding:8px 0 5px;vertical-align:top;line-height:12px;}
+#ygma #ygmaproplinks{vertical-align:top;padding:2px 0 23px 0;text-align:right;line-height:12px;}
+#ygma #ygmaproplinks img{margin-top:8px;}
+#ygma #ygmaproplinks span{padding:22px 0 0;float:left;}
+#ygma .ygmatear img{margin-left:5px;}
+#ygma label{display:block;float:left;width:5em;margin-right:3px;font-family:sans-serif;color:#666;line-height:0.9em;text-align:right;}

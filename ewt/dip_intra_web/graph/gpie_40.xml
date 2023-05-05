@@ -1,0 +1,1 @@
+<graph   caption='ทดสอบ'  subcaption='Description'  xAxisName='XXX' yAxisName='YYY' decimalPrecision='0' formatNumberScale='0' showNames='1'  baseFont='Tahoma'  baseFontSize='11'  outCnvBaseFontSize='11' outCnvBaseFont='Tahoma' bgcolor='FFFFFF'><set name='ชาวไทย'  value='1000'  color='#F6BD0F' /><set name='ชาวต่างชาติ'  value='2000'  color='#AFD8F8' /></graph>

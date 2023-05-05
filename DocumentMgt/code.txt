@@ -1,0 +1,1 @@
+<embed src="http://www.ppd.or.th/images/flv/mediaplayer.swf" width="320" height="328" allowfullscreen="true" allowscriptaccess="always" flashvars="&displayheight=240&file=http://www.ppd.or.th/images/flv/mediaplayer.xml&height=328&width=320&frontcolor=0xFFFFFF&backcolor=0xD5B100&lightcolor=0xFFF582&displaywidth=320&overstretch=fit&autostart=true&bufferlength=50&shuffle=false" />

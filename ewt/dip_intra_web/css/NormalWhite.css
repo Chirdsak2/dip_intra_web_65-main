@@ -1,0 +1,29 @@
+.fontStyle {
+	font-family: Tahoma;
+	font-size: 12px;
+	font-weight: normal;
+	color: #FFFFFF;
+}
+.filedSearch {
+	font-family: "Tahoma";
+	font-size: 12px;
+	font-weight: normal;
+	color: #FFFFFF;
+	border: 1px solid #FFFFFF;
+	background-image: url(../images/dmr-t_05.jpg);
+}
+.filedSearch1 {
+	font-family: Tahoma;
+	font-size: 12px;
+	font-weight: normal;
+	color: #000000;
+	border: 1px solid #FFFFFF;
+	background-color: #FFEBCC;
+}
+.WhiteBold {
+
+	font-family: Arial;
+	font-size: 16px;
+	font-weight: bold;
+	color: #FFFFFF;
+}

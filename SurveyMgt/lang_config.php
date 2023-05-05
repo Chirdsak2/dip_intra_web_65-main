@@ -1,0 +1,154 @@
+<?php
+$lang_survey_save="บันทึก";
+$lang_survey_saveas="บันทึกเป็น";
+$lang_survey_result1="แสดงผล";
+$lang_survey_result2="รออนุมัติ";
+$lang_survey_reset="เริ่มใหม่";
+$lang_survey_update="ปรับปรุงข้อมูล";
+$lang_survey_default="ค่าที่เลือกใช้อยู่";
+$lang_survey_rank="ตำแหน่ง";
+$lang_survey_edit="แก้ไข";
+$lang_survey_app="บันทึกเป็น";
+$lang_survey_delete="ลบ";
+$lang_survey_add="เพิ่ม";
+$lang_survey_search="ค้นหา";
+$lang_survey_searchin="ใน";
+$lang_survey_previewpage="เรียกดู";
+$lang_survey_default_value="ใช้ค่าปกติ";
+$lang_survey_mystatus="สถานะ";
+$lang_survey_approve1="อนุมัติแล้ว";
+$lang_survey_approve2="รออนุมัติ";
+$lang_survey_number="รหัส";
+$lang_survey_group="จัดกลุ่ม";
+
+$lang_firstpage = "<font face=verdana size=4><b>Form Generator<br>ระบบสร้างแบบฟอร์มออนไลน์</b></font>";
+$lang_new_survey_menu = "เพิ่มแบบฟอร์มชุดใหม่";
+$lang_details_survey_menu = "รายละเอียดของแบบฟอร์ม";
+$lang_design_survey_menu = "ดีไซน์ของแบบฟอร์ม";
+// Add Survey
+$lang_design_back = "กลับหน้าหลัก";
+$lang_add_survey = "สร้างแบบฟอร์ม";
+$lang_add_subject = "หัวข้อแบบฟอร์ม";
+$lang_add_start = "วันเริ่มต้นที่จะให้เริ่มทำแบบฟอร์ม";
+$lang_add_end = "วันสุดท้าย (หากเลยวันนี้จะไม่สามารถเข้ามาทำแบบฟอร์มได้)";
+$lang_add_section = "แบบฟอร์มของคุณแบ่งออกเป็น";
+$lang_add_section_unit = "ส่วน";
+$lang_add_thankyou = "หน้าเว็บเพจขอบคุณ เมื่อตอบแบบสอบถามเสร็จ";
+$lang_add_error ="ข้อความตอบรับเมื่อตอบคำถามเสร็จ"; //"หน้าเว็บเพจแสดงข้อผิดพลาด";
+$lang_add_choosepage = "เลือกจากหน้าเว็บเพจที่มีอยู่";
+$lang_add_doc = "เอกสารแนบ";
+$lang_add_mail = "E-mail สำหรับแจ้งเมื่อมีผู้ตอบ";
+$lang_add_Remarkmail ='<font color="#FF0000">*ถ้าต้องการส่งมากกว่า 1 คนให้ใส่เครื่องหมาย (  ; ) ขั้นระหว่างเมล์ </font>';
+
+$lang_add_create = "ตกลง";
+$lang_add_warn_subject = "กรุณากรอกหัวข้อด้วยครับ";
+$lang_add_warn_start ="กรุณากรอกวันเริ่มต้นด้วยครับ";
+$lang_add_warn_end ="กรุณากรอกวันสุดท้ายด้วยครับ";
+$lang_add_warn_section ="กรุณากรอกจำนวนส่วนของแบบฟอร์มด้วยครับ";
+
+$lang_add_start2="วันเริ่มต้น";
+$lang_add_end2="วันสุดท้าย";
+$lang_add_dateassign="ปี-เดือน-วัน";
+$lang_add_section2="ส่วนที่ ";
+$lang_add_sectionname="ชื่อของส่วนที่ ";
+$lang_add_description="คำชี้แจงสำหรับส่วนนี้";
+$lang_add_questiontype="รูปแบบของคำตอบ";
+$lang_add_questiontype_separate="มีคำตอบได้หลายแบบ";
+$lang_add_questiontype_single="มีคำตอบรูปแบบเดียว เป็นแบบ ";
+$lang_add_questiontype_single_amount="และมีจำนวน ";
+$lang_add_questiontype_single_answer=" คำตอบต่อ 1 ข้อ";
+$lang_add_next="ถัดไป";
+
+$lang_add3_part="ส่วนที่";
+$lang_add3_item="ข้อ";
+$lang_add3_howmanyitems1="คำถามในส่วนที่";
+$lang_add3_howmanyitems2="จำนวน";
+$lang_add3_howmanyitems3="ข้อ";
+$lang_add3_noitem="ยังไม่มีคำถามในส่วนนี้";
+$lang_add3_additem="เพิ่มคำถาม";
+$lang_add3_edititem="แก้ไขส่วนที่ ";
+$lang_add3_edititemquestion="แก้ไขคำตอบ";
+$lang_add3_previewitem="เรียกดูหน้าจอ";
+$lang_add3_pleasequestion="กรุณากรอกคำถามด้วย";
+$lang_add3_pleasepart="กรุณาเลือกส่วนให้ครบ";
+
+$lang_add_question_createquestion="สร้างคำถามในส่วนที่ ";
+$lang_add_question_questionnumber="คำถามข้อที่";
+$lang_add_question_question="คำถาม";
+$lang_add_question_answer="คำตอบ";
+$lang_add_question_answertype="ชนิดคำตอบ";
+$lang_add_question_answerhowmany="จำนวนคำตอบ";
+$lang_add_question_rank="ตำแหน่งที่";
+$lang_add_question_require="ผู้ตอบจำเป็นต้องตอบคำถามข้อนี้";
+$lang_add_question_answerforpart="คำตอบของส่วนที่ ";
+$lang_add_question_answerrank="คำตอบที่ ";
+$lang_add_question_fillinside="ใส่คำตอบในแต่ละข้อ";
+$lang_add_question_otherspecify="ใส่คำตอบในแต่ละข้อ";
+
+$lang_edit_partname="ชื่อ";
+$lang_edit_partexplain="คำชี้แจง";
+
+$lang_edit_ansitem="คำตอบของข้อที่ ";
+$lang_edit_ansnumber="คำตอบที่ ";
+$lang_edit_noans="ไม่มีคำตอบในข้อนี้ กรุณาเพิ่มคำตอบ";
+$lang_edit_type_other="ให้ผู้ตอบพิมพ์คำตอบอื่นๆ ได้เอง";
+$lang_edit_add_answer="เพิ่มคำตอบ";
+$lang_edit_default_answer="คำตอบที่ให้เป็นค่าเริ่มต้น";
+$lang_edit_textbox="ลักษณะของช่องกรอกอักษร (Text Box)";
+$lang_edit_singleline="บรรทัดเดียว";
+$lang_edit_multiline="หลายบรรทัด";
+$lang_edit_linenumber="จำนวนบรรทัด";
+$lang_edit_line="บรรทัด";
+$lang_edit_width="ความกว้าง";
+$lang_edit_character="ตัวอักษร";
+$lang_edit_maxchar="จำนวนตัวอักษรสูงสุด";
+$lang_edit_start="วันเริ่มต้น";
+$lang_edit_end="วันสุดท้าย";
+$lang_edit_delpic = "ยกเลิกรูป";
+
+
+$lang_design_font="ตัวอักษร";
+$lang_design_size="ขนาดอักษร";
+$lang_design_color="สี";
+$lang_design_bold="ตัวหนา";
+$lang_design_italic="ตัวเอียง";
+$lang_design_backgroundcolor="สีพื้นหลัง";
+$lang_design_face="รูปแบบตัวอักษร";
+$lang_design_choosecolor="เลือกสี";
+$lang_design_tablewidth="ความกว้างของตาราง";
+$lang_design_designlist="ชื่อรูปแบบที่จัดเก็บไว้";
+$lang_design_edit="แก้ไขรูปแบบ";
+$lang_design_delete="ลบ";
+$lang_design_newdesign="เพิ่มรูปแบบใหม่";
+$lang_design_introductiontext="ส่วนของคำชี้แจง";
+$lang_design_realpreview="ตัวอย่างหน้าจอที่เห็นการเปลี่ยนดีไซน์จริง";
+$lang_design_topic="หัวข้อแบบสอบถาม";
+$lang_design_section1="ชื่อส่วนที่ 1";
+$lang_design_section2="ชื่อส่วนที่ 2";
+$lang_design_intro1="คำชี้แจงส่วนที่ 1";
+$lang_design_intro2="คำชี้แจงส่วนที่ 2";
+$lang_design_question1="คำถามข้อที่ 1";
+$lang_design_question2="คำถามข้อที่ 2";
+$lang_design_answer1="คำตอบ 1";
+$lang_design_answer2="คำตอบ 2";
+$lang_design_answer3="คำตอบ 3";
+$lang_design_designname="ชื่อของดีไซน์ที่ต้องการจัดเก็บ";
+$lang_design_answer3="คำตอบ 3";
+$lang_design_choosemain="เลือกรูปแบบดีไซน์";
+$lang_lefttoright="[จากซ้ายไปขวา]";
+
+$lang_survey_edit_topic="แก้ไขหัวข้อ";
+$lang_survey_edit_question="แก้ไขข้อที่ ";
+$lang_survey_edit_answer="แก้ไขคำตอบที่ ";
+$lang_survey_add_topic2="เพิ่มส่วนใหม่";
+$lang_survey_seeresult="ดูผลสำรวจ";
+$lang_survey_nodata="ไม่มีข้อมูล";
+
+$lang_survey_allsurvey="แบบฟอร์มทั้งหมด";
+$lang_survey_current="แบบฟอร์มที่ใช้ในปัจจุบัน";
+$lang_survey_approve="แบบฟอร์มที่ได้รับอนุมัติ";
+$lang_survey_notapprove="แบบฟอร์มที่ยังไม่ได้รับอนุมัติ";
+$lang_survey_excel="ส่งออกข้อมูลเป็น Excel";
+$langsurvey_surveyfinishgen="แบบฟอร์มอนุมัติเรียบร้อยแล้ว";
+$langsurvey_surveynotapproveyet="แบบฟอร์มนี้ยังไม่ได้รับการอนุมัติ";
+?>

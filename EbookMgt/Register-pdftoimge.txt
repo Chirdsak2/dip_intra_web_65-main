@@ -1,0 +1,1 @@
+c:\>pdftoimage -r YKEJEHZHHBCDQMYM

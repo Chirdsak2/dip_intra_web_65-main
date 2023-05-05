@@ -1,0 +1,310 @@
+[Date:2023-04-16 13:33:45] [IP:124.122.132.230]
+[Query:SELECT sv_id FROM stat_visitor WHERE sv_ip = '124.122.132.230' AND sv_new = 'Y' LIMIT 0,1 ]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2023-04-16 13:33:45] [IP:124.122.132.230]
+[Query:SELECT sv_id FROM stat_visitor WHERE sv_ip = '124.122.132.230' AND sv_new = 'Y' LIMIT 0,1 ]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2023-04-16 13:33:45] [IP:124.122.132.230]
+[Query:INSERT INTO stat_visitor (sv_url,sv_visitor,sv_menu,sv_ip,sv_timestamp,sv_date,sv_time,sv_country,sv_language,sv_new,sv_browser,sv_resolution,sv_domain,sv_isp,sv_region,sv_city,sv_latitude,sv_longitude,sv_referer,sv_search,sv_keyword,sv_os,sv_load,sv_member,sv_fullurl,sv_mem_id,sv_w3c,sv_country_code,sv_region_code,sv_device,sv_op,sv_session_id) VALUES ('page','Y','/dip_intranet/index.php','124.122.132.230','20230416133345','2023-04-16','13:33:45','TH','en-US,en;q=0.9','Y','Google Chrome','1280x720','ppp-124-122-132-230.revip2.asianet.co.th','AS17552 True Online','Bangkok','Bangkok','13.7083','100.4562','http://203.151.166.134/dip_intranet/index.php','','','Windows 10','0','Y','https://203.151.166.134/dip_intranet/index.php','1','','TH','','1','','hk16ncn2jpo0kfn0q5rar2uv7v')]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2023-04-16 14:45:26] [IP:124.122.132.230]
+[Query:SELECT sv_id FROM stat_visitor WHERE sv_ip = '124.122.132.230' AND sv_new = 'Y' LIMIT 0,1 ]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2023-04-16 14:45:26] [IP:124.122.132.230]
+[Query:SELECT sv_id FROM stat_visitor WHERE sv_ip = '124.122.132.230' AND sv_new = 'Y' LIMIT 0,1 ]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2023-04-16 14:45:27] [IP:124.122.132.230]
+[Query:INSERT INTO stat_visitor (sv_url,sv_visitor,sv_menu,sv_ip,sv_timestamp,sv_date,sv_time,sv_country,sv_language,sv_new,sv_browser,sv_resolution,sv_domain,sv_isp,sv_region,sv_city,sv_latitude,sv_longitude,sv_referer,sv_search,sv_keyword,sv_os,sv_load,sv_member,sv_fullurl,sv_mem_id,sv_w3c,sv_country_code,sv_region_code,sv_device,sv_op,sv_session_id) VALUES ('page','Y','/dip_intranet/index.php','124.122.132.230','20230416144526','2023-04-16','14:45:26','TH','en-US,en;q=0.9','Y','Edge','1280x720','ppp-124-122-132-230.revip2.asianet.co.th','AS17552 True Online','Bangkok','Bangkok','13.7083','100.4562','http://203.151.166.134/dip_intranet/index.php','','','Windows 10','0','Y','https://203.151.166.134/dip_intranet/index.php','14','','TH','','1','','gt57trshltf7dusphr9mf7pd3c')]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2023-04-16 14:49:21] [IP:124.122.132.230]
+[Query:SELECT sv_id FROM stat_visitor WHERE sv_ip = '124.122.132.230' AND sv_new = 'Y' LIMIT 0,1 ]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2023-04-16 14:49:21] [IP:124.122.132.230]
+[Query:SELECT sv_id FROM stat_visitor WHERE sv_ip = '124.122.132.230' AND sv_new = 'Y' LIMIT 0,1 ]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2023-04-16 14:49:21] [IP:124.122.132.230]
+[Query:INSERT INTO stat_visitor (sv_url,sv_visitor,sv_menu,sv_ip,sv_timestamp,sv_date,sv_time,sv_country,sv_language,sv_new,sv_browser,sv_resolution,sv_domain,sv_isp,sv_region,sv_city,sv_latitude,sv_longitude,sv_referer,sv_search,sv_keyword,sv_os,sv_load,sv_member,sv_fullurl,sv_mem_id,sv_w3c,sv_country_code,sv_region_code,sv_device,sv_op,sv_session_id) VALUES ('page','Y','/dip_intranet/index.php','124.122.132.230','20230416144921','2023-04-16','14:49:21','TH','en-US,en;q=0.9','Y','Google Chrome','1280x720','ppp-124-122-132-230.revip2.asianet.co.th','AS17552 True Online','Bangkok','Bangkok','13.7083','100.4562','http://203.151.166.134/dip_intranet/index.php','','','Windows 10','0','Y','https://203.151.166.134/dip_intranet/index.php','26','','TH','','1','','hk16ncn2jpo0kfn0q5rar2uv7v')]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2023-04-16 14:49:24] [IP:124.122.132.230]
+[Query:INSERT INTO stat_visitor (sv_url,sv_visitor,sv_menu,sv_ip,sv_timestamp,sv_date,sv_time,sv_country,sv_language,sv_new,sv_browser,sv_resolution,sv_domain,sv_isp,sv_region,sv_city,sv_latitude,sv_longitude,sv_referer,sv_search,sv_keyword,sv_os,sv_load,sv_member,sv_fullurl,sv_mem_id,sv_w3c,sv_country_code,sv_region_code,sv_device,sv_op,sv_session_id) VALUES ('page','','/dip_intranet/profile.php','124.122.132.230','20230416144924','2023-04-16','14:49:24','TH','en-US,en;q=0.9','','Google Chrome','1280x720','ppp-124-122-132-230.revip2.asianet.co.th','AS17552 True Online','Bangkok','Bangkok','13.7083','100.4562','','','','Windows 10','0','Y','https://203.151.166.134/dip_intranet/profile.php','26','','TH','','1','','hk16ncn2jpo0kfn0q5rar2uv7v')]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2023-04-16 15:19:21] [IP:124.122.132.230]
+[Query:INSERT INTO stat_visitor (sv_url,sv_visitor,sv_menu,sv_ip,sv_timestamp,sv_date,sv_time,sv_country,sv_language,sv_new,sv_browser,sv_resolution,sv_domain,sv_isp,sv_region,sv_city,sv_latitude,sv_longitude,sv_referer,sv_search,sv_keyword,sv_os,sv_load,sv_member,sv_fullurl,sv_mem_id,sv_w3c,sv_country_code,sv_region_code,sv_device,sv_op,sv_session_id) VALUES ('page','','/dip_intranet/Booking_status.php','124.122.132.230','20230416151920','2023-04-16','15:19:20','TH','en-US,en;q=0.9','','Edge','1280x720','ppp-124-122-132-230.revip2.asianet.co.th','AS17552 True Online','Bangkok','Bangkok','13.7083','100.4562','','','','Windows 10','0','Y','https://203.151.166.134/dip_intranet/Booking_status.php','14','','TH','','1','','gt57trshltf7dusphr9mf7pd3c')]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2023-04-16 16:42:46] [IP:124.122.132.230]
+[Query:SELECT sv_id FROM stat_visitor WHERE sv_ip = '124.122.132.230' AND sv_new = 'Y' LIMIT 0,1 ]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2023-04-16 16:42:46] [IP:124.122.132.230]
+[Query:SELECT sv_id FROM stat_visitor WHERE sv_ip = '124.122.132.230' AND sv_new = 'Y' LIMIT 0,1 ]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2023-04-16 16:42:46] [IP:124.122.132.230]
+[Query:INSERT INTO stat_visitor (sv_url,sv_visitor,sv_menu,sv_ip,sv_timestamp,sv_date,sv_time,sv_country,sv_language,sv_new,sv_browser,sv_resolution,sv_domain,sv_isp,sv_region,sv_city,sv_latitude,sv_longitude,sv_referer,sv_search,sv_keyword,sv_os,sv_load,sv_member,sv_fullurl,sv_mem_id,sv_w3c,sv_country_code,sv_region_code,sv_device,sv_op,sv_session_id) VALUES ('page','Y','/dip_intranet/index.php','124.122.132.230','20230416164246','2023-04-16','16:42:46','TH','en-US,en;q=0.9','Y','Edge','1280x720','ppp-124-122-132-230.revip2.asianet.co.th','AS17552 True Online','Bangkok','Bangkok','13.7083','100.4562','http://203.151.166.134/dip_intranet/index.php','','','Windows 10','0','Y','https://203.151.166.134/dip_intranet/index.php','14','','TH','','1','','gt57trshltf7dusphr9mf7pd3c')]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2023-04-16 16:42:55] [IP:124.122.132.230]
+[Query:INSERT INTO stat_visitor (sv_url,sv_visitor,sv_menu,sv_ip,sv_timestamp,sv_date,sv_time,sv_country,sv_language,sv_new,sv_browser,sv_resolution,sv_domain,sv_isp,sv_region,sv_city,sv_latitude,sv_longitude,sv_referer,sv_search,sv_keyword,sv_os,sv_load,sv_member,sv_fullurl,sv_mem_id,sv_w3c,sv_country_code,sv_region_code,sv_device,sv_op,sv_session_id) VALUES ('page','','/dip_intranet/Booking_status.php','124.122.132.230','20230416164254','2023-04-16','16:42:54','TH','en-US,en;q=0.9','','Edge','1280x720','ppp-124-122-132-230.revip2.asianet.co.th','AS17552 True Online','Bangkok','Bangkok','13.7083','100.4562','','','','Windows 10','0','Y','https://203.151.166.134/dip_intranet/Booking_status.php','14','','TH','','1','','gt57trshltf7dusphr9mf7pd3c')]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2023-04-16 17:48:10] [IP:124.122.132.230]
+[Query:SELECT sv_id FROM stat_visitor WHERE sv_ip = '124.122.132.230' AND sv_new = 'Y' LIMIT 0,1 ]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2023-04-16 17:48:10] [IP:124.122.132.230]
+[Query:SELECT sv_id FROM stat_visitor WHERE sv_ip = '124.122.132.230' AND sv_new = 'Y' LIMIT 0,1 ]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2023-04-16 17:48:11] [IP:124.122.132.230]
+[Query:INSERT INTO stat_visitor (sv_url,sv_visitor,sv_menu,sv_ip,sv_timestamp,sv_date,sv_time,sv_country,sv_language,sv_new,sv_browser,sv_resolution,sv_domain,sv_isp,sv_region,sv_city,sv_latitude,sv_longitude,sv_referer,sv_search,sv_keyword,sv_os,sv_load,sv_member,sv_fullurl,sv_mem_id,sv_w3c,sv_country_code,sv_region_code,sv_device,sv_op,sv_session_id) VALUES ('page','Y','/dip_intranet/index.php','124.122.132.230','20230416174810','2023-04-16','17:48:10','TH','en-US,en;q=0.9','Y','Edge','1280x720','ppp-124-122-132-230.revip2.asianet.co.th','AS17552 True Online','Bangkok','Bangkok','13.7083','100.4562','http://203.151.166.134/dip_intranet/index.php','','','Windows 10','0','Y','https://203.151.166.134/dip_intranet/index.php','14','','TH','','1','','gt57trshltf7dusphr9mf7pd3c')]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2023-04-16 17:48:16] [IP:124.122.132.230]
+[Query:INSERT INTO stat_visitor (sv_url,sv_visitor,sv_menu,sv_ip,sv_timestamp,sv_date,sv_time,sv_country,sv_language,sv_new,sv_browser,sv_resolution,sv_domain,sv_isp,sv_region,sv_city,sv_latitude,sv_longitude,sv_referer,sv_search,sv_keyword,sv_os,sv_load,sv_member,sv_fullurl,sv_mem_id,sv_w3c,sv_country_code,sv_region_code,sv_device,sv_op,sv_session_id) VALUES ('page','','/dip_intranet/Booking_status.php','124.122.132.230','20230416174816','2023-04-16','17:48:16','TH','en-US,en;q=0.9','','Edge','1280x720','ppp-124-122-132-230.revip2.asianet.co.th','AS17552 True Online','Bangkok','Bangkok','13.7083','100.4562','','','','Windows 10','0','Y','https://203.151.166.134/dip_intranet/Booking_status.php','14','','TH','','1','','gt57trshltf7dusphr9mf7pd3c')]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2023-04-16 17:48:32] [IP:124.122.132.230]
+[Query:INSERT INTO stat_visitor (sv_url,sv_visitor,sv_menu,sv_ip,sv_timestamp,sv_date,sv_time,sv_country,sv_language,sv_new,sv_browser,sv_resolution,sv_domain,sv_isp,sv_region,sv_city,sv_latitude,sv_longitude,sv_referer,sv_search,sv_keyword,sv_os,sv_load,sv_member,sv_fullurl,sv_mem_id,sv_w3c,sv_country_code,sv_region_code,sv_device,sv_op,sv_session_id) VALUES ('page','','/dip_intranet/Booking_status.php','124.122.132.230','20230416174832','2023-04-16','17:48:32','TH','en-US,en;q=0.9','','Edge','1280x720','ppp-124-122-132-230.revip2.asianet.co.th','AS17552 True Online','Bangkok','Bangkok','13.7083','100.4562','','','','Windows 10','0','Y','https://203.151.166.134/dip_intranet/Booking_status.php','14','','TH','','1','','gt57trshltf7dusphr9mf7pd3c')]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2023-04-16 17:49:59] [IP:124.122.132.230]
+[Query:INSERT INTO stat_visitor (sv_url,sv_visitor,sv_menu,sv_ip,sv_timestamp,sv_date,sv_time,sv_country,sv_language,sv_new,sv_browser,sv_resolution,sv_domain,sv_isp,sv_region,sv_city,sv_latitude,sv_longitude,sv_referer,sv_search,sv_keyword,sv_os,sv_load,sv_member,sv_fullurl,sv_mem_id,sv_w3c,sv_country_code,sv_region_code,sv_device,sv_op,sv_session_id) VALUES ('page','','/dip_intranet/Booking_status.php','124.122.132.230','20230416174958','2023-04-16','17:49:58','TH','en-US,en;q=0.9','','Edge','1280x720','ppp-124-122-132-230.revip2.asianet.co.th','AS17552 True Online','Bangkok','Bangkok','13.7083','100.4562','','','','Windows 10','0','Y','https://203.151.166.134/dip_intranet/Booking_status.php','14','','TH','','1','','gt57trshltf7dusphr9mf7pd3c')]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2023-04-16 17:50:51] [IP:124.122.132.230]
+[Query:INSERT INTO stat_visitor (sv_url,sv_visitor,sv_menu,sv_ip,sv_timestamp,sv_date,sv_time,sv_country,sv_language,sv_new,sv_browser,sv_resolution,sv_domain,sv_isp,sv_region,sv_city,sv_latitude,sv_longitude,sv_referer,sv_search,sv_keyword,sv_os,sv_load,sv_member,sv_fullurl,sv_mem_id,sv_w3c,sv_country_code,sv_region_code,sv_device,sv_op,sv_session_id) VALUES ('page','','/dip_intranet/Booking_status.php','124.122.132.230','20230416175051','2023-04-16','17:50:51','TH','en-US,en;q=0.9','','Edge','1280x720','ppp-124-122-132-230.revip2.asianet.co.th','AS17552 True Online','Bangkok','Bangkok','13.7083','100.4562','','','','Windows 10','0','Y','https://203.151.166.134/dip_intranet/Booking_status.php','14','','TH','','1','','gt57trshltf7dusphr9mf7pd3c')]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2023-04-16 17:53:36] [IP:124.122.132.230]
+[Query:INSERT INTO stat_visitor (sv_url,sv_visitor,sv_menu,sv_ip,sv_timestamp,sv_date,sv_time,sv_country,sv_language,sv_new,sv_browser,sv_resolution,sv_domain,sv_isp,sv_region,sv_city,sv_latitude,sv_longitude,sv_referer,sv_search,sv_keyword,sv_os,sv_load,sv_member,sv_fullurl,sv_mem_id,sv_w3c,sv_country_code,sv_region_code,sv_device,sv_op,sv_session_id) VALUES ('page','','/dip_intranet/Booking_status.php','124.122.132.230','20230416175336','2023-04-16','17:53:36','TH','en-US,en;q=0.9','','Edge','1280x720','ppp-124-122-132-230.revip2.asianet.co.th','AS17552 True Online','Bangkok','Bangkok','13.7083','100.4562','','','','Windows 10','0','Y','https://203.151.166.134/dip_intranet/Booking_status.php','14','','TH','','1','','gt57trshltf7dusphr9mf7pd3c')]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2023-04-16 17:57:39] [IP:124.122.132.230]
+[Query:INSERT INTO stat_visitor (sv_url,sv_visitor,sv_menu,sv_ip,sv_timestamp,sv_date,sv_time,sv_country,sv_language,sv_new,sv_browser,sv_resolution,sv_domain,sv_isp,sv_region,sv_city,sv_latitude,sv_longitude,sv_referer,sv_search,sv_keyword,sv_os,sv_load,sv_member,sv_fullurl,sv_mem_id,sv_w3c,sv_country_code,sv_region_code,sv_device,sv_op,sv_session_id) VALUES ('page','','/dip_intranet/Booking_status.php','124.122.132.230','20230416175738','2023-04-16','17:57:38','TH','en-US,en;q=0.9','','Edge','1280x720','ppp-124-122-132-230.revip2.asianet.co.th','AS17552 True Online','Bangkok','Bangkok','13.7083','100.4562','','','','Windows 10','0','Y','https://203.151.166.134/dip_intranet/Booking_status.php','14','','TH','','1','','gt57trshltf7dusphr9mf7pd3c')]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2023-04-16 17:57:53] [IP:124.122.132.230]
+[Query:INSERT INTO stat_visitor (sv_url,sv_visitor,sv_menu,sv_ip,sv_timestamp,sv_date,sv_time,sv_country,sv_language,sv_new,sv_browser,sv_resolution,sv_domain,sv_isp,sv_region,sv_city,sv_latitude,sv_longitude,sv_referer,sv_search,sv_keyword,sv_os,sv_load,sv_member,sv_fullurl,sv_mem_id,sv_w3c,sv_country_code,sv_region_code,sv_device,sv_op,sv_session_id) VALUES ('page','','/dip_intranet/Booking_status.php','124.122.132.230','20230416175752','2023-04-16','17:57:52','TH','en-US,en;q=0.9','','Edge','1280x720','ppp-124-122-132-230.revip2.asianet.co.th','AS17552 True Online','Bangkok','Bangkok','13.7083','100.4562','','','','Windows 10','0','Y','https://203.151.166.134/dip_intranet/Booking_status.php','14','','TH','','1','','gt57trshltf7dusphr9mf7pd3c')]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2023-04-16 17:58:24] [IP:124.122.132.230]
+[Query:INSERT INTO stat_visitor (sv_url,sv_visitor,sv_menu,sv_ip,sv_timestamp,sv_date,sv_time,sv_country,sv_language,sv_new,sv_browser,sv_resolution,sv_domain,sv_isp,sv_region,sv_city,sv_latitude,sv_longitude,sv_referer,sv_search,sv_keyword,sv_os,sv_load,sv_member,sv_fullurl,sv_mem_id,sv_w3c,sv_country_code,sv_region_code,sv_device,sv_op,sv_session_id) VALUES ('page','','/dip_intranet/Booking_status.php','124.122.132.230','20230416175824','2023-04-16','17:58:24','TH','en-US,en;q=0.9','','Edge','1280x720','ppp-124-122-132-230.revip2.asianet.co.th','AS17552 True Online','Bangkok','Bangkok','13.7083','100.4562','','','','Windows 10','0','Y','https://203.151.166.134/dip_intranet/Booking_status.php','14','','TH','','1','','gt57trshltf7dusphr9mf7pd3c')]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2023-04-16 17:58:49] [IP:124.122.132.230]
+[Query:INSERT INTO stat_visitor (sv_url,sv_visitor,sv_menu,sv_ip,sv_timestamp,sv_date,sv_time,sv_country,sv_language,sv_new,sv_browser,sv_resolution,sv_domain,sv_isp,sv_region,sv_city,sv_latitude,sv_longitude,sv_referer,sv_search,sv_keyword,sv_os,sv_load,sv_member,sv_fullurl,sv_mem_id,sv_w3c,sv_country_code,sv_region_code,sv_device,sv_op,sv_session_id) VALUES ('page','','/dip_intranet/Booking_status.php','124.122.132.230','20230416175848','2023-04-16','17:58:48','TH','en-US,en;q=0.9','','Edge','1280x720','ppp-124-122-132-230.revip2.asianet.co.th','AS17552 True Online','Bangkok','Bangkok','13.7083','100.4562','','','','Windows 10','0','Y','https://203.151.166.134/dip_intranet/Booking_status.php','14','','TH','','1','','gt57trshltf7dusphr9mf7pd3c')]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2023-04-16 18:00:36] [IP:124.122.132.230]
+[Query:INSERT INTO stat_visitor (sv_url,sv_visitor,sv_menu,sv_ip,sv_timestamp,sv_date,sv_time,sv_country,sv_language,sv_new,sv_browser,sv_resolution,sv_domain,sv_isp,sv_region,sv_city,sv_latitude,sv_longitude,sv_referer,sv_search,sv_keyword,sv_os,sv_load,sv_member,sv_fullurl,sv_mem_id,sv_w3c,sv_country_code,sv_region_code,sv_device,sv_op,sv_session_id) VALUES ('page','','/dip_intranet/Booking_status.php','124.122.132.230','20230416180035','2023-04-16','18:00:35','TH','en-US,en;q=0.9','','Edge','1280x720','ppp-124-122-132-230.revip2.asianet.co.th','AS17552 True Online','Bangkok','Bangkok','13.7083','100.4562','','','','Windows 10','0','Y','https://203.151.166.134/dip_intranet/Booking_status.php','14','','TH','','1','','gt57trshltf7dusphr9mf7pd3c')]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2023-04-16 18:01:58] [IP:124.122.132.230]
+[Query:DELETE FROM visitor_online WHERE DATEADD(SECOND,30,vo_onlinelasttime) <= GETDATE() ]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2023-04-16 18:02:10] [IP:124.122.132.230]
+[Query:SELECT sv_id FROM stat_visitor WHERE sv_ip = '124.122.132.230' AND sv_new = 'Y' LIMIT 0,1 ]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2023-04-16 18:02:10] [IP:124.122.132.230]
+[Query:SELECT sv_id FROM stat_visitor WHERE sv_ip = '124.122.132.230' AND sv_new = 'Y' LIMIT 0,1 ]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2023-04-16 18:02:11] [IP:124.122.132.230]
+[Query:INSERT INTO stat_visitor (sv_url,sv_visitor,sv_menu,sv_ip,sv_timestamp,sv_date,sv_time,sv_country,sv_language,sv_new,sv_browser,sv_resolution,sv_domain,sv_isp,sv_region,sv_city,sv_latitude,sv_longitude,sv_referer,sv_search,sv_keyword,sv_os,sv_load,sv_member,sv_fullurl,sv_mem_id,sv_w3c,sv_country_code,sv_region_code,sv_device,sv_op,sv_session_id) VALUES ('page','Y','/dip_intranet/index.php','124.122.132.230','20230416180210','2023-04-16','18:02:10','TH','en-US,en;q=0.9','Y','Google Chrome','1280x720','ppp-124-122-132-230.revip2.asianet.co.th','AS17552 True Online','Bangkok','Bangkok','13.7083','100.4562','http://203.151.166.134/dip_intranet/index.php','','','Windows 10','0','Y','https://203.151.166.134/dip_intranet/index.php','26','','TH','','1','','hk16ncn2jpo0kfn0q5rar2uv7v')]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2023-04-16 18:02:21] [IP:124.122.132.230]
+[Query:DELETE FROM visitor_online WHERE DATEADD(SECOND,30,vo_onlinelasttime) <= GETDATE() ]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2023-04-16 18:02:39] [IP:124.122.132.230]
+[Query:SELECT sv_id FROM stat_visitor WHERE sv_ip = '124.122.132.230' AND sv_new = 'Y' LIMIT 0,1 ]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2023-04-16 18:02:39] [IP:124.122.132.230]
+[Query:SELECT sv_id FROM stat_visitor WHERE sv_ip = '124.122.132.230' AND sv_new = 'Y' LIMIT 0,1 ]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2023-04-16 18:02:39] [IP:124.122.132.230]
+[Query:INSERT INTO stat_visitor (sv_url,sv_visitor,sv_menu,sv_ip,sv_timestamp,sv_date,sv_time,sv_country,sv_language,sv_new,sv_browser,sv_resolution,sv_domain,sv_isp,sv_region,sv_city,sv_latitude,sv_longitude,sv_referer,sv_search,sv_keyword,sv_os,sv_load,sv_member,sv_fullurl,sv_mem_id,sv_w3c,sv_country_code,sv_region_code,sv_device,sv_op,sv_session_id) VALUES ('page','Y','/dip_intranet/index.php','124.122.132.230','20230416180239','2023-04-16','18:02:39','TH','en-US,en;q=0.9','Y','Google Chrome','1280x720','ppp-124-122-132-230.revip2.asianet.co.th','AS17552 True Online','Bangkok','Bangkok','13.7083','100.4562','http://203.151.166.134/dip_intranet/index.php','','','Windows 10','0','Y','https://203.151.166.134/dip_intranet/index.php','27','','TH','','1','','hk16ncn2jpo0kfn0q5rar2uv7v')]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2023-04-16 18:02:51] [IP:124.122.132.230]
+[Query:DELETE FROM visitor_online WHERE DATEADD(SECOND,30,vo_onlinelasttime) <= GETDATE() ]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2023-04-16 18:03:09] [IP:124.122.132.230]
+[Query:SELECT sv_id FROM stat_visitor WHERE sv_ip = '124.122.132.230' AND sv_new = 'Y' LIMIT 0,1 ]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2023-04-16 18:03:09] [IP:124.122.132.230]
+[Query:SELECT sv_id FROM stat_visitor WHERE sv_ip = '124.122.132.230' AND sv_new = 'Y' LIMIT 0,1 ]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2023-04-16 18:03:09] [IP:124.122.132.230]
+[Query:INSERT INTO stat_visitor (sv_url,sv_visitor,sv_menu,sv_ip,sv_timestamp,sv_date,sv_time,sv_country,sv_language,sv_new,sv_browser,sv_resolution,sv_domain,sv_isp,sv_region,sv_city,sv_latitude,sv_longitude,sv_referer,sv_search,sv_keyword,sv_os,sv_load,sv_member,sv_fullurl,sv_mem_id,sv_w3c,sv_country_code,sv_region_code,sv_device,sv_op,sv_session_id) VALUES ('page','Y','/dip_intranet/index.php','124.122.132.230','20230416180309','2023-04-16','18:03:09','TH','en-US,en;q=0.9','Y','Google Chrome','1280x720','ppp-124-122-132-230.revip2.asianet.co.th','AS17552 True Online','Bangkok','Bangkok','13.7083','100.4562','http://203.151.166.134/dip_intranet/index.php','','','Windows 10','0','Y','https://203.151.166.134/dip_intranet/index.php','42','','TH','','1','','hk16ncn2jpo0kfn0q5rar2uv7v')]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2023-04-16 18:03:36] [IP:124.122.132.230]
+[Query:INSERT INTO stat_visitor (sv_url,sv_visitor,sv_menu,sv_ip,sv_timestamp,sv_date,sv_time,sv_country,sv_language,sv_new,sv_browser,sv_resolution,sv_domain,sv_isp,sv_region,sv_city,sv_latitude,sv_longitude,sv_referer,sv_search,sv_keyword,sv_os,sv_load,sv_member,sv_fullurl,sv_mem_id,sv_w3c,sv_country_code,sv_region_code,sv_device,sv_op,sv_session_id) VALUES ('page','','/dip_intranet/Booking_status.php','124.122.132.230','20230416180336','2023-04-16','18:03:36','TH','en-US,en;q=0.9','','Edge','1280x720','ppp-124-122-132-230.revip2.asianet.co.th','AS17552 True Online','Bangkok','Bangkok','13.7083','100.4562','','','','Windows 10','0','Y','https://203.151.166.134/dip_intranet/Booking_status.php','14','','TH','','1','','gt57trshltf7dusphr9mf7pd3c')]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2023-04-16 18:04:16] [IP:124.122.132.230]
+[Query:INSERT INTO stat_visitor (sv_url,sv_visitor,sv_menu,sv_ip,sv_timestamp,sv_date,sv_time,sv_country,sv_language,sv_new,sv_browser,sv_resolution,sv_domain,sv_isp,sv_region,sv_city,sv_latitude,sv_longitude,sv_referer,sv_search,sv_keyword,sv_os,sv_load,sv_member,sv_fullurl,sv_mem_id,sv_w3c,sv_country_code,sv_region_code,sv_device,sv_op,sv_session_id) VALUES ('page','','/dip_intranet/Booking_status.php','124.122.132.230','20230416180415','2023-04-16','18:04:15','TH','en-US,en;q=0.9','','Edge','1280x720','ppp-124-122-132-230.revip2.asianet.co.th','AS17552 True Online','Bangkok','Bangkok','13.7083','100.4562','','','','Windows 10','0','Y','https://203.151.166.134/dip_intranet/Booking_status.php','14','','TH','','1','','gt57trshltf7dusphr9mf7pd3c')]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2023-04-16 18:05:19] [IP:124.122.132.230]
+[Query:INSERT INTO stat_visitor (sv_url,sv_visitor,sv_menu,sv_ip,sv_timestamp,sv_date,sv_time,sv_country,sv_language,sv_new,sv_browser,sv_resolution,sv_domain,sv_isp,sv_region,sv_city,sv_latitude,sv_longitude,sv_referer,sv_search,sv_keyword,sv_os,sv_load,sv_member,sv_fullurl,sv_mem_id,sv_w3c,sv_country_code,sv_region_code,sv_device,sv_op,sv_session_id) VALUES ('page','','/dip_intranet/Booking_status.php','124.122.132.230','20230416180519','2023-04-16','18:05:19','TH','en-US,en;q=0.9','','Edge','1280x720','ppp-124-122-132-230.revip2.asianet.co.th','AS17552 True Online','Bangkok','Bangkok','13.7083','100.4562','','','','Windows 10','0','Y','https://203.151.166.134/dip_intranet/Booking_status.php','14','','TH','','1','','gt57trshltf7dusphr9mf7pd3c')]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2023-04-16 18:05:58] [IP:124.122.132.230]
+[Query:INSERT INTO stat_visitor (sv_url,sv_visitor,sv_menu,sv_ip,sv_timestamp,sv_date,sv_time,sv_country,sv_language,sv_new,sv_browser,sv_resolution,sv_domain,sv_isp,sv_region,sv_city,sv_latitude,sv_longitude,sv_referer,sv_search,sv_keyword,sv_os,sv_load,sv_member,sv_fullurl,sv_mem_id,sv_w3c,sv_country_code,sv_region_code,sv_device,sv_op,sv_session_id) VALUES ('page','','/dip_intranet/Booking_status.php','124.122.132.230','20230416180557','2023-04-16','18:05:57','TH','en-US,en;q=0.9','','Edge','1280x720','ppp-124-122-132-230.revip2.asianet.co.th','AS17552 True Online','Bangkok','Bangkok','13.7083','100.4562','','','','Windows 10','0','Y','https://203.151.166.134/dip_intranet/Booking_status.php','14','','TH','','1','','gt57trshltf7dusphr9mf7pd3c')]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2023-04-16 18:08:17] [IP:124.122.132.230]
+[Query:INSERT INTO stat_visitor (sv_url,sv_visitor,sv_menu,sv_ip,sv_timestamp,sv_date,sv_time,sv_country,sv_language,sv_new,sv_browser,sv_resolution,sv_domain,sv_isp,sv_region,sv_city,sv_latitude,sv_longitude,sv_referer,sv_search,sv_keyword,sv_os,sv_load,sv_member,sv_fullurl,sv_mem_id,sv_w3c,sv_country_code,sv_region_code,sv_device,sv_op,sv_session_id) VALUES ('page','','/dip_intranet/Booking_status.php','124.122.132.230','20230416180816','2023-04-16','18:08:16','TH','en-US,en;q=0.9','','Edge','1280x720','ppp-124-122-132-230.revip2.asianet.co.th','AS17552 True Online','Bangkok','Bangkok','13.7083','100.4562','','','','Windows 10','0','Y','https://203.151.166.134/dip_intranet/Booking_status.php','14','','TH','','1','','gt57trshltf7dusphr9mf7pd3c')]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2023-04-16 18:09:29] [IP:124.122.132.230]
+[Query:INSERT INTO stat_visitor (sv_url,sv_visitor,sv_menu,sv_ip,sv_timestamp,sv_date,sv_time,sv_country,sv_language,sv_new,sv_browser,sv_resolution,sv_domain,sv_isp,sv_region,sv_city,sv_latitude,sv_longitude,sv_referer,sv_search,sv_keyword,sv_os,sv_load,sv_member,sv_fullurl,sv_mem_id,sv_w3c,sv_country_code,sv_region_code,sv_device,sv_op,sv_session_id) VALUES ('page','','/dip_intranet/Booking_status.php','124.122.132.230','20230416180929','2023-04-16','18:09:29','TH','en-US,en;q=0.9','','Edge','1280x720','ppp-124-122-132-230.revip2.asianet.co.th','AS17552 True Online','Bangkok','Bangkok','13.7083','100.4562','','','','Windows 10','0','Y','https://203.151.166.134/dip_intranet/Booking_status.php','14','','TH','','1','','gt57trshltf7dusphr9mf7pd3c')]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2023-04-16 19:28:58] [IP:124.122.132.230]
+[Query:SELECT sv_id FROM stat_visitor WHERE sv_ip = '124.122.132.230' AND sv_new = 'Y' LIMIT 0,1 ]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2023-04-16 19:28:58] [IP:124.122.132.230]
+[Query:SELECT sv_id FROM stat_visitor WHERE sv_ip = '124.122.132.230' AND sv_new = 'Y' LIMIT 0,1 ]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2023-04-16 19:28:58] [IP:124.122.132.230]
+[Query:INSERT INTO stat_visitor (sv_url,sv_visitor,sv_menu,sv_ip,sv_timestamp,sv_date,sv_time,sv_country,sv_language,sv_new,sv_browser,sv_resolution,sv_domain,sv_isp,sv_region,sv_city,sv_latitude,sv_longitude,sv_referer,sv_search,sv_keyword,sv_os,sv_load,sv_member,sv_fullurl,sv_mem_id,sv_w3c,sv_country_code,sv_region_code,sv_device,sv_op,sv_session_id) VALUES ('page','Y','/dip_intranet/index.php','124.122.132.230','20230416192858','2023-04-16','19:28:58','TH','en-US,en;q=0.9','Y','Edge','1280x720','ppp-124-122-132-230.revip2.asianet.co.th','AS17552 True Online','Bangkok','Bangkok','13.7083','100.4562','http://203.151.166.134/dip_intranet/index.php','','','Windows 10','0','Y','https://203.151.166.134/dip_intranet/index.php','14','','TH','','1','','gt57trshltf7dusphr9mf7pd3c')]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2023-04-16 19:45:42] [IP:124.122.132.230]
+[Query:INSERT INTO stat_visitor (sv_url,sv_visitor,sv_menu,sv_ip,sv_timestamp,sv_date,sv_time,sv_country,sv_language,sv_new,sv_browser,sv_resolution,sv_domain,sv_isp,sv_region,sv_city,sv_latitude,sv_longitude,sv_referer,sv_search,sv_keyword,sv_os,sv_load,sv_member,sv_fullurl,sv_mem_id,sv_w3c,sv_country_code,sv_region_code,sv_device,sv_op,sv_session_id) VALUES ('page','','/dip_intranet/Booking_status.php','124.122.132.230','20230416194542','2023-04-16','19:45:42','TH','en-US,en;q=0.9','','Edge','1280x720','ppp-124-122-132-230.revip2.asianet.co.th','AS17552 True Online','Bangkok','Bangkok','13.7083','100.4562','','','','Windows 10','0','Y','https://203.151.166.134/dip_intranet/Booking_status.php','14','','TH','','1','','gt57trshltf7dusphr9mf7pd3c')]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2023-04-16 19:47:42] [IP:124.122.132.230]
+[Query:INSERT INTO stat_visitor (sv_url,sv_visitor,sv_menu,sv_ip,sv_timestamp,sv_date,sv_time,sv_country,sv_language,sv_new,sv_browser,sv_resolution,sv_domain,sv_isp,sv_region,sv_city,sv_latitude,sv_longitude,sv_referer,sv_search,sv_keyword,sv_os,sv_load,sv_member,sv_fullurl,sv_mem_id,sv_w3c,sv_country_code,sv_region_code,sv_device,sv_op,sv_session_id) VALUES ('page','','/dip_intranet/Booking_status.php','124.122.132.230','20230416194741','2023-04-16','19:47:41','TH','en-US,en;q=0.9','','Edge','1280x720','ppp-124-122-132-230.revip2.asianet.co.th','AS17552 True Online','Bangkok','Bangkok','13.7083','100.4562','','','','Windows 10','0','Y','https://203.151.166.134/dip_intranet/Booking_status.php','14','','TH','','1','','gt57trshltf7dusphr9mf7pd3c')]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2023-04-16 19:48:39] [IP:124.122.132.230]
+[Query:DELETE FROM visitor_online WHERE DATEADD(SECOND,30,vo_onlinelasttime) <= GETDATE() ]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2023-04-16 19:49:23] [IP:124.122.132.230]
+[Query:SELECT sv_id FROM stat_visitor WHERE sv_ip = '124.122.132.230' AND sv_new = 'Y' LIMIT 0,1 ]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2023-04-16 19:49:23] [IP:124.122.132.230]
+[Query:SELECT sv_id FROM stat_visitor WHERE sv_ip = '124.122.132.230' AND sv_new = 'Y' LIMIT 0,1 ]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2023-04-16 19:49:23] [IP:124.122.132.230]
+[Query:INSERT INTO stat_visitor (sv_url,sv_visitor,sv_menu,sv_ip,sv_timestamp,sv_date,sv_time,sv_country,sv_language,sv_new,sv_browser,sv_resolution,sv_domain,sv_isp,sv_region,sv_city,sv_latitude,sv_longitude,sv_referer,sv_search,sv_keyword,sv_os,sv_load,sv_member,sv_fullurl,sv_mem_id,sv_w3c,sv_country_code,sv_region_code,sv_device,sv_op,sv_session_id) VALUES ('page','Y','/dip_intranet/index.php','124.122.132.230','20230416194923','2023-04-16','19:49:23','TH','en-US,en;q=0.9','Y','Google Chrome','1280x720','ppp-124-122-132-230.revip2.asianet.co.th','AS17552 True Online','Bangkok','Bangkok','13.7083','100.4562','http://203.151.166.134/dip_intranet/index.php','','','Windows 10','0','Y','https://203.151.166.134/dip_intranet/index.php','1','','TH','','1','','hk16ncn2jpo0kfn0q5rar2uv7v')]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2023-04-16 20:11:26] [IP:124.122.132.230]
+[Query:INSERT INTO stat_visitor (sv_url,sv_visitor,sv_menu,sv_ip,sv_timestamp,sv_date,sv_time,sv_country,sv_language,sv_new,sv_browser,sv_resolution,sv_domain,sv_isp,sv_region,sv_city,sv_latitude,sv_longitude,sv_referer,sv_search,sv_keyword,sv_os,sv_load,sv_member,sv_fullurl,sv_mem_id,sv_w3c,sv_country_code,sv_region_code,sv_device,sv_op,sv_session_id) VALUES ('page','','/dip_intranet/Booking_status.php','124.122.132.230','20230416201125','2023-04-16','20:11:25','TH','en-US,en;q=0.9','','Edge','1280x720','ppp-124-122-132-230.revip2.asianet.co.th','AS17552 True Online','Bangkok','Bangkok','13.7083','100.4562','','','','Windows 10','0','Y','https://203.151.166.134/dip_intranet/Booking_status.php','14','','TH','','1','','gt57trshltf7dusphr9mf7pd3c')]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2023-04-16 20:12:18] [IP:124.122.132.230]
+[Query:INSERT INTO stat_visitor (sv_url,sv_visitor,sv_menu,sv_ip,sv_timestamp,sv_date,sv_time,sv_country,sv_language,sv_new,sv_browser,sv_resolution,sv_domain,sv_isp,sv_region,sv_city,sv_latitude,sv_longitude,sv_referer,sv_search,sv_keyword,sv_os,sv_load,sv_member,sv_fullurl,sv_mem_id,sv_w3c,sv_country_code,sv_region_code,sv_device,sv_op,sv_session_id) VALUES ('page','','/dip_intranet/Booking_status.php','124.122.132.230','20230416201218','2023-04-16','20:12:18','TH','en-US,en;q=0.9','','Edge','1280x720','ppp-124-122-132-230.revip2.asianet.co.th','AS17552 True Online','Bangkok','Bangkok','13.7083','100.4562','','','','Windows 10','0','Y','https://203.151.166.134/dip_intranet/Booking_status.php','14','','TH','','1','','gt57trshltf7dusphr9mf7pd3c')]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2023-04-16 20:12:41] [IP:124.122.132.230]
+[Query:DELETE FROM visitor_online WHERE DATEADD(SECOND,30,vo_onlinelasttime) <= GETDATE() ]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2023-04-16 20:12:47] [IP:124.122.132.230]
+[Query:SELECT sv_id FROM stat_visitor WHERE sv_ip = '124.122.132.230' AND sv_new = 'Y' LIMIT 0,1 ]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2023-04-16 20:12:47] [IP:124.122.132.230]
+[Query:SELECT sv_id FROM stat_visitor WHERE sv_ip = '124.122.132.230' AND sv_new = 'Y' LIMIT 0,1 ]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2023-04-16 20:12:47] [IP:124.122.132.230]
+[Query:INSERT INTO stat_visitor (sv_url,sv_visitor,sv_menu,sv_ip,sv_timestamp,sv_date,sv_time,sv_country,sv_language,sv_new,sv_browser,sv_resolution,sv_domain,sv_isp,sv_region,sv_city,sv_latitude,sv_longitude,sv_referer,sv_search,sv_keyword,sv_os,sv_load,sv_member,sv_fullurl,sv_mem_id,sv_w3c,sv_country_code,sv_region_code,sv_device,sv_op,sv_session_id) VALUES ('page','Y','/dip_intranet/index.php','124.122.132.230','20230416201247','2023-04-16','20:12:47','TH','en-US,en;q=0.9','Y','Google Chrome','1280x720','ppp-124-122-132-230.revip2.asianet.co.th','AS17552 True Online','Bangkok','Bangkok','13.7083','100.4562','http://203.151.166.134/dip_intranet/index.php','','','Windows 10','0','Y','https://203.151.166.134/dip_intranet/index.php','26','','TH','','1','','hk16ncn2jpo0kfn0q5rar2uv7v')]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2023-04-16 20:13:07] [IP:124.122.132.230]
+[Query:DELETE FROM visitor_online WHERE DATEADD(SECOND,30,vo_onlinelasttime) <= GETDATE() ]
+[Error Code:]
+[Error Massage:]
+====================================

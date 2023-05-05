@@ -1,0 +1,15 @@
+a:link { color: #005CA2; text-decoration: none;}
+a:visited { color: #005CA2; text-decoration: none;}
+a:active { color: #0099FF; text-decoration: none;}
+a:hover { color: #0099FF; text-decoration: none;}
+.normal_font {  font-family: "MS Sans Serif"; font-size: 12px; font-weight: normal; }
+.head_font {  font-family: "Tahoma"; font-size: 20px; font-weight: bold; }
+input {  font-family: "MS Sans Serif"; font-size: 12px; font-weight: normal; color: #000000; }
+textarea {  font-family: "MS Sans Serif"; font-size: 12px; font-weight: normal; color: #000000; }
+select {  font-family: "MS Sans Serif"; font-size: 12px; font-weight: normal; color: #000000; }
+.toolbutton{
+	BORDER-LEFT: threedface 1px solid;
+	BORDER-RIGHT: threedface 1px solid;
+	BORDER-TOP: threedface 1px solid;
+	BORDER-BOTTOM: threedface 1px solid;
+	}

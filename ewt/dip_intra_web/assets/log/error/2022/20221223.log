@@ -1,0 +1,384 @@
+[Date:2022-12-23 09:21:45] [IP:171.101.111.174]
+[Query:SELECT sv_id FROM stat_visitor WHERE sv_ip = '171.101.111.174' AND sv_new = 'Y' LIMIT 0,1 ]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-23 09:21:45] [IP:171.101.111.174]
+[Query:SELECT sv_id FROM stat_visitor WHERE sv_ip = '171.101.111.174' AND sv_new = 'Y' LIMIT 0,1 ]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-23 09:21:45] [IP:171.101.111.174]
+[Query:INSERT INTO stat_visitor (sv_url,sv_visitor,sv_menu,sv_ip,sv_timestamp,sv_date,sv_time,sv_country,sv_language,sv_new,sv_browser,sv_resolution,sv_domain,sv_isp,sv_region,sv_city,sv_latitude,sv_longitude,sv_referer,sv_search,sv_keyword,sv_os,sv_load,sv_member,sv_fullurl,sv_mem_id,sv_w3c,sv_country_code,sv_region_code,sv_device,sv_op,sv_session_id) VALUES ('page','Y','/dip_intranet/index.php','171.101.111.174','20221223092145','2022-12-23','09:21:45','TH','th-TH,th;q=0.9,en;q=0.8','Y','Google Chrome','1920x1080','cm-171-101-111-174.revip11.asianet.co.th','AS17552 True Online','Bangkok','Bangkok','13.7540','100.5014','http://203.151.166.134/dip_intranet/index.php','','','Windows 10','0','Y','https://203.151.166.134/dip_intranet/index.php','1','','TH','10','1','','pr4jiu357sg1kf6viconmj3v3n')]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-23 10:26:10] [IP:171.101.111.174]
+[Query:DELETE FROM visitor_online WHERE DATEADD(SECOND,30,vo_onlinelasttime) <= GETDATE() ]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-23 10:26:19] [IP:171.101.111.174]
+[Query:INSERT INTO stat_visitor (sv_url,sv_visitor,sv_menu,sv_ip,sv_timestamp,sv_date,sv_time,sv_country,sv_language,sv_new,sv_browser,sv_resolution,sv_domain,sv_isp,sv_region,sv_city,sv_latitude,sv_longitude,sv_referer,sv_search,sv_keyword,sv_os,sv_load,sv_member,sv_fullurl,sv_mem_id,sv_w3c,sv_country_code,sv_region_code,sv_device,sv_op,sv_session_id) VALUES ('page','','/dip_intranet/index.php','171.101.111.174','20221223102618','2022-12-23','10:26:18','TH','th-TH,th;q=0.9,en;q=0.8','','Google Chrome','1920x1080','cm-171-101-111-174.revip11.asianet.co.th','AS17552 True Online','Bangkok','Bangkok','13.7540','100.5014','','','','Windows 10','0','Y','https://203.151.166.134/dip_intranet/index.php','1','','TH','10','1','','pr4jiu357sg1kf6viconmj3v3n')]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-23 10:26:28] [IP:171.101.111.174]
+[Query:INSERT INTO stat_visitor (sv_url,sv_visitor,sv_menu,sv_ip,sv_timestamp,sv_date,sv_time,sv_country,sv_language,sv_new,sv_browser,sv_resolution,sv_domain,sv_isp,sv_region,sv_city,sv_latitude,sv_longitude,sv_referer,sv_search,sv_keyword,sv_os,sv_load,sv_member,sv_fullurl,sv_mem_id,sv_w3c,sv_country_code,sv_region_code,sv_device,sv_op,sv_session_id) VALUES ('page','','/dip_intranet/faq.php','171.101.111.174','20221223102628','2022-12-23','10:26:28','TH','th-TH,th;q=0.9,en;q=0.8','','Google Chrome','1920x1080','cm-171-101-111-174.revip11.asianet.co.th','AS17552 True Online','Bangkok','Bangkok','13.7540','100.5014','','','','Windows 10','0','Y','https://203.151.166.134/dip_intranet/faq.php','1','','TH','10','1','','pr4jiu357sg1kf6viconmj3v3n')]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-23 10:26:52] [IP:171.101.111.174]
+[Query:INSERT INTO stat_visitor (sv_url,sv_visitor,sv_menu,sv_ip,sv_timestamp,sv_date,sv_time,sv_country,sv_language,sv_new,sv_browser,sv_resolution,sv_domain,sv_isp,sv_region,sv_city,sv_latitude,sv_longitude,sv_referer,sv_search,sv_keyword,sv_os,sv_load,sv_member,sv_fullurl,sv_mem_id,sv_w3c,sv_country_code,sv_region_code,sv_device,sv_op,sv_session_id) VALUES ('page','','/dip_intranet/faq.php','171.101.111.174','20221223102651','2022-12-23','10:26:51','TH','th-TH,th;q=0.9,en;q=0.8','','Google Chrome','1920x1080','cm-171-101-111-174.revip11.asianet.co.th','AS17552 True Online','Bangkok','Bangkok','13.7540','100.5014','','','','Windows 10','0','Y','https://203.151.166.134/dip_intranet/faq.php','1','','TH','10','1','','pr4jiu357sg1kf6viconmj3v3n')]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-23 16:15:46] [IP:118.174.7.94]
+[Query:INSERT INTO stat_visitor (sv_url,sv_visitor,sv_menu,sv_ip,sv_timestamp,sv_date,sv_time,sv_country,sv_language,sv_new,sv_browser,sv_resolution,sv_domain,sv_isp,sv_region,sv_city,sv_latitude,sv_longitude,sv_referer,sv_search,sv_keyword,sv_os,sv_load,sv_member,sv_fullurl,sv_mem_id,sv_w3c,sv_country_code,sv_region_code,sv_device,sv_op,sv_session_id) VALUES ('page','','/dip_intranet/index.php','118.174.7.94','20221223161546','2022-12-23','16:15:46','TH','th-TH,th;q=0.9,en;q=0.8','','Google Chrome','1920x1080','node-1ge.118-174.static.totisp.net','AS131293 TOT Public Company Limited','Bangkok','Bangkok','13.7540','100.5014','','','','Windows 10','0','Y','https://203.151.166.134/dip_intranet/index.php','6','','TH','','1','','pr4jiu357sg1kf6viconmj3v3n')]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-23 16:15:50] [IP:118.174.7.94]
+[Query:INSERT INTO stat_visitor (sv_url,sv_visitor,sv_menu,sv_ip,sv_timestamp,sv_date,sv_time,sv_country,sv_language,sv_new,sv_browser,sv_resolution,sv_domain,sv_isp,sv_region,sv_city,sv_latitude,sv_longitude,sv_referer,sv_search,sv_keyword,sv_os,sv_load,sv_member,sv_fullurl,sv_mem_id,sv_w3c,sv_country_code,sv_region_code,sv_device,sv_op,sv_session_id) VALUES ('page','','/dip_intranet/setting_profile.php','118.174.7.94','20221223161549','2022-12-23','16:15:49','TH','th-TH,th;q=0.9,en;q=0.8','','Google Chrome','1920x1080','node-1ge.118-174.static.totisp.net','AS131293 TOT Public Company Limited','Bangkok','Bangkok','13.7540','100.5014','','','','Windows 10','0','Y','https://203.151.166.134/dip_intranet/setting_profile.php','6','','TH','','1','','pr4jiu357sg1kf6viconmj3v3n')]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-23 16:15:51] [IP:118.174.7.94]
+[Query:INSERT INTO stat_visitor (sv_url,sv_visitor,sv_menu,sv_ip,sv_timestamp,sv_date,sv_time,sv_country,sv_language,sv_new,sv_browser,sv_resolution,sv_domain,sv_isp,sv_region,sv_city,sv_latitude,sv_longitude,sv_referer,sv_search,sv_keyword,sv_os,sv_load,sv_member,sv_fullurl,sv_mem_id,sv_w3c,sv_country_code,sv_region_code,sv_device,sv_op,sv_session_id) VALUES ('page','','/dip_intranet/edit_profile.php','118.174.7.94','20221223161551','2022-12-23','16:15:51','TH','th-TH,th;q=0.9,en;q=0.8','','Google Chrome','1920x1080','node-1ge.118-174.static.totisp.net','AS131293 TOT Public Company Limited','Bangkok','Bangkok','13.7540','100.5014','','','','Windows 10','0','Y','https://203.151.166.134/dip_intranet/edit_profile.php','6','','TH','','1','','pr4jiu357sg1kf6viconmj3v3n')]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-23 16:31:59] [IP:118.174.7.94]
+[Query:DELETE FROM visitor_online WHERE DATEADD(SECOND,30,vo_onlinelasttime) <= GETDATE() ]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-23 16:32:07] [IP:118.174.7.94]
+[Query:INSERT INTO stat_visitor (sv_url,sv_visitor,sv_menu,sv_ip,sv_timestamp,sv_date,sv_time,sv_country,sv_language,sv_new,sv_browser,sv_resolution,sv_domain,sv_isp,sv_region,sv_city,sv_latitude,sv_longitude,sv_referer,sv_search,sv_keyword,sv_os,sv_load,sv_member,sv_fullurl,sv_mem_id,sv_w3c,sv_country_code,sv_region_code,sv_device,sv_op,sv_session_id) VALUES ('page','','/dip_intranet/index.php','118.174.7.94','20221223163207','2022-12-23','16:32:07','TH','th-TH,th;q=0.9,en;q=0.8','','Google Chrome','1920x1080','node-1ge.118-174.static.totisp.net','AS131293 TOT Public Company Limited','Bangkok','Bangkok','13.7540','100.5014','','','','Windows 10','0','Y','https://203.151.166.134/dip_intranet/index.php','1','','TH','','1','','pr4jiu357sg1kf6viconmj3v3n')]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-23 16:58:17] [IP:171.101.111.174]
+[Query:SELECT article_group.c_id FROM db_1_bizpotential_web.article_group
+		INNER JOIN article_list ON (article_group.c_id = article_list.c_id)
+		WHERE article_group.c_parent = '1' AND article_group.c_show_document = 'Y'
+        AND ((article_list.n_date_start = '' AND article_list.n_date_end = '')
+        OR (article_list.n_date_start != '' AND article_list.n_date_end = '')
+        OR ('2022-12-23 16:58' between article_list.n_date_start AND article_list.n_date_end))]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-23 16:58:17] [IP:171.101.111.174]
+[Query:SELECT c_id,c_parent,c_name FROM db_1_bizpotential_web.article_group WHERE c_show_document = 'Y'  AND c_id = :c_id]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-23 16:58:18] [IP:171.101.111.174]
+[Query:INSERT INTO stat_visitor (sv_url,sv_visitor,sv_menu,sv_ip,sv_timestamp,sv_date,sv_time,sv_country,sv_language,sv_new,sv_browser,sv_resolution,sv_domain,sv_isp,sv_region,sv_city,sv_latitude,sv_longitude,sv_referer,sv_search,sv_keyword,sv_os,sv_load,sv_member,sv_fullurl,sv_mem_id,sv_w3c,sv_country_code,sv_region_code,sv_device,sv_op,sv_session_id) VALUES ('page','','/dip_intranet/more_news.php?c_id=1','171.101.111.174','20221223165818','2022-12-23','16:58:18','TH','th-TH,th;q=0.9,en;q=0.8','','Google Chrome','1920x1080','cm-171-101-111-174.revip11.asianet.co.th','AS17552 True Online','Bangkok','Bangkok','13.7540','100.5014','','','','Windows 10','0','Y','https://203.151.166.134/dip_intranet/more_news.php?c_id=1','1','','TH','','1','','pr4jiu357sg1kf6viconmj3v3n')]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-23 16:58:22] [IP:171.101.111.174]
+[Query:SELECT article_group.c_id FROM db_1_bizpotential_web.article_group
+		INNER JOIN article_list ON (article_group.c_id = article_list.c_id)
+		WHERE article_group.c_parent = '333' AND article_group.c_show_document = 'Y'
+        AND ((article_list.n_date_start = '' AND article_list.n_date_end = '')
+        OR (article_list.n_date_start != '' AND article_list.n_date_end = '')
+        OR ('2022-12-23 16:58' between article_list.n_date_start AND article_list.n_date_end))]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-23 16:58:22] [IP:171.101.111.174]
+[Query:SELECT c_id,c_parent,c_name FROM db_1_bizpotential_web.article_group WHERE c_show_document = 'Y'  AND c_id = :c_id]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-23 16:58:23] [IP:171.101.111.174]
+[Query:INSERT INTO stat_visitor (sv_url,sv_visitor,sv_menu,sv_ip,sv_timestamp,sv_date,sv_time,sv_country,sv_language,sv_new,sv_browser,sv_resolution,sv_domain,sv_isp,sv_region,sv_city,sv_latitude,sv_longitude,sv_referer,sv_search,sv_keyword,sv_os,sv_load,sv_member,sv_fullurl,sv_mem_id,sv_w3c,sv_country_code,sv_region_code,sv_device,sv_op,sv_session_id) VALUES ('page','','/dip_intranet/more_news.php?c_id=333','171.101.111.174','20221223165823','2022-12-23','16:58:23','TH','th-TH,th;q=0.9,en;q=0.8','','Google Chrome','1920x1080','cm-171-101-111-174.revip11.asianet.co.th','AS17552 True Online','Bangkok','Bangkok','13.7540','100.5014','','','','Windows 10','0','Y','https://203.151.166.134/dip_intranet/more_news.php?c_id=333','1','','TH','','1','','pr4jiu357sg1kf6viconmj3v3n')]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-23 16:59:53] [IP:171.101.111.174]
+[Query:SELECT * FROM article_list WHERE n_approve = 'Y' 
+        AND ((n_date_start = '' AND n_date_end = '')
+        OR (n_date_start != '' AND n_date_end = '')
+        OR ('2022-12-23 16:59' between n_date_start AND n_date_end))  AND n_id = '4360']
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-23 16:59:53] [IP:171.101.111.174]
+[Query:SELECT * FROM article_list WHERE n_approve = 'Y' 
+        AND ((n_date_start = '' AND n_date_end = '')
+        OR (n_date_start != '' AND n_date_end = '')
+        OR ('2022-12-23 16:59' between n_date_start AND n_date_end))  AND n_id = '4360']
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-23 16:59:53] [IP:171.101.111.174]
+[Query:SELECT * FROM article_detail WHERE n_id = '4360' ORDER BY at_type_row ASC ]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-23 16:59:53] [IP:171.101.111.174]
+[Query:SELECT * FROM article_detail WHERE n_id = '4360' ORDER BY at_type_row ASC ]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-23 16:59:53] [IP:171.101.111.174]
+[Query:SELECT * FROM article_attach WHERE n_id = '4360' ]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-23 16:59:53] [IP:171.101.111.174]
+[Query:SELECT * FROM article_attach WHERE n_id = '4360' ]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-23 16:59:53] [IP:171.101.111.174]
+[Query:SELECT * FROM news_comment WHERE 1=1  AND news_id = '4360'  ORDER BY id_comment DESC]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-23 16:59:53] [IP:171.101.111.174]
+[Query:SELECT * FROM news_comment WHERE 1=1  AND news_id = '4360'  ORDER BY id_comment DESC]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-23 16:59:53] [IP:171.101.111.174]
+[Query:SELECT * FROM article_taglist WHERE  1=1 AND n_id = '4360'  ORDER BY taglist_id DESC]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-23 16:59:53] [IP:171.101.111.174]
+[Query:SELECT * FROM article_taglist WHERE  1=1 AND n_id = '4360'  ORDER BY taglist_id DESC]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-23 16:59:53] [IP:171.101.111.174]
+[Query:SELECT c_id,c_parent,c_name FROM db_1_bizpotential_web.article_group WHERE c_show_document = 'Y'  AND c_id = :c_id]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-23 16:59:53] [IP:171.101.111.174]
+[Query:INSERT INTO stat_visitor (sv_url,sv_visitor,sv_menu,sv_ip,sv_timestamp,sv_date,sv_time,sv_country,sv_language,sv_new,sv_browser,sv_resolution,sv_domain,sv_isp,sv_region,sv_city,sv_latitude,sv_longitude,sv_referer,sv_search,sv_keyword,sv_os,sv_load,sv_member,sv_fullurl,sv_mem_id,sv_w3c,sv_country_code,sv_region_code,sv_device,sv_op,sv_session_id) VALUES ('page','','/dip_intranet/news_view.php?n_id=4360','171.101.111.174','20221223165953','2022-12-23','16:59:53','TH','th-TH,th;q=0.9,en;q=0.8','','Google Chrome','1920x1080','cm-171-101-111-174.revip11.asianet.co.th','AS17552 True Online','Bangkok','Bangkok','13.7540','100.5014','','','','Windows 10','0','Y','https://203.151.166.134/dip_intranet/news_view.php?n_id=4360','1','','TH','','1','','pr4jiu357sg1kf6viconmj3v3n')]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-23 17:03:51] [IP:171.101.111.174]
+[Query:SELECT article_group.c_id FROM db_1_bizpotential_web.article_group
+		INNER JOIN article_list ON (article_group.c_id = article_list.c_id)
+		WHERE article_group.c_parent = '1' AND article_group.c_show_document = 'Y'
+        AND ((article_list.n_date_start = '' AND article_list.n_date_end = '')
+        OR (article_list.n_date_start != '' AND article_list.n_date_end = '')
+        OR ('2022-12-23 17:03' between article_list.n_date_start AND article_list.n_date_end))]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-23 17:03:51] [IP:171.101.111.174]
+[Query:SELECT c_id,c_parent,c_name FROM db_1_bizpotential_web.article_group WHERE c_show_document = 'Y'  AND c_id = :c_id]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-23 17:03:52] [IP:171.101.111.174]
+[Query:INSERT INTO stat_visitor (sv_url,sv_visitor,sv_menu,sv_ip,sv_timestamp,sv_date,sv_time,sv_country,sv_language,sv_new,sv_browser,sv_resolution,sv_domain,sv_isp,sv_region,sv_city,sv_latitude,sv_longitude,sv_referer,sv_search,sv_keyword,sv_os,sv_load,sv_member,sv_fullurl,sv_mem_id,sv_w3c,sv_country_code,sv_region_code,sv_device,sv_op,sv_session_id) VALUES ('page','','/dip_intranet/more_news.php?c_id=1','171.101.111.174','20221223170351','2022-12-23','17:03:51','TH','th-TH,th;q=0.9,en;q=0.8','','Google Chrome','1920x1080','cm-171-101-111-174.revip11.asianet.co.th','AS17552 True Online','Bangkok','Bangkok','13.7540','100.5014','','','','Windows 10','0','Y','https://203.151.166.134/dip_intranet/more_news.php?c_id=1','1','','TH','','1','','pr4jiu357sg1kf6viconmj3v3n')]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-23 17:05:21] [IP:171.101.111.174]
+[Query:SELECT * FROM article_list WHERE n_approve = 'Y' 
+        AND ((n_date_start = '' AND n_date_end = '')
+        OR (n_date_start != '' AND n_date_end = '')
+        OR ('2022-12-23 17:05' between n_date_start AND n_date_end))  AND n_id = '4361']
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-23 17:05:21] [IP:171.101.111.174]
+[Query:SELECT * FROM article_list WHERE n_approve = 'Y' 
+        AND ((n_date_start = '' AND n_date_end = '')
+        OR (n_date_start != '' AND n_date_end = '')
+        OR ('2022-12-23 17:05' between n_date_start AND n_date_end))  AND n_id = '4361']
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-23 17:05:21] [IP:171.101.111.174]
+[Query:SELECT * FROM article_detail WHERE n_id = '4361' ORDER BY at_type_row ASC ]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-23 17:05:21] [IP:171.101.111.174]
+[Query:SELECT * FROM article_detail WHERE n_id = '4361' ORDER BY at_type_row ASC ]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-23 17:05:21] [IP:171.101.111.174]
+[Query:SELECT * FROM article_attach WHERE n_id = '4361' ]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-23 17:05:21] [IP:171.101.111.174]
+[Query:SELECT * FROM article_attach WHERE n_id = '4361' ]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-23 17:05:21] [IP:171.101.111.174]
+[Query:SELECT * FROM news_comment WHERE 1=1  AND news_id = '4361'  ORDER BY id_comment DESC]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-23 17:05:21] [IP:171.101.111.174]
+[Query:SELECT * FROM news_comment WHERE 1=1  AND news_id = '4361'  ORDER BY id_comment DESC]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-23 17:05:21] [IP:171.101.111.174]
+[Query:SELECT * FROM article_taglist WHERE  1=1 AND n_id = '4361'  ORDER BY taglist_id DESC]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-23 17:05:21] [IP:171.101.111.174]
+[Query:SELECT * FROM article_taglist WHERE  1=1 AND n_id = '4361'  ORDER BY taglist_id DESC]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-23 17:05:21] [IP:171.101.111.174]
+[Query:SELECT c_id,c_parent,c_name FROM db_1_bizpotential_web.article_group WHERE c_show_document = 'Y'  AND c_id = :c_id]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-23 17:05:22] [IP:171.101.111.174]
+[Query:INSERT INTO stat_visitor (sv_url,sv_visitor,sv_menu,sv_ip,sv_timestamp,sv_date,sv_time,sv_country,sv_language,sv_new,sv_browser,sv_resolution,sv_domain,sv_isp,sv_region,sv_city,sv_latitude,sv_longitude,sv_referer,sv_search,sv_keyword,sv_os,sv_load,sv_member,sv_fullurl,sv_mem_id,sv_w3c,sv_country_code,sv_region_code,sv_device,sv_op,sv_session_id) VALUES ('page','','/dip_intranet/news_view.php?n_id=4361','171.101.111.174','20221223170521','2022-12-23','17:05:21','TH','th-TH,th;q=0.9,en;q=0.8','','Google Chrome','1920x1080','cm-171-101-111-174.revip11.asianet.co.th','AS17552 True Online','Bangkok','Bangkok','13.7540','100.5014','','','','Windows 10','0','Y','https://203.151.166.134/dip_intranet/news_view.php?n_id=4361','1','','TH','','1','','pr4jiu357sg1kf6viconmj3v3n')]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-23 17:53:44] [IP:171.101.111.174]
+[Query:SELECT * FROM article_list WHERE n_approve = 'Y' 
+        AND ((n_date_start = '' AND n_date_end = '')
+        OR (n_date_start != '' AND n_date_end = '')
+        OR ('2022-12-23 17:53' between n_date_start AND n_date_end))  AND n_id = '4361']
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-23 17:53:44] [IP:171.101.111.174]
+[Query:SELECT * FROM article_list WHERE n_approve = 'Y' 
+        AND ((n_date_start = '' AND n_date_end = '')
+        OR (n_date_start != '' AND n_date_end = '')
+        OR ('2022-12-23 17:53' between n_date_start AND n_date_end))  AND n_id = '4361']
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-23 17:53:44] [IP:171.101.111.174]
+[Query:SELECT * FROM article_detail WHERE n_id = '4361' ORDER BY at_type_row ASC ]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-23 17:53:44] [IP:171.101.111.174]
+[Query:SELECT * FROM article_detail WHERE n_id = '4361' ORDER BY at_type_row ASC ]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-23 17:53:44] [IP:171.101.111.174]
+[Query:SELECT * FROM article_attach WHERE n_id = '4361' ]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-23 17:53:44] [IP:171.101.111.174]
+[Query:SELECT * FROM article_attach WHERE n_id = '4361' ]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-23 17:53:44] [IP:171.101.111.174]
+[Query:SELECT * FROM news_comment WHERE 1=1  AND news_id = '4361'  ORDER BY id_comment DESC]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-23 17:53:44] [IP:171.101.111.174]
+[Query:SELECT * FROM news_comment WHERE 1=1  AND news_id = '4361'  ORDER BY id_comment DESC]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-23 17:53:44] [IP:171.101.111.174]
+[Query:SELECT * FROM article_taglist WHERE  1=1 AND n_id = '4361'  ORDER BY taglist_id DESC]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-23 17:53:44] [IP:171.101.111.174]
+[Query:SELECT * FROM article_taglist WHERE  1=1 AND n_id = '4361'  ORDER BY taglist_id DESC]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-23 17:53:44] [IP:171.101.111.174]
+[Query:SELECT c_id,c_parent,c_name FROM db_1_bizpotential_web.article_group WHERE c_show_document = 'Y'  AND c_id = :c_id]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-23 17:53:45] [IP:171.101.111.174]
+[Query:INSERT INTO stat_visitor (sv_url,sv_visitor,sv_menu,sv_ip,sv_timestamp,sv_date,sv_time,sv_country,sv_language,sv_new,sv_browser,sv_resolution,sv_domain,sv_isp,sv_region,sv_city,sv_latitude,sv_longitude,sv_referer,sv_search,sv_keyword,sv_os,sv_load,sv_member,sv_fullurl,sv_mem_id,sv_w3c,sv_country_code,sv_region_code,sv_device,sv_op,sv_session_id) VALUES ('page','','/dip_intranet/news_view.php?n_id=4361','171.101.111.174','20221223175344','2022-12-23','17:53:44','TH','th-TH,th;q=0.9,en;q=0.8','','Google Chrome','1920x1080','cm-171-101-111-174.revip11.asianet.co.th','AS17552 True Online','Bangkok','Bangkok','13.7540','100.5014','','','','Windows 10','0','Y','https://203.151.166.134/dip_intranet/news_view.php?n_id=4361','1','','TH','','1','','pr4jiu357sg1kf6viconmj3v3n')]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-23 17:53:47] [IP:171.101.111.174]
+[Query:SELECT * FROM article_list WHERE n_approve = 'Y' 
+        AND ((n_date_start = '' AND n_date_end = '')
+        OR (n_date_start != '' AND n_date_end = '')
+        OR ('2022-12-23 17:53' between n_date_start AND n_date_end))  AND n_id = '4350']
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-23 17:53:47] [IP:171.101.111.174]
+[Query:SELECT * FROM article_list WHERE n_approve = 'Y' 
+        AND ((n_date_start = '' AND n_date_end = '')
+        OR (n_date_start != '' AND n_date_end = '')
+        OR ('2022-12-23 17:53' between n_date_start AND n_date_end))  AND n_id = '4350']
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-23 17:53:47] [IP:171.101.111.174]
+[Query:SELECT * FROM article_detail WHERE n_id = '4350' ORDER BY at_type_row ASC ]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-23 17:53:47] [IP:171.101.111.174]
+[Query:SELECT * FROM article_detail WHERE n_id = '4350' ORDER BY at_type_row ASC ]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-23 17:53:47] [IP:171.101.111.174]
+[Query:SELECT * FROM article_attach WHERE n_id = '4350' ]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-23 17:53:47] [IP:171.101.111.174]
+[Query:SELECT * FROM article_attach WHERE n_id = '4350' ]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-23 17:53:47] [IP:171.101.111.174]
+[Query:SELECT * FROM news_comment WHERE 1=1  AND news_id = '4350'  ORDER BY id_comment DESC]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-23 17:53:47] [IP:171.101.111.174]
+[Query:SELECT * FROM news_comment WHERE 1=1  AND news_id = '4350'  ORDER BY id_comment DESC]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-23 17:53:47] [IP:171.101.111.174]
+[Query:SELECT * FROM article_taglist WHERE  1=1 AND n_id = '4350'  ORDER BY taglist_id DESC]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-23 17:53:47] [IP:171.101.111.174]
+[Query:SELECT * FROM article_taglist WHERE  1=1 AND n_id = '4350'  ORDER BY taglist_id DESC]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-23 17:53:47] [IP:171.101.111.174]
+[Query:SELECT c_id,c_parent,c_name FROM db_1_bizpotential_web.article_group WHERE c_show_document = 'Y'  AND c_id = :c_id]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2022-12-23 17:53:47] [IP:171.101.111.174]
+[Query:INSERT INTO stat_visitor (sv_url,sv_visitor,sv_menu,sv_ip,sv_timestamp,sv_date,sv_time,sv_country,sv_language,sv_new,sv_browser,sv_resolution,sv_domain,sv_isp,sv_region,sv_city,sv_latitude,sv_longitude,sv_referer,sv_search,sv_keyword,sv_os,sv_load,sv_member,sv_fullurl,sv_mem_id,sv_w3c,sv_country_code,sv_region_code,sv_device,sv_op,sv_session_id) VALUES ('page','','/dip_intranet/news_view.php?n_id=4350','171.101.111.174','20221223175347','2022-12-23','17:53:47','TH','th-TH,th;q=0.9,en;q=0.8','','Google Chrome','1920x1080','cm-171-101-111-174.revip11.asianet.co.th','AS17552 True Online','Bangkok','Bangkok','13.7540','100.5014','','','','Windows 10','0','Y','https://203.151.166.134/dip_intranet/news_view.php?n_id=4350','1','','TH','','1','','pr4jiu357sg1kf6viconmj3v3n')]
+[Error Code:]
+[Error Massage:]
+====================================

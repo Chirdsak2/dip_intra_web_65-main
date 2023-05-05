@@ -1,0 +1,56 @@
+<div class="row m-b" style="padding-top:65px;">
+    <div class="col-md-12 col-sm-12 col-xs-12 m-b-sm">
+        <div class="card">
+            <div class="card-body">
+
+                <div class="row">
+                    <div class="col-md-6 col-sm-6 col-xs-12">
+                        <img src="<?php echo $IMG_PATH; ?>images/SiteProperties.png" class="animated fadeInDown " style="height: 60px;width: 60px;">
+                        <span class="animated fadeInDown text-large hidden-xs"><?php echo $txt_site_module; ?></span>
+                    </div>
+
+                    <div class="col-md-6 col-sm-6 col-xs-12 float-right text-right hidden-xs" style="top:18px;">
+                        <a href="../EWT_ADMIN/main.php">
+                            <button type="button" class="btn btn-default btn-sm">
+                                <i class="fas fa-home"></i>&nbsp;<?php echo $txt_ewt_home; ?>
+                            </button>
+                        </a>
+                        <a href="site_main.php" title="<?php echo $txt_site_menu_setting; ?>" target="_self">
+                            <button type="button" class="btn btn-default btn-sm">
+                                <i class="far fa-arrow-alt-circle-right"></i>&nbsp;<?php echo $txt_site_menu_setting; ?>
+                            </button>
+                        </a>
+                        <!-- <a href="site_embad.php" title="<?php //echo $txt_site_menu_embad ;
+                                                                ?>"  target="_self">
+<button type="button" class="btn btn-default btn-sm" >
+          <i class="far fa-arrow-alt-circle-right"></i>&nbsp;<?php //echo $txt_site_menu_embad;
+                                                                ?>
+</button>
+</a> -->
+                        <?php /*<a href="site_intro.php" title="<?php echo 'Intro setting';?>"  target="_self">
+<button type="button" class="btn btn-default btn-sm" >
+          <i class="far fa-arrow-alt-circle-right"></i>&nbsp;<?php echo 'Intro setting';?>
+</button>
+</a> */ ?>
+                    </div>
+                    <div class="col-md-6 col-sm-6 col-xs-12 float-right text-right  visible-xs row m-b-sm ">
+                        <div class="btn-group ">
+                            <button type="button" data-toggle="dropdown" class="btn btn-default dropdown-toggle"><i class="fas fa-bars"></i> menu <span class="caret"></span></button>
+                            <ul class="dropdown-menu dropdown-menu-right">
+                                <li><a href="../EWT_ADMIN/main.php"><i class="fas fa-home"></i>&nbsp;<?php echo $txt_ewt_home; ?></a></li>
+                                <li><a href="site_main.php"><i class="far fa-arrow-alt-circle-right"></i>&nbsp;<?php echo $txt_site_menu_setting; ?></a></li>
+                                <li><a href="site_embad.php"><i class="far fa-arrow-alt-circle-right"></i>&nbsp;<?php echo $txt_site_menu_embad; ?></a></li>
+                                <?php /*
+            <li><a href="site_intro.php"><i class="far fa-arrow-alt-circle-right"></i>&nbsp;<?php echo 'Intro setting';?></a></li>
+            */ ?>
+                            </ul>
+                        </div>
+                    </div>
+
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>

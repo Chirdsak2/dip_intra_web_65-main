@@ -1,0 +1,16 @@
+<?php
+	include("../lib/permission1.php");
+	include("../lib/include.php");
+	include("../lib/function.php");
+	include("../lib/user_config.php");
+	include("../lib/connect.php");
+	
+	include ("lib.inc.php");
+	//Initial var
+	$proc = $_REQUEST['proc'];
+	$today = date ('Y-m-d');
+	$sub_user = explode(" ",$EWT_FOLDER_USER);
+	$EWT_FOLDER_USER = $sub_user [0];
+	echo $dest = "../ewt/".$EWT_FOLDER_USER."/ebook";
+	
+?>

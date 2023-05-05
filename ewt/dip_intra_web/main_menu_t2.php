@@ -1,0 +1,150 @@
+<?php $menu_view2 = menu::genMenuView2($template_management["site_mainmenu"], 2); ?>
+<!-- The social media icon bar -->
+<div id="mySidebar" class="sidebar">
+  <a class="btn closebtn" href="#" onclick="closeNav()" role="button"><em class="far fa-window-close"></em> ปิด</a>
+  <div class="row w-100 mb-2 dis-mobile">
+    <div class="col-lg-2 col-md-2 col-sm-4 col-4 pr-0 pl-0 text-right">
+      <a href="setting_profile.php">
+        <img src="<?php echo $webb_image; ?>" alt="<?php echo $webb_image; ?>" title="<?php echo $webb_image; ?>" class="rounded-circle max-width-user2 shadow-user">
+      </a>
+    </div>
+    <div class="col-lg-10 col-md-10 col-sm-8 col-8 text-left">
+      <a href="setting_profile.php">
+        <div class="day-user mt-1 txt-yellow">
+          <?php echo trim(convDateThai(date('Y-m-d'))['DateDayThaiShort']); ?>
+        </div>
+        <div class="name-user-login2">
+          <?php echo mb_strimwidth($full_name, 0, 15, '...'); ?>
+        </div>
+      </a>
+    </div>
+  </div>
+
+  <div class="menu-title">
+    <h5>เมนูหลัก</h5>
+  </div>
+  <div class="menu-list">
+    <?php echo $menu_view2['level3']; ?>
+  </div>
+</div>
+
+<script>
+  /* Set the width of the sidebar to 250px and the left margin of the page content to 250px */
+  function openNav() {
+    document.getElementById("mySidebar").style.width = "300px";
+    document.getElementById("main").style.marginLeft = "300px";
+  }
+
+  /* Set the width of the sidebar to 0 and the left margin of the page content to 0 */
+  function closeNav() {
+    document.getElementById("mySidebar").style.width = "0";
+    document.getElementById("main").style.marginLeft = "0";
+  }
+</script>
+
+
+<style>
+  /* The sidebar menu */
+  .sidebar {
+    height: 100%;
+    /* 100% Full-height */
+    width: 0;
+    /* 0 width - change this with JavaScript */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1200;
+    /* Stay on top */
+    top: 0;
+    left: 0;
+    background-color: #155094;
+    /* Blue */
+    overflow-x: hidden;
+    /* Disable horizontal scroll */
+    padding-top: 60px;
+    /* Place content 60px from the top */
+    transition: 0.5s;
+    /* 0.5 second transition effect to slide in the sidebar */
+    box-shadow: 0px 0px 20px 1px #393a73;
+
+  }
+
+  /* The menu links */
+  .menu-list a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    color: #fff;
+    display: block;
+    transition: 0.3s;
+    border-bottom: 1px solid #CCCCCC;
+  }
+
+  /* The sidebar links */
+  .sidebar a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    color: #fff;
+    display: block;
+    transition: 0.3s;
+  }
+
+  /* When you mouse over the navigation links, change their color */
+  .sidebar a:hover {
+    color: #fdd80e;
+  }
+
+  /* Position and style the close button (top right corner) */
+  .sidebar .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 20px;
+    font-weight: 600;
+    margin-left: 0px;
+  }
+
+  /* The button used to open the sidebar */
+  .openbtn {
+    font-size: 20px;
+    cursor: pointer;
+    background-color: #260273;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    top: 30px;
+    right: 0px;
+    position: fixed;
+    z-index: 1300;
+    border-radius: 5px 0px 0px 5px;
+    font-size: 16px;
+    font-weight: 600;
+    box-shadow: 0px 0px 20px 0px #110628;
+  }
+
+  .openbtn:hover {
+    background-color: #444;
+  }
+
+  .menu-title {
+    padding: 15px;
+    color: #fdd80e;
+
+  }
+
+  /* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+  #main {
+    transition: margin-left .5s;
+    /* If you want a transition effect */
+    padding: 0px;
+  }
+
+  /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+  @media screen and (max-height: 450px) {
+    .sidebar {
+      padding-top: 15px;
+    }
+
+    .sidebar a {
+      font-size: 18px;
+    }
+  }
+</style>

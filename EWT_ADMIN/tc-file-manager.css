@@ -1,0 +1,389 @@
+/*!
+ * TCFildeManager
+
+ */
+.filter-field {
+	float: right; 
+	padding: 5px;
+}
+.tc-btn {
+	float: left; 
+}
+div#top-panel {
+    height: 0px;
+    margin: 20px 0 0 0;
+    overflow: hidden;
+}
+.fileinput-button {
+  position: relative;
+  overflow: hidden;
+  float: left;
+  margin-right: 4px;
+}
+.fileinput-button input {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 0;
+  opacity: 0;
+  filter: alpha(opacity=0);
+  transform: translate(-300px, 0) scale(4);
+  font-size: 23px;
+  direction: ltr;
+  cursor: pointer;
+}
+.fileupload-buttonbar .btn,
+.fileupload-buttonbar .toggle {
+  margin-bottom: 5px;
+}
+.files .progress {
+  width: 200px;
+}
+.progress-animated .bar {
+  background: url(../img/progressbar.gif) !important;
+  filter: none;
+}
+.fileupload-loading {
+  position: absolute;
+  left: 50%;
+  width: 128px;
+  height: 128px;
+  background: url(../img/loading.gif) center no-repeat;
+  display: none;
+}
+.fileupload-processing .fileupload-loading {
+  display: block;
+}
+
+/* Fix for IE 6: */
+* html .fileinput-button {
+  line-height: 24px;
+  margin: 1px -3px 0 0;
+}
+
+/* Fix for IE 7: */
+* + html .fileinput-button {
+  padding: 2px 15px;
+  margin: 1px 0 0 0;
+}
+
+@media (max-width: 767px) {
+  .files .btn span {
+    display: none;
+  }
+  .files .preview * {
+    width: 40px;
+  }
+  .files .name * {
+    width: 80px;
+    display: inline-block;
+    word-wrap: break-word;
+  }
+  .files .progress {
+    width: 20px;
+  }
+  .files .delete {
+    width: 60px;
+  }
+}
+
+#close-top-panel{
+	display: none;
+	overflow: hidden;
+	margin: 0 0 10px 0;
+}
+
+tbody.files .name {
+	width: 40%;
+	max-width: 200px;
+	overflow: hidden;
+	padding: 0 0 0 10px;
+}
+
+tbody.files .progress-col,
+tbody.files .error {
+	width: 100%;
+}
+
+div.progress {
+	width: 100%;
+}
+
+.tbody.files {
+    width: 100%;
+}
+
+.template-upload span.ok {
+    background: url("img/icons30px.png") no-repeat scroll -180px -240px transparent;
+    border: 0 none;
+    float: right;
+    height: 30px;
+    overflow: visible;
+    width: 30px;
+}
+
+.template-upload button {
+    background: url("img/icons30px.png") no-repeat scroll -150px -240px transparent;
+    border: 0 none;
+    cursor: pointer;
+    float: right;
+    height: 30px;
+    width: 30px;
+    margin: 2px 0 0 0;
+}
+
+.template-upload button:hover {
+	opacity:0.4;
+}
+
+div.error {
+	margin: 1em 0;
+	background: #a62b25;
+	border-top: 2px solid #db6e3c;
+	border-bottom: 2px solid #db6e3c;
+	padding: 5px 10px;
+	color: #fff;
+	font-weight: bold;
+}
+
+
+#search {
+	margin: 4px;
+}
+#search_text{
+	padding: 15px 0 15px 20px;
+	font-size: 13px;
+	border: 0 none;
+	height: 35px;
+	margin-right: 0;
+	color: rgba(255,255,255,0.8);
+	outline: none;
+	background: rgba(255,193,83,1.0);
+	float: left;
+	box-sizing: border-box;
+	transition: all 0.15s;
+	border-radius: 4px 0 0 4px;
+}
+::-webkit-input-placeholder { /* WebKit browsers */
+	color: rgba(255,255,255,0.8);
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+	color: rgba(255,255,255,0.8);
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+	color: rgba(255,255,255,0.8);
+}
+:-ms-input-placeholder { /* Internet Explorer 10+ */
+	color: rgba(255,255,255,0.8);
+}
+#search_text:focus {
+	background: rgba(255,193,83,0.9);
+}
+#search_button {
+	border: 0 none;
+	background: rgba(255,193,83,1.0);
+	width: 35px; 
+	float: left;
+	padding: 0;
+	text-align: center;
+	height: 35px;
+	cursor: pointer;
+	border-radius: 0 4px 4px 0;
+}
+
+table {
+    border-spacing: 3px;
+    border-collapse: initial; 
+}
+#tc-file-manager table{
+	background: #fff;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    /* margin: 0 0 18px; */
+    border: 1px solid #ddd;
+}
+#tc-file-manager table {
+    width: 100%;
+	white-space: nowrap;
+}
+
+#tc-file-manager table tbody {
+    min-height: 50px;
+    overflow: hidden;
+}
+
+#tc-file-manager table tbody tr td {
+    border: medium none;
+    color: #373737;
+    padding: 4px 5px;
+    line-height: 40px;
+    vertical-align: middle;
+}
+
+#tc-file-manager table .chkboxes {
+	min-width: 40px;
+	width: 40px;
+	text-align: center;
+}
+#tc-file-manager table .actions{
+	width: 100%;
+	display: inline-block;
+	min-width: 42px;
+}
+#tc-file-manager table .actions button {
+	cursor: pointer;
+	width: 30px;
+	height: 30px;
+	border: 0;
+	padding: 0;
+	margin: 0;
+	vertical-align:middle;
+}
+
+#tc-file-manager table .actions button:hover {
+	opacity:0.4;
+}
+
+#tc-file-manager table .actions button.action-info
+{
+	background: url("img/icons30px.png") no-repeat scroll -120px -150px transparent;
+	display: inline-block;
+}
+
+#tc-file-manager table .actions button.action-delete-account,
+#tc-file-manager table .actions button.action-account{
+	float: right;
+	max-width: 30px;
+	display: inline-block;
+}
+
+#tc-file-manager table .actions button.action-account
+{
+	background: url("img/icons30px.png") no-repeat scroll -120px -150px transparent;
+	display: inline-block;
+}
+
+#tc-file-manager table .actions button.action-delete-account
+{
+    background: url("img/icons30px.png") no-repeat scroll -150px -240px transparent;
+	display: block;
+}
+
+
+#tc-file-manager table tr.directory a{
+	color: #373737;
+	font-weight: bold;
+}
+
+#tc-file-manager table td.filename a{
+	color: #373737;
+}
+
+#tc-file-manager table td.filetype a{
+	color: #373737;
+}
+
+
+tr.file td.filename a{
+	max-width: 560px;
+}
+
+#tc-file-manager table td.filename a.buffer-cut {
+	color: #999999;
+}
+
+#tc-file-manager table td.filename a.buffer-copy {
+	color: #000080;
+}
+
+
+.file-list a{
+	display: block;
+	color: #373737;
+}
+
+#tc-file-manager table .filename{
+	width: 100%;
+	overflow: hidden;
+}
+#tc-file-manager table .filetype{
+	width: 100%;
+	overflow: hidden;
+}
+
+#tc-file-manager table .filesize{
+	text-align: right;
+	min-width: 70px;
+}
+
+#tc-file-manager table .username{
+	width: 150px;
+	max-width: 150px;
+	min-width: 150px;
+	overflow: hidden;
+	white-space: normal;
+}
+
+#tc-file-manager table .homedir{
+	max-width: 230px;
+	overflow: hidden;
+	white-space: normal;
+}
+
+#tc-file-manager table .permissions{
+	width: 50px;
+	min-width: 50px;
+	text-align: center;
+	font-weight: bold;
+}
+
+#tc-file-manager table { 
+	background: #fff; 
+	-moz-border-radius: 3px; 
+	-webkit-border-radius: 3px; 
+	border-radius: 3px; 
+	margin: 0 0 18px; 
+	border: 1px solid #ddd; 
+	}
+#tc-file-manager table thead, 
+#tc-file-manager table tfoot { 
+	background: #f5f5f5; 
+	}
+#tc-file-manager table thead tr th,
+#tc-file-manager table tfoot tr th, 
+#tc-file-manager table tbody tr td, 
+#tc-file-manager table tr td, 
+#tc-file-manager table tfoot tr td { 
+	font-size: 14px; 
+	line-height: 18px; 
+	}
+#tc-file-manager table thead tr th, 
+#tc-file-manager table tfoot tr td { 
+	padding: 8px 10px 9px; 
+	font-size: 16px; 
+	font-weight: bold; 
+	color: #222; 
+	}
+#tc-file-manager table thead tr th:first-child, 
+#tc-file-manager table tfoot tr td:first-child { 
+	border-left: none; 
+	}
+#tc-file-manager table thead tr th:last-child, 
+#tc-file-manager table tfoot tr td:last-child { 
+	border-right: none; 
+	}
+#tc-file-manager table tbody tr.even,
+#tc-file-manager table tbody tr.alt { 
+	background: #f9f9f9; 
+	}
+#tc-file-manager table tbody tr:nth-child(even) { 
+	background: #f9f9f9; 
+	}
+#tc-file-manager table tbody tr th,
+#tc-file-manager table tbody tr td { 
+	color: #333; 
+	padding: 9px 10px; 
+	vertical-align: middle; 
+	border: none; 
+	}

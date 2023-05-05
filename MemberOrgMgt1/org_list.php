@@ -1,0 +1,374 @@
+<?php
+include("../EWT_ADMIN/comtop.php");
+$sso = new sso();
+DEFINE('HOST_SSO', 'http://203.151.166.132/PRD_INTRA_SSO/');
+?>
+
+<!-- START CONTAINER  -->
+<div class="container-fluid">
+	<?php
+	include("menu-top.php");
+
+	if ($db->check_permission("org", "u", "")) {
+		$type_right = 'Y';
+	}
+	$db->query("USE " . $EWT_DB_USER);
+
+	$right_org_id = org::getOrgGroup($_SESSION['EWT_SMID']);
+	$perpage = 10;
+	$page = (int)(!isset($_GET['page']) ? 1 : $_GET['page']);
+	if ($page <= 0) $page = 1;
+	$start = ($page * $perpage) - $perpage;
+
+	$search_condition = "";
+	$search_pagin = "";
+
+	if ($_GET["search"] == "Y") {
+
+		$search_pagin .= "search=Y&";
+
+		$fullname = trim($_GET["fullname"]);
+		$search_pagin .= "fullname=" . ready($_GET["fullname"]) . "&";
+		if ($fullname != "") {
+			$find = explode(" ", $fullname);
+			foreach ($find as $find_e) {
+				if ($find_e != "") {
+					$find_e = ready($find_e);
+					$search_condition .= " AND ((USR_MAIN.USR_FNAME LIKE '%$find_e%') OR (USR_MAIN.USR_LNAME LIKE '%$find_e%')) ";
+				}
+			}
+		}
+	} else {
+		$search_pagin = "&";
+	}
+
+	if ($_SESSION["EWT_SMTYPE"] != "Y"  && $type_right  == 'Y') {
+		$wh = " AND USR_MAIN.DEP_ID='" . $right_org_id . "'";
+	}
+
+	$sql = "SELECT * FROM USR_MAIN
+	LEFT JOIN USR_DEPARTMENT ON (USR_MAIN.DEP_ID = USR_DEPARTMENT.DEP_ID)  
+	LEFT JOIN USR_POSITION ON (USR_MAIN.POS_ID = USR_POSITION.POS_ID)  
+	WHERE USR_MAIN.USR_ID !=1 {$condition} {$wh} {$search_condition}
+	ORDER BY USR_MAIN.USR_ID DESC";
+	$s_sql = $sql . " OFFSET {$start} ROWS FETCH NEXT {$perpage} ROWS ONLY";
+	$query_all = $sso->getFetchAll($s_sql);
+
+	$statement = "SELECT count(USR_MAIN.USR_ID) AS b FROM USR_MAIN 
+	LEFT JOIN USR_DEPARTMENT ON (USR_MAIN.DEP_ID = USR_DEPARTMENT.DEP_ID)  
+	LEFT JOIN USR_POSITION ON (USR_MAIN.POS_ID = USR_POSITION.POS_ID)  
+    WHERE USR_MAIN.USR_ID !=1 {$condition} {$wh} {$search_condition}";
+
+	$a_rows  = $sso->getRowCount($s_sql);
+	$a_count = $sso->getFetch($statement);
+	$total_record = $a_count['b'];
+	$total_page = (int)ceil($total_record / $perpage);
+	//var_dump($s_sql); exit;
+	?>
+	<div class="row m-b-sm">
+		<div class="col-md-12 col-sm-12 col-xs-12 m-b-sm">
+			<!--start card -->
+			<div class="card">
+				<!--start card-header -->
+				<div class="card-header">
+					<div class="row">
+						<div class="col-md-12 col-sm-12 col-xs-12 m-b-sm">
+
+							<h4><?php echo $txt_org_menu_list; ?></h4>
+							<p></p>
+
+						</div>
+						<div class="col-md-12 col-sm-12 col-xs-12 m-b-sm">
+							<div class="col-md-12 col-sm-12 col-xs-12">
+								<ol class="breadcrumb">
+									<li><a href="org_dashboard.php"><?php echo $txt_org_menu_main; ?></a></li>
+									<li class=""><?php echo $txt_org_menu_list; ?></li>
+								</ol>
+							</div>
+
+							<div class="col-md-12 col-sm-12 col-xs-12 float-right text-right hidden-xs">
+								<a onClick="boxPopup('<?php echo linkboxPopup(); ?>pop_add_org_list.php');">
+									<button type="button" class="btn btn-info  btn-ml" title="<?php echo $txt_org_add; ?>">
+										<i class="fas fa-plus-circle"></i>&nbsp;<?php echo $txt_org_add; ?>
+									</button>
+								</a>
+
+								<a onClick="boxPopup('<?php echo linkboxPopup(); ?>pop_add_org_list_ldap.php');">
+									<button type="button" class="btn btn-info  btn-ml" title="นำเข้าบุคลากรผ่าน LDAP">
+										<i class="fas fa-plus-circle"></i>&nbsp;นำเข้าบุคลากรผ่าน LDAP
+									</button>
+								</a>
+
+								<button type="button" class="btn btn-primary btn-ml search_module_button">
+									<i class="fas fa-search"></i>&nbsp;ค้นหาบุคลากร
+								</button>
+							</div>
+							<div class="col-md-6 col-sm-6 col-xs-12 float-right text-right visible-xs">
+								<div class="btn-group ">
+									<button type="button" data-toggle="dropdown" class="btn btn-info   btn-sm dropdown-toggle"><i class="far fa-play-circle"></i>&nbsp;action <span class="caret"></span></button>
+									<ul class="dropdown-menu dropdown-menu-right">
+										<li><a onClick="boxPopup('<?php echo linkboxPopup(); ?>pop_add_org_list.php');"><i class="fas fa-plus-circle"></i>&nbsp;<?php echo $txt_org_add; ?></a>
+										</li>
+										<li><a onClick="boxPopup('<?php echo linkboxPopup(); ?>pop_add_org_list_ldap.php');"><i class="fas fa-plus-circle"></i>&nbsp;นำเข้าบุคลากรผ่าน LDAP</a></li>
+										<li><a href="javascript:void(0);" class="search_module_button"><i class="fas fa-search"></i>&nbsp;ค้นหาบุคลากร</a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+
+					</div>
+				</div>
+				<!--END card-header -->
+
+				<div class="card-body">
+					<div class="row ">
+						<div class="col-md-12 col-sm-12 col-xs-12" id="table-view">
+							<div class="panel-group" id="accordion">
+								<?php
+								if ($a_rows > 0) {
+									$i = 0;
+									foreach ($query_all as $a_data) {
+										$user_file = "../ewt/prd_intra_web/profile/" . $a_data["USR_PICTURE"];
+										$user_img = (empty($a_data["USR_PICTURE"]) ? "../EWT_ADMIN/images/user001.png" : $user_file);?>
+										<div class="panel panel-default " id="<?php echo $a_data['USR_ID']; ?>">
+											<div class="panel-heading ewt-bg-success">
+												<h4 class="panel-title">
+
+													<a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseOne<?= $i; ?>">
+														<img src="<?php echo $user_img; ?>" alt="" class="img-circle img-rounded " style="width:24px;height:24px;" />
+														:: <?php echo $a_data['USR_PREFIX'] . ' ' . $a_data['USR_FNAME'] . ' ' . $a_data['USR_LNAME']; ?>
+													</a>
+													<span class="pull-right">
+														<button type="button" class="btn btn-info  btn-circle  btn-sm " onclick="boxPopup('<?php echo linkboxPopup(); ?>pop_view_org_list.php?u_id=<?php echo $a_data['USR_ID'] ?>');" data-toggle="tooltip" data-placement="top" title="<?php echo $txt_org_view; ?>">
+															<i class="fas fa-search" aria-hidden="true"></i>
+														</button>
+														<a onClick="boxPopup('<?php echo linkboxPopup(); ?>pop_edit_org_list.php?u_id=<?php echo $a_data['USR_ID']; ?>');">
+															<button type="button" class="btn btn-warning  btn-circle  btn-xs " data-toggle="tooltip" data-placement="top" title="<?php echo $txt_org_edit; ?>">
+																<i class="fa fa-edit" aria-hidden="true"></i>
+															</button>
+														</a>
+														&nbsp;&nbsp;
+													</span>
+												</h4>
+											</div>
+
+											<div id="collapseOne<?php echo $i; ?>" class="panel-collapse collapse">
+												<div class="panel-body">
+													<div><b><?php echo $txt_org_list_org_name; ?> :</b>
+														<?php echo $a_data['DEP_NAME']; ?></div><br>
+													<div><b><?php echo $txt_org_list_pos_name; ?> :</b> <?php if ($a_data['POS_NAME']) {
+																											echo $a_data['POS_NAME'];
+																										} else {
+																											echo '-';
+																										} ?></div><br>
+													<div><b><?php echo $txt_org_list_email; ?> :</b> <?php if ($a_data['USR_EMAIL']) {
+																											echo $a_data['USR_EMAIL'];
+																										} else {
+																											echo '-';
+																										} ?></div><br>
+													<div><b><?php echo $txt_org_list_tel_in; ?> :</b> <?php if ($a_data['USR_TEL']) {
+																											echo $a_data['USR_TEL'];
+																										} else {
+																											echo '-';
+																										} ?></div><br>
+													<div><?php echo org::chkStatusOrg($a_data['USR_STATUS']); ?></div><br>
+													<div class="text-left">
+														<span class="label label-primary "><?php echo $txt_ewt_multilang; ?></span>
+													</div>
+												</div>
+												<div class="panel-footer ewt-bg-white text-right">
+													<div class="ewt-icon-wrap ewt-icon-effect-1 ewt-icon-effect-1b">
+														<!-- <a onClick="txt_data('<?php echo $a_data['USR_ID']; ?>','')">
+													<button type="button" class="btn btn-info  btn-circle  btn-xs "
+														id="lang<?php echo $a_data['USR_ID']; ?>"
+														data-toggle="tooltip" data-placement="top"
+														title="<?php echo $txt_ewt_create_multilang; ?>">
+														<i class="fa fa-language" aria-hidden="true"></i>
+													</button>
+												</a> -->
+
+														<!-- <a onClick="JQDel_Gen_User('<?php echo $a_data['USR_ID']; ?>');">
+													<button type="button" class="btn btn-danger  btn-circle  btn-sm "
+														data-toggle="tooltip" data-placement="top"
+														title="<?php echo $txt_org_delete; ?>">
+														<i class="far fa-trash-alt" aria-hidden="true"></i>
+													</button>
+												</a> -->
+
+													</div>
+												</div>
+
+
+											</div>
+										</div>
+									<?php $i++;
+									}
+								} else { ?>
+
+									<div class="panel panel-default ">
+										<div class="panel-heading text-center">
+											<h4 class="panel-title">
+												<p class="text-danger"><?php echo $txt_ewt_data_not_found; ?></p>
+											</h4>
+										</div>
+									</div>
+								<?php } ?>
+
+							</div>
+						</div>
+						<?php
+						echo pagination_sso($statement, $perpage, $page, '?' . $search_pagin);
+						?>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</div>
+<!-- END CONTAINER  -->
+<?php
+$db->query("USE " . $EWT_DB_NAME);
+
+include("../EWT_ADMIN/combottom.php");
+?>
+<style>
+	.panel-default>.panel-heading {
+		/*color: #FFFFFF;*/
+		/*background-color: #FFC153 ;*/
+		background-color: #FFFFFF;
+		border-color: #ddd;
+	}
+
+	.faqHeader {
+		font-size: 27px;
+		margin: 20px;
+	}
+
+	.panel-heading [data-toggle="collapse"]:after {
+		font-family: 'Font Awesome 5 Free';
+		font-weight: 900;
+		content: "\f105";
+		/* "play" icon */
+		float: right;
+		color: #FFC153;
+		font-size: 24px;
+		line-height: 22px;
+		/* rotate "play" icon from > (right arrow) to down arrow */
+		-webkit-transform: rotate(-90deg);
+		-moz-transform: rotate(-90deg);
+		-ms-transform: rotate(-90deg);
+		-o-transform: rotate(-90deg);
+		transform: rotate(-90deg);
+	}
+
+	.panel-heading [data-toggle="collapse"].collapsed:after {
+		/* rotate "play" icon from > (right arrow) to ^ (up arrow) */
+		-webkit-transform: rotate(90deg);
+		-moz-transform: rotate(90deg);
+		-ms-transform: rotate(90deg);
+		-o-transform: rotate(90deg);
+		transform: rotate(90deg);
+		color: #454444;
+	}
+</style>
+<script>
+	function txt_data(w, g) {
+		$.ajax({
+			type: 'GET',
+			url: 'pop_set_lang_org_list.php?gid=' + g + '&id=' + w,
+			beforeSend: function() {
+				$('#box_popup').html('');
+			},
+			success: function(data) {
+				$('#box_popup').html(data);
+			}
+		});
+		$('#box_popup').fadeIn();
+	}
+
+	function txt_data1(w, g, lang) {
+		$.ajax({
+			type: 'GET',
+			url: 'pop_org_list_multilang.php?langid=' + g + '&lang=' + lang + '&id=' + w,
+			beforeSend: function() {
+				$('#box_popup').html('');
+			},
+			success: function(data) {
+				$('#box_popup').html(data);
+			}
+		});
+		$('#box_popup').fadeIn();
+	}
+
+	function JQDel_Gen_User(id) {
+		$.confirm({
+			title: '<?php echo $txt_ewt_confirm_del_title; ?>',
+			content: '<?php echo $txt_ewt_confirm_del_alert; ?>',
+			//content: 'url:form.html',
+			boxWidth: '30%',
+			icon: 'fas fa-exclamation-circle',
+			theme: 'modern',
+			buttons: {
+				confirm: {
+					text: '<?php echo $txt_ewt_confirm_del; ?>',
+					btnClass: 'btn-warning',
+					action: function() {
+						$.ajax({
+							type: 'GET',
+							url: 'func_delete_org_list.php',
+							data: {
+								'id': id,
+								'proc': 'DelOrgList'
+							},
+							success: function(data) {
+								$.alert({
+									title: '<?php echo $txt_ewt_action_del_alert; ?>',
+									theme: 'modern',
+									content: '',
+									boxWidth: '30%',
+									buttons: {
+										cancel: {
+											text: '<?php echo $txt_ewt_submit; ?>',
+											btnClass: 'btn-blue',
+											action: function() {
+												location.reload();
+											}
+										}
+									}
+
+								});
+
+							}
+						});
+						//FuncDelete(id);											
+						//$.alert('ทำการลบข้อมูลเรียบร้อยแล้ว');																
+					}
+
+				},
+				cancel: {
+					text: '<?php echo $txt_ewt_cancel; ?>'
+
+				}
+			},
+			animation: 'scale',
+			type: 'orange'
+
+		});
+		// });
+	}
+</script>
+
+<?php
+## >> Include search modal
+
+$search_button_class = "search_module_button";
+$search_title        = "ค้นหาบุคลากร";
+$search_action       = "../MemberOrgMgt/org_list.php";
+$search_parameter    = array(array(
+	"name" => "fullname",
+	"type" => "text",
+	"label" => "ชื่อ-สกุล บุคลากร"
+));
+include "../include/module_search.php";
+?>

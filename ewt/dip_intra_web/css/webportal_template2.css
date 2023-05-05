@@ -1,0 +1,23 @@
+
+.webportal--block{
+  padding: 20px;
+}
+
+.icon-file-webportal {
+  border-radius: 10px;
+  background: #7babdb;
+  padding: 10px;
+  box-shadow: 1px 1px 20px 0px #000;
+  width: 150px;
+  height: auto;
+}
+.icon-file-webportal:hover {
+  background: #7babdb;
+}
+.title--webportal h4{
+  color: #FFF;
+  padding: 15px;
+}
+.icon--webportal{
+  color: #FFF;
+}

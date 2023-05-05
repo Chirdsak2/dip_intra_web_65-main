@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+	<rss version="2.0">
+	<channel>
+		  <title>ข่าวด่วน</title> 
+		  <link>http://203.151.166.134/prd_intra_web/ewt/prd_intra_web/</link> 
+		  <description>DESCRIPTION HERE!!</description> 
+		  <language>th-TH</language> 
+		  <lastBuildDate>Wed,05 Jan 2022 10:06:22 Asia/Bangkok</lastBuildDate> 
+		  <copyright>Copyright ? 2008 All rights reserved. http://203.151.166.134/prd_intra_web/ewt/prd_intra_web/</copyright> 
+	<item>
+					<title>แนวทางการปฏิบัติตามข้อกำหนด การตั้งชื่อ เข้าร่วมการประชุมผ่านสื่ออิเล็กทรอนิกส์ &gt;&gt;ที่นี่&lt;&lt;</title>
+					<link>http://203.151.166.134/prd_intra_web/ewt/prd_intra_web/download/article/article_20220105100610.pdf</link>
+					
+					<description></description>
+					<pubDate>2022-01-05 10:06:10</pubDate>
+					<guid>http://203.151.166.134/prd_intra_web/ewt/prd_intra_web/</guid>
+	            </item>
+				<item>
+					<title>เพิ่มเติม ให้หน่วยงานแจ้งอัพเดทข้อมูลผู้ที่โยกย้าย ลาออก บรรจุใหม่ ของผู้ใช้งานระบบ SMC มาที่เมล pinya_s@prd.go.th </title>
+					<link>http://203.151.166.134/prd_intra_web/ewt/prd_intra_web/#</link>
+					
+					<description></description>
+					<pubDate>2021-12-23 11:17:22</pubDate>
+					<guid>http://203.151.166.134/prd_intra_web/ewt/prd_intra_web/</guid>
+	            </item>
+				<item>
+					<title>แจ้งอัพเดท smartCardLibrary(update2565) สามารถเข้าไปโหลดติดตั้งได้ที่ http://ws.prd.go.th/smc </title>
+					<link>http://203.151.166.134/prd_intra_web/ewt/prd_intra_web/http://ws.prd.go.th/smc </link>
+					
+					<description></description>
+					<pubDate>2021-12-17 17:33:59</pubDate>
+					<guid>http://203.151.166.134/prd_intra_web/ewt/prd_intra_web/</guid>
+	            </item>
+				</channel>
+	</rss>
+	

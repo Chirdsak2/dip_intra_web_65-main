@@ -1,0 +1,63 @@
+.form--box {
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.btn-surveyform{
+    margin-top: 15px;
+    color: #020202;
+    padding: 5px 20px;
+    border: 1px solid #3ab54a;
+}
+
+.btn-surveyform:hover{
+    color: #FFF;
+    background:#3ab54a;
+}
+
+.form--no{
+  font-size: 40px;
+  color: #043569;
+  font-weight: 600;
+  border: 1px solid #184367;
+  /*
+    border-right: 1px solid #c4d8df;
+    box-shadow: 0px 0px 5px 1px #bfd6de;
+	*/
+}
+
+.form--title{
+  padding: 15px;
+  color: #1e1e1e;
+}
+
+.form-text-white{
+  color: #FFF;
+}
+
+.form-text-white ,h3{
+  color: #062c33;
+}
+input{
+    color: #fff;
+    background: transparent;
+    border: 1px solid #FFF;
+}
+.form-control-space{
+  background: #ffffff;
+      border: 1px solid #c7c7c7;
+      color: #828282;
+      padding: 10px;
+      width: 100%;
+	  font-size: 22px;
+}
+select{
+  height: 55px;
+}
+label{
+	font-size: 22px;
+}
+.card-header{
+	font-size: 22px;
+}

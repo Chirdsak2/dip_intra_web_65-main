@@ -1,0 +1,24 @@
+<?
+$NLTTBW = "160";
+$NLTHeadH = "25";
+$NLTHeadP = "";
+$NLTHeadBG = "FFCC00";
+$NLTHeadT = "ข่าวสาร";
+$NLTHeadF = "MS Sans Serif";
+$NLTHeadS = "2";
+$NLTHeadBGTC = "333333";
+$NLTHeadB = "Y";
+$NLTHeadI = "";
+$NLTBodyBG = "003399";
+$NLTBodyP = "";
+$NLTBodyTD = "สมัครรับข่าวสาร";
+$NLTBodyTA = "สมัคร";
+$NLTBodyTC = "ยกเลิก";
+$NLTBodyTS = "ตกลง";
+$NLTBodyTL = "TH";
+$NLTBodyF = "MS Sans Serif";
+$NLTBodyS = "1";
+$NLTBodyBGT = "FFFFFF";
+$NLTBodyB = "";
+$NLTBodyI = "";
+?>

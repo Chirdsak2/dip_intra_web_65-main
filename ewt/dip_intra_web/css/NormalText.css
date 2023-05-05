@@ -1,0 +1,79 @@
+.Style_Nha {
+	font-family: "MS Sans Serif";
+	font-size: 12px;
+	font-weight: normal;
+	color: #999999;
+}
+.Field {
+	font-family: "MS Sans Serif";
+	font-size: 12px;
+	font-weight: normal;
+	color: #999999;
+	background-color: #FFFFFF;
+	border: 1px solid #FFFFFF;
+}
+.NormalT {
+
+	font-family: "MS Sans Serif";
+	font-size: 12px;
+	font-weight: normal;
+	color: #333333;
+}
+.NormalBold {
+
+
+	font-family: "MS Sans Serif";
+	font-size: 12px;
+	font-weight: bold;
+	color: #0000CC;
+}
+.NormalBoldblack {
+	font-family: "MS Sans Serif";
+	font-size: 12px;
+	font-weight: bold;
+	color: #000000;
+	text-decoration: none;
+}
+.NormalBoldblack a:link {
+	font-family: "MS Sans Serif";
+	font-size: 12px;
+	font-weight: bold;
+	color: #000000;
+	text-decoration: none;
+}
+.NormalBoldblack a:visited {
+	font-family: "MS Sans Serif";
+	font-size: 12px;
+	font-weight: bold;
+	color: #000000;
+	text-decoration: none;
+}
+.NormalBoldblack a:hover {
+
+
+
+
+	font-family: "MS Sans Serif";
+	font-size: 12px;
+	font-weight: bold;
+	color: #FFFF00;
+}
+.NormalBoldblack a:active {
+
+
+
+
+	font-family: "MS Sans Serif";
+	font-size: 12px;
+	font-weight: bold;
+	color: #000000;
+}
+.NormalBoldWhite {
+
+
+
+	font-family: "MS Sans Serif";
+	font-size: 12px;
+	font-weight: bold;
+	color: #FFFFFF;
+}

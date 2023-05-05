@@ -1,0 +1,258 @@
+a {
+  font-size: xx-small;
+}
+abbr {
+  font-size: xx-small;
+}
+acronym {
+  font-size: xx-small;
+}
+address {
+  font-size: xx-small;
+}
+applet {
+  font-size: xx-small;
+}
+area {
+  font-size: xx-small;
+}
+b {
+  font-size: xx-small;
+}
+base {
+  font-size: xx-small;
+}
+basefont {
+  font-size: xx-small;
+}
+bdo {
+  font-size: xx-small;
+}
+big {
+  font-size: xx-small;
+}
+blockquote {
+  font-size: xx-small;
+}
+body {
+  font-size: xx-small;
+}
+br {
+  font-size: xx-small;
+}
+button {
+  font-size: xx-small;
+}
+caption {
+  font-size: xx-small;
+}
+center {
+  font-size: xx-small;
+}
+cite {
+  font-size: xx-small;
+}
+code {
+  font-size: xx-small;
+}
+col {
+  font-size: xx-small;
+}
+colgroup {
+  font-size: xx-small;
+}
+dd {
+  font-size: xx-small;
+}
+del {
+  font-size: xx-small;
+}
+dir {
+  font-size: xx-small;
+}
+div {
+  font-size: xx-small;
+}
+dfn {
+  font-size: xx-small;
+}
+dl {
+  font-size: xx-small;
+}
+dt {
+  font-size: xx-small;
+}
+em {
+  font-size: xx-small;
+}
+fieldset {
+  font-size: xx-small;
+}
+font {
+  font-size: xx-small;
+}
+form {
+  font-size: xx-small;
+}
+frame {
+  font-size: xx-small;
+}
+frameset {
+  font-size: xx-small;
+}
+h1 to h6 {
+  font-size: xx-small;
+}
+head {
+  font-size: xx-small;
+}
+hr {
+  font-size: xx-small;
+}
+html {
+  font-size: xx-small;
+}
+i {
+  font-size: xx-small;
+}
+iframe {
+  font-size: xx-small;
+}
+img {
+  font-size: xx-small;
+}
+input {
+  font-size: xx-small;
+}
+ins {
+  font-size: xx-small;
+}
+isindex {
+  font-size: xx-small;
+}
+kbd {
+  font-size: xx-small;
+}
+label {
+  font-size: xx-small;
+}
+legend {
+  font-size: xx-small;
+}
+li {
+  font-size: xx-small;
+}
+link {
+  font-size: xx-small;
+}
+map {
+  font-size: xx-small;
+}
+menu {
+  font-size: xx-small;
+}
+meta {
+  font-size: xx-small;
+}
+noframes {
+  font-size: xx-small;
+}
+noscript {
+  font-size: xx-small;
+}
+object {
+  font-size: xx-small;
+}
+ol {
+  font-size: xx-small;
+}
+optgroup {
+  font-size: xx-small;
+}
+option {
+  font-size: xx-small;
+}
+p {
+  font-size: xx-small;
+}
+param {
+  font-size: xx-small;
+}
+pre {
+  font-size: xx-small;
+}
+q {
+  font-size: xx-small;
+}
+s {
+  font-size: xx-small;
+}
+samp {
+  font-size: xx-small;
+}
+select {
+  font-size: xx-small;
+}
+small {
+  font-size: xx-small;
+}
+span {
+  font-size: xx-small;
+}
+strike {
+  font-size: xx-small;
+}
+strong {
+  font-size: xx-small;
+}
+style {
+  font-size: xx-small;
+}
+sub {
+  font-size: xx-small;
+}
+sup {
+  font-size: xx-small;
+}
+table {
+  font-size: xx-small;
+}
+tbody {
+  font-size: xx-small;
+}
+td {
+  font-size: xx-small;
+}
+textarea {
+  font-size: xx-small;
+}
+tfoot {
+  font-size: xx-small;
+}
+th {
+  font-size: xx-small;
+}
+thead {
+  font-size: xx-small;
+}
+title {
+  font-size: xx-small;
+}
+tr {
+  font-size: xx-small;
+}
+tt {
+  font-size: xx-small;
+}
+u {
+  font-size: xx-small;
+}
+ul {
+  font-size: xx-small;
+}
+var {
+  font-size: xx-small;
+}
+xmp {
+  font-size: xx-small;
+}

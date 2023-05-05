@@ -1,0 +1,78 @@
+.tablecal {
+	border:0;
+	empty-cells:show;
+	background:#999999;
+	font-family:Tahoma;
+	font-size: 12px;
+	width:180px;
+}
+.cellcal {
+	background:#FFFFFF;
+	text-align:center;
+	font-weight:bold;
+}
+.title {
+	background:#CCCCCC;
+	text-align:center;
+	font-weight:bold;
+}
+.daynames {
+	background:#CCCCCC;
+	text-align:center;
+}
+.footrow {
+	background:#CCCCCC;
+	text-align:center;
+}
+.combo {
+	border:1px solid #999999;
+	background:#FFFFFF;
+	text-align:center;
+	cursor: pointer;
+	font-family:Tahoma;
+	font-size: 12px;
+	width:100px;
+	font-weight:bold;
+}
+.emptyrow {
+	background:#FFFFFF;
+	text-align:center;
+	display:none;
+}
+.day {
+	background:#FFFFFF;
+	text-align:center;
+}
+.daydisabled {
+	background:#FF0000;
+	text-align:center;
+}
+.daytoday {
+	background:#EEEEFF;
+	text-align:center;
+}
+.dayweekend {
+	background:#FFDDDD;
+	text-align:center;
+}
+.active {
+	background:#EEEEFF;
+	text-align:center;
+	cursor: pointer;
+	font-family:Tahoma;
+	font-size: 12px;
+}
+.hilite {
+	background:#FFFFCC;
+	text-align:center;
+	cursor: pointer;
+	font-family:Tahoma;
+	font-size: 12px;
+}
+.selected {
+	background:#EEEEEE;
+	text-align:center;
+	cursor: pointer;
+	font-family:Tahoma;
+	font-size: 12px;
+}

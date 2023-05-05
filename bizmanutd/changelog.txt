@@ -1,0 +1,90 @@
+﻿//----2016-03-16------------ // 8.6.28
+- PM แก้ survey_function.php เขียน query ผิด
+//----2016-03-15------------ // 8.6.27
+- PM แก้ตัวดักจับการยิงเว็บบอร์ด ให้เหมือนเดิม เพราะเป็น bug
+//----2016-03-08------------ // 8.6.26
+- VS แก้ไขช่องโหว่แบบใหม่
+//----2015-07-08------------ // 8.6.25
+-update mobile utf-8
+//----2014-07-29------------ // 8.6.24
+- article_function.php 
+-- แก้ส่งเมล์ PRD
+-- แก้การสร้าง folder image/article/newsX
+-- แก้ชื่อตัวแปรผิด(มั่ว)
+//----2014-07-04------------ // 8.6.23
+- แก้ alter table article_detail จาก text เป็น mediumtext ใส่ข้อมูลได้จากเดิม 64KB เป็น 16MB
+//----2014-06-14------------ // 8.6.22
+- แก้ไฟล์ config ของไซต์ ให้เรียก config ตัวหลักได้ถูกต้อง เมื่อถูก include ไปอีกทอด โดยใช้ require_once dirname(__FILE__) . '/../../../lib/user_config.php';
+//----2014-06-05------------ // 8.6.21
+- แก้ขนาดความกว้างของ calendar ให้เป็น 100% ตลอด
+- เอารูปหัวปฏิทินกิจกรรมออกถาวร
+//----2014-06-03------------ // 8.6.20
+- เพิ่มชนิดไฟล์ office 2007 ใน ewt_article_preview.php
+- แก้การ include ไฟล์ ewt_script.php ที่ไม่ถูกต้อง ส่งผลให้การ set header ผิด
+//----2014-06-02------------ // 8.6.19
+- convert file ให้เป็น UTF-8 และเก็บข้อมูลลง MySQL เป็น UTF8 โดยมีการแก้ไขไฟล์หลายๆที่เกี่ยวกับการ connect database
+- update phpThumb ตามโครงการ MOTS ซึงจะมี cache ของรูปเก็บไว้ด้วย
+- update mobileMgt จากพี่โจ๊ก ตามโครงการ NHA
+//----2014-05-09------------ // 8.6.18
+- แก้ link backend จากระบบ intra ที่ ewt_menu_preview.php
+//----2014-04-29------------ // 8.6.17
+- แก้ช่องกรอกข้อมูลรายละเอียดของ article ที่ไฟล์ temp6.php ให้ช่องเท่ากันทุกอัน
+- แก้ design หน้า lib/include_bizadmin.php หลังจากแก้ใน version 8.6.14
+//----2014-03-21------------ // 8.6.16
+- แก้ w3c ให้เรียก config จาก ewtadmin/lib ได้ถูกต้อง ที่ไฟล์ ewtadmin/ewt/user/ewt_w3c/index.php
+//----2013-11-25------------ // 8.6.15
+- แก้ frm_gen_user_edit.php line 76 , [$db->query("USE ".$EWT_DB_NAME);>>>$db->query("USE ".$EWT_DB_USER);]
+//----2013-10-17------------ // 8.6.14
+- เพิ่ม function input_cl ใน lib/function.php ของไซต์เท่านั้น ใช้กัน sql Injection ได้
+- เปิดเมนูในหน้า bizadmin เพิ่ม
+- แก้หน้า bizadmin/index.php [$db->query("USE ".$EWT_DB_NAME);]
+- แก้หน้า lib/include_bizadmin.php ให้ support FastCGI โดยใช้ from login แทน
+//----2013-07-23------------ // 8.6.13
+- แก้คำผิดใน survey_default.ewt
+//----2013-07-02------------ // 8.6.12
+- include("lib/connect.php") แทน PHPDB ที่ไฟล์ select_site.php อ้างอิงจาก 8.6.7E
+- ตัด $EWT_DB_USER ออกจาก user_config.php ของไซต์
+//----2013-05-27------------ // 8.6.11
+- อัพเดทไฟล์ ewt_news.php ตามโครงการ DPA , กัน sql injection 'nid' , เพิ่มชนิดไฟล์ office 2007
+//----2013-05-15------------ // 8.6.10
+- ลบ รูป background ในไฟล์ ewt_menu_preview.php เนื่องจากไม่มี ทำให้เกิด error จำนวนมาก
+//----2013-04-17------------ // 8.6.9
+- เพิ่ม function TIS620toUTF8() ใน article_function.php แก้ RSS เป็น UTF8 เพื่อให้อ่านภาษาไทยได้ครบ
+- ลบไฟล์ขณะ
+//----2013-01-02------------ // 8.6.8
+- เอา set names tis620 ตอนแสดงผลออก เพราะใส่ไม่ครบทุกที่ ปล่อยให้เป็นค่า default จาก mysql (latin1 ณ version ปัจจุบัน)
+//----2013-01-02------------ // 8.6.7G
+- ใส่ข้อความป้องกันในหน้า index.php ไม่ให้ใช้ browser อื่น ที่ไม่ใช่ IE
+//----2012-12-11------------ // 8.6.7F
+- แก้ syntax error หน้า edit profile
+//----2012-11-29------------ // 8.6.7E
+- แก้ $EWT_DB_NAME กับ $EWT_DB_USER ที่มันมั่วกัน
+- แก้ ให้ตรวจสอบ $EWT_DB_NAME ก่อน connect ในไฟล์ connect.php
+//----2012-11-29------------ // 8.6.7D
+- แก้การอนุมัติแบบสำรวจ การสร้าง table ให้เป็น ENGINE=MyISAM เพราะ MySQL 5.5 ยกเลิก TYPE=MyISAM
+- ปิดการ share article เพราะทำให้ การแก้ไข article ช้ามาก
+//----2012-11-20------------ // 8.6.7C
+- ใส่ include("../../lib/user_config.php"); ใน user_config.php ใน template. ไม่ต้องไปแก้ในไซต์ย่อยอีก.
+- ใส่ set names หลังการ connect database และการสร้าง database ของไซต์ย่อย
+- เปิด menu "กำหนด module ที่ต้องการใช้" ใน bizadmin
+//----2012-11-08------------ // 8.6.7B
+- ระบบสมัครสมาชิก  ถ้าไม่กรอกรหัส จะสามารถสมัครซ้ำได้
+//----2012-11-05------------ // 8.6.7
+- leave การจัดการสถิติย้อนหลัง from menu
+- clean "USE ewt_user" to "USE ".$EWT_DB_NAME
+//----2012-10-26------------ // 8.6.6
+- alter table gen_user (ewt_user.sql)
+//----2012-10-24------------ // 8.6.5
+- fixed font page stat visitor.
+//----2012-10-05------------
+- Insert file extension in Site properties is default. (db.sql)
+- edite height of text area in ContentMgt/article_editor_new.php
+//----2012-03-08------------
+- delete insert and update rss_contain field in /rssreader/rss_function.php
+//----2012-02-24------------
+- edit db.sql ASCII to UTF8. And edit base favoristes thai font.
+- delete junk file.
+//----2012-02-22------------
+- add changelog.
+- edit page bizadmin.
+- edit (article_fuction.php, article_share_fuction.php) procress slowly.

@@ -1,0 +1,146 @@
+<?php
+include("../lib/permission1.php");
+include("../lib/include.php");
+include("../lib/function.php");
+include("../lib/user_config.php");
+include("../lib/connect.php");
+include("../language/banner_language.php");
+$Globals_Dir = "../ewt/".$_SESSION["EWT_SUSER"]."/";
+?>
+<html>
+<head>
+<title>Stat</title>
+<META HTTP-EQUIV="Content-Language" content="th">
+<META HTTP-EQUIV="Content-Type" content="text/html; charset=UTF-8">
+<script language="JavaScript"  type="text/javascript" src="../StatMgt/lib_carendar/calendar.js"></script>
+<script language="JavaScript"  type="text/javascript" src="../StatMgt/lib_carendar/loadcalendar.js"></script>
+<script language="JavaScript"  type="text/javascript" src="../StatMgt/lib_carendar/calendar-th.js"></script>
+<?php //<link href="../StatMgt/lib_carendar/style_calendar.css" rel="stylesheet" type="text/css"> ?>
+<link href="../StatMgt/lib_carendar/style_calendar.css" rel="stylesheet" type="text/css">
+<link href="../theme/main_theme/css/style.css" rel="stylesheet" type="text/css">
+</head>
+<body bgcolor="#FFFFFF" leftmargin="0" topmargin="0" >
+<?php include("../FavoritesMgt/favorites_include.php");?>
+
+<table width="80%" border="0" align="center" cellpadding="5" cellspacing="0">
+  <tr> 
+    <td><img src="../theme/main_theme/banner_function_stat.gif" width="32" height="32" align="absmiddle"> <span class="ewtfunction"><?php echo $text_genbanner_function1;?></span> </td>
+  </tr>
+</table>
+<table width="94%" border="0" align="center" cellpadding="0" cellspacing="0" class="ewtfunctionmenu">
+  <tr>
+    <td align="right"><a href="javascript:void(0);" onClick="load_divForm('../FavoritesMgt/favorites_add.php?name=<?php echo urlencode("สถิติ".$text_genbanner_function1);?>&module=banner&url=<?php echo urlencode("banner_stat.php");?>', 'divForm', 300, 80, -1,433, 1);"><img src="../images/star_yellow_add.gif" width="16" height="16" border="0" align="absmiddle">&nbsp;Add to favorites </a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="banner_stat.php" target="_self"><img src="../theme/main_theme/g_edit.gif" width="16" height="16" align="absmiddle" border="0"> 
+      <?php echo $text_genbanner_manage;?></a><hr>
+    </td>
+  </tr>
+</table>
+
+
+<table width="94%" border="0" cellspacing="0" cellpadding="3" align="center">
+ <form name="form1" method="post" action=""> <tr>
+      <td><img src="../images/column-chart.gif" width="24" height="24" border="0" align="left"> 
+        <strong><font size="4" face="Tahoma"><?php echo $text_genbanner_graph;?> <font size="2"><?php echo $text_genbanner_graphfrom;?> 
+        <input type="text" name="start_date" size="15" value="<?php print  $start_date; ?>">
+      <img src="../images/calendar.gif" alt="..เปิดปฎิทิน." width="20" height="20" border="0" align="absmiddle" onClick="return showCalendar('start_date', 'dd-mm-y');" onMouseOver="this.style.cursor='hand';"> 
+      <?php echo $text_genbanner_graphto;?></font> 
+      <input type="text" name="end_date" size="15" value="<?php print  $end_date;  ?>">
+      <img src="../images/calendar.gif" alt="..เปิดปฎิทิน." width="20" height="20" border="0" align="absmiddle" onClick="return showCalendar('end_date', 'dd-mm-y');" onMouseOver="this.style.cursor='hand';"> 
+      </font></strong>
+      
+        <input type="submit" name="Submit" value="<?php echo $text_genbanner_graphbut;?>">
+        <strong><font size="4" face="Tahoma">
+        <input name="Flag" type="hidden" id="Flag" value="View">
+        </strong></td>
+  </tr> </form>
+  <tr height="4">
+    <td height="4" bgcolor="#FF6600"></td>
+  </tr>
+</table>
+<?php
+$Flag=$_POST[Flag];
+if($Flag == "View"){
+$db->write_log("view","banner","ดูรายงานแสดงสถิติการเข้าBanner ");
+
+$start_date=$_POST[start_date];
+$end_date=$_POST[end_date];
+
+if($start_date == "" AND $end_date == ""){
+$con = "";
+}elseif($start_date != "" AND $end_date == ""){
+$st = explode("/",$start_date);
+$con = " AND (date = '".($st[2] -543)."-".$st[1]."-".$st[0]."') ";
+}elseif($start_date == "" AND $end_date != ""){
+$st = explode("/",$end_date);
+$con = " AND (date = '".($st[2] -543)."-".$st[1]."-".$st[0]."') ";
+}else{
+$st = explode("/",$start_date);
+$en = explode("/",$end_date);
+$con = " AND (date BETWEEN '".($st[2] -543)."-".$st[1]."-".$st[0]."' AND '".($en[2] - 543)."-".$en[1]."-".$en[0]."') ";
+}
+//echo "select banner_pic,count(banner_log.banner_id) as ct,banner_name from  banner,banner_log where banner.banner_id = banner_log.banner_id  ".$con."group by banner_log.banner_id";
+$sql = mysql_query("select banner_pic,count(banner_log.banner_id) as ct,banner_name from  banner,banner_log where banner.banner_id = banner_log.banner_id  ".$con."group by banner_log.banner_id");
+$sql_ct = mysql_query("select count(banner_log.banner_id) as ct from  banner,banner_log where banner.banner_id = banner_log.banner_id  ".$con."group by banner_log.banner_id LIMIT 0,1");
+$A = mysql_fetch_row($sql_ct);
+
+?>
+<table width="94%" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr> 
+    <td width="47%" align="center"><table width="100%" border="0" cellpadding="0" cellspacing="1" >
+        <tr> 
+          <td bgcolor="#FFFFFF">
+		  
+		  <table width="100%" border="0" cellpadding="5" cellspacing="1" bgcolor="#FFFFFF" class="ewttableuse">
+              <tr align="center" class="ewttablehead" > 
+                <td width="20%"><strong><font size="2" face="Tahoma"><?php echo $text_genbanner_gcolumn1;?></font></strong></td>
+                <td width="10%"><strong><font size="2" face="Tahoma"><?php echo $text_genbanner_gcolumn2;?></font></strong></td>
+                <td width="70%"><font size="2" face="Tahoma"><strong><?php echo $text_genbanner_gcolumn3;?></strong></font></td>
+              </tr>
+              <?php
+while($R = mysql_fetch_row($sql)){
+?>
+              <tr  bgcolor="#FFFFFF"> 
+                <td align="left"  > 
+                  <?php if(file_exists($Globals_Dir.$R[0]) and $R[0]!=''){
+				  $filetypename = explode('.',$Globals_Dir.$rs_banner[banner_pic]);
+								
+								
+									if($filetypename[3] == 'swf'){
+									$wi = '150';$hi = '50';
+										echo '<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,0,0" width="'.$wi.'" height="'.$hi.'">
+										  <param name="flash_component" value="ImageViewer.swc" />
+										  <param name="movie" value="'.$Globals_Dir.$rs_banner[banner_pic].'" />
+										  <param name="quality" value="high" />
+										  <param name="FlashVars" value="flashlet={imageLinkTarget:\'_blank\',captionFont:\'Verdana\',titleFont:\'Verdana\',showControls:true,frameShow:false,slideDelay:5,captionSize:10,captionColor:#333333,titleSize:10,transitionsType:\'Random\',titleColor:#333333,slideAutoPlay:false,imageURLs:[\'img1.jpg\',\'img2.jpg\',\'img3.jpg\'],slideLoop:false,frameThickness:2,imageLinks:[\'http://macromedia.com/\',\'http://macromedia.com/\',\'http://macromedia.com/\'],frameColor:#333333,bgColor:#FFFFFF,imageCaptions:[]}" />
+										  <embed src="'.$Globals_Dir.$rs_banner[banner_pic].'"  quality="high" flashvars="flashlet={imageLinkTarget:\'_blank\',captionFont:\'Verdana\',titleFont:\'Verdana\',showControls:true,frameShow:false,slideDelay:5,captionSize:10,captionColor:#333333,titleSize:10,transitionsType:\'Random\',titleColor:#333333,slideAutoPlay:false,imageURLs:[\'img1.jpg\',\'img2.jpg\',\'img3.jpg\'],slideLoop:false,frameThickness:2,imageLinks:[\'http://macromedia.com/\',\'http://macromedia.com/\',\'http://macromedia.com/\'],frameColor:#333333,bgColor:#FFFFFF,imageCaptions:[]}" pluginspage="http://www.macromedia.com/shockwave/download/index.cgi?P1_Prod_Version=ShockwaveFlash" type="application/x-shockwave-flash" width="'.$wi.'" height="'.$hi.'"> </embed>
+										</object><br><br>';
+									}else{
+				  ?>
+                  <img src="../FileMgt/phpThumb.php?src=<?php echo $Globals_Dir?><?php echo $R[0]; ?>&h=50&w=150"><br>
+				<?php 
+				}
+				}?>
+                <font size="1" face="MS Sans Serif, Tahoma, sans-serif"><?php echo $R[2]; ?></font></td>
+                <td align="right"><font size="1" face="MS Sans Serif, Tahoma, sans-serif">(<?php echo number_format($R[1],0); ?>)</font></td>
+                <td> <?php 
+		  if($A[0] > 0){
+		  $width = number_format((($R[1]*5)/$A[0]),0);
+		  }else{
+		  $width = 0;
+		  }
+		   ?><table width="<?php echo $width; ?>%" height="12" border="0" cellpadding="0" cellspacing="1" bgcolor="#333333">
+                    <tr width="<?php echo $width; ?>%" height="12" > 
+                      <td width="<?php echo $width; ?>%" height="12" background="../images/wb_bg.gif"></td>
+                    </tr>
+                  </table></td>
+              </tr>
+              <?php } ?>
+            </table></td>
+        </tr>
+      </table></td>
+  </tr>
+</table>
+<?php } ?>
+</body>
+</html>
+<?php
+$db->db_close(); ?>

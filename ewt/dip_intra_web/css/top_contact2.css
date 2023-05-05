@@ -1,0 +1,91 @@
+
+/********** Menu *************/
+.navbar{
+	padding: 0px !important;
+}
+.color-topbar{
+	color: #6487a2;
+}
+.pad-social{
+	padding: 0px 10px;	
+}
+.top-bar .social {
+    display: flex;
+    height: 30px;
+    justify-content: flex-end;
+}
+@media (min-width:10px) and (max-width:767px){
+	.bg-top-contact{
+		text-align: center;
+	}
+	.top-bar .social {
+		justify-content: space-evenly;
+	}
+}
+
+.top-bar .social a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 35px;
+    height: 100%;
+    font-size: 16px;
+    color: #cecece;
+    border-right: 1px solid rgba(255, 255, 255, .15);
+}
+.top-bar .social span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 35px;
+    height: 100%;
+    font-size: 16px;
+    color: #cecece;
+    border-right: 1px solid rgba(255, 255, 255, .15);
+}
+
+.top-bar .social a.pad-social {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /*width: 30px;*/
+    height: 100%;
+    font-size: 16px;
+    color: #6487a2;
+	border-left: 0px !important;
+	border-right: 0px !important;
+}
+.top-bar .social a.pad-social:hover {
+	color: #003561;
+}
+
+.font13px{
+	font-size: 13px !important;
+}
+.font15px{
+	font-size: 15px !important;
+}
+.font16px{
+	font-size: 16px !important;
+}
+.font18px{
+	font-size: 18px;
+}
+.font20px{
+	font-size: 20px !important;
+}
+.font30px{
+	font-size: 30px !important;
+}
+.color-gray{
+	color: #8c8c8c;
+}
+.gray-icon{
+	color: #c1c1c1;
+}
+.border-ra50px{
+	border-radius: 50px;
+}
+.bg-top-contact{
+	background-color:#cadbe2;
+}

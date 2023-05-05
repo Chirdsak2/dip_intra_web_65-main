@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+	<rss version="2.0">
+	<channel>
+		  <title>การถ่ายทอดองค์ความรู้</title> 
+		  <link>http://203.150.224.57/ewtadmin86_gistda/ewt/gistda_web/</link> 
+		  <description>สำนักงานพัฒนาเทคโนโลยีอวกาศและภูมิสารสนเทศ (องค์การมหาชน)</description> 
+		  <language>th-TH</language> 
+		  <lastBuildDate>Fri,13 Aug 2021 11:16:24 Asia/Bangkok</lastBuildDate> 
+		  <copyright>Copyright ? 2008 All rights reserved. http://203.150.224.57/ewtadmin86_gistda/ewt/gistda_web/</copyright> 
+	<item>
+					<title>Space Inspirium</title>
+					<link>http://203.150.224.57/ewtadmin86_gistda/ewt/gistda_web/news_view.php?n_id=2403</link>
+					
+					<description></description>
+					<pubDate>2021-08-13 11:16:17</pubDate>
+					<guid>http://203.150.224.57/ewtadmin86_gistda/ewt/gistda_web/</guid>
+	            </item>
+				<item>
+					<title>ARTSA</title>
+					<link>http://203.150.224.57/ewtadmin86_gistda/ewt/gistda_web/news_view.php?n_id=2402</link>
+					
+					<description></description>
+					<pubDate>2021-08-13 11:15:57</pubDate>
+					<guid>http://203.150.224.57/ewtadmin86_gistda/ewt/gistda_web/</guid>
+	            </item>
+				<item>
+					<title>SCGI</title>
+					<link>http://203.150.224.57/ewtadmin86_gistda/ewt/gistda_web/news_view.php?n_id=2401</link>
+					
+					<description></description>
+					<pubDate>2021-08-13 11:14:52</pubDate>
+					<guid>http://203.150.224.57/ewtadmin86_gistda/ewt/gistda_web/</guid>
+	            </item>
+				<item>
+					<title>หลักสูตรประจำปี</title>
+					<link>http://203.150.224.57/ewtadmin86_gistda/ewt/gistda_web/news_view.php?n_id=2397</link>
+					
+					<description></description>
+					<pubDate>2021-08-13 10:54:58</pubDate>
+					<guid>http://203.150.224.57/ewtadmin86_gistda/ewt/gistda_web/</guid>
+	            </item>
+				</channel>
+	</rss>
+	

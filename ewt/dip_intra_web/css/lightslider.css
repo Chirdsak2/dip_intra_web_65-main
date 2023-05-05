@@ -1,0 +1,14 @@
+    .carousel-indicators {
+      bottom: 20px;
+    }
+    .carousel-indicators li {
+      width: 100px;
+    }
+    .carousel-indicators li img {
+        /* background: #FFFFFF; */
+        border: 2px solid #FFFFFF;
+        border-radius:3px;
+    }
+    .carousel img {
+         margin: auto;
+    }

@@ -1,0 +1,4 @@
+<?phpxml version="1.0"?>
+<cross-domain-policy>
+   <allow-access-from domain="*" to-ports="507" secure="false" />   
+</cross-domain-policy>

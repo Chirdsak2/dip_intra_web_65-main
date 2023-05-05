@@ -1,0 +1,300 @@
+[Date:2023-04-21 03:25:02] [IP:171.101.111.246]
+[Query:SELECT sv_id FROM stat_visitor WHERE sv_ip = '171.101.111.246' AND sv_new = 'Y' LIMIT 0,1 ]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2023-04-21 03:25:02] [IP:171.101.111.246]
+[Query:SELECT sv_id FROM stat_visitor WHERE sv_ip = '171.101.111.246' AND sv_new = 'Y' LIMIT 0,1 ]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2023-04-21 03:25:03] [IP:171.101.111.246]
+[Query:INSERT INTO stat_visitor (sv_url,sv_visitor,sv_menu,sv_ip,sv_timestamp,sv_date,sv_time,sv_country,sv_language,sv_new,sv_browser,sv_resolution,sv_domain,sv_isp,sv_region,sv_city,sv_latitude,sv_longitude,sv_referer,sv_search,sv_keyword,sv_os,sv_load,sv_member,sv_fullurl,sv_mem_id,sv_w3c,sv_country_code,sv_region_code,sv_device,sv_op,sv_session_id) VALUES ('page','Y','/index.php','171.101.111.246','20230421032502','2023-04-21','03:25:02','TH','th-TH,th;q=0.9,en;q=0.8','Y','Google Chrome','1366x768','cm-171-101-111-246.revip11.asianet.co.th','AS17552 True Online','Bangkok','Bangkok','13.7540','100.5014','https://portal.diprom.go.th/index.php','','','Windows 10','0','Y','https://portal.diprom.go.th/index.php','1','','TH','','1','','5gh3h61nn9dbnh212ep97td7t9')]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2023-04-21 03:45:04] [IP:171.101.111.246]
+[Query:INSERT INTO stat_visitor (sv_url,sv_visitor,sv_menu,sv_ip,sv_timestamp,sv_date,sv_time,sv_country,sv_language,sv_new,sv_browser,sv_resolution,sv_domain,sv_isp,sv_region,sv_city,sv_latitude,sv_longitude,sv_referer,sv_search,sv_keyword,sv_os,sv_load,sv_member,sv_fullurl,sv_mem_id,sv_w3c,sv_country_code,sv_region_code,sv_device,sv_op,sv_session_id) VALUES ('page','','/profile.php','171.101.111.246','20230421034504','2023-04-21','03:45:04','TH','th-TH,th;q=0.9,en;q=0.8','','Google Chrome','1366x768','cm-171-101-111-246.revip11.asianet.co.th','AS17552 True Online','Bangkok','Bangkok','13.7540','100.5014','','','','Windows 10','0','Y','https://portal.diprom.go.th/profile.php','1','','TH','','1','','5gh3h61nn9dbnh212ep97td7t9')]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2023-04-21 03:45:11] [IP:171.101.111.246]
+[Query:INSERT INTO stat_visitor (sv_url,sv_visitor,sv_menu,sv_ip,sv_timestamp,sv_date,sv_time,sv_country,sv_language,sv_new,sv_browser,sv_resolution,sv_domain,sv_isp,sv_region,sv_city,sv_latitude,sv_longitude,sv_referer,sv_search,sv_keyword,sv_os,sv_load,sv_member,sv_fullurl,sv_mem_id,sv_w3c,sv_country_code,sv_region_code,sv_device,sv_op,sv_session_id) VALUES ('page','','/index.php','171.101.111.246','20230421034511','2023-04-21','03:45:11','TH','th-TH,th;q=0.9,en;q=0.8','','Google Chrome','1366x768','cm-171-101-111-246.revip11.asianet.co.th','AS17552 True Online','Bangkok','Bangkok','13.7540','100.5014','','','','Windows 10','0','Y','https://portal.diprom.go.th/index.php','1','','TH','','1','','5gh3h61nn9dbnh212ep97td7t9')]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2023-04-21 03:56:12] [IP:171.101.111.246]
+[Query:INSERT INTO stat_visitor (sv_url,sv_visitor,sv_menu,sv_ip,sv_timestamp,sv_date,sv_time,sv_country,sv_language,sv_new,sv_browser,sv_resolution,sv_domain,sv_isp,sv_region,sv_city,sv_latitude,sv_longitude,sv_referer,sv_search,sv_keyword,sv_os,sv_load,sv_member,sv_fullurl,sv_mem_id,sv_w3c,sv_country_code,sv_region_code,sv_device,sv_op,sv_session_id) VALUES ('page','','/phone_book.php','171.101.111.246','20230421035611','2023-04-21','03:56:11','TH','th-TH,th;q=0.9,en;q=0.8','','Google Chrome','1366x768','cm-171-101-111-246.revip11.asianet.co.th','AS17552 True Online','Bangkok','Bangkok','13.7540','100.5014','','','','Windows 10','0','Y','https://portal.diprom.go.th/phone_book.php','1','','TH','','1','','5gh3h61nn9dbnh212ep97td7t9')]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2023-04-21 03:57:03] [IP:171.101.111.246]
+[Query:INSERT INTO stat_visitor (sv_url,sv_visitor,sv_menu,sv_ip,sv_timestamp,sv_date,sv_time,sv_country,sv_language,sv_new,sv_browser,sv_resolution,sv_domain,sv_isp,sv_region,sv_city,sv_latitude,sv_longitude,sv_referer,sv_search,sv_keyword,sv_os,sv_load,sv_member,sv_fullurl,sv_mem_id,sv_w3c,sv_country_code,sv_region_code,sv_device,sv_op,sv_session_id) VALUES ('page','','/index.php','171.101.111.246','20230421035703','2023-04-21','03:57:03','TH','th-TH,th;q=0.9,en;q=0.8','','Google Chrome','1366x768','cm-171-101-111-246.revip11.asianet.co.th','AS17552 True Online','Bangkok','Bangkok','13.7540','100.5014','','','','Windows 10','0','Y','https://portal.diprom.go.th/index.php','1','','TH','','1','','5gh3h61nn9dbnh212ep97td7t9')]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2023-04-21 04:13:17] [IP:171.101.111.246]
+[Query:INSERT INTO stat_visitor (sv_url,sv_visitor,sv_menu,sv_ip,sv_timestamp,sv_date,sv_time,sv_country,sv_language,sv_new,sv_browser,sv_resolution,sv_domain,sv_isp,sv_region,sv_city,sv_latitude,sv_longitude,sv_referer,sv_search,sv_keyword,sv_os,sv_load,sv_member,sv_fullurl,sv_mem_id,sv_w3c,sv_country_code,sv_region_code,sv_device,sv_op,sv_session_id) VALUES ('page','','/more_news.php?c_id=2','171.101.111.246','20230421041316','2023-04-21','04:13:16','TH','th-TH,th;q=0.9,en;q=0.8','','Google Chrome','1920x1080','cm-171-101-111-246.revip11.asianet.co.th','AS17552 True Online','Bangkok','Bangkok','13.7540','100.5014','','','','Windows 10','0','Y','https://portal.diprom.go.th/more_news.php?c_id=2','1','','TH','','1','','5gh3h61nn9dbnh212ep97td7t9')]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2023-04-21 04:19:14] [IP:171.101.111.246]
+[Query:DELETE FROM visitor_online WHERE DATEADD(SECOND,30,vo_onlinelasttime) <= GETDATE() ]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2023-04-21 08:18:04] [IP:110.78.5.2]
+[Query:SELECT sv_id FROM stat_visitor WHERE sv_ip = '110.78.5.2' AND sv_new = 'Y' LIMIT 0,1 ]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2023-04-21 08:18:04] [IP:110.78.5.2]
+[Query:SELECT sv_id FROM stat_visitor WHERE sv_ip = '110.78.5.2' AND sv_new = 'Y' LIMIT 0,1 ]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2023-04-21 08:18:05] [IP:110.78.5.2]
+[Query:INSERT INTO stat_visitor (sv_url,sv_visitor,sv_menu,sv_ip,sv_timestamp,sv_date,sv_time,sv_country,sv_language,sv_new,sv_browser,sv_resolution,sv_domain,sv_isp,sv_region,sv_city,sv_latitude,sv_longitude,sv_referer,sv_search,sv_keyword,sv_os,sv_load,sv_member,sv_fullurl,sv_mem_id,sv_w3c,sv_country_code,sv_region_code,sv_device,sv_op,sv_session_id) VALUES ('page','Y','/index.php','110.78.5.2','20230421081804','2023-04-21','08:18:04','TH','th-TH,th;q=0.9','Y','Google Chrome','1600x900','fw.dip.go.th','AS9931 The Communication Authoity of Thailand, CAT','Bangkok','Bangkok','13.7540','100.5014','https://portal.diprom.go.th/index.php','','','Windows 10','0','Y','https://portal.diprom.go.th/index.php','56','','TH','10','1','','a2m9k3lciusi19juf7ksav2460')]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2023-04-21 08:18:49] [IP:110.78.5.2]
+[Query:INSERT INTO stat_visitor (sv_url,sv_visitor,sv_menu,sv_ip,sv_timestamp,sv_date,sv_time,sv_country,sv_language,sv_new,sv_browser,sv_resolution,sv_domain,sv_isp,sv_region,sv_city,sv_latitude,sv_longitude,sv_referer,sv_search,sv_keyword,sv_os,sv_load,sv_member,sv_fullurl,sv_mem_id,sv_w3c,sv_country_code,sv_region_code,sv_device,sv_op,sv_session_id) VALUES ('page','','/index.php','110.78.5.2','20230421081848','2023-04-21','08:18:48','TH','th-TH,th;q=0.9','','Google Chrome','1600x900','fw.dip.go.th','AS9931 The Communication Authoity of Thailand, CAT','Bangkok','Bangkok','13.7540','100.5014','','','','Windows 10','0','Y','https://portal.diprom.go.th/index.php','56','','TH','10','1','','a2m9k3lciusi19juf7ksav2460')]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2023-04-21 08:18:56] [IP:110.78.5.2]
+[Query:INSERT INTO stat_visitor (sv_url,sv_visitor,sv_menu,sv_ip,sv_timestamp,sv_date,sv_time,sv_country,sv_language,sv_new,sv_browser,sv_resolution,sv_domain,sv_isp,sv_region,sv_city,sv_latitude,sv_longitude,sv_referer,sv_search,sv_keyword,sv_os,sv_load,sv_member,sv_fullurl,sv_mem_id,sv_w3c,sv_country_code,sv_region_code,sv_device,sv_op,sv_session_id) VALUES ('page','','/contact_form.php','110.78.5.2','20230421081856','2023-04-21','08:18:56','TH','th-TH,th;q=0.9','','Google Chrome','1600x900','fw.dip.go.th','AS9931 The Communication Authoity of Thailand, CAT','Bangkok','Bangkok','13.7540','100.5014','','','','Windows 10','0','Y','https://portal.diprom.go.th/contact_form.php','56','','TH','10','1','','a2m9k3lciusi19juf7ksav2460')]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2023-04-21 08:19:02] [IP:110.78.5.2]
+[Query:INSERT INTO stat_visitor (sv_url,sv_visitor,sv_menu,sv_ip,sv_timestamp,sv_date,sv_time,sv_country,sv_language,sv_new,sv_browser,sv_resolution,sv_domain,sv_isp,sv_region,sv_city,sv_latitude,sv_longitude,sv_referer,sv_search,sv_keyword,sv_os,sv_load,sv_member,sv_fullurl,sv_mem_id,sv_w3c,sv_country_code,sv_region_code,sv_device,sv_op,sv_session_id) VALUES ('page','','/index.php','110.78.5.2','20230421081901','2023-04-21','08:19:01','TH','th-TH,th;q=0.9','','Google Chrome','1600x900','fw.dip.go.th','AS9931 The Communication Authoity of Thailand, CAT','Bangkok','Bangkok','13.7540','100.5014','','','','Windows 10','0','Y','https://portal.diprom.go.th/index.php','56','','TH','10','1','','a2m9k3lciusi19juf7ksav2460')]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2023-04-21 08:19:12] [IP:110.78.5.2]
+[Query:INSERT INTO stat_visitor (sv_url,sv_visitor,sv_menu,sv_ip,sv_timestamp,sv_date,sv_time,sv_country,sv_language,sv_new,sv_browser,sv_resolution,sv_domain,sv_isp,sv_region,sv_city,sv_latitude,sv_longitude,sv_referer,sv_search,sv_keyword,sv_os,sv_load,sv_member,sv_fullurl,sv_mem_id,sv_w3c,sv_country_code,sv_region_code,sv_device,sv_op,sv_session_id) VALUES ('page','','/contact_form.php','110.78.5.2','20230421081911','2023-04-21','08:19:11','TH','th-TH,th;q=0.9','','Google Chrome','1600x900','fw.dip.go.th','AS9931 The Communication Authoity of Thailand, CAT','Bangkok','Bangkok','13.7540','100.5014','','','','Windows 10','0','Y','https://portal.diprom.go.th/contact_form.php','56','','TH','10','1','','a2m9k3lciusi19juf7ksav2460')]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2023-04-21 08:19:30] [IP:110.78.5.2]
+[Query:INSERT INTO stat_visitor (sv_url,sv_visitor,sv_menu,sv_ip,sv_timestamp,sv_date,sv_time,sv_country,sv_language,sv_new,sv_browser,sv_resolution,sv_domain,sv_isp,sv_region,sv_city,sv_latitude,sv_longitude,sv_referer,sv_search,sv_keyword,sv_os,sv_load,sv_member,sv_fullurl,sv_mem_id,sv_w3c,sv_country_code,sv_region_code,sv_device,sv_op,sv_session_id) VALUES ('page','','/more_form.php','110.78.5.2','20230421081929','2023-04-21','08:19:29','TH','th-TH,th;q=0.9','','Google Chrome','1600x900','fw.dip.go.th','AS9931 The Communication Authoity of Thailand, CAT','Bangkok','Bangkok','13.7540','100.5014','','','','Windows 10','0','Y','https://portal.diprom.go.th/more_form.php','56','','TH','10','1','','a2m9k3lciusi19juf7ksav2460')]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2023-04-21 08:19:34] [IP:110.78.5.2]
+[Query:INSERT INTO stat_visitor (sv_url,sv_visitor,sv_menu,sv_ip,sv_timestamp,sv_date,sv_time,sv_country,sv_language,sv_new,sv_browser,sv_resolution,sv_domain,sv_isp,sv_region,sv_city,sv_latitude,sv_longitude,sv_referer,sv_search,sv_keyword,sv_os,sv_load,sv_member,sv_fullurl,sv_mem_id,sv_w3c,sv_country_code,sv_region_code,sv_device,sv_op,sv_session_id) VALUES ('page','','/contact_form.php','110.78.5.2','20230421081934','2023-04-21','08:19:34','TH','th-TH,th;q=0.9','','Google Chrome','1600x900','fw.dip.go.th','AS9931 The Communication Authoity of Thailand, CAT','Bangkok','Bangkok','13.7540','100.5014','','','','Windows 10','0','Y','https://portal.diprom.go.th/contact_form.php','56','','TH','10','1','','a2m9k3lciusi19juf7ksav2460')]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2023-04-21 08:19:54] [IP:110.78.5.2]
+[Query:INSERT INTO stat_visitor (sv_url,sv_visitor,sv_menu,sv_ip,sv_timestamp,sv_date,sv_time,sv_country,sv_language,sv_new,sv_browser,sv_resolution,sv_domain,sv_isp,sv_region,sv_city,sv_latitude,sv_longitude,sv_referer,sv_search,sv_keyword,sv_os,sv_load,sv_member,sv_fullurl,sv_mem_id,sv_w3c,sv_country_code,sv_region_code,sv_device,sv_op,sv_session_id) VALUES ('page','','/private_floder.php','110.78.5.2','20230421081953','2023-04-21','08:19:53','TH','th-TH,th;q=0.9','','Google Chrome','1600x900','fw.dip.go.th','AS9931 The Communication Authoity of Thailand, CAT','Bangkok','Bangkok','13.7540','100.5014','','','','Windows 10','0','Y','https://portal.diprom.go.th/private_floder.php','56','','TH','10','1','','a2m9k3lciusi19juf7ksav2460')]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2023-04-21 08:20:37] [IP:110.78.5.2]
+[Query:INSERT INTO stat_visitor (sv_url,sv_visitor,sv_menu,sv_ip,sv_timestamp,sv_date,sv_time,sv_country,sv_language,sv_new,sv_browser,sv_resolution,sv_domain,sv_isp,sv_region,sv_city,sv_latitude,sv_longitude,sv_referer,sv_search,sv_keyword,sv_os,sv_load,sv_member,sv_fullurl,sv_mem_id,sv_w3c,sv_country_code,sv_region_code,sv_device,sv_op,sv_session_id) VALUES ('page','','/Booking_status.php','110.78.5.2','20230421082036','2023-04-21','08:20:36','TH','th-TH,th;q=0.9','','Google Chrome','1600x900','fw.dip.go.th','AS9931 The Communication Authoity of Thailand, CAT','Bangkok','Bangkok','13.7540','100.5014','','','','Windows 10','0','Y','https://portal.diprom.go.th/Booking_status.php','56','','TH','10','1','','a2m9k3lciusi19juf7ksav2460')]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2023-04-21 08:20:38] [IP:110.78.5.2]
+[Query:INSERT INTO stat_visitor (sv_url,sv_visitor,sv_menu,sv_ip,sv_timestamp,sv_date,sv_time,sv_country,sv_language,sv_new,sv_browser,sv_resolution,sv_domain,sv_isp,sv_region,sv_city,sv_latitude,sv_longitude,sv_referer,sv_search,sv_keyword,sv_os,sv_load,sv_member,sv_fullurl,sv_mem_id,sv_w3c,sv_country_code,sv_region_code,sv_device,sv_op,sv_session_id) VALUES ('page','','/contact_form.php','110.78.5.2','20230421082037','2023-04-21','08:20:37','TH','th-TH,th;q=0.9','','Google Chrome','1600x900','fw.dip.go.th','AS9931 The Communication Authoity of Thailand, CAT','Bangkok','Bangkok','13.7540','100.5014','','','','Windows 10','0','Y','https://portal.diprom.go.th/contact_form.php','56','','TH','10','1','','a2m9k3lciusi19juf7ksav2460')]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2023-04-21 08:20:38] [IP:110.78.5.2]
+[Query:INSERT INTO stat_visitor (sv_url,sv_visitor,sv_menu,sv_ip,sv_timestamp,sv_date,sv_time,sv_country,sv_language,sv_new,sv_browser,sv_resolution,sv_domain,sv_isp,sv_region,sv_city,sv_latitude,sv_longitude,sv_referer,sv_search,sv_keyword,sv_os,sv_load,sv_member,sv_fullurl,sv_mem_id,sv_w3c,sv_country_code,sv_region_code,sv_device,sv_op,sv_session_id) VALUES ('page','','/more_form.php','110.78.5.2','20230421082038','2023-04-21','08:20:38','TH','th-TH,th;q=0.9','','Google Chrome','1600x900','fw.dip.go.th','AS9931 The Communication Authoity of Thailand, CAT','Bangkok','Bangkok','13.7540','100.5014','','','','Windows 10','0','Y','https://portal.diprom.go.th/more_form.php','56','','TH','10','1','','a2m9k3lciusi19juf7ksav2460')]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2023-04-21 08:20:39] [IP:110.78.5.2]
+[Query:INSERT INTO stat_visitor (sv_url,sv_visitor,sv_menu,sv_ip,sv_timestamp,sv_date,sv_time,sv_country,sv_language,sv_new,sv_browser,sv_resolution,sv_domain,sv_isp,sv_region,sv_city,sv_latitude,sv_longitude,sv_referer,sv_search,sv_keyword,sv_os,sv_load,sv_member,sv_fullurl,sv_mem_id,sv_w3c,sv_country_code,sv_region_code,sv_device,sv_op,sv_session_id) VALUES ('page','','/contact_form.php','110.78.5.2','20230421082039','2023-04-21','08:20:39','TH','th-TH,th;q=0.9','','Google Chrome','1600x900','fw.dip.go.th','AS9931 The Communication Authoity of Thailand, CAT','Bangkok','Bangkok','13.7540','100.5014','','','','Windows 10','0','Y','https://portal.diprom.go.th/contact_form.php','56','','TH','10','1','','a2m9k3lciusi19juf7ksav2460')]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2023-04-21 08:20:40] [IP:110.78.5.2]
+[Query:INSERT INTO stat_visitor (sv_url,sv_visitor,sv_menu,sv_ip,sv_timestamp,sv_date,sv_time,sv_country,sv_language,sv_new,sv_browser,sv_resolution,sv_domain,sv_isp,sv_region,sv_city,sv_latitude,sv_longitude,sv_referer,sv_search,sv_keyword,sv_os,sv_load,sv_member,sv_fullurl,sv_mem_id,sv_w3c,sv_country_code,sv_region_code,sv_device,sv_op,sv_session_id) VALUES ('page','','/index.php','110.78.5.2','20230421082040','2023-04-21','08:20:40','TH','th-TH,th;q=0.9','','Google Chrome','1600x900','fw.dip.go.th','AS9931 The Communication Authoity of Thailand, CAT','Bangkok','Bangkok','13.7540','100.5014','','','','Windows 10','0','Y','https://portal.diprom.go.th/index.php','56','','TH','10','1','','a2m9k3lciusi19juf7ksav2460')]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2023-04-21 08:21:05] [IP:110.78.5.2]
+[Query:INSERT INTO stat_visitor (sv_url,sv_visitor,sv_menu,sv_ip,sv_timestamp,sv_date,sv_time,sv_country,sv_language,sv_new,sv_browser,sv_resolution,sv_domain,sv_isp,sv_region,sv_city,sv_latitude,sv_longitude,sv_referer,sv_search,sv_keyword,sv_os,sv_load,sv_member,sv_fullurl,sv_mem_id,sv_w3c,sv_country_code,sv_region_code,sv_device,sv_op,sv_session_id) VALUES ('page','','/index.php','110.78.5.2','20230421082105','2023-04-21','08:21:05','TH','th-TH,th;q=0.9','','Google Chrome','1600x900','fw.dip.go.th','AS9931 The Communication Authoity of Thailand, CAT','Bangkok','Bangkok','13.7540','100.5014','','','','Windows 10','0','Y','https://portal.diprom.go.th/index.php','56','','TH','10','1','','a2m9k3lciusi19juf7ksav2460')]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2023-04-21 09:05:59] [IP:110.78.5.2]
+[Query:SELECT sv_id FROM stat_visitor WHERE sv_ip = '110.78.5.2' AND sv_new = 'Y' LIMIT 0,1 ]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2023-04-21 09:05:59] [IP:110.78.5.2]
+[Query:SELECT sv_id FROM stat_visitor WHERE sv_ip = '110.78.5.2' AND sv_new = 'Y' LIMIT 0,1 ]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2023-04-21 09:06:00] [IP:110.78.5.2]
+[Query:INSERT INTO stat_visitor (sv_url,sv_visitor,sv_menu,sv_ip,sv_timestamp,sv_date,sv_time,sv_country,sv_language,sv_new,sv_browser,sv_resolution,sv_domain,sv_isp,sv_region,sv_city,sv_latitude,sv_longitude,sv_referer,sv_search,sv_keyword,sv_os,sv_load,sv_member,sv_fullurl,sv_mem_id,sv_w3c,sv_country_code,sv_region_code,sv_device,sv_op,sv_session_id) VALUES ('page','Y','/index.php','110.78.5.2','20230421090559','2023-04-21','09:05:59','TH','en,th;q=0.9,en-US;q=0.8','Y','Google Chrome','1536x864','fw.dip.go.th','AS9931 The Communication Authoity of Thailand, CAT','Bangkok','Bangkok','13.7540','100.5014','https://portal.diprom.go.th/index.php','','','Windows 10','0','Y','https://portal.diprom.go.th/index.php','49','','TH','10','1','','lbf3a9plgrv1vbndsc403pivd1')]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2023-04-21 09:06:12] [IP:110.78.5.2]
+[Query:INSERT INTO stat_visitor (sv_url,sv_visitor,sv_menu,sv_ip,sv_timestamp,sv_date,sv_time,sv_country,sv_language,sv_new,sv_browser,sv_resolution,sv_domain,sv_isp,sv_region,sv_city,sv_latitude,sv_longitude,sv_referer,sv_search,sv_keyword,sv_os,sv_load,sv_member,sv_fullurl,sv_mem_id,sv_w3c,sv_country_code,sv_region_code,sv_device,sv_op,sv_session_id) VALUES ('page','','/profile.php','110.78.5.2','20230421090612','2023-04-21','09:06:12','TH','en,th;q=0.9,en-US;q=0.8','','Google Chrome','1536x864','fw.dip.go.th','AS9931 The Communication Authoity of Thailand, CAT','Bangkok','Bangkok','13.7540','100.5014','','','','Windows 10','0','Y','https://portal.diprom.go.th/profile.php','49','','TH','10','1','','lbf3a9plgrv1vbndsc403pivd1')]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2023-04-21 09:12:18] [IP:110.78.5.2]
+[Query:INSERT INTO stat_visitor (sv_url,sv_visitor,sv_menu,sv_ip,sv_timestamp,sv_date,sv_time,sv_country,sv_language,sv_new,sv_browser,sv_resolution,sv_domain,sv_isp,sv_region,sv_city,sv_latitude,sv_longitude,sv_referer,sv_search,sv_keyword,sv_os,sv_load,sv_member,sv_fullurl,sv_mem_id,sv_w3c,sv_country_code,sv_region_code,sv_device,sv_op,sv_session_id) VALUES ('page','','/edit_profile.php','110.78.5.2','20230421091218','2023-04-21','09:12:18','TH','en,th;q=0.9,en-US;q=0.8','','Google Chrome','1536x864','fw.dip.go.th','AS9931 The Communication Authoity of Thailand, CAT','Bangkok','Bangkok','13.7540','100.5014','','','','Windows 10','0','Y','https://portal.diprom.go.th/edit_profile.php','49','','TH','10','1','','lbf3a9plgrv1vbndsc403pivd1')]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2023-04-21 09:12:32] [IP:110.78.5.2]
+[Query:INSERT INTO stat_visitor (sv_url,sv_visitor,sv_menu,sv_ip,sv_timestamp,sv_date,sv_time,sv_country,sv_language,sv_new,sv_browser,sv_resolution,sv_domain,sv_isp,sv_region,sv_city,sv_latitude,sv_longitude,sv_referer,sv_search,sv_keyword,sv_os,sv_load,sv_member,sv_fullurl,sv_mem_id,sv_w3c,sv_country_code,sv_region_code,sv_device,sv_op,sv_session_id) VALUES ('page','','/profile.php','110.78.5.2','20230421091232','2023-04-21','09:12:32','TH','en,th;q=0.9,en-US;q=0.8','','Google Chrome','1536x864','fw.dip.go.th','AS9931 The Communication Authoity of Thailand, CAT','Bangkok','Bangkok','13.7540','100.5014','','','','Windows 10','0','Y','https://portal.diprom.go.th/profile.php','49','','TH','10','1','','lbf3a9plgrv1vbndsc403pivd1')]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2023-04-21 09:13:52] [IP:110.78.5.2]
+[Query:SELECT sv_id FROM stat_visitor WHERE sv_ip = '110.78.5.2' AND sv_new = 'Y' LIMIT 0,1 ]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2023-04-21 09:13:52] [IP:110.78.5.2]
+[Query:SELECT sv_id FROM stat_visitor WHERE sv_ip = '110.78.5.2' AND sv_new = 'Y' LIMIT 0,1 ]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2023-04-21 09:13:53] [IP:110.78.5.2]
+[Query:INSERT INTO stat_visitor (sv_url,sv_visitor,sv_menu,sv_ip,sv_timestamp,sv_date,sv_time,sv_country,sv_language,sv_new,sv_browser,sv_resolution,sv_domain,sv_isp,sv_region,sv_city,sv_latitude,sv_longitude,sv_referer,sv_search,sv_keyword,sv_os,sv_load,sv_member,sv_fullurl,sv_mem_id,sv_w3c,sv_country_code,sv_region_code,sv_device,sv_op,sv_session_id) VALUES ('page','Y','/index.php','110.78.5.2','20230421091352','2023-04-21','09:13:52','TH','th-TH,th;q=0.9','Y','Google Chrome','1366x768','fw.dip.go.th','AS9931 The Communication Authoity of Thailand, CAT','Bangkok','Bangkok','13.7540','100.5014','https://portal.diprom.go.th/index.php','','','Windows 10','0','Y','https://portal.diprom.go.th/index.php','59','','TH','10','1','','p4u7tgoqrqruphbn0mufr8gmr0')]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2023-04-21 09:14:28] [IP:182.232.21.200]
+[Query:SELECT sv_id FROM stat_visitor WHERE sv_ip = '182.232.21.200' AND sv_new = 'Y' LIMIT 0,1 ]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2023-04-21 09:14:28] [IP:182.232.21.200]
+[Query:SELECT sv_id FROM stat_visitor WHERE sv_ip = '182.232.21.200' AND sv_new = 'Y' LIMIT 0,1 ]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2023-04-21 09:14:29] [IP:182.232.21.200]
+[Query:INSERT INTO stat_visitor (sv_url,sv_visitor,sv_menu,sv_ip,sv_timestamp,sv_date,sv_time,sv_country,sv_language,sv_new,sv_browser,sv_resolution,sv_domain,sv_isp,sv_region,sv_city,sv_latitude,sv_longitude,sv_referer,sv_search,sv_keyword,sv_os,sv_load,sv_member,sv_fullurl,sv_mem_id,sv_w3c,sv_country_code,sv_region_code,sv_device,sv_op,sv_session_id) VALUES ('page','Y','/index.php','182.232.21.200','20230421091428','2023-04-21','09:14:28','TH','en-US,en;q=0.9','Y','Google Chrome','1280x720','','AS131445 Advance Wireless Network','Bangkok','Bangkok','13.7540','100.5014','https://portal.diprom.go.th/index.php','','','Windows 10','0','Y','https://portal.diprom.go.th/index.php','53','','TH','10','1','','dhldibesprntn247kbiqckpaei')]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2023-04-21 09:14:46] [IP:110.78.5.2]
+[Query:INSERT INTO stat_visitor (sv_url,sv_visitor,sv_menu,sv_ip,sv_timestamp,sv_date,sv_time,sv_country,sv_language,sv_new,sv_browser,sv_resolution,sv_domain,sv_isp,sv_region,sv_city,sv_latitude,sv_longitude,sv_referer,sv_search,sv_keyword,sv_os,sv_load,sv_member,sv_fullurl,sv_mem_id,sv_w3c,sv_country_code,sv_region_code,sv_device,sv_op,sv_session_id) VALUES ('page','','/index.php','110.78.5.2','20230421091446','2023-04-21','09:14:46','TH','en,th;q=0.9,en-US;q=0.8','','Google Chrome','1536x864','fw.dip.go.th','AS9931 The Communication Authoity of Thailand, CAT','Bangkok','Bangkok','13.7540','100.5014','','','','Windows 10','0','Y','https://portal.diprom.go.th/index.php','49','','TH','10','1','','lbf3a9plgrv1vbndsc403pivd1')]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2023-04-21 09:14:47] [IP:182.232.21.200]
+[Query:INSERT INTO stat_visitor (sv_url,sv_visitor,sv_menu,sv_ip,sv_timestamp,sv_date,sv_time,sv_country,sv_language,sv_new,sv_browser,sv_resolution,sv_domain,sv_isp,sv_region,sv_city,sv_latitude,sv_longitude,sv_referer,sv_search,sv_keyword,sv_os,sv_load,sv_member,sv_fullurl,sv_mem_id,sv_w3c,sv_country_code,sv_region_code,sv_device,sv_op,sv_session_id) VALUES ('page','','/index.php','182.232.21.200','20230421091446','2023-04-21','09:14:46','TH','en-US,en;q=0.9','','Google Chrome','1280x720','','AS131445 Advance Wireless Network','Bangkok','Bangkok','13.7540','100.5014','','','','Windows 10','0','Y','https://portal.diprom.go.th/index.php','53','','TH','10','1','','dhldibesprntn247kbiqckpaei')]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2023-04-21 09:15:42] [IP:182.232.21.200]
+[Query:DELETE FROM visitor_online WHERE DATEADD(SECOND,30,vo_onlinelasttime) <= GETDATE() ]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2023-04-21 09:15:47] [IP:182.232.21.200]
+[Query:SELECT sv_id FROM stat_visitor WHERE sv_ip = '182.232.21.200' AND sv_new = 'Y' LIMIT 0,1 ]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2023-04-21 09:15:47] [IP:182.232.21.200]
+[Query:SELECT sv_id FROM stat_visitor WHERE sv_ip = '182.232.21.200' AND sv_new = 'Y' LIMIT 0,1 ]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2023-04-21 09:15:47] [IP:182.232.21.200]
+[Query:INSERT INTO stat_visitor (sv_url,sv_visitor,sv_menu,sv_ip,sv_timestamp,sv_date,sv_time,sv_country,sv_language,sv_new,sv_browser,sv_resolution,sv_domain,sv_isp,sv_region,sv_city,sv_latitude,sv_longitude,sv_referer,sv_search,sv_keyword,sv_os,sv_load,sv_member,sv_fullurl,sv_mem_id,sv_w3c,sv_country_code,sv_region_code,sv_device,sv_op,sv_session_id) VALUES ('page','Y','/index.php','182.232.21.200','20230421091547','2023-04-21','09:15:47','TH','en-US,en;q=0.9','Y','Google Chrome','1280x720','','AS131445 Advance Wireless Network','Bangkok','Bangkok','13.7540','100.5014','https://portal.diprom.go.th/index.php','','','Windows 10','0','Y','https://portal.diprom.go.th/index.php','1','','TH','10','1','','dhldibesprntn247kbiqckpaei')]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2023-04-21 09:16:27] [IP:182.232.21.200]
+[Query:DELETE FROM visitor_online WHERE DATEADD(SECOND,30,vo_onlinelasttime) <= GETDATE() ]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2023-04-21 09:16:31] [IP:182.232.21.200]
+[Query:SELECT sv_id FROM stat_visitor WHERE sv_ip = '182.232.21.200' AND sv_new = 'Y' LIMIT 0,1 ]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2023-04-21 09:16:31] [IP:182.232.21.200]
+[Query:SELECT sv_id FROM stat_visitor WHERE sv_ip = '182.232.21.200' AND sv_new = 'Y' LIMIT 0,1 ]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2023-04-21 09:16:32] [IP:182.232.21.200]
+[Query:INSERT INTO stat_visitor (sv_url,sv_visitor,sv_menu,sv_ip,sv_timestamp,sv_date,sv_time,sv_country,sv_language,sv_new,sv_browser,sv_resolution,sv_domain,sv_isp,sv_region,sv_city,sv_latitude,sv_longitude,sv_referer,sv_search,sv_keyword,sv_os,sv_load,sv_member,sv_fullurl,sv_mem_id,sv_w3c,sv_country_code,sv_region_code,sv_device,sv_op,sv_session_id) VALUES ('page','Y','/index.php','182.232.21.200','20230421091631','2023-04-21','09:16:31','TH','en-US,en;q=0.9','Y','Google Chrome','1280x720','','AS131445 Advance Wireless Network','Bangkok','Bangkok','13.7540','100.5014','https://portal.diprom.go.th/index.php','','','Windows 10','0','Y','https://portal.diprom.go.th/index.php','53','','TH','10','1','','dhldibesprntn247kbiqckpaei')]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2023-04-21 09:18:37] [IP:182.232.21.200]
+[Query:SELECT sv_id FROM stat_visitor WHERE sv_ip = '182.232.21.200' AND sv_new = 'Y' LIMIT 0,1 ]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2023-04-21 09:18:37] [IP:182.232.21.200]
+[Query:SELECT sv_id FROM stat_visitor WHERE sv_ip = '182.232.21.200' AND sv_new = 'Y' LIMIT 0,1 ]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2023-04-21 09:18:38] [IP:182.232.21.200]
+[Query:INSERT INTO stat_visitor (sv_url,sv_visitor,sv_menu,sv_ip,sv_timestamp,sv_date,sv_time,sv_country,sv_language,sv_new,sv_browser,sv_resolution,sv_domain,sv_isp,sv_region,sv_city,sv_latitude,sv_longitude,sv_referer,sv_search,sv_keyword,sv_os,sv_load,sv_member,sv_fullurl,sv_mem_id,sv_w3c,sv_country_code,sv_region_code,sv_device,sv_op,sv_session_id) VALUES ('page','Y','/index.php','182.232.21.200','20230421091837','2023-04-21','09:18:37','TH','en-US,en;q=0.9','Y','Edge','1280x720','','AS131445 Advance Wireless Network','Bangkok','Bangkok','13.7540','100.5014','https://portal.diprom.go.th/index.php','','','Windows 10','0','Y','https://portal.diprom.go.th/index.php','1','','TH','10','1','','uufp4fe9gfbust9haensc29k08')]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2023-04-21 09:23:49] [IP:110.78.5.2]
+[Query:INSERT INTO stat_visitor (sv_url,sv_visitor,sv_menu,sv_ip,sv_timestamp,sv_date,sv_time,sv_country,sv_language,sv_new,sv_browser,sv_resolution,sv_domain,sv_isp,sv_region,sv_city,sv_latitude,sv_longitude,sv_referer,sv_search,sv_keyword,sv_os,sv_load,sv_member,sv_fullurl,sv_mem_id,sv_w3c,sv_country_code,sv_region_code,sv_device,sv_op,sv_session_id) VALUES ('page','','/index.php','110.78.5.2','20230421092349','2023-04-21','09:23:49','TH','th-TH,th;q=0.9','','Google Chrome','1366x768','fw.dip.go.th','AS9931 The Communication Authoity of Thailand, CAT','Bangkok','Bangkok','13.7540','100.5014','','','','Windows 10','0','Y','https://portal.diprom.go.th/index.php','59','','TH','10','1','','p4u7tgoqrqruphbn0mufr8gmr0')]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2023-04-21 09:29:32] [IP:110.78.5.2]
+[Query:SELECT sv_id FROM stat_visitor WHERE sv_ip = '110.78.5.2' AND sv_new = 'Y' LIMIT 0,1 ]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2023-04-21 09:29:32] [IP:110.78.5.2]
+[Query:SELECT sv_id FROM stat_visitor WHERE sv_ip = '110.78.5.2' AND sv_new = 'Y' LIMIT 0,1 ]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2023-04-21 09:29:32] [IP:110.78.5.2]
+[Query:INSERT INTO stat_visitor (sv_url,sv_visitor,sv_menu,sv_ip,sv_timestamp,sv_date,sv_time,sv_country,sv_language,sv_new,sv_browser,sv_resolution,sv_domain,sv_isp,sv_region,sv_city,sv_latitude,sv_longitude,sv_referer,sv_search,sv_keyword,sv_os,sv_load,sv_member,sv_fullurl,sv_mem_id,sv_w3c,sv_country_code,sv_region_code,sv_device,sv_op,sv_session_id) VALUES ('page','Y','/index.php','110.78.5.2','20230421092932','2023-04-21','09:29:32','TH','th-TH,th;q=0.9,en;q=0.8','Y','Google Chrome','1366x768','fw.dip.go.th','AS9931 The Communication Authoity of Thailand, CAT','Bangkok','Bangkok','13.7540','100.5014','https://portal.diprom.go.th/index.php','','','Windows 10','0','Y','https://portal.diprom.go.th/index.php','48','','TH','10','1','','5gh3h61nn9dbnh212ep97td7t9')]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2023-04-21 09:45:37] [IP:110.78.5.2]
+[Query:INSERT INTO stat_visitor (sv_url,sv_visitor,sv_menu,sv_ip,sv_timestamp,sv_date,sv_time,sv_country,sv_language,sv_new,sv_browser,sv_resolution,sv_domain,sv_isp,sv_region,sv_city,sv_latitude,sv_longitude,sv_referer,sv_search,sv_keyword,sv_os,sv_load,sv_member,sv_fullurl,sv_mem_id,sv_w3c,sv_country_code,sv_region_code,sv_device,sv_op,sv_session_id) VALUES ('page','','/more_news.php?c_id=2','110.78.5.2','20230421094537','2023-04-21','09:45:37','TH','en,th;q=0.9,en-US;q=0.8','','Google Chrome','1536x864','fw.dip.go.th','AS9931 The Communication Authoity of Thailand, CAT','Bangkok','Bangkok','13.7540','100.5014','','','','Windows 10','0','Y','https://portal.diprom.go.th/more_news.php?c_id=2','49','','TH','','1','','lbf3a9plgrv1vbndsc403pivd1')]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2023-04-21 09:45:47] [IP:110.78.5.2]
+[Query:INSERT INTO stat_visitor (sv_url,sv_visitor,sv_menu,sv_ip,sv_timestamp,sv_date,sv_time,sv_country,sv_language,sv_new,sv_browser,sv_resolution,sv_domain,sv_isp,sv_region,sv_city,sv_latitude,sv_longitude,sv_referer,sv_search,sv_keyword,sv_os,sv_load,sv_member,sv_fullurl,sv_mem_id,sv_w3c,sv_country_code,sv_region_code,sv_device,sv_op,sv_session_id) VALUES ('page','','/index.php','110.78.5.2','20230421094546','2023-04-21','09:45:46','TH','en,th;q=0.9,en-US;q=0.8','','Google Chrome','1536x864','fw.dip.go.th','AS9931 The Communication Authoity of Thailand, CAT','Bangkok','Bangkok','13.7540','100.5014','','','','Windows 10','0','Y','https://portal.diprom.go.th/index.php','49','','TH','','1','','lbf3a9plgrv1vbndsc403pivd1')]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2023-04-21 09:46:00] [IP:110.78.5.2]
+[Query:INSERT INTO stat_visitor (sv_url,sv_visitor,sv_menu,sv_ip,sv_timestamp,sv_date,sv_time,sv_country,sv_language,sv_new,sv_browser,sv_resolution,sv_domain,sv_isp,sv_region,sv_city,sv_latitude,sv_longitude,sv_referer,sv_search,sv_keyword,sv_os,sv_load,sv_member,sv_fullurl,sv_mem_id,sv_w3c,sv_country_code,sv_region_code,sv_device,sv_op,sv_session_id) VALUES ('page','','/index.php','110.78.5.2','20230421094600','2023-04-21','09:46:00','TH','en,th;q=0.9,en-US;q=0.8','','Google Chrome','1536x864','fw.dip.go.th','AS9931 The Communication Authoity of Thailand, CAT','Bangkok','Bangkok','13.7540','100.5014','','','','Windows 10','0','Y','https://portal.diprom.go.th/index.php','49','','TH','','1','','lbf3a9plgrv1vbndsc403pivd1')]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2023-04-21 10:56:28] [IP:134.236.242.170]
+[Query:SELECT sv_id FROM stat_visitor WHERE sv_ip = '134.236.242.170' AND sv_new = 'Y' LIMIT 0,1 ]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2023-04-21 10:56:28] [IP:134.236.242.170]
+[Query:SELECT sv_id FROM stat_visitor WHERE sv_ip = '134.236.242.170' AND sv_new = 'Y' LIMIT 0,1 ]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2023-04-21 10:56:29] [IP:134.236.242.170]
+[Query:INSERT INTO stat_visitor (sv_url,sv_visitor,sv_menu,sv_ip,sv_timestamp,sv_date,sv_time,sv_country,sv_language,sv_new,sv_browser,sv_resolution,sv_domain,sv_isp,sv_region,sv_city,sv_latitude,sv_longitude,sv_referer,sv_search,sv_keyword,sv_os,sv_load,sv_member,sv_fullurl,sv_mem_id,sv_w3c,sv_country_code,sv_region_code,sv_device,sv_op,sv_session_id) VALUES ('page','Y','/index.php','134.236.242.170','20230421105628','2023-04-21','10:56:28','TH','en-US,en;q=0.9','Y','Google Chrome','1280x720','','AS131090 CAT TELECOM Public Company Ltd,CAT','Bangkok','Bangkok','13.7540','100.5014','https://portal.diprom.go.th/index.php','','','Windows 10','0','Y','https://portal.diprom.go.th/index.php','53','','TH','','1','','dhldibesprntn247kbiqckpaei')]
+[Error Code:]
+[Error Massage:]
+====================================

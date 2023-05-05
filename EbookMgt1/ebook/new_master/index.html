@@ -1,0 +1,103 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="monitor-signature" content="monitor:player:html5">
+ <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+ 
+<meta name="Keywords" content="" />
+<meta name="Description" content="Glossary_about_HM_King_Bhumibol_Adulyadej's_Funeral" />
+<meta name="Generator" content="Flip PDF Professional 2.4.6  at http://www.flipbuilder.com" />
+<link rel="image_src" href="files/shot.png">
+ <link rel="apple-touch-icon" href="files/thumb/1.jpg" />
+<meta name="og:image" content="files/shot.png">
+<meta property="og:image" content="files/shot.png">
+<title>Glossary_about_HM_King_Bhumibol_Adulyadej's_Funeral</title>
+
+<link rel="stylesheet" href="style/style.css" />
+<link rel="stylesheet" href="style/player.css" />
+<link rel="stylesheet" href="style/phoneTemplate.css" />
+
+<script src="javascript/jquery-1.9.1.min.js"></script>
+
+<script src="javascript/config.js"></script>
+
+
+
+</head>	
+<body>
+<!--<script src="javascript/search_config.js"></script>--><script src="javascript/bookmark_config.js"></script>
+<script src="javascript/LoadingJS.js"></script>
+
+<script src="javascript/main.js"></script>
+
+<link rel="stylesheet" href="style/template.css" />
+<script type="text/javascript">
+
+		
+	var sendvisitinfo = function(type,page){};
+	
+</script>
+
+
+
+<noscript><div><hr width="80%"/><ul align="left"><li><a href="files/basic-html/index.html">Pages</a></li></ul><hr width="80%"/></div></noscript>
+</body>
+<script>
+	$(window).load(function(){
+		var device = (/android|webos|iphone|ipad|ipod|blackberry|iemobile|opera mini/i.test(navigator.userAgent.toLowerCase()));
+		$('#logo').remove();
+		isPhone() || isPad() || (this.controlBar || (this.controlBar = new zoomControlBar(bookContainer), this.controlBar.setPosition((windowWidth -
+            this.controlBar.width) / 2, toolBar.getTopHeight() + 5)), this.controlBar && this.controlBar.setVisible(!0), this.bookMap && (this.bookMap.show(), this.bookMap.fillContent(this.currentPageIndex)));
+        this.status_zoom = !0;
+        this.adContainer && this.adContainer.css({"z-index": 1});
+		if( !device ) {
+			$('#pbToolBar').append("<img title='Full Screen' id='Fullscreen_btn' src='" + bookConfig.appLogoIcon +"' style='cursor:pointer;position:absolute;right:0px;width:35px;height:35px;' onclick='toggleFullScreen(document.body);'/>");
+		}else{
+			$('.pbTopBar').animate({top: 0}, 300).delay( 3000 ).animate({top: '-60px'}, 400);
+			$('.pbToolBar').animate({bottom: 0}, 300).delay( 3000 ).animate({bottom: '-60px'}, 400);
+		}
+	});
+	function toggleFullScreen(elem) {
+    // ## The below if statement seems to work better ## if ((document.fullScreenElement && document.fullScreenElement !== null) || (document.msfullscreenElement && document.msfullscreenElement !== null) || (!document.mozFullScreen && !document.webkitIsFullScreen)) {
+    if ((document.fullScreenElement !== undefined && document.fullScreenElement === null) || (document.msFullscreenElement !== undefined && document.msFullscreenElement === null) || (document.mozFullScreen !== undefined && !document.mozFullScreen) || (document.webkitIsFullScreen !== undefined && !document.webkitIsFullScreen)) {
+        if (elem.requestFullScreen) {
+            elem.requestFullScreen();
+        } else if (elem.mozRequestFullScreen) {
+            elem.mozRequestFullScreen();
+        } else if (elem.webkitRequestFullScreen) {
+            elem.webkitRequestFullScreen(Element.ALLOW_KEYBOARD_INPUT);
+        } else if (elem.msRequestFullscreen) {
+            elem.msRequestFullscreen();
+        }
+		if((window.fullScreen) || (window.innerWidth == screen.width && window.innerHeight == screen.height)) {
+			$('#Fullscreen_btn').remove();
+			$('#pbToolBar').append("<img title='Full Screen' id='Fullscreen_btn' src='" + bookConfig.appLogoIcon +"' style='cursor:pointer;position:absolute;right:0px;width:35px;height:35px;' onclick='toggleFullScreen(document.body);'/>");
+		} else {
+			$('#Fullscreen_btn').remove();
+			$('#pbToolBar').append("<img title='Full Screen' id='Fullscreen_btn' src='" + bookConfig.appLogoIconOut +"' style='cursor:pointer;position:absolute;right:0px;width:35px;height:35px;' onclick='toggleFullScreen(document.body);'/>");
+		}
+    } else {
+        if (document.cancelFullScreen) {
+            document.cancelFullScreen();
+        } else if (document.mozCancelFullScreen) {
+            document.mozCancelFullScreen();
+        } else if (document.webkitCancelFullScreen) {
+            document.webkitCancelFullScreen();
+        } else if (document.msExitFullscreen) {
+            document.msExitFullscreen();
+        }
+		if((window.fullScreen) || (window.innerWidth == screen.width && window.innerHeight == screen.height)) {
+			$('#Fullscreen_btn').remove();
+			$('#pbToolBar').append("<img title='Full Screen' id='Fullscreen_btn' src='" + bookConfig.appLogoIcon +"' style='cursor:pointer;position:absolute;right:0px;width:35px;height:35px;' onclick='toggleFullScreen(document.body);'/>");
+		} else {
+			$('#Fullscreen_btn').remove();
+			$('#pbToolBar').append("<img title='Full Screen' id='Fullscreen_btn' src='" + bookConfig.appLogoIconOut +"' style='cursor:pointer;position:absolute;right:0px;width:35px;height:35px;' onclick='toggleFullScreen(document.body);'/>");
+		}
+    }
+}
+</script>
+</html>

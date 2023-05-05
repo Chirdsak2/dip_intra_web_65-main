@@ -1,0 +1,15 @@
+[Date:2023-02-12 22:37:02] [IP:171.101.106.129]
+[Query:SELECT sv_id FROM stat_visitor WHERE sv_ip = '171.101.106.129' AND sv_new = 'Y' LIMIT 0,1 ]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2023-02-12 22:37:02] [IP:171.101.106.129]
+[Query:SELECT sv_id FROM stat_visitor WHERE sv_ip = '171.101.106.129' AND sv_new = 'Y' LIMIT 0,1 ]
+[Error Code:]
+[Error Massage:]
+====================================
+[Date:2023-02-12 22:37:02] [IP:171.101.106.129]
+[Query:INSERT INTO stat_visitor (sv_url,sv_visitor,sv_menu,sv_ip,sv_timestamp,sv_date,sv_time,sv_country,sv_language,sv_new,sv_browser,sv_resolution,sv_domain,sv_isp,sv_region,sv_city,sv_latitude,sv_longitude,sv_referer,sv_search,sv_keyword,sv_os,sv_load,sv_member,sv_fullurl,sv_mem_id,sv_w3c,sv_country_code,sv_region_code,sv_device,sv_op,sv_session_id) VALUES ('page','Y','/dip_intranet/index.php','171.101.106.129','20230212223702','2023-02-12','22:37:02','TH','th-TH,th;q=0.9,en;q=0.8','Y','Google Chrome','1920x1080','cm-171-101-106-129.revip11.asianet.co.th','AS17552 True Online','Bangkok','Bangkok','13.7083','100.4562','http://203.151.166.134/dip_intranet/index.php','','','Windows 10','0','Y','https://203.151.166.134/dip_intranet/index.php','1','','TH','','1','','8ko19d86i6dfmrg3830ej4fvps')]
+[Error Code:]
+[Error Massage:]
+====================================

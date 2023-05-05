@@ -1,0 +1,205 @@
+
+/************************************************************************************
+*
+* General Style
+*
+/************************************************************************************/
+
+/************************************************************************************
+*
+* Google Nexus Menu
+*
+/************************************************************************************/
+#btn-header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 20;
+	_background-color: #FFC153;
+}
+#btn-header ul,  #sideNav ul,  #sideNav ul ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	background-color: #FFFFFF;
+}
+#btn-header  li {
+	margin: 0;
+	float: left;
+	_border-right: 1px solid #ddd;
+	_font-size: 18px;
+}
+#btn-header a{
+}
+.btn-header a{
+	color: #FFC153;
+	text-decoration: none;
+	display: block;
+	padding: 22px 30px;
+	height: auto; 
+}
+.btn-header-top a{
+	padding: 11px 30px;
+}
+#btn-header a:hover{
+	_color: #EEEEEE;
+	_background-color: #FFFFFF;
+}
+#sideNav a {
+	color: #000000;
+	background-color: #FFFFFF;
+	text-decoration: none;
+	display: block;
+	padding: 1px 5px;
+	height: auto; 
+}
+#sideNav a:hover {
+	color: #FFFFFF;
+	background-color: #751b7d; /* #FFC153 */
+}
+#sideNav .sideNavImg{
+	height:auto;
+	width:auto;
+	display: inline-block;
+}
+
+#sideNav,  #sideNav.showHalfMenu,  #sideNav.showFullMenu,  #sideNav ul ul li,  #sideNav.showFullMenu ul ul li {
+	-webkit-transition: 0.2s ease;
+	-moz-transition: 0.2s ease;
+	-ms-transition: 0.2s ease;
+	transition: 0.2s ease;
+}
+#sideNav {
+	position: fixed;
+	left: -85px;
+	width: 85px;
+	height: 100%;
+  /* 		border-right:1px solid #ddd;						 */
+	_background-color: #fafafa;
+	overflow-y: scroll;
+}
+#sideNav.showHalfMenu::-webkit-scrollbar,#sideNav.showFullMenu::-webkit-scrollbar {
+	width: 3px;
+	height: 5px;
+	background-color: #F5F5F5;  
+	}
+#sideNav.showHalfMenu::-webkit-scrollbar-thumb,#sideNav.showFullMenu::-webkit-scrollbar-thumb {
+	width: 3px; 
+	border-radius: 1px;
+	-webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.1);
+	background-image: -webkit-gradient(linear, left bottom, left top, from(#FFC153), to(#FFC153));
+	background-image: -webkit-linear-gradient(bottom, #FFC153 0%, #FFC153 100%);
+	background-image: linear-gradient(to top, #FFC153 0%, #FFC153 100%);
+	} 
+.sideNav{
+	top: 75px;
+}
+.sideNav-top{
+	top: 53px;
+}
+#sideNav.showHalfMenu { 
+	left: 0;	
+}
+#sideNav.showHalfMenu img {
+	width: 80%;
+	height: 80%;
+}
+#sideNav.showFullMenu {
+	left: 0;
+	width: 20%;
+}
+#sideNav.showFullMenu img {
+	width: 20%;
+	height: 20%;
+}
+#sideNav.showFullMenu ul ul li { 
+	height: 25px; 
+}	
+#sideNav > ul {
+	width: 100%;
+	padding-bottom: 80px;
+}
+#sideNav ul li {
+	width: 100%;
+	margin: 0;
+	_font-weight: 300;
+}
+#sideNav ul li a {
+	border-bottom: 1px solid #ddd;
+	padding-left: 10px;
+}
+#sideNav ul li  {
+	position: relative;
+	_top: 3px;
+}
+#sideNav ul ul li {
+	overflow: hidden;
+	height: 0;
+}
+/*.i-menu{
+	color: #84c7ff;	
+}
+.i-menu-active {
+	background-color: #fff;
+	color: #FFC153;	
+}*/
+
+/************************************************************************************
+*
+* Menu Icons
+*
+/************************************************************************************/		
+		
+
+/*.icon { background: transparent url('../img/icons.png') no-repeat 0 0; }*/
+
+.icon-menu {
+  text-indent: -99999em;
+  background-position: 0 0;
+}
+
+.icon-menu:hover { background-position: -59px 0; }
+
+.icon-menu.icon-menu-active {
+  background-position: -120px 0;
+  background-color: #fff;
+}
+
+.icon-search { background-position: 0 -60px; }
+
+.icon-search:hover { background-position: -59px -60px; }
+
+.icon-home { background-position: 0 -120px; }
+
+.icon-home:hover { background-position: -58px -120px; }
+
+.icon-articles { background-position: 0 -180px; }
+
+.icon-articles:hover { background-position: -58px -180px; }
+
+.icon-social { background-position: 0 -240px; }
+
+.icon-social:hover { background-position: -58px -240px; }
+		
+		
+/************************************************************************************
+*
+* Responsive
+*
+/************************************************************************************/		
+
+/*------------------------------------------------------------------*/ 
+/*	2) Note: Design for a width of 480 px
+/*------------------------------------------------------------------*/
+@media only screen and (min-width: 200px) and (max-width: 480px) {
+
+nav a,  #sideNav a { 
+	padding: 10px 15px; 
+}
+nav a#btn-menu { 
+	padding: 10px 30px; 
+}
+#sideNav.showFullMenu,  #sideNav.showFullMenu li,  #sideNav.showFullMenu a { 
+	width: 100%; 
+	}
+}

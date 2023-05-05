@@ -1,0 +1,61 @@
+<?phpxml version="1.0" encoding="Windows-874"?>
+	<rss version="2.0">
+	<channel>
+		  <title>ข่าวประชาสัมพันธ์</title> 
+		  <link></link> 
+		  <description></description> 
+		  <language>th-TH</language> 
+		  <lastBuildDate>Tue,04 Aug 2009 17:04:14 Asia/Krasnoyarsk</lastBuildDate> 
+		  <copyright>Copyright ? 2008 All rights reserved. </copyright> 
+	<item>
+					<title>fdfdd</title>
+					<link></link>
+					<description></description>
+					<pubDate>2009-08-04 17:04:14</pubDate>
+					<guid></guid>
+	            </item>
+				<item>
+					<title>hhkhh</title>
+					<link>ewt_news.php?nid=27</link>
+					<description></description>
+					<pubDate></pubDate>
+					<guid></guid>
+	            </item>
+				<item>
+					<title>hhkhh</title>
+					<link></link>
+					<description></description>
+					<pubDate>2009-07-13 18:29:49</pubDate>
+					<guid></guid>
+	            </item>
+				<item>
+					<title>cxcx</title>
+					<link></link>
+					<description></description>
+					<pubDate>2009-07-13 18:22:13</pubDate>
+					<guid></guid>
+	            </item>
+				<item>
+					<title>ประกาศรายชื่อผู้ได้รับการคัดเลือกเข้ารับการฝึกอบรมหลักสูตร นักบริหารเชิงยุทธศาสตร์การป้องกันและปราบปรามการทุจริตระดับกลาง รุ่นที่1</title>
+					<link>http://www.nccc.thaigov.net/nccc/a_download.php?sID=239&sTB=gen_info</link>
+					<description></description>
+					<pubDate>2009-06-03 10:56:20</pubDate>
+					<guid></guid>
+	            </item>
+				<item>
+					<title>การประชุมนานาชาติว่าด้วยการต่อต้านการทุจริต ครั้งที่ 14 (International Anti-Corruption Conference IACC)</title>
+					<link>http://www.nccc.thaigov.net/nccc/a_download.php?sID=237&sTB=gen_info</link>
+					<description></description>
+					<pubDate>2009-06-03 10:56:27</pubDate>
+					<guid></guid>
+	            </item>
+				<item>
+					<title>สำนักงาน ป.ป.ช. เผยแพร่หนังสือรวบรวมพระราชดำรัสและพระบรมราโชวาท</title>
+					<link>http://www.nccc.thaigov.net/nccc/a_download.php?sID=234&sTB=gen_info</link>
+					<description></description>
+					<pubDate>2009-06-03 10:56:33</pubDate>
+					<guid></guid>
+	            </item>
+				</channel>
+	</rss>
+	

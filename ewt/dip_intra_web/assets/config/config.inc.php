@@ -1,0 +1,88 @@
+﻿<?php
+if (!isset($_SESSION)) {
+  session_start();
+}
+error_reporting (E_ALL & ~E_WARNING & ~E_NOTICE & ~E_DEPRECATED);
+//error_reporting (E_ALL);
+date_default_timezone_set ('Asia/Bangkok');
+//ini_set('mbstring.internal_encoding', 'UTF-8');
+
+// ini_set('display_errors', '1');
+// ini_set('display_startup_errors', '1');
+// error_reporting(E_ALL);
+
+header('Content-Type: text/html; charset=utf-8');
+  
+if($_GET['lang'] == ""){ $_GET['lang'] = "TH"; } 
+if($_GET['page'] == ""){ $_GET['page'] = "1"; } 
+
+DEFINE('E_SYS_LANG',$_GET['lang']);
+DEFINE('E_SYS_LIMIT','10');   
+DEFINE('E_SYS_PAGE',$_GET['page']);    
+
+//DEFINE("E_ROOT_HOST", "202.44.230.181"); 
+//DEFINE("E_ROOT_HOST", "203.151.166.134"); 
+DEFINE("E_ROOT_HOST", "localhost");
+DEFINE("E_ROOT_USER", "biz"); 
+DEFINE("E_ROOT_PASSWORD", "B!zw#b2022");
+
+DEFINE("E_DB_NAME", "db_1_bizpotential_web");
+DEFINE("E_DB_TYPE", "mysql");
+DEFINE("E_FOLDER_USER", "dip_intranet");
+DEFINE("E_CHAR_SET", "utf8");
+DEFINE("E_ROOT", "dip_intranet");
+DEFINE("E_DB_USER", "ewt_user_bizpotential_web"); 
+
+DEFINE("E_EMAIL", 'noreply@bizpotential.com');
+DEFINE("E_IP_ROOT", "http://".$_SERVER['SERVER_NAME'].":80/dip_intranet/");    
+DEFINE("E_DOC_ROOT", "D:\\www\\dip_intranet\\");
+
+DEFINE('SEND_METHOD','smtp');
+DEFINE('SMTP_HOST','mail.bizpotential.com');
+DEFINE('SMTP_PORT','25');
+DEFINE('SMTP_USERNAME','noreply@bizpotential.com'); 
+DEFINE('SMTP_PASSWORD','P@ssw0rd!@#$noreply'); 
+
+#ldap config
+DEFINE("LDAP_HOST", "110.78.5.6");
+DEFINE("LDAP_PORT", 389);
+DEFINE("LDAP_BASEDN", "ou=60_0410_ศส.,dc=diprom,dc=go,dc=th");
+DEFINE("LDAP_AUTHEN", "ou=vender,dc=diprom,dc=go,dc=th");
+//DEFINE("LDAP_AUTHEN", "dc=diprom,dc=go,dc=th");
+DEFINE("LDAP_USER", "biz_admin"); 
+DEFINE("LDAP_PASS", 'P@$$w0rds$#@!');
+DEFINE("LDAP_DOMAIN", "diprom");
+
+DEFINE('BASE_URL',(isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]");
+DEFINE('HOST', (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") ."://$_SERVER[HTTP_HOST]/");
+DEFINE('HTTP_HOST', HOST."");
+DEFINE('HOST_PATH', HOST."ewt_admin/");
+DEFINE('HOST_CAPTCHA', HOST."Login/ewt_picmain.php");
+
+DEFINE('SSO_PATH',"https://portal.diprom.go.th/DIP_SSO/");
+//DEFINE('SSO_PATH',"http://203.151.166.133/DIP_SSO/");
+
+DEFINE("SSO_ROOT_HOST", "202.44.230.180");
+DEFINE("SSO_ROOT_USER", "SSO");
+DEFINE("SSO_ROOT_PASSWORD", "D!pSS0@2023");
+DEFINE("SSO_DB_NAME", "DIP_INTRA_SSO");
+DEFINE("SSO_DB_TYPE", "MSSQL");
+DEFINE("SSO_CHAR_SET", "utf8");
+
+include(path.'config/function.inc.php');
+
+//$sso = new sso();
+
+$str = $_SERVER['SCRIPT_NAME'];
+
+db::connectDB(E_DB_NAME,E_DB_TYPE,E_ROOT_HOST,E_ROOT_USER,E_ROOT_PASSWORD,E_DB_NAME,E_CHAR_SET);
+
+if(!isset($_SESSION["EWT_VISITOR_STAT"]))
+{
+  $_SESSION["EWT_REFERER"] = $HTTP_REFERER;
+}
+$timestamp_start = $_SERVER['REQUEST_TIME_FLOAT'];
+
+
+
+

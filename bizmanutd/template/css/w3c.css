@@ -1,0 +1,68 @@
+html, body,  span, applet, object, iframe, p, blockquote, pre,	a, abbr, acronym, address, big, cite, code,	del, dfn, em, font, img, ins, kbd, q, s, samp,	small, strike, strong, sub, sup, tt, var,	b, u, i, center,	dl, dt, dd, ol, ul, li, form, label, legend {margin: 0;	padding: 0;	border: 0;	outline: 0;	font-size: 100%;	vertical-align: baseline; background: transparent; }
+.clearfix:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+    }
+
+.clearfix {display: inline-block;}  /* for IE/Mac */
+a:link{	color:#006699;text-decoration:none;	}
+a:hover{ color:#dd6666;text-decoration:underline;	}
+a:active{	color:#dd6666;text-decoration:underline; }
+a:visited{	color:#006699;text-decoration:none; }
+
+h1{color:#2d2d2d;font-size:19px;font-family: Tahoma;padding:4px;margin:0px;}
+h2{color:#2d2d2d;font-size:17px;font-family: Tahoma;padding:4px;margin:0px;}
+h3{color:#2d2d2d;font-size:15px;font-family: Tahoma;padding:4px;margin:0px;}
+h4{color:#2d2d2d;padding:0px;margin:0px;padding:5px;}
+h5{color:#2d2d2d;padding:0px;margin:0px;padding:5px;}
+p{padding:10px;}
+hr { border: 1px #b4d7f0 solid; width: 100%;}
+
+#container{	width:982px; margin:0 auto;background-color:#fff;}
+#content_main{margin: 0 auto;width:960px;margin-top:10px;}
+#top-nav { border:2px solid #b4d7f0;background:#d4e7f3;padding:3px; }
+#header { padding:2px; }
+#header img { float:left; }
+#header h1{color:#000;padding:0px;margin-left:120px;margin-top:12px;font-size:25px;}
+#header h2{color:#dd6666;padding:0px;margin-left:120px;margin-top:12px;font-size:17px;}
+#main_menu { padding:6px;  }
+#main_menu ul { list-style:none; }
+#main_menu ul li {
+			float:left; 
+			padding:5px 6px 5px 6px;
+			}
+#main_menu ul li a { border:2px solid #fff;padding:3px;background:#fff; }
+#main_menu ul li a:hover { color:#dd6666;text-decoration:none;border:2px solid #b4d7f0;padding:3px;background-color:#edf5fa; }
+#nain_menu {
+padding:6px;
+ }
+#nain_menu ul { list-style:none; }
+#nain_menu ul li {
+			float:left; 
+			padding:5px 6px 5px 6px;
+			position: relative;
+			}
+#nain_menu ul li a { border:2px solid #fff;padding:3px;background-color:#fff; }
+#nain_menu ul li a:hover { color:#dd6666;text-decoration:none;border:2px solid #b4d7f0;padding:3px;background-color:#edf5fa; }
+#footer{background-image:url(../images/bg00.jpg); background-repeat:repeat-x; color:#333;width:940px;padding:10px;margin-top:0px;border:1px solid #767571;}
+#footer p{color:#333;padding:0px;margin:0px}
+ul.v_menu{ /* กำหนดขอบเขตของเมนู */  
+    list-style:none;   
+	width:800px;   
+    font-family:tahoma, "Microsoft Sans Serif", Vanessa;   
+    /* font-size:14px; */  
+}   
+ul.v_menu > li{ /* กำหนดรูปแบบให้กับเมนูเ */  
+	float:left;padding:5px 6px 5px 6px;
+}   
+ul.v_menu > li:hover{ /* กำหนดรูปแบบให้กับเมนูเมื่อมีเมาส์อยู่เหนือ */  
+  color:#dd6666;text-decoration:none;border:2px solid #b4d7f0;padding:3px;background-color:#edf5fa; 
+} 
+ul.v_menu > li > a,ul.v_menu > li:hover > ul > li > a{ /* กำหนดรูปแบบให้กับลิ้งค์ */  
+    text-decoration:none;  
+    line-height:20px;   
+} 
+

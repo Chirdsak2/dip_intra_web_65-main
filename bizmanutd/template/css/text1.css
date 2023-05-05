@@ -1,0 +1,97 @@
+.cadweb2007 {
+	font-family: Verdana, Tahoma, "MS Sans Serif";
+	font-size: 11px;
+	font-weight: normal;
+	color: #000000;
+}
+.fieldSearch {
+	font-family: Verdana, Tahoma, "MS Sans Serif";
+	font-size: 11px;
+	font-weight: normal;
+	color: #0099FF;
+	background-color: #FFFFFF;
+	border: 1px solid #999999;
+}
+.Bgmenu {
+	font-family: Verdana, Tahoma, "MS Sans Serif";
+	font-size: 11px;
+	font-weight: normal;
+	color: #333333;
+	border: 1px solid #698E0B;
+	background-color: #E9F7C6;
+}
+.BoldT {
+	font-family: "Trebuchet MS";
+	font-size: 11px;
+	font-weight: bolder;
+	color: #0DA3DB;
+	text-decoration: none;
+}
+.HText {
+
+	font-family: "Trebuchet MS";
+	font-size: 12px;
+	font-weight: bolder;
+	color: #000000;
+}
+.StartT {
+
+
+	font-family: "Trebuchet MS";
+	font-size: 20px;
+	font-weight: bolder;
+	color: #990000;
+}
+.red {
+
+	font-family: Verdana, Tahoma, "MS Sans Serif";
+	font-size: 11px;
+	font-weight: normal;
+	color: #FF3300;
+	text-decoration: underline;
+}
+.Text {
+
+
+	font-family: Verdana, Tahoma, "MS Sans Serif";
+	font-size: 11px;
+	font-weight: normal;
+	color: #FFFFFF;
+}
+.WhiteText {
+
+
+	font-family: "Trebuchet MS";
+	font-size: 12px;
+	font-weight: bolder;
+	color: #FFFFFF;
+}
+.BlackTe {
+
+	font-family: Tahoma;
+	font-size: 11px;
+	font-weight: bolder;
+	color: #666666;
+	text-decoration: none;
+}
+.ewtnormal {
+	FONT: 11px "Tahoma"
+}
+.ewthead {
+	FONT: 17px "Tahoma";color:#FF3300
+}
+.ewtsubmenu {
+	FONT: 13px "Tahoma"
+}
+.ewtfunction {
+	FONT: 15px "Tahoma";FONT-WEIGHT: bold
+}
+.ewtfunctionmenu {
+	FONT: 11px "Tahoma"
+}
+.ewttablehead {
+	FONT: 13px "Tahoma";FONT-WEIGHT: bold;background-color:#E7E7E7;color:#FF6600
+}
+.ewttableuse {
+	background-color:#CECECE
+}

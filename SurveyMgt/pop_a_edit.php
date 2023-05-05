@@ -1,0 +1,141 @@
+<?php
+include("../lib/include.php");
+include("../lib/function.php");
+include("../lib/user_config.php");
+include("../lib/connect.php");
+include("../lib/set_lang.php");
+include("../language.php");
+include("../language/language_TH.php");
+include("../lib/config_path.php");
+include("lang_config.php"); 
+
+$path = $_GET['path'];
+$post = $_GET['post'];
+	
+$SQL1 = $db->query("SELECT * FROM p_cate WHERE c_id = '{$path}'");
+$PR = $db->db_fetch_array($SQL1);
+?>
+<div class="dContainer" > 
+<div class="modal-dialog modal-lg"  >
+
+<div class="modal-content">
+        <div class="modal-header">
+          
+          <button type="button" class="close" onclick="$('#box_popup').fadeOut();" ><i class="far fa-times-circle fa-1x"></i></button>
+          <h4 class="modal-title"><?=$lang_add3_edititem;?> <?=$post;?></h4>
+        </div>
+
+<form name="form1" method="post" >
+<div class="modal-body">
+<div class="scrollbar scrollbar-near-moon thin">
+<div class="form-group row">
+<div class="col-md-2 col-sm-2 col-xs-12">
+<label><?=$lang_add3_edititem; ?> <?=$post;?></label>
+</div>
+</div>
+<div class="form-group row">
+<div class="col-md-12 col-sm-12 col-xs-12">
+<label for="name"><?=$lang_edit_partname;?><span class="text-danger">*</span> : </label>
+<textarea   class="form-control" name="name"  id="name"  cols="40" rows="5" ><?=$PR['c_name']; ?></textarea>
+</div>
+</div>
+<div class="form-group row">
+<div class="col-md-12 col-sm-12 col-xs-12">
+<label for="des"><?=$lang_edit_partexplain;?><span class="text-danger">*</span> : </label>
+<textarea   class="form-control" name="des"  id="des"  cols="40" rows="5" ><?=$PR['c_title']; ?></textarea>
+</div>
+</div>
+<input name="pa" type="hidden" id="pa" value="<?=$post;?>">
+<input name="path" type="hidden" id="path" value="<?=$path;?>">
+<input name="proc" type="hidden" id="proc" value="P">
+</div>
+</div>
+</form>		
+		
+<div class="modal-footer">
+<div class="form-group row">
+<div class="col-md-12 col-sm-12 col-xs-12" style="text-align:center">
+<button onclick="JQa_Edit();" class="btn btn-success btn-lm" data-toggle="tooltip" data-placement="top" title="<?=$lang_survey_save; ?>" >
+<span class="glyphicon glyphicon-floppy-saved"></span>&nbsp;<?=$lang_survey_save; ?>
+</button> 
+<!--<input type="submit" name="Submit" value="บันทึก" class="btn btn-success btn-ml">
+<input name="reset" type="reset" value="ยกเลิก" class="btn btn-warning"  onClick="$('#box_popup').fadeOut();">
+<button class="btn btn-warning btn-lm" onClick="$('#box_popup').fadeOut();" data-toggle="tooltip" data-placement="top" title="<?=$lang_survey_update; ?>" >
+<span class="glyphicon glyphicon-remove"></span>&nbsp;<?="ยกเลิก";?>-->
+</button> 
+</div>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+<script >
+function GoNext(){
+if(document.form1.name.value ==""){
+alert("<?php echo $lang_add3_pleasequestion; ?>");
+document.form1.name.focus();
+return false;
+}
+}
+
+function JQa_Edit(){	
+
+var path = $("#path").val();
+var name = $("#name").val();
+var des = $("#des").val();
+var proc = $("#proc").val();
+var pa = $("#pa").val();
+
+			  $.confirm({
+						title: '<?=$lang_add3_edititem;?>'+' '+pa,
+						content: 'คุณต้องการบันทึกการแก้ไขนี้หรือไม่',
+						//content: 'url:form.html',
+						boxWidth: '30%',
+						icon: '	glyphicon glyphicon-question-sign',
+                        theme: 'modern',
+						buttons: {
+								confirm: {
+									text: 'ยืนยันการแก้ไข',
+									btnClass: 'btn-blue',
+									action: function () {
+										$.ajax({
+											type: 'POST',
+											url: 'func_a_edit.php',
+											data:{'path': path,'name': name,'des': des,'proc':proc},
+											success: function (data) {
+												$('#box_popup').fadeOut();
+												//location.reload();	
+												//$("#frm_edit_s").load();
+												$("#frm_edit_s").load(location.href + " #frm_edit_s");
+											}
+										});																										
+									}								
+							
+								},
+								cancel: {
+									text: 'ยกเลิก'
+									 									
+								}
+							},                          
+                            animation: 'scale',
+                            type: 'blue'
+						
+						});
+                   // });
+}
+
+function ChangeBox(c){
+if(document.form1.sel.value =="D"){
+document.form1.num.disabled = true;
+document.form1.just.disabled = false;
+}else if(document.form1.sel.value =="B"){
+document.form1.just.disabled = true;
+document.form1.num.disabled = false;
+}else{
+document.form1.just.disabled = false;
+document.form1.num.disabled = false;
+}
+}
+</script>
+<?php @$db->db_close(); ?>

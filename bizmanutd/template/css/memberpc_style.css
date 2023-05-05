@@ -1,0 +1,84 @@
+}
+A:link {
+	COLOR: #666666; TEXT-DECORATION: underline}
+A:visited {
+	COLOR: #666666; TEXT-DECORATION: underline}
+A:active {
+	COLOR: #D7210A; TEXT-DECORATION: none
+}
+A:hover {
+	COLOR: #D7210A; TEXT-DECORATION: none
+}
+.normal {
+	font-family: Tahoma;
+	font-size: 12px;
+	font-weight: normal;
+	color: #666666;
+}
+
+.bold-topic {
+	font-family: Tahoma;
+	font-size: 12px;
+	font-weight: bold;
+	color: #CC0000;
+}
+.normal-top {
+	font-family: Tahoma;
+	font-size: 12px;
+	font-weight: bold;
+	color: #006699;
+}
+.normal-top-w {
+	font-family: Tahoma;
+	font-size: 10px;
+	font-weight: normal;
+	color: #FFFFFF;
+}
+TABLE {
+	FONT-SIZE: 12px;
+	FONT-FAMILY: "Tahoma";
+}
+TD {
+	FONT-SIZE: 12px;
+	LINE-HEIGHT: normal;
+	FONT-FAMILY: "Tahoma";
+}
+A:link	{	
+	text-decoration:	none;
+	color:	#666666;
+	}	
+		
+A:visited	{	
+	text-decoration:	none;
+	color:	#0000FF;
+	}	
+		
+A:active	{	
+	text-decoration:	none;
+	color:	#B019B0;
+	}	
+		
+A:hover	{	
+	text-decoration:	none;
+	color:	#FF0000;
+	text-decoration:none;
+	}	
+	.headtop_table{
+	background-color:#DCA1DC;
+	FONT-SIZE: 12px;
+	FONT-FAMILY: "Tahoma";
+	color: #000000;
+	font-weight: bold;
+}
+.txt_table{
+	background-color:#F4F4F4;
+	FONT-SIZE: 11px;
+	FONT-FAMILY: "Tahoma";
+	color: #414141;
+}
+.txt_table1{
+	background-color:#FAE7FF;
+	FONT-SIZE: 11px;
+	FONT-FAMILY: "Tahoma";
+	color: #414141;
+}

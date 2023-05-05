@@ -1,0 +1,61 @@
+@charset "utf-8";
+/* CSS Document */
+
+body, td, p, caption {
+	font-family:"MS Sans Serif";
+	font-size:14px;
+}
+.textBox {
+	font-family:"MS Sans Serif";
+	font-size:12px;	
+}
+.textNoBorder {
+	font-family:"MS Sans Serif";
+	font-size:14px;
+	background:none;
+	border-top-width: 0px;
+	border-right-width: 0px;
+	border-bottom-width: 0px;
+	border-left-width: 0px;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;
+	border-left-style: none;
+}
+.labelHead {
+	color:#FFFFFF;
+	font-family:EucrosiaUPC; 
+	font-size:24px
+}
+.qty {
+	font-family:"MS Sans Serif";
+	font-size:12px;	
+	text-align:right;
+}
+.clickable {
+	background-color:#CCCCCC;
+	font-family:"MS Sans Serif";
+	font-size:12px;
+	border: solid 1px black;
+}
+.loginForm {
+	font-family:"MS Sans Serif";
+	font-size:10px; border:#FF9900 solid 1px;
+	background-color:#FFFFCC;
+}
+a {
+	font-family:"MS Sans Serif";
+	font-size:10px;	
+} 
+a:link {
+   color:#0000FF;   
+} 
+a:visited {
+   color:#0000FF;   
+} 
+a:active {
+   color:#00FF00;   
+} 
+a:hover {
+	color:#FF6600;
+}

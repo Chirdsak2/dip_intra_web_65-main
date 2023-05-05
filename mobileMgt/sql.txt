@@ -1,0 +1,2 @@
+CREATE TABLE `mobile_config` ( `mconf_id` int(11) NOT NULL auto_increment, `mconf_code` varchar(60) NOT NULL, `mconf_name` varchar(60) NOT NULL, `mconf_value` varchar(300) NOT NULL, PRIMARY KEY (`mconf_id`) ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+CREATE TABLE `mobile_contents` ( `mcont_id` int(11) NOT NULL auto_increment, `c_id` int(10) unsigned NOT NULL, `mcont_order` int(10) unsigned NOT NULL, `mcont_status` varchar(1) NOT NULL, PRIMARY KEY (`mcont_id`) ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
