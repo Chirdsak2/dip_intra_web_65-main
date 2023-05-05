@@ -1,5 +1,5 @@
 <?php include('comtop.php'); ?>
-<!-- Include file css and propertiess -->
+<!-- Include file css and properties -->
 <?php include('header.php'); ?>
 <!-- Menu and Logo -->
 <?php include('callservice.php'); ?>
@@ -9,25 +9,6 @@
 	::placeholder {
     font-weight: bold;
 }
-
-
-@media (min-width: 320px) { 
-       .text_tag{
-		font-size: 13px;
-    		line-height: inherit;
-	  }
-	}
-
-	@media (min-width: 1440px) { 
-       .text_tag{
-		font-size: 25px;
-    		line-height: inherit;
-	  }
-	}
- 
-
-
-
 .form-control{
     border: 1px solid #981c9d !important;
     border-radius: 5px !important;
@@ -47,10 +28,11 @@ $chk_per_type = "SELECT B.*, B.DEP_LV1_ID, C.DEP_NAME AS DEP_NAME1, B.DEP_LV2_ID
 $q = dbdpis::execute($chk_per_type);
 $chk = dbdpis::Fetch($q);
 
-$data_request_meeting_id = array(
-	"meeting_id" => $_GET["meeting_id"]
-);
-$getMeetingToolAddList = callAPI('getMeetingToolAddList',$data_request_meeting_id);//อุปกรณ์เพิ่มเติม
+// $data_request_meeting_id = array(
+	// "meeting_id" => $_GET["meeting_id"]
+// );
+// $getMeetingToolAddList = callAPI('getMeetingToolAddList',$data_request_meeting_id);//อุปกรณ์เพิ่มเติม กรณีอุปกรณ์อิงตามห้องประชุม
+$getMeetingToolAddList = callAPI('getMeetingToolAddList');//อุปกรณ์เพิ่มเติม
 
 $data_request_type = array(
 	"type" => 'room',
@@ -94,31 +76,31 @@ $getMeetingToolAsset = callAPI('getMeetingToolAsset',$data_request_room_id);//�
     <div class="p-2 StepBox-882-car p-3 ">
 
         <h3 class="mt-2 mb-0"><i class="fa fa-desktop"></i></h3>
-        <h4 class="mt-0 text_tag">1. กรอกรายละเอียด</h4>
+        <h4 class="mt-0">1. กรอกรายละเอียด</h4>
         <p class="white-text font-small">ให้ผู้จองกรอกรายละเอียดต่างๆอย่างครบถ้วนสมบูรณ์</p>
         <div class="arrow-right-822-car1"></div>
     </div>
     <div class="p-2 StepBox-BE4-car  p-3">
         <h3 class="mt-2 mb-0"><i class="fa fa-user-check"></i></h3>
-        <h4 class="mt-0 text_tag">2. ผ่านความเห็นชอบ</h4>
+        <h4 class="mt-0">2. ผ่านความเห็นชอบ</h4>
         <p class="white-text font-small">เลือกผู้บังคับบัญชาสำหรับให้ความเห็นชอบใน การขอจองห้องประชุมส่วนกลาง</p>
         <div class="arrow-right-BE4-car2"></div>
     </div>
     <div class="p-2 StepBox-882-car  p-3">
         <h3 class="mt-2 mb-0"><i class="fa fa-check-circle"></i></h3>
-        <h4 class="mt-0 text_tag">3. การอนุมัติคำขอ </h4>
+        <h4 class="mt-0">3. การอนุมัติคำขอ </h4>
         <p class="white-text font-small">คำขอที่ผ่านความเห็นชอบจากผู้บังคับบัญชาจะ ถูกส่งต่อไปยังผู้มีอำนาจอนุมัติ</p>
         <div class="arrow-right-822-car3"></div>
     </div>
     <div class="p-2 StepBox-BE4-car  p-3">
         <h3 class="mt-2 mb-0"><i class="fa fa-list-alt"></i></h3>
-        <h4 class="mt-0 text_tag">4. ตรวจสอบสถานะ</h4>
+        <h4 class="mt-0">4. ตรวจสอบสถานะ</h4>
         <p class="white-text font-small">ผู้จองสามารถตรวจสอบขั้นตอนการจองได้จาก"สถานะคำขอ"ซึ่งเป็นหนึ่งในเครื่องมือของผู้ใช้งาน</p>
         <div class="arrow-right-BE4-car4"></div>
     </div>
     <div class="p-2 StepBox-882-car  p-3">
         <h3 class="mt-2 mb-0"><i class="fa fa-door-open"></i></h3>
-        <h4 class="mt-0 text_tag">5. เข้าใช้งานห้องประชุม </h4>
+        <h4 class="mt-0">5. เข้าใช้งานห้องประชุม </h4>
         <p class="white-text font-small">ผู้จองจะได้รับแจ้ง วัน เวลา สถานที่ ของห้องประชุมพร้อมใช้งาน </p>
     </div>
 </div>
@@ -255,9 +237,9 @@ $getMeetingToolAsset = callAPI('getMeetingToolAsset',$data_request_room_id);//�
 					<div class="col-lg-2 col-md-2 col-sm-4 col-4 m-2 text-center">
 						<h4 class="h2-color ml-2">จำนวนที่มี</h4>
 					</div>
-					<!--<div class="col-lg-2 col-md-2 col-sm-4 col-4 m-2 text-center">
+					<div class="col-lg-2 col-md-2 col-sm-4 col-4 m-2 text-center">
 						<h4 class="h2-color ml-2">จำนวณคงเหลือ</h4>
-					</div>-->
+					</div>
 					<div class="col-lg-2 col-md-2 col-sm-4 col-4 m-2 text-center">
 						<h4 class="h2-color ml-2">จำนวณที่ต้องการ</h4>
 					</div>
@@ -274,9 +256,9 @@ $getMeetingToolAsset = callAPI('getMeetingToolAsset',$data_request_room_id);//�
 					<div class="col-lg-2 col-md-2 col-sm-4 col-4 m-2" align="center">
 						<?php echo $value['QUANTITY'];?>
 					</div>
-					<!--<div class="col-lg-2 col-md-2 col-sm-4 col-4 m-2" align="center">
+					<div class="col-lg-2 col-md-2 col-sm-4 col-4 m-2" align="center">
 						<input type="text" disabled class="form-control text-center" name="BALANCE" id="BALANCE_<?php echo $key;?>" value="">
-					</div>-->
+					</div>
 					<div class="col-lg-2 col-md-2 col-sm-4 col-4  m-2" align="center"><!--TOOLAMOUNT_<?php echo $key;?>-->
 						<input disabled class="form-control text-center" type="number" placeholder="0" id="TOOLAMOUNT_<?php echo $key;?>" name="TOOLAMOUNT[<?php echo $key;?>]" min="1" onChange="check_meet(<?php echo $_GET['meeting_id'];?>,'status');">
 					</div>
