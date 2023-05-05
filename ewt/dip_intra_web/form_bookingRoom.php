@@ -1,5 +1,5 @@
 <?php include('comtop.php'); ?>
-<!-- Include file css and properties -->
+<!-- Include file css and propertiess -->
 <?php include('header.php'); ?>
 <!-- Menu and Logo -->
 <?php include('callservice.php'); ?>
