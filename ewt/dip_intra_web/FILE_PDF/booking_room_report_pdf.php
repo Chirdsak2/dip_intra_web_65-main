@@ -127,7 +127,11 @@ ob_start();
 			<img src="<?php echo $WF_URL.'/assets/images/otcc.png' ?>" width="90" height="70">
 			<img src="<?php echo $WF_URL.'/assets/images/favicon_dip.png' ?>" width="50" height="50">
 		</td>-->
-		<td align="center"  colspan="10" style="font-size:18pt;">
+		<td align="left"  colspan="1" style="font-size:18pt;">
+			<img style="" src="<?php echo '../assets/img/logo_DIPROM_full.png' ?>" width="60" height="70">
+			<!--<strong>ใบขออนุญาตใช้รถยนต์ส่วนกลาง<strong>-->
+		</td>
+		<td align="center"  colspan="6" style="font-size:18pt;">
 			<strong>แบบฟอร์มจองห้องประชุม<strong>
 		</td>
 	</tr>
@@ -194,11 +198,21 @@ ob_start();
 	</tr>
 	<tr>
 		<td align="left" colspan="10" style="font-size:14pt;">
-			<?php foreach($getMeetingToolAdd['Data'] as $key => $value2){ ?>
+			<!-- ซ่อนรายการอุปกรณ์ที่ยืมเพิ่มเติม เปลี่ยนเป็น รายการอุปกรณ์โสตแทน -->
+			<!--<?php foreach($getMeetingToolAdd['Data'] as $key => $value2){ ?>
 			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 			<?php echo $value2['TOOL_NAME']." จำนวน ".$value2['TOOL_AMOUNT'];?><br>
-			<?php }?>
+			<?php }?>-->
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			๑.<input type="checkbox">&nbsp;&nbsp;เครื่องคอมพิวเตอร์
+			<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			๒.<input type="checkbox">&nbsp;&nbsp;เครื่อง LCD โปรเจคเตอร์
+			<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			๓.<input type="checkbox">&nbsp;&nbsp; เครื่องขยายเสียง พร้อมตั้งไมค์ จำนวน.........................ตัว
+			<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			๔.<input type="checkbox">&nbsp;&nbsp; อื่นๆ.....................................................................................................
+			<br>
 		</td>
 	</tr>
 	<tr>
