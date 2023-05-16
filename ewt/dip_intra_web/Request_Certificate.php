@@ -719,7 +719,7 @@ jQuery(document).ready(function() {
 			'<input type="hidden" id="CHECK_TH" name="CHECK_TH[]" value="'+chk_th+'">' +
 			'<input type="hidden" id="CHECK_EN" name="CHECK_EN[]" value="'+chk_en+'">' +
 			// '<p class=" m-0" id="COUNT_TOTAL">จำนวน '+ '<input type="number" id="COUNT" name="COUNT[]" min="1" value="'+x+'" style="width: 80px">' +' รายการ</p>' +
-			'<p class=" m-0" id="COUNT_TOTAL">จำนวน '+ '<input type="number" id="COUNT" name="COUNT[]" min="1" value="1" style="width: 80px">' +' รายการ</p>' +
+			'<p class=" m-0" id="COUNT_TOTAL">จำนวน '+ '<input type="number" id="COUNT" name="COUNT[]" min="1" value="1" style="width: 80px">' +' ฉบับ</p>' +
 			
 			// '<a class="mt-2 px-3 btn  border-ra-15px btn-light " onclick="window.open('+text+'PDF/demo.pdf'+text+', '+text+'_blank'+text+',);"><i class="fa-solid fa-magnifying-glass"></i> ดูตัวอย่าง</a>' + 
 
