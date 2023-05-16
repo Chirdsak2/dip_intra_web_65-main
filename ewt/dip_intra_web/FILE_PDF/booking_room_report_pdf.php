@@ -209,9 +209,9 @@ ob_start();
 			<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 			๒.<input type="checkbox">&nbsp;&nbsp;เครื่อง LCD โปรเจคเตอร์
 			<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-			๓.<input type="checkbox">&nbsp;&nbsp; เครื่องขยายเสียง พร้อมตั้งไมค์ จำนวน.........................ตัว
+			๓.<input type="checkbox">&nbsp;&nbsp;เครื่องขยายเสียง พร้อมตั้งไมค์ จำนวน.........................ตัว
 			<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-			๔.<input type="checkbox">&nbsp;&nbsp; อื่นๆ.....................................................................................................
+			๔.<input type="checkbox">&nbsp;&nbsp;อื่นๆ.....................................................................................................
 			<br>
 		</td>
 	</tr>
