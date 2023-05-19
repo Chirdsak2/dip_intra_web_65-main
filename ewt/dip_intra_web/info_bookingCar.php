@@ -173,7 +173,7 @@ $getRequestBookingCarDetail = callAPI('getRequestBookingCarDetail', $data_reques
             <div class="col-lg-6 col-md-12 col-sm-12 col-12 mt-3">
                 <h3 class="h2-color">รายละเอียดรถ</h3>
                 <p class="paragraph-news"><?php echo $CAR_REMARK;?></p>
-                <h4><img class="symbolgrov" src="images/speed.png" alt="img"><span class="ml-2 "><?php echo $CAR_MILEAGE;?> กิโลเมตร</span></h4>
+                <h4><img class="symbolgrov" src="images/speed.png" alt="img"><span class="ml-2 "><?php echo number_format($CAR_MILEAGE, 0, '', ',');?> กิโลเมตร</span></h4>
                 <h3 class="h2-color mt-3">สิ่งอำนวยความสะดวก</h3>
                 <div class="row mb-3">
                     <div class="col-lg-4 col-md-4 col-sm-6 col-12">
@@ -188,30 +188,31 @@ $getRequestBookingCarDetail = callAPI('getRequestBookingCarDetail', $data_reques
                 </div>
 
                 <!-- ข้อมูลผู้ดูแล -->
-                <h3 class="mt-2 h2-color mb-0 mb-0 pr-1 pt-1" style="font-weight: bold;">ผู้รับผิดชอบ</h3>
+                <!--<h3 class="mt-2 h2-color mb-0 mb-0 pr-1 pt-1" style="font-weight: bold;">ผู้ดูแล</h3>-->
                 <div class="row">
-                    <div class="col-lx-6 col-lg-6 col-md-6 col-sm-12 col-12 mt-2">
-                        <!-- shadow-sm -->
+                    <!--<div class="col-lx-6 col-lg-6 col-md-6 col-sm-12 col-12 mt-2">
                         <div class="shadow-sm border-ra-15px">
-                            <!-- ภายในกล่องชื่อผู้รับผิดชอบ -->
                             <div class="row">
-                                <!-- รูปภาพผู้รับผิดชอบ -->
                                 <div class="col-xl-6 col-lg-5 col-md-4 col-sm-3 col-4 d-flex align-items-center">
                                     <img src="images/professor4-1.png" class="h-100 d-block w-100 p-2 border-ra-15px" alt="...">
                                 </div>
-                                <!-- ชื่อ/วันที่/เวลา -->
                                 <div class="col-xl-6 col-lg-7 col-md-8 col-sm-9 col-8 pl-0 mb-2">
-                                    
                                     <h4 class=" mt-1 h2-color mt-3 mb-1 pr-1" style="font-weight: bold;"><?php echo $CAR_KEEPER;?></h4>
-                                    <!--<p class="pb-2">ศส.</p>-->
                                 </div>
                             </div>
+                        </div>
+                    </div>-->
+                    <!-- ผู้ดูแล -->
+                    <div class="col-lx-6 col-lg-6 col-md-3 col-sm-6 col-6 mt-3 px-1 ">
+                        <div class="shadow-sm border-ra-15px txt-purple w-100 fontAw-position">
+                            <h3 class="font-boxfloder mt-1 mb-0 txt-purple pt-1"> ผู้ดูแล</h3>
+                            <h2 class="font-boxfloder txt-purple mt-1 pt-1 pb-3 ">สำนักเลขานุการกรม</h2>
                         </div>
                     </div>
                     <!-- จำนวนคน -->
                     <div class="col-lx-3 col-lg-3 col-md-3 col-sm-6 col-6 mt-3 px-1 ">
                         <div class="shadow-sm border-ra-15px txt-purple w-100 fontAw-position">
-                            <h3 class="font-boxfloder mt-1 mb-0 txt-purple pt-1"> จำนวนคน</h3>
+                            <h3 class="font-boxfloder mt-1 mb-0 txt-purple pt-1"> จำนวนที่นั่ง</h3>
                             <h2 class="font-boxfloder txt-purple mt-1 pt-1 pb-3 "><?php echo $CAR_AMOUNT_SEAT;?></h2>
                         </div>
                     </div>

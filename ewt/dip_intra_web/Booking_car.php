@@ -257,7 +257,7 @@ function get_TH_Date2($date){
 							ทะเบียน : <?php echo $value['CAR_REGISTER'];?>
                         </div>
                         <div class="post-item-date line-height-20px">
-							ระยะไมค์ : <?php echo number_format($value['CAR_MILEAGE'], 0, '', ',');?> กิโลเมตร
+							ระยะไมล์ : <?php echo number_format($value['CAR_MILEAGE'], 0, '', ',');?> กิโลเมตร
                         </div>
                         <div class="post-item-date line-height-20px">
 							ผู้ดูแล : สำนักเลขานุการกรม
