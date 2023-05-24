@@ -728,11 +728,13 @@ jQuery(document).ready(function() {
 		
 		$('#newinput').append(newRowAdd);
 		// alert($('#CHECK_SALARY').length);
+		// alert($('#row').length);
 	});
 	
 	$("body").on("click", "#DeleteRow", function () {
 		i -= 1;
 		$(this).parents("#row").remove();
+		// alert($('#row').length);
 	})
 		
 		
@@ -743,7 +745,9 @@ jQuery(document).ready(function() {
 <script>
 	$(document).ready(function() {
 		$('#form_wf').submit(function(e) {
-			
+			if($('#row').length == 0){
+				alert("กรุณาเพิ่มรายการก่อน");
+			}else{
 				Swal.fire({
                 title: 'ยืนยันการส่งข้อมูล ? ',
                 text: "",
@@ -782,7 +786,7 @@ jQuery(document).ready(function() {
 						});
 					}
 				})
-				
+			}	
 			e.preventDefault();
 		})
 
