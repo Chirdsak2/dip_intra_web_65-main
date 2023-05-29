@@ -12,10 +12,11 @@ $data_request = array(
 						"wfr_id" => $_GET["wfr_id"]
 					);
 $getRequestBookingRoomDetail = callAPI('getRequestBookingRoomDetail', $data_request);
+$getAssessmentRoom = callAPI('getAssessmentRoom', $data_request);
 
-// echo '<pre>';
-// print_r($getRequestBookingRoomDetail);
-// echo '</pre>';
+echo '<br><br><br><br><pre>';
+print_r($getAssessmentRoom);
+echo '</pre>';
 
 $get_rbrd = $getRequestBookingRoomDetail['Data'][0];
 
@@ -29,6 +30,11 @@ $month = date("m");
 $year = date("Y")+543;
 
 $date_now = $day."/".$month."/".$year;
+
+$ANS_01 = $getAssessmentRoom['Data']['ANS_01'];
+$ANS_02 = $getAssessmentRoom['Data']['ANS_02'];
+$ANS_03 = $getAssessmentRoom['Data']['ANS_03'];
+$ANS_MORE = $getAssessmentRoom['Data']['ANS_MORE'];
 ?>
 
 
@@ -150,11 +156,16 @@ p{
 		<div id="ANS_01_BSF_AREA" class="col-md-3 ">ระดับความพึงพอใจ<span class="text-danger">*</span></div>
 		<div id="ANS_01_BSF_AREA" class="col-md-9 wf-left">
 		<div class="form-radio">
-			<div class="radio radio-inline"><input type="radio" name="ANS_01" id="ANS_01" value="5" required="" aria-required="true">ดีมาก</div>
-			<div class="radio radio-inline"><input type="radio" name="ANS_01" id="ANS_01" value="4" required="" aria-required="true">ดี</div>
-			<div class="radio radio-inline"><input type="radio" name="ANS_01" id="ANS_01" value="3" required="" aria-required="true">ปานกลาง</div>
-			<div class="radio radio-inline"><input type="radio" name="ANS_01" id="ANS_01" value="2" required="" aria-required="true">พอใช้</div>
-			<div class="radio radio-inline"><input type="radio" name="ANS_01" id="ANS_01" value="1" required="" aria-required="true">ปรับปรุง</div>
+			<div class="radio radio-inline"><input type="radio" name="ANS_01" id="ANS_01" value="5" required="" aria-required="true"
+			<?php echo ($ANS_01==5 ? "checked":"");?>>ดีมาก</div>
+			<div class="radio radio-inline"><input type="radio" name="ANS_01" id="ANS_01" value="4" required="" aria-required="true"
+			<?php echo ($ANS_01==4 ? "checked":"");?>>ดี</div>
+			<div class="radio radio-inline"><input type="radio" name="ANS_01" id="ANS_01" value="3" required="" aria-required="true"
+			<?php echo ($ANS_01==3 ? "checked":"");?>>ปานกลาง</div>
+			<div class="radio radio-inline"><input type="radio" name="ANS_01" id="ANS_01" value="2" required="" aria-required="true"
+			<?php echo ($ANS_01==2 ? "checked":"");?>>พอใช้</div>
+			<div class="radio radio-inline"><input type="radio" name="ANS_01" id="ANS_01" value="1" required="" aria-required="true"
+			<?php echo ($ANS_01==1 ? "checked":"");?>>ปรับปรุง</div>
 		</div>
 		</div>
 	</div>
@@ -165,11 +176,16 @@ p{
 		<div id="ANS_02_BSF_AREA" class="col-md-3 ">ระดับความพึงพอใจ<span class="text-danger">*</span></div>
 		<div id="ANS_02_BSF_AREA" class="col-md-9 wf-left">
 		<div class="form-radio">
-			<div class="radio radio-inline"><input type="radio" name="ANS_02" id="ANS_02" value="5" required="" aria-required="true">ดีมาก</div>
-			<div class="radio radio-inline"><input type="radio" name="ANS_02" id="ANS_02" value="4" required="" aria-required="true">ดี</div>
-			<div class="radio radio-inline"><input type="radio" name="ANS_02" id="ANS_02" value="3" required="" aria-required="true">ปานกลาง</div>
-			<div class="radio radio-inline"><input type="radio" name="ANS_02" id="ANS_02" value="2" required="" aria-required="true">พอใช้</div>
-			<div class="radio radio-inline"><input type="radio" name="ANS_02" id="ANS_02" value="1" required="" aria-required="true">ปรับปรุง</div>
+			<div class="radio radio-inline"><input type="radio" name="ANS_02" id="ANS_02" value="5" required="" aria-required="true"
+			<?php echo ($ANS_02==5 ? "checked":"");?>>ดีมาก</div>
+			<div class="radio radio-inline"><input type="radio" name="ANS_02" id="ANS_02" value="4" required="" aria-required="true"
+			<?php echo ($ANS_02==4 ? "checked":"");?>>ดี</div>
+			<div class="radio radio-inline"><input type="radio" name="ANS_02" id="ANS_02" value="3" required="" aria-required="true"
+			<?php echo ($ANS_02==3 ? "checked":"");?>>ปานกลาง</div>
+			<div class="radio radio-inline"><input type="radio" name="ANS_02" id="ANS_02" value="2" required="" aria-required="true"
+			<?php echo ($ANS_02==2 ? "checked":"");?>>พอใช้</div>
+			<div class="radio radio-inline"><input type="radio" name="ANS_02" id="ANS_02" value="1" required="" aria-required="true"
+			<?php echo ($ANS_02==1 ? "checked":"");?>>ปรับปรุง</div>
 		</div>
 		</div>
 	</div>
@@ -180,11 +196,16 @@ p{
 		<div id="ANS_03_BSF_AREA" class="col-md-3 ">ระดับความพึงพอใจ<span class="text-danger">*</span></div>
 		<div id="ANS_03_BSF_AREA" class="col-md-9 wf-left">
 		<div class="form-radio">
-			<div class="radio radio-inline"><input type="radio" name="ANS_03" id="ANS_03" value="5" required="" aria-required="true">ดีมาก</div>
-			<div class="radio radio-inline"><input type="radio" name="ANS_03" id="ANS_03" value="4" required="" aria-required="true">ดี</div>
-			<div class="radio radio-inline"><input type="radio" name="ANS_03" id="ANS_03" value="3" required="" aria-required="true">ปานกลาง</div>
-			<div class="radio radio-inline"><input type="radio" name="ANS_03" id="ANS_03" value="2" required="" aria-required="true">พอใช้</div>
-			<div class="radio radio-inline"><input type="radio" name="ANS_03" id="ANS_03" value="1" required="" aria-required="true">ปรับปรุง</div>
+			<div class="radio radio-inline"><input type="radio" name="ANS_03" id="ANS_03" value="5" required="" aria-required="true"
+			<?php echo ($ANS_03==5 ? "checked":"");?>>ดีมาก</div>
+			<div class="radio radio-inline"><input type="radio" name="ANS_03" id="ANS_03" value="4" required="" aria-required="true"
+			<?php echo ($ANS_03==4 ? "checked":"");?>>ดี</div>
+			<div class="radio radio-inline"><input type="radio" name="ANS_03" id="ANS_03" value="3" required="" aria-required="true"
+			<?php echo ($ANS_03==3 ? "checked":"");?>>ปานกลาง</div>
+			<div class="radio radio-inline"><input type="radio" name="ANS_03" id="ANS_03" value="2" required="" aria-required="true"
+			<?php echo ($ANS_03==2 ? "checked":"");?>>พอใช้</div>
+			<div class="radio radio-inline"><input type="radio" name="ANS_03" id="ANS_03" value="1" required="" aria-required="true"
+			<?php echo ($ANS_03==1 ? "checked":"");?>>ปรับปรุง</div>
 		</div>
 		</div>
 	</div>
@@ -203,7 +224,7 @@ p{
 	
 	<div class="form-group row">
 		<div id="ANS_MORE_BSF_AREA" class="col-md-2 ">ข้อเสนอเพิ่มเติม</div>
-		<div id="ANS_MORE_BSF_AREA" class="col-md-8 wf-left"><textarea name="ANS_MORE" id="ANS_MORE" class="form-control  max-textarea" maxlength="500" style="overflow: hidden; overflow-wrap: break-word; resize: none; height: 80px;"></textarea></div>
+		<div id="ANS_MORE_BSF_AREA" class="col-md-8 wf-left"><textarea name="ANS_MORE" id="ANS_MORE" class="form-control  max-textarea" maxlength="500" style="overflow: hidden; overflow-wrap: break-word; resize: none; height: 80px;"><?php echo $ANS_MORE;?></textarea></div>
 	</div>
 	<div class="form-group row">
 		<div id="MAF_DATE_BSF_AREA" class="col-md-2 ">วันที่ทำแบบประเมิน<span class="text-danger">*</span></div>
@@ -229,10 +250,13 @@ p{
 	<div class="row d-flex justify-content-center mt-4 mb-3">
 		
 		<div class=" col-lg-4 col-md-4 col-sm-12 col-12">
+		<?php if($ANS_01 > 0){ ?>
+			<button data-toggle="modal" class="mt-2 mb-6 px-3 btn d-flex 
+			justify-content-center  border-ra-15px btn-success btn-sm" style="width:100%;font-size:20px;"><a style="color: white;width:100%;font-size:20px;" href="Booking_status.php?SYSTEM=1&STATUS=99">กลับหน้าสถานะคำขอ</a></button>
+		<?php }else{ ?>
 			<button id="submit" type="submit" data-toggle="modal" class="mt-2 mb-6 px-3 btn d-flex 
 			justify-content-center  border-ra-15px btn-success btn-sm" style="width:100%;font-size:20px;">ส่งแบบประเมิน</button>
-			<!--<a href="#" data-toggle="modal" data-target=".bd-example-modal-lg " class="mt-2 mb-3 px-3 btn d-flex 
-	justify-content-center  border-ra-15px btn-success btn-sm">ส่งคำขอจองห้องประชุม</a>-->
+		<?php } ?>
 		</div>
 	</div>
 

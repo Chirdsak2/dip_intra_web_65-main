@@ -133,48 +133,6 @@ $getRequestBookingAllList = callAPI('getRequestBookingAllList', $data_request);
 .page-item{
      margin:9px;
 }
-
-@media (min-width: 320px) { 
-	.SYSTEM{
-		margin-top: 8%;
-	}
-	.but_Booking_staus{
-
-	}
-}
-
-@media (min-width: 768px) { 
-	.SYSTEM{
-		margin-top: 8%;
-	}
-}
-
-@media (min-width: 1024px) { 
-	.SYSTEM{
-		margin-top: 10%;
-	}
-	.STATUS{
-		margin-top: 10%;
-	}
-	.but_Booking_staus{
-		margin-top: 17%;
-	}
-}
-
-
-@media (min-width: 1440px) { 
-	.SYSTEM{
-		margin-top: 8%;
-	}
-	.STATUS{
-		margin-top: 8s%;
-	}
-	.but_Booking_staus{
-		margin-top: 13%;
-	}
-}
-
-
 </style>
 
 <div class="container mar-spacehead mb-5">
@@ -209,65 +167,67 @@ $getRequestBookingAllList = callAPI('getRequestBookingAllList', $data_request);
     <hr class="hr_news mt-0">
 
     <div class="row mb-3" >
-        <div class="col-lg-4 col-md-12 col-sm-12 col-12">
-		<div class="row">
-			<div class="col-xl-6">
-				<h5 class="mb-0 Datepick-start-stop"><i class="fa fa-calendar"></i> วันเริ่มต้น</h5>
-				<input class="mt-0  pb-1 border-0 form-control" type="date" id="trip-start" name="trip-start" value="<?php echo $_GET["trip-start"];?>" >
-			</div>
-			<div class="col-xl-6">
-				<h5 class="mb-0 Datepick-start-stop"><i class="fa fa-calendar"></i> วันที่สิ้นสุด</h5>
-				<input class="mt-0  pb-1 border-0 form-control" type="date" id="trip-end" name="trip-end" value="<?php echo $_GET["trip-end"];?>" >
-			</div>
-		</div>
-          <div class=" Datepick-start-stop">
+        <div class="col-lg-4 col-md-6 col-sm-12 col-12 mb-2 ">
+            <div class=" Datepick-start-stop">
                 <div class="row" style="  border: 1px solid #981c9d;  border-radius: 5px;">
-                    <div class="col-lg-6 col-md-6 col-sm-6 col-12 ">
-                        <h5 class=" mb-0"><i class="fa fa-calendar"></i> วันเริ่มต้น</h5>
-                        <input class="mt-0  pb-1 border-0" type="date" id="trip-start" name="trip-start" value="<?php echo $_GET["trip-start"];?>" >
+                    <div class="col-lg-6 col-md-6 col-sm-6 col-6 ">
+                        <h5 class="ml-2 mb-0"><i class="fa fa-calendar"></i> วันเริ่มต้น</h5>
+                        <input class="mt-0 ml-2 pb-1 border-0" type="date" id="trip-start" name="trip-start" value="<?php echo $_GET["trip-start"];?>" >
                     </div>
-                    <div class="col-lg-6 col-md-6 col-sm-6 col-12">
-                        <h5 class=" mb-0"><i class="fa fa-calendar"></i> วันที่สิ้นสุด</h5>
-                        <input class="mt-0  pb-1 border-0" type="date" id="trip-end" name="trip-end" value="<?php echo $_GET["trip-end"];?>" >
+                    <div class="col-lg-6 col-md-6 col-sm-6 col-6 ">
+                        <h5 class="ml-2 mb-0"><i class="fa fa-calendar"></i> วันที่สิ้นสุด</h5>
+                        <input class="mt-0 ml-2 pb-1 border-0" type="date" id="trip-end" name="trip-end" value="<?php echo $_GET["trip-end"];?>" >
                     </div>
                 </div>
-            </div> 
+
+            </div>
         </div>
-        <div class="col-lg-3 col-md-6 col-sm-6 col-12 mb-2">
-			<div class="row">
-				<div class="col-xl-12 ">
-					<div id="SYSTEM_BSF_AREA" class=" ">
-						<select style="height: 38px;" name="SYSTEM" id="SYSTEM" class="form-control SYSTEM" required="" aria-required="true" placeholder="เลือก" tabindex="-1" aria-hidden="true">
-							<option value="99"  >แสดงประเภทคำขอทั้งหมด</option>
-							<option value="1" <?php  echo ($_GET["SYSTEM"]==1 ? "selected":"");?> >จองห้องประชุม</option>
-							<option value="2" <?php  echo ($_GET["SYSTEM"]==2 ? "selected":"");?>>จองยานพาหนะ</option>
-							<option value="3" <?php  echo ($_GET["SYSTEM"]==3 ? "selected":"");?>>ขอหนังสือรับรับรอง</option>
-						</select>
-					</div>
-				</div>
+        <div class="col-lg-3 col-md-6 col-sm-6 col-12">
+            <!--<div class="dropdown show">
+                <a class="btn drop-function-search shadow-sm btn-lg dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    แสดงระบบทั้งหมด
+                </a>
+
+                <div class="dropdown-menu " aria-labelledby="dropdownMenuLink">
+                    <a class="dropdown-item" href="#">จองห้องประชุม</a>
+                    <a class="dropdown-item" href="#">จองยานพาหนะ</a>
+                    <a class="dropdown-item" href="#">ขอหนังสือรับรับรอง</a>
+                </div>
+            </div>-->
+			<div id="SYSTEM_BSF_AREA" class=" ">
+			<select style="height:55px;" name="SYSTEM" id="SYSTEM" class="form-control  " required="" aria-required="true" placeholder="เลือก" tabindex="-1" aria-hidden="true">
+			<option value="99"  >แสดงประเภทคำขอทั้งหมด</option>
+			<option value="1" <?php  echo ($_GET["SYSTEM"]==1 ? "selected":"");?> >จองห้องประชุม</option>
+			<option value="2" <?php  echo ($_GET["SYSTEM"]==2 ? "selected":"");?>>จองยานพาหนะ</option>
+			<option value="3" <?php  echo ($_GET["SYSTEM"]==3 ? "selected":"");?>>ขอหนังสือรับรับรอง</option>
+			</select>
 			</div>
         </div>
-        <div class="col-lg-3 col-md-6 col-sm-6 col-12 mb-2">
-			<div class="row">
-				<div class="col-xl-12">
-					<div id="STATUS_BSF_AREA" class=" ">
-						<select style="height: 38px;" name="STATUS" id="STATUS" class="form-control STATUS" required="" aria-required="true" placeholder="เลือก" tabindex="-1" aria-hidden="true">
-							<option value="99"  >แสดงสถานะทั้งหมด</option>
-							<option value="1" <?php  echo ($_GET["STATUS"]==1 ? "selected":"");?>>ดำเนินการเสร็จสิ้น</option>
-							<option value="2" <?php  echo ($_GET["STATUS"]==2 ? "selected":"");?>>อยู่ระหว่างดำเนินการ</option>
-							<option value="3" <?php  echo ($_GET["STATUS"]==3 ? "selected":"");?>>ไม่ผ่านการอนุมัติ	/ ยกเลิกเสร็จสิ้น</option>
-						</select>
-					</div>
-				</div>
+        <div class="col-lg-3 col-md-6 col-sm-6 col-12">
+            <!--<div class="dropdown show">
+                <a class="btn drop-function-search shadow-sm btn-lg dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    แสดงสถานะทั้งหมด
+                </a>
+
+                <div class="dropdown-menu " aria-labelledby="dropdownMenuLink">
+                    <a class="dropdown-item" href="#">Action</a>
+                    <a class="dropdown-item" href="#">Another action</a>
+                    <a class="dropdown-item" href="#">Something else here</a>
+                </div>
+            </div>-->
+			<div id="STATUS_BSF_AREA" class=" ">
+			<select style="height:55px;" name="STATUS" id="STATUS" class="form-control  " required="" aria-required="true" placeholder="เลือก" tabindex="-1" aria-hidden="true">
+			<option value="99"  >แสดงสถานะทั้งหมด</option>
+			<option value="1" <?php  echo ($_GET["STATUS"]==1 ? "selected":"");?>>ดำเนินการเสร็จสิ้น</option>
+			<option value="2" <?php  echo ($_GET["STATUS"]==2 ? "selected":"");?>>อยู่ระหว่างดำเนินการ</option>
+			<option value="3" <?php  echo ($_GET["STATUS"]==3 ? "selected":"");?>>ไม่ผ่านการอนุมัติ	/ ยกเลิกเสร็จสิ้น</option>
+			</select>
 			</div>
+
         </div>
-        <div class="col-lg-2 col-md-12 col-sm-12 col-12">
-		<div class="row">
-			<div class="col-xl-12 text-center">
-				 <!--<button type="submit" class="btn-search btn Gradient-Color shadow-sm btn-sm mt-2"><i class="fa fa-search"></i> ค้นหาประวัติ</button>-->
-				 <a onclick="search_data()"  class="btn-search btn Gradient-Color shadow-sm btn-sm but_Booking_staus" role="button" aria-pressed="true">ค้นหาประวัติ</a>
-			</div>
-		</div>
+        <div class="col-lg-2 col-md-6 col-sm-12 col-12 p">
+            <!--<button type="submit" class="btn-search btn Gradient-Color shadow-sm btn-sm mt-2"><i class="fa fa-search"></i> ค้นหาประวัติ</button>-->
+			 <a onclick="search_data()" class="btn-search btn Gradient-Color shadow-sm btn-sm mt-2" role="button" aria-pressed="true">ค้นหาประวัติ</a>
         </div>
     </div>
 </form>
@@ -369,7 +329,8 @@ $getRequestBookingAllList = callAPI('getRequestBookingAllList', $data_request);
 					
 					// ERROR $value['REQ_DATE_OG']
 					/* $p10 .= '<a style="width:80px;text-align:center;" type="button" class=" " onclick="window.open('."'".'FILE_PDF/booking_room_report_pdf.php?CB_PER_ID='.$value['REQ_NAME'].'&CB_AREA='.$value['ROOM_NAME'].'&CB_MEMBER='.$value['MEETING_NUM_PP'].'&CB_OBJ='.$value['MEETING_TOPIC'].'&MEETING_DATE='.$value['MEETING_DATE2'].'&MEETING_EDATE='.$value['MEETING_EDATE2'].'&STIME='.$value['STIME'].'&ETIME='.$value['ETIME'].'&REQ_TEL='.$value['REQ_TEL'].'&CAR_REGISTER='.$get_CAR_REGISTER.'&DEP_NAME1='.$chk['DEP_NAME1'].'&DEP_NAME2='.$chk['DEP_NAME2'].'&POS_NAME='.$chk['POS_NAME'].'&APP_1='.$app_room_1.'&APP_1_NAME='.$app1_dep_room_name.'&APP_2_NAME='.$short_dep[$value["DEP_KEEPER_SSO"]].'&APP_2='.$app_room_2.'&MEETINH_CHAIRMAN='.$value['MEETINH_CHAIRMAN'].'&WFR_ID='.$value["WFR_ID"].'&CB_RECORD='.$value['REQ_DATE_OG'].' '."'".', '."'".'_blank'."'".',);" > download</a>'; */
-					$p10 .= '<a style="width:80px;text-align:center;" type="button" class=" " onclick="window.open('."'".'FILE_PDF/booking_room_report_pdf.php?CB_PER_ID='.$value['REQ_NAME'].'&CB_AREA='.$value['ROOM_NAME'].'&CB_MEMBER='.$value['MEETING_NUM_PP'].'&CB_OBJ='.$value['MEETING_TOPIC'].'&MEETING_DATE='.$value['MEETING_DATE2'].'&MEETING_EDATE='.$value['MEETING_EDATE2'].'&STIME='.$value['STIME'].'&ETIME='.$value['ETIME'].'&REQ_TEL='.$value['REQ_TEL'].'&CAR_REGISTER='.$get_CAR_REGISTER.'&DEP_NAME1='.$chk['DEP_NAME1'].'&DEP_NAME2='.$chk['DEP_NAME2'].'&POS_NAME='.$chk['POS_NAME'].'&APP_1='.$app_room_1.'&APP_1_NAME='.$app1_dep_room_name.'&APP_2_NAME='.$short_dep[$value["DEP_KEEPER_SSO"]].'&APP_2='.$app_room_2.'&MEETINH_CHAIRMAN='.$value['MEETINH_CHAIRMAN'].'&WFR_ID='.$value["WFR_ID"].' '."'".', '."'".'_blank'."'".',);" > download</a>';
+					/* $p10 .= '<a style="width:80px;text-align:center;" type="button" class=" " onclick="window.open('."'".'FILE_PDF/booking_room_report_pdf.php?CB_PER_ID='.$value['REQ_NAME'].'&CB_AREA='.$value['ROOM_NAME'].'&CB_MEMBER='.$value['MEETING_NUM_PP'].'&CB_OBJ='.$value['MEETING_TOPIC'].'&MEETING_DATE='.$value['MEETING_DATE2'].'&MEETING_EDATE='.$value['MEETING_EDATE2'].'&STIME='.$value['STIME'].'&ETIME='.$value['ETIME'].'&REQ_TEL='.$value['REQ_TEL'].'&CAR_REGISTER='.$get_CAR_REGISTER.'&DEP_NAME1='.$chk['DEP_NAME1'].'&DEP_NAME2='.$chk['DEP_NAME2'].'&POS_NAME='.$chk['POS_NAME'].'&APP_1='.$app_room_1.'&APP_1_NAME='.$app1_dep_room_name.'&APP_2_NAME='.$short_dep[$value["DEP_KEEPER_SSO"]].'&APP_2='.$app_room_2.'&MEETINH_CHAIRMAN='.$value['MEETINH_CHAIRMAN'].'&WFR_ID='.$value["WFR_ID"].' '."'".', '."'".'_blank'."'".',);" > download</a>'; */
+					$p10 .= '<a style="width:80px;text-align:center;" type="button" class=" " onclick="window.open('."'".'FILE_PDF/booking_room_report_pdf.php?CB_PER_ID='.$value['REQ_NAME'].'&CB_AREA='.$value['ROOM_NAME'].'&CB_MEMBER='.$value['MEETING_NUM_PP'].'&CB_OBJ='.$value['MEETING_TOPIC'].'&MEETING_DATE='.$value['MEETING_DATE2'].'&MEETING_EDATE='.$value['MEETING_EDATE2'].'&STIME='.$value['STIME'].'&ETIME='.$value['ETIME'].'&REQ_TEL='.$value['REQ_TEL'].'&CAR_REGISTER='.$get_CAR_REGISTER.'&DEP_NAME1='.$chk['DEP_NAME1'].'&POS_NAME='.$chk['POS_NAME'].'&APP_1='.$app_room_1.'&APP_1_NAME='.$app1_dep_room_name.'&APP_2_NAME='.$short_dep[$value["DEP_KEEPER_SSO"]].'&APP_2='.$app_room_2.'&MEETINH_CHAIRMAN='.$value['MEETINH_CHAIRMAN'].'&WFR_ID='.$value["WFR_ID"].' '."'".', '."'".'_blank'."'".',);" > download</a>';
 					
 					$img2 = '<img src="images/'.$get_ROOM_PIC_NAME.'" class="d-block w-100" alt="...">';
 					
@@ -396,7 +357,8 @@ $getRequestBookingAllList = callAPI('getRequestBookingAllList', $data_request);
 						
 						if($value['MEETING_DATE2'] <= date('Y-m-d')){ // ต้องถึงวันที่ประชุมแล้วถึงจะประเมินได้
 							if($value['ANS_01']){ // ประเมินแล้ว
-							$btn_estimate = '<p style="color:green;">ประเมินแล้ว</p>';	
+							$btn_estimate = '<a style="color:green;" href="form_estimateRoom.php?wfr_id='.$value["WFR_ID"].'" target="_blank">ดูผลการประเมิน</a>';
+							
 							}else { // ยังไม่ได้ประเมิน
 							$btn_estimate = '<a style="height:30px;padding:4px 10px 1px 10px;font-size: 14px;" href="form_estimateRoom.php?wfr_id='.$value["WFR_ID"].'" target="_blank" class="btn btn-success btn-mini">ประเมิน</a>';
 							}
@@ -519,8 +481,7 @@ $getRequestBookingAllList = callAPI('getRequestBookingAllList', $data_request);
 					$app1_dep_name = $short_dep[$chk_app_1["DEP_LV2_ID"]];// ผ่าน (ตำแหน่งย่อ)
 					
 					## ERROR POS_LEVEL_NAME ##
-					/* $p10 .= '<a style="width:80px;text-align:center;" type="button" class=" " onclick="window.open('."'".'FILE_PDF/booking_car_report_pdf.php?CB_PER_ID='.$get_CB_PER_ID.'&CB_AREA='.$value['ROOM_NAME'].'&CB_MEMBER='.$value['MEETING_NUM_PP'].'&CB_OBJ='.$value['MEETING_TOPIC'].'&MEETING_DATE='.$value['MEETING_DATE2'].'&MEETING_EDATE='.$value['MEETING_EDATE2'].'&STIME='.$value['STIME'].'&ETIME='.$value['ETIME'].'&REQ_TEL='.$value['REQ_TEL'].'&DEP_NAME1='.$chk['DEP_NAME1'].'&DEP_NAME2='.$chk['DEP_NAME2'].'&POS_NAME='.$chk['POS_NAME'].'&POS_LEVEL_NAME='.$chk2['POS_LEVEL_NAME'].'&APP_1='.$app_1.'&APP_1_NAME='.$app1_dep_name.'&APP_2='.$app_2.'&CAR_REGISTER='.$get_CAR_REGISTER2.'&CB_RECORD='.$getRequestBookingCarDetail['Data'][0]['W_CAR_MILEAGE'].'&W_CAR_MILEAGE='.$getRequestBookingCarDetail['Data'][0]['W_CAR_MILEAGE'].'&R_CAR_MILEAGE='.$getRequestBookingCarDetail['Data'][0]['R_CAR_MILEAGE'].'&CS_PER_NAME='.$getRequestBookingCarDetail['Data'][0]['ALLOCATE_NAME'].' '."'".', '."'".'_blank'."'".',);" > download</a>'; */
-					$p10 .= '<a style="width:80px;text-align:center;" type="button" class=" " onclick="window.open('."'".'FILE_PDF/booking_car_report_pdf.php?CB_PER_ID='.$get_CB_PER_ID.'&CB_AREA='.$value['ROOM_NAME'].'&CB_MEMBER='.$value['MEETING_NUM_PP'].'&CB_OBJ='.$value['MEETING_TOPIC'].'&MEETING_DATE='.$value['MEETING_DATE2'].'&MEETING_EDATE='.$value['MEETING_EDATE2'].'&STIME='.$value['STIME'].'&ETIME='.$value['ETIME'].'&REQ_TEL='.$value['REQ_TEL'].'&DEP_NAME1='.$chk['DEP_NAME1'].'&DEP_NAME2='.$chk['DEP_NAME2'].'&POS_NAME='.$chk['POS_NAME'].'&APP_1='.$app_1.'&APP_1_NAME='.$app1_dep_name.'&APP_2='.$app_2.'&CAR_REGISTER='.$get_CAR_REGISTER2.'&W_CAR_MILEAGE='.$getRequestBookingCarDetail['Data'][0]['W_CAR_MILEAGE'].'&R_CAR_MILEAGE='.$getRequestBookingCarDetail['Data'][0]['R_CAR_MILEAGE'].'&CS_PER_NAME='.$getRequestBookingCarDetail['Data'][0]['ALLOCATE_NAME'].' '."'".', '."'".'_blank'."'".',);" > download</a>';
+					$p10 .= '<a style="width:80px;text-align:center;" type="button" class=" " onclick="window.open('."'".'FILE_PDF/booking_car_report_pdf.php?CB_PER_ID='.$get_CB_PER_ID.'&CB_AREA='.$value['ROOM_NAME'].'&CB_MEMBER='.$value['MEETING_NUM_PP'].'&CB_OBJ='.$value['MEETING_TOPIC'].'&MEETING_DATE='.$value['MEETING_DATE2'].'&MEETING_EDATE='.$value['MEETING_EDATE2'].'&STIME='.$value['STIME'].'&ETIME='.$value['ETIME'].'&REQ_TEL='.$value['REQ_TEL'].'&DEP_NAME1='.$chk['DEP_NAME1'].'&POS_NAME='.$chk['POS_NAME'].'&APP_1='.$app_1.'&APP_1_NAME='.$app1_dep_name.'&APP_2='.$app_2.'&CAR_REGISTER='.$get_CAR_REGISTER2.'&W_CAR_MILEAGE='.$getRequestBookingCarDetail['Data'][0]['W_CAR_MILEAGE'].'&R_CAR_MILEAGE='.$getRequestBookingCarDetail['Data'][0]['R_CAR_MILEAGE'].'&CS_PER_NAME='.$getRequestBookingCarDetail['Data'][0]['ALLOCATE_NAME'].' '."'".', '."'".'_blank'."'".',);" > download</a>';
 					
 					if($get_CAR_PIC_NAME){
 						$img2 = '<img src="images/'.$get_CAR_PIC_NAME.'" class="d-block w-100" alt="...">';
@@ -538,7 +499,7 @@ $getRequestBookingAllList = callAPI('getRequestBookingAllList', $data_request);
 						
 						if($value['TRAVEL_STATUS'] == 1){//เดินทางเสร็จสิ้น
 							if($value['ANS_01']){ // ประเมินแล้ว
-								$btn_estimate = '<p style="color:green;">ประเมินแล้ว</p>';	
+								$btn_estimate = '<a style="color:green;" href="form_estimateCar.php?wfr_id='.$value["WFR_ID"].'" target="_blank">ดูผลการประเมิน</a>';	
 							}else { // ยังไม่ได้ประเมิน
 								$btn_estimate = '<a style="height:30px;padding:4px 10px 1px 10px;font-size: 14px;" href="form_estimateCar.php?wfr_id='.$value["WFR_ID"].'" target="_blank" class="btn btn-success btn-mini">ประเมิน</a>';
 							}
