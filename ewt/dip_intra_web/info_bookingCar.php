@@ -205,7 +205,7 @@ $getRequestBookingCarDetail = callAPI('getRequestBookingCarDetail', $data_reques
                     <!-- ผู้ดูแล -->
                     <div class="col-lx-6 col-lg-6 col-md-3 col-sm-6 col-6 mt-3 px-1 ">
                         <div class="shadow-sm border-ra-15px txt-purple w-100 fontAw-position">
-                            <h3 class="font-boxfloder mt-1 mb-0 txt-purple pt-1"> ผู้ดูแล</h3>
+                            <h3 class="font-boxfloder mt-1 mb-0 txt-purple pt-1">หน่วยงานที่รับผิดชอบ</h3>
                             <h2 class="font-boxfloder txt-purple mt-1 pt-1 pb-3 ">สำนักเลขานุการกรม</h2>
                         </div>
                     </div>

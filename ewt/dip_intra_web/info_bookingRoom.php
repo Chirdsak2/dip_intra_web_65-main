@@ -21,6 +21,7 @@ $getRoomDetail = callAPI('getRoomDetail', $data_request);
 	$ROOM_DETAIL = $getRoomDetail['Data']['ROOM_DETAIL'];
 	$SEAT_AMOUNT = $getRoomDetail['Data']['SEAT_AMOUNT'];
 	$ROOM_NUMBER = $getRoomDetail['Data']['ROOM_NUMBER'];
+	$DEP_KEEPER_NAME = $getRoomDetail['Data']['DEP_KEEPER_NAME'];
 	$ROOM_PIC_NAME = $getRoomDetail['Data']['ROOM_PIC_NAME'];
  }
 
@@ -192,25 +193,26 @@ $getRequestBookingRoomDetail = callAPI('getRequestBookingRoomDetail', $data_requ
                 </div>
 
                 <!-- ข้อมูลผู้ดูแล -->
-                <h3 class="mt-2 h2-color mb-0 mb-0 pr-1 pt-1" style="font-weight: bold;">ผู้รับผิดชอบ</h3>
+                <!--<h3 class="mt-2 h2-color mb-0 mb-0 pr-1 pt-1" style="font-weight: bold;">ผู้รับผิดชอบ</h3>-->
                 <div class="row">
-                    <div class="col-lx-6 col-lg-6 col-md-6 col-sm-12 col-12 mt-2">
-                        <!-- shadow-sm -->
+                    <!--<div class="col-lx-6 col-lg-6 col-md-6 col-sm-12 col-12 mt-2">
                         <div class="shadow-sm border-ra-15px">
-                            <!-- ภายในกล่องชื่อผู้รับผิดชอบ -->
                             <div class="row">
-                                <!-- รูปภาพผู้รับผิดชอบ -->
                                 <div class="col-xl-6 col-lg-5 col-md-4 col-sm-3 col-4 d-flex align-items-center">
                                     <img src="images/professor1-1.png" class="้h-100 d-block w-100 p-2 border-ra-15px" alt="...">
                                 </div>
-                                <!-- ชื่อ/วันที่/เวลา -->
                                 <div class="col-xl-6 col-lg-7 col-md-8 col-sm-9 col-8 pl-0 ">
 
                                     <h4 class=" mt-1 h2-color  mt-3 mb-0 pr-1" style="font-weight: bold;"><?php echo $ROOM_KEEPER;?></h4>
-                                    <!--<p class="mb-0">ศส.</p>
-                                    <p class="">091-XXX-XXXX</p>-->
                                 </div>
                             </div>
+                        </div>
+                    </div>-->
+                    <!-- ผู้ดูแล -->
+                    <div class="col-lx-6 col-lg-6 col-md-3 col-sm-6 col-6 mt-3 px-1 ">
+                        <div class="shadow-sm border-ra-15px txt-purple w-100 fontAw-position">
+                            <h3 class="font-boxfloder mt-1 mb-0 txt-purple pt-1">หน่วยงานที่รับผิดชอบ</h3>
+                            <h2 class="font-boxfloder txt-purple mt-1 pt-1 pb-3 "><?php echo $DEP_KEEPER_NAME;?></h2>
                         </div>
                     </div>
                     <!-- จำนวนคน -->
