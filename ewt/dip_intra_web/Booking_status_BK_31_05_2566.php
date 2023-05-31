@@ -327,6 +327,9 @@ $getRequestBookingAllList = callAPI('getRequestBookingAllList', $data_request);
 					$chk_app_room_1 = dbdpis::Fetch($q_app_room_1);
 					$app1_dep_room_name = $short_dep[$chk_app_room_1["DEP_LV2_ID"]];// ผ่าน (ตำแหน่งย่อ) 
 					
+					// ERROR $value['REQ_DATE_OG']
+					/* $p10 .= '<a style="width:80px;text-align:center;" type="button" class=" " onclick="window.open('."'".'FILE_PDF/booking_room_report_pdf.php?CB_PER_ID='.$value['REQ_NAME'].'&CB_AREA='.$value['ROOM_NAME'].'&CB_MEMBER='.$value['MEETING_NUM_PP'].'&CB_OBJ='.$value['MEETING_TOPIC'].'&MEETING_DATE='.$value['MEETING_DATE2'].'&MEETING_EDATE='.$value['MEETING_EDATE2'].'&STIME='.$value['STIME'].'&ETIME='.$value['ETIME'].'&REQ_TEL='.$value['REQ_TEL'].'&CAR_REGISTER='.$get_CAR_REGISTER.'&DEP_NAME1='.$chk['DEP_NAME1'].'&DEP_NAME2='.$chk['DEP_NAME2'].'&POS_NAME='.$chk['POS_NAME'].'&APP_1='.$app_room_1.'&APP_1_NAME='.$app1_dep_room_name.'&APP_2_NAME='.$short_dep[$value["DEP_KEEPER_SSO"]].'&APP_2='.$app_room_2.'&MEETINH_CHAIRMAN='.$value['MEETINH_CHAIRMAN'].'&WFR_ID='.$value["WFR_ID"].'&CB_RECORD='.$value['REQ_DATE_OG'].' '."'".', '."'".'_blank'."'".',);" > download</a>'; */
+					/* $p10 .= '<a style="width:80px;text-align:center;" type="button" class=" " onclick="window.open('."'".'FILE_PDF/booking_room_report_pdf.php?CB_PER_ID='.$value['REQ_NAME'].'&CB_AREA='.$value['ROOM_NAME'].'&CB_MEMBER='.$value['MEETING_NUM_PP'].'&CB_OBJ='.$value['MEETING_TOPIC'].'&MEETING_DATE='.$value['MEETING_DATE2'].'&MEETING_EDATE='.$value['MEETING_EDATE2'].'&STIME='.$value['STIME'].'&ETIME='.$value['ETIME'].'&REQ_TEL='.$value['REQ_TEL'].'&CAR_REGISTER='.$get_CAR_REGISTER.'&DEP_NAME1='.$chk['DEP_NAME1'].'&DEP_NAME2='.$chk['DEP_NAME2'].'&POS_NAME='.$chk['POS_NAME'].'&APP_1='.$app_room_1.'&APP_1_NAME='.$app1_dep_room_name.'&APP_2_NAME='.$short_dep[$value["DEP_KEEPER_SSO"]].'&APP_2='.$app_room_2.'&MEETINH_CHAIRMAN='.$value['MEETINH_CHAIRMAN'].'&WFR_ID='.$value["WFR_ID"].' '."'".', '."'".'_blank'."'".',);" > download</a>'; */
 					$p10 .= '<a style="width:80px;text-align:center;" type="button" class=" " onclick="window.open('."'".'FILE_PDF/booking_room_report_pdf.php?CB_PER_ID='.$value['REQ_NAME'].'&CB_AREA='.$value['ROOM_NAME'].'&CB_MEMBER='.$value['MEETING_NUM_PP'].'&CB_OBJ='.$value['MEETING_TOPIC'].'&MEETING_DATE='.$value['MEETING_DATE2'].'&MEETING_EDATE='.$value['MEETING_EDATE2'].'&STIME='.$value['STIME'].'&ETIME='.$value['ETIME'].'&REQ_TEL='.$value['REQ_TEL'].'&CAR_REGISTER='.$get_CAR_REGISTER.'&DEP_NAME1='.$chk['DEP_NAME1'].'&POS_NAME='.$chk['POS_NAME'].'&APP_1='.$app_room_1.'&APP_1_NAME='.$app1_dep_room_name.'&APP_2_NAME='.$short_dep[$value["DEP_KEEPER_SSO"]].'&APP_2='.$app_room_2.'&MEETINH_CHAIRMAN='.$value['MEETINH_CHAIRMAN'].'&WFR_ID='.$value["WFR_ID"].' '."'".', '."'".'_blank'."'".',);" > download</a>';
 					
 					$img2 = '<img src="images/'.$get_ROOM_PIC_NAME.'" class="d-block w-100" alt="...">';
@@ -347,8 +350,8 @@ $getRequestBookingAllList = callAPI('getRequestBookingAllList', $data_request);
 							$btn_cancel = '<p style="color:orange;">รอพิจารณายกเลิก</p>';
 							}else{ // ยังไม่ขอยกเลิก
 							## ถ้าจะเปิดยกเลิก เปิดตรงนี้ ##
-							$btn_cancel = "<button  style='height:30px;padding:1px 10px 1px 10px;font-size: 14px;' class='btn btn-warning btn-mini' data-toggle='tooltip' title='ขอยกเลิกการจอง'  id='btn_cancel' name='btn_cancel'  onclick='cancel_list(".$value['WFR_ID'].")'  value='".$value['WFR_ID']."'>ยกเลิก</button>";
-							// $btn_cancel = '';
+							/* $btn_cancel = "<button  style='height:30px;padding:1px 10px 1px 10px;font-size: 14px;' class='btn btn-warning btn-mini' data-toggle='tooltip' title='ขอยกเลิกการจอง'  id='btn_cancel' name='btn_cancel'  onclick='cancel_list(".$value['WFR_ID'].")'  value='".$value['WFR_ID']."'>ยกเลิก</button>"; */
+							$btn_cancel = '';
 							}
 						}
 						
@@ -373,8 +376,8 @@ $getRequestBookingAllList = callAPI('getRequestBookingAllList', $data_request);
 							$btn_cancel = '<p style="color:orange;">รอพิจารณายกเลิก</p>';
 							}else{ // ยังไม่ขอยกเลิก
 							## ถ้าจะเปิดยกเลิก เปิดตรงนี้ ##
-							$btn_cancel = "<button  style='height:30px;padding:1px 10px 1px 10px;font-size: 14px;' class='btn btn-warning btn-mini' data-toggle='tooltip' title='ขอยกเลิกการจอง'  id='btn_cancel' name='btn_cancel'  onclick='cancel_list(".$value['WFR_ID'].")'  value='".$value['WFR_ID']."'>ยกเลิก</button>";
-							// $btn_cancel = '';
+							/* $btn_cancel = "<button  style='height:30px;padding:1px 10px 1px 10px;font-size: 14px;' class='btn btn-warning btn-mini' data-toggle='tooltip' title='ขอยกเลิกการจอง'  id='btn_cancel' name='btn_cancel'  onclick='cancel_list(".$value['WFR_ID'].")'  value='".$value['WFR_ID']."'>ยกเลิก</button>"; */
+							$btn_cancel = '';
 							}
 						}
 					}else if ($value['APPROVE_STATUS1'] == 1 && $value['APPROVE_STATUS2'] == 0 && $value['APPROVE_STATUS3'] == 0){
@@ -505,26 +508,8 @@ $getRequestBookingAllList = callAPI('getRequestBookingAllList', $data_request);
 						}
 					}else if($value['APPROVE_STATUS1']==1 && $value['APPROVE_STATUS2']==1){
 						$status = "<font color='orange'>รอการจัดสรรยานพาหนะ</font>";
-						if($value['MEETING_DATE2'] > date('Y-m-d')){ // ยกเลิกได้ก่อนถึงวันที่จองเท่านั้น
-							if($value['CANCEL_STATUS1'] == '9' || $value['CANCEL_STATUS1'] == '1'){ // ขอยกเลิกแล้ว
-							$btn_cancel = '<p style="color:orange;">รอพิจารณายกเลิก</p>';
-							}else{ // ยังไม่ขอยกเลิก
-							## ถ้าจะเปิดยกเลิก เปิดตรงนี้ ##
-							$btn_cancel = "<button  style='height:30px;padding:1px 10px 1px 10px;font-size: 14px;' class='btn btn-warning btn-mini' data-toggle='tooltip' title='ขอยกเลิกการจอง'  id='btn_cancel_car' name='btn_cancel_car'  onclick='cancel_car_list(".$value['WFR_ID'].")'  value='".$value['WFR_ID']."'>ยกเลิก</button>";
-							// $btn_cancel = '';
-							}
-						}
 					}else if($value['APPROVE_STATUS1']==1 && $value['APPROVE_STATUS2']==0){
 						$status = "<font color='orange'>รอการอนุมัติ/อนุญาต</font>";
-						if($value['MEETING_DATE2'] > date('Y-m-d')){ // ยกเลิกได้ก่อนถึงวันที่จองเท่านั้น
-							if($value['CANCEL_STATUS1'] == '9' || $value['CANCEL_STATUS1'] == '1'){ // ขอยกเลิกแล้ว
-							$btn_cancel = '<p style="color:orange;">รอพิจารณายกเลิก</p>';
-							}else{ // ยังไม่ขอยกเลิก
-							## ถ้าจะเปิดยกเลิก เปิดตรงนี้ ##
-							$btn_cancel = "<button  style='height:30px;padding:1px 10px 1px 10px;font-size: 14px;' class='btn btn-warning btn-mini' data-toggle='tooltip' title='ขอยกเลิกการจอง'  id='btn_cancel_car' name='btn_cancel_car'  onclick='cancel_car_list(".$value['WFR_ID'].")'  value='".$value['WFR_ID']."'>ยกเลิก</button>";
-							// $btn_cancel = '';
-							}
-						}
 					}else if($value['APPROVE_STATUS1']==0 && $value['APPROVE_STATUS2']==0){
 						$status = "<font color='orange'>รอการผ่านความเห็นชอบ</font>";
 						$btn_del = "<button style='height:30px;padding:1px 10px 1px 10px;font-size: 14px;' class='btn btn-danger btn-mini' data-toggle='tooltip' title='สามารถลบได้ทันที หากยังไม่ผ่านความเห็นชอบ'  id='btn_del' name='btn_del' onclick='del_list(".$value['WFR_ID'].",7047)' value='".$value['WFR_ID']."'>ลบ</button>";
@@ -933,55 +918,6 @@ function cancel_list(wfr_id) {//cancel_room_booking
 				url: 'save/cancel_room_booking.php',
 				type: 'POST',
 				data: {wfr_id:wfr_id,wf_main_id:'6682',proc:'cancel',note:result.value} ,
-				success: function(data) {
-					console.log(data);
-
-					if (data == 1) {
-						Swal.fire(
-							'ทำรายการสำเร็จ',
-							' ',
-							'success'
-							
-						).then(function() {
-							window.location = "Booking_status.php";
-						});
-					} else {
-						Swal.fire(
-							'ทำรายการไม่สำเร็จ',
-							' ',
-							'error'
-						)
-					}
-
-				}
-			});
-		}
-	})
-};
-
-function cancel_car_list(wfr_id) {//cancel_car_booking
-	
-	// var wfr_id
-	// wfr_id = $( "#btn_cancel" ).val();
-	// alert( wfr_id );
-	Swal.fire({
-			title: 'ยืนยันการขอยกเลิก ? ',
-			text: "กรุณากรอกเหตุผลที่ขอยกเลิกการจอง",
-			input: 'text',
-			icon: 'warning',
-			showCancelButton: true,
-			confirmButtonColor: '#00ad0d',
-			cancelButtonColor: '#d33',
-			confirmButtonText: 'ยืนยัน',
-			cancelButtonText: 'ยกเลิก'
-	}).then((result) => {
-		// if (result.isConfirmed) {
-		if (result.value) {
-			// // //ส่วนของการส่งข้อมูล แบบ ajax โดยใช้ jquery
-			$.ajax({
-				url: 'save/cancel_room_booking.php',
-				type: 'POST',
-				data: {wfr_id:wfr_id,wf_main_id:'7047',proc:'cancel',note:result.value} ,
 				success: function(data) {
 					console.log(data);
 
