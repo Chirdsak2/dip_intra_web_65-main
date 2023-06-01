@@ -493,8 +493,15 @@ $getRequestBookingAllList = callAPI('getRequestBookingAllList', $data_request);
 						}else { // ยังไม่ได้ประเมิน
 						$btn_estimate = '<a href="form_estimateCar.php?wfr_id='.$value["WFR_ID"].'" target="_blank" class="btn btn-success btn-mini">ประเมิน</a>';
 						} */
-						
-						if($value['TRAVEL_STATUS'] == 1){//เดินทางเสร็จสิ้น
+						if($value['MEETING_DATE2'] > date('Y-m-d')){ // ยกเลิกได้ก่อนถึงวันที่จองเท่านั้น
+							if($value['CANCEL_STATUS1'] == '9' || $value['CANCEL_STATUS1'] == '1'){ // ขอยกเลิกแล้ว
+							$btn_cancel = '<p style="color:orange;">รอพิจารณายกเลิก</p>';
+							}else{ // ยังไม่ขอยกเลิก
+							## ถ้าจะเปิดยกเลิก เปิดตรงนี้ ##
+							$btn_cancel = "<button  style='height:30px;padding:1px 10px 1px 10px;font-size: 14px;' class='btn btn-warning btn-mini' data-toggle='tooltip' title='ขอยกเลิกการจอง'  id='btn_cancel_car' name='btn_cancel_car'  onclick='cancel_car_list(".$value['WFR_ID'].")'  value='".$value['WFR_ID']."'>ยกเลิก</button>";
+							// $btn_cancel = '';
+							}
+						}else if($value['TRAVEL_STATUS'] == 1){//เดินทางเสร็จสิ้น
 							if($value['ANS_01']){ // ประเมินแล้ว
 								$btn_estimate = '<a style="color:green;" href="form_estimateCar.php?wfr_id='.$value["WFR_ID"].'" target="_blank">ดูผลการประเมิน</a>';	
 							}else { // ยังไม่ได้ประเมิน
