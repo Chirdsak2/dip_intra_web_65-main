@@ -1162,4 +1162,4 @@ function search_data() {
 		var data = $('#form_wf').serialize();
 		window.location = "Booking_status.php?"+data;
 	}
-</script>
+</script> 
