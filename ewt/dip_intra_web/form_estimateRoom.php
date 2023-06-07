@@ -14,9 +14,9 @@ $data_request = array(
 $getRequestBookingRoomDetail = callAPI('getRequestBookingRoomDetail', $data_request);
 $getAssessmentRoom = callAPI('getAssessmentRoom', $data_request);
 
-echo '<br><br><br><br><pre>';
-print_r($getAssessmentRoom);
-echo '</pre>';
+// echo '<br><br><br><br><pre>';
+// print_r($getAssessmentRoom);
+// echo '</pre>';
 
 $get_rbrd = $getRequestBookingRoomDetail['Data'][0];
 
