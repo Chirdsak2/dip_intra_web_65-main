@@ -393,7 +393,7 @@ $(document).ready(function() {
 										'success'
 										
 									).then(function() {
-										window.location = "Booking_room.php";
+										window.location = "Booking_status.php?SYSTEM=1&STATUS=99";
 									});
 								} else {
 									Swal.fire(
@@ -496,7 +496,7 @@ $(document).ready(function() {
 						$('#TIME_END').val('');
 						CallAlert("กรุณาระบุช่วงเวลาการประชุมอย่างน้อย "+html.room_diff+"นาที");
 						// CallAlert("ห้องไม่ว่างในช่วงเวลาที่ท่านเลือก");
-					}else{  */
+					}else{ */
 						if(html.equip_main2 == '0'){//ถ้าห้องว่าง
 							if(num_pp > 0 && num_pp != '' && $('#TIME_START').val() != '' && $('#TIME_END').val() != '' && $('#REQ_TEL').val() != '' && $('#REQ_TEL_CON').val() != ''){
 								$('#wf-btn-save').removeAttr("disabled");

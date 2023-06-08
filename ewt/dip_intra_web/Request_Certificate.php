@@ -772,7 +772,7 @@ jQuery(document).ready(function() {
 										'success'
 										
 									).then(function() {
-										window.location = "Request_Certificate.php";
+										window.location = "Booking_status.php?SYSTEM=3&STATUS=99";
 									});
 								} else {
 									Swal.fire(
