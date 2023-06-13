@@ -127,7 +127,7 @@ $getMaxCarBook = callAPI('getMaxCarBook');
 <div class="shadow-sm container-fluid Knowledge-bg-head ">
     <div class="container pb-3 ">
         <h2 class="h2-color pt-4">
-            แบบฟอร์มการจองยานพาหนะ <?php echo $NATURE_ID;?> ทะเบียน <?php echo $CAR_REGISTER;?> 
+            แบบฟอร์มการจองยานพาหนะ <?php echo $NATURE_ID ." ทะเบียน ". $CAR_REGISTER . " ( " .$CAR_AMOUNT_SEAT ." ที่นั่ง )";?> 
         </h2>
         <h5 class="h2-color"><a href="Booking_car.php">จองยานพาหนะ > </a> <span>แบบฟอร์มการจองยานพาหนะ</span></h5>
         <hr class="hr_news mt-0">

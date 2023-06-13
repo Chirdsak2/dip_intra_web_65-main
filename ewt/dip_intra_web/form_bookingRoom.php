@@ -52,7 +52,7 @@ $data_request_room_id = array(
 );
 $getMeetingToolAsset = callAPI('getMeetingToolAsset',$data_request_room_id);//รายละเอียดห้องประชุม
 // echo '<br><br><br><br><br><pre>';
- // print_r($getMeetingToolAsset['Data']);
+ // print_r($getRoomDetail['Data']);
  // echo '</pre>';
  // echo '<br><br><br><br><br><pre>';
  // print_r($_SESSION);
@@ -110,7 +110,7 @@ $getMeetingToolAsset = callAPI('getMeetingToolAsset',$data_request_room_id);//�
 <div class="shadow-sm container-fluid Knowledge-bg-head ">
     <div class="container pb-3 ">
         <h2 class="h2-color pt-4">
-            แบบฟอร์มการจอง <?php echo $getRoomDetail['Data']['ROOM_NAME'];?>
+            แบบฟอร์มการจอง <?php echo $getRoomDetail['Data']['ROOM_NAME']. " ( " .$getRoomDetail['Data']['SEAT_AMOUNT'] ." ที่นั่ง )";?>
         </h2>
         <h5 class="h2-color"><a href="Booking_room.php">จองห้องประชุม > </a> <span>แบบฟอร์มการจองห้องประชุม</span></h5>
         <hr class="hr_news mt-0">
