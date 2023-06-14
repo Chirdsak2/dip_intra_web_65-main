@@ -85,7 +85,7 @@ ob_start();
 	</tr>
 	<tr>
 		<td style="">
-		<p style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;หนังสือฉบับนี้ให้ไว้เพื่อรับรองว่า <?php echo $_GET['FULL_NAME'];?> ปัจจุบันเป็น<?php echo $_GET['PER_TYPE_NAME'];?> ปัจจุบันดำรงตำแหน่ง<?php echo $_GET["POS_NAME"].$_GET["POS_LEVEL_NAME"];?> <?php echo $_GET["DEP_NAME"]." ".$_GET["DEP_NAME2"];?> รับเงินเดือนเดือนละ <?php echo thainumDigit(number_format($_GET["INCOME_MONEY"]));?> บาท เริ่มรับราชการตั้งแต่วันที่ ๑ มกราคม พ.ศ. ๒๕๖๒ จนถึงปัจจุบัน</p>
+		<p style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;หนังสือฉบับนี้ให้ไว้เพื่อรับรองว่า <?php echo $_GET['FULL_NAME'];?> ปัจจุบันเป็น<?php echo $_GET['PER_TYPE_NAME'];?> ปัจจุบันดำรงตำแหน่ง<?php echo $_GET["POS_NAME"].$_GET["POS_LEVEL_NAME"];?> <?php echo $_GET["DEP_NAME"]." ".$_GET["DEP_NAME2"];?> รับเงินเดือนเดือนละ <?php echo thainumDigit(number_format($_GET["INCOME_MONEY"]));?> บาท เริ่มรับราชการตั้งแต่วันที่  จนถึงปัจจุบัน</p>
 		</td>
 	</tr>
 	<!--<tr>

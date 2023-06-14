@@ -74,10 +74,10 @@ ob_start();
 		<td style="">To Whom It May Concern:</td>
 	</tr>
 	<tr> 
-		<td style=""><p style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This is to certify that <?php echo $_GET['FULL_NAME_EN'];?>, presently the Indus trial Technical Officer, Practitioner Level, has been working at the Information and Communication Technology Center, Department of Industrial Promotion, Ministry of Industry since May 30,2018 to the present. His current salary is <?php echo number_format($_GET["INCOME_MONEY"]);?> bath per month.</p></td>
+		<td style=""><p style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This is to certify that <?php echo $_GET['FULL_NAME_EN'];?>, presently the Indus trial Technical Officer, Practitioner Level, has been working at the Information and Communication Technology Center, Department of Industrial Promotion, Ministry of Industry since  to the present. His current salary is <?php echo number_format($_GET["INCOME_MONEY"]);?> bath per month.</p></td>
 	</tr>
 	<!--<tr>
-		<td style="">เริ่มรับราชการตั้งแต่วันที่ ๑ มกราคม พ.ศ. ๒๕๖๒ จนถึงปัจจุบัน</td>
+		<td style="">เริ่มรับราชการตั้งแต่วันที่ ๑ มกราคม พ.ศ. ๒๕๖๒ จนถึงปัจจุบัน since May 30,2018 to the present.</td>
 	</tr>-->
 	
 </table>
