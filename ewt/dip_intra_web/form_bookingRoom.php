@@ -222,7 +222,7 @@ $getMeetingToolAsset = callAPI('getMeetingToolAsset',$data_request_room_id);//�
                 </div>
                 <div class=" col-lg-6 col-md-6 col-sm-6 col-12 ">
                     <h4 class="ml-2 mb-0 h2-color">หมายเหตุ</h4>
-                    <input oninput="this.setCustomValidity('')" id="NOTE" name="NOTE" class="form-control" type="text-area" >
+                    <input oninput="this.setCustomValidity('')" id="NOTE" name="NOTE" class="form-control" type="text-area" value="ขอความกรุณาผู้ดูแลห้องประชุมจัดเตรียมอุปกรณ์เพิ่มเติมที่จำเป็นด้วยครับ/ค่ะ">
                 </div>
             </div>
         <!--</form>-->
