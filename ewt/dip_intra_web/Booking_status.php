@@ -35,12 +35,13 @@ $short_dep = array (
 dbdpis::ConnectDB(SSO_DB_NAME, SSO_DB_TYPE, SSO_ROOT_HOST, SSO_ROOT_USER, SSO_ROOT_PASSWORD, SSO_DB_NAME, SSO_CHAR_SET);
 
 // GET DEP_LV1_ID, DEP_LV2_ID, POS_NAME
-$chk_per_type = "SELECT B.*, C.DEP_NAME AS DEP_NAME1, D.DEP_NAME AS DEP_NAME2, E.POS_NAME
+$chk_per_type = "SELECT B.*, C.DEP_NAME AS DEP_NAME1, D.DEP_NAME AS DEP_NAME2, E.POS_NAME, F.POS_LEVEL_NAME 
 				FROM USR_MAIN A
 				LEFT JOIN M_PER_PROFILE B ON B.PER_IDCARD = A.USR_OPTION3
 				LEFT JOIN USR_DEPARTMENT C ON C.DEP_ID = B.DEP_LV1_ID
 				LEFT JOIN USR_DEPARTMENT D ON D.DEP_ID = B.DEP_LV2_ID
 				LEFT JOIN USR_POSITION E ON E.POS_ID = B.PER_POS_ID
+				LEFT JOIN M_POSITION_LEVEL F ON F.POS_LEVEL_ID = B.PER_POSITION_LVL
 				WHERE A.USR_USERNAME = '".$_SESSION['EWT_USERNAME']."' ";
 $q = dbdpis::execute($chk_per_type);
 $chk = dbdpis::Fetch($q);
@@ -478,7 +479,40 @@ $getRequestBookingAllList = callAPI('getRequestBookingAllList', $data_request);
 					$app1_dep_name = $short_dep[$chk_app_1["DEP_LV2_ID"]];// ผ่าน (ตำแหน่งย่อ)
 					
 					## ERROR POS_LEVEL_NAME ##
-					$p10 .= '<a style="width:80px;text-align:center;" type="button" class=" " onclick="window.open('."'".'FILE_PDF/booking_car_report_pdf.php?CB_PER_ID='.$get_CB_PER_ID.'&CB_AREA='.$value['ROOM_NAME'].'&CB_MEMBER='.$value['MEETING_NUM_PP'].'&CB_OBJ='.$value['MEETING_TOPIC'].'&MEETING_DATE='.$value['MEETING_DATE2'].'&MEETING_EDATE='.$value['MEETING_EDATE2'].'&STIME='.$value['STIME'].'&ETIME='.$value['ETIME'].'&REQ_TEL='.$value['REQ_TEL'].'&DEP_NAME1='.$chk['DEP_NAME1'].'&POS_NAME='.$chk['POS_NAME'].'&APP_1='.$app_1.'&APP_1_NAME='.$app1_dep_name.'&APP_2='.$app_2.'&CAR_REGISTER='.$get_CAR_REGISTER2.'&W_CAR_MILEAGE='.$getRequestBookingCarDetail['Data'][0]['W_CAR_MILEAGE'].'&R_CAR_MILEAGE='.$getRequestBookingCarDetail['Data'][0]['R_CAR_MILEAGE'].'&CS_PER_NAME='.$getRequestBookingCarDetail['Data'][0]['ALLOCATE_NAME'].' '."'".', '."'".'_blank'."'".',);" > download</a>';
+					// $p10 .= '<a style="width:80px;text-align:center;" type="button" class=" " onclick="window.open('."'".'FILE_PDF/booking_car_report_pdf.php?CB_PER_ID='.$get_CB_PER_ID.'&CB_AREA='.$value['ROOM_NAME'].'&CB_MEMBER='.$value['MEETING_NUM_PP'].'&CB_OBJ='.$value['MEETING_TOPIC'].'&MEETING_DATE='.$value['MEETING_DATE2'].'&MEETING_EDATE='.$value['MEETING_EDATE2'].'&STIME='.$value['STIME'].'&ETIME='.$value['ETIME'].'&REQ_TEL='.$value['REQ_TEL'].'&DEP_NAME1='.$chk['DEP_NAME1'].'&POS_NAME='.$chk['POS_NAME'].'&APP_1='.$app_1.'&APP_1_NAME='.$app1_dep_name.'&APP_2='.$app_2.'&CAR_REGISTER='.$get_CAR_REGISTER2.'&W_CAR_MILEAGE='.$getRequestBookingCarDetail['Data'][0]['W_CAR_MILEAGE'].'&R_CAR_MILEAGE='.$getRequestBookingCarDetail['Data'][0]['R_CAR_MILEAGE'].'&CS_PER_NAME='.$getRequestBookingCarDetail['Data'][0]['ALLOCATE_NAME'].' '."'".', '."'".'_blank'."'".',);" > download</a>';
+					
+					// กำหนดค่าให้แก่ตัวแปร $LINK_DATA ให้ตรงกับตัวอย่างนี้
+					$LINK_DATA = array();
+					$LINK_DATA['CB_PER_ID']      = $get_CB_PER_ID;
+					$LINK_DATA['STAFF_NAME']     = $get_STAFF_NAME;
+					// $LINK_DATA['CB_AREA']        = $value['ROOM_NAME'];
+					$LINK_DATA['S_AREA']         = $value['S_AREA'];
+					$LINK_DATA['CB_MEMBER']      = $value['MEETING_NUM_PP'];
+					$LINK_DATA['CB_OBJ']         = $value['MEETING_TOPIC'];
+					$LINK_DATA['MEETING_DATE']   = $value['MEETING_DATE2'];
+					$LINK_DATA['MEETING_EDATE']  = $value['MEETING_EDATE2'];
+					$LINK_DATA['STIME']          = $value['STIME'];
+					$LINK_DATA['ETIME']          = $value['ETIME'];
+					$LINK_DATA['REQ_TEL']        = $value['REQ_TEL'];
+					$LINK_DATA['DEP_NAME1']      = $chk['DEP_NAME1'];
+					$LINK_DATA['POS_NAME']       = $chk['POS_NAME'];
+					$LINK_DATA['POS_LEVEL_NAME'] = $chk['POS_LEVEL_NAME'];
+					$LINK_DATA['APP_1']          = $app_1;
+					$LINK_DATA['APP_1_NAME']     = $app1_dep_name;
+					$LINK_DATA['APP_2']          = $app_2;
+					$LINK_DATA['CAR_REGISTER']   = $get_CAR_REGISTER2;
+					$LINK_DATA['W_CAR_MILEAGE']  = $getRequestBookingCarDetail['Data'][0]['W_CAR_MILEAGE'];
+					$LINK_DATA['R_CAR_MILEAGE']  = $getRequestBookingCarDetail['Data'][0]['R_CAR_MILEAGE'];
+					$LINK_DATA['CS_PER_NAME']    = $getRequestBookingCarDetail['Data'][0]['ALLOCATE_NAME'];
+
+					// แปลง $LINK_DATA เป็น JSON string
+					// $data_meeting = json_encode($LINK_DATA);
+					// $data_meeting = $data_meeting = json_encode($LINK_DATA, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES);
+					// แปลง $LINK_DATA เป็น JSON string และทำการย่อสั้นด้วย base64_encode
+					$data_meeting = base64_encode(json_encode($LINK_DATA));
+
+
+					$p10 .= '<a style="width:80px;text-align:center;" type="button" target="_blank" href="FILE_PDF/booking_car_report_pdf.php?data_meeting=' . urlencode($data_meeting) . '"> download</a>';
 					
 					if($get_CAR_PIC_NAME){
 						$img2 = '<img src="images/'.$get_CAR_PIC_NAME.'" class="d-block w-100" alt="...">';
@@ -1162,4 +1196,4 @@ function search_data() {
 		var data = $('#form_wf').serialize();
 		window.location = "Booking_status.php?"+data;
 	}
-</script> 
+</script>
