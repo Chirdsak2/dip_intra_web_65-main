@@ -231,7 +231,7 @@ ob_start();
 		</td>
 	</tr>
 	<tr>
-		<td align="left" colspan="7"></td>
+		<td align="left" colspan="7"></td> 
 		<td align="right" colspan="3" style="font-size:14pt;"><?php echo ($data_show2['CS_APPROVE_DATE']) ? "วันที่ ".get_TH_D_M_Y3($data_show2['CS_APPROVE_DATE'])."&nbsp;" : "................................................."; ?></td>
 	</tr>
 	<tr>
