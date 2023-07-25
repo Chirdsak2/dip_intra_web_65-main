@@ -157,12 +157,35 @@ $getMeetingToolAsset = callAPI('getMeetingToolAsset',$data_request_room_id);//�
 					<?php 
 					}else{
 						echo "&nbsp&nbsp-- ไม่มีข้อมูล --";
-					}
+					}//DEP_NAME1_EXTERNAL
 					?>
 					</table>
                 </div>
 			</div><br>
             <div class="form-row align-items-center">
+                <div class=" col-lg-6 col-md-6 col-sm-6 col-12 ">
+                    <input type="checkbox" class="form-check-input h2-color ml-0" id="DEP_CHECK" name="DEP_CHECK" >
+					<h4 class="h2-color ml-4">หน่วยงานภายนอก</h4>
+                </div>
+                <div class=" col-lg-6 col-md-6 col-sm-6 col-12 ">
+                    <h5 class="ml-2 mb-0 h2-color"></h5>
+                </div>
+				<div id="SUB_DEP_CHECK3" hidden class=" col-lg-6 col-md-6 col-sm-6 col-12 ">
+                    <h4 class="h2-color ml-2">* ชื่อหน่วยงานภายนอก :</h4>
+					<input  oninvalid="this.setCustomValidity('กรุณากรอกข้อมูล ชื่อหน่วยงานภายนอก')" oninput="this.setCustomValidity('')" id="DEP_EXTERNAL" name="DEP_EXTERNAL" class="form-control" type="text" placeholder="กรุณากรอกชื่อหน่วยงานภายนอก">
+                </div>
+                <div id="SUB_DEP_CHECK4" hidden class=" col-lg-6 col-md-6 col-sm-6 col-12 ">
+                    <h5 class="ml-2 mb-0 h2-color"></h5>
+                </div>
+                <div id="SUB_DEP_CHECK1" hidden class=" col-lg-6 col-md-6 col-sm-6 col-12 ">
+                    <h4 class="h2-color">กรณีเลือกหน่วยงานภายนอกกรุณาแนบหนังสือ :</h4>
+					<input  type="file" class="form-control-file" name="FILEUPLOAD[]" id="FILEUPLOAD" accept=".pdf,.png,.jpg,.jpeg,.doc,.docx"><!--multiple-->
+					<label class=" font-small" style="color: #ff0000;"> * ไฟล์ที่อนุญาตให้แนบได้ pdf,png,jpg,doc ขนาดไฟล์ไม่เกิน 10 MB.</label>
+					<hr>
+                </div>
+                <div id="SUB_DEP_CHECK2" hidden class=" col-lg-6 col-md-6 col-sm-6 col-12 ">
+                    <h5 class="ml-2 mb-0 h2-color"></h5>
+                </div>
                 <div class="col-sm-6 my-1">
                     <h4 class="h2-color ml-2">* หัวข้อการประชุม :</h4>
                     <input required oninvalid="this.setCustomValidity('กรุณากรอกข้อมูล หัวข้อการประชุม')" oninput="this.setCustomValidity('')" id="MEETING_TOPIC" name="MEETING_TOPIC" class="form-control" type="text" placeholder="กรุณากรอกหัวข้อการประชุม">
@@ -222,7 +245,7 @@ $getMeetingToolAsset = callAPI('getMeetingToolAsset',$data_request_room_id);//�
                 </div>
                 <div class=" col-lg-6 col-md-6 col-sm-6 col-12 ">
                     <h4 class="ml-2 mb-0 h2-color">หมายเหตุ</h4>
-                    <input oninput="this.setCustomValidity('')" id="NOTE" name="NOTE" class="form-control" type="text-area" value="ขอความกรุณาผู้ดูแลห้องประชุมจัดเตรียมอุปกรณ์เพิ่มเติมที่จำเป็นด้วยครับ/ค่ะ">
+                    <input oninput="this.setCustomValidity('')" id="NOTE" name="NOTE" class="form-control" type="text-area" value="ขอความกรุณาผู้ดูแลห้องประชุมจัดเตรียมอุปกรณ์เพิ่มเติมที่จำเป็นด้วยครับ/ค่ะ" >
                 </div>
             </div>
         <!--</form>-->
@@ -349,6 +372,37 @@ $getMeetingToolAsset = callAPI('getMeetingToolAsset',$data_request_room_id);//�
 
 <script>
 	
+	const depCheck = document.getElementById("DEP_CHECK");
+    const subDepCheck1 = document.getElementById("SUB_DEP_CHECK1");
+    const subDepCheck2 = document.getElementById("SUB_DEP_CHECK2");
+    const subDepCheck3 = document.getElementById("SUB_DEP_CHECK3");
+    const subDepCheck4 = document.getElementById("SUB_DEP_CHECK4");
+	const fileUpload = document.getElementById("FILEUPLOAD");
+	const depExternal = document.getElementById("DEP_EXTERNAL");
+
+    depCheck.addEventListener("change", function () {
+        if (depCheck.checked) {
+            subDepCheck1.removeAttribute("hidden");
+            subDepCheck2.removeAttribute("hidden");
+            subDepCheck3.removeAttribute("hidden");
+            subDepCheck4.removeAttribute("hidden");
+			$('#FILEUPLOAD').prop('required', true);
+			$('#DEP_EXTERNAL').prop('required', true);
+        } else {
+            subDepCheck1.setAttribute("hidden", "true");
+            subDepCheck2.setAttribute("hidden", "true");
+            subDepCheck3.setAttribute("hidden", "true");
+            subDepCheck4.setAttribute("hidden", "true");
+			$('#FILEUPLOAD').prop('required', false);
+			$('#DEP_EXTERNAL').prop('required', false);
+			// เคลียร์ค่า FILEUPLOAD เมื่อ checkbox ถูกติ๊กออก (unchecked)
+            fileUpload.value = "";
+            depExternal.value = "";
+        }
+    });
+	
+	
+	
 $(document).ready(function() {
 	$('.timeFormat').mask('00:00');
 	
@@ -367,6 +421,14 @@ $(document).ready(function() {
 				// alert("กรุณากรอกหัวข้อการประชุม");
 				// return false;
 			  // }
+			var myForm = document.getElementById('form_wf');
+			var fd = new FormData(myForm);   
+			var ins2 = $('#FILEUPLOAD').prop("files").length;
+			for (var x = 0; x < ins2; x++) {
+			 fd.append('FILEUPLOAD['+x+']',$('#FILEUPLOAD').prop("files")[x]);
+			}  
+			  
+			
 				Swal.fire({
                 title: 'ยืนยันการส่งข้อมูล ? ',
                 text: "",
@@ -393,6 +455,28 @@ $(document).ready(function() {
 										'success'
 										
 									).then(function() {
+										// สำหรับส่งไฟล์ เฉพาะติ๊ก หน่วยงานภายนอก ถ้าไม่ติ๊ก ไม่ต้องส่ง
+										if (depCheck.checked) {
+										var ins = $('#FILEUPLOAD').prop("files").length;
+										if(ins > 0){
+										$.ajax({
+											url:'save/insert_room_booking_file.php', //ให้ระบุชื่อไฟล์ PHP ที่เราจะส่งค่าไป
+											type:'post',
+											data:fd, //ข้อมูลจาก input ที่ส่งเข้าไปที่ PHP
+											contentType: false,
+											processData: false,
+											success:function(response){ //หากทำงานสำเร็จ จะรับค่ามาจาก JSON หลังจากนั้นก็ให้ทำงานตามที่เรากำหนดได้
+												console.log(response);
+												if(response != 0){
+													// $("#img").attr("src",response);
+													// $('.preview img').show();
+												}else{
+													// alert('ส่งไฟล์ไม่สำเร็จ');
+												}
+											}
+										});
+										}
+										}
 										window.location = "Booking_status.php?SYSTEM=1&STATUS=99";
 									});
 								} else {
