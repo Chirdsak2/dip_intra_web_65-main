@@ -261,6 +261,7 @@ $getRequestBookingAllList = callAPI('getRequestBookingAllList', $data_request);
 				foreach($getRequestBookingAllList['Data'] as $key => $value){
 				$i = 0;
 				
+				if($value['FILE_SAVE_TYPE'] == 'CAR'){
 				while($i < COUNT($value['FILE_SAVE_NAME'])){
 					file_put_contents('file_car/'.$value['FILE_SAVE_NAME'][$i], file_get_contents($value['FILE_SAVE_NAME_DEFULT'][$i]));// บันทึกไฟล์แนบ จาก WF
 					$i++;
@@ -270,6 +271,26 @@ $getRequestBookingAllList = callAPI('getRequestBookingAllList', $data_request);
 					"wfr_id" => $value['WFR_ID'],
 				);
 				$updateStatusPic = callAPI('updateStatusPic',$status_request);
+				}
+				if($value['FILE_SAVE_TYPE'] == 'ROOM'){
+				while($i < COUNT($value['FILE_SAVE_NAME'])){
+					file_put_contents('file_room/'.$value['FILE_SAVE_NAME'][$i], file_get_contents($value['FILE_SAVE_NAME_DEFULT'][$i]));// บันทึกไฟล์แนบ จาก WF
+					$i++;
+				}
+				$status_request = array(
+					"type" => 'RB_FILE',
+					"wfr_id" => $value['WFR_ID'],
+				);
+				$updateStatusPic = callAPI('updateStatusPic',$status_request);
+				}
+				
+				
+				// $status_request2 = array(
+					// "type" => 'RB_FILE',
+					// "wfr_id" => $value['WFR_ID'],
+				// );
+				
+				// $updateStatusPic2 = callAPI('updateStatusPic',$status_request2);
 					$p1 = ""; $p2 = ""; $p3 = ""; $p4 = ""; $p5 = ""; $p6 = ""; $p7 = "";
 					
 ######## จองห้องประชุม ########	
@@ -297,8 +318,12 @@ $getRequestBookingAllList = callAPI('getRequestBookingAllList', $data_request);
 					$p6 = "<i class='fa fa-door-open h2-color  pb-0'></i> ".$value['ROOM_NAME'];
 					$p7 = "<i class='fa fa-calendar h2-color  pb-0'></i> ".($value['MEETING_DATE'] == $value['MEETING_EDATE'] ? "วันที่ ".$value['MEETING_DATE']:"วันที่ ".$value['MEETING_DATE']." - ".$value['MEETING_EDATE'])." เวลา ".$value['STIME']." น. -  ".$value['ETIME']." น.";
 					$p8 = "";
-					$p9 = "";
-					$p10 = "ใบขออนุญาตใช้ห้องประชุม : ";
+					$p9 = "เอกสารแนบ : ";
+					$p10 = "ใบขออนุญาตใช้ห้องประชุม : ";$x = 0;
+				while($x < COUNT($value['FILE_SAVE_NAME'])){
+					$p9 .= "<a href='file_room/".$value['FILE_SAVE_NAME'][$x]."' download>".$value['FILE_NAME'][$x]."</a><br>";
+					$x++;
+				}
 					$data_request_room_wfd1 = array(
 						"wfr_id" => $value['WFR_ID'],
 						"wf_main_id" => '6682',
