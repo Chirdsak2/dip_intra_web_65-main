@@ -150,8 +150,14 @@ $getMaxCarBook = callAPI('getMaxCarBook');
 			</div><br>
             <h4 class="h2-color">* วัตถุประสงค์ในการใช้ยานพาหนะ :</h4>
             <div class="form-row align-items-center">
-                <div class="col-sm-4 my-1">
-                    <select required oninvalid="this.setCustomValidity('กรุณากรอกข้อมูล วัตถุประสงค์ในการใช้ยานพาหนะ')" oninput="this.setCustomValidity('')" id="OBJECTIVE" name="OBJECTIVE" class="form-control"  >
+                <div class="col-sm-6 my-1">
+                    <input oninput="this.setCustomValidity('')" id="OBJECTIVE_2" name="OBJECTIVE_2" class="form-control" type="text-area" >
+                </div>
+            </div>
+            <h4 class="h2-color">* ประเภทการเดินทางไปราชการ :</h4>
+            <div class="form-row align-items-center">
+                <div class="col-sm-3 my-1">
+                    <select required oninvalid="this.setCustomValidity('กรุณากรอกข้อมูล ประเภทการเดินทางไปราชการ')" oninput="this.setCustomValidity('')" id="OBJECTIVE" name="OBJECTIVE" class="form-control"  >
                         <option value="" selected>เลือกวัตถุประสงค์</option>
 						<?php 
 						foreach ($getObjectiveCarBooking['Data'] as $key => $value) {
@@ -179,7 +185,7 @@ $getMaxCarBook = callAPI('getMaxCarBook');
                 </div>
 				<!-- เมื่อกดเพิ่มจุดหมาย จะลบข้อมูลได้ -->
 				<div class="col-auto ml-3">
-					<button type="button" class="btn btn-success" id="rowAdder" style="width:100px;">เพิ่มข้อมูล</button>
+					<button type="button" class="btn btn-success" id="rowAdder" style="width:100px;">เพิ่มพื้นที่</button>
 				</div>
 				<!--<div class="col-auto ">
 					<button type="" class="btn btn-danger" disabled>ลบข้อมูล</button>

@@ -42,6 +42,7 @@ $data_request = array(
 						"CB_REQ_TO" => '',
 						"CB_OBJECTIVE_TYPE" => $_POST['OBJECTIVE'],//วัตถุประสงค์การใช้รถ
 						"CB_OBJECTIVE" => '',//ขออนุญาตใช้รถเพื่อ
+						"CB_OBJECTIVE_2" => $_POST['OBJECTIVE_2'],//ขออนุญาตใช้รถเพื่อ
 						"CB_CAR_TYPE" => '1',//ประเภทรถยนต์ 1 = รถยนต์ส่วนกลาง
 						"CB_RECEIVE_SEND_TYPE" => '0',//โปรดระบุการรับ-ส่ง 1 = ส่งและรับกลับ
 						"CB_PER_ID" => '994',//ไอดีผู้จอง
