@@ -250,15 +250,15 @@ function get_TH_Date2($date){
                     <h4 class="post-title text-white">
                         <a target='_blank' title="ดูรายละเอียด" href="info_bookingCar.php?<?php echo "car_id=".$value['CAR_ID'];?>" class="d-inline-block text-white mr-4"><?php echo $value['NATURE_ID'];?>
 						</a>
-                        <span><i class="fa fa-user"></i> <?php echo $value['CAR_AMOUNT_SEAT'];?></span>
+                        <span><i class="fa fa-user"></i> <?php echo $value['CAR_AMOUNT_SEAT'];?> ที่นั่ง</span>
                     </h4>
                     <div class="latest-post-meta text-white">
                         <div class="post-item-date color-datetime">
 							ทะเบียน : <?php echo $value['CAR_REGISTER'];?>
                         </div>
-                        <div class="post-item-date line-height-20px">
+                        <!--<div class="post-item-date line-height-20px">
 							ระยะไมล์ : <?php echo number_format($value['CAR_MILEAGE'], 0, '', ',');?> กิโลเมตร
-                        </div>
+                        </div>-->
                         <div class="post-item-date line-height-20px">
 							ผู้ดูแล : สำนักเลขานุการกรม
                         </div>
