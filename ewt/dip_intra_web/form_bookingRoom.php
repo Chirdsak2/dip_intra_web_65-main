@@ -186,6 +186,14 @@ $getMeetingToolAsset = callAPI('getMeetingToolAsset',$data_request_room_id);//�
                 <div id="SUB_DEP_CHECK2" hidden class=" col-lg-6 col-md-6 col-sm-6 col-12 ">
                     <h5 class="ml-2 mb-0 h2-color"></h5>
                 </div>
+                <div class=" col-lg-6 col-md-6 col-sm-6 col-12 ">
+                    <input type="checkbox" class="form-check-input h2-color ml-0" id="ZOOM_CHECK" name="ZOOM_CHECK" onchange="updateCheckboxValue()">
+                    <input type="hidden" class="form-check-input h2-color ml-0" id="ZOOM_STATUS" name="ZOOM_STATUS" value="N">
+					<h4 class="h2-color ml-4">จองซูม</h4>
+                </div>
+                <div class=" col-lg-6 col-md-6 col-sm-6 col-12 ">
+                    <h5 class="ml-2 mb-0 h2-color"></h5>
+                </div>
                 <div class="col-sm-6 my-1">
                     <h4 class="h2-color ml-2">* หัวข้อการประชุม :</h4>
                     <input required oninvalid="this.setCustomValidity('กรุณากรอกข้อมูล หัวข้อการประชุม')" oninput="this.setCustomValidity('')" id="MEETING_TOPIC" name="MEETING_TOPIC" class="form-control" type="text" placeholder="กรุณากรอกหัวข้อการประชุม">
@@ -392,6 +400,18 @@ $getMeetingToolAsset = callAPI('getMeetingToolAsset',$data_request_room_id);//�
 		timeStartInput.value = timeEnd;
 	}
 	
+	function updateCheckboxValue() {
+		var checkbox = document.getElementById('ZOOM_CHECK');
+		var valueField = document.getElementById('ZOOM_STATUS');
+
+		if (checkbox.checked) {
+		valueField.value = 'Y';
+		} else {
+		valueField.value = 'N'; // เมื่อไม่ถูกเลือกให้เป็น "N"
+		}
+	}
+	
+	
 	
     jQuery(document).ready(function() {
 		
@@ -549,7 +569,7 @@ $(document).ready(function() {
 										Swal.close();
 										
 										
-										window.location = "Booking_status.php?SYSTEM=1&STATUS=99";
+										// window.location = "Booking_status.php?SYSTEM=1&STATUS=99";
 									});
 								} else {
 									Swal.fire(
@@ -718,7 +738,7 @@ $(document).ready(function() {
 							$('#'+k).val('').focus();
 						}
 						});
-				}
+				}    
 				/*if(t == 'ck_number'){ //check_meet($('#ROOM_ID').val(),'ck_number');
 					if(html.seat_amount != '-' && num_pp > parseInt(html.seat_amount)){
 						alert("กรุณากรอกจำนวนผู้เข้าร่วมประชุมให้ถูกต้อง");
