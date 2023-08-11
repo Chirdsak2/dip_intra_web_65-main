@@ -1,11 +1,23 @@
 <?php
 // เรียกใช้งานข้อมูลใน $_GET['data_meeting'] และแปลงเป็น JSON object
-$data_meeting = $_GET['data_meeting'];
+$data_meeting = $_GET['data_meeting']; 
 $meeting_data = json_decode(base64_decode($data_meeting), true);
+// $meeting_data = $_GET;
 
-/* // เข้าถึงค่าใน $meeting_data และนำมาใช้งานตามที่ต้องการได้ 
-print_r($meeting_data);
-exit;*/
+// <!-- CALL SERVICE -->
+
+include('../callservice.php'); 
+$data_request1 = array(
+	"wfr_id" => $meeting_data['WFR_ID']
+);
+$getRequestBookingCarDetail = callAPI('getRequestBookingCarDetail', $data_request1);	
+$getDetail = $getRequestBookingCarDetail['Data'][0];
+// print_r($getRequestBookingCarDetail['Data'][0]);
+// exit;
+
+// เข้าถึงค่าใน $meeting_data และนำมาใช้งานตามที่ต้องการได้ 
+// print_r($meeting_data);
+// exit;
 require_once '../mpdf_autoload/vendor/autoload.php';
 $mpdf = new \Mpdf\Mpdf();
 
@@ -61,7 +73,21 @@ function get_TH_D_M_Y2($date){
 	$full_txt_date = $txt_date["j_date"]." เดือน ".$txt_date["t_month"]." พ.ศ. ".$txt_date["year"];
 	return $full_txt_date;
 }
+function get_TH_D_M_Y5($date) {
+    $txt_date = convert_ex_date($date, $lang="TH");
+    $full_txt_date = array(
+        "date" => $txt_date["j_date"],
+        "month" => $txt_date["t_month"],
+        "year" => $txt_date["year"]
+    );
+    return $full_txt_date;
+}
+$full_sdate_array = get_TH_D_M_Y5($getDetail['CB_SDATE_ORIGINAL']);
+$full_edate_array = get_TH_D_M_Y5($getDetail['CB_EDATE_ORIGINAL']);
+
 $std_css=" <style>
+
+
 		table{
 	border-collapse: collapse;
 	overflow: wrap;
@@ -126,12 +152,16 @@ ob_start();
 			<img src="<?php echo $WF_URL.'/assets/images/otcc.png' ?>" width="90" height="70">
 			<img src="<?php echo $WF_URL.'/assets/images/favicon_dip.png' ?>" width="50" height="50">
 		</td>-->
-		<td align="left"  colspan="1" style="font-size:18pt;">
+		<td align="left"  colspan="2" style="font-size:18pt;">
 			<img style="" src="<?php echo '../assets/img/logo_DIPROM_full.png' ?>" width="60" height="70">
 			<!--<strong>ใบขออนุญาตใช้รถยนต์ส่วนกลาง<strong>-->
 		</td>
-		<td align="center"  colspan="6" style="font-size:18pt;">
+		<td align="left"  colspan="6" style="font-size:18pt;">
 			<strong>ใบขออนุญาตใช้รถยนต์ส่วนกลาง<strong>
+		</td>
+		<td align="left"  colspan="2" style="font-size:18pt;">
+			&nbsp;
+			<!--<strong>ใบขออนุญาตใช้รถยนต์ส่วนกลาง<strong>-->
 		</td>
 	</tr>
 	<tr>
@@ -152,7 +182,7 @@ ob_start();
 	<tr>
 		<td align="left" colspan="10" style="font-size:14pt;">
 			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-			<strong>ข้าพเจ้า</strong>&nbsp;<?php echo $meeting_data['CB_PER_ID'] ; ?>&nbsp;
+			<strong>ข้าพเจ้า</strong>&nbsp;<?php echo $getDetail['CB_PER_ID'] ; ?>&nbsp;
 			<strong>ตำแหน่ง</strong>&nbsp;<?php echo $meeting_data['POS_NAME'].$meeting_data['POS_LEVEL_NAME']; ?>
 			<strong>สังกัด</strong>&nbsp;<?php echo $meeting_data['DEP_NAME1'] ; ?>
 		</td>
@@ -164,14 +194,14 @@ ob_start();
 		</td>
 	</tr>-->
 	<tr>
-		<td align="left" colspan="10" style="font-size:14pt;">
+		<!--<td align="left" colspan="10" style="font-size:14pt;">
 			<?php
 			$x = 0;
 			$color_1 = 'black';
 			$c_arr_s_area = COUNT($meeting_data['S_AREA']);	
 			while($x < $c_arr_s_area){
 			if($x > 0){
-				$color_1 = 'white';
+				$color_1 = 'black';
 			}
 			?>
 			<strong><font style="color:<?php echo $color_1;?>">ขออนุญาตใช้รถยนต์ส่วนกลาง เดินทางไปที่</font></strong> &nbsp;<?php echo $meeting_data['S_AREA'][$x]; ?>
@@ -179,20 +209,40 @@ ob_start();
 				$x++;
 			}
 			?>
+		</td>-->
+		<td align="left" colspan="10" style="font-size:14pt;">
+			<strong><font style="color:<?php echo $color_1;?>">ขออนุญาตใช้รถยนต์ส่วนกลาง เดินทางไปที่</font></strong> 
+			<?php 
+			$x = 0;
+			// $c_arr_s_area = COUNT($meeting_data['S_AREA']);	
+			$c_arr_s_area = COUNT($getDetail['CB_AREA']);	
+			while($x < $c_arr_s_area){
+				echo ($x+1 == $c_arr_s_area && $c_arr_s_area != 1 ? "และ":"").$getDetail['CB_AREA'][$x]." ";
+			$x++;
+			}
+			?>
 		</td>
 	</tr>
 	<tr>
 		<td align="left" colspan="10" style="font-size:14pt;">
-			<strong>จำนวนผู้ร่วมเดินทาง</strong> <?php echo $meeting_data['CB_MEMBER']; ?> <strong>คน</strong>
-			<strong>เพื่อ</strong> <?php echo $meeting_data['CB_OBJ']; ?>
+			<strong>จำนวนผู้ร่วมเดินทาง</strong> <?php echo $getDetail['CB_MEMBER']; ?> <strong>คน</strong>
+			<strong>เพื่อ</strong> <?php echo $getDetail['CB_OBJECTIVE_2']; ?>
 		</td>
 	</tr>
+	<?php
+	$space = "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
+	?>
 	<tr>
 		<td align="left" colspan="10" style="font-size:14pt;">
-			<strong>ในวันที่</strong> <?php echo get_TH_D_M_Y2($meeting_data['MEETING_DATE']); ?>
-			<strong>เวลา</strong> <?php echo $meeting_data['STIME']; ?> น.<br>
-			<strong>ถึงวันที่</strong> <?php echo get_TH_D_M_Y2($meeting_data['MEETING_EDATE']); ?>
-			<strong>เวลา</strong> <?php echo $meeting_data['ETIME']; ?> น.
+			<!--<strong>ในวันที่</strong> <?php echo get_TH_D_M_Y2($getDetail['MEETING_DATE']); ?>
+			<strong>เวลา</strong> <?php echo $getDetail['STIME']; ?> น.
+			<strong>ถึงวันที่</strong> <?php echo get_TH_D_M_Y2($getDetail['MEETING_EDATE']); ?>
+			<strong>เวลา</strong> <?php echo $getDetail['ETIME']; ?> น.-->
+			<b>ในวันที่</b><span class="dotshed"><?php echo $space.$full_sdate_array["date"].$space."</span><b>เดือน</b>".$space.$full_sdate_array["month"].$space."<b>พ.ศ.</b>".$space.$full_sdate_array["year"].$space; ?>
+			<b>เวลา</b><?php echo $space.$getDetail['CB_STIME'].$space; ?><b>น.</b><br>
+			<b>ในวันที่</b><?php echo $space.$full_edate_array["date"].$space."<b>เดือน</b>".$space.$full_edate_array["month"].$space."<b>พ.ศ.</b>".$space.$full_edate_array["year"].$space; ?>
+			<b>เวลา</b><?php echo $space.$getDetail['CB_ETIME'].$space; ?><b>น.</b><br><br><br>
+			
 		</td>
 	</tr>
 	<tr>
@@ -204,17 +254,17 @@ ob_start();
 		<td align="right" colspan="7" style="width:64%"></td><!-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -->
 		<td align="right" colspan="3" style="font-size:14pt;width:36%">
 			<?php //echo ($data_show['CB_PER_ID']) ? "(&nbsp;".bsf_show_text('7043',$data_show,"##CB_PER_ID!!",'W')."&nbsp; )" : "(…………..…….....……………………..)"; ?>
-			( <?php echo $meeting_data['CB_PER_ID']; ?> )
+			( <?php echo $getDetail['CB_PER_ID']; ?> )
 		</td>
 	</tr>
 	<tr>
 		<td align="right" colspan="10" style="font-size:14pt;">
-			ตำแหน่ง <?php echo $meeting_data['POS_NAME'] ; ?>
+			ตำแหน่ง <?php echo $meeting_data['POS_NAME'].$meeting_data['POS_LEVEL_NAME'] ; ?>
 		</td>
 	</tr>
 	<tr>
 		<td align="right" colspan="10" style="font-size:14pt;">
-			เบอร์ติดต่อ <?php echo $meeting_data['REQ_TEL']; ?>
+			เบอร์ติดต่อ <?php echo $getDetail['CB_PHONE_BOOK']; ?>
 		</td>
 	</tr>
 	<br>
@@ -227,11 +277,11 @@ ob_start();
 		<td align="left" colspan="7" ></td>
 		<td align="right" colspan="3" style="font-size:14pt;">
 			<?php //echo ($data_show2['CS_APPROVE_PER_ID']) ? "(&nbsp;".bsf_show_text('7047',$data_show2,"##CS_APPROVE_PER_ID!!",'W')."&nbsp;)" : "(…………..…….....……………………..)"; ?>
-			( <?php echo "…………..…….....……………………..";//$_GET['CS_PER_NAME']; ?> )
+			( <?php echo $getDetail['APPROVE_NAME_ID2'];//$getDetail['CS_PER_NAME']; ?> )
 		</td>
 	</tr>
 	<tr>
-		<td align="left" colspan="7"></td> 
+		<td align="left" colspan="7"></td>
 		<td align="right" colspan="3" style="font-size:14pt;"><?php echo ($data_show2['CS_APPROVE_DATE']) ? "วันที่ ".get_TH_D_M_Y3($data_show2['CS_APPROVE_DATE'])."&nbsp;" : "................................................."; ?></td>
 	</tr>
 	<tr>
@@ -242,15 +292,12 @@ ob_start();
 	<tr>
 		<td align="left" colspan="10" style="font-size:14pt;">
 			<?php
-				if($meeting_data['CS_PER_NAME'] && $meeting_data['CAR_REGISTER']){
-					echo "รถหมายเลขทะเบียน ".$meeting_data['CAR_REGISTER']; 
-				}else if($meeting_data['CS_PER_NAME'] && !$meeting_data['CAR_REGISTER']){
+				if($getDetail['STAFF_FULL_NAME'] && $getDetail['CAR_REGISTER']){
+					echo "รถหมายเลขทะเบียน ".$getDetail['CAR_REGISTER']." ผู้ขับ ".$getDetail['STAFF_FULL_NAME']; 
+				}else if(!$getDetail['STAFF_FULL_NAME'] && !$getDetail['CAR_REGISTER']){
 					echo "เนื่องจากไม่มียานพาหนะว่างในช่วงเวลานี้ จึงให้เดินทางโดยรถรับจ้างสาธารณะ"; 
-				}else{
-					echo "รถหมายเลขทะเบียน ";
 				}
 			?>
-			ผู้ขับ&nbsp;<?php echo $meeting_data['STAFF_NAME'];?>
 		</td>
 	</tr>
 	<tr>
@@ -267,7 +314,7 @@ ob_start();
 		<td align="right" colspan="7" style="width:64%"></td>
 		<td align="right" colspan="3" style="font-size:14pt;width:36%">
 			<?php //echo ($data_show2['CS_APPROVE_PER_ID2']) ? "(&nbsp;".bsf_show_text('7047',$data_show2,"##CS_APPROVE_PER_ID2!!",'W')."&nbsp;)" : "(…………..…….....……………………..)"; ?>
-			( <?php echo ($meeting_data['CS_PER_NAME'] ? $meeting_data['CS_PER_NAME'] : "……….................................."); ?> )
+			( <?php echo ($getDetail['ALLOCATE_NAME'] ? $getDetail['ALLOCATE_NAME'] : "……….................................."); ?> )
 		</td>
 	</tr>
 	<tr>
@@ -283,12 +330,12 @@ ob_start();
 	</tr>
 	<tr>
 		<td align="center" width="50%" colspan="5" style="font-size:14pt;">
-			<?php echo ($meeting_data['W_CAR_MILEAGE'] ? $meeting_data['W_CAR_MILEAGE']." กม." : "……….................................."); ?><br>
+			<?php echo ($getDetail['W_CAR_MILEAGE'] ? $getDetail['W_CAR_MILEAGE']." กม." : "……….................................."); ?><br>
 			ระยะ กม./ไมล์<br>
 			(เมื่อรถออกเดินทาง)
 		</td>
 		<td align="center" width="50%" colspan="5" style="font-size:14pt;">
-			<?php echo ($meeting_data['R_CAR_MILEAGE'] ? $meeting_data['R_CAR_MILEAGE']." กม." : "……….................................."); ?><br>
+			<?php echo ($getDetail['R_CAR_MILEAGE'] ? $getDetail['R_CAR_MILEAGE']." กม." : "……….................................."); ?><br>
 			ระยะ กม./ไมล์<br>
 			(เมื่อรถถึงที่ทำงาน)
 		</td>

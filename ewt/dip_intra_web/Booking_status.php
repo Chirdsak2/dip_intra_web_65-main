@@ -261,7 +261,7 @@ $getRequestBookingAllList = callAPI('getRequestBookingAllList', $data_request);
 				foreach($getRequestBookingAllList['Data'] as $key => $value){
 				$i = 0;
 				
-				if($value['FILE_SAVE_TYPE'] == 'CAR'){
+				if($value['FILE_SAVE_TYPE'] == 'CAR'){// && $value['STATUS_FILE_PUT'] != '1'
 				while($i < COUNT($value['FILE_SAVE_NAME'])){
 					file_put_contents('file_car/'.$value['FILE_SAVE_NAME'][$i], file_get_contents($value['FILE_SAVE_NAME_DEFULT'][$i]));// บันทึกไฟล์แนบ จาก WF
 					$i++;
@@ -503,41 +503,38 @@ $getRequestBookingAllList = callAPI('getRequestBookingAllList', $data_request);
 					
 					$app1_dep_name = $short_dep[$chk_app_1["DEP_LV2_ID"]];// ผ่าน (ตำแหน่งย่อ)
 					
-					## ERROR POS_LEVEL_NAME ##
-					// $p10 .= '<a style="width:80px;text-align:center;" type="button" class=" " onclick="window.open('."'".'FILE_PDF/booking_car_report_pdf.php?CB_PER_ID='.$get_CB_PER_ID.'&CB_AREA='.$value['ROOM_NAME'].'&CB_MEMBER='.$value['MEETING_NUM_PP'].'&CB_OBJ='.$value['MEETING_TOPIC'].'&MEETING_DATE='.$value['MEETING_DATE2'].'&MEETING_EDATE='.$value['MEETING_EDATE2'].'&STIME='.$value['STIME'].'&ETIME='.$value['ETIME'].'&REQ_TEL='.$value['REQ_TEL'].'&DEP_NAME1='.$chk['DEP_NAME1'].'&POS_NAME='.$chk['POS_NAME'].'&APP_1='.$app_1.'&APP_1_NAME='.$app1_dep_name.'&APP_2='.$app_2.'&CAR_REGISTER='.$get_CAR_REGISTER2.'&W_CAR_MILEAGE='.$getRequestBookingCarDetail['Data'][0]['W_CAR_MILEAGE'].'&R_CAR_MILEAGE='.$getRequestBookingCarDetail['Data'][0]['R_CAR_MILEAGE'].'&CS_PER_NAME='.$getRequestBookingCarDetail['Data'][0]['ALLOCATE_NAME'].' '."'".', '."'".'_blank'."'".',);" > download</a>';
 					
 					// กำหนดค่าให้แก่ตัวแปร $LINK_DATA ให้ตรงกับตัวอย่างนี้
 					$LINK_DATA = array();
-					$LINK_DATA['CB_PER_ID']      = $get_CB_PER_ID;
-					$LINK_DATA['STAFF_NAME']     = $get_STAFF_NAME;
+					// $LINK_DATA['CB_PER_ID']      = $get_CB_PER_ID;
+					// $LINK_DATA['STAFF_NAME']     = $get_STAFF_NAME;
 					// $LINK_DATA['CB_AREA']        = $value['ROOM_NAME'];
-					$LINK_DATA['S_AREA']         = $value['S_AREA'];
-					$LINK_DATA['CB_MEMBER']      = $value['MEETING_NUM_PP'];
-					$LINK_DATA['CB_OBJ']         = $value['MEETING_TOPIC'];
-					$LINK_DATA['MEETING_DATE']   = $value['MEETING_DATE2'];
-					$LINK_DATA['MEETING_EDATE']  = $value['MEETING_EDATE2'];
-					$LINK_DATA['STIME']          = $value['STIME'];
-					$LINK_DATA['ETIME']          = $value['ETIME'];
-					$LINK_DATA['REQ_TEL']        = $value['REQ_TEL'];
+					// $LINK_DATA['S_AREA']         = $value['S_AREA'];
+					// $LINK_DATA['CB_OBJ']         = $value['MEETING_TOPIC'];
+					// $LINK_DATA['MEETING_DATE']   = $value['MEETING_DATE2'];
+					// $LINK_DATA['MEETING_EDATE']  = $value['MEETING_EDATE2'];
+					// $LINK_DATA['STIME']          = $value['STIME'];
+					// $LINK_DATA['ETIME']          = $value['ETIME'];
+					// $LINK_DATA['REQ_TEL']        = $value['REQ_TEL'];
+					$LINK_DATA['WFR_ID']      = $value['WFR_ID'];
 					$LINK_DATA['DEP_NAME1']      = $chk['DEP_NAME1'];
 					$LINK_DATA['POS_NAME']       = $chk['POS_NAME'];
 					$LINK_DATA['POS_LEVEL_NAME'] = $chk['POS_LEVEL_NAME'];
 					$LINK_DATA['APP_1']          = $app_1;
 					$LINK_DATA['APP_1_NAME']     = $app1_dep_name;
 					$LINK_DATA['APP_2']          = $app_2;
-					$LINK_DATA['CAR_REGISTER']   = $get_CAR_REGISTER2;
-					$LINK_DATA['W_CAR_MILEAGE']  = $getRequestBookingCarDetail['Data'][0]['W_CAR_MILEAGE'];
-					$LINK_DATA['R_CAR_MILEAGE']  = $getRequestBookingCarDetail['Data'][0]['R_CAR_MILEAGE'];
-					$LINK_DATA['CS_PER_NAME']    = $getRequestBookingCarDetail['Data'][0]['ALLOCATE_NAME'];
+					// $LINK_DATA['CAR_REGISTER']   = $get_CAR_REGISTER2;
+					// $LINK_DATA['W_CAR_MILEAGE']  = $getRequestBookingCarDetail['Data'][0]['W_CAR_MILEAGE'];
+					// $LINK_DATA['R_CAR_MILEAGE']  = $getRequestBookingCarDetail['Data'][0]['R_CAR_MILEAGE'];
+					// $LINK_DATA['CS_PER_NAME']    = $getRequestBookingCarDetail['Data'][0]['ALLOCATE_NAME'];
 
-					// แปลง $LINK_DATA เป็น JSON string
-					// $data_meeting = json_encode($LINK_DATA);
-					// $data_meeting = $data_meeting = json_encode($LINK_DATA, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES);
 					// แปลง $LINK_DATA เป็น JSON string และทำการย่อสั้นด้วย base64_encode
 					$data_meeting = base64_encode(json_encode($LINK_DATA));
-
+					// $paramString = http_build_query($LINK_DATA);
 
 					$p10 .= '<a style="width:80px;text-align:center;" type="button" target="_blank" href="FILE_PDF/booking_car_report_pdf.php?data_meeting=' . urlencode($data_meeting) . '"> download</a>';
+					// $p10 .= '<a style="width:80px;text-align:center;" type="button" target="_blank" href="FILE_PDF/booking_car_report_pdf.php?' . $paramString . '"> download</a>';
+
 					
 					if($get_CAR_PIC_NAME){
 						$img2 = '<img src="images/'.$get_CAR_PIC_NAME.'" class="d-block w-100" alt="...">';

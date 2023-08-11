@@ -20,7 +20,14 @@
 }
 
 
+.multi-column-select {
+    width: 150px;
+    column-count: 4;
+  }
 
+  .multi-column-select option {
+    padding: 5px;
+  }
 </style>
 
 <?php
@@ -201,12 +208,14 @@ $getMaxCarBook = callAPI('getMaxCarBook');
      </div>-->
 
             <div class="form-group">
-                <h4 class="h2-color">กรณีเดินทางไปต่างจังหวัด :</h4>
-                <input required type="file" class="form-control-file" name="FILEUPLOAD[]" id="FILEUPLOAD" accept=".pdf,.png,.jpg,.jpeg,.doc,.docx"><!--multiple-->
-                <label class=" font-small" style="color: #ff0000;"> * ไฟล์ที่อนุญาตให้แนบได้ pdf,png,jpg,doc ขนาดไฟล์ไม่เกิน 10 MB.</label>
-				<!--<input type="hidden" name="file" value="">
-				<input type="hidden" name="filename" value="<?php echo $_FILES['name'];?>">
-				<input type="hidden" name="tmp_name" value="<?php echo $_FILES['tmp_name'];?>">-->
+				<div class=" col-lg-6 col-md-6 col-sm-6 col-6 ">
+					<h4 class="h2-color">กรณีเดินทางไปต่างจังหวัด :</h4>
+					<input required type="file" class="form-control-file" name="FILEUPLOAD[]" id="FILEUPLOAD" accept=".pdf,.png,.jpg,.jpeg,.doc,.docx"><!--multiple-->
+					<label class=" font-small" style="color: #ff0000;"> * ไฟล์ที่อนุญาตให้แนบได้ pdf,png,jpg,doc ขนาดไฟล์ไม่เกิน 10 MB.</label>
+					<!--<input type="hidden" name="file" value="">
+					<input type="hidden" name="filename" value="<?php echo $_FILES['name'];?>">
+					<input type="hidden" name="tmp_name" value="<?php echo $_FILES['tmp_name'];?>">-->
+				</div>
             </div>
 
 		<!--</form>-->
@@ -224,12 +233,46 @@ $getMaxCarBook = callAPI('getMaxCarBook');
                 </div>
                 <div class=" col-lg-3 col-md-3 col-sm-6 col-12 ">
                     <h4 class="ml-2 mb-0 h2-color"><i class="fa fa-clock"></i> เวลาเดินทางไป</h4>
-					<input required oninvalid="this.setCustomValidity('กรุณากรอกข้อมูล เวลาเดินทางไป')" oninput="this.setCustomValidity('')" type="time" class="form-control timeFormat" id="TIME_START" name="TIME_START" placeholder = "__:__" onChange="check_meet(<?php echo $_GET['car_id'];?>,'status');" />
+					<!--<input required oninvalid="this.setCustomValidity('กรุณากรอกข้อมูล เวลาเดินทางไป')" oninput="this.setCustomValidity('')" type="time" class="form-control timeFormat" id="TIME_START" name="TIME_START" placeholder = "__:__" onChange="check_meet(<?php echo $_GET['car_id'];?>,'status');" />-->
+					<input type="hidden" class="form-control timeFormat" id="TIME_START" name="TIME_START" onChange="check_meet(<?php echo $_GET['car_id'];?>,'status');" />
+					<select required class="form-control multi-column-select" id="time_min" name="time_min" style="width: 25%;display: inline-block;" onchange="updateTimeStart()">
+						<option value="">--</option>
+						<?php
+						for ($hour = 0; $hour <= 23; $hour++) {
+							$formattedHour = str_pad($hour, 2, '0', STR_PAD_LEFT);
+							echo "<option value=\"$formattedHour\">$formattedHour</option>";
+						}
+						?>
+					</select> : 
+					<select required class="form-control" id="time_sec" name="time_sec" style="width: 25%;display: inline-block;" onchange="updateTimeStart()">
+						<option value="">--</option>
+						<option value="00">00</option>
+						<option value="15">15</option>
+						<option value="30">30</option>
+						<option value="45">45</option>
+					</select> น.
                     <!--<input required class="form-control" type="text" id="TIME_START" name="TIME_START" placeholder="กรุณากรอกเวลาไป" >-->
                 </div>
                 <div class=" col-lg-3 col-md-3 col-sm-6 col-12 ">
                     <h4 class="ml-2 mb-0 h2-color"><i class="fa fa-clock"></i> เวลาเดินทางกลับ</h4>
-					<input required oninvalid="this.setCustomValidity('กรุณากรอกข้อมูล เวลาเดินทางกลับ')" oninput="this.setCustomValidity('')" type="time" class="form-control timeFormat" id="TIME_END" name="TIME_END" placeholder = "__:__"  onChange="check_meet(<?php echo $_GET['car_id'];?>,'status');" />
+					<!--<input required oninvalid="this.setCustomValidity('กรุณากรอกข้อมูล เวลาเดินทางกลับ')" oninput="this.setCustomValidity('')" type="time" class="form-control timeFormat" id="TIME_END" name="TIME_END" placeholder = "__:__"  onChange="check_meet(<?php echo $_GET['car_id'];?>,'status');" />-->
+					<input type="hidden" class="form-control timeFormat" id="TIME_END" name="TIME_END" onChange="check_meet(<?php echo $_GET['car_id'];?>,'status');" />
+					<select required class="form-control multi-column-select" id="time_min2" name="time_min2" style="width: 25%;display: inline-block;" onchange="updateTimeEnd()">
+						<option value="">--</option>
+						<?php
+						for ($hour = 0; $hour <= 23; $hour++) {
+							$formattedHour = str_pad($hour, 2, '0', STR_PAD_LEFT);
+							echo "<option value=\"$formattedHour\">$formattedHour</option>";
+						}
+						?>
+					</select> : 
+					<select required class="form-control" id="time_sec2" name="time_sec2" style="width: 25%;display: inline-block;" onchange="updateTimeEnd();">
+						<option value="">--</option>
+						<option value="00">00</option>
+						<option value="15">15</option>
+						<option value="30">30</option>
+						<option value="45">45</option>
+					</select> น.
                     <!--<input required class="form-control" type="text" id="TIME_END" name="TIME_END" placeholder="กรุณากรอกเวลากลับ">-->
                 </div>
                 <div class=" col-lg-6 col-md-6 col-sm-6 col-12 ">
@@ -299,6 +342,38 @@ $getMaxCarBook = callAPI('getMaxCarBook');
 <!--<script src="//ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>-->
 <!-- PLUS MINUS BUTTONS JS -->
 <script>
+	function updateTimeStart() {
+		// ดึงค่าเวลาที่เลือกจาก select ของ time_min และ time_sec
+		var timeMinSelect = document.getElementById("time_min");
+		var selectedTimeMin = timeMinSelect.options[timeMinSelect.selectedIndex].value;
+
+		var timeSecSelect = document.getElementById("time_sec");
+		var selectedTimeSec = timeSecSelect.options[timeSecSelect.selectedIndex].value;
+
+		// นำค่าเวลามาประมวลผลเป็นรูปแบบ "HH:mm"
+		var timeStart = selectedTimeMin + ":" + selectedTimeSec;
+
+		// อัพเดทค่าใน input ของ TIME_START
+		var timeStartInput = document.getElementById("TIME_START");
+		timeStartInput.value = timeStart;
+	}
+	function updateTimeEnd() {
+		// ดึงค่าเวลาที่เลือกจาก select ของ time_min2 และ time_sec2
+		var timeMinSelect = document.getElementById("time_min2");
+		var selectedTimeMin = timeMinSelect.options[timeMinSelect.selectedIndex].value;
+
+		var timeSecSelect = document.getElementById("time_sec2");
+		var selectedTimeSec = timeSecSelect.options[timeSecSelect.selectedIndex].value;
+
+		// นำค่าเวลามาประมวลผลเป็นรูปแบบ "HH:mm"
+		var timeEnd = selectedTimeMin + ":" + selectedTimeSec;
+
+		// อัพเดทค่าใน input ของ TIME_END
+		var timeStartInput = document.getElementById("TIME_END");
+		timeStartInput.value = timeEnd;
+	}
+	
+	
 	$("#DATE_START").change(function(){
 		// $("#DATE_END").val($("#DATE_START").val());
 		$("#DATE_END").attr('min',$("#DATE_START").val());
@@ -312,9 +387,25 @@ $getMaxCarBook = callAPI('getMaxCarBook');
 	$("#TIME_START").change(function(){
 		$("#TIME_END").attr('min',$("#TIME_START").val());
 	});
-	$("#TIME_END").blur(function(){
+	$("#TIME_END").change(function(){
 		if($("#TIME_END").val() != "" && $("#TIME_END").val() < $("#TIME_START").val()){
 			alert('กรุณากรอกเวลาสิ้นสุดให้มากกว่าเวลาเริ่มต้น');
+		}
+	});
+	$("#time_min2").change(function(){
+		if($("#time_min2").val() < $("#time_min").val()){
+			alert('กรุณากรอกเวลาสิ้นสุดให้มากกว่าเวลาเริ่มต้น');
+			$("#time_min2").val('');
+			$("#time_sec2").val('');
+			$("#TIME_END").val('');
+		}
+	});
+	$("#time_sec2").change(function(){
+		if($("#TIME_END").val() != "" && $("#TIME_END").val() <= $("#TIME_START").val()){
+			alert('กรุณากรอกเวลาสิ้นสุดให้มากกว่าเวลาเริ่มต้น');
+			$("#TIME_END").val('');
+			$("#time_sec2").val('');
+			// $("#time_min2").val('');
 		}
 	});
 	$("#GUEST").change(function(){
@@ -534,9 +625,10 @@ $('#PROVINCE_CODE').on('change', function() {
 	var sdate = year + '-' + ('0' + month).slice(-2) + '-' + ('0' + day).slice(-2);
 	var starttime = new Date(sdate + " " + $('#TIME_START').val() + ":00");
 	var lasttime = new Date(sdate + " " + $('#TIME_END').val() + ":00");
+	var lasttime = new Date(sdate + " " + $('#TIME_END').val() + ":00");
 	if($('#TIME_START').val() >= $('#TIME_END').val() && $('#TIME_END').val() != ''){ 
-		$('#TIME_END').val('');
-		CallAlert("เวลาจองห้องไม่ถูกต้อง");
+		// $('#TIME_END').val('');
+		// alert("เวลาจองห้องไม่ถูกต้อง");
 	}else{ 
 		var diffMs = (lasttime.getTime()  - starttime.getTime() );
 		var diffMins = (diffMs / (1000*60));

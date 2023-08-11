@@ -206,14 +206,48 @@ $getMeetingToolAsset = callAPI('getMeetingToolAsset',$data_request_room_id);//�
                 </div>
                 <div class=" col-lg-3 col-md-3 col-sm-6 col-12 ">
                     <h5 class="ml-2 mb-0 h2-color"><i class="fa fa-clock"></i> เวลาเริ่มการประชุม</h5>
-					<input required oninvalid="this.setCustomValidity('กรุณากรอกข้อมูล เวลาเริ่มการประชุม')" oninput="this.setCustomValidity('')" type="time" class="form-control timeFormat" id="TIME_START" name="TIME_START" placeholder = "__:__" 
-					onChange="check_meet(<?php echo $_GET['meeting_id'];?>,'status');">
+					<!--<input required oninvalid="this.setCustomValidity('กรุณากรอกข้อมูล เวลาเริ่มการประชุม')" oninput="this.setCustomValidity('')" type="time" class="form-control timeFormat" id="TIME_START" name="TIME_START" placeholder = "__:__" 
+					onChange="check_meet(<?php echo $_GET['meeting_id'];?>,'status');">-->
+					<input type="hidden" class="form-control" id="TIME_START" name="TIME_START"  />
+					<select required class="form-control multi-column-select" id="time_min" name="time_min" style="width: 25%;display: inline-block;" onchange="updateTimeStart();check_meet(<?php echo $_GET['meeting_id'];?>,'status');">
+						<option value="">--</option>
+						<?php
+						for ($hour = 0; $hour <= 23; $hour++) {
+							$formattedHour = str_pad($hour, 2, '0', STR_PAD_LEFT);
+							echo "<option value=\"$formattedHour\">$formattedHour</option>";
+						}
+						?>
+					</select> : 
+					<select required class="form-control" id="time_sec" name="time_sec" style="width: 25%;display: inline-block;" onchange="updateTimeStart();check_meet(<?php echo $_GET['meeting_id'];?>,'status');">
+						<option value="">--</option>
+						<option value="00">00</option>
+						<option value="15">15</option>
+						<option value="30">30</option>
+						<option value="45">45</option>
+					</select> น.
                     <!--<input id="TIME_START" name="TIME_START" class="form-control" type="text" placeholder="กรุณากรอกเวลาไป">-->
                 </div>
                 <div class=" col-lg-3 col-md-3 col-sm-6 col-12 ">
                     <h5 class="ml-2 mb-0 h2-color"><i class="fa fa-clock"></i> เวลาสิ้นสุดการประชุม</h5>
-					<input required oninvalid="this.setCustomValidity('กรุณากรอกข้อมูล เวลาสิ้นสุดการประชุม')" oninput="this.setCustomValidity('')" type="time" class="form-control timeFormat" id="TIME_END" name="TIME_END" placeholder = "__:__" 
-					onChange="check_meet(<?php echo $_GET['meeting_id'];?>,'status');">
+					<!--<input required oninvalid="this.setCustomValidity('กรุณากรอกข้อมูล เวลาสิ้นสุดการประชุม')" oninput="this.setCustomValidity('')" type="time" class="form-control timeFormat" id="TIME_END" name="TIME_END" placeholder = "__:__" 
+					onChange="check_meet(<?php echo $_GET['meeting_id'];?>,'status');">-->
+					<input type="hidden" class="form-control timeFormat" id="TIME_END" name="TIME_END" />
+					<select required class="form-control multi-column-select" id="time_min2" name="time_min2" style="width: 25%;display: inline-block;" onchange="updateTimeEnd();check_meet(<?php echo $_GET['meeting_id'];?>,'status');"">
+						<option value="">--</option>
+						<?php
+						for ($hour = 0; $hour <= 23; $hour++) {
+							$formattedHour = str_pad($hour, 2, '0', STR_PAD_LEFT);
+							echo "<option value=\"$formattedHour\">$formattedHour</option>";
+						}
+						?>
+					</select> : 
+					<select required class="form-control" id="time_sec2" name="time_sec2" style="width: 25%;display: inline-block;" onchange="updateTimeEnd();check_meet(<?php echo $_GET['meeting_id'];?>,'status');">
+						<option value="">--</option>
+						<option value="00">00</option>
+						<option value="15">15</option>
+						<option value="30">30</option>
+						<option value="45">45</option>
+					</select> น.
                     <!--<input id="TIME_END" name="TIME_END" class="form-control" type="text" placeholder="กรุณากรอกเวลากลับ">-->
                 </div>
                 <div class="col-sm-6 my-1">
@@ -245,13 +279,14 @@ $getMeetingToolAsset = callAPI('getMeetingToolAsset',$data_request_room_id);//�
                 </div>
                 <div class=" col-lg-6 col-md-6 col-sm-6 col-12 ">
                     <h4 class="ml-2 mb-0 h2-color">หมายเหตุ</h4>
-                    <input oninput="this.setCustomValidity('')" id="NOTE" name="NOTE" class="form-control" type="text-area" value="ขอความกรุณาผู้ดูแลห้องประชุมจัดเตรียมอุปกรณ์เพิ่มเติมที่จำเป็นด้วยครับ/ค่ะ" >
+                    <input oninput="this.setCustomValidity('')" id="NOTE" name="NOTE" class="form-control" type="text-area" value="" >
                 </div>
             </div>
         <!--</form>-->
+		
         <hr>
         <!-- ยืมอุปกรณ์เพิ่มเติม  เช็คบล๊อกก่อนถึงจะเพิ่มจำนวนอุปกรณ์ได้-->
-        <h3 class="h2-color">ยืมอุปกรณ์เพิ่มเติม</h3>
+        <!-- <h3 class="h2-color">ยืมอุปกรณ์เพิ่มเติม</h3>
         <div class="form-group form-check ">
 			<div class="row ">
 					<div class="col-lg-4 col-md-4 col-sm-8 col-8 m-2 ">
@@ -282,7 +317,7 @@ $getMeetingToolAsset = callAPI('getMeetingToolAsset',$data_request_room_id);//�
 					<div class="col-lg-2 col-md-2 col-sm-4 col-4 m-2" align="center">
 						<input type="text" disabled class="form-control text-center" name="BALANCE" id="BALANCE_<?php echo $key;?>" value="">
 					</div>
-					<div class="col-lg-2 col-md-2 col-sm-4 col-4  m-2" align="center"><!--TOOLAMOUNT_<?php echo $key;?>-->
+					<div class="col-lg-2 col-md-2 col-sm-4 col-4  m-2" align="center"><?php //echo "TOOLAMOUNT_".$key;?>
 						<input disabled class="form-control text-center" type="number" placeholder="0" id="TOOLAMOUNT_<?php echo $key;?>" name="TOOLAMOUNT[<?php echo $key;?>]" min="1" onChange="check_meet(<?php echo $_GET['meeting_id'];?>,'status');">
 					</div>
 				<?php 
@@ -291,7 +326,7 @@ $getMeetingToolAsset = callAPI('getMeetingToolAsset',$data_request_room_id);//�
             </div>
 
 
-        </div>
+        </div>-->
 
         <!-- btn ตกลง /ยกเลิก -->
         <div class="row d-flex justify-content-center mt-4 mb-3">
@@ -326,6 +361,38 @@ $getMeetingToolAsset = callAPI('getMeetingToolAsset',$data_request_room_id);//�
 
 <!-- PLUS MINUS BUTTONS JS -->
 <script>
+	function updateTimeStart() {
+		// ดึงค่าเวลาที่เลือกจาก select ของ time_min และ time_sec
+		var timeMinSelect = document.getElementById("time_min");
+		var selectedTimeMin = timeMinSelect.options[timeMinSelect.selectedIndex].value;
+
+		var timeSecSelect = document.getElementById("time_sec");
+		var selectedTimeSec = timeSecSelect.options[timeSecSelect.selectedIndex].value;
+
+		// นำค่าเวลามาประมวลผลเป็นรูปแบบ "HH:mm"
+		var timeStart = selectedTimeMin + ":" + selectedTimeSec;
+
+		// อัพเดทค่าใน input ของ TIME_START
+		var timeStartInput = document.getElementById("TIME_START");
+		timeStartInput.value = timeStart;
+	}
+	function updateTimeEnd() {
+		// ดึงค่าเวลาที่เลือกจาก select ของ time_min2 และ time_sec2
+		var timeMinSelect = document.getElementById("time_min2");
+		var selectedTimeMin = timeMinSelect.options[timeMinSelect.selectedIndex].value;
+
+		var timeSecSelect = document.getElementById("time_sec2");
+		var selectedTimeSec = timeSecSelect.options[timeSecSelect.selectedIndex].value;
+
+		// นำค่าเวลามาประมวลผลเป็นรูปแบบ "HH:mm"
+		var timeEnd = selectedTimeMin + ":" + selectedTimeSec;
+
+		// อัพเดทค่าใน input ของ TIME_END
+		var timeStartInput = document.getElementById("TIME_END");
+		timeStartInput.value = timeEnd;
+	}
+	
+	
     jQuery(document).ready(function() {
 		
         // This button will increment the value
@@ -451,7 +518,7 @@ $(document).ready(function() {
 								if (data == 1) {
 									Swal.fire(
 										'ส่งข้อมูลสำเร็จ',
-										' ',
+										'กด OK แล้วระบบจะไปยังหน้า สถานะคำขอจองห้องประชุม',
 										'success'
 										
 									).then(function() {
@@ -477,6 +544,11 @@ $(document).ready(function() {
 										});
 										}
 										}
+
+										// เมื่อเสร็จสิ้นการประมวลผล
+										Swal.close();
+										
+										
 										window.location = "Booking_status.php?SYSTEM=1&STATUS=99";
 									});
 								} else {
@@ -519,11 +591,27 @@ $(document).ready(function() {
 	$("#TIME_START").change(function(){
 		$("#TIME_END").attr('min',$("#TIME_START").val());
 	});
-	$("#TIME_END").blur(function(){
+	$("#TIME_END").change(function(){
 		if($("#TIME_END").val() != "" && $("#TIME_END").val() < $("#TIME_START").val()){
 			alert('กรุณากรอกเวลาสิ้นสุดให้มากกว่าเวลาเริ่มต้น');
 		}
 	});
+	/* $("#time_min2").change(function(){
+		if($("#time_min2").val() < $("#time_min").val()){
+			alert('กรุณากรอกเวลาสิ้นสุดให้มากกว่าเวลาเริ่มต้น');
+			$("#time_min2").val('');
+			$("#time_sec2").val('');
+			$("#TIME_END").val('');
+		}
+	});
+	$("#time_sec2").change(function(){
+		if($("#TIME_END").val() != "" && $("#TIME_END").val() <= $("#TIME_START").val()){
+			alert('กรุณากรอกเวลาสิ้นสุดให้มากกว่าเวลาเริ่มต้น');
+			$("#TIME_END").val('');
+			$("#time_sec2").val('');
+			// $("#time_min2").val('');
+		}
+	}); */
 	
 	$(function(){
 		$(':checkbox').click(function(){
@@ -541,6 +629,7 @@ $(document).ready(function() {
 
 
 	function check_meet(c,t){
+	// alert($('#TIME_START').val());
 	var num_pp = $('#GUEST').val();
 	var get_time = $('#TIME_START').val();
 	var dataString ='INS_ID='+c+'&MEETING_DATE='+$('#DATE_START').val()+'&MEETING_EDATE='+$('#DATE_END').val()+'&STIME='+$('#TIME_START').val()+'&ETIME='+$('#TIME_END').val();//+'&WFR_ID='+wfrid
@@ -561,9 +650,12 @@ $(document).ready(function() {
 	var sdate = year + '-' + ('0' + month).slice(-2) + '-' + ('0' + day).slice(-2);
 	var starttime = new Date(sdate + " " + $('#TIME_START').val() + ":00");
 	var lasttime = new Date(sdate + " " + $('#TIME_END').val() + ":00");
-	if($('#TIME_START').val() >= $('#TIME_END').val() && $('#TIME_END').val() != ''){ 
+	// if($('#TIME_START').val() >= $('#TIME_END').val() && $('#TIME_END').val() != ''){ 
+	if($('#TIME_START').val() >= $('#TIME_END').val() && $('#time_min2').val() != '' && $('#time_sec2').val() != ''){ 
 		$('#TIME_END').val('');
-		CallAlert("เวลาจองห้องไม่ถูกต้อง");
+		alert('กรุณากรอกเวลาสิ้นสุดให้มากกว่าเวลาเริ่มต้น');
+		$("#time_min2").val('');
+		$("#time_sec2").val('');
 	}else{ 
 		var diffMs = (lasttime.getTime()  - starttime.getTime() );
 		var diffMins = (diffMs / (1000*60));
@@ -585,7 +677,7 @@ $(document).ready(function() {
 							if(num_pp > 0 && num_pp != '' && $('#TIME_START').val() != '' && $('#TIME_END').val() != '' && $('#REQ_TEL').val() != '' && $('#REQ_TEL_CON').val() != ''){
 								$('#wf-btn-save').removeAttr("disabled");
 							}else if((num_pp <= 0 || num_pp == '') && $('#TIME_START').val() != '' && $('#TIME_END').val() != '' && $('#REQ_TEL').val() == '' && $('#REQ_TEL_CON').val() == ''){
-								CallAlert("กรุณาระบุจำนวนผู้ร่วมประชุม");
+								// CallAlert("กรุณาระบุจำนวนผู้ร่วมประชุม");
 								$('#wf-btn-save').attr('disabled', 'disabled');
 							}
 						}else{ //ถ้าห้องไม่ว่าง
@@ -596,6 +688,10 @@ $(document).ready(function() {
 								$('#TIME_START').val(''); 
 							// }
 							$('#TIME_END').val('');
+							$('#time_min').val('');
+							$('#time_sec').val('');
+							$('#time_min2').val('');
+							$('#time_sec2').val('');
 							alert("ช่วงเวลานี้ มีผู้ขอใช้ห้องประชุมแล้ว");
 						}
 					/* } */ 
