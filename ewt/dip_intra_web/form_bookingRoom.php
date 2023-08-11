@@ -738,7 +738,7 @@ $(document).ready(function() {
 							$('#'+k).val('').focus();
 						}
 						});
-				}    
+				}     
 				/*if(t == 'ck_number'){ //check_meet($('#ROOM_ID').val(),'ck_number');
 					if(html.seat_amount != '-' && num_pp > parseInt(html.seat_amount)){
 						alert("กรุณากรอกจำนวนผู้เข้าร่วมประชุมให้ถูกต้อง");
