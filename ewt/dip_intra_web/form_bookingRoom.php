@@ -569,7 +569,7 @@ $(document).ready(function() {
 										Swal.close();
 										
 										
-										// window.location = "Booking_status.php?SYSTEM=1&STATUS=99";
+										window.location = "Booking_status.php?SYSTEM=1&STATUS=99";
 									});
 								} else {
 									Swal.fire(
@@ -738,7 +738,7 @@ $(document).ready(function() {
 							$('#'+k).val('').focus();
 						}
 						});
-				}     
+				}
 				/*if(t == 'ck_number'){ //check_meet($('#ROOM_ID').val(),'ck_number');
 					if(html.seat_amount != '-' && num_pp > parseInt(html.seat_amount)){
 						alert("กรุณากรอกจำนวนผู้เข้าร่วมประชุมให้ถูกต้อง");
