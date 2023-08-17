@@ -765,7 +765,8 @@ $getRequestBookingAllList = callAPI('getRequestBookingAllList', $data_request);
 							<?php }
 							$data_request3 = array(
 							"wfr_id" => $value['WFR_ID'],
-							"wf_main_id" => '6682'
+							"wf_main_id" => '6682',
+							"zoom_status" => $value['ZOOM_STATUS']
 							);
 							$getWFSTEP = callAPI('getWFSTEP', $data_request3);
 							

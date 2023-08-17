@@ -1,327 +1,779 @@
+<?php include('comtop.php'); ?>
+<!-- Include file css and properties -->
+<?php include('header.php'); ?>
+<!-- Menu and Logo -->
+<?php include('callservice.php'); ?>
+<!-- CALL SERVICE -->
+
+<style>
+	::placeholder {
+    font-weight: bold;
+}
+.form-control{
+    border: 1px solid #981c9d !important;
+    border-radius: 5px !important;
+}
+</style>
+
 <?php
-// ini_set('display_errors', 1);
-// error_reporting(E_ALL);
-include('../callservice.php');
-$data_request1_2 = array(
-							"wfr_id" =>  $_GET['WFR_ID']
-						);
-$getMeetingToolAdd = callAPI('getMeetingToolAdd', $data_request1_2);
 
-require_once '../mpdf_autoload/vendor/autoload.php';
-$mpdf = new \Mpdf\Mpdf();
+dbdpis::ConnectDB(SSO_DB_NAME, SSO_DB_TYPE, SSO_ROOT_HOST, SSO_ROOT_USER, SSO_ROOT_PASSWORD, SSO_DB_NAME, SSO_CHAR_SET);
+// GET DEP_LV1_ID, DEP_LV2_ID
+$chk_per_type = "SELECT B.*, B.DEP_LV1_ID, C.DEP_NAME AS DEP_NAME1, B.DEP_LV2_ID, D.DEP_NAME AS DEP_NAME2
+				FROM USR_MAIN A
+				LEFT JOIN M_PER_PROFILE B ON B.PER_IDCARD = A.USR_OPTION3
+				LEFT JOIN USR_DEPARTMENT C ON C.DEP_ID = B.DEP_LV1_ID
+				LEFT JOIN USR_DEPARTMENT D ON D.DEP_ID = B.DEP_LV2_ID
+				WHERE A.USR_USERNAME = '".$_SESSION['EWT_USERNAME']."' ";
+$q = dbdpis::execute($chk_per_type);
+$chk = dbdpis::Fetch($q);
 
-function thainumDigit($num) {
-	return str_replace(array('0', '1', '2', '3', '4', '5', '6', '7', '8', '9'),
-	array("๐",
-		  "๑",
-		  "๒",
-		  "๓",
-		  "๔",
-		  "๕",
-		  "๖",
-		  "๗",
-		  "๘",
-		  "๙"
-	), $num);
-}
-/* format date input 2019-11-01 return ค่าเป็นอาเรย์ */
-function convert_ex_date($date,$lang="TH"){
-	$thai_date = array('','จันทร์','อังคาร','พุธ','พฤหัสบดี','ศุกร์','เสาร์','อาทิตย์');
-	$thai_month = array("", "มกราคม", "กุมภาพันธ์", "มีนาคม", "เมษายน", "พฤษภาคม", "มิถุนายน", "กรกฎาคม", "สิงหาคม", "กันยายน", "ตุลาคม", "พฤศจิกายน", "ธันวาคม");
-	$sub_thai_month = array("", "ม.ค.", "ก.พ.", "มี.ค.", "เม.ย.", "พ.ค.", "มิ.ย.", "ก.ค.", "ส.ค.", "ก.ย.", "ต.ค.", "พ.ย.", "ธ.ค.");
+// $data_request_meeting_id = array(
+	// "meeting_id" => $_GET["meeting_id"]
+// );
+// $getMeetingToolAddList = callAPI('getMeetingToolAddList',$data_request_meeting_id);//อุปกรณ์เพิ่มเติม กรณีอุปกรณ์อิงตามห้องประชุม
+$getMeetingToolAddList = callAPI('getMeetingToolAddList');//อุปกรณ์เพิ่มเติม
 
-	if($date != ''){
-		$date_start = new DateTime($date);
-		$d_date 	= $date_start->format("d"); //เลขวันที่มีเลข 0 เช่น 01
-		$j_date 	= $date_start->format("j"); //เลขวันที่ไม่มีเลข 0
-		$t_date 	= $date_start->format("N"); //คืนค่าเป็นเลข นำค่าไปเทียบเลขในอาเรย์ ค่าที่คืน 1 - 7 โดยที่ 1 เริ่มที่ Monday
-		$month 		= $date_start->format("m");
-		$year 		= $date_start->format("Y")+543;
-		if($lang == "TH"){
-			$return["d_date"]	=	$d_date;
-			$return["j_date"]	=	$j_date;
-			$return["t_date"] 	= 	$thai_date[$t_date];
-			$return["t_month"]	=	$thai_month[($month*1)];
-			$return["s_t_month"]=	$sub_thai_month[($month*1)];
-			$return["n_month"]	=	$month;
-			$return["year"]		=	$year;
-		}else if($lang == "EN"){
+$data_request_type = array(
+	"type" => 'room',
+	"username" => $_SESSION['EWT_USERNAME'],
+	"DEP_LV1_ID" => $chk['DEP_LV1_ID'],// สำนัก กอง ศูนย์
+	"DEP_LV2_ID" => $chk['DEP_LV2_ID']// กลุ่ม
+);
+$getPersonList = callAPI('getPersonList',$data_request_type);//ข้อมูลผู้ใช้งาน
 
-		}
-		return $return;
-	}
-}
-/* format date input 2019-11-01 return วันที่ 1 เดือนมกราคม พ.ศ.2500 */
-function get_TH_D_M_Y($date){
-	$txt_date = convert_ex_date($date,$lang="TH");
-	$full_txt_date = "วันที่ ".$txt_date["j_date"]." เดือน ".$txt_date["t_month"]." พ.ศ. ".$txt_date["year"];
-	return $full_txt_date;
-}
-function get_TH_D_M_Y2($date){
-	$txt_date = convert_ex_date($date,$lang="TH");
-	$full_txt_date = $txt_date["j_date"]." เดือน ".$txt_date["t_month"]." พ.ศ. ".$txt_date["year"];
-	return $full_txt_date;
-}
-$std_css=" <style>
-		table{
-	border-collapse: collapse;
-	overflow: wrap;
-	width:100%;
-}
+$data_request_car_id = array(
+	"meeting_id" => $_GET["meeting_id"]
+);
+$getRoomDetail = callAPI('getRoomDetail',$data_request_car_id);//รายละเอียดห้องประชุม
 
-th{
-	 font-size:16pt; 
-	 padding:3px;
-	 color:#000000;
-}
-td {
-  vertical-align: text-top;
-  font-size:16pt; 
-  padding:3px;
-  color:#000000;
-}
-div.showborder th{
- vertical-align: text-top;
-  border: 1px solid black;
-  font-size:16pt; 
-  padding:3px;
-  color:#000000;
-}
-div.showborder td{
- vertical-align: text-top;
-  border: 1px solid black;
-  font-size:16pt; 
-  padding:3px;
-  color:#000000;
-}
-		.heading{
-		font-size:22pt; 
-		font-weight:bold;
-		text-align:center;
-		}
-		.class_number { mso-number-format:Standard; } 
-		.class_text_no { mso-number-format:'\@';} 
-		</style> ";
-		
-// $mpdf->WriteHTML('<br><div class="heading">บันทึกภายใน</div>');
-ob_start(); 
-
+$data_request_room_id = array(
+	"meeting_id" => $_GET["meeting_id"]
+);
+$getMeetingToolAsset = callAPI('getMeetingToolAsset',$data_request_room_id);//รายละเอียดห้องประชุม
+// echo '<br><br><br><br><br><pre>';
+ // print_r($getRoomDetail['Data']);
+ // echo '</pre>';
+ // echo '<br><br><br><br><br><pre>';
+ // print_r($_SESSION);
+ // echo '</pre>';
 ?>
-<!--<div align="center"><img width=110 height=120 src="../images/imgcer2.png" data-filename="image001.png" style="width: 110px; height: 120px;" ></div>-->
-<?php
-$header = ob_get_contents();
-ob_end_clean();
 
-ob_start(); 
-?>
-<!--<h1 align="center">หนังสือรับรองเงินเดือนและระยะเวลาทำงาน</h1>-->
-<div style="A_CSS_ATTRIBUTE:all;position: absolute;bottom: 20px; right: 50px; left: 100px; top: 80px;  ">
-<table width="100%" border="0">
-	<!--<tr>
-		<td align="center"  colspan="10" style="font-size:18pt;">
-			<img src="<?php echo $WF_URL.'/assets/images/otcc.png' ?>" width="90" height="70">
-		</td>
-	</tr>-->
-	<tr>
-		<!--<td align="left"  colspan="2" style="font-size:18pt;">
-			<img src="<?php echo $WF_URL.'/assets/images/otcc.png' ?>" width="90" height="70">
-			<img src="<?php echo $WF_URL.'/assets/images/favicon_dip.png' ?>" width="50" height="50">
-		</td>-->
-		<td align="left"  colspan="1" style="font-size:18pt;">
-			<img style="" src="<?php echo '../assets/img/logo_DIPROM_full.png' ?>" width="60" height="70">
-			<!--<strong>ใบขออนุญาตใช้รถยนต์ส่วนกลาง<strong>-->
-		</td>
-		<td align="center"  colspan="6" style="font-size:18pt;">
-			<strong>แบบฟอร์มจองห้องประชุม<strong>
-		</td>
-	</tr>
-	<tr>
-		<td align="right" colspan="10" style="font-size:15pt;">
-			<!--<strong><?php echo get_TH_D_M_Y($_GET['CB_RECORD']);?></strong>-->
-			<strong><?php echo get_TH_D_M_Y(date('Y-m-d'));?></strong>
-		</td>
-	</tr>
-	<tr>
-		<td align="right" colspan="10"></td>
-	</tr>
-	<tr>
-		<td align="left" colspan="10" style="font-size:14pt;">
-			<strong>เรียน</strong> &nbsp;<?php echo $_GET['APP_2_NAME'];//$_GET['APP_2'] (ชื่อ)?> &nbsp;
-			<strong>ผ่าน</strong> &nbsp;<?php echo $_GET['APP_1_NAME']; //$_GET['APP_2'] (ชื่อ)?>
-		</td>
-	</tr>
-	<tr>
-		<td align="left" colspan="10" style="font-size:14pt;">
-			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-			<strong>ชื่อหน่วยงาน</strong>&nbsp;&nbsp;<?php echo $_GET['DEP_NAME1'] ; ?>
-		</td>
-	</tr>
-	<!--<tr>
-		<td align="left" colspan="10" style="font-size:14pt;">
-			<strong>สำนัก/ฝ่าย</strong><?php echo ($data_show['CB_DEP_NAME_BOOK']) ? "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;".$data_show['CB_DEP_NAME_BOOK']."&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" : "................................................................................................................"; ?> 
-			<strong>โทร</strong><?php echo ($data_show['CB_PHONE_BOOK']) ? "&nbsp;".$data_show['CB_PHONE_BOOK']."&nbsp;" : "............................................."; ?>
-		</td>
-	</tr>-->
-	<tr>
-		<td align="left" colspan="10" style="font-size:14pt;">
-			<strong>มีความประสงค์ขอใช้ห้องประชุม</strong> &nbsp;<?php echo $_GET['CB_AREA']; ?>
-		</td>
-	</tr>
-	<tr>
-		<td align="left" colspan="10" style="font-size:14pt;">
-			<strong>หัวข้อประชุม</strong> <?php echo $_GET['CB_OBJ']; ?>
-		</td>
-	</tr>
-	<tr>
-		<td align="left" colspan="10" style="font-size:14pt;">
-			<strong>ระหว่างวันที่</strong> <?php echo get_TH_D_M_Y2($_GET['MEETING_DATE']); ?>
-			<strong>ถึงวันที่</strong> <?php echo get_TH_D_M_Y2($_GET['MEETING_EDATE']); ?>
-			<strong>เวลา</strong> <?php echo $_GET['STIME']." <strong>ถึง เวลา </strong>".$_GET['ETIME']; ?> น.
-		</td>
-	</tr>
-	<tr>
-		<td align="left" colspan="10" style="font-size:14pt;">
-			<strong>มีผู้เข้าร่วมประชุม จำนวน</strong> &nbsp;<?php echo $_GET['CB_MEMBER']; ?>&nbsp; <strong>คน</strong>
-			<strong> &nbsp; ประธานที่ประชุม</strong> &nbsp;<?php echo $_GET['MEETINH_CHAIRMAN']; ?>
-		</td>
-	</tr>
-	<tr>
-		<td align="left" colspan="10" style="font-size:14pt;">
-			<strong>ผู้ประสานงาน</strong> &nbsp;<?php echo $_GET['CB_PER_ID'] ; ?> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-			<strong> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; หมายเลขโทรศัพท์</strong> &nbsp;<?php echo $_GET['REQ_TEL']; ?>
-		</td>
-	</tr>
-	<tr>
-		<td align="left" colspan="10" style="font-size:14pt;">
-			<strong>โดยขอใช้อุปกรณ์โสตฯ ดังนี้</strong> &nbsp;<?php //echo $_GET['CB_PER_ID'] ; ?> 
-		</td>
-	</tr>
-	<tr>
-		<td align="left" colspan="10" style="font-size:14pt;">
-			<!-- ซ่อนรายการอุปกรณ์ที่ยืมเพิ่มเติม เปลี่ยนเป็น รายการอุปกรณ์โสตแทน -->
-			<!--<?php foreach($getMeetingToolAdd['Data'] as $key => $value2){ ?>
-			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-			<?php echo $value2['TOOL_NAME']." จำนวน ".$value2['TOOL_AMOUNT'];?><br>
-			<?php }?>-->
-			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-			๑.<input type="checkbox">&nbsp;&nbsp;เครื่องคอมพิวเตอร์
-			<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-			๒.<input type="checkbox">&nbsp;&nbsp;เครื่อง LCD โปรเจคเตอร์
-			<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-			๓.<input type="checkbox">&nbsp;&nbsp;เครื่องขยายเสียง พร้อมตั้งไมค์ จำนวน.........................ตัว
-			<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-			๔.<input type="checkbox">&nbsp;&nbsp;อื่นๆ.....................................................................................................
-			<br>
-		</td>
-	</tr>
-	<tr>
-		<td align="center" colspan="10" style="font-size:14pt;">
-			&nbsp;
-		</td>
-	<tr>
-	<tr>
-		<td align="center" colspan="10" style="font-size:14pt;">
-			จึงเรียนมาเพื่อทราบ
-		</td>
-	</tr>
-	<tr>
-		<td align="center" colspan="10" style="font-size:14pt;">
-			&nbsp;
-		</td>
-	<tr>
-	<tr>
-		<td align="center" colspan="10" style="font-size:14pt;">
-			&nbsp;
-		</td>
-	<tr>
-		<td align="center" colspan="10" style="font-size:14pt;">
-			.......................................................................
-		</td>
-	</tr>
-	<tr>
-		<td align="center" colspan="10" style="font-size:14pt;">
-			(<?php echo $_GET['CB_PER_ID'] ; ?>)
-		</td>
-	</tr>
-	<tr>
-		<td align="center" colspan="10" style="font-size:14pt;">
-			<?php echo get_TH_D_M_Y(date('Y-m-d')); ?>
-		</td>
-	</tr>
-	<tr>
-		<td align="center" colspan="10" style="font-size:14pt;">
-			&nbsp;
-		</td>
-	<tr>
-	<tr>
-		<td align="right" colspan="2" style="font-size:14pt;">
-			อนุมัติ
-		</td>
-	</tr>
-	<tr>
-		<td align="center" colspan="10" style="font-size:14pt;">
-			&nbsp;
-		</td>
-	<tr>
-	<tr>
-		<td align="center" colspan="10" style="font-size:14pt;">
-			&nbsp;
-		</td>
-	<tr>
-	<tr>
-		<td align="center" colspan="3" style="font-size:14pt;">
-			<?php echo $_GET['APP_2']; ?>
-		</td>
-	</tr>
-	<tr>
-		<td align="left" colspan="10" style="font-size:14pt;">
-			&nbsp;&nbsp;เลขานุการกรม กรมส่งเสริมอุตสาหกรรม
-		</td>
-	</tr>
-	<tr>
-		<td align="center" colspan="10" style="font-size:14pt;">
-			&nbsp;
-		</td>
-	<tr>
-	<tr>
-		<td align="right" colspan="10">
-			<hr>
-		</td>
-	</tr>
-	<tr>
-		<td align="center" colspan="10" style="font-size:14pt;">
-			&nbsp;
-		</td>
-	<tr>
-	<tr>
-		<td align="left" colspan="10" style="font-size:14pt;">
-			หมายเหตุ :
-		</td>
-	<tr>
-	
-</table>
+<!-- แถบสีน้ำเงินหัวข้อข่าวสาร -->
+<div class="container-fluid mar-spacehead  shadow-sm" style="background-color:rgba(241, 237, 234, 0.8) ;">
+    <form id="contact-form" action="#" method="post" role="form">
+        <div class="row  w-100 d-flex justify-content-center">
+            <img src="images/2meet.png" class="img rounded icon-tabhead" alt="BG-BookingCar"><span>
+                <h1 class="col-12 txt-gradient-purple font-h-search  pt-4 pb-4 ">
+                    จองห้องประชุม
+                </h1>
+            </span>
+        </div>
+    </form>
 </div>
-<?php
-$body = ob_get_contents();
-ob_end_clean();
+<!-- แถบคลอแล๊บด้านบน -->
+<div class="d-flex ">
+    <div class="p-2 StepBox-882-car p-3 ">
 
-/* $mpdf->SetHTMLFooter('
-<table border="0" >
-	<tr>
-		<td style="">หนังสือฉบับนี้ให้ใช้ได้ ๓ เดือน นับแต่วันที่ออกหนังสือ (โทร. ๐ ๒๔๓๐ ๖๘๖๕-๖๖ ต่อ ๑๐๒๐)</td>
-	</tr>
-	<tr>
-		<td style=""><br></td>
-	</tr>
-</table>
-'); */
+        <h3 class="mt-2 mb-0"><i class="fa fa-desktop"></i></h3>
+        <h4 class="mt-0">1. กรอกรายละเอียด</h4>
+        <p class="white-text font-small">ให้ผู้จองกรอกรายละเอียดต่างๆอย่างครบถ้วนสมบูรณ์</p>
+        <div class="arrow-right-822-car1"></div>
+    </div>
+    <div class="p-2 StepBox-BE4-car  p-3">
+        <h3 class="mt-2 mb-0"><i class="fa fa-user-check"></i></h3>
+        <h4 class="mt-0">2. ผ่านความเห็นชอบ</h4>
+        <p class="white-text font-small">เลือกผู้บังคับบัญชาสำหรับให้ความเห็นชอบใน การขอจองห้องประชุมส่วนกลาง</p>
+        <div class="arrow-right-BE4-car2"></div>
+    </div>
+    <div class="p-2 StepBox-882-car  p-3">
+        <h3 class="mt-2 mb-0"><i class="fa fa-check-circle"></i></h3>
+        <h4 class="mt-0">3. การอนุมัติคำขอ </h4>
+        <p class="white-text font-small">คำขอที่ผ่านความเห็นชอบจากผู้บังคับบัญชาจะ ถูกส่งต่อไปยังผู้มีอำนาจอนุมัติ</p>
+        <div class="arrow-right-822-car3"></div>
+    </div>
+    <div class="p-2 StepBox-BE4-car  p-3">
+        <h3 class="mt-2 mb-0"><i class="fa fa-list-alt"></i></h3>
+        <h4 class="mt-0">4. ตรวจสอบสถานะ</h4>
+        <p class="white-text font-small">ผู้จองสามารถตรวจสอบขั้นตอนการจองได้จาก"สถานะคำขอ"ซึ่งเป็นหนึ่งในเครื่องมือของผู้ใช้งาน</p>
+        <div class="arrow-right-BE4-car4"></div>
+    </div>
+    <div class="p-2 StepBox-882-car  p-3">
+        <h3 class="mt-2 mb-0"><i class="fa fa-door-open"></i></h3>
+        <h4 class="mt-0">5. เข้าใช้งานห้องประชุม </h4>
+        <p class="white-text font-small">ผู้จองจะได้รับแจ้ง วัน เวลา สถานที่ ของห้องประชุมพร้อมใช้งาน </p>
+    </div>
+</div>
 
-/* if($_GET["AP_STATUS"] != 1){
-$mpdf->SetWatermarkText('ตัวอย่างหนังสือรับรอง');
-$mpdf->showWatermarkText = true;
-} */
 
-$mpdf->WriteHTML($std_css.$header.$body);
-$mpdf->Output();
-?>
+<!-- News index page -->
+<div class="shadow-sm container-fluid Knowledge-bg-head ">
+    <div class="container pb-3 ">
+        <h2 class="h2-color pt-4">
+            แบบฟอร์มการจอง <?php echo $getRoomDetail['Data']['ROOM_NAME']. " ( " .$getRoomDetail['Data']['SEAT_AMOUNT'] ." ที่นั่ง )";?>
+        </h2>
+        <h5 class="h2-color"><a href="Booking_room.php">จองห้องประชุม > </a> <span>แบบฟอร์มการจองห้องประชุม</span></h5>
+        <hr class="hr_news mt-0">
+
+
+        <!-- form ห้องประชุม -->
+        <form method="post" enctype="multipart/form-data"  id="form_wf">
+		<input type="hidden" name="ROOM_ID" value="<?php echo $_GET["meeting_id"];?>">
+		<input type="hidden" name="USR_USERNAME" value="<?php echo $_SESSION['EWT_USERNAME'];?>">
+		<input type="hidden" name="DEP_NAME1" value="<?php echo $chk['DEP_NAME1'];?>">
+			<div class="form-row align-items ">
+				<div class="latest-post-media ">
+                    <a href="#" class="latest-post-img">
+                        <img loading="lazy" class="bor-ra-t15px img-fluid  max-height-news w-100" src="images/<?php echo $getRoomDetail['Data']['ROOM_PIC_NAME'];?>" alt="img">
+                    </a>
+                </div>
+				<!----><div class="col-sm-6 " >
+                    <h4 class="h2-color ml-2">อุปกรณ์พื้นฐานประจำห้องประชุม :</h4>
+					<table class="table table-sm">
+					<?php if(count($getMeetingToolAsset['Data']) > 0){?>	
+						<thead class="white-text bg-color-purple ta-fontmini ">
+							<tr>
+								<th scope="col" width="20%" class="text-center">ลำดับ</th>
+								<th scope="col" width="60%" class="text-center">ชื่ออุปกรณ์</th>
+								<th scope="col" width="20%" class="text-center">จำนวน</th>
+							</tr>
+						</thead>
+						<tbody>
+						<?php 
+							$i = 1;
+							foreach($getMeetingToolAsset['Data'] as $k => $v ){
+							?>
+							<tr>
+								<td class="text-center"><?php echo $i;?></td>
+								<td class="text-left" style="padding-left:50px;"><?php echo $v['ASSET_DESC'];?></td>
+								<td class="text-center"><?php echo $v['ASSET_REMARK'];?></td>
+							</tr>
+							<?php 
+							$i++;
+							}
+						
+						?>
+						</tbody>
+					<?php 
+					}else{
+						echo "&nbsp&nbsp-- ไม่มีข้อมูล --";
+					}//DEP_NAME1_EXTERNAL
+					?>
+					</table>
+                </div>
+			</div><br>
+            <div class="form-row align-items-center">
+                <div class=" col-lg-6 col-md-6 col-sm-6 col-12 ">
+                    <input type="checkbox" class="form-check-input h2-color ml-0" id="DEP_CHECK" name="DEP_CHECK" >
+					<h4 class="h2-color ml-4">หน่วยงานภายนอก</h4>
+                </div>
+                <div class=" col-lg-6 col-md-6 col-sm-6 col-12 ">
+                    <h5 class="ml-2 mb-0 h2-color"></h5>
+                </div>
+				<div id="SUB_DEP_CHECK3" hidden class=" col-lg-6 col-md-6 col-sm-6 col-12 ">
+                    <h4 class="h2-color ml-2">* ชื่อหน่วยงานภายนอก :</h4>
+					<input  oninvalid="this.setCustomValidity('กรุณากรอกข้อมูล ชื่อหน่วยงานภายนอก')" oninput="this.setCustomValidity('')" id="DEP_EXTERNAL" name="DEP_EXTERNAL" class="form-control" type="text" placeholder="กรุณากรอกชื่อหน่วยงานภายนอก">
+                </div>
+                <div id="SUB_DEP_CHECK4" hidden class=" col-lg-6 col-md-6 col-sm-6 col-12 ">
+                    <h5 class="ml-2 mb-0 h2-color"></h5>
+                </div>
+                <div id="SUB_DEP_CHECK1" hidden class=" col-lg-6 col-md-6 col-sm-6 col-12 ">
+                    <h4 class="h2-color">กรณีเลือกหน่วยงานภายนอกกรุณาแนบหนังสือ :</h4>
+					<input  type="file" class="form-control-file" name="FILEUPLOAD[]" id="FILEUPLOAD" accept=".pdf,.png,.jpg,.jpeg,.doc,.docx"><!--multiple-->
+					<label class=" font-small" style="color: #ff0000;"> * ไฟล์ที่อนุญาตให้แนบได้ pdf,png,jpg,doc ขนาดไฟล์ไม่เกิน 10 MB.</label>
+					<hr>
+                </div>
+                <div id="SUB_DEP_CHECK2" hidden class=" col-lg-6 col-md-6 col-sm-6 col-12 ">
+                    <h5 class="ml-2 mb-0 h2-color"></h5>
+                </div>
+                <div class=" col-lg-6 col-md-6 col-sm-6 col-12 ">
+                    <input type="checkbox" class="form-check-input h2-color ml-0" id="ZOOM_CHECK" name="ZOOM_CHECK" onchange="updateCheckboxValue()">
+                    <input type="hidden" class="form-check-input h2-color ml-0" id="ZOOM_STATUS" name="ZOOM_STATUS" value="N">
+					<h4 class="h2-color ml-4">จองซูม</h4>
+                </div>
+                <div class=" col-lg-6 col-md-6 col-sm-6 col-12 ">
+                    <h5 class="ml-2 mb-0 h2-color"></h5>
+                </div>
+                <div class="col-sm-6 my-1">
+                    <h4 class="h2-color ml-2">* หัวข้อการประชุม :</h4>
+                    <input required oninvalid="this.setCustomValidity('กรุณากรอกข้อมูล หัวข้อการประชุม')" oninput="this.setCustomValidity('')" id="MEETING_TOPIC" name="MEETING_TOPIC" class="form-control" type="text" placeholder="กรุณากรอกหัวข้อการประชุม">
+                </div>
+                <div class="col-sm-6 my-1">
+                    <h4 class="h2-color ml-2">* ประธานในที่ประชุม :</h4>
+                    <input required oninvalid="this.setCustomValidity('กรุณากรอกข้อมูล ประธานในที่ประชุม')" oninput="this.setCustomValidity('')" id="MEETINH_CHAIRMAN" name="MEETINH_CHAIRMAN" class="form-control" type="text" placeholder="กรุณากรอกชื่อประธานในที่ประชุม">
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-6 col-6 ">
+                    <h5 class="ml-2 mb-0 h2-color"><i class="fa fa-calendar"></i> วันเริ่มต้น</h5>
+                    <input required oninvalid="this.setCustomValidity('กรุณากรอกข้อมูล วันเริ่มต้น')" oninput="this.setCustomValidity('')" class="ml-2 pb-1 " type="date" id="DATE_START" name="DATE_START" value="dd/mm/yyy" 
+					onChange="check_meet(<?php echo $_GET['meeting_id'];?>,'status');" min="<?php echo date('Y-m-d');?>" >
+                </div>
+                <div class=" col-lg-3 col-md-3 col-sm-6  col-6 ">
+                    <h5 class="ml-2 mb-0 h2-color"><i class="fa fa-calendar"></i> วันที่สิ้นสุด</h5>
+                    <input required oninvalid="this.setCustomValidity('กรุณากรอกข้อมูล วันที่สิ้นสุด')" oninput="this.setCustomValidity('')" class=" ml-2 pb-1 " type="date" id="DATE_END" name="DATE_END" value="dd/mm/yyy" 
+					onChange="check_meet(<?php echo $_GET['meeting_id'];?>,'status');">
+                </div>
+                <div class=" col-lg-3 col-md-3 col-sm-6 col-12 ">
+                    <h5 class="ml-2 mb-0 h2-color"><i class="fa fa-clock"></i> เวลาเริ่มการประชุม</h5>
+					<!--<input required oninvalid="this.setCustomValidity('กรุณากรอกข้อมูล เวลาเริ่มการประชุม')" oninput="this.setCustomValidity('')" type="time" class="form-control timeFormat" id="TIME_START" name="TIME_START" placeholder = "__:__" 
+					onChange="check_meet(<?php echo $_GET['meeting_id'];?>,'status');">-->
+					<input type="hidden" class="form-control" id="TIME_START" name="TIME_START"  />
+					<select required class="form-control multi-column-select" id="time_min" name="time_min" style="width: 25%;display: inline-block;" onchange="updateTimeStart();check_meet(<?php echo $_GET['meeting_id'];?>,'status');">
+						<option value="">--</option>
+						<?php
+						for ($hour = 0; $hour <= 23; $hour++) {
+							$formattedHour = str_pad($hour, 2, '0', STR_PAD_LEFT);
+							echo "<option value=\"$formattedHour\">$formattedHour</option>";
+						}
+						?>
+					</select> : 
+					<select  required class="form-control" id="time_sec" name="time_sec" style="width: 25%;display: inline-block;" onchange="updateTimeStart();check_meet(<?php echo $_GET['meeting_id'];?>,'status');">
+						<option value="">--</option>
+						<option value="00">00</option>
+						<option value="15">15</option>
+						<option value="30">30</option>
+						<option value="45">45</option>
+					</select> น.
+                    <!--<input id="TIME_START" name="TIME_START" class="form-control" type="text" placeholder="กรุณากรอกเวลาไป">-->
+                </div>
+                <div class=" col-lg-3 col-md-3 col-sm-6 col-12 ">
+                    <h5 class="ml-2 mb-0 h2-color"><i class="fa fa-clock"></i> เวลาสิ้นสุดการประชุม</h5>
+					<!--<input required oninvalid="this.setCustomValidity('กรุณากรอกข้อมูล เวลาสิ้นสุดการประชุม')" oninput="this.setCustomValidity('')" type="time" class="form-control timeFormat" id="TIME_END" name="TIME_END" placeholder = "__:__" 
+					onChange="check_meet(<?php echo $_GET['meeting_id'];?>,'status');">-->
+					<input type="hidden" class="form-control timeFormat" id="TIME_END" name="TIME_END" />
+					<select required class="form-control multi-column-select" id="time_min2" name="time_min2" style="width: 25%;display: inline-block;" onchange="updateTimeEnd();check_meet(<?php echo $_GET['meeting_id'];?>,'status');">
+						<option value="">--</option>
+						<?php
+						for ($hour = 0; $hour <= 23; $hour++) {
+							$formattedHour = str_pad($hour, 2, '0', STR_PAD_LEFT);
+							echo "<option value=\"$formattedHour\">$formattedHour</option>";
+						}
+						?>
+					</select> : 
+					<select required class="form-control" id="time_sec2" name="time_sec2" style="width: 25%;display: inline-block;" onchange="updateTimeEnd();check_meet(<?php echo $_GET['meeting_id'];?>,'status');">
+						<option value="">--</option>
+						<option value="00">00</option>
+						<option value="15">15</option>
+						<option value="30">30</option>
+						<option value="45">45</option>
+					</select> น.
+                    <!--<input id="TIME_END" name="TIME_END" class="form-control" type="text" placeholder="กรุณากรอกเวลากลับ">-->
+                </div>
+                <div class="col-sm-6 my-1">
+                    <h4 class="h2-color ml-2">* จำนวนผู้เข้าร่วม :</h4>
+                    <input required oninvalid="this.setCustomValidity('กรุณากรอกข้อมูล จำนวนผู้เข้าร่วม')" oninput="this.setCustomValidity('')" id="GUEST" name="GUEST" class="form-control" type="number" placeholder="กรุณากรอกจำนวนผู้เข้าร่วม"
+					onChange="check_meet(<?php echo $_GET['meeting_id'];?>,'status');">
+                </div>
+                <div class="col-sm-6 my-1">
+                    <h4 class="h2-color ml-2">* หมายเลขโทรศัพท์ :</h4>
+                    <input required oninvalid="this.setCustomValidity('กรุณากรอกข้อมูล หมายเลขโทรศัพท์')" oninput="this.setCustomValidity('')" id="TEL" name="TEL" class="form-control" type="tel" placeholder="XXX-XXX-XXXX" maxlength=""/>
+                </div>
+                <div class=" col-lg-6 col-md-6 col-sm-6 col-12 ">
+                    <h4 class="ml-2 mb-0 h2-color">* ผู้ผ่านความเห็นชอบ</h4>
+					<select required oninvalid="this.setCustomValidity('กรุณากรอกข้อมูล ผู้ผ่านความเห็นชอบ')" oninput="this.setCustomValidity('')" id="PER_APPROVE_ID" name="PER_APPROVE_ID" class=" form-control">
+                        <option value="" selected>เลือกผู้ผ่านการเห็นชอบ</option>
+                        <?php 
+						foreach ($getPersonList['Data'] as $key => $value) {
+							echo "<option value=" . $key . ">" . $value['FULLNAME'] . "</option>";
+						}
+						?>
+                    </select>
+                    <!--<select id="inputState" class="ml-2 form-control">
+                        <option selected>เลือกผู้ผ่านการเห็นชอบ</option>
+                        <option>...</option>
+                    </select>-->
+                </div>
+                <div class=" col-lg-6 col-md-6 col-sm-6 col-12 ">
+                    <h5 class="ml-2 mb-0 h2-color"></h5>
+                </div>
+                <div class=" col-lg-6 col-md-6 col-sm-6 col-12 ">
+                    <h4 class="ml-2 mb-0 h2-color">หมายเหตุ</h4>
+                    <input oninput="this.setCustomValidity('')" id="NOTE" name="NOTE" class="form-control" type="text-area" value="" >
+                </div>
+            </div>
+        <!--</form>-->
+		
+        <hr>
+        <!-- ยืมอุปกรณ์เพิ่มเติม  เช็คบล๊อกก่อนถึงจะเพิ่มจำนวนอุปกรณ์ได้-->
+        <!-- <h3 class="h2-color">ยืมอุปกรณ์เพิ่มเติม</h3>
+        <div class="form-group form-check ">
+			<div class="row ">
+					<div class="col-lg-4 col-md-4 col-sm-8 col-8 m-2 ">
+						<h4 class="h2-color ml-2">รายการ</h4>
+					</div>
+					<div class="col-lg-2 col-md-2 col-sm-4 col-4 m-2 text-center">
+						<h4 class="h2-color ml-2">จำนวนที่มี</h4>
+					</div>
+					<div class="col-lg-2 col-md-2 col-sm-4 col-4 m-2 text-center">
+						<h4 class="h2-color ml-2">จำนวณคงเหลือ</h4>
+					</div>
+					<div class="col-lg-2 col-md-2 col-sm-4 col-4 m-2 text-center">
+						<h4 class="h2-color ml-2">จำนวณที่ต้องการ</h4>
+					</div>
+            </div>
+            <div class="row ">
+				<?php 
+					foreach ($getMeetingToolAddList['Data'] as $key => $value) {
+				?>
+					<div class="col-lg-4 col-md-4 col-sm-8 col-8 m-2">
+						<input type="checkbox" class="form-check-input mt-2" id="TOOLCHECK" rel="<?php echo $key;?>" name="TOOLCHECK[<?php echo $key;?>]" onclick="" >
+						<label class="form-check-label" for="exampleCheck1"><?php echo $value['TOOL_NAME'];?></label>
+						
+					</div>
+					<div class="col-lg-2 col-md-2 col-sm-4 col-4 m-2" align="center">
+						<?php echo $value['QUANTITY'];?>
+					</div>
+					<div class="col-lg-2 col-md-2 col-sm-4 col-4 m-2" align="center">
+						<input type="text" disabled class="form-control text-center" name="BALANCE" id="BALANCE_<?php echo $key;?>" value="">
+					</div>
+					<div class="col-lg-2 col-md-2 col-sm-4 col-4  m-2" align="center"><?php //echo "TOOLAMOUNT_".$key;?>
+						<input disabled class="form-control text-center" type="number" placeholder="0" id="TOOLAMOUNT_<?php echo $key;?>" name="TOOLAMOUNT[<?php echo $key;?>]" min="1" onChange="check_meet(<?php echo $_GET['meeting_id'];?>,'status');">
+					</div>
+				<?php 
+					}
+				?>
+            </div>
+
+
+        </div>-->
+
+        <!-- btn ตกลง /ยกเลิก -->
+        <div class="row d-flex justify-content-center mt-4 mb-3">
+            <div class=" col-lg-4 col-md-4 col-sm-12 col-12">
+                <a href="#" data-toggle="modal" data-target=".bd-example-modal-lg " class="mt-2 mb-3 px-3 btn d-flex 
+        justify-content-center  border-ra-15px btn-danger text-white btn-sm">ยกเลิก</a>
+            </div>
+            <div class=" col-lg-4 col-md-4 col-sm-12 col-12">
+				<button id="submit" type="submit" data-toggle="modal" class="mt-2 mb-6 px-3 btn d-flex 
+				justify-content-center  border-ra-15px btn-success  text-white btn-sm" style="width:100%;">ส่งคำขอจองห้องประชุม</button>
+                <!--<a href="#" data-toggle="modal" data-target=".bd-example-modal-lg " class="mt-2 mb-3 px-3 btn d-flex 
+        justify-content-center  border-ra-15px btn-success btn-sm">ส่งคำขอจองห้องประชุม</a>-->
+            </div>
+        </div>
+		
+		</form>
+
+
+
+
+    </div>
+
+</div>
+
+
+
+
+
+<?php include('footer.php'); ?>
+<!-- Footer Website -->
+<?php include('combottom.php'); ?>
+
+<!-- PLUS MINUS BUTTONS JS -->
+<script>
+	function updateTimeStart() {
+		// ดึงค่าเวลาที่เลือกจาก select ของ time_min และ time_sec
+		var timeMinSelect = document.getElementById("time_min");
+		var selectedTimeMin = timeMinSelect.options[timeMinSelect.selectedIndex].value;
+
+		var timeSecSelect = document.getElementById("time_sec");
+		var selectedTimeSec = timeSecSelect.options[timeSecSelect.selectedIndex].value;
+		
+		var timeMin2Select = document.getElementById('time_min2');
+		var timeSec2Select = document.getElementById('time_sec2');
+		
+		/* //เมื่อเลือก time_min ให้ time_sec = '00'
+			if(selectedTimeSec == ''){
+			selectedTimeSec = '00';
+			$("#time_sec").val('00');
+			// $('#time_sec').html(response);
+		} */ 
+		
+		// นำค่าเวลามาประมวลผลเป็นรูปแบบ "HH:mm"
+		var timeStart = selectedTimeMin + ":" + selectedTimeSec;
+
+		// อัพเดทค่าใน input ของ TIME_START
+		var timeStartInput = document.getElementById("TIME_START");
+		timeStartInput.value = timeStart;
+		
+		// if (selectedTimeMin !== '' && selectedTimeSec !== '') {
+			// timeMin2Select.disabled = false;
+			// timeSec2Select.disabled = false;
+		// } else {
+			// timeMin2Select.disabled = true;
+			// timeSec2Select.disabled = true;
+		// }
+	}
+	function updateTimeEnd() {
+		// ดึงค่าเวลาที่เลือกจาก select ของ time_min2 และ time_sec2
+		var timeMinSelect = document.getElementById("time_min2");
+		var selectedTimeMin = timeMinSelect.options[timeMinSelect.selectedIndex].value;
+
+		var timeSecSelect = document.getElementById("time_sec2");
+		var selectedTimeSec = timeSecSelect.options[timeSecSelect.selectedIndex].value;
+		
+		/* //เมื่อเลือก time_min2 ให้ time_sec2 = '00'
+		if(selectedTimeSec == ''){
+			selectedTimeSec = '00';
+			$("#time_sec2").val('00');
+			// $('#time_sec2').html(response);
+		} */
+		
+		// นำค่าเวลามาประมวลผลเป็นรูปแบบ "HH:mm"
+		var timeEnd = selectedTimeMin + ":" + selectedTimeSec;
+
+		// อัพเดทค่าใน input ของ TIME_END
+		var timeStartInput = document.getElementById("TIME_END");
+		timeStartInput.value = timeEnd;
+	}
+	
+	function updateCheckboxValue() {
+		var checkbox = document.getElementById('ZOOM_CHECK');
+		var valueField = document.getElementById('ZOOM_STATUS');
+
+		if (checkbox.checked) {
+		valueField.value = 'Y';
+		} else {
+		valueField.value = 'N'; // เมื่อไม่ถูกเลือกให้เป็น "N"
+		}
+	}
+	
+	
+	
+    jQuery(document).ready(function() {
+		
+        // This button will increment the value
+        $('[data-quantity="plus"]').click(function(e) {
+            // Stop acting like a button
+            e.preventDefault();
+            // Get the field name
+            fieldName = $(this).attr('data-field');
+            // Get its current value
+            var currentVal = parseInt($('input[name=' + fieldName + ']').val());
+            // If is not undefined
+            if (!isNaN(currentVal)) {
+                // Increment
+                $('input[name=' + fieldName + ']').val(currentVal + 1);
+            } else {
+                // Otherwise put a 0 there
+                $('input[name=' + fieldName + ']').val(0);
+            }
+        });
+        // This button will decrement the value till 0
+        $('[data-quantity="minus"]').click(function(e) {
+            // Stop acting like a button
+            e.preventDefault();
+            // Get the field name
+            fieldName = $(this).attr('data-field');
+            // Get its current value
+            var currentVal = parseInt($('input[name=' + fieldName + ']').val());
+            // If it isn't undefined or its greater than 0
+            if (!isNaN(currentVal) && currentVal > 0) {
+                // Decrement one
+                $('input[name=' + fieldName + ']').val(currentVal - 1);
+            } else {
+                // Otherwise put a 0 there
+                $('input[name=' + fieldName + ']').val(0);
+            }
+        });
+    });
+</script>
+
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> <!-- script time format -->
+<script src="https://igorescobar.github.io/jQuery-Mask-Plugin/js/jquery.mask.min.js" type="text/javascript"></script> <!-- script time format -->
+
+<script>
+	
+	const depCheck = document.getElementById("DEP_CHECK");
+    const subDepCheck1 = document.getElementById("SUB_DEP_CHECK1");
+    const subDepCheck2 = document.getElementById("SUB_DEP_CHECK2");
+    const subDepCheck3 = document.getElementById("SUB_DEP_CHECK3");
+    const subDepCheck4 = document.getElementById("SUB_DEP_CHECK4");
+	const fileUpload = document.getElementById("FILEUPLOAD");
+	const depExternal = document.getElementById("DEP_EXTERNAL");
+
+    depCheck.addEventListener("change", function () {
+        if (depCheck.checked) {
+            subDepCheck1.removeAttribute("hidden");
+            subDepCheck2.removeAttribute("hidden");
+            subDepCheck3.removeAttribute("hidden");
+            subDepCheck4.removeAttribute("hidden");
+			$('#FILEUPLOAD').prop('required', true);
+			$('#DEP_EXTERNAL').prop('required', true);
+        } else {
+            subDepCheck1.setAttribute("hidden", "true");
+            subDepCheck2.setAttribute("hidden", "true");
+            subDepCheck3.setAttribute("hidden", "true");
+            subDepCheck4.setAttribute("hidden", "true");
+			$('#FILEUPLOAD').prop('required', false);
+			$('#DEP_EXTERNAL').prop('required', false);
+			// เคลียร์ค่า FILEUPLOAD เมื่อ checkbox ถูกติ๊กออก (unchecked)
+            fileUpload.value = "";
+            depExternal.value = "";
+        }
+    });
+	
+	
+	
+$(document).ready(function() {
+	$('.timeFormat').mask('00:00');
+	
+	
+	var room_type = "<?php echo $_GET['meeting_id']; ?>";
+	if(room_type != ''){
+		check_meet(room_type,'status');
+	}
+		
+
+});	
+		$('#form_wf').submit(function(e) {
+			 // let x = document.forms["form_wf"]["MEETING_TOPIC"].value;
+			  // if (x == "") {
+				// form_wf.MEETING_TOPIC.focus();
+				// alert("กรุณากรอกหัวข้อการประชุม");
+				// return false;
+			  // }
+			var myForm = document.getElementById('form_wf');
+			var fd = new FormData(myForm);   
+			var ins2 = $('#FILEUPLOAD').prop("files").length;
+			for (var x = 0; x < ins2; x++) {
+			 fd.append('FILEUPLOAD['+x+']',$('#FILEUPLOAD').prop("files")[x]);
+			}  
+			  
+			
+				Swal.fire({
+                title: 'ยืนยันการส่งข้อมูล ? ',
+                text: "",
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#00ad0d',
+                cancelButtonColor: '#d33',
+                confirmButtonText: 'ยืนยัน',
+                cancelButtonText: 'ยกเลิก'
+				}).then((result) => {
+					if (result.isConfirmed) {
+						// // //ส่วนของการส่งข้อมูล แบบ ajax โดยใช้ jquery
+						$.ajax({
+							url: 'save/insert_room_booking.php',
+							type: 'POST',
+							data: $('#form_wf').serialize() ,
+							success: function(data) {
+								console.log(data);
+
+								if (data == 1) {
+									Swal.fire(
+										'ส่งข้อมูลสำเร็จ',
+										'กด OK แล้วระบบจะไปยังหน้า สถานะคำขอจองห้องประชุม',
+										'success'
+										
+									).then(function() {
+										// สำหรับส่งไฟล์ เฉพาะติ๊ก หน่วยงานภายนอก ถ้าไม่ติ๊ก ไม่ต้องส่ง
+										if (depCheck.checked) {
+										var ins = $('#FILEUPLOAD').prop("files").length;
+										if(ins > 0){
+										$.ajax({
+											url:'save/insert_room_booking_file.php', //ให้ระบุชื่อไฟล์ PHP ที่เราจะส่งค่าไป
+											type:'post',
+											data:fd, //ข้อมูลจาก input ที่ส่งเข้าไปที่ PHP
+											contentType: false,
+											processData: false,
+											success:function(response){ //หากทำงานสำเร็จ จะรับค่ามาจาก JSON หลังจากนั้นก็ให้ทำงานตามที่เรากำหนดได้
+												console.log(response);
+												if(response != 0){
+													// $("#img").attr("src",response);
+													// $('.preview img').show();
+												}else{
+													// alert('ส่งไฟล์ไม่สำเร็จ');
+												}
+											}
+										});
+										}
+										}
+
+										// เมื่อเสร็จสิ้นการประมวลผล
+										Swal.close();
+										
+										
+										window.location = "Booking_status.php?SYSTEM=1&STATUS=99";
+									});
+								} else {
+									Swal.fire(
+										'ส่งข้อมูลไม่สำเร็จ',
+										' ',
+										'error'
+									)
+								}
+
+							}
+						});
+					}
+				})
+			e.preventDefault();
+		})
+
+
+
+	// function chkFunction() {
+		// var checkBox = document.getElementById("TOOLCHECK[]");
+		// var text = document.getElementById("TOOLAMOUNT[]");
+		// if (checkBox.checked == true){
+			// text.disabled = false;
+		// } else {
+			// text.disabled = true;
+		// }
+		
+	// }
+	$("#DATE_START").change(function(){
+		// $("#DATE_END").val($("#DATE_START").val());
+		$("#DATE_END").attr('min',$("#DATE_START").val());
+	});
+	$("#DATE_END").change(function(){
+		if($("#DATE_START").val() == ''){
+			alert('กรุณาเลือกวันที่เริ่มต้นก่อน');
+			$("#DATE_END").val('');
+		}
+	});
+	$("#TIME_START").change(function(){
+		$("#TIME_END").attr('min',$("#TIME_START").val());
+	});
+	$("#TIME_END").change(function(){
+		if($("#TIME_END").val() != "" && $("#TIME_END").val() < $("#TIME_START").val()){
+			alert('กรุณากรอกเวลาสิ้นสุดให้มากกว่าเวลาเริ่มต้น');
+		}
+	});
+	/* $("#time_min2").change(function(){
+		if($("#time_min2").val() < $("#time_min").val()){
+			alert('กรุณากรอกเวลาสิ้นสุดให้มากกว่าเวลาเริ่มต้น');
+			$("#time_min2").val('');
+			$("#time_sec2").val('');
+			$("#TIME_END").val('');
+		}
+	});
+	$("#time_sec2").change(function(){
+		if($("#TIME_END").val() != "" && $("#TIME_END").val() <= $("#TIME_START").val()){
+			alert('กรุณากรอกเวลาสิ้นสุดให้มากกว่าเวลาเริ่มต้น');
+			$("#TIME_END").val('');
+			$("#time_sec2").val('');
+			// $("#time_min2").val('');
+		}
+	}); */
+	
+	$(function(){
+		$(':checkbox').click(function(){
+			var th=$(this);
+			var rel=th.attr('rel');
+			if(th.is(':checked')){
+				$('#TOOLAMOUNT_'+rel).prop('disabled',false);
+				$('#TOOLAMOUNT_'+rel).val('1');
+			}else{
+				$('#TOOLAMOUNT_'+rel).prop('disabled',true);
+				$('#TOOLAMOUNT_'+rel).val('0');
+			}
+		});
+	});
+
+
+	function check_meet(c,t){
+	// alert($('#TIME_START').val());
+	var num_pp = $('#GUEST').val();
+	var get_time = $('#TIME_START').val();
+	var dataString ='INS_ID='+c+'&MEETING_DATE='+$('#DATE_START').val()+'&MEETING_EDATE='+$('#DATE_END').val()+'&STIME='+$('#TIME_START').val()+'&ETIME='+$('#TIME_END').val();//+'&WFR_ID='+wfrid
+
+	var date  = $('#DATE_START').val();
+	DateParts = date.split('/');
+	new Date(+DateParts[2], DateParts[1] - 1, +DateParts[0]).setUTCHours(
+      0,
+      0,
+      0,
+      0
+    )
+	var year  = DateParts[2] - 543;
+	var month = DateParts[1] ;
+	var day   = DateParts[0];
+	date  = new Date(year + 1, month, day);
+
+	var sdate = year + '-' + ('0' + month).slice(-2) + '-' + ('0' + day).slice(-2);
+	var starttime = new Date(sdate + " " + $('#TIME_START').val() + ":00");
+	var lasttime = new Date(sdate + " " + $('#TIME_END').val() + ":00");
+	// if($('#TIME_START').val() >= $('#TIME_END').val() && $('#TIME_END').val() != ''){ 
+	if($('#TIME_START').val() >= $('#TIME_END').val() && $('#time_min2').val() != '' && $('#time_sec2').val() != ''){ 
+		$('#TIME_END').val('');
+		alert('กรุณากรอกเวลาสิ้นสุดให้มากกว่าเวลาเริ่มต้น');
+		$("#time_min2").val('');
+		$("#time_sec2").val('');
+	}else{ 
+		var diffMs = (lasttime.getTime()  - starttime.getTime() );
+		var diffMins = (diffMs / (1000*60));
+		$.ajax({
+			type: "POST",
+			dataType:'json', 
+			url: "meeting_room.php",
+			data: dataString,
+			cache: false,
+			success: function(html){ 
+				if(t == 'status'){
+					/* if($('#TIME_END').val() && diffMins < html.room_diff){
+						// $('#wf-btn-save').attr('disabled', 'disabled');
+						$('#TIME_END').val('');
+						CallAlert("กรุณาระบุช่วงเวลาการประชุมอย่างน้อย "+html.room_diff+"นาที");
+						// CallAlert("ห้องไม่ว่างในช่วงเวลาที่ท่านเลือก");
+					}else{ */
+						if(html.equip_main2 == '0'){//ถ้าห้องว่าง
+							if(num_pp > 0 && num_pp != '' && $('#TIME_START').val() != '' && $('#TIME_END').val() != '' && $('#REQ_TEL').val() != '' && $('#REQ_TEL_CON').val() != ''){
+								$('#wf-btn-save').removeAttr("disabled");
+							}else if((num_pp <= 0 || num_pp == '') && $('#TIME_START').val() != '' && $('#TIME_END').val() != '' && $('#REQ_TEL').val() == '' && $('#REQ_TEL_CON').val() == ''){
+								// CallAlert("กรุณาระบุจำนวนผู้ร่วมประชุม");
+								$('#wf-btn-save').attr('disabled', 'disabled');
+							}
+						}else{ //ถ้าห้องไม่ว่าง
+							$('#wf-btn-save').attr('disabled', 'disabled');
+							// if(get_time){ //ถ้าไม่ได้กรอกเวลา
+
+							// }else if('<?php echo $_GET['WFR'];?>' ==""){ // ถ้ากรอกเวลา
+								$('#TIME_START').val(''); 
+							// }
+							$('#TIME_END').val('');
+							$('#time_min').val('');
+							$('#time_sec').val('');
+							$('#time_min2').val('');
+							$('#time_sec2').val('');
+							alert("ช่วงเวลานี้ มีผู้ขอใช้ห้องประชุมแล้ว");
+						}
+					/* } */ 
+					
+						if(html.seat_amount != '-' && num_pp > parseInt(html.seat_amount)){
+						alert("กรุณากรอกจำนวนผู้เข้าร่วมประชุมให้ถูกต้อง");
+						$('#GUEST').val('').focus();
+						}
+						
+						$.each(html.arr_tool_all, function( k, v ) {
+						  // alert( "Key: " + k + ", Value: " + v );
+						  $('#'+k).val(v);
+						  // $('#BALANCE_2').val(html.arr_tool_all.sum_tool_2);
+						});
+						
+						
+						$.each(html.arr_tool_max, function( k, v ) {
+						  // alert( "Key: " + k + ", Value: " + v );
+						  // $('#'+k).val('');
+						  $('#'+k).attr('max',v);
+						  // $('#TOOLAMOUNT_1').attr('max',10);
+						if($('#'+k).val() > v ){
+							alert("กรุณากรอกจำนวณที่ต้องการให้ถูกต้อง");
+							$('#'+k).val('').focus();
+						}
+						});
+				}
+				/*if(t == 'ck_number'){ //check_meet($('#ROOM_ID').val(),'ck_number');
+					if(html.seat_amount != '-' && num_pp > parseInt(html.seat_amount)){
+						alert("กรุณากรอกจำนวนผู้เข้าร่วมประชุมให้ถูกต้อง");
+						$('#GUEST').val('').focus();
+					}<span style='color:#d9534f;font-size:12pt;'>หมายเหตุ: จำนวนผู้เข้าร่วมประชุมต้องไม่เกินความจุของห้อง</span>
+				}*/
+			}
+		});
+	}
+	};
+</script>
+
+<!-- Include file js and properties -->
