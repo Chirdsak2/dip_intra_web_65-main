@@ -165,7 +165,7 @@ $getMaxCarBook = callAPI('getMaxCarBook');
             <div class="form-row align-items-center">
                 <div class="col-sm-3 my-1">
                     <select required oninvalid="this.setCustomValidity('กรุณากรอกข้อมูล ประเภทการเดินทางไปราชการ')" oninput="this.setCustomValidity('')" id="OBJECTIVE" name="OBJECTIVE" class="form-control"  >
-                        <option value="" selected>เลือกวัตถุประสงค์</option>
+                        <option value="" selected>เลือกประเภทการเดินทางไปราชการ</option>
 						<?php 
 						foreach ($getObjectiveCarBooking['Data'] as $key => $value) {
 							echo "<option value=" . $key . ">" . $value . "</option>";

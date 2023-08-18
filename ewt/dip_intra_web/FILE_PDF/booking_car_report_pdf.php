@@ -293,7 +293,7 @@ ob_start();
 		<td align="left" colspan="2" style="font-size:14pt;">
 			<?php
 				if($getDetail['STAFF_FULL_NAME'] && $getDetail['CAR_REGISTER']){
-					echo "รถหมายเลขทะเบียน ".$getDetail['CAR_REGISTER']." ผู้ขับ ".$getDetail['STAFF_FULL_NAME']; 
+					echo "รถหมายเลขทะเบียน ".$getDetail['CAR_REGISTER']." ผู้ขับ นาย".$getDetail['STAFF_FULL_NAME']; 
 				}else if(!$getDetail['STAFF_FULL_NAME'] && !$getDetail['CAR_REGISTER']){
 					echo "เนื่องจากไม่มียานพาหนะว่างในช่วงเวลานี้ จึงให้เดินทางโดยรถรับจ้างสาธารณะ"; 
 				}
