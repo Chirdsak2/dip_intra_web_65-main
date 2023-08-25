@@ -276,7 +276,7 @@ foreach($getRoomApproved['Data'] as $key => $val){
         <div class="modal-content">
             <div class="container ">
                 <h2 class="h2-color pt-4">
-                    รายละเอียดการขออนุญาตใช้ห้องประชุม<?php echo $request_type;?><?php //echo $value['WFR_ID'];?>
+                    รายละเอียดการขออนุญาตใช้ห้องประชุม<?php echo ($val['ZOOM_STATUS'] == "Y" ? " ( ZOOM )":"");?><?php //echo $value['WFR_ID'];?>
                 </h2>
                 <hr class="hr_news mt-3">
                 <div class="container">
@@ -288,6 +288,7 @@ foreach($getRoomApproved['Data'] as $key => $val){
                             <!--<h4 class="h2-color">รายละเอียดการขออนุญาตใช้ห้องประชุม</h4>-->
                             <h4 class="h2-color">หัวข้อประชุม : <?php echo $val['MEETING_TOPIC'];?></h4>
                             <p class="mb-2"><i class='fa fa-user-tie h2-color pb-0'></i> ผู้จอง : <?php echo $val['REQ_NAME'];?></p>
+                            <?php //if($val['DEP_EXTERNAL']){?><p class="mb-2"><i class='fa fa-briefcase h2-color  pb-0'></i> หน่วยงานภายนอก : <?php echo $val['DEP_EXTERNAL'];?></p><?php //}?>
                             <p class="mb-2"><i class='fa fa-user h2-color  pb-0'></i> ผู้เข้าร่วม : <?php echo $val['MEETING_NUM_PP'];?> คน</p>
                             <p class="mb-2"><i class='fa fa-door-open h2-color  pb-0'></i> <?php echo $val['ROOM_NAME']." เลขที่ห้อง ".$val['ROOM_NUMBER'];?></p>
                             <p class="mb-2"><i class='fa fa-phone h2-color  pb-0'></i> เบอร์ผู้จอง : <?php echo $val['REQ_TEL'];?></p>

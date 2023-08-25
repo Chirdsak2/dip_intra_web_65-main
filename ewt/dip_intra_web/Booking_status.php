@@ -312,7 +312,10 @@ $getRequestBookingAllList = callAPI('getRequestBookingAllList', $data_request);
 
 					$p1 = "<i class='fa fa-user h2-color  pb-0'> </i> ประธานในที่ประชุม : ".$value['MEETINH_CHAIRMAN'];
 					$p2 = "<i class='fa fa-user-tie h2-color  pb-0'></i> ชื่อผู้จอง : ".$value['REQ_NAME'];
-					$p3 = "<i class='fa fa-briefcase h2-color  pb-0'></i> หน่วยงานผู้จอง : ศูนย์เทคโนโลยีสารสนเทศและการสื่อสาร";
+					// $p3 = "<i class='fa fa-briefcase h2-color  pb-0'></i> หน่วยงานผู้จอง : ศูนย์เทคโนโลยีสารสนเทศและการสื่อสาร";
+					// if($val['DEP_EXTERNAL']){
+					$p3 = "<i class='fa fa-briefcase h2-color  pb-0'></i> หน่วยงานภายนอก : ".$value['DEP_EXTERNAL'];
+					// }
 					$p4 = "<i class='fa fa-phone h2-color  pb-0'></i> เบอร์ติดต่อผู้จอง :".$value['REQ_TEL'];
 					$p5 = "<i class='fa fa-user h2-color  pb-0'> </i> ผู้เข้าร่วม ".$value['MEETING_NUM_PP']." คน";
 					$p6 = "<i class='fa fa-door-open h2-color  pb-0'></i> ".$value['ROOM_NAME'];
@@ -732,7 +735,7 @@ $getRequestBookingAllList = callAPI('getRequestBookingAllList', $data_request);
         <div class="modal-content">
             <div class="container ">
                 <h2 class="h2-color pt-4">
-                    รายละเอียดการ<?php echo $request_type;?><?php //echo $value['WFR_ID'];?>
+                    รายละเอียดการ<?php echo $request_type.($value['ZOOM_STATUS'] == "Y" ? " ( ZOOM )":"");?><?php //echo $value['WFR_ID'];?>
                 </h2>
                 <hr class="hr_news mt-3">
                 <div class="container">
@@ -757,12 +760,13 @@ $getRequestBookingAllList = callAPI('getRequestBookingAllList', $data_request);
                             <p class="mb-2"><?php echo $p10;?></p>
 							
 						<?php if ($value['TYPE'] == 1) {?>
-                            <h4 class="h2-color">
+                             <!--<h4 class="h2-color">
 									รายการยืมอุปกรณ์
-                            </h4>
-							<?php foreach($getMeetingToolAdd['Data'] as $key => $value2){ ?>
-                            <p class="mb-2"><i class="fa fa-desktop h2-color  pb-0"></i> <?php echo $value2['TOOL_NAME']." จำนวน ".$value2['TOOL_AMOUNT'];?></p>
-							<?php }
+                            </h4>-->
+							<?php //foreach($getMeetingToolAdd['Data'] as $key => $value2){ ?>
+                            <!--<p class="mb-2"><i class="fa fa-desktop h2-color  pb-0"></i> <?php echo $value2['TOOL_NAME']." จำนวน ".$value2['TOOL_AMOUNT'];?></p>-->
+							<?php //}
+							
 							$data_request3 = array(
 							"wfr_id" => $value['WFR_ID'],
 							"wf_main_id" => '6682',
