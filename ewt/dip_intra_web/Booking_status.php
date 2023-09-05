@@ -735,7 +735,7 @@ $getRequestBookingAllList = callAPI('getRequestBookingAllList', $data_request);
         <div class="modal-content">
             <div class="container ">
                 <h2 class="h2-color pt-4">
-                    รายละเอียดการ<?php echo $request_type.($value['ZOOM_STATUS'] == "Y" ? " ( ZOOM )":"");?><?php //echo $value['WFR_ID'];?>
+                    รายละเอียดการ<?php echo $request_type.($value['ZOOM_STATUS'] == "Y" ? " <text style='color: blue;'>( <i class='fa fa-desktop'></i> ZOOM )</text>":"");?><?php //echo $value['WFR_ID'];?>
                 </h2>
                 <hr class="hr_news mt-3">
                 <div class="container">

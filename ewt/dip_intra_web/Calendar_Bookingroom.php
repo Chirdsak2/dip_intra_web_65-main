@@ -276,7 +276,7 @@ foreach($getRoomApproved['Data'] as $key => $val){
         <div class="modal-content">
             <div class="container ">
                 <h2 class="h2-color pt-4">
-                    รายละเอียดการขออนุญาตใช้ห้องประชุม<?php echo ($val['ZOOM_STATUS'] == "Y" ? " ( ZOOM )":"");?><?php //echo $value['WFR_ID'];?>
+                    รายละเอียดการขออนุญาตใช้ห้องประชุม<?php echo ($val['ZOOM_STATUS'] == "Y" ? " <text style='color: blue;'>( <i class='fa fa-desktop'></i> ZOOM )</text>":"");?><?php //echo $value['WFR_ID'];?>
                 </h2>
                 <hr class="hr_news mt-3">
                 <div class="container">
