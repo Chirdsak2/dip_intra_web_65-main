@@ -206,10 +206,10 @@ $getMaxCarBook = callAPI('getMaxCarBook');
       <?php// echo get_input_file('PIC_FILENAME','105',$rec["PIC_ID"],$proc,'ไฟล์แนบ'); //ชื่อฟิล , WF_MAIN_ID , WFR_ID , proc ?>
      
      </div>-->
-
+			<br>
             <div class="form-group">
 				<div class=" col-lg-6 col-md-6 col-sm-6 col-6 ">
-					<h4 class="h2-color">กรณีเดินทางไปต่างจังหวัด :</h4>
+					<h4 class="h2-color">แนบไฟล์ (ถ้ามี) :</h4>
 					<input required type="file" class="form-control-file" name="FILEUPLOAD[]" id="FILEUPLOAD" accept=".pdf,.png,.jpg,.jpeg,.doc,.docx"><!--multiple-->
 					<label class=" font-small" style="color: #ff0000;"> * ไฟล์ที่อนุญาตให้แนบได้ pdf,png,jpg,doc ขนาดไฟล์ไม่เกิน 10 MB.</label>
 					<!--<input type="hidden" name="file" value="">
@@ -458,9 +458,10 @@ $getMaxCarBook = callAPI('getMaxCarBook');
 	$(document).ready(function() {
 		$('.timeFormat').mask('00:00');
 
+//BK 6/9/2566
 // ดักถ้า ไม่ใช่กรุงเทพ และปริมณฑล จะให้ $('#FILEUPLOAD').prop('required', true);
 // ตอนนี้ยังดักได้แค่ listbox แรก อย่างเดียว
-$('#PROVINCE_CODE').on('change', function() {
+/* $('#PROVINCE_CODE').on('change', function() {
   // ตรวจสอบค่าของ selectbox ว่าเลือก value เป็น 10 หรือไม่
 	if ($(this).val() === '10' || $(this).val() === '73'|| $(this).val() === '12' 
 	|| $(this).val() === '13' || $(this).val() === '11'|| $(this).val() === '74') {
@@ -468,6 +469,16 @@ $('#PROVINCE_CODE').on('change', function() {
     $('#FILEUPLOAD').prop('required', false);
   } else {
 	 // หา element ที่มี id เป็น "FILEUPLOAD" และตั้งให้มี attribute required
+    $('#FILEUPLOAD').prop('required', true);
+  }
+}); */
+
+// ดักถ้าเลือก 2.ไป-กลับ ไม่มีหนังสืออนุมัติ กับ 4.ไปหลายวัน ให้ไม่ต้องบังคับแนบไฟล์
+$('#OBJECTIVE').on('change', function() {
+  // ตรวจสอบค่าของ selectbox ว่าเลือก value เป็น 2,4 หรือไม่
+	if ($(this).val() === '2' || $(this).val() === '4') {
+    $('#FILEUPLOAD').prop('required', false);
+  } else {
     $('#FILEUPLOAD').prop('required', true);
   }
 });
@@ -536,25 +547,25 @@ $('#PROVINCE_CODE').on('change', function() {
 										
 									).then(function() {
 										// สำหรับส่งไฟล์
-												var ins = $('#FILEUPLOAD').prop("files").length;
-												if(ins > 0){
-												$.ajax({
-													url:'save/insert_car_booking_file.php', //ให้ระบุชื่อไฟล์ PHP ที่เราจะส่งค่าไป
-													type:'post',
-													data:fd, //ข้อมูลจาก input ที่ส่งเข้าไปที่ PHP
-													contentType: false,
-													processData: false,
-													success:function(response){ //หากทำงานสำเร็จ จะรับค่ามาจาก JSON หลังจากนั้นก็ให้ทำงานตามที่เรากำหนดได้
-														console.log(response);
-														if(response != 0){
-															// $("#img").attr("src",response);
-															// $('.preview img').show();
-														}else{
-															// alert('ส่งไฟล์ไม่สำเร็จ');
-														}
-													}
-												});
+										var ins = $('#FILEUPLOAD').prop("files").length;
+										if(ins > 0){
+										$.ajax({
+											url:'save/insert_car_booking_file.php', //ให้ระบุชื่อไฟล์ PHP ที่เราจะส่งค่าไป
+											type:'post',
+											data:fd, //ข้อมูลจาก input ที่ส่งเข้าไปที่ PHP
+											contentType: false,
+											processData: false,
+											success:function(response){ //หากทำงานสำเร็จ จะรับค่ามาจาก JSON หลังจากนั้นก็ให้ทำงานตามที่เรากำหนดได้
+												console.log(response);
+												if(response != 0){
+													// $("#img").attr("src",response);
+													// $('.preview img').show();
+												}else{
+													// alert('ส่งไฟล์ไม่สำเร็จ');
 												}
+											}
+										});
+										}
 										window.location = "Booking_status.php?SYSTEM=2&STATUS=99";
 									});
 								} else {
