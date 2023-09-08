@@ -220,6 +220,7 @@ ob_start();
 				echo ($x+1 == $c_arr_s_area && $c_arr_s_area != 1 ? "และ":"").$getDetail['CB_AREA'][$x]." ";
 			$x++;
 			}
+			echo  ($getDetail['NEARBY_PROVINCE_STATUS'] == 'Y' ? "และจังหวัดใกล้เคียง":"");
 			?>
 			<!--<strong>จำนวนผู้ร่วมเดินทาง</strong> <?php echo $getDetail['CB_MEMBER']; ?> <strong>คน</strong>
 			<strong>เพื่อ</strong> <?php echo $getDetail['CB_OBJECTIVE_2']; ?>-->

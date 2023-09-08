@@ -333,6 +333,8 @@ $getRequestBookingAllList = callAPI('getRequestBookingAllList', $data_request);
 						"wfd_id" => '2471',
 						"req_type" => 'room_app1' //ผู้ผ่านความเห็นชอบ
 					);
+					
+					//หา USR_USERNAME ของคนกดอนุมัติ
 					$getWFSTEP_room_wfd1 = callAPI('getWFSTEP', $data_request_room_wfd1);
 					foreach($getWFSTEP_room_wfd1['Data'][$value['WFR_ID']] as $key => $v1){
 						$app_room_1 = $v1['USR_NAME'];
@@ -348,6 +350,7 @@ $getRequestBookingAllList = callAPI('getRequestBookingAllList', $data_request);
 						$app_room_2 = $v2['USR_NAME'];
 					}
 					
+					//หาหน่วยงานของผู้ผ่านความเห็นชอบ โดยหาจาก USR_USERNAME ของคนกดอนุมัติ
 					$sql_app_room_1 = "SELECT B.DEP_LV2_ID
 									FROM USR_MAIN A
 									LEFT JOIN M_PER_PROFILE B ON B.PER_IDCARD = A.USR_OPTION3
@@ -455,7 +458,8 @@ $getRequestBookingAllList = callAPI('getRequestBookingAllList', $data_request);
 					$get_STAFF_NAME = $getRequestBookingCarDetail['Data'][0]['STAFF_FULL_NAME'];
 					$get_STAFF_TALAPHONE = $getRequestBookingCarDetail['Data'][0]['STAFF_TALAPHONE'];
 					$get_DEP_ID_SSO = $getRequestBookingCarDetail['Data'][0]['DEP_ID_SSO'];
-					$topic = $get_CB_OBJECTIVE_TYPE;
+					// $topic = $get_CB_OBJECTIVE_TYPE;
+					$topic = $value['MEETING_TOPIC'];
 					
 					$btn_del = '';
 					$btn_cancel = '';
@@ -537,7 +541,15 @@ $getRequestBookingAllList = callAPI('getRequestBookingAllList', $data_request);
 
 					$p10 .= '<a style="width:80px;text-align:center;" type="button" target="_blank" href="FILE_PDF/booking_car_report_pdf.php?data_meeting=' . urlencode($data_meeting) . '"> download</a>';
 					// $p10 .= '<a style="width:80px;text-align:center;" type="button" target="_blank" href="FILE_PDF/booking_car_report_pdf.php?' . $paramString . '"> download</a>';
-
+					$p10 .= '<p>สถานที่ : ';
+					$x = 0;
+					$c_arr_s_area = count($value['S_AREA']);    
+					while ($x < $c_arr_s_area) {
+						$p10 .= $value['S_AREA'][$x] . '<br>'; 
+						$x++;
+					}
+					$p10 .= ($getRequestBookingCarDetail['Data'][0]['NEARBY_PROVINCE_STATUS'] == 'Y' ? "และจังหวัดใกล้เคียง":"");
+					$p10 .= '</p>';
 					
 					if($get_CAR_PIC_NAME){
 						$img2 = '<img src="images/'.$get_CAR_PIC_NAME.'" class="d-block w-100" alt="...">';
@@ -722,7 +734,17 @@ $getRequestBookingAllList = callAPI('getRequestBookingAllList', $data_request);
                     <td><?php echo $topic;//$value['MEETING_TOPIC']?></td>
 					<td><?php echo $value['REQ_DATE'];?></td>
                     <!-- วันที่ใช้รถ, ห้อง<td><?php echo ($value['MEETING_DATE'] == $value['MEETING_EDATE'] ? $value['MEETING_DATE']:$value['MEETING_DATE']."<br>- ".$value['MEETING_EDATE']);?></td>-->
-                    <td><?php echo $value['ROOM_NAME'];?></td>
+                    <td><?php
+						$x = 0;
+						$c_arr_s_area = COUNT($value['S_PROVINCE']);	
+						while($x < $c_arr_s_area){
+						?>
+						<?php echo $value['S_PROVINCE'][$x].'<br>'; ?>
+						<?php	
+							$x++;
+						}
+						echo ($value['NEARBY_PROVINCE_STATUS'] == 'Y' ? "และจังหวัดใกล้เคียง":"");
+					?></td>
                     <td><?php echo $status;?></td>
 					<td><a href="#" data-toggle="modal" data-target=".bd-example-modal-lg<?php echo $value['TYPE']."_".$value['WFR_ID'];?>" role="button" aria-pressed="true">ดูรายละเอียด </a></td>
 					<td><?php echo $btn_del.$btn_cancel.$btn_estimate ;?></td>
