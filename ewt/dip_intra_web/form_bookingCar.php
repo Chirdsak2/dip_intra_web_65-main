@@ -179,7 +179,7 @@ $getMaxCarBook = callAPI('getMaxCarBook');
                 <div class="col-sm-3 my-1">
                     <select required oninvalid="this.setCustomValidity('กรุณากรอกข้อมูล เลือกพื้นที่')" oninput="this.setCustomValidity('')" id="PROVINCE_CODE" name="PROVINCE_CODE[]" class="form-control">
                         <option value="" >เลือกพื้นที่</option>
-                        <option value="99" >และจังหวัดใกล้เคียง</option>
+                        <!--<option value="99" >และจังหวัดใกล้เคียง</option>-->
                         <?php 
 						foreach ($getProvince['Data'] as $key => $value) {
 							echo "<option ".($key == 10 ? "":"")." value=" . $key . ">" . $value . "</option>";
@@ -197,6 +197,12 @@ $getMaxCarBook = callAPI('getMaxCarBook');
 				<!--<div class="col-auto ">
 					<button type="" class="btn btn-danger" disabled>ลบข้อมูล</button>
 				</div>-->
+				
+                <div class=" col-lg-6 col-md-6 col-sm-6 col-12 ">
+                    <input checked type="checkbox" class="form-check-input h2-color ml-0" id="PROVINCE_CHECK" name="PROVINCE_CHECK" onchange="updateCheckboxValue()">
+                    <input type="hidden" class="form-check-input h2-color ml-0" id="NEARBY_PROVINCE_STATUS" name="NEARBY_PROVINCE_STATUS" value="Y">
+					<h4 class="h2-color ml-4">และจังหวัดใกล้เคียง</h4>
+                </div>
             </div>
 			
 			<div id="newinput"></div>
@@ -342,6 +348,16 @@ $getMaxCarBook = callAPI('getMaxCarBook');
 <!--<script src="//ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>-->
 <!-- PLUS MINUS BUTTONS JS -->
 <script>
+	function updateCheckboxValue() {
+		var checkbox = document.getElementById('PROVINCE_CHECK');
+		var valueField = document.getElementById('NEARBY_PROVINCE_STATUS');
+
+		if (checkbox.checked) {
+		valueField.value = 'Y';
+		} else {
+		valueField.value = 'N'; // เมื่อไม่ถูกเลือกให้เป็น "N"
+		}
+	}
 	function updateTimeStart() {
 		// ดึงค่าเวลาที่เลือกจาก select ของ time_min และ time_sec
 		var timeMinSelect = document.getElementById("time_min");

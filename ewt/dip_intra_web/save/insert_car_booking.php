@@ -75,6 +75,7 @@ $data_request = array(
 						"CB_OBJECTIVE_OTHER" => '',
 						"COUNT_NO" => $_POST['COUNT_NO'],
 						"YEAR_BUDGET" => $_POST['YEAR_BUDGET'],
+						"NEARBY_PROVINCE_STATUS" => $_POST['NEARBY_PROVINCE_STATUS'],
 					);
 	
  $getCarList = callAPI('insertCarBooking', $data_request);
