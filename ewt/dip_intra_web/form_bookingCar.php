@@ -558,7 +558,7 @@ $('#OBJECTIVE').on('change', function() {
 								if (data == 1) {
 									Swal.fire(
 										'ส่งข้อมูลสำเร็จ',
-										' ',
+										'กด OK แล้วระบบจะไปยังหน้า สถานะคำขอจองยานพาหนะ',
 										'success'
 										
 									).then(function() {
