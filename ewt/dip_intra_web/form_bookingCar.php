@@ -198,16 +198,16 @@ $getMaxCarBook = callAPI('getMaxCarBook');
 					<button type="" class="btn btn-danger" disabled>ลบข้อมูล</button>
 				</div>-->
 				
-                <div class=" col-lg-6 col-md-6 col-sm-6 col-12 ">
-                    <input checked type="checkbox" class="form-check-input h2-color ml-0" id="PROVINCE_CHECK" name="PROVINCE_CHECK" onchange="updateCheckboxValue()">
-                    <input type="hidden" class="form-check-input h2-color ml-0" id="NEARBY_PROVINCE_STATUS" name="NEARBY_PROVINCE_STATUS" value="Y">
-					<h4 class="h2-color ml-4">และจังหวัดใกล้เคียง</h4>
-                </div>
             </div>
 			
 			<div id="newinput"></div>
 			
 			
+			<div class=" col-lg-6 col-md-6 col-sm-6 col-12 ">
+				<input checked type="checkbox" class="form-check-input h2-color ml-0" id="PROVINCE_CHECK" name="PROVINCE_CHECK" onchange="updateCheckboxValue()">
+				<input type="hidden" class="form-check-input h2-color ml-0" id="NEARBY_PROVINCE_STATUS" name="NEARBY_PROVINCE_STATUS" value="Y">
+				<h4 class="h2-color ml-4">และจังหวัดใกล้เคียง</h4>
+			</div>
 			<!--<div class="form-group"> 
       <?php// echo get_input_file('PIC_FILENAME','105',$rec["PIC_ID"],$proc,'ไฟล์แนบ'); //ชื่อฟิล , WF_MAIN_ID , WFR_ID , proc ?>
      
@@ -489,10 +489,10 @@ $getMaxCarBook = callAPI('getMaxCarBook');
   }
 }); */
 
-// ดักถ้าเลือก 2.ไป-กลับ ไม่มีหนังสืออนุมัติ กับ 4.ไปหลายวัน ให้ไม่ต้องบังคับแนบไฟล์
+// ดักถ้าเลือก 2.ไป-กลับ ไม่มีหนังสืออนุมัติ (ไปหลายวันเลข 4)
 $('#OBJECTIVE').on('change', function() {
-  // ตรวจสอบค่าของ selectbox ว่าเลือก value เป็น 2,4 หรือไม่
-	if ($(this).val() === '2' || $(this).val() === '4') {
+  // ตรวจสอบค่าของ selectbox ว่าเลือก value เป็น 2 หรือไม่
+	if ($(this).val() === '2') {
     $('#FILEUPLOAD').prop('required', false);
   } else {
     $('#FILEUPLOAD').prop('required', true);
