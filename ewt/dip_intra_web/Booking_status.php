@@ -299,6 +299,11 @@ $getRequestBookingAllList = callAPI('getRequestBookingAllList', $data_request);
 					// $img = "images/2meet.png";
 					$img = "<img src='images/2meet.png' class='thumnal-iconfunction' alt='Meetingroom'>";
 					$hid = "";
+					$arrZoomStatus = [
+										"Y"  => "zoom หน่วยงานผู้จอง (ขอความอนุเคราะห์เจ้าหน้าที่ ศส.)", 
+										"Y3" => "zoom ศส. (ขอความอนุเคราะห์เจ้าหน้าที่ ศส.)",
+										"Y4" => "zoom ศส. (ดำเนินการเอง)"
+									 ];
 					
 					$data_request1_1 = array(
 						"wfr_id" => $value['WFR_ID']
@@ -309,8 +314,11 @@ $getRequestBookingAllList = callAPI('getRequestBookingAllList', $data_request);
 					$topic = $value['MEETING_TOPIC'];
 					$get_CB_OBJECTIVE_TYPE = $value['MEETING_TOPIC'];
 					// $btn_del = '';
-
-					$p1 = "<i class='fa fa-user h2-color  pb-0'> </i> ประธานในที่ประชุม : ".$value['MEETINH_CHAIRMAN'];
+					if(in_array($value['ZOOM_STATUS'], ["Y", "Y3", "Y4"])){
+					$p1 .= "<i class='fa fa-check-square' style='font-size: 24px;color: #9400D3;'></i> ".$arrZoomStatus[$value['ZOOM_STATUS']]."<br>";
+					}else{
+					}
+					$p1 .= "<i class='fa fa-user h2-color  pb-0'> </i> ประธานในที่ประชุม : ".$value['MEETINH_CHAIRMAN'];
 					$p2 = "<i class='fa fa-user-tie h2-color  pb-0'></i> ชื่อผู้จอง : ".$value['REQ_NAME'];
 					// $p3 = "<i class='fa fa-briefcase h2-color  pb-0'></i> หน่วยงานผู้จอง : ศูนย์เทคโนโลยีสารสนเทศและการสื่อสาร";
 					// if($val['DEP_EXTERNAL']){
