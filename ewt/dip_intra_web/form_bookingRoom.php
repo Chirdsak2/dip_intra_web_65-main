@@ -164,6 +164,8 @@ $getMeetingToolAsset = callAPI('getMeetingToolAsset',$data_request_room_id);//�
 			</div><br>
             <div class="form-row align-items-center">
                 <div class=" col-lg-6 col-md-6 col-sm-6 col-12 ">
+                    <input type="checkbox" class="form-check-input h2-color ml-0" id="DEP_CHECKx" name="DEP_CHECKx" checked>
+					<h4 class="h2-color ml-4">หน่วยงานภายใน</h4>
                     <input type="checkbox" class="form-check-input h2-color ml-0" id="DEP_CHECK" name="DEP_CHECK" >
 					<h4 class="h2-color ml-4">หน่วยงานภายนอก</h4>
                 </div>
@@ -199,7 +201,7 @@ $getMeetingToolAsset = callAPI('getMeetingToolAsset',$data_request_room_id);//�
 					<select required oninvalid="this.setCustomValidity('กรุณากรอกข้อมูล ผู้ผ่านความเห็นชอบ')" oninput="this.setCustomValidity('')" id="ZOOM_STATUS" name="ZOOM_STATUS" class=" form-control">
                         <option value="N" selected>ไม่ขอใช้ zoom</option>
                         <option value="Y"  >zoom หน่วยงานผู้จอง (ขอความอนุเคราะห์เจ้าหน้าที่ ศส.)</option><!-- ไป ศส.-->
-                        <option value="Y2" >zoom หน่วยงานผู้จอง (ดำเนินการเอง)</option><!--ไไป ศส.-->
+                        <option value="Y2" >zoom หน่วยงานผู้จอง (ดำเนินการเอง)</option><!--ไม่ไป ศส.-->
                         <option value="Y3" >zoom ศส. (ขอความอนุเคราะห์เจ้าหน้าที่ ศส.)</option><!-- ไป ศส.-->
                         <option value="Y4" >zoom ศส. (ดำเนินการเอง)</option><!-- ไป ศส.-->
                     </select>
@@ -502,6 +504,7 @@ $getMeetingToolAsset = callAPI('getMeetingToolAsset',$data_request_room_id);//�
 <script>
 	
 	const depCheck = document.getElementById("DEP_CHECK");
+	const depCheckx = document.getElementById("DEP_CHECKx");
     const subDepCheck1 = document.getElementById("SUB_DEP_CHECK1");
     const subDepCheck2 = document.getElementById("SUB_DEP_CHECK2");
     const subDepCheck3 = document.getElementById("SUB_DEP_CHECK3");
@@ -511,6 +514,7 @@ $getMeetingToolAsset = callAPI('getMeetingToolAsset',$data_request_room_id);//�
 
     depCheck.addEventListener("change", function () {
         if (depCheck.checked) {
+			depCheckx.checked = false;
             subDepCheck1.removeAttribute("hidden");
             subDepCheck2.removeAttribute("hidden");
             subDepCheck3.removeAttribute("hidden");
@@ -530,6 +534,23 @@ $getMeetingToolAsset = callAPI('getMeetingToolAsset',$data_request_room_id);//�
         }
     });
 	
+	
+	depCheckx.addEventListener("click", function() {
+        // ถ้า DEP_CHECKx ถูกติ๊ก
+        if (depCheckx.checked) {
+            // ยกเลิกการติ๊ก DEP_CHECK
+            depCheck.checked = false;
+			 subDepCheck1.setAttribute("hidden", "true");
+            subDepCheck2.setAttribute("hidden", "true");
+            subDepCheck3.setAttribute("hidden", "true");
+            subDepCheck4.setAttribute("hidden", "true");
+			$('#FILEUPLOAD').prop('required', false);
+			$('#DEP_EXTERNAL').prop('required', false);
+			// เคลียร์ค่า FILEUPLOAD เมื่อ checkbox ถูกติ๊กออก (unchecked)
+            fileUpload.value = "";
+            depExternal.value = "";
+        }
+    });
 	
 	
 $(document).ready(function() {
