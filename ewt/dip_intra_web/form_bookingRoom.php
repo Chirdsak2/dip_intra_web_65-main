@@ -186,12 +186,29 @@ $getMeetingToolAsset = callAPI('getMeetingToolAsset',$data_request_room_id);//�
                 <div id="SUB_DEP_CHECK2" hidden class=" col-lg-6 col-md-6 col-sm-6 col-12 ">
                     <h5 class="ml-2 mb-0 h2-color"></h5>
                 </div>
-                <div class=" col-lg-6 col-md-6 col-sm-6 col-12 ">
+                <!--<div class=" col-lg-6 col-md-6 col-sm-6 col-12 ">
                     <input type="checkbox" class="form-check-input h2-color ml-0" id="ZOOM_CHECK" name="ZOOM_CHECK" onchange="updateCheckboxValue()">
                     <input type="hidden" class="form-check-input h2-color ml-0" id="ZOOM_STATUS" name="ZOOM_STATUS" value="N">
 					<h4 class="h2-color ml-4">จองซูม</h4>
                 </div>
                 <div class=" col-lg-6 col-md-6 col-sm-6 col-12 ">
+                    <h5 class="ml-2 mb-0 h2-color"></h5>
+                </div>-->
+				<div class=" col-lg-6 col-md-6 col-sm-6 col-12 ">
+                    <h4 class="ml-2 mb-0 h2-color">กรณีจอง zoom</h4>
+					<select required oninvalid="this.setCustomValidity('กรุณากรอกข้อมูล ผู้ผ่านความเห็นชอบ')" oninput="this.setCustomValidity('')" id="ZOOM_STATUS" name="ZOOM_STATUS" class=" form-control">
+                        <option value="N" selected>ไม่ขอใช้ zoom</option>
+                        <option value="Y"  >zoom หน่วยงานผู้จอง (ขอความอนุเคราะห์เจ้าหน้าที่ ศส.)</option><!-- ไป ศส.-->
+                        <option value="Y2" >zoom หน่วยงานผู้จอง (ดำเนินการเอง)</option><!--ไไป ศส.-->
+                        <option value="Y3" >zoom ศส. (ขอความอนุเคราะห์เจ้าหน้าที่ ศส.)</option><!-- ไป ศส.-->
+                        <option value="Y4" >zoom ศส. (ดำเนินการเอง)</option><!-- ไป ศส.-->
+                    </select>
+                    <!--<select id="inputState" class="ml-2 form-control">
+                        <option selected>เลือกผู้ผ่านการเห็นชอบ</option>
+                        <option>...</option>
+                    </select>-->
+                </div> 
+				<div class=" col-lg-6 col-md-6 col-sm-6 col-12 ">
                     <h5 class="ml-2 mb-0 h2-color"></h5>
                 </div>
                 <div class="col-sm-6 my-1">
@@ -226,7 +243,7 @@ $getMeetingToolAsset = callAPI('getMeetingToolAsset',$data_request_room_id);//�
 						}
 						?>
 					</select> : 
-					<select required class="form-control" id="time_sec" name="time_sec" style="width: 25%;display: inline-block;" onchange="updateTimeStart();check_meet(<?php echo $_GET['meeting_id'];?>,'status');">
+					<select  required class="form-control" id="time_sec" name="time_sec" style="width: 25%;display: inline-block;" onchange="updateTimeStart();check_meet(<?php echo $_GET['meeting_id'];?>,'status');">
 						<option value="">--</option>
 						<option value="00">00</option>
 						<option value="15">15</option>
@@ -240,7 +257,7 @@ $getMeetingToolAsset = callAPI('getMeetingToolAsset',$data_request_room_id);//�
 					<!--<input required oninvalid="this.setCustomValidity('กรุณากรอกข้อมูล เวลาสิ้นสุดการประชุม')" oninput="this.setCustomValidity('')" type="time" class="form-control timeFormat" id="TIME_END" name="TIME_END" placeholder = "__:__" 
 					onChange="check_meet(<?php echo $_GET['meeting_id'];?>,'status');">-->
 					<input type="hidden" class="form-control timeFormat" id="TIME_END" name="TIME_END" />
-					<select required class="form-control multi-column-select" id="time_min2" name="time_min2" style="width: 25%;display: inline-block;" onchange="updateTimeEnd();check_meet(<?php echo $_GET['meeting_id'];?>,'status');"">
+					<select required class="form-control multi-column-select" id="time_min2" name="time_min2" style="width: 25%;display: inline-block;" onchange="updateTimeEnd();check_meet(<?php echo $_GET['meeting_id'];?>,'status');">
 						<option value="">--</option>
 						<?php
 						for ($hour = 0; $hour <= 23; $hour++) {
@@ -376,13 +393,31 @@ $getMeetingToolAsset = callAPI('getMeetingToolAsset',$data_request_room_id);//�
 
 		var timeSecSelect = document.getElementById("time_sec");
 		var selectedTimeSec = timeSecSelect.options[timeSecSelect.selectedIndex].value;
-
+		
+		var timeMin2Select = document.getElementById('time_min2');
+		var timeSec2Select = document.getElementById('time_sec2');
+		
+		/* //เมื่อเลือก time_min ให้ time_sec = '00'
+			if(selectedTimeSec == ''){
+			selectedTimeSec = '00';
+			$("#time_sec").val('00');
+			// $('#time_sec').html(response);
+		} */ 
+		
 		// นำค่าเวลามาประมวลผลเป็นรูปแบบ "HH:mm"
 		var timeStart = selectedTimeMin + ":" + selectedTimeSec;
 
 		// อัพเดทค่าใน input ของ TIME_START
 		var timeStartInput = document.getElementById("TIME_START");
 		timeStartInput.value = timeStart;
+		
+		// if (selectedTimeMin !== '' && selectedTimeSec !== '') {
+			// timeMin2Select.disabled = false;
+			// timeSec2Select.disabled = false;
+		// } else {
+			// timeMin2Select.disabled = true;
+			// timeSec2Select.disabled = true;
+		// }
 	}
 	function updateTimeEnd() {
 		// ดึงค่าเวลาที่เลือกจาก select ของ time_min2 และ time_sec2
@@ -391,7 +426,14 @@ $getMeetingToolAsset = callAPI('getMeetingToolAsset',$data_request_room_id);//�
 
 		var timeSecSelect = document.getElementById("time_sec2");
 		var selectedTimeSec = timeSecSelect.options[timeSecSelect.selectedIndex].value;
-
+		
+		/* //เมื่อเลือก time_min2 ให้ time_sec2 = '00'
+		if(selectedTimeSec == ''){
+			selectedTimeSec = '00';
+			$("#time_sec2").val('00');
+			// $('#time_sec2').html(response);
+		} */
+		
 		// นำค่าเวลามาประมวลผลเป็นรูปแบบ "HH:mm"
 		var timeEnd = selectedTimeMin + ":" + selectedTimeSec;
 

@@ -735,15 +735,19 @@ $getRequestBookingAllList = callAPI('getRequestBookingAllList', $data_request);
 					<td><?php echo $value['REQ_DATE'];?></td>
                     <!-- วันที่ใช้รถ, ห้อง<td><?php echo ($value['MEETING_DATE'] == $value['MEETING_EDATE'] ? $value['MEETING_DATE']:$value['MEETING_DATE']."<br>- ".$value['MEETING_EDATE']);?></td>-->
                     <td><?php
-						$x = 0;
-						$c_arr_s_area = COUNT($value['S_PROVINCE']);	
-						while($x < $c_arr_s_area){
-						?>
-						<?php echo $value['S_PROVINCE'][$x].'<br>'; ?>
-						<?php	
-							$x++;
+						if($value['TYPE'] == '2'){
+							$x = 0;
+							$c_arr_s_area = COUNT($value['S_PROVINCE']);	
+							while($x < $c_arr_s_area){
+							?>
+							<?php echo $value['S_PROVINCE'][$x].'<br>'; ?>
+							<?php	
+								$x++;
+							}
+							echo ($value['NEARBY_PROVINCE_STATUS'] == 'Y' ? "และจังหวัดใกล้เคียง":"");
+						}else if($value['TYPE'] == '1'){
+							echo $value['ROOM_NAME'];
 						}
-						echo ($value['NEARBY_PROVINCE_STATUS'] == 'Y' ? "และจังหวัดใกล้เคียง":"");
 					?></td>
                     <td><?php echo $status;?></td>
 					<td><a href="#" data-toggle="modal" data-target=".bd-example-modal-lg<?php echo $value['TYPE']."_".$value['WFR_ID'];?>" role="button" aria-pressed="true">ดูรายละเอียด </a></td>
@@ -751,13 +755,18 @@ $getRequestBookingAllList = callAPI('getRequestBookingAllList', $data_request);
 					
                 </tr>
 
+
+
+
+
+
  <!--  MODAL DETAIL  -->
 <div class="modal fade bd-example-modal-lg<?php echo $value['TYPE']."_".$value['WFR_ID'];?>" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg">
         <div class="modal-content">
             <div class="container ">
                 <h2 class="h2-color pt-4">
-                    รายละเอียดการ<?php echo $request_type.($value['ZOOM_STATUS'] == "Y" ? " <text style='color: blue;'>( <i class='fa fa-desktop'></i> ZOOM )</text>":"");?><?php //echo $value['WFR_ID'];?>
+                    รายละเอียดการ<?php echo $request_type.(in_array($value['ZOOM_STATUS'], ["Y", "Y3", "Y4"]) ? " <text style='color: blue;'>( <i class='fa fa-desktop'></i> ZOOM )</text>":"");?><?php //echo $value['WFR_ID'];?>
                 </h2>
                 <hr class="hr_news mt-3">
                 <div class="container">
