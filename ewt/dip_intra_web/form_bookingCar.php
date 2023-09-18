@@ -215,7 +215,7 @@ $getMaxCarBook = callAPI('getMaxCarBook');
 			<br>
             <div class="form-group">
 				<div class=" col-lg-6 col-md-6 col-sm-6 col-6 ">
-					<h4 class="h2-color">แนบไฟล์ (ถ้ามี) :</h4>
+					<h4 class="h2-color">แนบหนังสืออนุมัติเดินทาง (ถ้ามี) :</h4>
 					<input required type="file" class="form-control-file" name="FILEUPLOAD[]" id="FILEUPLOAD" accept=".pdf,.png,.jpg,.jpeg,.doc,.docx"><!--multiple-->
 					<label class=" font-small" style="color: #ff0000;"> * ไฟล์ที่อนุญาตให้แนบได้ pdf,png,jpg,doc ขนาดไฟล์ไม่เกิน 10 MB.</label>
 					<!--<input type="hidden" name="file" value="">
@@ -231,7 +231,7 @@ $getMaxCarBook = callAPI('getMaxCarBook');
             <div class="form-row align-items-center">
                 <div class="col-lg-3 col-md-3 col-sm-6 col-6 ">
                     <h4 class="ml-2 mb-0 h2-color"><i class="fa fa-calendar "></i> วันเริ่มต้น</h4>
-                    <input required oninvalid="this.setCustomValidity('กรุณากรอกข้อมูล วันเริ่มต้น')" oninput="this.setCustomValidity('')" class="ml-2 pb-1 " type="date" id="DATE_START" name="DATE_START" value="dd/mm/yyy" min="<?php echo date('Y-m-d');?>" placeholder="dd/mm/yyyy" pattern="\d{1,2}/\d{1,2}/\d{4}">
+                    <input required oninvalid="this.setCustomValidity('กรุณากรอกข้อมูล วันเริ่มต้น')" oninput="this.setCustomValidity('')" class="ml-2 pb-1 " type="date" id="DATE_START" name="DATE_START" value="dd/mm/yyy" min="<?php //echo date('Y-m-d');?>" placeholder="dd/mm/yyyy" pattern="\d{1,2}/\d{1,2}/\d{4}">
                 </div>
                 <div class=" col-lg-3 col-md-3 col-sm-6  col-6 ">
                     <h4 class="ml-2 mb-0 h2-color"><i class="fa fa-calendar"></i> วันที่สิ้นสุด</h4>

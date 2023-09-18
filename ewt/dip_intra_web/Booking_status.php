@@ -418,7 +418,7 @@ $getRequestBookingAllList = callAPI('getRequestBookingAllList', $data_request);
 							}
 						}
 					}else if ($value['APPROVE_STATUS1'] == 1 && $value['APPROVE_STATUS2'] == 0 && $value['APPROVE_STATUS3'] == 0){
-						$status = "<font color='orange'>อยู่ระหว่างพิจารณาเงื่อนไข</font>";
+						$status = "<font color='orange'>รออนุมัติ ZOOM MEETING</font>";
 						$btn_del = '';
 						$btn_cancel = '';
 						$btn_estimate = '';
@@ -832,13 +832,57 @@ $getRequestBookingAllList = callAPI('getRequestBookingAllList', $data_request);
                         <div class="col-lg-6 col-md-12 col-sm-12 col-12 ">
                             <h4 class="h2-color">สถานะการดำเนินการ</h4>
 							<?php 
+							// foreach($getWFSTEP['Data'][$value['WFR_ID']] as $key => $value){
+								// echo '<font size="4px" color="'.$value['STATUS_COLOR'].'">'.$value['STATUS_TEXT'].($value['WFD_ID'] == 2484 || $value['WFD_ID'] == 2481 ? "<br>".$value['CANCEL_NOTE']:"").'</font><br><font size="2.5px">'.$value['WF_DATE_SAVE']." ".$value['WF_TIME_SAVE'].'</font><br>';
+							// }
+							// #82288C สีม่วง 
+							//str_replace('รอ','',$value['STATUS_TEXT'])
+							$text_cut = ["รอผ่านความเห็นชอบ", "รออนุมัติ/อนุญาต", "รอจัดสรรยานพาหนะ", "รออนุมัติ ZOOM MEETING", "<br>(ผอ.กอง/กลุ่ม)", "<br>(เลขานุการกรม/หัวหน้าหมวดซ่อมบำรุง)", "<br>(หัวหน้าหมวดยานยนต์)", "<br>(ผอ.หน่วยงานที่ดูแลห้องประชุม)", "<br>(ผู้รับผิดชอบดูแลระบบซูม)"];
+							$c_wfstep = count($getWFSTEP['Data'][$value['WFR_ID']]);
+							$arr_satck = array();
 							foreach($getWFSTEP['Data'][$value['WFR_ID']] as $key => $value){
-								echo '<font size="4px" color="'.$value['STATUS_COLOR'].'">'.$value['STATUS_TEXT'].($value['WFD_ID'] == 2484 || $value['WFD_ID'] == 2481 ? "<br>".$value['CANCEL_NOTE']:"").'</font><br><font size="2.5px">'.$value['WF_DATE_SAVE']." ".$value['WF_TIME_SAVE'].'</font><br>';
+							$arr_satck[] = $value['WFD_ID'];
+							if($key+1 != $c_wfstep){
+								if($arr_satck[$key-2] == 2470 && $arr_satck[$key-1] == 2471){
+									$txt = "ผ่านอนุมัติ zoom แล้ว";
+								}else{
+									$txt = str_replace($text_cut,'',$value['STATUS_TEXT']);
+								}
+							}else if($arr_satck[$key-1] == 2471 && $value['WFD_ID'] == 2476){
+								$txt = str_replace('ผ่านความเห็นชอบแล้ว','<span style="color: green;">ผ่านอนุมัติ zoom แล้ว</span>',$value['STATUS_TEXT']);
+							}else {
+								if (strpos($value['STATUS_TEXT'], 'ผ่านความเห็นชอบแล้ว') !== false) {
+									// เมื่อพบ "ผ่านความเห็นชอบแล้ว" ให้แทนที่ด้วย HTML สีเขียว
+									$value['STATUS_TEXT'] = str_replace('ผ่านความเห็นชอบแล้ว', '<span style="color: green;">ผ่านความเห็นชอบแล้ว</span>', $value['STATUS_TEXT']);
+								}else if (strpos($value['STATUS_TEXT'], 'ผ่านอนุมัติ zoom แล้ว') !== false) {
+									// เมื่อพบ "ผ่านอนุมัติ zoom แล้ว" ให้แทนที่ด้วย HTML สีเขียว
+									$value['STATUS_TEXT'] = str_replace('ผ่านอนุมัติ zoom แล้ว', '<span style="color: green;">ผ่านอนุมัติ zoom แล้ว</span>', $value['STATUS_TEXT']);
+								}else if (strpos($value['STATUS_TEXT'], 'ส่งคำขอใช้ห้องประชุมแล้ว') !== false) {
+									// เมื่อพบ "ส่งคำขอใช้ห้องประชุมแล้ว" ให้แทนที่ด้วย HTML สีเขียว
+									$value['STATUS_TEXT'] = str_replace('ส่งคำขอใช้ห้องประชุมแล้ว', '<span style="color: green;">ส่งคำขอใช้ห้องประชุมแล้ว</span>', $value['STATUS_TEXT']);
+								}else if (strpos($value['STATUS_TEXT'], 'ยกเลิกเสร็จสิ้น') !== false) {
+									// เมื่อพบ "ยกเลิกเสร็จสิ้น" ให้แทนที่ด้วย HTML สีแดง
+									$value['STATUS_TEXT'] = str_replace('ยกเลิกเสร็จสิ้น', '<span style="color: red;">ยกเลิกเสร็จสิ้น</span>', $value['STATUS_TEXT']);
+								}else if (strpos($value['STATUS_TEXT'], 'ส่งคำขอใช้ยานพาหนะแล้ว') !== false) {
+									// เมื่อพบ "ส่งคำขอใช้ยานพาหนะแล้ว" ให้แทนที่ด้วย HTML สีเขียว
+									$value['STATUS_TEXT'] = str_replace('ส่งคำขอใช้ยานพาหนะแล้ว', '<span style="color: green;">ส่งคำขอใช้ยานพาหนะแล้ว</span>', $value['STATUS_TEXT']);
+								}else if (strpos($value['STATUS_TEXT'], 'ได้รับอนุมัติ/อนุญาตแล้ว') !== false) {
+									// เมื่อพบ "ได้รับอนุมัติ/อนุญาตแล้ว" ให้แทนที่ด้วย HTML สีเขียว
+									$value['STATUS_TEXT'] = str_replace('ได้รับอนุมัติ/อนุญาตแล้ว', '<span style="color: green;">ได้รับอนุมัติ/อนุญาตแล้ว</span>', $value['STATUS_TEXT']);
+								}
+
+								// แสดงผลลัพธ์
+								$txt = $value['STATUS_TEXT'];
 							}
+								// echo '<font size="3px" '.((int)($key+1) == $c_wfstep ? "":"color='green'").($value['WFD_ID'] == 2477 || $value['WFD_ID'] == 1651 ? "color='green'":"").'>'.((int)($key+1) != $c_wfstep  ? ($arr_satck[$key-2] == 2470 && $arr_satck[$key-1] == 2471 ? "ผ่านอนุมัติ zoom แล้ว":str_replace($text_cut,'',$value['STATUS_TEXT'])):($arr_satck[$key-1] == 2471 && $value['WFD_ID'] == 2476 ? str_replace('ผ่านความเห็นชอบแล้ว','ผ่านอนุมัติ zoom แล้ว',$value['STATUS_TEXT']):$value['STATUS_TEXT'])).($value['WFD_ID'] == 2484 || $value['WFD_ID'] == 2481 ? "<br>".$value['CANCEL_NOTE']:"").'</font><br><font size="2.5px">'.$value['WF_DATE_SAVE']." ".$value['WF_TIME_SAVE'].'</font><br>';
+								echo '<font size="3px" '.((int)($key+1) == $c_wfstep ? "":"color='green'").($value['WFD_ID'] == 2477 || $value['WFD_ID'] == 1651 ? "color='green'":"").'>'.$txt.($value['WFD_ID'] == 2484 || $value['WFD_ID'] == 2481 ? "<br>".$value['CANCEL_NOTE']:"").'</font><br><font size="2.5px">'.$value['WF_DATE_SAVE']." ".$value['WF_TIME_SAVE'].'</font><br>';
+							}
+							// print_r($arr_satck);
 							?>
                         </div>
 						<?php }?>
                     </div>
+					
                 </div>
 
             </div>

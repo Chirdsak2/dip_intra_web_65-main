@@ -224,7 +224,7 @@ $getMeetingToolAsset = callAPI('getMeetingToolAsset',$data_request_room_id);//�
                 <div class="col-lg-3 col-md-3 col-sm-6 col-6 ">
                     <h5 class="ml-2 mb-0 h2-color"><i class="fa fa-calendar"></i> วันเริ่มต้น</h5>
                     <input required oninvalid="this.setCustomValidity('กรุณากรอกข้อมูล วันเริ่มต้น')" oninput="this.setCustomValidity('')" class="ml-2 pb-1 " type="date" id="DATE_START" name="DATE_START" value="dd/mm/yyy" 
-					onChange="check_meet(<?php echo $_GET['meeting_id'];?>,'status');" min="<?php echo date('Y-m-d');?>" >
+					onChange="check_meet(<?php echo $_GET['meeting_id'];?>,'status');" min="<?php //echo date('Y-m-d');?>" >
                 </div>
                 <div class=" col-lg-3 col-md-3 col-sm-6  col-6 ">
                     <h5 class="ml-2 mb-0 h2-color"><i class="fa fa-calendar"></i> วันที่สิ้นสุด</h5>
