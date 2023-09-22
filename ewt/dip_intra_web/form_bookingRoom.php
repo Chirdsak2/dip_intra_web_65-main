@@ -223,34 +223,39 @@ $getMeetingToolAsset = callAPI('getMeetingToolAsset',$data_request_room_id);//�
                 </div>
                 <div class="col-lg-3 col-md-3 col-sm-6 col-6 ">
                     <h5 class="ml-2 mb-0 h2-color"><i class="fa fa-calendar"></i> วันเริ่มต้น</h5>
-                    <input required oninvalid="this.setCustomValidity('กรุณากรอกข้อมูล วันเริ่มต้น')" oninput="this.setCustomValidity('')" class="ml-2 pb-1 " type="date" id="DATE_START" name="DATE_START" value="dd/mm/yyy" 
+                    <input required oninvalid="this.setCustomValidity('กรุณากรอกข้อมูล วันเริ่มต้น')" oninput="this.setCustomValidity('')" class="ml-2 pb-1 " type="date" id="DATE_START" name="DATE_START" value="<?php echo $_GET['trip-start'];?>" 
 					onChange="check_meet(<?php echo $_GET['meeting_id'];?>,'status');" min="<?php //echo date('Y-m-d');?>" >
                 </div>
                 <div class=" col-lg-3 col-md-3 col-sm-6  col-6 ">
                     <h5 class="ml-2 mb-0 h2-color"><i class="fa fa-calendar"></i> วันที่สิ้นสุด</h5>
-                    <input required oninvalid="this.setCustomValidity('กรุณากรอกข้อมูล วันที่สิ้นสุด')" oninput="this.setCustomValidity('')" class=" ml-2 pb-1 " type="date" id="DATE_END" name="DATE_END" value="dd/mm/yyy" 
+                    <input required oninvalid="this.setCustomValidity('กรุณากรอกข้อมูล วันที่สิ้นสุด')" oninput="this.setCustomValidity('')" class=" ml-2 pb-1 " type="date" id="DATE_END" name="DATE_END" value="<?php echo $_GET['trip-end'];?>" 
 					onChange="check_meet(<?php echo $_GET['meeting_id'];?>,'status');">
                 </div>
                 <div class=" col-lg-3 col-md-3 col-sm-6 col-12 ">
                     <h5 class="ml-2 mb-0 h2-color"><i class="fa fa-clock"></i> เวลาเริ่มการประชุม</h5>
 					<!--<input required oninvalid="this.setCustomValidity('กรุณากรอกข้อมูล เวลาเริ่มการประชุม')" oninput="this.setCustomValidity('')" type="time" class="form-control timeFormat" id="TIME_START" name="TIME_START" placeholder = "__:__" 
 					onChange="check_meet(<?php echo $_GET['meeting_id'];?>,'status');">-->
-					<input type="hidden" class="form-control" id="TIME_START" name="TIME_START"  />
+					<?php
+					$hour_s = substr($_GET['time-start'], 0, 2);
+					$minute_s = substr($_GET['time-start'], -2);
+					?>
+					<input type="hidden" class="form-control" id="TIME_START" name="TIME_START" value="<?php echo $_GET['time-start'];?>" />
 					<select required class="form-control multi-column-select" id="time_min" name="time_min" style="width: 25%;display: inline-block;" onchange="updateTimeStart();check_meet(<?php echo $_GET['meeting_id'];?>,'status');">
 						<option value="">--</option>
 						<?php
 						for ($hour = 0; $hour <= 23; $hour++) {
 							$formattedHour = str_pad($hour, 2, '0', STR_PAD_LEFT);
-							echo "<option value=\"$formattedHour\">$formattedHour</option>";
+							$selected = ($formattedHour == $hour_s) ? "selected" : ""; // เพิ่มเงื่อนไขเพื่อตรวจสอบ $hour
+							echo "<option value=\"$formattedHour\" $selected>$formattedHour</option>";
 						}
 						?>
 					</select> : 
 					<select  required class="form-control" id="time_sec" name="time_sec" style="width: 25%;display: inline-block;" onchange="updateTimeStart();check_meet(<?php echo $_GET['meeting_id'];?>,'status');">
 						<option value="">--</option>
-						<option value="00">00</option>
-						<option value="15">15</option>
-						<option value="30">30</option>
-						<option value="45">45</option>
+						<option value="00" <?php echo ("00" == $minute_s) ? "selected" : ""; ?> >00</option>
+						<option value="15" <?php echo ("15" == $minute_s) ? "selected" : ""; ?> >15</option>
+						<option value="30" <?php echo ("30" == $minute_s) ? "selected" : ""; ?> >30</option>
+						<option value="45" <?php echo ("45" == $minute_s) ? "selected" : ""; ?> >45</option>
 					</select> น.
                     <!--<input id="TIME_START" name="TIME_START" class="form-control" type="text" placeholder="กรุณากรอกเวลาไป">-->
                 </div>
@@ -258,22 +263,27 @@ $getMeetingToolAsset = callAPI('getMeetingToolAsset',$data_request_room_id);//�
                     <h5 class="ml-2 mb-0 h2-color"><i class="fa fa-clock"></i> เวลาสิ้นสุดการประชุม</h5>
 					<!--<input required oninvalid="this.setCustomValidity('กรุณากรอกข้อมูล เวลาสิ้นสุดการประชุม')" oninput="this.setCustomValidity('')" type="time" class="form-control timeFormat" id="TIME_END" name="TIME_END" placeholder = "__:__" 
 					onChange="check_meet(<?php echo $_GET['meeting_id'];?>,'status');">-->
-					<input type="hidden" class="form-control timeFormat" id="TIME_END" name="TIME_END" />
+					<?php
+					$hour_e = substr($_GET['time-end'], 0, 2);
+					$minute_e = substr($_GET['time-end'], -2);
+					?>
+					<input type="hidden" class="form-control timeFormat" id="TIME_END" name="TIME_END" value="<?php echo $_GET['time-end'];?>" />
 					<select required class="form-control multi-column-select" id="time_min2" name="time_min2" style="width: 25%;display: inline-block;" onchange="updateTimeEnd();check_meet(<?php echo $_GET['meeting_id'];?>,'status');">
 						<option value="">--</option>
 						<?php
 						for ($hour = 0; $hour <= 23; $hour++) {
 							$formattedHour = str_pad($hour, 2, '0', STR_PAD_LEFT);
-							echo "<option value=\"$formattedHour\">$formattedHour</option>";
+							$selected = ($formattedHour == $hour_e) ? "selected" : ""; // เพิ่มเงื่อนไขเพื่อตรวจสอบ $hour
+							echo "<option value=\"$formattedHour\" $selected>$formattedHour</option>";
 						}
 						?>
 					</select> : 
 					<select required class="form-control" id="time_sec2" name="time_sec2" style="width: 25%;display: inline-block;" onchange="updateTimeEnd();check_meet(<?php echo $_GET['meeting_id'];?>,'status');">
 						<option value="">--</option>
-						<option value="00">00</option>
-						<option value="15">15</option>
-						<option value="30">30</option>
-						<option value="45">45</option>
+						<option value="00" <?php echo ("00" == $minute_e) ? "selected" : ""; ?> >00</option>
+						<option value="15" <?php echo ("15" == $minute_e) ? "selected" : ""; ?> >15</option>
+						<option value="30" <?php echo ("30" == $minute_e) ? "selected" : ""; ?> >30</option>
+						<option value="45" <?php echo ("45" == $minute_e) ? "selected" : ""; ?> >45</option>
 					</select> น.
                     <!--<input id="TIME_END" name="TIME_END" class="form-control" type="text" placeholder="กรุณากรอกเวลากลับ">-->
                 </div>
@@ -458,7 +468,6 @@ $getMeetingToolAsset = callAPI('getMeetingToolAsset',$data_request_room_id);//�
 	
 	
     jQuery(document).ready(function() {
-		
         // This button will increment the value
         $('[data-quantity="plus"]').click(function(e) {
             // Stop acting like a button
@@ -555,7 +564,7 @@ $getMeetingToolAsset = callAPI('getMeetingToolAsset',$data_request_room_id);//�
 	
 $(document).ready(function() {
 	$('.timeFormat').mask('00:00');
-	
+	$("#DATE_END").attr('min',$("#DATE_START").val());
 	
 	var room_type = "<?php echo $_GET['meeting_id']; ?>";
 	if(room_type != ''){
@@ -664,6 +673,7 @@ $(document).ready(function() {
 	$("#DATE_START").change(function(){
 		// $("#DATE_END").val($("#DATE_START").val());
 		$("#DATE_END").attr('min',$("#DATE_START").val());
+		$("#DATE_END").val('');
 	});
 	$("#DATE_END").change(function(){
 		if($("#DATE_START").val() == ''){
@@ -749,6 +759,7 @@ $(document).ready(function() {
 			data: dataString,
 			cache: false,
 			success: function(html){ 
+				console.log(html.test);
 				if(t == 'status'){
 					/* if($('#TIME_END').val() && diffMins < html.room_diff){
 						// $('#wf-btn-save').attr('disabled', 'disabled');
