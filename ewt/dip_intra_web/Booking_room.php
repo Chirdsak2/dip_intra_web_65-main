@@ -161,29 +161,83 @@ function get_TH_Date2($date){
                     </div>
                 </div>
             </div>
-            <div class="col-lg-3 col-md-6 col-sm-6 col-12 mb-2 px-2">
+            <div class="col-lg-4 col-md-6 col-sm-12 col-12 mb-2  px-2">
+                <div class=" Datepick-start-stop ">
+                    <div class="row">
+                        <div class="col-lg-6 col-md-6 col-sm-6 col-6 ">
+                            <h5 class="ml-2 mb-0"><i class="fa fa-clock"></i> เวลาเริ่มต้น</h5>
+                            <?php
+                            $hour_s = substr($_GET['time-start'], 0, 2);
+                            $minute_s = substr($_GET['time-start'], -2);
+                            ?>
+                            <input type="hidden" class="form-control" id="time-start" name="time-start" value="<?php echo $_GET['time-start'];?>" />
+                            <select required class="ml-2 mb-1 form-control multi-column-select" id="time_min" name="time_min" style="width: 40%;display: inline-block;" onchange="updateTimeStart();">
+                                <option value="">--</option>
+                                <?php
+                                for ($hour = 0; $hour <= 23; $hour++) {
+                                    $formattedHour = str_pad($hour, 2, '0', STR_PAD_LEFT);
+                                    $selected = ($formattedHour == $hour_s) ? "selected" : ""; // เพิ่มเงื่อนไขเพื่อตรวจสอบ $hour
+                                    echo "<option value=\"$formattedHour\" $selected>$formattedHour</option>";
+                                }
+                                ?>
+                            </select> : 
+                            <select  required class="form-control" id="time_sec" name="time_sec" style="width: 40%;display: inline-block;" onchange="updateTimeStart();">
+                                <option value="">--</option>
+                                <option value="00" <?php echo ("00" == $minute_s) ? "selected" : ""; ?> >00</option>
+                                <option value="15" <?php echo ("15" == $minute_s) ? "selected" : ""; ?> >15</option>
+                                <option value="30" <?php echo ("30" == $minute_s) ? "selected" : ""; ?> >30</option>
+                                <option value="45" <?php echo ("45" == $minute_s) ? "selected" : ""; ?> >45</option>
+                            </select>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-6 col-6 ">
+                            <h5 class="ml-2 mb-0"><i class="fa fa-clock"></i> เวลาสิ้นสุด</h5>
+                            <?php
+                            $hour_e = substr($_GET['time-end'], 0, 2);
+                            $minute_e = substr($_GET['time-end'], -2);
+                            ?>
+                            <input type="hidden" class="form-control timeFormat" id="time-end" name="time-end" value="<?php echo $_GET['time-end'];?>" />
+                            <select required class="form-control multi-column-select" id="time_min2" name="time_min2" style="width: 40%;display: inline-block;" onchange="updateTimeEnd();">
+                                <option value="">--</option>
+                                <?php
+                                for ($hour = 0; $hour <= 23; $hour++) {
+                                    $formattedHour = str_pad($hour, 2, '0', STR_PAD_LEFT);
+                                    $selected = ($formattedHour == $hour_e) ? "selected" : ""; // เพิ่มเงื่อนไขเพื่อตรวจสอบ $hour
+                                    echo "<option value=\"$formattedHour\" $selected>$formattedHour</option>";
+                                }
+                                ?>
+                            </select> : 
+                            <select required class="form-control" id="time_sec2" name="time_sec2" style="width: 40%;display: inline-block;" onchange="updateTimeEnd();">
+                                <option value="">--</option>
+                                <option value="00" <?php echo ("00" == $minute_e) ? "selected" : ""; ?> >00</option>
+                                <option value="15" <?php echo ("15" == $minute_e) ? "selected" : ""; ?> >15</option>
+                                <option value="30" <?php echo ("30" == $minute_e) ? "selected" : ""; ?> >30</option>
+                                <option value="45" <?php echo ("45" == $minute_e) ? "selected" : ""; ?> >45</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--<div class="col-lg-3 col-md-6 col-sm-6 col-12 mb-2 px-2">
                 <div class="Datepick-start-stop px-2">
                     <div class="row  ">
                         <div class="col-lg-6 col-md-6 col-sm-6 col-6 pl-3 px-2">
                             <h5 class="ml-0 mb-0  h2-color "><i class="fa fa-clock"></i> เวลาเริ่มต้น</h5>
 							<input class="mt-0 pl-0 ml-0 timeFormat"  type="time"  id="time-start" name="time-start" placeholder = "__:__" value="<?php echo $_GET["time-start"];?>">
-							<!--<form><input class="mt-0 pl-0 ml-0 timeFormat" style="width:100px;" type="text" id="time-start" name="time-start" placeholder = "__:__"></form>-->
                         </div>
                         <div class="col-lg-6 col-md-6 col-sm-6 col-6 px-2" >
                             <h5 class="ml-0 mb-0  h2-color"><i class="fa fa-clock"></i> เวลาสิ้นสุด</h5>
 							<input class="mt-0 pl-0 ml-0 timeFormat" type="time" id="time-end" name="time-end"  placeholder = "__:__" value="<?php echo $_GET["time-end"];?>">
-							<!-- <form> <input class="mt-0 pl-0 ml-0 timeFormat" style="width:100px;" type="text" id="time-end" name="time-end"  placeholder = "__:__"></form>-->
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-6 col-12 px-2">
+            </div>-->
+            <div class="col-lg-2 col-md-6 col-sm-6 col-12 px-2">
                 <div class="shadow-sm bg-white txt-purple drop-function-search py-2">
                     <div class="row">
-                        <div class="col-7">
-                            <h5 class="pl-3 pt-2">จำนวนผู้เข้าร่วม</h5>
+                        <div class="col-5">
+                            <h5 class="pl-3 pt-2">ที่นั่ง</h5>
                         </div>
-                        <div class="col-5 ">
+                        <div class="col-3 ">
                             <input type="number" placeholder="0" id="tentacles" name="tentacles" min="0" max="100" value="<?php echo $_GET["tentacles"];?>">
                         </div>
                     </div>
@@ -249,11 +303,11 @@ function get_TH_Date2($date){
 							สถานที่ : <?php echo $value['ROOM_LOCATION'];?>
                         </div>
                         <div class="post-item-date line-height-20px">
-							ผู้ดูแล : <?php echo $value['ROOM_KEEPER'];?> 
+							ผู้ดูแล : <?php echo $value['DEP_KEEPER_NAME'];?> 
                         </div>
                     </div>
                     <div class="general-btn text-right mt-1">
-                        <a class="btn txt-purple  bg-white border-ra-10px pad-more-btn px-3" href="form_bookingRoom.php?<?php echo "meeting_id=".$value['MEETING_ID'];?>">
+                        <a class="btn txt-purple  bg-white border-ra-10px pad-more-btn px-3" href="form_bookingRoom.php?<?php echo "meeting_id=".$value['MEETING_ID']."&trip-start=".$_GET["trip-start"]."&trip-end=".$_GET["trip-end"]."&time-start=".$_GET["time-start"]."&time-end=".$_GET["time-end"];?>">
 						จองห้องประชุม</a>
                     </div>
                 </div>
@@ -325,8 +379,8 @@ function get_TH_Date2($date){
 
 <script>
 $(document).ready(function(){
-$("#trip-start").datepicker({ dateFormat: 'dd/mm/yy', isBuddhist: true, defaultDate: toDay });
-$('.timeFormat').mask('00:00');
+// $("#trip-start").datepicker({ dateFormat: 'dd/mm/yy', isBuddhist: true, defaultDate: toDay });
+// $('.timeFormat').mask('00:00');
 	
   // $("#trip-start").change(function(){
     // $("#trip-end").val($("#trip-start").val());
@@ -352,5 +406,93 @@ $('.timeFormat').mask('00:00');
 	function reset_search_data() {
 		window.location = "Booking_room.php";
 	}
+
+
+    function updateTimeStart() {
+        var startTimeMin = parseInt($('#time_min').val());
+        // บวกเวลาสิ้นสุด 1 ชั่วโมง
+        var endTimeMin = startTimeMin + 1;
+
+        // แปลงเลขให้เป็นรูปแบบ "09" โดยใช้ padStart
+        var endTimeMinStr = endTimeMin.toString().padStart(2, '0');
+
+        if (endTimeMinStr == '24') {
+            endTimeMinStr = '00';
+        }
+        
+        // alert(endTimeMin);
+        
+		// ดึงค่าเวลาที่เลือกจาก select ของ time_min และ time_sec
+		var timeMinSelect = document.getElementById("time_min");
+		var selectedTimeMin = timeMinSelect.options[timeMinSelect.selectedIndex].value;
+        if ($('#time_sec').val() == '') {
+            $('#time_sec').val('00');
+        }
+		var timeSecSelect = document.getElementById("time_sec");
+		var selectedTimeSec = timeSecSelect.options[timeSecSelect.selectedIndex].value;
+		
+       
+		// นำค่าเวลามาประมวลผลเป็นรูปแบบ "HH:mm"
+		var timeStart = selectedTimeMin + ":" + selectedTimeSec;
+
+		// อัพเดทค่าใน input ของ time-start
+		var timeStartInput = document.getElementById("time-start");
+		timeStartInput.value = timeStart;
+
+        if($('#time-start').val() >= $('#time-end').val() && $('#time_min2').val() != '' && $('#time_sec2').val() != ''){ 
+            // $('#time-end').val('');
+            // alert('กรุณากรอกเวลาสิ้นสุดให้มากกว่าเวลาเริ่มต้น');
+            // $("#time_min2").val('');
+            // $("#time_sec2").val('');
+            $("#time_min2").val(endTimeMinStr);
+            $("#time_sec2").val($('#time_sec').val());
+            $('#time-end').val(endTimeMinStr+':'+$('#time_sec').val());
+        }else if($('#time_min').val() && $('#time_sec').val() && $('#time_min2').val() == '' && $('#time_sec2').val() == ''){
+            $("#time_min2").val(endTimeMinStr);
+            $("#time_sec2").val($('#time_sec').val());
+            $('#time-end').val(endTimeMinStr+':'+$('#time_sec').val());
+        }
+
+	}
+    function updateTimeEnd() {
+        let startTimeMin = parseInt($('#time_min').val());
+        // บวกเวลาสิ้นสุด 1 ชั่วโมง
+        let endTimeMin = startTimeMin + 1;
+
+        // แปลงเลขให้เป็นรูปแบบ "09" โดยใช้ padStart
+        let endTimeMinStr = endTimeMin.toString().padStart(2, '0');
+
+        if (endTimeMinStr == '24') {
+            endTimeMinStr = '00';
+        }
+
+		// ดึงค่าเวลาที่เลือกจาก select ของ time_min2 และ time_sec2
+		let timeMinSelect = document.getElementById("time_min2");
+		let selectedTimeMin = timeMinSelect.options[timeMinSelect.selectedIndex].value;
+
+		let timeSecSelect = document.getElementById("time_sec2");
+		let selectedTimeSec = timeSecSelect.options[timeSecSelect.selectedIndex].value;
+		
+		// นำค่าเวลามาประมวลผลเป็นรูปแบบ "HH:mm"
+		let timeEnd = selectedTimeMin + ":" + selectedTimeSec;
+
+		// อัพเดทค่าใน input ของ time-end
+		let timeStartInput = document.getElementById("time-end");
+		timeStartInput.value = timeEnd;
+
+        if($('#time-start').val() >= $('#time-end').val() && $('#time_min2').val() != '' && $('#time_sec2').val() != ''){ 
+            alert('กรุณากรอกเวลาสิ้นสุดให้มากกว่าเวลาเริ่มต้น');
+            // $('#time-end').val('');
+            // $("#time_min2").val('');
+            // $("#time_sec2").val('');
+            $("#time_min2").val(endTimeMinStr);
+            $("#time_sec2").val($('#time_sec').val());
+            $('#time-end').val(endTimeMinStr+':'+$('#time_sec').val());
+        }
+
+
+	}
+
+    
 
 </script>

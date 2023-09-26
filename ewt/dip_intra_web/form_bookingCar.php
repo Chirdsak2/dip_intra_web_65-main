@@ -231,53 +231,63 @@ $getMaxCarBook = callAPI('getMaxCarBook');
             <div class="form-row align-items-center">
                 <div class="col-lg-3 col-md-3 col-sm-6 col-6 ">
                     <h4 class="ml-2 mb-0 h2-color"><i class="fa fa-calendar "></i> วันเริ่มต้น</h4>
-                    <input required oninvalid="this.setCustomValidity('กรุณากรอกข้อมูล วันเริ่มต้น')" oninput="this.setCustomValidity('')" class="ml-2 pb-1 " type="date" id="DATE_START" name="DATE_START" value="dd/mm/yyy" min="<?php //echo date('Y-m-d');?>" placeholder="dd/mm/yyyy" pattern="\d{1,2}/\d{1,2}/\d{4}">
+                    <input required oninvalid="this.setCustomValidity('กรุณากรอกข้อมูล วันเริ่มต้น')" oninput="this.setCustomValidity('')" class="ml-2 pb-1 " type="date" id="DATE_START" name="DATE_START" value="<?php echo $_GET["trip-start"];?>" min="<?php //echo date('Y-m-d');?>" placeholder="dd/mm/yyyy" pattern="\d{1,2}/\d{1,2}/\d{4}">
                 </div>
                 <div class=" col-lg-3 col-md-3 col-sm-6  col-6 ">
                     <h4 class="ml-2 mb-0 h2-color"><i class="fa fa-calendar"></i> วันที่สิ้นสุด</h4>
-                    <input required oninvalid="this.setCustomValidity('กรุณากรอกข้อมูล วันที่สิ้นสุด')" oninput="this.setCustomValidity('')" class=" ml-2 pb-1 " type="date" id="DATE_END" name="DATE_END" value="dd/mm/yyy">
+                    <input required oninvalid="this.setCustomValidity('กรุณากรอกข้อมูล วันที่สิ้นสุด')" oninput="this.setCustomValidity('')" class=" ml-2 pb-1 " type="date" id="DATE_END" name="DATE_END" value="<?php echo $_GET["trip-end"];?>">
                 </div>
                 <div class=" col-lg-3 col-md-3 col-sm-6 col-12 ">
                     <h4 class="ml-2 mb-0 h2-color"><i class="fa fa-clock"></i> เวลาเดินทางไป</h4>
 					<!--<input required oninvalid="this.setCustomValidity('กรุณากรอกข้อมูล เวลาเดินทางไป')" oninput="this.setCustomValidity('')" type="time" class="form-control timeFormat" id="TIME_START" name="TIME_START" placeholder = "__:__" onChange="check_meet(<?php echo $_GET['car_id'];?>,'status');" />-->
-					<input type="hidden" class="form-control timeFormat" id="TIME_START" name="TIME_START" onChange="check_meet(<?php echo $_GET['car_id'];?>,'status');" />
+					<?php
+					$hour_s = substr($_GET['time-start'], 0, 2);
+					$minute_s = substr($_GET['time-start'], -2);
+					?>
+					<input type="hidden" class="form-control timeFormat" id="TIME_START" name="TIME_START" onChange="check_meet(<?php echo $_GET['car_id'];?>,'status');" value="<?php echo $_GET['time-start'];?>"/>
 					<select required class="form-control multi-column-select" id="time_min" name="time_min" style="width: 25%;display: inline-block;" onchange="updateTimeStart()">
 						<option value="">--</option>
 						<?php
 						for ($hour = 0; $hour <= 23; $hour++) {
 							$formattedHour = str_pad($hour, 2, '0', STR_PAD_LEFT);
-							echo "<option value=\"$formattedHour\">$formattedHour</option>";
+							$selected = ($formattedHour == $hour_s) ? "selected" : ""; // เพิ่มเงื่อนไขเพื่อตรวจสอบ $hour
+							echo "<option value=\"$formattedHour\" $selected>$formattedHour</option>";
 						}
 						?>
 					</select> : 
 					<select required class="form-control" id="time_sec" name="time_sec" style="width: 25%;display: inline-block;" onchange="updateTimeStart()">
-						<option value="">--</option>
-						<option value="00">00</option>
-						<option value="15">15</option>
-						<option value="30">30</option>
-						<option value="45">45</option>
+					<option value="">--</option>
+						<option value="00" <?php echo ("00" == $minute_s) ? "selected" : ""; ?> >00</option>
+						<option value="15" <?php echo ("15" == $minute_s) ? "selected" : ""; ?> >15</option>
+						<option value="30" <?php echo ("30" == $minute_s) ? "selected" : ""; ?> >30</option>
+						<option value="45" <?php echo ("45" == $minute_s) ? "selected" : ""; ?> >45</option>
 					</select> น.
                     <!--<input required class="form-control" type="text" id="TIME_START" name="TIME_START" placeholder="กรุณากรอกเวลาไป" >-->
                 </div>
                 <div class=" col-lg-3 col-md-3 col-sm-6 col-12 ">
                     <h4 class="ml-2 mb-0 h2-color"><i class="fa fa-clock"></i> เวลาเดินทางกลับ</h4>
 					<!--<input required oninvalid="this.setCustomValidity('กรุณากรอกข้อมูล เวลาเดินทางกลับ')" oninput="this.setCustomValidity('')" type="time" class="form-control timeFormat" id="TIME_END" name="TIME_END" placeholder = "__:__"  onChange="check_meet(<?php echo $_GET['car_id'];?>,'status');" />-->
-					<input type="hidden" class="form-control timeFormat" id="TIME_END" name="TIME_END" onChange="check_meet(<?php echo $_GET['car_id'];?>,'status');" />
+					<?php
+					$hour_e = substr($_GET['time-end'], 0, 2);
+					$minute_e = substr($_GET['time-end'], -2);
+					?>
+					<input type="hidden" class="form-control timeFormat" id="TIME_END" name="TIME_END" onChange="check_meet(<?php echo $_GET['car_id'];?>,'status');" value="<?php echo $_GET['time-start'];?>"/>
 					<select required class="form-control multi-column-select" id="time_min2" name="time_min2" style="width: 25%;display: inline-block;" onchange="updateTimeEnd()">
 						<option value="">--</option>
 						<?php
 						for ($hour = 0; $hour <= 23; $hour++) {
 							$formattedHour = str_pad($hour, 2, '0', STR_PAD_LEFT);
-							echo "<option value=\"$formattedHour\">$formattedHour</option>";
+							$selected = ($formattedHour == $hour_e) ? "selected" : ""; // เพิ่มเงื่อนไขเพื่อตรวจสอบ $hour
+							echo "<option value=\"$formattedHour\" $selected>$formattedHour</option>";
 						}
 						?>
 					</select> : 
 					<select required class="form-control" id="time_sec2" name="time_sec2" style="width: 25%;display: inline-block;" onchange="updateTimeEnd();">
-						<option value="">--</option>
-						<option value="00">00</option>
-						<option value="15">15</option>
-						<option value="30">30</option>
-						<option value="45">45</option>
+					<option value="">--</option>
+						<option value="00" <?php echo ("00" == $minute_e) ? "selected" : ""; ?> >00</option>
+						<option value="15" <?php echo ("15" == $minute_e) ? "selected" : ""; ?> >15</option>
+						<option value="30" <?php echo ("30" == $minute_e) ? "selected" : ""; ?> >30</option>
+						<option value="45" <?php echo ("45" == $minute_e) ? "selected" : ""; ?> >45</option>
 					</select> น.
                     <!--<input required class="form-control" type="text" id="TIME_END" name="TIME_END" placeholder="กรุณากรอกเวลากลับ">-->
                 </div>

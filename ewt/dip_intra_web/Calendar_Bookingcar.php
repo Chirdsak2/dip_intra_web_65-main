@@ -92,7 +92,15 @@ $getCarList = callAPI('getCarList',$data_request);
              // $('#modalWhen').text(info.event.start);
              // $('.modal-content > #eventID').val(info.event.defId);
         $('#calendarModal'+info.event.id).modal();
-	  } 
+	  },
+      dateClick: function(info) {
+        // console.log(info.dateStr);
+        // alert(info.dateStr);
+        var selectedDate = info.dateStr; // ดึงวันที่ที่คลิกเลือก
+        var url = 'Booking_car.php?trip-start=' + selectedDate + '&trip-end=' + selectedDate; // สร้าง URL ด้วยวันที่ที่เลือก
+        // window.location.href = url; // เปลี่ยนไปยังหน้า Booking_room.php พร้อมส่งค่าวันที่
+        window.open(url, '_blank'); // เปิดหน้าใหม่
+      }
   });
 
   calendar.render();
@@ -151,14 +159,14 @@ $getCarList = callAPI('getCarList',$data_request);
 <div class="container">
   <div class="row">
       <div class="col-xl-12">
-          <h1 class="h2-color pt-4">ปฏิทินการจองยานพาหนะเดือน มิถุนายน</h1>
+          <h1 class="h2-color pt-4">ปฏิทินการจองยานพาหนะ</h1>
       </div>
   </div>
   <div class="row">
       <div class="col-xl-12">
           <ul id="sub_menu">
             <li>
-                <a href="Booking_car.php">หน้าแรก</a>
+                <a href="Booking_car.php">จองยานพาหนะ</a>
             </li>
             <li>
                 &gt; 
