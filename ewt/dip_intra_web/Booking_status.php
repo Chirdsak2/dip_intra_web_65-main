@@ -5,494 +5,1348 @@
 <?php include('callservice.php'); ?>
 <!-- CALL SERVICE -->
 
-<style>
-        .icon_fa_left:hover{
-     color:#82288c;
-}
-.icon_fa_right{
-     color:#82288c;
-}
-
-     ul#sub_menu li {
-          display: inline;
-     }
-     .icon_file{
-          font-size: 50px;
-    margin-left: 124px;
-    color:#ccc;
-    margin-top:10px;
-}
-.user_list{
-     border-radius: 15px;
-    height: 20px;
-    width: 20px;
-}
-.page-item.active .page-link {
-    z-index: 3;
-    color: #fff;
-    background-color: #82288c;
-    border-color: #82288c;
-}
-.page-link {
-    position: relative;
-    display: block;
-    padding: 0.5rem 0.75rem;
-    margin-left: -1px;
-    line-height: 1.25;
-    color:#82288c;
-    /* color: #007bff; */
-    background-color: #fff;
-    border: 1px solid #dee2e6;
-}
-.page-item{
-     margin:9px;
-}
-</style>
 
 <?php
-$today = "";
-if($_GET["trip-start"] == '' || ($_GET["trip-start"] == '' && $_GET["trip-end"] == '') ){
-	$today = date('Y-m-d');
-}
-$data_request = array(
-						// "today" => '2023-01-12',
-						// "today" => $today, 
-						"amount" => $_GET["tentacles"],
-						"trip_start" => $_GET["trip-start"],
-						"trip_end" => $_GET["trip-end"],
-						"time_start" => $_GET["time-start"],
-						"time_end" => $_GET["time-end"],
-						// "time_end" => '09:04',
-					);
-$getRoomList = callAPI('getRoomList',$data_request);
+$short_dep = array(
+	//สำนักงานเลขานุการกรม
+	244 => "ลสล.กสอ.", 363 => "หฝบท.สล.กสอ.", 413 => "ผกค.สล.กสอ.", 364 => "ผกบ.สล.กสอ.", 365 => "ผกส.สล.กสอ.",
+	366 => "ผกพ.สล.กสอ.", 414 => "ผกง.สล.กสอ.", // มีเพิ่ม 1 กลุ่ม อย่าลืมมาเพิ่ม
+	//กองพัฒนาขีดความสามารถธุรกิจอุตสาหกรรม
+	298 => "ผอ.กข.กสอ.", 415 => "หฝบท.กข.กสอ.", 416 => "ผกจ.กข.กสอ.", 417 => "ผกร.กข.กสอ.", 418 => "ผกบ.กข.กสอ.",
+	419 => "ผกผ.กข.กสอ.", 420 => "ผกอ.กข.กสอ.",
+	//กองพัฒนาดิจิทัลอุตสาหกรรม
+	305 => "ผอ.กท.กสอ.", 421 => "หฝบท.กท.กสอ.", 422 => "ผกช.กท.กสอ.", 423 => "ผกบ.กท.กสอ.", 424 => "ผกพ.กท.กสอ.",
+	//กองยุทธศาสตร์และแผนงาน
+	265 => "ผอ.กง.กสอ.", 384 => "หฝบท.กง.กสอ.", 427 => "ผกร.กง.กสอ.", 428 => "ผกต.กง.กสอ.", 429 => "ผกผ.กง.กสอ.",
+	430 => "ผกพ.กง.กสอ.",  431 => "ผกย.กง.กสอ.",  432 => "ผกศ.กง.กสอ.",
+	//กองโลจิสติกส์
+	322 => "ผอ.กล.กสอ.", 433 => "หฝบท.กล.กสอ.", 434 => "ผกน.กล.กสอ.", 435 => "ผกพ.กล.กสอ.", 436 => "ผกม.กล.กสอ.",
+	437 => "ผกอ.กล.กสอ.", 439 => "ผกส.กล.กสอ.",
+	//กองส่งเสริมผู้ประกอบการและธุรกิจใหม่
+	266 => "ผอ.กม.กสอ.", 385 => "หฝบท.กม.กสอ.", 386 => "ผกจ.กม.กสอ.", 440 => "ผกพ.กม.กสอ.", 387 => "ผกส.กม.กสอ.",
+	//ศูนย์เทคโนโลยีสารสนเทศและการสื่อสาร
+	328 => "ผอ.ศส.กสอ.", 441 => "ผกบ.ศส.กสอ.", 442 => "ผกง.ศส.กสอ.", 443 => "ผกท.ศส.กสอ.", 438 => "ผกค.ศส.กสอ.",
+	//กองพัฒนาเกษตรอุตสาหกรรม
+	267 => "ผกธ.กอ.กสอ.", 268 => "ผกผ.กอ.กสอ.", 262 => "หฝบท.กอ.กสอ.", 263 => "ผกจ.กอ.กสอ.", 264 => "ผกน.กอ.กสอ.",
+	//กลุ่มตรวจสอบภายใน
+	362 => "ผอ.ตสน.กสอ.",
+);
 
 dbdpis::ConnectDB(SSO_DB_NAME, SSO_DB_TYPE, SSO_ROOT_HOST, SSO_ROOT_USER, SSO_ROOT_PASSWORD, SSO_DB_NAME, SSO_CHAR_SET);
-// GET DEP_LV1_ID, DEP_LV2_ID
-		$chk_per_type = "SELECT B.*, C.DEP_NAME AS DEP_NAME1, D.DEP_NAME AS DEP_NAME2
-						FROM USR_MAIN A
-						LEFT JOIN M_PER_PROFILE B ON B.PER_IDCARD = A.USR_OPTION3
-						LEFT JOIN USR_DEPARTMENT C ON C.DEP_ID = B.DEP_LV1_ID
-						LEFT JOIN USR_DEPARTMENT D ON D.DEP_ID = B.DEP_LV2_ID
-						WHERE A.USR_USERNAME = '".$_SESSION['EWT_USERNAME']."' ";
-		$q = dbdpis::execute($chk_per_type);
-		$chk = dbdpis::Fetch($q);
-$data_session = array(
-						"userName" 		=> $_SESSION["EWT_USERNAME"],
-						"usrFname" 		=> $_SESSION["EWT_NAME"],
-						"usrLname" 		=> $_SESSION["EWT_SURNAME"],
-						"dep_lv1_name" 	=> $chk["DEP_NAME1"],
-						"dep_lv2_name" 	=> $chk["DEP_NAME2"],
-					);
-$insertUsrMain = callAPI('insertUsrMain', $data_session);
- // echo '<pre>';
- // print_r($getRoomList);
- // echo '</pre>'; 
-/* format date input 2019-11-01 return 1 / ม.ค. / 2500 */
 
-function convert_ex_date($date,$lang="TH"){
-	$thai_date = array('','จันทร์','อังคาร','พุธ','พฤหัสบดี','ศุกร์','เสาร์','อาทิตย์');
-	$thai_month = array("", "มกราคม", "กุมภาพันธ์", "มีนาคม", "เมษายน", "พฤษภาคม", "มิถุนายน", "กรกฎาคม", "สิงหาคม", "กันยายน", "ตุลาคม", "พฤศจิกายน", "ธันวาคม");
-	$sub_thai_month = array("", "ม.ค.", "ก.พ.", "มี.ค.", "เม.ย.", "พ.ค.", "มิ.ย.", "ก.ค.", "ส.ค.", "ก.ย.", "ต.ค.", "พ.ย.", "ธ.ค.");
-
-	if($date != ''){
-		$date_start = new DateTime($date);
-		$d_date 	= $date_start->format("d"); //เลขวันที่มีเลข 0 เช่น 01
-		$j_date 	= $date_start->format("j"); //เลขวันที่ไม่มีเลข 0
-		$t_date 	= $date_start->format("N"); //คืนค่าเป็นเลข นำค่าไปเทียบเลขในอาเรย์ ค่าที่คืน 1 - 7 โดยที่ 1 เริ่มที่ Monday
-		$month 		= $date_start->format("m");
-		$year 		= $date_start->format("Y")+543;
-		if($lang == "TH"){
-			$return["d_date"]	=	$d_date;
-			$return["j_date"]	=	$j_date;
-			$return["t_date"] 	= 	$thai_date[$t_date];
-			$return["t_month"]	=	$thai_month[($month*1)];
-			$return["s_t_month"]=	$sub_thai_month[($month*1)];
-			$return["n_month"]	=	$month;
-			$return["year"]		=	$year;
-		}else if($lang == "EN"){
-
-		}
-		return $return;
-	}
+// GET DEP_LV1_ID, DEP_LV2_ID, POS_NAME
+$chk_per_type = "SELECT B.*, C.DEP_NAME AS DEP_NAME1, D.DEP_NAME AS DEP_NAME2, E.POS_NAME, F.POS_LEVEL_NAME 
+				FROM USR_MAIN A
+				LEFT JOIN M_PER_PROFILE B ON B.PER_IDCARD = A.USR_OPTION3
+				LEFT JOIN USR_DEPARTMENT C ON C.DEP_ID = B.DEP_LV1_ID
+				LEFT JOIN USR_DEPARTMENT D ON D.DEP_ID = B.DEP_LV2_ID
+				LEFT JOIN USR_POSITION E ON E.POS_ID = B.PER_POS_ID
+				LEFT JOIN M_POSITION_LEVEL F ON F.POS_LEVEL_ID = B.PER_POSITION_LVL
+				WHERE A.USR_USERNAME = '" . $_SESSION['EWT_USERNAME'] . "' ";
+$q = dbdpis::execute($chk_per_type);
+$chk = dbdpis::Fetch($q);
+// GET POS_LEVEL_NAME
+// ERROR ???
+// $chk_pos_level_name = "SELECT C.POS_LEVEL_NAME
+// FROM USR_MAIN A
+// LEFT JOIN M_PER_PROFILE B ON B.PER_IDCARD = A.USR_OPTION3
+// LEFT JOIN M_POSITION_LEVEL C ON B.PER_POSITION_LVL = C.POS_LEVEL_ID
+// WHERE A.USR_USERNAME = '".$_SESSION['EWT_USERNAME']."' ";
+// $q2 = dbdpis::execute($chk_pos_level_name);
+// $chk2 = dbdpis::Fetch($q2);
+//per_id fix ไว้ก่อน
+if (!$_GET["Page"]) {
+	$_GET["Page"] = 1;
 }
-function get_TH_Date2($date){
-	$txt_date = convert_ex_date($date,$lang="TH");
-	$some_txt_date = $txt_date["j_date"]." ".$txt_date["s_t_month"]." ".$txt_date["year"];
-	return $some_txt_date;
-}
+$data_request = array(
+	// "per_id" => '6848',
+	"username" => $_SESSION['EWT_USERNAME'],
+	"trip_start" => $_GET["trip-start"],
+	"trip_end" => $_GET["trip-end"],
+	"system" => $_GET["SYSTEM"],
+	"status" => $_GET["STATUS"],
+	"Per_Page" => 10,
+	"Page" => $_GET["Page"],
+	"Num_Rows" => $_GET["Num_Rows"],
+);
+$getRequestBookingAllList = callAPI('getRequestBookingAllList', $data_request);
+
+
+// echo '<br><br><br><br><pre>';
+// print_r($data_request);
+// echo '</pre>';
+
+// echo '<br><br><br><br><pre>';
+// print_r($short_dep[443]);
+// echo '</pre>';
+
+// echo '<br><br><br><br><pre>';
+// print_r($chk);
+// echo '</pre>';
+
 ?>
 
 
-<!-- แถบค้นหา -->
-<form id="form_wf" action="Booking_room.php" method="get" role="form">
 
-<div class="container-fluid meeting-bg px-0 shadow">
+<style>
+	.icon_fa_left:hover {
+		color: #82288c;
+	}
 
-    <div class=" mar-spacehead  shadow-sm" style="background-color:rgba(241, 237, 234, 0.8) ;">
+	.icon_fa_right {
+		color: #82288c;
+	}
 
-        <!--<form id="contact-form" action="#" method="post" role="form">-->
-            <div class="row  w-100 d-flex justify-content-center"> 
-                <img src="images/2meet.png" class="img rounded icon-tabhead" alt="BG-BookingCar"><span>
-                    <h1 class="col-12 txt-gradient-purple font-h-search  pt-4 pb-4 ">
-                    จองห้องประชุม
-                    </h1>
-                </span>
-            </div>
-        <!--</form>-->
+	.form-control {
+		border: 1px solid #981c9d !important;
+		border-radius: 5px !important;
+	}
 
-    </div>
+	ul#sub_menu li {
+		display: inline;
+	}
 
-    <div class="container ">
-        <h5 class="h2-color mt-4 "><a href="index.php">หน้าแรก > </a> <span>จองห้องประชุม</span></h5>
-        <hr class="hr_news mt-0">
-        <div class="row mb-3 ">
+	.icon_file {
+		font-size: 50px;
+		margin-left: 124px;
+		color: #ccc;
+		margin-top: 10px;
+	}
 
-            <div class="col-lg-4 col-md-6 col-sm-12 col-12 mb-2  px-2">
-                <div class=" Datepick-start-stop ">
-                    <div class="row">
-                        <div class="col-lg-6 col-md-6 col-sm-6 col-6 ">
-                            <h5 class="ml-2 mb-0"><i class="fa fa-calendar"></i> วันเริ่มต้น</h5>
-                            <input class="mt-0 ml-2 pb-1 border-0" type="date" id="trip-start" name="trip-start" value="<?php echo $_GET["trip-start"];?>" >
-                        </div>
-                        <div class="col-lg-6 col-md-6 col-sm-6 col-6 ">
-                            <h5 class="ml-2 mb-0"><i class="fa fa-calendar"></i> วันที่สิ้นสุด</h5>
-                            <input class="mt-0 ml-2 pb-1 border-0" type="date" id="trip-end" name="trip-end" value="<?php echo $_GET["trip-end"];?>">
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 col-sm-12 col-12 mb-2  px-2">
-                <div class=" Datepick-start-stop ">
-                    <div class="row">
-                        <div class="col-lg-6 col-md-6 col-sm-6 col-6 ">
-                            <h5 class="ml-2 mb-0"><i class="fa fa-calendar"></i> เวลาเริ่มต้น</h5>
-                            <?php
-                            $hour_s = substr($_GET['time-start'], 0, 2);
-                            $minute_s = substr($_GET['time-start'], -2);
-                            ?>
-                            <input type="hidden" class="form-control" id="time-start" name="time-start" value="<?php echo $_GET['time-start'];?>" />
-                            <select required class="ml-2 mb-1 form-control multi-column-select" id="time_min" name="time_min" style="width: 40%;display: inline-block;" onchange="updateTimeStart();">
-                                <option value="">--</option>
-                                <?php
-                                for ($hour = 0; $hour <= 23; $hour++) {
-                                    $formattedHour = str_pad($hour, 2, '0', STR_PAD_LEFT);
-                                    $selected = ($formattedHour == $hour_s) ? "selected" : ""; // เพิ่มเงื่อนไขเพื่อตรวจสอบ $hour
-                                    echo "<option value=\"$formattedHour\" $selected>$formattedHour</option>";
-                                }
-                                ?>
-                            </select> : 
-                            <select  required class="form-control" id="time_sec" name="time_sec" style="width: 40%;display: inline-block;" onchange="updateTimeStart();">
-                                <option value="">--</option>
-                                <option value="00" <?php echo ("00" == $minute_s) ? "selected" : ""; ?> >00</option>
-                                <option value="15" <?php echo ("15" == $minute_s) ? "selected" : ""; ?> >15</option>
-                                <option value="30" <?php echo ("30" == $minute_s) ? "selected" : ""; ?> >30</option>
-                                <option value="45" <?php echo ("45" == $minute_s) ? "selected" : ""; ?> >45</option>
-                            </select>
-                        </div>
-                        <div class="col-lg-6 col-md-6 col-sm-6 col-6 ">
-                            <h5 class="ml-2 mb-0"><i class="fa fa-calendar"></i> เวลาสิ้นสุด</h5>
-                            <?php
-                            $hour_e = substr($_GET['time-end'], 0, 2);
-                            $minute_e = substr($_GET['time-end'], -2);
-                            ?>
-                            <input type="hidden" class="form-control timeFormat" id="time-end" name="time-end" value="<?php echo $_GET['time-end'];?>" />
-                            <select required class="form-control multi-column-select" id="time_min2" name="time_min2" style="width: 40%;display: inline-block;" onchange="updateTimeEnd();">
-                                <option value="">--</option>
-                                <?php
-                                for ($hour = 0; $hour <= 23; $hour++) {
-                                    $formattedHour = str_pad($hour, 2, '0', STR_PAD_LEFT);
-                                    $selected = ($formattedHour == $hour_e) ? "selected" : ""; // เพิ่มเงื่อนไขเพื่อตรวจสอบ $hour
-                                    echo "<option value=\"$formattedHour\" $selected>$formattedHour</option>";
-                                }
-                                ?>
-                            </select> : 
-                            <select required class="form-control" id="time_sec2" name="time_sec2" style="width: 40%;display: inline-block;" onchange="updateTimeEnd();">
-                                <option value="">--</option>
-                                <option value="00" <?php echo ("00" == $minute_e) ? "selected" : ""; ?> >00</option>
-                                <option value="15" <?php echo ("15" == $minute_e) ? "selected" : ""; ?> >15</option>
-                                <option value="30" <?php echo ("30" == $minute_e) ? "selected" : ""; ?> >30</option>
-                                <option value="45" <?php echo ("45" == $minute_e) ? "selected" : ""; ?> >45</option>
-                            </select>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!--<div class="col-lg-3 col-md-6 col-sm-6 col-12 mb-2 px-2">
-                <div class="Datepick-start-stop px-2">
-                    <div class="row  ">
-                        <div class="col-lg-6 col-md-6 col-sm-6 col-6 pl-3 px-2">
-                            <h5 class="ml-0 mb-0  h2-color "><i class="fa fa-clock"></i> เวลาเริ่มต้น</h5>
-							<input class="mt-0 pl-0 ml-0 timeFormat"  type="time"  id="time-start" name="time-start" placeholder = "__:__" value="<?php echo $_GET["time-start"];?>">
-                        </div>
-                        <div class="col-lg-6 col-md-6 col-sm-6 col-6 px-2" >
-                            <h5 class="ml-0 mb-0  h2-color"><i class="fa fa-clock"></i> เวลาสิ้นสุด</h5>
-							<input class="mt-0 pl-0 ml-0 timeFormat" type="time" id="time-end" name="time-end"  placeholder = "__:__" value="<?php echo $_GET["time-end"];?>">
-                        </div>
-                    </div>
+	.user_list {
+		border-radius: 15px;
+		height: 20px;
+		width: 20px;
+	}
+
+	.page-item.active .page-link {
+		z-index: 3;
+		color: #fff;
+		background-color: #82288c;
+		border-color: #82288c;
+	}
+
+	.page-link {
+		position: relative;
+		display: block;
+		padding: 0.5rem 0.75rem;
+		margin-left: -1px;
+		line-height: 1.25;
+		color: #82288c;
+		/* color: #007bff; */
+		background-color: #fff;
+		border: 1px solid #dee2e6;
+	}
+
+	.page-item {
+		margin: 9px;
+	}
+</style>
+
+<div class="container mar-spacehead mb-5">
+
+	<form id="form_wf" action="Booking_status.php" method="get" role="form">
+		<!-- ส่วนของข้อมูลผู้ใช้ -->
+		<h2 class="h2-color pt-4">
+			<i class="fa fa-check-circle"></i> สถานะคำขอ
+		</h2>
+		<div class="row">
+			<div class="col-lg-6 col-md-4 col-sm-12 col-12">
+				<h5 class="h2-color mt-2"><a href="profile.php">ข้อมูลผู้ใช้งาน > </a> <span>สถานะคำขอ</span></h5>
+			</div>
+			<!-- แบ่งส่วนไอคอนหน้าการจอง ห้องประชุม / หนังสือรับรอง / ยานพาหนะ -->
+			<div class="col-lg-6 col-md-8 col-sm-12 col-12  ">
+				<div class="row">
+					<!-- ห้องประชุม -->
+					<div class="col-lg-4 col-md-4 col-sm-4 col-12 ">
+						<img src="images/2meet.png" class="thumnal-iconfunction" alt="Meetingroom"><span class="ml-1 h2-color"> ห้องประชุม</span>
+					</div>
+					<!-- ยานพาหนะ -->
+					<div class="col-lg-4 col-md-4 col-sm-4 col-12">
+						<img src="images/2car.png" class="thumnal-iconfunction" alt="car"><span class="ml-1 h2-color"> ยานพาหนะ</span>
+					</div>
+					<!-- หนังสือรับรอง -->
+					<div class="col-lg-4 col-md-4 col-sm-4 col-12">
+						<img src="images/2certificate.png" class="thumnal-iconfunction" alt="certificate"><span class="ml-1 h2-color"> หนังสือรับรอง</span>
+					</div>
+				</div>
+			</div>
+		</div>
+		<hr class="hr_news mt-0">
+
+		<div class="row mb-3">
+			<div class="col-lg-4 col-md-6 col-sm-12 col-12 mb-2 ">
+				<div class=" Datepick-start-stop">
+					<div class="row" style="  border: 1px solid #981c9d;  border-radius: 5px;">
+						<div class="col-lg-6 col-md-6 col-sm-6 col-6 ">
+							<h5 class="ml-2 mb-0"><i class="fa fa-calendar"></i> วันเริ่มต้น</h5>
+							<input class="mt-0 ml-2 pb-1 border-0" type="date" id="trip-start" name="trip-start" value="<?php echo $_GET["trip-start"]; ?>">
+						</div>
+						<div class="col-lg-6 col-md-6 col-sm-6 col-6 ">
+							<h5 class="ml-2 mb-0"><i class="fa fa-calendar"></i> วันที่สิ้นสุด</h5>
+							<input class="mt-0 ml-2 pb-1 border-0" type="date" id="trip-end" name="trip-end" value="<?php echo $_GET["trip-end"]; ?>">
+						</div>
+					</div>
+
+				</div>
+			</div>
+			<div class="col-lg-3 col-md-6 col-sm-6 col-12">
+				<!--<div class="dropdown show">
+                <a class="btn drop-function-search shadow-sm btn-lg dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    แสดงระบบทั้งหมด
+                </a>
+
+                <div class="dropdown-menu " aria-labelledby="dropdownMenuLink">
+                    <a class="dropdown-item" href="#">จองห้องประชุม</a>
+                    <a class="dropdown-item" href="#">จองยานพาหนะ</a>
+                    <a class="dropdown-item" href="#">ขอหนังสือรับรับรอง</a>
                 </div>
             </div>-->
-            <div class="col-lg-2 col-md-6 col-sm-6 col-12 px-2">
-                <div class="shadow-sm bg-white txt-purple drop-function-search py-2">
-                    <div class="row">
-                        <div class="col-5">
-                            <h5 class="pl-3 pt-2">ที่นั่ง</h5>
-                        </div>
-                        <div class="col-3 ">
-                            <input type="number" placeholder="0" id="tentacles" name="tentacles" min="0" max="100" value="<?php echo $_GET["tentacles"];?>">
-                        </div>
-                    </div>
+				<div id="SYSTEM_BSF_AREA" class=" ">
+					<select style="height:55px;" name="SYSTEM" id="SYSTEM" class="form-control  " required="" aria-required="true" placeholder="เลือก" tabindex="-1" aria-hidden="true">
+						<option value="99">แสดงประเภทคำขอทั้งหมด</option>
+						<option value="1" <?php echo ($_GET["SYSTEM"] == 1 ? "selected" : ""); ?>>จองห้องประชุม</option>
+						<option value="2" <?php echo ($_GET["SYSTEM"] == 2 ? "selected" : ""); ?>>จองยานพาหนะ</option>
+						<option value="3" <?php echo ($_GET["SYSTEM"] == 3 ? "selected" : ""); ?>>ขอหนังสือรับรับรอง</option>
+					</select>
+				</div>
+			</div>
+			<div class="col-lg-3 col-md-6 col-sm-6 col-12">
+				<!--<div class="dropdown show">
+                <a class="btn drop-function-search shadow-sm btn-lg dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    แสดงสถานะทั้งหมด
+                </a>
+
+                <div class="dropdown-menu " aria-labelledby="dropdownMenuLink">
+                    <a class="dropdown-item" href="#">Action</a>
+                    <a class="dropdown-item" href="#">Another action</a>
+                    <a class="dropdown-item" href="#">Something else here</a>
                 </div>
-            </div>
-            <div class="col-lg-2 col-md-6 col-sm-12 col-12 ">
-               <!--<button type="submit" class="btn-search btn Gradient-Color shadow-sm btn-lg mt-1"> ค้นหาห้องประชุม</button>-->
-               <a onclick="search_data()" class="btn-search btn Gradient-Color shadow-sm btn-lg mt-1" role="button" aria-pressed="true">ค้นหาห้องประชุม</a>
-               <a onclick="reset_search_data()" class="btn-search btn Gradient-Color shadow-sm btn-lg mt-1" role="button" aria-pressed="true">ล้างค่าการค้นหา</a>
-            </div>
-        </div>
-        <div class="d-flex justify-content-center  mb-4">
-            <a href="Calendar_Bookingroom.php" class="btn txt-purple bg-white btn-sm active px-4 py-2 mt-3 mb-3" role="button" aria-pressed="true">ปฏิทินการจองห้องประชุม</a>
-        </div>
-    </div>
-</div>
-</form>
+            </div>-->
+				<div id="STATUS_BSF_AREA" class=" ">
+					<select style="height:55px;" name="STATUS" id="STATUS" class="form-control  " required="" aria-required="true" placeholder="เลือก" tabindex="-1" aria-hidden="true">
+						<option value="99">แสดงสถานะทั้งหมด</option>
+						<option value="1" <?php echo ($_GET["STATUS"] == 1 ? "selected" : ""); ?>>ดำเนินการเสร็จสิ้น</option>
+						<option value="2" <?php echo ($_GET["STATUS"] == 2 ? "selected" : ""); ?>>อยู่ระหว่างดำเนินการ</option>
+						<option value="3" <?php echo ($_GET["STATUS"] == 3 ? "selected" : ""); ?>>ไม่ผ่านการอนุมัติ / ยกเลิกเสร็จสิ้น</option>
+					</select>
+				</div>
 
-<div class="container mt-4">
-    <div>
-        <h2 class="h2-color text-center">เลือกดูห้องประชุม</h2>
-        <h3 class="h2-color mt-3 mb-2">
-		รายการห้องประชุม<?php echo ($_GET["trip-start"] ? "ที่ว่าง วันที่ ".get_TH_Date2($_GET["trip-start"]).($_GET["trip-end"] == $_GET["trip-start"] ? "":" ถึง ".get_TH_Date2($_GET["trip-end"])):"");?>
-		<?php echo ($_GET["time-start"] ? "เวลา ".$_GET["time-start"]." น. "."ถึง ".$_GET["time-end"]." น.":"");?>
-		</h3>
-        <hr class="hr_news mt-0">
-    </div>
+			</div>
+			<div class="col-lg-2 col-md-6 col-sm-12 col-12 p">
+				<!--<button type="submit" class="btn-search btn Gradient-Color shadow-sm btn-sm mt-2"><i class="fa fa-search"></i> ค้นหาประวัติ</button>-->
+				<a onclick="search_data()" class="btn-search btn Gradient-Color shadow-sm btn-sm mt-2" role="button" aria-pressed="true">ค้นหาประวัติ</a>
+			</div>
+		</div>
+	</form>
 
-    <div class="row">
-        <!-- ช่องของ รถแต่ละคัน -->
-		<?php
-		if($getRoomList['ResponseCode']['ResCode'] == '000'){
-			foreach($getRoomList['Data'] as $key => $value){
-				if($value['STATUS_FILE_PUT'] != 1){// $value['STATUS_FILE_PUT'] != 1 คือ ถ้ายังไม่ไม่บันทึก ถึงจะบันทึก
-					file_put_contents('images/'.$value['ROOM_PIC_NAME'], file_get_contents($value['ROOM_PIC']));// บันทึกรูป หลัก จาก WF
+
+
+
+	<div align="right" hidden>
+		หมายเหตุ : สามารถ ลบ การจองได้ทันทีหาก ผอ.ของท่าน หรือ ผู้ดูแลห้อง ยังไม่พิจารณา
+	</div><br>
+
+	<div class="table-responsive-sm">
+		<table class="table table-sm">
+			<thead class="white-text bg-color-purple ta-fontmini">
+				<tr>
+					<th scope="col">Icon</th>
+					<th scope="col">ประเภทคำขอ</th>
+					<th scope="col">เลขที่คำขอ</th>
+					<th scope="col">หัวข้อคำขอ</th>
+					<th scope="col">วันที่</th>
+					<th scope="col">สถานที่</th>
+					<th scope="col">สถานะ</th>
+					<th scope="col">รายละเอียด</th>
+					<th scope="col">จัดการ</th>
+				</tr>
+			</thead>
+			<tbody>
+				<?php
+				if ($getRequestBookingAllList['ResponseCode']['ResCode'] == '000') {
+					foreach ($getRequestBookingAllList['Data'] as $key => $value) {
+						$i = 0;
+
+						if ($value['FILE_SAVE_TYPE'] == 'CAR') { // && $value['STATUS_FILE_PUT'] != '1'
+							while ($i < COUNT($value['FILE_SAVE_NAME'])) {
+								file_put_contents('file_car/' . $value['FILE_SAVE_NAME'][$i], file_get_contents($value['FILE_SAVE_NAME_DEFULT'][$i])); // บันทึกไฟล์แนบ จาก WF
+								$i++;
+							}
+							$status_request = array(
+								"type" => 'CB_FILE',
+								"wfr_id" => $value['WFR_ID'],
+							);
+							$updateStatusPic = callAPI('updateStatusPic', $status_request);
+						}
+						if ($value['FILE_SAVE_TYPE'] == 'ROOM') {
+							while ($i < COUNT($value['FILE_SAVE_NAME'])) {
+								file_put_contents('file_room/' . $value['FILE_SAVE_NAME'][$i], file_get_contents($value['FILE_SAVE_NAME_DEFULT'][$i])); // บันทึกไฟล์แนบ จาก WF
+								$i++;
+							}
+							$status_request = array(
+								"type" => 'RB_FILE',
+								"wfr_id" => $value['WFR_ID'],
+							);
+							$updateStatusPic = callAPI('updateStatusPic', $status_request);
+						}
+
+
+						// $status_request2 = array(
+						// "type" => 'RB_FILE',
+						// "wfr_id" => $value['WFR_ID'],
+						// );
+
+						// $updateStatusPic2 = callAPI('updateStatusPic',$status_request2);
+						$p1 = "";
+						$p2 = "";
+						$p3 = "";
+						$p4 = "";
+						$p5 = "";
+						$p6 = "";
+						$p7 = "";
+
+						######## จองห้องประชุม ########	
+						if ($value['TYPE'] == 1) {
+							$request_type = "จองห้องประชุม";
+							// $img = "images/2meet.png";
+							$img = "<img src='images/2meet.png' class='thumnal-iconfunction' alt='Meetingroom'>";
+							$hid = "";
+							$arrZoomStatus = [
+								"Y"  => "zoom หน่วยงานผู้จอง (ขอความอนุเคราะห์เจ้าหน้าที่ ศส.)",
+								"Y3" => "zoom ศส. (ขอความอนุเคราะห์เจ้าหน้าที่ ศส.)",
+								"Y4" => "zoom ศส. (ดำเนินการเอง)"
+							];
+
+							$data_request1_1 = array(
+								"wfr_id" => $value['WFR_ID']
+							);
+							$getRequestBookingRoomDetail = callAPI('getRequestBookingRoomDetail', $data_request1_1);
+							$get_ROOM_PIC_NAME = $getRequestBookingRoomDetail['Data'][0]['ROOM_PIC_NAME'];
+
+							$topic = $value['MEETING_TOPIC'];
+							$get_CB_OBJECTIVE_TYPE = $value['MEETING_TOPIC'];
+							// $btn_del = '';
+							if (in_array($value['ZOOM_STATUS'], ["Y", "Y3", "Y4"])) {
+								$p1 .= "<i class='fa fa-check-square' style='font-size: 24px;color: #9400D3;'></i> " . $arrZoomStatus[$value['ZOOM_STATUS']] . "<br>";
+							} else {
+							}
+							$p1 .= "<i class='fa fa-user h2-color  pb-0'> </i> ประธานในที่ประชุม : " . $value['MEETINH_CHAIRMAN'];
+							$p2 = "<i class='fa fa-user-tie h2-color  pb-0'></i> ชื่อผู้จอง : " . $value['REQ_NAME'];
+							// $p3 = "<i class='fa fa-briefcase h2-color  pb-0'></i> หน่วยงานผู้จอง : ศูนย์เทคโนโลยีสารสนเทศและการสื่อสาร";
+							// if($val['DEP_EXTERNAL']){
+							$p3 = "<i class='fa fa-briefcase h2-color  pb-0'></i> หน่วยงานภายนอก : " . $value['DEP_EXTERNAL'];
+							// }
+							$p4 = "<i class='fa fa-phone h2-color  pb-0'></i> เบอร์ติดต่อผู้จอง :" . $value['REQ_TEL'];
+							$p5 = "<i class='fa fa-user h2-color  pb-0'> </i> ผู้เข้าร่วม " . $value['MEETING_NUM_PP'] . " คน";
+							$p6 = "<i class='fa fa-door-open h2-color  pb-0'></i> " . $value['ROOM_NAME'];
+							$p7 = "<i class='fa fa-calendar h2-color  pb-0'></i> " . ($value['MEETING_DATE'] == $value['MEETING_EDATE'] ? "วันที่ " . $value['MEETING_DATE'] : "วันที่ " . $value['MEETING_DATE'] . " - " . $value['MEETING_EDATE']) . " เวลา " . $value['STIME'] . " น. -  " . $value['ETIME'] . " น.";
+							$p8 = "";
+							$p9 = "เอกสารแนบ : ";
+							$p10 = "ใบขออนุญาตใช้ห้องประชุม : ";
+							$x = 0;
+							while ($x < COUNT($value['FILE_SAVE_NAME'])) {
+								$p9 .= "<a href='file_room/" . $value['FILE_SAVE_NAME'][$x] . "' download>" . $value['FILE_NAME'][$x] . "</a><br>";
+								$x++;
+							}
+							$data_request_room_wfd1 = array(
+								"wfr_id" => $value['WFR_ID'],
+								"wf_main_id" => '6682',
+								"wfd_id" => '2471',
+								"req_type" => 'room_app1' //ผู้ผ่านความเห็นชอบ
+							);
+
+							//หา USR_USERNAME ของคนกดอนุมัติ
+							$getWFSTEP_room_wfd1 = callAPI('getWFSTEP', $data_request_room_wfd1);
+							foreach ($getWFSTEP_room_wfd1['Data'][$value['WFR_ID']] as $key => $v1) {
+								$app_room_1 = $v1['USR_NAME'];
+								$app_room_1_username = $v1['USR_USERNAME'];
+							}
+							$data_request_wfd2 = array(
+								"wfr_id" => $value['WFR_ID'],
+								"wf_main_id" => '6682',
+								"wfd_id" => '2477'
+							);
+							$getWFSTEP_wfd_room_2 = callAPI('getWFSTEP', $data_request_wfd2);
+							foreach ($getWFSTEP_wfd_room_2['Data'][$value['WFR_ID']] as $key => $v2) {
+								$app_room_2 = $v2['USR_NAME'];
+							}
+
+							//หาหน่วยงานของผู้ผ่านความเห็นชอบ โดยหาจาก USR_USERNAME ของคนกดอนุมัติ
+							$sql_app_room_1 = "SELECT B.DEP_LV2_ID
+									FROM USR_MAIN A
+									LEFT JOIN M_PER_PROFILE B ON B.PER_IDCARD = A.USR_OPTION3
+									WHERE A.USR_USERNAME = '" . $app_room_1_username . "' ";
+							$q_app_room_1 = dbdpis::execute($sql_app_room_1);
+							$chk_app_room_1 = dbdpis::Fetch($q_app_room_1);
+							$app1_dep_room_name = $short_dep[$chk_app_room_1["DEP_LV2_ID"]]; // ผ่าน (ตำแหน่งย่อ) 
+
+							$p10 .= '<a style="width:80px;text-align:center;" type="button" class=" " onclick="window.open(' . "'" . 'FILE_PDF/booking_room_report_pdf.php?CB_PER_ID=' . $value['REQ_NAME'] . '&CB_AREA=' . $value['ROOM_NAME'] . '&CB_MEMBER=' . $value['MEETING_NUM_PP'] . '&CB_OBJ=' . $value['MEETING_TOPIC'] . '&MEETING_DATE=' . $value['MEETING_DATE2'] . '&MEETING_EDATE=' . $value['MEETING_EDATE2'] . '&STIME=' . $value['STIME'] . '&ETIME=' . $value['ETIME'] . '&REQ_TEL=' . $value['REQ_TEL'] . '&CAR_REGISTER=' . $get_CAR_REGISTER . '&DEP_NAME1=' . $chk['DEP_NAME1'] . '&POS_NAME=' . $chk['POS_NAME'] . '&APP_1=' . $app_room_1 . '&APP_1_NAME=' . $app1_dep_room_name . '&APP_2_NAME=' . $short_dep[$value["DEP_KEEPER_SSO"]] . '&APP_2=' . $app_room_2 . '&MEETINH_CHAIRMAN=' . $value['MEETINH_CHAIRMAN'] . '&WFR_ID=' . $value["WFR_ID"] . ' ' . "'" . ', ' . "'" . '_blank' . "'" . ',);" > download</a>';
+
+							$img2 = '<img src="images/' . $get_ROOM_PIC_NAME . '" class="d-block w-100" alt="...">';
+
+
+							$data_request1_2 = array(
+								"wfr_id" => $value["WFR_ID"]
+							);
+							$getMeetingToolAdd = callAPI('getMeetingToolAdd', $data_request1_2);
+
+							if ($value['APPROVE_STATUS1'] == 1 && $value['APPROVE_STATUS2'] == 1 && $value['APPROVE_STATUS3'] == 1) {
+								$status = "<font color='green'>อนุมัติห้องประชุมเรียบร้อยแล้ว</font>";
+								$btn_del = '';
+								$btn_cancel = '';
+								$btn_estimate = '';
+								if ($value['MEETING_DATE2'] > date('Y-m-d')) { // ยกเลิกได้ก่อนถึงวันที่จองเท่านั้น
+									if ($value['CANCEL_STATUS1'] == '9' || $value['CANCEL_STATUS1'] == '1') { // ขอยกเลิกแล้ว
+										$btn_cancel = '<p style="color:orange;">รอพิจารณายกเลิก</p>';
+									} else { // ยังไม่ขอยกเลิก
+										## ถ้าจะเปิดยกเลิก เปิดตรงนี้ ##
+										$btn_cancel = "<button  style='height:30px;padding:1px 10px 1px 10px;font-size: 14px;' class='btn btn-warning btn-mini' data-toggle='tooltip' title='ขอยกเลิกการจอง'  id='btn_cancel' name='btn_cancel'  onclick='cancel_list(" . $value['WFR_ID'] . ")'  value='" . $value['WFR_ID'] . "'>แจ้งยกเลิก</button>";
+										// $btn_cancel = '';
+									}
+								}
+
+								if ($value['MEETING_DATE2'] <= date('Y-m-d')) { // ต้องถึงวันที่ประชุมแล้วถึงจะประเมินได้
+									if ($value['ANS_01']) { // ประเมินแล้ว
+										$btn_estimate = '<a style="color:green;" href="form_estimateRoom.php?wfr_id=' . $value["WFR_ID"] . '" target="_blank">ดูผลการประเมิน</a>';
+									} else { // ยังไม่ได้ประเมิน
+										$btn_estimate = '<a style="height:30px;padding:4px 10px 1px 10px;font-size: 14px;" href="form_estimateRoom.php?wfr_id=' . $value["WFR_ID"] . '" target="_blank" class="btn btn-success btn-mini">ประเมิน</a>';
+									}
+								}
+							} else if ($value['APPROVE_STATUS1'] == 1 && $value['APPROVE_STATUS2'] == 1 && $value['APPROVE_STATUS3'] == 0) {
+								$status = "<font color='orange'>รอการอนุมัติ/อนุญาต</font>";
+								$btn_del = '';
+								$btn_cancel = '';
+								$btn_estimate = '';
+
+								if ($value['MEETING_DATE2'] > date('Y-m-d')) { // ยกเลิกได้ก่อนถึงวันที่จองเท่านั้น
+									if ($value['CANCEL_STATUS1'] == '9' || $value['CANCEL_STATUS1'] == '1') { // ขอยกเลิกแล้ว
+										$btn_cancel = '<p style="color:orange;">รอพิจารณายกเลิก</p>';
+									} else { // ยังไม่ขอยกเลิก
+										## ถ้าจะเปิดยกเลิก เปิดตรงนี้ ##
+										$btn_cancel = "<button  style='height:30px;padding:1px 10px 1px 10px;font-size: 14px;' class='btn btn-warning btn-mini' data-toggle='tooltip' title='ขอยกเลิกการจอง'  id='btn_cancel' name='btn_cancel'  onclick='cancel_list(" . $value['WFR_ID'] . ")'  value='" . $value['WFR_ID'] . "'>แจ้งยกเลิก</button>";
+										// $btn_cancel = '';
+									}
+								}
+							} else if ($value['APPROVE_STATUS1'] == 1 && $value['APPROVE_STATUS2'] == 0 && $value['APPROVE_STATUS3'] == 0) {
+								$status = "<font color='orange'>รออนุมัติ ZOOM MEETING</font>";
+								$btn_del = '';
+								$btn_cancel = '';
+								$btn_estimate = '';
+								$btn_del = "<button style='height:30px;padding:1px 10px 1px 10px;font-size: 14px;' class='btn btn-danger btn-mini' data-toggle='tooltip' title='สามารถลบได้ทันที หากผู้ดูแลห้องยังไม่ได้พิจารณา'  id='btn_del' name='btn_del' onclick='del_list(" . $value['WFR_ID'] . ",6682)' value='" . $value['WFR_ID'] . "'>ลบ</button>";
+								// $btn_cancel = "<button  style='height:30px;padding:1px 10px 1px 10px;' class='btn btn-warning btn-mini' data-toggle='tooltip' title='ขอยกเลิกการจอง'  id='btn_cancel' name='btn_cancel' value='".$value['WFR_ID']."'>ยกเลิก</button>";
+							} else if ($value['APPROVE_STATUS1'] == 0 && $value['APPROVE_STATUS2'] == 0 && $value['APPROVE_STATUS3'] == 0) {
+								$status = "<font color='orange'>รอผ่านความเห็นชอบ</font>";
+								$btn_del = "<button  style='height:30px;padding:1px 10px 1px 10px;font-size: 14px;' class='btn btn-danger btn-mini' data-toggle='tooltip' title='สามารถลบได้ทันที หากผอ.ของท่านยังไม่ได้พิจารณา'  id='btn_del' name='btn_del'  onclick='del_list(" . $value['WFR_ID'] . ",6682)' value='" . $value['WFR_ID'] . "'>ลบ</button>";
+								$btn_cancel = '';
+								$btn_estimate = '';
+							}
+							if ($value['WF_DET_STEP'] == 2475) {
+								$status = "<font color='red'>ไม่ผ่านการอนุมัติ</font>";
+								$btn_del = '';
+								$btn_cancel = '';
+								$btn_estimate = '';
+							} else if ($value['WF_DET_STEP'] == 2481) {
+								$status = "<font color='red'>ยกเลิกเสร็จสิ้น<br></font>
+								   <font hidden id='room_font" . $value['WFR_ID'] . "' color='red'>" . $value['CANCEL_NOTE'] . "</font>
+						";
+								$btn_del = '';
+								$btn_cancel = '';
+								$btn_estimate = '';
+							}
+
+							######## จองยานพาหนะ ########	
+						} else if ($value['TYPE'] == 2) {
+							$request_type = "จองยานพาหนะ";
+							// $img = "images/2car.png";
+							$img = "<img src='images/2car.png' class='thumnal-iconfunction' alt='Meetingroom'>";
+							$hid = "";
+
+							$data_request2 = array(
+								"wfr_id" => $value['WFR_ID']
+							);
+							$getRequestBookingCarDetail = callAPI('getRequestBookingCarDetail', $data_request2);
+							// echo "<pre>";
+							// echo print_r($getRequestBookingCarDetail['Data']);
+							// echo "</pre>";
+							$get_CB_OBJECTIVE_TYPE = $getRequestBookingCarDetail['Data'][0]['CB_OBJECTIVE_TYPE'];
+							$get_CAR_KEEPER = $getRequestBookingCarDetail['Data'][0]['CAR_KEEPER'];
+							$get_CB_PER_ID = $getRequestBookingCarDetail['Data'][0]['CB_PER_ID'];
+							$get_CAR_ID = $getRequestBookingCarDetail['Data'][0]['CAR_ID'];
+							$get_CAR_REGISTER = $getRequestBookingCarDetail['Data'][0]['CAR_DETAIL'];
+							$get_CAR_REGISTER2 = $getRequestBookingCarDetail['Data'][0]['CAR_REGISTER'];
+							$get_CAR_MILEAGE = $getRequestBookingCarDetail['Data'][0]['CAR_MILEAGE'];
+							$get_CAR_PIC_NAME = $getRequestBookingCarDetail['Data'][0]['CAR_PIC_NAME'];
+							$get_STAFF_NAME = $getRequestBookingCarDetail['Data'][0]['STAFF_FULL_NAME'];
+							$get_STAFF_TALAPHONE = $getRequestBookingCarDetail['Data'][0]['STAFF_TALAPHONE'];
+							$get_DEP_ID_SSO = $getRequestBookingCarDetail['Data'][0]['DEP_ID_SSO'];
+							// $topic = $get_CB_OBJECTIVE_TYPE;
+							$topic = $value['MEETING_TOPIC'];
+
+							$btn_del = '';
+							$btn_cancel = '';
+							$btn_estimate = '';
+
+							// $p1 = "<i class='fa fa-user h2-color  pb-0'></i> ผู้รับผิดชอบ :  ".$get_CAR_KEEPER;
+							// $p2 = "<i class='fa fa-user-tie h2-color  pb-0'></i> ผู้ผ่านการเห็นชอบ :  ".$value['CS_APPROVE_PER_ID'];
+							$p3 = "<i class='fa fa-user h2-color  pb-0'></i> ผู้เดินทาง : " . $value['MEETING_NUM_PP'] . " คน";
+							$p4 = "<i class='fa fa-car h2-color  pb-0'></i> " . ($get_CAR_REGISTER ? $get_CAR_REGISTER : "--  ยังไม่จัดสรรยานพาหนะ -- ");
+							$p5 = "<i class='fa fa-user h2-color  pb-0'></i> พนักงานขับรถ :  " . $get_STAFF_NAME;
+							$p6 = "<i class='fa fa-phone h2-color  pb-0'></i> เบอร์พนักงานขับรถ :  " . $get_STAFF_TALAPHONE;
+							// $p7 = "<img width='16' src='images/speed.png' alt='img'> เลขไมล์ : ".$get_CAR_MILEAGE;
+							$p8 = "<i class='fa fa-calendar h2-color  pb-0'></i> " . ($value['MEETING_DATE'] == $value['MEETING_EDATE'] ? "วันที่ " . $value['MEETING_DATE'] : "วันที่ " . $value['MEETING_DATE'] . " - " . $value['MEETING_EDATE']) . " เวลา " . $value['STIME'] . " น. -  " . $value['ETIME'] . " น.";
+							$p9 = "เอกสารแนบ : ";
+							$p10 = "ใบขออนุญาตใช้รถยนต์ส่วนกลาง : ";
+							$x = 0;
+							while ($x < COUNT($value['FILE_SAVE_NAME'])) {
+								$p9 .= "<a href='file_car/" . $value['FILE_SAVE_NAME'][$x] . "' download>" . $value['FILE_NAME'][$x] . "</a><br>";
+								$x++;
+							}
+							$data_request_wfd1 = array(
+								"wfr_id" => $value['WFR_ID'],
+								"wf_main_id" => '7047',
+								"wfd_id" => '2472',
+								"req_type" => 'car_app1' //ผู้ผ่านความเห็นชอบ
+							);
+							$getWFSTEP_wfd1 = callAPI('getWFSTEP', $data_request_wfd1);
+							foreach ($getWFSTEP_wfd1['Data'][$value['WFR_ID']] as $key => $v1) {
+								$app_1 = $v1['USR_NAME']; // ผ่าน (ชื่อ)
+								$app_1_username = $v1['USR_USERNAME'];
+							}
+							$data_request_wfd2 = array(
+								"wfr_id" => $value['WFR_ID'],
+								"wf_main_id" => '7047',
+								"wfd_id" => '1652'
+							);
+							$getWFSTEP_wfd2 = callAPI('getWFSTEP', $data_request_wfd2);
+							foreach ($getWFSTEP_wfd2['Data'][$value['WFR_ID']] as $key => $v2) {
+								$app_2 = $v2['USR_NAME']; //เรียน (ชื่อ)
+							}
+
+							$sql_app_1 = "SELECT B.DEP_LV2_ID
+									FROM USR_MAIN A
+									LEFT JOIN M_PER_PROFILE B ON B.PER_IDCARD = A.USR_OPTION3
+									WHERE A.USR_USERNAME = '" . $app_1_username . "' ";
+							$q_app_1 = dbdpis::execute($sql_app_1);
+							$chk_app_1 = dbdpis::Fetch($q_app_1);
+
+							$app1_dep_name = $short_dep[$chk_app_1["DEP_LV2_ID"]]; // ผ่าน (ตำแหน่งย่อ)
+
+
+							// กำหนดค่าให้แก่ตัวแปร $LINK_DATA ให้ตรงกับตัวอย่างนี้
+							$LINK_DATA = array();
+							// $LINK_DATA['CB_PER_ID']      = $get_CB_PER_ID;
+							// $LINK_DATA['STAFF_NAME']     = $get_STAFF_NAME;
+							// $LINK_DATA['CB_AREA']        = $value['ROOM_NAME'];
+							// $LINK_DATA['S_AREA']         = $value['S_AREA'];
+							// $LINK_DATA['CB_OBJ']         = $value['MEETING_TOPIC'];
+							// $LINK_DATA['MEETING_DATE']   = $value['MEETING_DATE2'];
+							// $LINK_DATA['MEETING_EDATE']  = $value['MEETING_EDATE2'];
+							// $LINK_DATA['STIME']          = $value['STIME'];
+							// $LINK_DATA['ETIME']          = $value['ETIME'];
+							// $LINK_DATA['REQ_TEL']        = $value['REQ_TEL'];
+							$LINK_DATA['WFR_ID']      = $value['WFR_ID'];
+							$LINK_DATA['DEP_NAME1']      = $chk['DEP_NAME1'];
+							$LINK_DATA['POS_NAME']       = $chk['POS_NAME'];
+							$LINK_DATA['POS_LEVEL_NAME'] = $chk['POS_LEVEL_NAME'];
+							$LINK_DATA['APP_1']          = $app_1;
+							$LINK_DATA['APP_1_NAME']     = $app1_dep_name;
+							$LINK_DATA['APP_2']          = $app_2;
+							// $LINK_DATA['CAR_REGISTER']   = $get_CAR_REGISTER2;
+							// $LINK_DATA['W_CAR_MILEAGE']  = $getRequestBookingCarDetail['Data'][0]['W_CAR_MILEAGE'];
+							// $LINK_DATA['R_CAR_MILEAGE']  = $getRequestBookingCarDetail['Data'][0]['R_CAR_MILEAGE'];
+							// $LINK_DATA['CS_PER_NAME']    = $getRequestBookingCarDetail['Data'][0]['ALLOCATE_NAME'];
+
+							// แปลง $LINK_DATA เป็น JSON string และทำการย่อสั้นด้วย base64_encode
+							$data_meeting = base64_encode(json_encode($LINK_DATA));
+							// $paramString = http_build_query($LINK_DATA);
+
+							$p10 .= '<a style="width:80px;text-align:center;" type="button" target="_blank" href="FILE_PDF/booking_car_report_pdf.php?data_meeting=' . urlencode($data_meeting) . '"> download</a>';
+							// $p10 .= '<a style="width:80px;text-align:center;" type="button" target="_blank" href="FILE_PDF/booking_car_report_pdf.php?' . $paramString . '"> download</a>';
+							$p10 .= '<p>สถานที่ : ';
+							$x = 0;
+							$c_arr_s_area = count($value['S_AREA']);
+							while ($x < $c_arr_s_area) {
+								$p10 .= $value['S_AREA'][$x] . '<br>';
+								$x++;
+							}
+							$p10 .= ($getRequestBookingCarDetail['Data'][0]['NEARBY_PROVINCE_STATUS'] == 'Y' ? "และจังหวัดใกล้เคียง" : "");
+							$p10 .= '</p>';
+
+							if ($get_CAR_PIC_NAME) {
+								$img2 = '<img src="images/' . $get_CAR_PIC_NAME . '" class="d-block w-100" alt="...">';
+							} else {
+								$img2 = '-- ยังไม่จัดสรรยานพาหนะ --';
+							}
+
+							if ($value['APPROVE_STATUS3'] == 5) {
+								$status = "<font color='green'>จ่ายยานพาหนะแล้ว</font>"; //จัดสรรรถเรียบร้อยแล้ว
+								/* if($value['ANS_01']){ // ประเมินแล้ว
+						$btn_estimate = '<p style="color:green;">ประเมินแล้ว</p>';	
+						}else { // ยังไม่ได้ประเมิน
+						$btn_estimate = '<a href="form_estimateCar.php?wfr_id='.$value["WFR_ID"].'" target="_blank" class="btn btn-success btn-mini">ประเมิน</a>';
+						} */
+								if ($value['MEETING_DATE2'] > date('Y-m-d')) { // ยกเลิกได้ก่อนถึงวันที่จองเท่านั้น
+									if ($value['CANCEL_STATUS1'] == '9' || $value['CANCEL_STATUS1'] == '1') { // ขอยกเลิกแล้ว
+										$btn_cancel = '<p style="color:orange;">รอพิจารณายกเลิก</p>';
+									} else { // ยังไม่ขอยกเลิก
+										## ถ้าจะเปิดยกเลิก เปิดตรงนี้ ##
+										$btn_cancel = "<button  style='height:30px;padding:1px 10px 1px 10px;font-size: 14px;' class='btn btn-warning btn-mini' data-toggle='tooltip' title='ขอยกเลิกการจอง'  id='btn_cancel_car' name='btn_cancel_car'  onclick='cancel_car_list(" . $value['WFR_ID'] . ")'  value='" . $value['WFR_ID'] . "'>แจ้งยกเลิก</button>";
+										// $btn_cancel = '';
+									}
+								} else if ($value['TRAVEL_STATUS'] == 1) { //เดินทางเสร็จสิ้น
+									if ($value['ANS_01']) { // ประเมินแล้ว
+										$btn_estimate = '<a style="color:green;" href="form_estimateCar.php?wfr_id=' . $value["WFR_ID"] . '" target="_blank">ดูผลการประเมิน</a>';
+									} else { // ยังไม่ได้ประเมิน
+										$btn_estimate = '<a style="height:30px;padding:4px 10px 1px 10px;font-size: 14px;" href="form_estimateCar.php?wfr_id=' . $value["WFR_ID"] . '" target="_blank" class="btn btn-success btn-mini">ประเมิน</a>';
+									}
+								} else {
+									$btn_estimate = "<button   style='height:30px;padding:1px 10px 1px 10px;font-size: 14px;' class='btn btn-success btn-mini' data-toggle='tooltip' title=''  id='btn_travel' name='btn_travel'  onclick='travel_list(" . $value['WFR_ID'] . ")'  value='" . $value['WFR_ID'] . "'>เดินทางเสร็จสิ้น</button>";
+								}
+							} else if ($value['APPROVE_STATUS1'] == 1 && $value['APPROVE_STATUS2'] == 1) {
+								$status = "<font color='orange'>รอการจัดสรรยานพาหนะ</font>";
+								if ($value['MEETING_DATE2'] > date('Y-m-d')) { // ยกเลิกได้ก่อนถึงวันที่จองเท่านั้น
+									if ($value['CANCEL_STATUS1'] == '9' || $value['CANCEL_STATUS1'] == '1') { // ขอยกเลิกแล้ว
+										$btn_cancel = '<p style="color:orange;">รอพิจารณายกเลิก</p>';
+									} else { // ยังไม่ขอยกเลิก
+										## ถ้าจะเปิดยกเลิก เปิดตรงนี้ ##
+										$btn_cancel = "<button  style='height:30px;padding:1px 10px 1px 10px;font-size: 14px;' class='btn btn-warning btn-mini' data-toggle='tooltip' title='ขอยกเลิกการจอง'  id='btn_cancel_car' name='btn_cancel_car'  onclick='cancel_car_list(" . $value['WFR_ID'] . ")'  value='" . $value['WFR_ID'] . "'>แจ้งยกเลิก</button>";
+										// $btn_cancel = '';
+									}
+								}
+							} else if ($value['APPROVE_STATUS1'] == 1 && $value['APPROVE_STATUS2'] == 0) {
+								$status = "<font color='orange'>รอการอนุมัติ/อนุญาต</font>";
+								if ($value['MEETING_DATE2'] > date('Y-m-d')) { // ยกเลิกได้ก่อนถึงวันที่จองเท่านั้น
+									if ($value['CANCEL_STATUS1'] == '9' || $value['CANCEL_STATUS1'] == '1') { // ขอยกเลิกแล้ว
+										$btn_cancel = '<p style="color:orange;">รอพิจารณายกเลิก</p>';
+									} else { // ยังไม่ขอยกเลิก
+										## ถ้าจะเปิดยกเลิก เปิดตรงนี้ ##
+										$btn_cancel = "<button  style='height:30px;padding:1px 10px 1px 10px;font-size: 14px;' class='btn btn-warning btn-mini' data-toggle='tooltip' title='ขอยกเลิกการจอง'  id='btn_cancel_car' name='btn_cancel_car'  onclick='cancel_car_list(" . $value['WFR_ID'] . ")'  value='" . $value['WFR_ID'] . "'>แจ้งยกเลิก</button>";
+										// $btn_cancel = '';
+									}
+								}
+							} else if ($value['APPROVE_STATUS1'] == 0 && $value['APPROVE_STATUS2'] == 0) {
+								$status = "<font color='orange'>รอผ่านความเห็นชอบ</font>";
+								$btn_del = "<button style='height:30px;padding:1px 10px 1px 10px;font-size: 14px;' class='btn btn-danger btn-mini' data-toggle='tooltip' title='สามารถลบได้ทันที หากยังไม่ผ่านความเห็นชอบ'  id='btn_del' name='btn_del' onclick='del_list(" . $value['WFR_ID'] . ",7047)' value='" . $value['WFR_ID'] . "'>ลบ</button>";
+							}
+							if ($value['WF_DET_STEP'] == 2482) {
+								$status = "<font color='red'>ไม่ผ่านการอนุมัติ</font>";
+							} else if ($value['WF_DET_STEP'] == 2484) {
+								//fa fa-eye , fa fa-ellipsis-h
+								$status = "
+						<font color='red'>ยกเลิกเสร็จสิ้น</font>
+						<!--<i class='fa fa-ellipsis-h'  color='#82288C' OnMouseOver='showFont(" . $value['WFR_ID'] . "," . $value['TYPE'] . ")' OnMouseOut='hideFont(" . $value['WFR_ID'] . "," . $value['TYPE'] . ")'></i>--><br>
+						<font hidden id='car_font" . $value['WFR_ID'] . "' color='red'>" . $value['CANCEL_NOTE'] . "</font><!-- hidden -->
+						";
+								$btn_del = '';
+								$btn_cancel = '';
+								$btn_estimate = '';
+							}
+
+							######## ขอหนังสือรับรับรอง ########		
+						} else if ($value['TYPE'] == 3) {
+							$request_type = "ขอหนังสือรับรับรอง";
+							// $img = "images/2certificate.png";
+							$img = "<img src='images/2certificate.png' class='thumnal-iconfunction' alt='Meetingroom'>";
+							$hid = "";
+							$p8 = "";
+							$p9 = "";
+							$p10 = "";
+
+							$img2 = '';
+
+							$topic = $value['MEETING_TOPIC'];
+							$get_CB_OBJECTIVE_TYPE  = $value['MEETING_TOPIC'];
+
+							$btn_del = '';
+							$btn_cancel = '';
+							$btn_estimate = '';
+							$preview = '';
+
+							$ap_status = $value['APPROVE_STATUS1'];
+
+							if ($value['APPROVE_STATUS1'] == 1) {
+								$status = "<font color='green'>ดำเนินการแล้วเสร็จ</font>";
+								// $preview = "ดูเอกสาร";
+							} else {
+								$status = "<font color='orange'>รอดำเนินการ</font>";
+								// $preview = "ดูตัวอย่าง";
+							}
+							$preview = "ดูตัวอย่าง";
+
+							foreach ($value['obj_FILE_SAVE_NAME'] as $key) {
+								foreach ($key as $k => $v) {
+									$book_name = "";
+									$language = "";
+									if ($key['CERTIFICATE_TYPE1'] == 1 && $key['CERTIFICATE_TYPE2'] == 1) {
+										$book_name = 'หนังสือรับรองที่มีการระบุเงินเดือนและระยะเวลาทำงาน';
+									} else if ($key['CERTIFICATE_TYPE1'] == 1 && $key['CERTIFICATE_TYPE2'] != 1) {
+										$book_name = 'หนังสือรับรองที่มีการระบุเฉพาะเงินเดือน';
+									} else if ($key['CERTIFICATE_TYPE1'] != 1 && $key['CERTIFICATE_TYPE2'] == 1) {
+										$book_name = 'หนังสือรับรองที่มีการระบุเฉพาะระยะเวลาทำงาน';
+									}
+									if ($key['CERTIFICATE_LANGUAGE1'] == 1 && $key['CERTIFICATE_LANGUAGE2'] == 1) {
+										$language = '(ภาษาไทย, ภาษาอังกฤษ)';
+									} else if ($key['CERTIFICATE_LANGUAGE1'] == 1 && $key['CERTIFICATE_LANGUAGE2'] != 1) {
+										$language = '(ภาษาไทย)';
+									} else if ($key['CERTIFICATE_LANGUAGE1'] != 1 && $key['CERTIFICATE_LANGUAGE2'] == 1) {
+										$language = '(ภาษาอังกฤษ)';
+									}
+								}
+
+								if ($book_name == 'หนังสือรับรองที่มีการระบุเฉพาะระยะเวลาทำงาน' && $language == '(ภาษาไทย)') {
+									$data_request_wfr = array(
+										"WFR" => $value['WFR_ID'],
+									);
+									$getCertificateDetail = callAPI('getCertificateDetail', $data_request_wfr);
+									// echo '<pre>'; print_r($getCertificateDetail['Data']); echo '</pre>'; 
+
+									$f = '<h5 class="h2-color m-0"><a style="width:80px;text-align:center;" type="button" class="border-ra-15px btn-light " onclick="window.open(' . "'" . 'FILE_PDF/certificate_work_th_preview_pdf.php?FULL_NAME=' . $getCertificateDetail['Data']['FULL_NAME'] . '&POS_NAME=' . $getCertificateDetail['Data']['POS_NAME'] . '&DEP_NAME=' . $getCertificateDetail['Data']['DEP_NAME'] . '&DEP_NAME2=' . $getCertificateDetail['Data']['DEP_NAME2'] . '&PER_TYPE_NAME=' . $getCertificateDetail['Data']['PER_TYPE_NAME'] . '&INCOME_MONEY=' . $getCertificateDetail['Data']['INCOME_MONEY'] . '&POS_LEVEL_NAME=' . $getCertificateDetail['Data']['POS_LEVEL_NAME'] . '&DATE_NOW_TH=' . $getCertificateDetail['Data']['DATE_NOW_TH'] . '&DATE_NOW_EN=' . $getCertificateDetail['Data']['DATE_NOW_EN'] . '&AP_STATUS=' . $ap_status . ' ' . "'" . ', ' . "'" . '_blank' . "'" . ',);" ><i class="fa fa-eye"></i> ' . $preview . '</a></h5>';
+								} else if ($book_name == 'หนังสือรับรองที่มีการระบุเฉพาะระยะเวลาทำงาน' && $language == '(ภาษาอังกฤษ)') {
+									$data_request_wfr = array(
+										"WFR" => $value['WFR_ID'],
+									);
+									$getCertificateDetail = callAPI('getCertificateDetail', $data_request_wfr);
+									$f = '<h5 class="h2-color m-0"><a style="width:80px;text-align:center;" type="button" class="border-ra-15px btn-light " onclick="window.open(' . "'" . 'FILE_PDF/certificate_work_en_preview_pdf.php?FULL_NAME_EN=' . $getCertificateDetail['Data']['FULL_NAME_EN'] . '&POS_NAME=' . $getCertificateDetail['Data']['POS_NAME_EN'] . '&DEP_NAME=' . $getCertificateDetail['Data']['DEP_NAME_EN'] . '&DEP_NAME2=' . $getCertificateDetail['Data']['DEP_NAME2_EN'] . '&PER_TYPE_NAME=' . $getCertificateDetail['Data']['PER_TYPE_NAME_EN'] . '&INCOME_MONEY=' . $getCertificateDetail['Data']['INCOME_MONEY'] . '&POS_LEVEL_NAME=' . $getCertificateDetail['Data']['POS_LEVEL_NAME_EN'] . '&DATE_NOW_TH=' . $getCertificateDetail['Data']['DATE_NOW_TH'] . '&DATE_NOW_EN=' . $getCertificateDetail['Data']['DATE_NOW_EN'] . '&AP_STATUS=' . $ap_status . ' ' . "'" . ', ' . "'" . '_blank' . "'" . ',);" ><i class="fa fa-eye"></i> ' . $preview . '</a></h5>';
+								} else if ($book_name == 'หนังสือรับรองที่มีการระบุเฉพาะเงินเดือน' && $language == '(ภาษาไทย)') {
+									$data_request_wfr = array(
+										"WFR" => $value['WFR_ID'],
+									);
+									$getCertificateDetail = callAPI('getCertificateDetail', $data_request_wfr);
+									// echo '<pre>'; print_r($getCertificateDetail['Data']); echo '</pre>'; 
+
+									$f = '<h5 class="h2-color m-0"><a style="width:80px;text-align:center;" type="button" class="border-ra-15px btn-light " onclick="window.open(' . "'" . 'FILE_PDF/certificate_salary_th_preview_pdf.php?FULL_NAME=' . $getCertificateDetail['Data']['FULL_NAME'] . '&POS_NAME=' . $getCertificateDetail['Data']['POS_NAME'] . '&DEP_NAME=' . $getCertificateDetail['Data']['DEP_NAME'] . '&DEP_NAME2=' . $getCertificateDetail['Data']['DEP_NAME2'] . '&PER_TYPE_NAME=' . $getCertificateDetail['Data']['PER_TYPE_NAME'] . '&INCOME_MONEY=' . $getCertificateDetail['Data']['INCOME_MONEY'] . '&POS_LEVEL_NAME=' . $getCertificateDetail['Data']['POS_LEVEL_NAME'] . '&DATE_NOW_TH=' . $getCertificateDetail['Data']['DATE_NOW_TH'] . '&DATE_NOW_EN=' . $getCertificateDetail['Data']['DATE_NOW_EN'] . '&AP_STATUS=' . $ap_status . ' ' . "'" . ', ' . "'" . '_blank' . "'" . ',);" ><i class="fa fa-eye"></i> ' . $preview . '</a></h5>';
+								} else if ($book_name == 'หนังสือรับรองที่มีการระบุเฉพาะเงินเดือน' && $language == '(ภาษาอังกฤษ)') {
+									$data_request_wfr = array(
+										"WFR" => $value['WFR_ID'],
+									);
+									$getCertificateDetail = callAPI('getCertificateDetail', $data_request_wfr);
+
+									$f = '<h5 class="h2-color m-0"><a style="width:80px;text-align:center;" type="button" class="border-ra-15px btn-light " onclick="window.open(' . "'" . 'FILE_PDF/certificate_salary_en_preview_pdf.php?FULL_NAME_EN=' . $getCertificateDetail['Data']['FULL_NAME_EN'] . '&POS_NAME=' . $getCertificateDetail['Data']['POS_NAME_EN'] . '&DEP_NAME=' . $getCertificateDetail['Data']['DEP_NAME_EN'] . '&DEP_NAME2=' . $getCertificateDetail['Data']['DEP_NAME2_EN'] . '&PER_TYPE_NAME=' . $getCertificateDetail['Data']['PER_TYPE_NAME_EN'] . '&INCOME_MONEY=' . $getCertificateDetail['Data']['INCOME_MONEY'] . '&POS_LEVEL_NAME=' . $getCertificateDetail['Data']['POS_LEVEL_NAME_EN'] . '&DATE_NOW_TH=' . $getCertificateDetail['Data']['DATE_NOW_TH'] . '&DATE_NOW_EN=' . $getCertificateDetail['Data']['DATE_NOW_EN'] . '&AP_STATUS=' . $ap_status . ' ' . "'" . ', ' . "'" . '_blank' . "'" . ',);" ><i class="fa fa-eye"></i> ' . $preview . '</a></h5>';
+								} else if ($book_name == 'หนังสือรับรองที่มีการระบุเงินเดือนและระยะเวลาทำงาน' && $language == '(ภาษาไทย)') {
+									$data_request_wfr = array(
+										"WFR" => $value['WFR_ID'],
+									);
+									$getCertificateDetail = callAPI('getCertificateDetail', $data_request_wfr);
+									// echo '<pre>'; print_r($getCertificateDetail['Data']); echo '</pre>'; 
+									$f = '<h5 class="h2-color m-0"><a style="width:80px;text-align:center;" type="button" class="border-ra-15px btn-light " onclick="window.open(' . "'" . 'FILE_PDF/certificate_salary&work_th_preview_pdf.php?FULL_NAME=' . $getCertificateDetail['Data']['FULL_NAME'] . '&POS_NAME=' . $getCertificateDetail['Data']['POS_NAME'] . '&DEP_NAME=' . $getCertificateDetail['Data']['DEP_NAME'] . '&DEP_NAME2=' . $getCertificateDetail['Data']['DEP_NAME2'] . '&PER_TYPE_NAME=' . $getCertificateDetail['Data']['PER_TYPE_NAME'] . '&INCOME_MONEY=' . $getCertificateDetail['Data']['INCOME_MONEY'] . '&POS_LEVEL_NAME=' . $getCertificateDetail['Data']['POS_LEVEL_NAME'] . '&DATE_NOW_TH=' . $getCertificateDetail['Data']['DATE_NOW_TH'] . '&DATE_NOW_EN=' . $getCertificateDetail['Data']['DATE_NOW_EN'] . '&AP_STATUS=' . $ap_status . ' ' . "'" . ', ' . "'" . '_blank' . "'" . ',);" ><i class="fa fa-eye"></i> ' . $preview . '</a></h5>';
+								} else if ($book_name == 'หนังสือรับรองที่มีการระบุเงินเดือนและระยะเวลาทำงาน' && $language == '(ภาษาอังกฤษ)') {
+									$data_request_wfr = array(
+										"WFR" => $value['WFR_ID'],
+									);
+									$getCertificateDetail = callAPI('getCertificateDetail', $data_request_wfr);
+									$f = '<h5 class="h2-color m-0"><a style="width:80px;text-align:center;" type="button" class="border-ra-15px btn-light " onclick="window.open(' . "'" . 'FILE_PDF/certificate_salary&work_en_preview_pdf.php?FULL_NAME_EN=' . $getCertificateDetail['Data']['FULL_NAME_EN'] . '&POS_NAME=' . $getCertificateDetail['Data']['POS_NAME_EN'] . '&DEP_NAME=' . $getCertificateDetail['Data']['DEP_NAME_EN'] . '&DEP_NAME2=' . $getCertificateDetail['Data']['DEP_NAME2_EN'] . '&PER_TYPE_NAME=' . $getCertificateDetail['Data']['PER_TYPE_NAME_EN'] . '&INCOME_MONEY=' . $getCertificateDetail['Data']['INCOME_MONEY'] . '&POS_LEVEL_NAME=' . $getCertificateDetail['Data']['POS_LEVEL_NAME_EN'] . '&DATE_NOW_TH=' . $getCertificateDetail['Data']['DATE_NOW_TH'] . '&DATE_NOW_EN=' . $getCertificateDetail['Data']['DATE_NOW_EN'] . '&AP_STATUS=' . $ap_status . ' ' . "'" . ', ' . "'" . '_blank' . "'" . ',);" ><i class="fa fa-eye"></i> ' . $preview . '</a></h5>';
+								}
+								$p1 .= $book_name . " <br>" . $language . " จำนวน " . $key['QUANTITY_REQUIRED'] . " ฉบับ " . $f . "<br>";
+								// $p1 .= "<h5 class='h2-color m-0'><a style='width:80px;text-align:center;' type='button' class='border-ra-15px btn-light ' onclick='window.open('FILE_PDF/certificate_salary&work_th_preview_pdf.php', '_blank',);' ><i class='fa fa-eye'></i> ดูตัวอย่าง</a></h5>";
+								// $p1 .= $val;
+							}
+						} else {
+							$hid = "hidden";
+						}
+
+				?>
+						<tr <?php echo $hid; ?>>
+							<td><?php echo $img/* .$value['WF_DET_STEP'] */; ?></td>
+							<td><?php echo $request_type ?></td>
+							<td><?php echo $value['REQ_NO']; ?></td>
+							<td><?php echo mb_substr($topic, 0, 25, 'utf-8').(mb_strlen($topic, 'utf-8') > 25 ? '...':''); //$value['MEETING_TOPIC']?></td>
+							<td><?php echo ($value['MEETING_DATE'] == $value['MEETING_EDATE'] ? $value['MEETING_DATE'] : $value['MEETING_DATE'] . "<br>ถึง " . $value['MEETING_EDATE']); ?></td><!-- REQ_DATE -->
+							<!-- วันที่ใช้รถ, ห้อง<td><?php echo ($value['MEETING_DATE'] == $value['MEETING_EDATE'] ? $value['MEETING_DATE'] : $value['MEETING_DATE'] . "<br>- " . $value['MEETING_EDATE']); ?></td>-->
+							<td><?php
+								if ($value['TYPE'] == '2') {
+									$x = 0;
+									$c_arr_s_area = count($value['S_PROVINCE']);
+									while ($x < $c_arr_s_area) {
+								?>
+										<?php echo $value['S_PROVINCE'][$x] . '<br>'; ?>
+								<?php
+										$x++;
+									}
+									echo ($value['NEARBY_PROVINCE_STATUS'] == 'Y' ? "และจังหวัดใกล้เคียง" : "");
+								} else if ($value['TYPE'] == '1') {
+									echo $value['ROOM_NAME'];
+								}
+								?></td>
+							<td><?php echo $status; ?></td>
+							<td><a href="#" data-toggle="modal" data-target=".bd-example-modal-lg<?php echo $value['TYPE'] . "_" . $value['WFR_ID']; ?>" role="button" aria-pressed="true" onclick="update_edit_car_driver('<?php echo $value['WFR_ID'];?>')">ดูรายละเอียด</a></td>
+							<td><?php echo $btn_del . $btn_cancel . $btn_estimate; ?></td>
+
+						</tr>
+
+
+
+
+
+
+						<!--  MODAL DETAIL  -->
+						<div class="modal fade bd-example-modal-lg<?php echo $value['TYPE'] . "_" . $value['WFR_ID']; ?>" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+							<div class="modal-dialog modal-lg">
+								<div class="modal-content">
+									<div class="container ">
+										<h2 class="h2-color pt-4">
+											รายละเอียดการ<?php echo $request_type . (in_array($value['ZOOM_STATUS'], ["Y", "Y3", "Y4"]) ? " <text style='color: blue;'>( <i class='fa fa-desktop'></i> ZOOM )</text>" : ""); ?><?php //echo $value['WFR_ID'];
+																																																							?>
+										</h2>
+										<hr class="hr_news mt-3">
+										<div class="container">
+											<h3 class="h2-color pt-4">
+												<?php echo $get_CB_OBJECTIVE_TYPE; ?> <!-- หัวข้อการจอง	 -->
+											</h3>
+											<div class="row mb-3">
+												<div class="col-lg-6 col-md-12 col-sm-12 col-12 pb-4">
+													<?php echo $img2; ?>
+												</div>
+												<div class="col-lg-6 col-md-12 col-sm-12 col-12 ">
+													<h4 class="h2-color">รายละเอียดการ<?php echo $request_type; ?></h4>
+													<p class="mb-2"><?php echo $p1; ?></p>
+													<p class="mb-2"><?php echo $p2; ?></p>
+													<p class="mb-2"><?php echo $p3; ?></p><?php //echo $value['REQ_DEP_NAME'];
+																							?>
+													<p class="mb-2"><?php echo $p4; ?></p>
+													<p class="mb-2"><?php echo $p5; ?></p>
+													<p class="mb-2"><?php echo $p6; ?></p>
+													<p class="mb-2"><?php echo $p7; ?></p>
+													<p class="mb-2"><?php echo $p8; ?></p>
+													<p class="mb-2"><?php echo $p9; ?></p>
+													<p class="mb-2"><?php echo $p10; ?></p>
+
+													<?php if ($value['TYPE'] == 1) { ?>
+														<!--<h4 class="h2-color">
+									รายการยืมอุปกรณ์
+                            </h4>-->
+														<?php //foreach($getMeetingToolAdd['Data'] as $key => $value2){ 
+														?>
+														<!--<p class="mb-2"><i class="fa fa-desktop h2-color  pb-0"></i> <?php echo $value2['TOOL_NAME'] . " จำนวน " . $value2['TOOL_AMOUNT']; ?></p>-->
+													<?php //}
+
+														$data_request3 = array(
+															"wfr_id" => $value['WFR_ID'],
+															"wf_main_id" => '6682',
+															"zoom_status" => $value['ZOOM_STATUS']
+														);
+														$getWFSTEP = callAPI('getWFSTEP', $data_request3);
+													} else  if ($value['TYPE'] == 2) {
+														$data_request3 = array(
+															"wfr_id" => $value['WFR_ID'],
+															"wf_main_id" => '7047'
+														);
+														$getWFSTEP = callAPI('getWFSTEP', $data_request3);
+													}
+													?>
+
+												</div>
+											</div>
+											<div class="row mb-3">
+												<div class="col-lg-6 col-md-12 col-sm-12 col-12 ">
+
+												</div>
+												<?php if ($value['TYPE'] != 3) { ?>
+													<div class="col-lg-6 col-md-12 col-sm-12 col-12 ">
+														<h4 class="h2-color">สถานะการดำเนินการ</h4>
+														<?php
+														// foreach($getWFSTEP['Data'][$value['WFR_ID']] as $key => $value){
+														// echo '<font size="4px" color="'.$value['STATUS_COLOR'].'">'.$value['STATUS_TEXT'].($value['WFD_ID'] == 2484 || $value['WFD_ID'] == 2481 ? "<br>".$value['CANCEL_NOTE']:"").'</font><br><font size="2.5px">'.$value['WF_DATE_SAVE']." ".$value['WF_TIME_SAVE'].'</font><br>';
+														// }
+														// #82288C สีม่วง 
+														//str_replace('รอ','',$value['STATUS_TEXT'])
+														$text_cut = ["รอผ่านความเห็นชอบ", "รออนุมัติ/อนุญาต", "รอจัดสรรยานพาหนะ", "รออนุมัติ ZOOM MEETING", "<br>(ผอ.กอง/กลุ่ม)", "<br>(เลขานุการกรม/หัวหน้าหมวดซ่อมบำรุง)", "<br>(หัวหน้าหมวดยานยนต์)", "<br>(ผอ.หน่วยงานที่ดูแลห้องประชุม)", "<br>(ผู้รับผิดชอบดูแลระบบซูม)"];
+														$c_wfstep = count($getWFSTEP['Data'][$value['WFR_ID']]);
+														$arr_satck = array();
+														foreach ($getWFSTEP['Data'][$value['WFR_ID']] as $key => $value) {
+															$arr_satck[] = $value['WFD_ID'];
+															if ($key + 1 != $c_wfstep) {
+																if ($arr_satck[$key - 2] == 2470 && $arr_satck[$key - 1] == 2471) {
+																	$txt = "ผ่านอนุมัติ zoom แล้ว";
+																} else {
+																	$txt = str_replace($text_cut, '', $value['STATUS_TEXT']);
+																}
+															} else if ($arr_satck[$key - 1] == 2471 && $value['WFD_ID'] == 2476) {
+																$txt = str_replace('ผ่านความเห็นชอบแล้ว', '<span style="color: green;">ผ่านอนุมัติ zoom แล้ว</span>', $value['STATUS_TEXT']);
+															} else {
+																if (strpos($value['STATUS_TEXT'], 'ผ่านความเห็นชอบแล้ว') !== false) {
+																	// เมื่อพบ "ผ่านความเห็นชอบแล้ว" ให้แทนที่ด้วย HTML สีเขียว
+																	$value['STATUS_TEXT'] = str_replace('ผ่านความเห็นชอบแล้ว', '<span style="color: green;">ผ่านความเห็นชอบแล้ว</span>', $value['STATUS_TEXT']);
+																} else if (strpos($value['STATUS_TEXT'], 'ผ่านอนุมัติ zoom แล้ว') !== false) {
+																	// เมื่อพบ "ผ่านอนุมัติ zoom แล้ว" ให้แทนที่ด้วย HTML สีเขียว
+																	$value['STATUS_TEXT'] = str_replace('ผ่านอนุมัติ zoom แล้ว', '<span style="color: green;">ผ่านอนุมัติ zoom แล้ว</span>', $value['STATUS_TEXT']);
+																} else if (strpos($value['STATUS_TEXT'], 'ส่งคำขอใช้ห้องประชุมแล้ว') !== false) {
+																	// เมื่อพบ "ส่งคำขอใช้ห้องประชุมแล้ว" ให้แทนที่ด้วย HTML สีเขียว
+																	$value['STATUS_TEXT'] = str_replace('ส่งคำขอใช้ห้องประชุมแล้ว', '<span style="color: green;">ส่งคำขอใช้ห้องประชุมแล้ว</span>', $value['STATUS_TEXT']);
+																} else if (strpos($value['STATUS_TEXT'], 'ยกเลิกเสร็จสิ้น') !== false) {
+																	// เมื่อพบ "ยกเลิกเสร็จสิ้น" ให้แทนที่ด้วย HTML สีแดง
+																	$value['STATUS_TEXT'] = str_replace('ยกเลิกเสร็จสิ้น', '<span style="color: red;">ยกเลิกเสร็จสิ้น</span>', $value['STATUS_TEXT']);
+																} else if (strpos($value['STATUS_TEXT'], 'ส่งคำขอใช้ยานพาหนะแล้ว') !== false) {
+																	// เมื่อพบ "ส่งคำขอใช้ยานพาหนะแล้ว" ให้แทนที่ด้วย HTML สีเขียว
+																	$value['STATUS_TEXT'] = str_replace('ส่งคำขอใช้ยานพาหนะแล้ว', '<span style="color: green;">ส่งคำขอใช้ยานพาหนะแล้ว</span>', $value['STATUS_TEXT']);
+																} else if (strpos($value['STATUS_TEXT'], 'ได้รับอนุมัติ/อนุญาตแล้ว') !== false) {
+																	// เมื่อพบ "ได้รับอนุมัติ/อนุญาตแล้ว" ให้แทนที่ด้วย HTML สีเขียว
+																	$value['STATUS_TEXT'] = str_replace('ได้รับอนุมัติ/อนุญาตแล้ว', '<span style="color: green;">ได้รับอนุมัติ/อนุญาตแล้ว</span>', $value['STATUS_TEXT']);
+																}
+
+																// แสดงผลลัพธ์
+																$txt = $value['STATUS_TEXT'];
+															}
+															// echo '<font size="3px" '.((int)($key+1) == $c_wfstep ? "":"color='green'").($value['WFD_ID'] == 2477 || $value['WFD_ID'] == 1651 ? "color='green'":"").'>'.((int)($key+1) != $c_wfstep  ? ($arr_satck[$key-2] == 2470 && $arr_satck[$key-1] == 2471 ? "ผ่านอนุมัติ zoom แล้ว":str_replace($text_cut,'',$value['STATUS_TEXT'])):($arr_satck[$key-1] == 2471 && $value['WFD_ID'] == 2476 ? str_replace('ผ่านความเห็นชอบแล้ว','ผ่านอนุมัติ zoom แล้ว',$value['STATUS_TEXT']):$value['STATUS_TEXT'])).($value['WFD_ID'] == 2484 || $value['WFD_ID'] == 2481 ? "<br>".$value['CANCEL_NOTE']:"").'</font><br><font size="2.5px">'.$value['WF_DATE_SAVE']." ".$value['WF_TIME_SAVE'].'</font><br>';
+															echo '<font size="3px" ' . ((int)($key + 1) == $c_wfstep ? "" : "color='green'") . ($value['WFD_ID'] == 2477 || $value['WFD_ID'] == 1651 ? "color='green'" : "") . '>' . $txt . ($value['WFD_ID'] == 2484 || $value['WFD_ID'] == 2481 ? "<br>" . $value['CANCEL_NOTE'] : "") . '</font><br><font size="2.5px">' . $value['WF_DATE_SAVE'] . " " . $value['WF_TIME_SAVE'] . '</font><br>';
+														}
+														// print_r($arr_satck);
+														?>
+													</div>
+												<?php } ?>
+											</div>
+
+										</div>
+
+									</div>
+
+								</div>
+							</div>
+						</div>
+
+
+
+
+
+
+
+
+				<?php
+					}
 				}
-				// foreach($value['FILE_SAVE_NAME'] as $key => $value){
-					// echo $value;// บันทึกรูปเพิ่มเติมจาก WF
-				// }
-				$i = 0;
-				while($i < COUNT($value['FILE_SAVE_NAME'])){
-					file_put_contents('images/'.$value['FILE_SAVE_NAME'][$i], file_get_contents($value['FILE_SAVE_NAME_DEFULT'][$i]));// บันทึกรูป เพิ่มเติม จาก WF
-					$i++;
-				}
-		?>
-        <div class="col-lg-4 col-md-6 col-sm-12 col-12 my-3">
-            <!-- กล่องยานพาหนะ -->
-            <div class="latest-post shadow-lg min-height-news ">
-                <div class="latest-post-media ">
-                    <a href="info_bookingRoom.php?<?php echo "meeting_id=".$value['MEETING_ID'];?>" class="latest-post-img">
-                        <img loading="lazy" class="bor-ra-t15px img-fluid  max-height-news w-100" src="images/<?php echo $value['ROOM_PIC_NAME'];?>" alt="img" style="height:300px;">
-                    </a>
-                </div>
-                <div class="post-body p-3 bg-color-purple bor-ra-b15px">
-                    <h4 class="post-title text-white">
-                        <a href="info_bookingRoom.php?<?php echo "meeting_id=".$value['MEETING_ID'];?>" class="d-inline-block text-white mr-4" target='_blank'> 
-							<?php echo $value['ROOM_NAME'];?>
-						</a>
-                        <span><i class="fa fa-user"></i> <?php echo $value['SEAT_AMOUNT'];?></span>
-                    </h4>
-                    <div class="latest-post-meta text-white">
-                        <div class="post-item-date color-datetime">
-							สถานที่ : <?php echo $value['ROOM_LOCATION'];?>
-                        </div>
-                        <div class="post-item-date line-height-20px">
-							ผู้ดูแล : <?php echo $value['DEP_KEEPER_NAME'];?> 
-                        </div>
-                    </div>
-                    <div class="general-btn text-right mt-1">
-                        <a class="btn txt-purple  bg-white border-ra-10px pad-more-btn px-3" href="form_bookingRoom.php?<?php echo "meeting_id=".$value['MEETING_ID']."&trip-start=".$_GET["trip-start"]."&trip-end=".$_GET["trip-end"]."&time-start=".$_GET["time-start"]."&time-end=".$_GET["time-end"];?>">
-						จองห้องประชุม</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-		<?php
-			} 
-			$status_request = array(
-						"type" => 'ROOM_PIC_FILE',
-					);
-			$updateStatusPic = callAPI('updateStatusPic',$status_request);
-		}
-		?>
-      
-    </div>
-</div>
-<br>
-<br>
-<br>
-<!--<div class="d-flex justify-content-center mb-2">
-<nav aria-label="...">
-  <ul class="pagination">
-    <li class="page-item">
-      <a class="page-link"><i class="fa fa-caret-left icon_fa_left"></i></a>
-    </li>
-    <li class="page-item"><a class="page-link" href="#">1</a></li>
-    <li class="page-item active" aria-current="page">
-      <a class="page-link" href="#">2</a>
-    </li>
-    <li class="page-item"><a class="page-link" href="#">3</a></li>
-    <li class="page-item">
-      <a class="page-link" href="#"><i class="fa fa-caret-right icon_fa_right"></i></a>
-    </li>
-  </ul>
-</nav>
-</div>-->
+				?>
+
+			</tbody>
+		</table>
+	</div>
+
+	<?php
+	if (!$_GET['Page']) {
+		$_GET['Page'] = 1;
+	}
+	$Page = $_GET['Page'];
+	$Prev_Page = $Page - 1;
+	$Next_Page = $Page + 1;
+	$Num_Pages = 3;
+	$Per_Page = 10;
+	$Num_Rows = $getRequestBookingAllList['Data']['Num_Rows'];
+
+
+	if ($Num_Rows <= $Per_Page) {
+		$Num_Pages = 1;
+	} else if (($Num_Rows % $Per_Page) == 0) {
+		$Num_Pages = ($Num_Rows / $Per_Page);
+	} else {
+		$Num_Pages = ($Num_Rows / $Per_Page) + 1;
+		$Num_Pages = (int)$Num_Pages;
+	}
+	?>
+
+	<div class="d-flex justify-content-center mb-2">
+		<nav aria-label="...">
+			<ul class="pagination">
+				<?php if ($Prev_Page) { ?>
+					<li class="page-item">
+						<a class="page-link" href="Booking_status.php?Page=<?php echo 1; ?>&Per_Page=<?php echo $Per_Page; ?>&Num_Rows=<?php echo $Num_Rows; ?>&SYSTEM=<?php echo $_GET["SYSTEM"]; ?>&STATUS=<?php echo $_GET["STATUS"]; ?>"><i class="fa fa-angle-double-left icon_fa_left"></i></a>
+					</li>
+					<li class="page-item">
+						<a class="page-link" href="Booking_status.php?Page=<?php echo $Prev_Page; ?>&Per_Page=<?php echo $Per_Page; ?>&Num_Rows=<?php echo $Num_Rows; ?>&SYSTEM=<?php echo $_GET["SYSTEM"]; ?>&STATUS=<?php echo $_GET["STATUS"]; ?>"><i class="fa fa-caret-left icon_fa_left"></i></a>
+					</li>
+				<?php } ?>
+				<?php
+				for ($i = 1; $i <= $Num_Pages; $i++) {
+					if ($i != $Page) {
+						$act = "";
+					} else {
+						$act = "active";
+					}
+				?>
+					<li class="page-item <?php echo $act; ?>">
+						<a class="page-link" href="Booking_status.php?Page=<?php echo $i; ?>&Per_Page=<?php echo $Per_Page; ?>&Num_Rows=<?php echo $Num_Rows; ?>&SYSTEM=<?php echo $_GET["SYSTEM"]; ?>&STATUS=<?php echo $_GET["STATUS"]; ?>"><?php echo $i; ?></a>
+					</li>
+				<?php } ?>
+				<?php if ($Page != $Num_Pages) { ?>
+					<li class="page-item">
+						<a class="page-link" href="Booking_status.php?Page=<?php echo $Next_Page; ?>&Per_Page=<?php echo $Per_Page; ?>&Num_Rows=<?php echo $Num_Rows; ?>&SYSTEM=<?php echo $_GET["SYSTEM"]; ?>&STATUS=<?php echo $_GET["STATUS"]; ?>"><i class="fa fa-caret-right icon_fa_right"></i></a>
+					</li>
+					<li class="page-item">
+						<a class="page-link" href="Booking_status.php?Page=<?php echo $i - 1; ?>&Per_Page=<?php echo $Per_Page; ?>&Num_Rows=<?php echo $Num_Rows; ?>&SYSTEM=<?php echo $_GET["SYSTEM"]; ?>&STATUS=<?php echo $_GET["STATUS"]; ?>"><i class="fa fa-angle-double-right icon_fa_right"></i></a>
+					</li>
+				<?php } ?>
+			</ul>
+		</nav>
+	</div>
+
+
 
 </div>
 
 
 
-
-
-<!-- ข้อมูลวันเวลาจำนวน -->
-
-
-
-
-
+<?php
+// if($getRequestBookingRoomDetail['ResponseCode']['ResCode'] == '000'){
+// foreach($getRequestBookingRoomDetail['Data'] as $key => $value){
+// $data_request3 = array(
+// "wfr_id" => $value["WFR_ID"]
+// );
+?>
 
 
 <?php include('footer.php'); ?>
+
 <!-- Footer Website -->
 <?php include('combottom.php'); ?>
 
-
-
 <!-- Include file js and properties -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> <!-- script time format -->
-<script src="https://igorescobar.github.io/jQuery-Mask-Plugin/js/jquery.mask.min.js" type="text/javascript"></script> <!-- script time format -->
 
-
-
-<script language="javascript">
-// กำหนด locale เป็นภาษาไทย
-
-
-</script>
-
-<script>
-$(document).ready(function(){
-// $("#trip-start").datepicker({ dateFormat: 'dd/mm/yy', isBuddhist: true, defaultDate: toDay });
-// $('.timeFormat').mask('00:00');
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script language="JavaScript">
+	/* function hideFont(wfr,type) {
+	if(type == "1"){
+		$( "#room_font"+wfr ).attr("hidden",true);
+	}
+	if(type == "2"){
+		// $( "#car_font"+wfr ).hide();
+		$( "#car_font"+wfr ).attr("hidden",true);
+	}
 	
-  // $("#trip-start").change(function(){
-    // $("#trip-end").val($("#trip-start").val());
-  // });
-  
-});
+}
+function showFont(wfr,type) {
+	if(type == "1"){
+		 $( "#room_font"+wfr ).removeAttr('hidden');
+	}
+	if(type == "2"){
+		// $( "#car_font"+wfr ).show();
+		 $( "#car_font"+wfr ).removeAttr('hidden');
+	}
+	
+} */
+
+	function del_list(wfr_id, wf_main_id) { //delete_room_booking
+
+		// var wfr_id
+		// wfr_id = $( "#btn_del" ).val();
+		// alert( wfr_id );
+		Swal.fire({
+			title: 'ยืนยันการลบ ? ',
+			text: "",
+			icon: 'warning',
+			showCancelButton: true,
+			confirmButtonColor: '#00ad0d',
+			cancelButtonColor: '#d33',
+			confirmButtonText: 'ยืนยัน',
+			cancelButtonText: 'ยกเลิก'
+		}).then((result) => {
+			if (result.isConfirmed) {
+				// // //ส่วนของการส่งข้อมูล แบบ ajax โดยใช้ jquery
+				$.ajax({
+					url: 'save/delete_room_booking.php',
+					type: 'POST',
+					data: {
+						wfr_id: wfr_id,
+						wf_main_id: wf_main_id,
+						proc: 'del'
+					},
+					success: function(data) {
+						console.log(data);
+
+						if (data == 1) {
+							Swal.fire(
+								'ส่งข้อมูลสำเร็จ',
+								' ',
+								'success'
+
+							).then(function() {
+								window.location = "Booking_status.php";
+							});
+						} else {
+							Swal.fire(
+								'ส่งข้อมูลไม่สำเร็จ',
+								' ',
+								'error'
+							)
+						}
+
+					}
+				});
+			}
+		})
+	};
+
+	function cancel_list(wfr_id) { //cancel_room_booking
+
+		// var wfr_id
+		// wfr_id = $( "#btn_cancel" ).val();
+		// alert( wfr_id );
+		Swal.fire({
+			title: 'ยืนยันการขอยกเลิก ? ',
+			text: "กรุณากรอกเหตุผลที่ขอยกเลิกการจอง",
+			input: 'text',
+			icon: 'warning',
+			showCancelButton: true,
+			confirmButtonColor: '#00ad0d',
+			cancelButtonColor: '#d33',
+			confirmButtonText: 'ยืนยัน',
+			cancelButtonText: 'ยกเลิก'
+		}).then((result) => {
+			// if (result.isConfirmed) {
+			if (result.value) {
+				// // //ส่วนของการส่งข้อมูล แบบ ajax โดยใช้ jquery
+				$.ajax({
+					url: 'save/cancel_room_booking.php',
+					type: 'POST',
+					data: {
+						wfr_id: wfr_id,
+						wf_main_id: '6682',
+						proc: 'cancel',
+						note: result.value
+					},
+					success: function(data) {
+						console.log(data);
+
+						if (data == 1) {
+							Swal.fire(
+								'ทำรายการสำเร็จ',
+								' ',
+								'success'
+
+							).then(function() {
+								window.location = "Booking_status.php";
+							});
+						} else {
+							Swal.fire(
+								'ทำรายการไม่สำเร็จ',
+								' ',
+								'error'
+							)
+						}
+
+					}
+				});
+			}
+		})
+	};
+
+	function cancel_car_list(wfr_id) { //cancel_car_booking
+
+		// var wfr_id
+		// wfr_id = $( "#btn_cancel" ).val();
+		// alert( wfr_id );
+		Swal.fire({
+			title: 'ยืนยันการขอยกเลิก ? ',
+			text: "กรุณากรอกเหตุผลที่ขอยกเลิกการจอง",
+			input: 'text',
+			icon: 'warning',
+			showCancelButton: true,
+			confirmButtonColor: '#00ad0d',
+			cancelButtonColor: '#d33',
+			confirmButtonText: 'ยืนยัน',
+			cancelButtonText: 'ยกเลิก'
+		}).then((result) => {
+			// if (result.isConfirmed) {
+			if (result.value) {
+				// // //ส่วนของการส่งข้อมูล แบบ ajax โดยใช้ jquery
+				$.ajax({
+					url: 'save/cancel_room_booking.php',
+					type: 'POST',
+					data: {
+						wfr_id: wfr_id,
+						wf_main_id: '7047',
+						proc: 'cancel',
+						note: result.value
+					},
+					success: function(data) {
+						console.log(data);
+
+						if (data == 1) {
+							Swal.fire(
+								'ทำรายการสำเร็จ',
+								' ',
+								'success'
+
+							).then(function() {
+								window.location = "Booking_status.php";
+							});
+						} else {
+							Swal.fire(
+								'ทำรายการไม่สำเร็จ',
+								' ',
+								'error'
+							)
+						}
+
+					}
+				});
+			}
+		})
+	};
+
+	function travel_list(wfr_id) { //
+
+		Swal.fire({
+			title: 'ยืนยันการทำรายการ ? ',
+			text: "",
+			icon: 'warning',
+			showCancelButton: true,
+			confirmButtonColor: '#00ad0d',
+			cancelButtonColor: '#d33',
+			confirmButtonText: 'ยืนยัน',
+			cancelButtonText: 'ยกเลิก'
+		}).then((result) => {
+			if (result.isConfirmed) {
+				// // //ส่วนของการส่งข้อมูล แบบ ajax โดยใช้ jquery
+				$.ajax({
+					url: 'save/travel_finished.php',
+					type: 'POST',
+					data: {
+						wfr_id: wfr_id,
+						wf_main_id: '7047',
+						proc: 'travel'
+					},
+					success: function(data) {
+						console.log(data);
+
+						if (data == 1) {
+							Swal.fire(
+								'ส่งข้อมูลสำเร็จ',
+								' ',
+								'success'
+
+							).then(function() {
+								window.location = "Booking_status.php";
+							});
+						} else {
+							Swal.fire(
+								'ส่งข้อมูลไม่สำเร็จ',
+								' ',
+								'error'
+							)
+						}
+
+					}
+				});
+			}
+		})
+	};
+
+	function update_edit_car_driver(wfr_id) { //
+		// alert(wfr_id);
+		//ส่วนของการส่งข้อมูล แบบ ajax โดยใช้ jquery
+		$.ajax({
+			url: 'save/update_edit_car_driver.php',
+			type: 'POST',
+			data: {
+				wfr_id: wfr_id,
+				type: 'CAR'
+			},
+			success: function(data) {
+				// console.log(data);
+			}
+		});
+		
+	};
+
+	$(document).ready(function() {
+
+
+		/* $( "#btn_del" ).click(function() {//delete_room_booking
+	
+		var wfr_id
+		wfr_id = $( "#btn_del" ).val();
+		// alert( wfr_id );
+		Swal.fire({
+                title: 'ยืนยันการลบ ? ',
+                text: "",
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#00ad0d',
+                cancelButtonColor: '#d33',
+                confirmButtonText: 'ยืนยัน',
+                cancelButtonText: 'ยกเลิก'
+		}).then((result) => {
+					if (result.isConfirmed) {
+						// // //ส่วนของการส่งข้อมูล แบบ ajax โดยใช้ jquery
+						$.ajax({
+							url: 'save/delete_room_booking.php',
+							type: 'POST',
+							data: {wfr_id:wfr_id,wf_main_id:'6682',proc:'del'} ,
+							success: function(data) {
+								console.log(data);
+
+								if (data == 1) {
+									Swal.fire(
+										'ส่งข้อมูลสำเร็จ',
+										' ',
+										'success'
+										
+									).then(function() {
+										window.location = "Booking_status.php";
+									});
+								} else {
+									Swal.fire(
+										'ส่งข้อมูลไม่สำเร็จ',
+										' ',
+										'error'
+									)
+								}
+
+							}
+						});
+					}
+				})
+	});	 */
+
+		/* $( "#btn_cancel" ).click(function() {//cancel_room_booking
+	
+		var wfr_id
+		wfr_id = $( "#btn_cancel" ).val();
+		// alert( wfr_id );
+		Swal.fire({
+                title: 'ยืนยันการขอยกเลิก ? ',
+                text: "",
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#00ad0d',
+                cancelButtonColor: '#d33',
+                confirmButtonText: 'ยืนยัน',
+                cancelButtonText: 'ยกเลิก'
+		}).then((result) => {
+					if (result.isConfirmed) {
+						// // //ส่วนของการส่งข้อมูล แบบ ajax โดยใช้ jquery
+						$.ajax({
+							url: 'save/cancel_room_booking.php',
+							type: 'POST',
+							data: {wfr_id:wfr_id,wf_main_id:'6682',proc:'cancel'} ,
+							success: function(data) {
+								console.log(data);
+
+								if (data == 1) {
+									Swal.fire(
+										'ทำรายการสำเร็จ',
+										' ',
+										'success'
+										
+									).then(function() {
+										window.location = "Booking_status.php";
+									});
+								} else {
+									Swal.fire(
+										'ทำรายการไม่สำเร็จ',
+										' ',
+										'error'
+									)
+								}
+
+							}
+						});
+					}
+				})
+	}); */
+
+	});
 
 	function search_data() {
-		// // //ส่วนของการส่งข้อมูล แบบ ajax โดยใช้ jquery
-		// $.ajax({
-			// url: 'Booking_room.php',
-			// type: 'GET',
-			// data: $('#form_wf').serialize() ,
-			// success: function(data) {
-				// console.log(data);
-				
-
-			// }
-		// });
 		var data = $('#form_wf').serialize();
-		window.location = "Booking_room.php?"+data;
+		window.location = "Booking_status.php?" + data;
 	}
-	function reset_search_data() {
-		window.location = "Booking_room.php";
-	}
-
-
-    function updateTimeStart() {
-        var startTimeMin = parseInt($('#time_min').val());
-        // บวกเวลาสิ้นสุด 1 ชั่วโมง
-        var endTimeMin = startTimeMin + 1;
-
-        // แปลงเลขให้เป็นรูปแบบ "09" โดยใช้ padStart
-        var endTimeMinStr = endTimeMin.toString().padStart(2, '0');
-
-        if (endTimeMinStr == '24') {
-            endTimeMinStr = '00';
-        }
-        
-        // alert(endTimeMin);
-        
-		// ดึงค่าเวลาที่เลือกจาก select ของ time_min และ time_sec
-		var timeMinSelect = document.getElementById("time_min");
-		var selectedTimeMin = timeMinSelect.options[timeMinSelect.selectedIndex].value;
-        if ($('#time_sec').val() == '') {
-            $('#time_sec').val('00');
-        }
-		var timeSecSelect = document.getElementById("time_sec");
-		var selectedTimeSec = timeSecSelect.options[timeSecSelect.selectedIndex].value;
-		
-       
-		// นำค่าเวลามาประมวลผลเป็นรูปแบบ "HH:mm"
-		var timeStart = selectedTimeMin + ":" + selectedTimeSec;
-
-		// อัพเดทค่าใน input ของ time-start
-		var timeStartInput = document.getElementById("time-start");
-		timeStartInput.value = timeStart;
-
-        if($('#time-start').val() >= $('#time-end').val() && $('#time_min2').val() != '' && $('#time_sec2').val() != ''){ 
-            // $('#time-end').val('');
-            // alert('กรุณากรอกเวลาสิ้นสุดให้มากกว่าเวลาเริ่มต้น');
-            // $("#time_min2").val('');
-            // $("#time_sec2").val('');
-            $("#time_min2").val(endTimeMinStr);
-            $("#time_sec2").val($('#time_sec').val());
-            $('#time-end').val(endTimeMinStr+':'+$('#time_sec').val());
-        }else if($('#time_min').val() && $('#time_sec').val() && $('#time_min2').val() == '' && $('#time_sec2').val() == ''){
-            $("#time_min2").val(endTimeMinStr);
-            $("#time_sec2").val($('#time_sec').val());
-            $('#time-end').val(endTimeMinStr+':'+$('#time_sec').val());
-        }
-
-	}
-    function updateTimeEnd() {
-        let startTimeMin = parseInt($('#time_min').val());
-        // บวกเวลาสิ้นสุด 1 ชั่วโมง
-        let endTimeMin = startTimeMin + 1;
-
-        // แปลงเลขให้เป็นรูปแบบ "09" โดยใช้ padStart
-        let endTimeMinStr = endTimeMin.toString().padStart(2, '0');
-
-        if (endTimeMinStr == '24') {
-            endTimeMinStr = '00';
-        }
-
-		// ดึงค่าเวลาที่เลือกจาก select ของ time_min2 และ time_sec2
-		let timeMinSelect = document.getElementById("time_min2");
-		let selectedTimeMin = timeMinSelect.options[timeMinSelect.selectedIndex].value;
-
-		let timeSecSelect = document.getElementById("time_sec2");
-		let selectedTimeSec = timeSecSelect.options[timeSecSelect.selectedIndex].value;
-		
-		// นำค่าเวลามาประมวลผลเป็นรูปแบบ "HH:mm"
-		let timeEnd = selectedTimeMin + ":" + selectedTimeSec;
-
-		// อัพเดทค่าใน input ของ time-end
-		let timeStartInput = document.getElementById("time-end");
-		timeStartInput.value = timeEnd;
-
-        if($('#time-start').val() >= $('#time-end').val() && $('#time_min2').val() != '' && $('#time_sec2').val() != ''){ 
-            alert('กรุณากรอกเวลาสิ้นสุดให้มากกว่าเวลาเริ่มต้น');
-            // $('#time-end').val('');
-            // $("#time_min2").val('');
-            // $("#time_sec2").val('');
-            $("#time_min2").val(endTimeMinStr);
-            $("#time_sec2").val($('#time_sec').val());
-            $('#time-end').val(endTimeMinStr+':'+$('#time_sec').val());
-        }
-
-
-	}
-
-    
-
 </script>
